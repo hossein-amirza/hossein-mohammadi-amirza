@@ -7,16 +7,26 @@
 
 <title>حسین محمدی آمیرزا | نویسنده، شاعر، پژوهشگر تاریخ و فیلمنامه‌نویس</title>
 
-<meta name="description" content="وب‌سایت رسمی حسین محمدی آمیرزا؛ نویسنده، شاعر، پژوهشگر تاریخ و فیلمنامه‌نویس ایرانی. معرفی کتاب‌ها، فیلمنامه‌ها، سریال‌ها، آثار ادبی و پژوهش‌های تاریخی.">
+<meta name="description" content="وب‌سایت رسمی حسین محمدی آمیرزا؛ نویسنده، شاعر، پژوهشگر تاریخ و فیلمنامه‌نویس ایرانی. معرفی کتاب‌ها، فیلمنامه‌ها، سریال‌ها، آثار ادبی و نوشته‌های تاریخی.">
+
+<meta name="keywords" content="حسین محمدی آمیرزا, نویسنده, شاعر, پژوهشگر تاریخ, فیلمنامه نویس, تاریخ ادیان, ادبیات, فرهنگ ایرانی">
 
 <meta name="author" content="حسین محمدی آمیرزا">
-<meta name="robots" content="index,follow">
+<meta name="robots" content="index, follow">
+
+<meta property="og:title" content="حسین محمدی آمیرزا">
+<meta property="og:description" content="وب‌سایت رسمی حسین محمدی آمیرزا؛ نویسنده، شاعر، پژوهشگر تاریخ و فیلمنامه‌نویس">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hossein-amirza.github.io/hossein-mohammadi-amirza/">
+
+<link rel="canonical" href="https://hossein-amirza.github.io/hossein-mohammadi-amirza/">
 
 <link rel="stylesheet" href="style.css">
 
 <style>
+
 /* =========================
-   تکمیل استایل‌های سایت
+   بهبودهای اختصاصی صفحه
 ========================= */
 
 html {
@@ -24,211 +34,183 @@ html {
 }
 
 body {
-    margin: 0;
-    font-family: Tahoma, Arial, sans-serif;
-    line-height: 2;
-}
-
-img {
-    max-width: 100%;
+    overflow-x: hidden;
 }
 
 a {
     text-decoration: none;
 }
 
-.wrap {
-    width: min(1100px, 92%);
-    margin: auto;
-}
-
-.nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    padding: 20px 0;
-}
-
-.links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-}
-
-.links a {
-    font-weight: bold;
-}
-
 .hero {
-    min-height: 650px;
+    position: relative;
 }
 
 .hero-grid {
-    display: grid;
-    grid-template-columns: 1.4fr .8fr;
-    gap: 50px;
     align-items: center;
-    padding: 70px 0;
-}
-
-.portrait {
-    text-align: center;
 }
 
 .portrait img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.cards article {
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.cards article:hover {
+    transform: translateY(-5px);
+}
+
+.book-cover {
     width: 100%;
-    max-width: 420px;
-    max-height: 500px;
+    height: 250px;
     object-fit: contain;
-    border-radius: 22px;
+    border-radius: 12px;
+    margin: 15px 0;
 }
 
-.eyebrow {
-    display: inline-block;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.section {
-    padding: 80px 0;
-}
-
-.alt {
-    background: rgba(127,127,127,.07);
-}
-
-.cards {
+.blog-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 22px;
     margin-top: 30px;
 }
 
-.cards article,
-.post,
-.contactbox {
+.blog-card {
     padding: 25px;
     border-radius: 18px;
     background: rgba(255,255,255,.04);
-    border: 1px solid rgba(127,127,127,.20);
+    border: 1px solid rgba(255,255,255,.08);
+    transition: .25s ease;
 }
 
-.cards article {
-    transition: transform .2s ease, box-shadow .2s ease;
+.blog-card:hover {
+    transform: translateY(-5px);
 }
 
-.cards article:hover {
-    transform: translateY(-4px);
+.blog-number {
+    display: inline-block;
+    font-size: 14px;
+    opacity: .65;
+    margin-bottom: 12px;
 }
 
-.cards article img {
-    width: 100%;
-    height: 260px;
-    object-fit: contain;
-    border-radius: 12px;
+.blog-card h3 {
+    margin: 8px 0 12px;
 }
 
-.facts {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
+.blog-card p {
+    line-height: 2;
+}
+
+.blog-card .btn {
+    margin-top: 10px;
+}
+
+.blog-more {
+    text-align: center;
     margin-top: 35px;
 }
 
-.facts div {
+.section-title {
+    max-width: 800px;
+}
+
+.timeline {
+    margin-top: 35px;
+    display: grid;
+    gap: 18px;
+}
+
+.timeline-item {
     padding: 20px;
-    border-radius: 15px;
-    border: 1px solid rgba(127,127,127,.2);
+    border-right: 3px solid currentColor;
+    background: rgba(255,255,255,.035);
+    border-radius: 12px;
 }
 
-.facts b,
-.facts span {
-    display: block;
+.timeline-item h3 {
+    margin-top: 0;
 }
 
-.facts span {
-    opacity: .75;
+.site-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 25px;
 }
 
-.post {
-    margin: 20px 0;
-}
-
-.post b {
-    font-size: 1.1rem;
-}
-
-.btn {
+.site-links a {
     display: inline-block;
-    padding: 9px 18px;
-    border-radius: 10px;
-    margin: 8px 5px 8px 0;
-    font-weight: bold;
 }
 
-.btn.ghost {
-    background: transparent;
+.back-top {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    background: #111;
+    color: #fff;
+    border: 1px solid rgba(255,255,255,.2);
+    box-shadow: 0 5px 20px rgba(0,0,0,.25);
 }
 
-blockquote {
-    margin: 35px 0;
-    padding: 25px;
-    border-right: 4px solid currentColor;
-    font-size: 1.1rem;
-    font-weight: bold;
+.mobile-menu {
+    display: none;
 }
 
-.contactbox p {
-    margin: 12px 0;
-}
-
-footer {
-    padding: 30px 0;
-    text-align: center;
-}
-
-@media (max-width: 800px) {
-
-    .nav {
-        flex-direction: column;
-        text-align: center;
-    }
+@media (max-width: 768px) {
 
     .links {
-        justify-content: center;
+        display: none;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .mobile-menu summary {
+        cursor: pointer;
+        list-style: none;
+        padding: 8px 12px;
+        border: 1px solid rgba(255,255,255,.2);
+        border-radius: 8px;
+    }
+
+    .mobile-menu .mobile-links {
+        position: absolute;
+        right: 15px;
+        left: 15px;
+        top: 70px;
+        padding: 18px;
+        border-radius: 15px;
+        background: rgba(20,20,20,.97);
+        z-index: 100;
+        display: grid;
+        gap: 14px;
     }
 
     .hero-grid {
         grid-template-columns: 1fr;
-        text-align: center;
     }
 
-    .cards {
+    .portrait {
+        order: -1;
+    }
+
+    .blog-grid {
         grid-template-columns: 1fr;
     }
-
-    .facts {
-        grid-template-columns: 1fr 1fr;
-    }
-
 }
 
-@media (max-width: 500px) {
-
-    .facts {
-        grid-template-columns: 1fr;
-    }
-
-    .section {
-        padding: 55px 0;
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-
-}
 </style>
 
 </head>
@@ -259,6 +241,24 @@ footer {
 
 </div>
 
+<details class="mobile-menu">
+
+<summary>☰ منو</summary>
+
+<div class="mobile-links">
+
+<a href="#about">درباره نویسنده</a>
+<a href="#books">کتاب‌ها</a>
+<a href="#screenplays">فیلمنامه‌ها</a>
+<a href="#series">سریال‌ها</a>
+<a href="#writing">وبلاگ</a>
+<a href="#newworks">آثار جدید</a>
+<a href="#contact">تماس</a>
+
+</div>
+
+</details>
+
 </nav>
 
 
@@ -288,8 +288,8 @@ footer {
 مشاهده کتاب‌ها
 </a>
 
-<a class="btn ghost" href="#about">
-درباره نویسنده
+<a class="btn ghost" href="#writing">
+مطالعه نوشته‌ها
 </a>
 
 </p>
@@ -301,7 +301,7 @@ footer {
 
 <img
 src="ChatGPT%20Image%20Aug%202%2C%202026%2C%2004_56_13%20AM.png"
-alt="حسین محمدی آمیرزا"
+alt="حسین محمدی آمیرزا، نویسنده و پژوهشگر"
 loading="eager"
 >
 
@@ -311,6 +311,10 @@ loading="eager"
 
 </header>
 
+
+<!-- =========================
+     MAIN
+========================= -->
 
 <main>
 
@@ -344,6 +348,7 @@ loading="eager"
 <p>
 در این وب‌سایت می‌توانید با کتاب‌ها، فیلمنامه‌ها، سریال‌ها، نوشته‌ها، پژوهش‌ها و فعالیت‌های ادبی و فرهنگی او آشنا شوید.
 </p>
+
 
 <div class="facts">
 
@@ -435,23 +440,24 @@ loading="eager"
 
 <div class="cards">
 
-
 <article>
 
 <b>۰۱</b>
 
-<h3>
 <a href="tarikh-adyan.html">
+
+<h3>
 تاریخ ادیان
-</a>
 </h3>
 
 <p>
 «هفتاد هزار سال انسان در جستجوی معنا»
 </p>
 
-<a class="btn" href="tarikh-adyan.html">
-مشاهده معرفی کتاب ←
+<p>
+مشاهده معرفی کامل کتاب ←
+</p>
+
 </a>
 
 </article>
@@ -522,8 +528,9 @@ loading="eager"
 <b>۰۶</b>
 
 <img
-src="1%DA%AF%D9%84%D8%B4%D9%86.jpg"
+src="1گلشن.jpg"
 alt="کتاب گلشنی از قرآن کریم"
+class="book-cover"
 loading="lazy"
 >
 
@@ -536,7 +543,6 @@ loading="lazy"
 </p>
 
 </article>
-
 
 </div>
 
@@ -571,13 +577,11 @@ loading="lazy"
 
 <div class="cards">
 
-
 <article>
 <b>۰۱</b>
 <h3>آخرین نبرد سورنا</h3>
 <p>فیلمنامه بلند</p>
 </article>
-
 
 <article>
 <b>۰۲</b>
@@ -585,20 +589,17 @@ loading="lazy"
 <p>فیلمنامه بلند</p>
 </article>
 
-
 <article>
 <b>۰۳</b>
 <h3>دژ شیرزنان</h3>
 <p>فیلمنامه بلند</p>
 </article>
 
-
 <article>
 <b>۰۴</b>
 <h3>داروخانه حکیم</h3>
 <p>فیلمنامه بلند</p>
 </article>
-
 
 </div>
 
@@ -610,13 +611,11 @@ loading="lazy"
 
 <div class="cards">
 
-
 <article>
 <b>۰۱</b>
 <h3>چراغ راه</h3>
 <p>فیلمنامه کوتاه</p>
 </article>
-
 
 <article>
 <b>۰۲</b>
@@ -624,13 +623,11 @@ loading="lazy"
 <p>فیلمنامه کوتاه</p>
 </article>
 
-
 <article>
 <b>۰۳</b>
 <h3>مار کوزه</h3>
 <p>فیلمنامه کوتاه</p>
 </article>
-
 
 <article>
 <b>۰۴</b>
@@ -638,13 +635,11 @@ loading="lazy"
 <p>فیلمنامه کوتاه</p>
 </article>
 
-
 <article>
 <b>۰۵</b>
 <h3>سور و سات شب عید</h3>
 <p>فیلمنامه کوتاه</p>
 </article>
-
 
 </div>
 
@@ -674,13 +669,11 @@ loading="lazy"
 
 <div class="cards">
 
-
 <article>
 <b>۰۱</b>
 <h3>دهوپادان</h3>
 <p>سریال سی قسمتی</p>
 </article>
-
 
 <article>
 <b>۰۲</b>
@@ -688,13 +681,11 @@ loading="lazy"
 <p>سریال سی قسمتی</p>
 </article>
 
-
 <article>
 <b>۰۳</b>
 <h3>حماسه زندیان</h3>
 <p>سریال سی قسمتی</p>
 </article>
-
 
 <article>
 <b>۰۴</b>
@@ -702,13 +693,11 @@ loading="lazy"
 <p>مجموعه نمایشی</p>
 </article>
 
-
 <article>
 <b>۰۵</b>
 <h3>تولدی دوباره</h3>
 <p>مجموعه نمایشی</p>
 </article>
-
 
 <article>
 <b>۰۶</b>
@@ -716,13 +705,11 @@ loading="lazy"
 <p>مجموعه نمایشی</p>
 </article>
 
-
 <article>
 <b>۰۷</b>
 <h3>دون کیشوت روستا</h3>
 <p>مجموعه نمایشی</p>
 </article>
-
 
 </div>
 
@@ -746,15 +733,24 @@ loading="lazy"
 </h2>
 
 <p class="muted">
-برای مطالعه کامل هر یادداشت روی دکمه «خواندن یادداشت» کلیک کنید.
+در این بخش می‌توانید فصل‌ها و نوشته‌های منتشرشده را مطالعه کنید.
 </p>
 
 
-<div class="post">
+<div class="blog-grid">
 
-<b>
-فصل هفدهم: کشاورزی؛ وقتی انسان تصمیم گرفت طبیعت را تغییر دهد
-</b>
+
+<!-- BLOG 17 -->
+
+<article class="blog-card">
+
+<span class="blog-number">
+فصل هفدهم
+</span>
+
+<h3>
+کشاورزی؛ وقتی انسان تصمیم گرفت طبیعت را تغییر دهد
+</h3>
 
 <p>
 دانه‌ای که تاریخ را تغییر داد
@@ -764,18 +760,25 @@ loading="lazy"
 class="btn"
 href="https://6a6612921781e.mywebzi.ir/blog/uncategorized/P45342-%D9%81%D8%B5%D9%84-%D9%87%D9%81%D8%AF%D9%87%D9%85-%DA%A9%D8%B4%D8%A7%D9%88%D8%B1%D8%B2%DB%8C-%D9%88%D9%82%D8%AA%DB%8C-%D8%A7%D9%86%D8%B3%D8%A7%D9%86-%D8%AA%D8%B5%D9%85%DB%8C%D9%85-%DA%AF%D8%B1%D9%81%D8%AA-%D8%B7%D8%A8%DB%8C%D8%B9%D8%AA-%D8%B1%D8%A7-%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1-%D8%AF%D9%87%D8%AF-%D8%AF%D8%A7%D9%86%D9%87-%D8%A7%DB%8C-%DA%A9%D9%87-%D8%AA%D8%A7%D8%B1%DB%8C%D8%AE-%D8%B1%D8%A7-%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1-%D8%AF%D8%A7%D8%AF-%D8%A8%D8%A7-%D9%82%D9%84%D9%85-%D8%AD%D8%B3%DB%8C%D9%86-%D9%85%D8%AD%D9%85%D8%AF%DB%8C.html"
 target="_blank"
-rel="noopener">
-خواندن یادداشت
+rel="noopener noreferrer"
+>
+خواندن یادداشت ←
 </a>
 
-</div>
+</article>
 
 
-<div class="post">
+<!-- BLOG 16 -->
 
-<b>
-فصل شانزدهم: زمان؛ وقتی انسان تلاش کرد گذر زمان را اندازه بگیرد
-</b>
+<article class="blog-card">
+
+<span class="blog-number">
+فصل شانزدهم
+</span>
+
+<h3>
+زمان؛ وقتی انسان تلاش کرد گذر زمان را اندازه بگیرد
+</h3>
 
 <p>
 چیزی که نمی‌توان متوقفش کرد
@@ -785,18 +788,25 @@ rel="noopener">
 class="btn"
 href="https://6a6612921781e.mywebzi.ir/blog/uncategorized/P45341-%D9%81%D8%B5%D9%84-%D8%B4%D8%A7%D9%86%D8%B2%D8%AF%D9%87%D9%85-%D8%B2%D9%85%D8%A7%D9%86-%D9%88%D9%82%D8%AA%DB%8C-%D8%A7%D9%86%D8%B3%D8%A7%D9%86-%D8%AA%D9%84%D8%A7%D8%B4-%DA%A9%D8%B1%D8%AF-%DA%AF%D8%B0%D8%B1-%D8%B2%D9%85%D8%A7%D9%86-%D8%B1%D8%A7-%D8%A7%D9%86%D8%AF%D8%A7%D8%B2%D9%87-%DA%AF%DB%8C%D8%B1%D8%AF-%DA%86%DB%8C%D8%B2%DB%8C-%DA%A9%D9%87-%D9%86%D9%85%DB%8C-%D8%AA%D9%88%D8%A7%D9%86-%D9%85%D8%AA%D9%88%D9%82%D9%81-%D8%B4%D8%AF.html"
 target="_blank"
-rel="noopener">
-خواندن یادداشت
+rel="noopener noreferrer"
+>
+خواندن یادداشت ←
 </a>
 
-</div>
+</article>
 
 
-<div class="post">
+<!-- BLOG 15 -->
 
-<b>
-فصل پانزدهم: زمان؛ وقتی انسان تلاش کرد گذر جهان را اندازه بگیرد
-</b>
+<article class="blog-card">
+
+<span class="blog-number">
+فصل پانزدهم
+</span>
+
+<h3>
+زمان؛ وقتی انسان تلاش کرد گذر جهان را اندازه بگیرد
+</h3>
 
 <p>
 چیزی که نمی‌توان متوقفش کرد
@@ -806,18 +816,25 @@ rel="noopener">
 class="btn"
 href="https://6a6612921781e.mywebzi.ir/blog/uncategorized/P45340-%D9%81%D8%B5%D9%84-%D9%BE%D8%A7%D9%86%D8%B2%D8%AF%D9%87%D9%85-%D8%B2%D9%85%D8%A7%D9%86-%D9%88%D9%82%D8%AA%DB%8C-%D8%A7%D9%86%D8%B3%D8%A7%D9%86-%D8%AA%D9%84%D8%A7%D8%B4-%DA%A9%D8%B1%D8%AF-%DA%AF%D8%B0%D8%B1-%D8%AC%D9%87%D8%A7%D9%86-%D8%B1%D8%A7-%D8%A7%D9%86%D8%AF%D8%A7%D8%B2%D9%87-%DA%AF%DB%8C%D8%B1%D8%AF-%DA%86%DB%8C%D8%B2%DB%8C-%DA%A9%D9%87-%D9%86%D9%85%DB%8C-%D8%AA%D9%88%D8%A7%D9%86-%D9%85%D8%AA%D9%88%D9%82%D9%81%D8%B4-%DA%A9%D8%B1%D8%AF-%D8%A8%D8%A7-%D9%82%D9%84%D9%85-%D8%AD%D8%B3%DB%8C%D9%86-%D9%85%D8%AD%D9%85%D8%AF%DB%8C.html"
 target="_blank"
-rel="noopener">
-خواندن یادداشت
+rel="noopener noreferrer"
+>
+خواندن یادداشت ←
 </a>
 
-</div>
+</article>
 
 
-<div class="post">
+<!-- BLOG 14 -->
 
-<b>
-فصل چهاردهم: عدد؛ وقتی انسان جهان را شمرد
-</b>
+<article class="blog-card">
+
+<span class="blog-number">
+فصل چهاردهم
+</span>
+
+<h3>
+عدد؛ وقتی انسان جهان را شمرد
+</h3>
 
 <p>
 از «یکی» تا «چندتا»
@@ -827,29 +844,36 @@ rel="noopener">
 class="btn"
 href="https://6a6612921781e.mywebzi.ir/blog/uncategorized/P45339-%D9%81%D8%B5%D9%84-%DA%86%D9%87%D8%A7%D8%B1%D8%AF%D9%87%D9%85-%D8%B9%D8%AF%D8%AF-%D9%88%D9%82%D8%AA%DB%8C-%D8%A7%D9%86%D8%B3%D8%A7%D9%86-%D8%AC%D9%87%D8%A7%D9%86-%D8%B1%D8%A7-%D8%B4%D9%85%D8%B1%D8%AF-%D8%A7%D8%B2-%DB%8C%DA%A9%DB%8C-%D8%AA%D8%A7-%DA%86%D9%86%D8%AF%D8%AA%D8%A7-%D8%A8%D8%A7-%D9%82%D9%84%D9%85-%DA%86%DB%8C%D8%B3%D8%AA-%D8%9F.html"
 target="_blank"
-rel="noopener">
-خواندن یادداشت
+rel="noopener noreferrer"
+>
+خواندن یادداشت ←
 </a>
+
+</article>
+
 
 </div>
 
 
-<div class="post">
+<!-- BLOG ARCHIVE -->
 
-<b>
-آرشیو نوشته‌ها
-</b>
+<div class="blog-more">
+
+<h3>
+آرشیو کامل نوشته‌ها
+</h3>
 
 <p>
-برای مشاهده سایر نوشته‌ها و فصل‌های منتشرشده می‌توانید به وبلاگ مراجعه کنید.
+برای مشاهده سایر فصل‌ها، نوشته‌ها و مطالب منتشرشده می‌توانید به وبلاگ مراجعه کنید.
 </p>
 
 <a
 class="btn ghost"
 href="https://6a6612921781e.mywebzi.ir/blog/"
 target="_blank"
-rel="noopener">
-مشاهده وبلاگ
+rel="noopener noreferrer"
+>
+مشاهده آرشیو وبلاگ ←
 </a>
 
 </div>
@@ -873,8 +897,12 @@ rel="noopener">
 تازه‌ترین فعالیت‌ها
 </h2>
 
-<div class="cards">
+<p class="muted">
+پروژه‌ها و فعالیت‌های تازه در حوزه ادبیات، تاریخ و هنر
+</p>
 
+
+<div class="cards">
 
 <article>
 
@@ -920,7 +948,6 @@ rel="noopener">
 
 </article>
 
-
 </div>
 
 </section>
@@ -950,7 +977,10 @@ rel="noopener">
 <div class="contactbox">
 
 <p>
-<b>ایمیل:</b>
+
+<b>
+ایمیل:
+</b>
 
 <a href="mailto:hosseinmohammadi.writer@gmail.com">
 hosseinmohammadi.writer@gmail.com
@@ -960,17 +990,23 @@ hosseinmohammadi.writer@gmail.com
 
 
 <p>
-<b>تلفن:</b>
 
-<a href="tel:+989199379791">
-۰۹۱۹۹۳۷۹۷۹۱
+<b>
+تلفن:
+</b>
+
+<a href="tel:09199379791">
+09199379791
 </a>
 
 </p>
 
 
 <p>
-<b>محل:</b>
+
+<b>
+محل:
+</b>
 
 پاکدشت، روبه‌روی دانشگاه ابو ریحان
 
@@ -995,18 +1031,56 @@ hosseinmohammadi.writer@gmail.com
 <div class="wrap">
 
 © <span id="year"></span>
-حسین محمدی آمیرزا — تمامی حقوق محفوظ است.
+
+حسین محمدی آمیرزا
+
+— تمامی حقوق محفوظ است.
 
 </div>
 
 </footer>
 
 
+<!-- BACK TO TOP -->
+
+<a
+href="#home"
+class="back-top"
+aria-label="بازگشت به بالای صفحه"
+>
+↑
+</a>
+
+
 <script src="script.js"></script>
 
 <script>
-document.getElementById("year").textContent =
-new Date().getFullYear();
+
+/* سال خودکار */
+
+const yearElement = document.getElementById("year");
+
+if (yearElement) {
+    yearElement.textContent = new Date().getFullYear();
+}
+
+
+/* بستن منوی موبایل بعد از کلیک */
+
+document.querySelectorAll(".mobile-links a").forEach(function(link) {
+
+    link.addEventListener("click", function() {
+
+        const menu = document.querySelector(".mobile-menu");
+
+        if (menu) {
+            menu.removeAttribute("open");
+        }
+
+    });
+
+});
+
 </script>
 
 </body>
