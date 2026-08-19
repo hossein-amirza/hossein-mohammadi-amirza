@@ -13,11 +13,231 @@
 <meta name="robots" content="index,follow">
 
 <link rel="stylesheet" href="style.css">
+
+<style>
+/* =========================
+   تکمیل استایل‌های سایت
+========================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Tahoma, Arial, sans-serif;
+    line-height: 2;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrap {
+    width: min(1100px, 92%);
+    margin: auto;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.links a {
+    font-weight: bold;
+}
+
+.hero {
+    min-height: 650px;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.4fr .8fr;
+    gap: 50px;
+    align-items: center;
+    padding: 70px 0;
+}
+
+.portrait {
+    text-align: center;
+}
+
+.portrait img {
+    width: 100%;
+    max-width: 420px;
+    max-height: 500px;
+    object-fit: contain;
+    border-radius: 22px;
+}
+
+.eyebrow {
+    display: inline-block;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+.alt {
+    background: rgba(127,127,127,.07);
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 30px;
+}
+
+.cards article,
+.post,
+.contactbox {
+    padding: 25px;
+    border-radius: 18px;
+    background: rgba(255,255,255,.04);
+    border: 1px solid rgba(127,127,127,.20);
+}
+
+.cards article {
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.cards article:hover {
+    transform: translateY(-4px);
+}
+
+.cards article img {
+    width: 100%;
+    height: 260px;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+.facts {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 35px;
+}
+
+.facts div {
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(127,127,127,.2);
+}
+
+.facts b,
+.facts span {
+    display: block;
+}
+
+.facts span {
+    opacity: .75;
+}
+
+.post {
+    margin: 20px 0;
+}
+
+.post b {
+    font-size: 1.1rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 9px 18px;
+    border-radius: 10px;
+    margin: 8px 5px 8px 0;
+    font-weight: bold;
+}
+
+.btn.ghost {
+    background: transparent;
+}
+
+blockquote {
+    margin: 35px 0;
+    padding: 25px;
+    border-right: 4px solid currentColor;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.contactbox p {
+    margin: 12px 0;
+}
+
+footer {
+    padding: 30px 0;
+    text-align: center;
+}
+
+@media (max-width: 800px) {
+
+    .nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .links {
+        justify-content: center;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .facts {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .facts {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 55px 0;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+}
+</style>
+
 </head>
 
 <body>
 
-<!-- ==================== HEADER ==================== -->
+<!-- =========================
+     HEADER
+========================= -->
 
 <header class="hero" id="home">
 
@@ -34,6 +254,7 @@
 <a href="#screenplays">فیلمنامه‌ها</a>
 <a href="#series">سریال‌ها</a>
 <a href="#writing">وبلاگ</a>
+<a href="#newworks">آثار جدید</a>
 <a href="#contact">تماس</a>
 
 </div>
@@ -81,6 +302,7 @@
 <img
 src="ChatGPT%20Image%20Aug%202%2C%202026%2C%2004_56_13%20AM.png"
 alt="حسین محمدی آمیرزا"
+loading="eager"
 >
 
 </div>
@@ -90,12 +312,12 @@ alt="حسین محمدی آمیرزا"
 </header>
 
 
-<!-- ==================== MAIN ==================== -->
-
 <main>
 
 
-<!-- ==================== ABOUT ==================== -->
+<!-- =========================
+     ABOUT
+========================= -->
 
 <section class="section wrap" id="about">
 
@@ -122,7 +344,6 @@ alt="حسین محمدی آمیرزا"
 <p>
 در این وب‌سایت می‌توانید با کتاب‌ها، فیلمنامه‌ها، سریال‌ها، نوشته‌ها، پژوهش‌ها و فعالیت‌های ادبی و فرهنگی او آشنا شوید.
 </p>
-
 
 <div class="facts">
 
@@ -151,7 +372,9 @@ alt="حسین محمدی آمیرزا"
 </section>
 
 
-<!-- ==================== نگاه نویسنده ==================== -->
+<!-- =========================
+     نگاه نویسنده
+========================= -->
 
 <section class="section alt">
 
@@ -191,7 +414,9 @@ alt="حسین محمدی آمیرزا"
 </section>
 
 
-<!-- ==================== BOOKS ==================== -->
+<!-- =========================
+     BOOKS
+========================= -->
 
 <section class="section wrap" id="books">
 
@@ -215,23 +440,22 @@ alt="حسین محمدی آمیرزا"
 
 <b>۰۱</b>
 
-<a href="tarikh-adyan.html">
-
 <h3>
+<a href="tarikh-adyan.html">
 تاریخ ادیان
+</a>
 </h3>
 
 <p>
 «هفتاد هزار سال انسان در جستجوی معنا»
 </p>
 
-<p>
-مشاهده معرفی کامل کتاب ←
-</p>
-
+<a class="btn" href="tarikh-adyan.html">
+مشاهده معرفی کتاب ←
 </a>
 
 </article>
+
 
 <article>
 
@@ -292,13 +516,15 @@ alt="حسین محمدی آمیرزا"
 
 </article>
 
+
 <article>
+
 <b>۰۶</b>
 
 <img
-src="1گلشن.jpg"
+src="1%DA%AF%D9%84%D8%B4%D9%86.jpg"
 alt="کتاب گلشنی از قرآن کریم"
-style="width:100%;height:260px;object-fit:contain;border-radius:10px;margin:15px 0;"
+loading="lazy"
 >
 
 <h3>
@@ -311,12 +537,15 @@ style="width:100%;height:260px;object-fit:contain;border-radius:10px;margin:15px
 
 </article>
 
+
 </div>
 
 </section>
 
 
-<!-- ==================== SCREENPLAYS ==================== -->
+<!-- =========================
+     SCREENPLAYS
+========================= -->
 
 <section class="section alt" id="screenplays">
 
@@ -344,62 +573,30 @@ style="width:100%;height:260px;object-fit:contain;border-radius:10px;margin:15px
 
 
 <article>
-
 <b>۰۱</b>
-
-<h3>
-آخرین نبرد سورنا
-</h3>
-
-<p>
-فیلمنامه بلند
-</p>
-
+<h3>آخرین نبرد سورنا</h3>
+<p>فیلمنامه بلند</p>
 </article>
 
 
 <article>
-
 <b>۰۲</b>
-
-<h3>
-سه‌گانه میراث آتش
-</h3>
-
-<p>
-فیلمنامه بلند
-</p>
-
+<h3>سه‌گانه میراث آتش</h3>
+<p>فیلمنامه بلند</p>
 </article>
 
 
 <article>
-
 <b>۰۳</b>
-
-<h3>
-دژ شیرزنان
-</h3>
-
-<p>
-فیلمنامه بلند
-</p>
-
+<h3>دژ شیرزنان</h3>
+<p>فیلمنامه بلند</p>
 </article>
 
 
 <article>
-
 <b>۰۴</b>
-
-<h3>
-داروخانه حکیم
-</h3>
-
-<p>
-فیلمنامه بلند
-</p>
-
+<h3>داروخانه حکیم</h3>
+<p>فیلمنامه بلند</p>
 </article>
 
 
@@ -415,77 +612,37 @@ style="width:100%;height:260px;object-fit:contain;border-radius:10px;margin:15px
 
 
 <article>
-
 <b>۰۱</b>
-
-<h3>
-چراغ راه
-</h3>
-
-<p>
-فیلمنامه کوتاه
-</p>
-
+<h3>چراغ راه</h3>
+<p>فیلمنامه کوتاه</p>
 </article>
 
 
 <article>
-
 <b>۰۲</b>
-
-<h3>
-عطر شیرین
-</h3>
-
-<p>
-فیلمنامه کوتاه
-</p>
-
+<h3>عطر شیرین</h3>
+<p>فیلمنامه کوتاه</p>
 </article>
 
 
 <article>
-
 <b>۰۳</b>
-
-<h3>
-مار کوزه
-</h3>
-
-<p>
-فیلمنامه کوتاه
-</p>
-
+<h3>مار کوزه</h3>
+<p>فیلمنامه کوتاه</p>
 </article>
 
 
 <article>
-
 <b>۰۴</b>
-
-<h3>
-باران و سنگ
-</h3>
-
-<p>
-فیلمنامه کوتاه
-</p>
-
+<h3>باران و سنگ</h3>
+<p>فیلمنامه کوتاه</p>
 </article>
 
 
 <article>
-
 <b>۰۵</b>
-
-<h3>
-سور و سات شب عید
-</h3>
-
-<p>
-فیلمنامه کوتاه
-</p>
-
+<h3>سور و سات شب عید</h3>
+<p>فیلمنامه کوتاه</p>
 </article>
 
 
@@ -496,7 +653,9 @@ style="width:100%;height:260px;object-fit:contain;border-radius:10px;margin:15px
 </section>
 
 
-<!-- ==================== SERIES ==================== -->
+<!-- =========================
+     SERIES
+========================= -->
 
 <section class="section wrap" id="series">
 
@@ -517,107 +676,51 @@ style="width:100%;height:260px;object-fit:contain;border-radius:10px;margin:15px
 
 
 <article>
-
 <b>۰۱</b>
-
-<h3>
-دهوپادان
-</h3>
-
-<p>
-سریال سی قسمتی
-</p>
-
+<h3>دهوپادان</h3>
+<p>سریال سی قسمتی</p>
 </article>
 
 
 <article>
-
 <b>۰۲</b>
-
-<h3>
-ققنوس زاگرس
-</h3>
-
-<p>
-سریال سی قسمتی
-</p>
-
+<h3>ققنوس زاگرس</h3>
+<p>سریال سی قسمتی</p>
 </article>
 
 
 <article>
-
 <b>۰۳</b>
-
-<h3>
-حماسه زندیان
-</h3>
-
-<p>
-سریال سی قسمتی
-</p>
-
+<h3>حماسه زندیان</h3>
+<p>سریال سی قسمتی</p>
 </article>
 
 
 <article>
-
 <b>۰۴</b>
-
-<h3>
-مرد ساده‌دل روستا
-</h3>
-
-<p>
-مجموعه نمایشی
-</p>
-
+<h3>مرد ساده‌دل روستا</h3>
+<p>مجموعه نمایشی</p>
 </article>
 
 
 <article>
-
 <b>۰۵</b>
-
-<h3>
-تولدی دوباره
-</h3>
-
-<p>
-مجموعه نمایشی
-</p>
-
+<h3>تولدی دوباره</h3>
+<p>مجموعه نمایشی</p>
 </article>
 
 
 <article>
-
 <b>۰۶</b>
-
-<h3>
-برخاستن شیران زند
-</h3>
-
-<p>
-مجموعه نمایشی
-</p>
-
+<h3>برخاستن شیران زند</h3>
+<p>مجموعه نمایشی</p>
 </article>
 
 
 <article>
-
 <b>۰۷</b>
-
-<h3>
-دون کیشوت روستا
-</h3>
-
-<p>
-مجموعه نمایشی
-</p>
-
+<h3>دون کیشوت روستا</h3>
+<p>مجموعه نمایشی</p>
 </article>
 
 
@@ -626,7 +729,9 @@ style="width:100%;height:260px;object-fit:contain;border-radius:10px;margin:15px
 </section>
 
 
-<!-- ==================== BLOG ==================== -->
+<!-- =========================
+     BLOG
+========================= -->
 
 <section class="section alt" id="writing">
 
@@ -659,8 +764,7 @@ style="width:100%;height:260px;object-fit:contain;border-radius:10px;margin:15px
 class="btn"
 href="https://6a6612921781e.mywebzi.ir/blog/uncategorized/P45342-%D9%81%D8%B5%D9%84-%D9%87%D9%81%D8%AF%D9%87%D9%85-%DA%A9%D8%B4%D8%A7%D9%88%D8%B1%D8%B2%DB%8C-%D9%88%D9%82%D8%AA%DB%8C-%D8%A7%D9%86%D8%B3%D8%A7%D9%86-%D8%AA%D8%B5%D9%85%DB%8C%D9%85-%DA%AF%D8%B1%D9%81%D8%AA-%D8%B7%D8%A8%DB%8C%D8%B9%D8%AA-%D8%B1%D8%A7-%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1-%D8%AF%D9%87%D8%AF-%D8%AF%D8%A7%D9%86%D9%87-%D8%A7%DB%8C-%DA%A9%D9%87-%D8%AA%D8%A7%D8%B1%DB%8C%D8%AE-%D8%B1%D8%A7-%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1-%D8%AF%D8%A7%D8%AF-%D8%A8%D8%A7-%D9%82%D9%84%D9%85-%D8%AD%D8%B3%DB%8C%D9%86-%D9%85%D8%AD%D9%85%D8%AF%DB%8C.html"
 target="_blank"
-rel="noopener"
->
+rel="noopener">
 خواندن یادداشت
 </a>
 
@@ -681,8 +785,7 @@ rel="noopener"
 class="btn"
 href="https://6a6612921781e.mywebzi.ir/blog/uncategorized/P45341-%D9%81%D8%B5%D9%84-%D8%B4%D8%A7%D9%86%D8%B2%D8%AF%D9%87%D9%85-%D8%B2%D9%85%D8%A7%D9%86-%D9%88%D9%82%D8%AA%DB%8C-%D8%A7%D9%86%D8%B3%D8%A7%D9%86-%D8%AA%D9%84%D8%A7%D8%B4-%DA%A9%D8%B1%D8%AF-%DA%AF%D8%B0%D8%B1-%D8%B2%D9%85%D8%A7%D9%86-%D8%B1%D8%A7-%D8%A7%D9%86%D8%AF%D8%A7%D8%B2%D9%87-%DA%AF%DB%8C%D8%B1%D8%AF-%DA%86%DB%8C%D8%B2%DB%8C-%DA%A9%D9%87-%D9%86%D9%85%DB%8C-%D8%AA%D9%88%D8%A7%D9%86-%D9%85%D8%AA%D9%88%D9%82%D9%81-%D8%B4%D8%AF.html"
 target="_blank"
-rel="noopener"
->
+rel="noopener">
 خواندن یادداشت
 </a>
 
@@ -703,8 +806,7 @@ rel="noopener"
 class="btn"
 href="https://6a6612921781e.mywebzi.ir/blog/uncategorized/P45340-%D9%81%D8%B5%D9%84-%D9%BE%D8%A7%D9%86%D8%B2%D8%AF%D9%87%D9%85-%D8%B2%D9%85%D8%A7%D9%86-%D9%88%D9%82%D8%AA%DB%8C-%D8%A7%D9%86%D8%B3%D8%A7%D9%86-%D8%AA%D9%84%D8%A7%D8%B4-%DA%A9%D8%B1%D8%AF-%DA%AF%D8%B0%D8%B1-%D8%AC%D9%87%D8%A7%D9%86-%D8%B1%D8%A7-%D8%A7%D9%86%D8%AF%D8%A7%D8%B2%D9%87-%DA%AF%DB%8C%D8%B1%D8%AF-%DA%86%DB%8C%D8%B2%DB%8C-%DA%A9%D9%87-%D9%86%D9%85%DB%8C-%D8%AA%D9%88%D8%A7%D9%86-%D9%85%D8%AA%D9%88%D9%82%D9%81%D8%B4-%DA%A9%D8%B1%D8%AF-%D8%A8%D8%A7-%D9%82%D9%84%D9%85-%D8%AD%D8%B3%DB%8C%D9%86-%D9%85%D8%AD%D9%85%D8%AF%DB%8C.html"
 target="_blank"
-rel="noopener"
->
+rel="noopener">
 خواندن یادداشت
 </a>
 
@@ -725,8 +827,7 @@ rel="noopener"
 class="btn"
 href="https://6a6612921781e.mywebzi.ir/blog/uncategorized/P45339-%D9%81%D8%B5%D9%84-%DA%86%D9%87%D8%A7%D8%B1%D8%AF%D9%87%D9%85-%D8%B9%D8%AF%D8%AF-%D9%88%D9%82%D8%AA%DB%8C-%D8%A7%D9%86%D8%B3%D8%A7%D9%86-%D8%AC%D9%87%D8%A7%D9%86-%D8%B1%D8%A7-%D8%B4%D9%85%D8%B1%D8%AF-%D8%A7%D8%B2-%DB%8C%DA%A9%DB%8C-%D8%AA%D8%A7-%DA%86%D9%86%D8%AF%D8%AA%D8%A7-%D8%A8%D8%A7-%D9%82%D9%84%D9%85-%DA%86%DB%8C%D8%B3%D8%AA-%D8%9F.html"
 target="_blank"
-rel="noopener"
->
+rel="noopener">
 خواندن یادداشت
 </a>
 
@@ -747,8 +848,7 @@ rel="noopener"
 class="btn ghost"
 href="https://6a6612921781e.mywebzi.ir/blog/"
 target="_blank"
-rel="noopener"
->
+rel="noopener">
 مشاهده وبلاگ
 </a>
 
@@ -759,7 +859,9 @@ rel="noopener"
 </section>
 
 
-<!-- ==================== NEW WORKS ==================== -->
+<!-- =========================
+     NEW WORKS
+========================= -->
 
 <section class="section wrap" id="newworks">
 
@@ -824,7 +926,9 @@ rel="noopener"
 </section>
 
 
-<!-- ==================== CONTACT ==================== -->
+<!-- =========================
+     CONTACT
+========================= -->
 
 <section class="section contact" id="contact">
 
@@ -858,8 +962,8 @@ hosseinmohammadi.writer@gmail.com
 <p>
 <b>تلفن:</b>
 
-<a href="tel:09199379791">
-09199379791
+<a href="tel:+989199379791">
+۰۹۱۹۹۳۷۹۷۹۱
 </a>
 
 </p>
@@ -882,7 +986,9 @@ hosseinmohammadi.writer@gmail.com
 </main>
 
 
-<!-- ==================== FOOTER ==================== -->
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
@@ -898,6 +1004,10 @@ hosseinmohammadi.writer@gmail.com
 
 <script src="script.js"></script>
 
-</body>
+<script>
+document.getElementById("year").textContent =
+new Date().getFullYear();
+</script>
 
+</body>
 </html>
