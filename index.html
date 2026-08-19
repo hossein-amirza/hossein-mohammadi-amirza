@@ -6,11 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>حسین محمدی آمیرزا | نویسنده، شاعر، پژوهشگر تاریخ و فیلمنامه‌نویس</title>
     <meta name="description" content="وب‌سایت رسمی حسین محمدی آمیرزا؛ نویسنده، شاعر، پژوهشگر تاریخ و فیلمنامه‌نویس ایرانی">
-    <meta name="theme-color" content="#1a1a2e">
+    <meta name="theme-color" content="#f5e6d3">
     <link rel="canonical" href="https://hossein-amirza.github.io/hossein-mohammadi-amirza/">
-    
+
     <style>
-        /* ===== RESET ===== */
         * {
             margin: 0;
             padding: 0;
@@ -22,58 +21,63 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #0f0f1a;
-            color: #e0e0e0;
-            line-height: 1.8;
+            font-family: 'Segoe UI', 'Noto Sans', Tahoma, sans-serif;
+            background: #f5e6d3;
+            color: #3d2c1e;
+            line-height: 1.9;
+            background-image:
+                radial-gradient(ellipse at 20% 50%, rgba(200, 160, 120, 0.15) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 20%, rgba(180, 130, 80, 0.10) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 80%, rgba(160, 120, 80, 0.08) 0%, transparent 50%);
+            min-height: 100vh;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 24px;
         }
 
-        /* ===== SCROLLBAR ===== */
         ::-webkit-scrollbar {
             width: 8px;
         }
         ::-webkit-scrollbar-track {
-            background: #1a1a2e;
+            background: #e8d5c4;
         }
         ::-webkit-scrollbar-thumb {
-            background: linear-gradient(180deg, #e94560, #0f3460);
+            background: linear-gradient(180deg, #b8860b, #8b6914);
             border-radius: 10px;
         }
 
-        /* ===== HEADER / NAV ===== */
         header {
-            background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 50%, #16213e 100%);
+            background: linear-gradient(165deg, #f5e6d3 0%, #ece0d0 40%, #e8d5c4 100%);
             padding: 20px 0 60px;
-            border-bottom: 2px solid #e94560;
+            border-bottom: 3px solid #b8860b;
             position: relative;
             overflow: hidden;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.06);
         }
 
         header::before {
             content: '';
             position: absolute;
-            top: -50%;
-            right: -50%;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle, rgba(233, 69, 96, 0.05) 0%, transparent 70%);
-            animation: pulseGlow 8s ease-in-out infinite;
+            top: -30%;
+            right: -20%;
+            width: 70%;
+            height: 120%;
+            background: radial-gradient(ellipse, rgba(184, 134, 11, 0.06) 0%, transparent 70%);
+            pointer-events: none;
         }
 
-        @keyframes pulseGlow {
-            0%,
-            100% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.5);
-            }
+        header::after {
+            content: '✍️';
+            position: absolute;
+            bottom: 10px;
+            left: 30px;
+            font-size: 4rem;
+            opacity: 0.06;
+            transform: rotate(-10deg);
+            pointer-events: none;
         }
 
         nav {
@@ -86,68 +90,89 @@
         }
 
         .brand {
-            font-size: 1.6rem;
-            font-weight: 700;
-            color: #e94560;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #6b4226;
             text-decoration: none;
-            letter-spacing: 1px;
-            background: linear-gradient(135deg, #e94560, #ff6b6b);
+            letter-spacing: 0.5px;
+            background: linear-gradient(135deg, #6b4226, #b8860b);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            font-family: 'Times New Roman', serif;
         }
 
         .nav-links {
             display: flex;
-            gap: 20px;
+            gap: 18px;
             flex-wrap: wrap;
         }
 
         .nav-links a {
-            color: #ccc;
+            color: #5a3e2b;
             text-decoration: none;
             font-size: 0.95rem;
+            font-weight: 500;
             transition: all 0.3s ease;
-            padding: 5px 10px;
-            border-radius: 5px;
+            padding: 5px 12px;
+            border-radius: 6px;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 50%;
+            width: 0;
+            height: 2px;
+            background: #b8860b;
+            transition: all 0.3s ease;
+            transform: translateX(50%);
         }
 
         .nav-links a:hover {
-            color: #e94560;
-            background: rgba(233, 69, 96, 0.1);
-            transform: translateY(-2px);
+            color: #6b4226;
+            background: rgba(184, 134, 11, 0.08);
         }
 
-        /* ===== HERO ===== */
+        .nav-links a:hover::after {
+            width: 80%;
+        }
+
         .hero {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 40px;
+            gap: 50px;
             align-items: center;
-            padding: 40px 0;
+            padding: 30px 0 20px;
             position: relative;
             z-index: 2;
         }
 
         .hero-content h1 {
-            font-size: 3.2rem;
+            font-size: 3.4rem;
             font-weight: 800;
-            background: linear-gradient(135deg, #e94560, #ff6b6b, #feca57);
+            font-family: 'Times New Roman', serif;
+            background: linear-gradient(135deg, #4a2c1a, #8b6914, #b8860b);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             line-height: 1.2;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .hero-content .subtitle {
-            font-size: 1.3rem;
-            color: #feca57;
-            margin-bottom: 15px;
+            font-size: 1.4rem;
+            color: #8b6914;
+            font-weight: 600;
+            margin-bottom: 12px;
+            font-family: 'Times New Roman', serif;
         }
 
         .hero-content p {
-            color: #aaa;
+            color: #5a3e2b;
             font-size: 1.05rem;
             margin-bottom: 20px;
+            opacity: 0.85;
         }
 
         .hero-image {
@@ -158,67 +183,78 @@
 
         .hero-image img {
             width: 100%;
-            max-width: 350px;
+            max-width: 340px;
             border-radius: 50%;
-            border: 4px solid #e94560;
-            box-shadow: 0 0 50px rgba(233, 69, 96, 0.3);
+            border: 5px solid #b8860b;
+            box-shadow: 0 0 60px rgba(184, 134, 11, 0.2), 0 15px 40px rgba(0, 0, 0, 0.08);
             transition: all 0.5s ease;
+            background: #f5e6d3;
+            padding: 5px;
         }
 
         .hero-image img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 80px rgba(233, 69, 96, 0.5);
+            transform: scale(1.03) rotate(-2deg);
+            box-shadow: 0 0 80px rgba(184, 134, 11, 0.3), 0 20px 50px rgba(0, 0, 0, 0.12);
         }
 
         .btn {
             display: inline-block;
-            padding: 12px 30px;
+            padding: 12px 32px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
-            transition: all 0.3s ease;
-            margin: 5px 10px 5px 0;
+            transition: all 0.35s ease;
+            margin: 5px 12px 5px 0;
+            font-size: 0.95rem;
+            border: none;
+            cursor: pointer;
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, #e94560, #c23152);
+            background: linear-gradient(135deg, #8b6914, #b8860b);
             color: #fff;
-            box-shadow: 0 5px 20px rgba(233, 69, 96, 0.3);
+            box-shadow: 0 4px 20px rgba(184, 134, 11, 0.25);
         }
 
         .btn-primary:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 30px rgba(233, 69, 96, 0.5);
+            box-shadow: 0 8px 35px rgba(184, 134, 11, 0.35);
+            background: linear-gradient(135deg, #6b4226, #8b6914);
         }
 
         .btn-outline {
-            border: 2px solid #e94560;
-            color: #e94560;
+            border: 2px solid #8b6914;
+            color: #6b4226;
             background: transparent;
         }
 
         .btn-outline:hover {
-            background: #e94560;
+            background: #8b6914;
             color: #fff;
             transform: translateY(-3px);
         }
 
-        /* ===== SECTIONS ===== */
         section {
             padding: 70px 0;
         }
 
-        .section-dark {
-            background: #0f0f1a;
+        .section-light {
+            background: #faf3ec;
         }
 
-        .section-light {
-            background: #1a1a2e;
+        .section-warm {
+            background: #f5e6d3;
+        }
+
+        .section-cream {
+            background: #fdf8f3;
         }
 
         .section-title {
-            font-size: 2.2rem;
+            font-size: 2.3rem;
             font-weight: 700;
+            font-family: 'Times New Roman', serif;
+            color: #3d2c1e;
             margin-bottom: 10px;
             position: relative;
             display: inline-block;
@@ -229,17 +265,17 @@
             position: absolute;
             bottom: -10px;
             right: 0;
-            width: 60px;
-            height: 4px;
-            background: linear-gradient(90deg, #e94560, #feca57);
+            width: 70px;
+            height: 3px;
+            background: linear-gradient(90deg, #b8860b, #d4a030, #b8860b);
             border-radius: 10px;
         }
 
         .section-subtitle {
-            color: #888;
+            color: #7a5d42;
             font-size: 1.1rem;
             margin-bottom: 40px;
-            margin-top: 15px;
+            margin-top: 18px;
         }
 
         .text-center {
@@ -251,21 +287,32 @@
             transform: translateX(50%);
         }
 
-        /* ===== CARDS ===== */
+        .eyebrow {
+            display: inline-block;
+            color: #8b6914;
+            font-weight: 600;
+            letter-spacing: 2px;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
         .cards-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
             gap: 25px;
         }
 
         .card {
-            background: #1e1e32;
-            padding: 25px;
-            border-radius: 15px;
-            border: 1px solid #2a2a42;
+            background: rgba(255, 248, 240, 0.85);
+            backdrop-filter: blur(5px);
+            padding: 28px 25px;
+            border-radius: 18px;
+            border: 1px solid #e8d5c4;
             transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
         }
 
         .card::before {
@@ -275,15 +322,15 @@
             right: 0;
             width: 4px;
             height: 100%;
-            background: linear-gradient(180deg, #e94560, #feca57);
+            background: linear-gradient(180deg, #b8860b, #d4a030, #8b6914);
             opacity: 0;
             transition: opacity 0.4s ease;
         }
 
         .card:hover {
-            transform: translateY(-8px);
-            border-color: #e94560;
-            box-shadow: 0 10px 40px rgba(233, 69, 96, 0.15);
+            transform: translateY(-6px);
+            border-color: #b8860b;
+            box-shadow: 0 12px 45px rgba(184, 134, 11, 0.12);
         }
 
         .card:hover::before {
@@ -291,100 +338,122 @@
         }
 
         .card .number {
-            font-size: 2.5rem;
+            font-size: 2.6rem;
             font-weight: 800;
-            color: rgba(233, 69, 96, 0.2);
-            margin-bottom: 5px;
+            color: rgba(184, 134, 11, 0.15);
+            font-family: 'Times New Roman', serif;
+            margin-bottom: 4px;
         }
 
         .card h3 {
-            font-size: 1.2rem;
-            color: #fff;
-            margin-bottom: 8px;
+            font-size: 1.15rem;
+            color: #3d2c1e;
+            margin-bottom: 6px;
+            font-weight: 700;
         }
 
         .card p {
-            color: #aaa;
+            color: #6b5540;
             font-size: 0.95rem;
         }
 
         .card .badge {
             display: inline-block;
-            padding: 3px 12px;
-            border-radius: 20px;
+            padding: 3px 14px;
+            border-radius: 30px;
             font-size: 0.7rem;
             font-weight: 600;
-            margin-top: 10px;
-            background: rgba(233, 69, 96, 0.2);
-            color: #e94560;
+            margin-top: 12px;
+            background: rgba(184, 134, 11, 0.12);
+            color: #8b6914;
+            border: 1px solid rgba(184, 134, 11, 0.15);
         }
 
-        /* ===== QUOTE ===== */
         .quote-block {
-            background: linear-gradient(135deg, #1a1a2e, #16213e);
-            padding: 40px;
-            border-radius: 20px;
-            border-right: 5px solid #e94560;
+            background: linear-gradient(135deg, #faf3ec, #f5e6d3);
+            padding: 45px 50px;
+            border-radius: 24px;
+            border-right: 6px solid #b8860b;
             margin: 30px 0;
-            font-size: 1.3rem;
+            font-size: 1.35rem;
             font-style: italic;
-            color: #ddd;
+            color: #3d2c1e;
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.04);
+            font-family: 'Times New Roman', serif;
+            position: relative;
+        }
+
+        .quote-block::before {
+            content: '"';
+            font-size: 5rem;
+            color: rgba(184, 134, 11, 0.1);
+            position: absolute;
+            top: -5px;
+            right: 20px;
+            font-family: Georgia, serif;
         }
 
         .quote-block .author {
             display: block;
-            margin-top: 15px;
+            margin-top: 18px;
             font-style: normal;
-            color: #feca57;
+            color: #8b6914;
             font-weight: 600;
+            font-size: 1rem;
+            letter-spacing: 1px;
         }
 
-        /* ===== STATS ===== */
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             gap: 20px;
-            margin-top: 30px;
+            margin-top: 35px;
         }
 
         .stat-item {
-            background: #1e1e32;
+            background: rgba(255, 248, 240, 0.8);
+            backdrop-filter: blur(5px);
             padding: 25px 15px;
-            border-radius: 12px;
+            border-radius: 16px;
             text-align: center;
-            border: 1px solid #2a2a42;
+            border: 1px solid #e8d5c4;
             transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
         }
 
         .stat-item:hover {
-            border-color: #e94560;
+            border-color: #b8860b;
             transform: scale(1.03);
+            box-shadow: 0 8px 30px rgba(184, 134, 11, 0.08);
         }
 
         .stat-item .number {
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             font-weight: 800;
-            color: #e94560;
+            color: #8b6914;
+            font-family: 'Times New Roman', serif;
         }
 
         .stat-item .label {
-            color: #888;
+            color: #6b5540;
             font-size: 0.9rem;
         }
 
-        /* ===== CONTACT ===== */
         .contact-box {
-            background: #1a1a2e;
-            padding: 40px;
-            border-radius: 20px;
-            border: 1px solid #2a2a42;
+            background: rgba(255, 248, 240, 0.85);
+            backdrop-filter: blur(5px);
+            padding: 40px 45px;
+            border-radius: 24px;
+            border: 1px solid #e8d5c4;
             max-width: 600px;
             margin: 0 auto;
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.04);
         }
 
         .contact-box p {
-            padding: 10px 0;
-            border-bottom: 1px solid #2a2a42;
+            padding: 12px 0;
+            border-bottom: 1px solid #e8d5c4;
+            color: #3d2c1e;
         }
 
         .contact-box p:last-child {
@@ -392,65 +461,68 @@
         }
 
         .contact-box a {
-            color: #e94560;
+            color: #8b6914;
             text-decoration: none;
+            font-weight: 500;
             transition: color 0.3s ease;
         }
 
         .contact-box a:hover {
-            color: #feca57;
+            color: #6b4226;
         }
 
-        /* ===== FOOTER ===== */
         footer {
-            background: #0a0a15;
+            background: #ece0d0;
             padding: 30px 0;
             text-align: center;
-            border-top: 1px solid #1a1a2e;
-            color: #666;
+            border-top: 2px solid #e8d5c4;
+            color: #6b5540;
             font-size: 0.9rem;
         }
 
         footer .heart {
-            color: #e94560;
+            color: #b8860b;
         }
 
-        /* ===== RESPONSIVE ===== */
+        .decor-line {
+            width: 80px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #b8860b, transparent);
+            margin: 15px auto;
+        }
+
         @media (max-width: 768px) {
             .hero {
                 grid-template-columns: 1fr;
                 text-align: center;
             }
-
             .hero-content h1 {
-                font-size: 2.2rem;
+                font-size: 2.4rem;
             }
-
             .nav-links {
                 gap: 10px;
                 justify-content: center;
                 margin-top: 15px;
             }
-
             .nav-links a {
                 font-size: 0.8rem;
-                padding: 4px 8px;
+                padding: 4px 10px;
             }
-
             .brand {
                 font-size: 1.2rem;
             }
-
             .hero-image img {
-                max-width: 220px;
+                max-width: 210px;
             }
-
             .cards-grid {
                 grid-template-columns: 1fr 1fr;
             }
-
             .section-title {
                 font-size: 1.8rem;
+            }
+            .quote-block {
+                padding: 30px 25px;
+                font-size: 1.1rem;
             }
         }
 
@@ -458,14 +530,16 @@
             .cards-grid {
                 grid-template-columns: 1fr;
             }
-
             .hero-content h1 {
-                font-size: 1.8rem;
+                font-size: 2rem;
             }
-
             .btn {
-                padding: 10px 20px;
-                font-size: 0.9rem;
+                padding: 10px 22px;
+                font-size: 0.85rem;
+                margin: 5px 5px 5px 0;
+            }
+            .contact-box {
+                padding: 25px 20px;
             }
         }
     </style>
@@ -473,11 +547,10 @@
 
 <body>
 
-    <!-- ===== HEADER ===== -->
     <header>
         <div class="container">
             <nav>
-                <a href="#" class="brand">حسین محمدی آمیرزا</a>
+                <a href="#" class="brand">✍️ حسین محمدی آمیرزا</a>
                 <div class="nav-links">
                     <a href="#about">درباره</a>
                     <a href="#books">کتاب‌ها</a>
@@ -490,12 +563,12 @@
 
             <div class="hero">
                 <div class="hero-content">
-                    <span style="color:#e94560;font-weight:600;letter-spacing:2px;">وب‌سایت رسمی</span>
+                    <span class="eyebrow">وب‌سایت رسمی</span>
                     <h1>حسین محمدی آمیرزا</h1>
                     <p class="subtitle">نویسنده، شاعر، پژوهشگر تاریخ و فیلمنامه‌نویس</p>
                     <p>نویسنده، شاعر، پژوهشگر تاریخ، فیلمنامه‌نویس و پژوهشگر حوزه فرهنگ و اندیشه.</p>
                     <div>
-                        <a href="#books" class="btn btn-primary">مشاهده کتاب‌ها</a>
+                        <a href="#books" class="btn btn-primary">📚 مشاهده کتاب‌ها</a>
                         <a href="#about" class="btn btn-outline">درباره نویسنده</a>
                     </div>
                 </div>
@@ -506,125 +579,74 @@
         </div>
     </header>
 
-    <!-- ===== MAIN ===== -->
     <main>
 
-        <!-- ===== ABOUT ===== -->
-        <section id="about" class="section-dark">
+        <section id="about" class="section-warm">
             <div class="container">
                 <div class="text-center">
-                    <span style="color:#e94560;font-weight:600;letter-spacing:2px;">درباره نویسنده</span>
+                    <span class="eyebrow">درباره نویسنده</span>
                     <h2 class="section-title">حسین محمدی آمیرزا</h2>
                     <p class="section-subtitle">نویسنده، شاعر، پژوهشگر تاریخ و فیلمنامه‌نویس</p>
+                    <div class="decor-line"></div>
                 </div>
-
-                <p style="margin-bottom:15px;">به وب‌سایت رسمی حسین محمدی آمیرزا خوش آمدید؛ نویسنده، شاعر، پژوهشگر تاریخ، فیلمنامه‌نویس و پژوهشگر حوزه فرهنگ و اندیشه.</p>
-
-                <p style="margin-bottom:15px;">حسین محمدی سال‌ها در زمینه پژوهش تاریخی، ادبیات، فرهنگ ایرانی و مطالعات انسانی فعالیت کرده است. حاصل این تلاش‌ها، نگارش کتاب‌ها، فیلمنامه‌های سینمایی، مجموعه‌های نمایشی و آثار ادبی است که با موضوعاتی چون تاریخ، هویت، معنا، انسان و فرهنگ شکل گرفته‌اند.</p>
-
-                <p style="margin-bottom:30px;">در این وب‌سایت می‌توانید با کتاب‌ها، فیلمنامه‌ها، سریال‌ها، نوشته‌ها، پژوهش‌ها و فعالیت‌های ادبی و فرهنگی او آشنا شوید.</p>
-
+                <p style="margin-bottom:16px;color:#4a3522;">به وب‌سایت رسمی حسین محمدی آمیرزا خوش آمدید؛ نویسنده، شاعر، پژوهشگر تاریخ، فیلمنامه‌نویس و پژوهشگر حوزه فرهنگ و اندیشه.</p>
+                <p style="margin-bottom:16px;color:#4a3522;">حسین محمدی سال‌ها در زمینه پژوهش تاریخی، ادبیات، فرهنگ ایرانی و مطالعات انسانی فعالیت کرده است. حاصل این تلاش‌ها، نگارش کتاب‌ها، فیلمنامه‌های سینمایی، مجموعه‌های نمایشی و آثار ادبی است که با موضوعاتی چون تاریخ، هویت، معنا، انسان و فرهنگ شکل گرفته‌اند.</p>
+                <p style="margin-bottom:30px;color:#4a3522;">در این وب‌سایت می‌توانید با کتاب‌ها، فیلمنامه‌ها، سریال‌ها، نوشته‌ها، پژوهش‌ها و فعالیت‌های ادبی و فرهنگی او آشنا شوید.</p>
                 <div class="stats-grid">
-                    <div class="stat-item">
-                        <div class="number">نویسنده</div>
-                        <div class="label">کتاب‌ها و آثار ادبی</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="number">شاعر</div>
-                        <div class="label">مجموعه‌ها و آثار شعری</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="number">پژوهشگر</div>
-                        <div class="label">مطالعات تاریخی و فرهنگی</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="number">فیلمنامه‌نویس</div>
-                        <div class="label">آثار سینمایی و نمایشی</div>
-                    </div>
+                    <div class="stat-item"><div class="number">✍️</div><div class="label">نویسنده</div></div>
+                    <div class="stat-item"><div class="number">🖋️</div><div class="label">شاعر</div></div>
+                    <div class="stat-item"><div class="number">📜</div><div class="label">پژوهشگر تاریخ</div></div>
+                    <div class="stat-item"><div class="number">🎬</div><div class="label">فیلمنامه‌نویس</div></div>
                 </div>
             </div>
         </section>
 
-        <!-- ===== QUOTE SECTION ===== -->
-        <section class="section-light">
+        <section class="section-cream">
             <div class="container">
                 <div class="quote-block">
-                    "تاریخ تنها مجموعه‌ای از نام‌ها و رویدادهای گذشته نیست؛ تاریخ حافظه زنده انسان‌ها و ملت‌هاست."
+                    تاریخ تنها مجموعه‌ای از نام‌ها و رویدادهای گذشته نیست؛ تاریخ حافظه زنده انسان‌ها و ملت‌هاست.
                     <span class="author">— حسین محمدی آمیرزا</span>
                 </div>
-                <p style="color:#aaa;margin-bottom:15px;">باور دارم پژوهش زمانی معنا پیدا می‌کند که به روایت تبدیل شود؛ روایتی که بتواند تجربه، اندیشه، رنج، امید و فرهنگ انسان‌ها را به نسل‌های آینده منتقل کند.</p>
-                <p style="color:#aaa;">در این مسیر، پژوهش آغاز راه است؛ آنچه در اسناد تاریخی کشف می‌شود، در کتاب به اندیشه تبدیل می‌گردد، در فیلمنامه جان می‌گیرد و در شعر به زبان احساس بیان می‌شود.</p>
+                <p style="color:#4a3522;margin-bottom:14px;">باور دارم پژوهش زمانی معنا پیدا می‌کند که به روایت تبدیل شود؛ روایتی که بتواند تجربه، اندیشه، رنج، امید و فرهنگ انسان‌ها را به نسل‌های آینده منتقل کند.</p>
+                <p style="color:#4a3522;">در این مسیر، پژوهش آغاز راه است؛ آنچه در اسناد تاریخی کشف می‌شود، در کتاب به اندیشه تبدیل می‌گردد، در فیلمنامه جان می‌گیرد و در شعر به زبان احساس بیان می‌شود.</p>
             </div>
         </section>
 
-        <!-- ===== BOOKS ===== -->
-        <section id="books" class="section-dark">
+        <section id="books" class="section-warm">
             <div class="container">
                 <div class="text-center">
-                    <span style="color:#e94560;font-weight:600;letter-spacing:2px;">کتاب‌های من</span>
+                    <span class="eyebrow">📚 کتاب‌های من</span>
                     <h2 class="section-title">آثار منتشرشده و پژوهشی</h2>
                     <p class="section-subtitle">برخی از کتاب‌ها و آثار پژوهشی حسین محمدی آمیرزا</p>
+                    <div class="decor-line"></div>
                 </div>
-
                 <div class="cards-grid">
-                    <div class="card">
-                        <div class="number">۰۱</div>
-                        <h3>تاریخ ادیان</h3>
-                        <p>«هفتاد هزار سال انسان در جستجوی معنا»</p>
-                        <span class="badge">کتاب</span>
-                    </div>
-                    <div class="card">
-                        <div class="number">۰۲</div>
-                        <h3>فراز و فرود سرنوشت قوم زند</h3>
-                        <p>در گذر تاریخ</p>
-                        <span class="badge">کتاب</span>
-                    </div>
-                    <div class="card">
-                        <div class="number">۰۳</div>
-                        <h3>ققنوس عاشق</h3>
-                        <p>از آثار ادبی حسین محمدی آمیرزا</p>
-                        <span class="badge">کتاب</span>
-                    </div>
-                    <div class="card">
-                        <div class="number">۰۴</div>
-                        <h3>هنر رزم ایرانیان</h3>
-                        <p>پژوهشی درباره تاریخ و فرهنگ رزم ایرانیان</p>
-                        <span class="badge">پژوهش</span>
-                    </div>
-                    <div class="card">
-                        <div class="number">۰۵</div>
-                        <h3>روانشناسی انسان در عصر حیرت</h3>
-                        <p>پژوهشی درباره انسان و اندیشه</p>
-                        <span class="badge">پژوهش</span>
-                    </div>
-                    <div class="card">
-                        <div class="number">۰۶</div>
-                        <h3>گلشنی از قرآن کریم</h3>
-                        <p>اثری با موضوعات ادبی و معنوی</p>
-                        <span class="badge">کتاب</span>
-                    </div>
+                    <div class="card"><div class="number">۰۱</div><h3>تاریخ ادیان</h3><p>«هفتاد هزار سال انسان در جستجوی معنا»</p><span class="badge">📖 کتاب</span></div>
+                    <div class="card"><div class="number">۰۲</div><h3>فراز و فرود سرنوشت قوم زند</h3><p>در گذر تاریخ</p><span class="badge">📖 کتاب</span></div>
+                    <div class="card"><div class="number">۰۳</div><h3>ققنوس عاشق</h3><p>از آثار ادبی حسین محمدی آمیرزا</p><span class="badge">📖 کتاب</span></div>
+                    <div class="card"><div class="number">۰۴</div><h3>هنر رزم ایرانیان</h3><p>پژوهشی درباره تاریخ و فرهنگ رزم ایرانیان</p><span class="badge">🔍 پژوهش</span></div>
+                    <div class="card"><div class="number">۰۵</div><h3>روانشناسی انسان در عصر حیرت</h3><p>پژوهشی درباره انسان و اندیشه</p><span class="badge">🔍 پژوهش</span></div>
+                    <div class="card"><div class="number">۰۶</div><h3>گلشنی از قرآن کریم</h3><p>اثری با موضوعات ادبی و معنوی</p><span class="badge">📖 کتاب</span></div>
                 </div>
             </div>
         </section>
 
-        <!-- ===== SCREENPLAYS ===== -->
-        <section id="screenplays" class="section-light">
+        <section id="screenplays" class="section-cream">
             <div class="container">
                 <div class="text-center">
-                    <span style="color:#e94560;font-weight:600;letter-spacing:2px;">فیلمنامه‌ها</span>
+                    <span class="eyebrow">🎬 فیلمنامه‌ها</span>
                     <h2 class="section-title">فیلمنامه‌های بلند و کوتاه</h2>
-                    <p class="section-subtitle">آثار فیلمنامه‌نویسی حسین محمدی آمیرزا در حوزه سینما و روایت‌های تصویری</p>
+                    <p class="section-subtitle">آثار فیلمنامه‌نویسی حسین محمدی آمیرزا</p>
+                    <div class="decor-line"></div>
                 </div>
-
-                <h3 style="color:#feca57;margin-bottom:15px;margin-top:20px;">🎬 فیلمنامه‌های بلند</h3>
+                <h3 style="color:#6b4226;margin-bottom:16px;margin-top:10px;font-size:1.3rem;">🎥 فیلمنامه‌های بلند</h3>
                 <div class="cards-grid">
                     <div class="card"><div class="number">۰۱</div><h3>آخرین نبرد سورنا</h3><p>فیلمنامه بلند</p><span class="badge">بلند</span></div>
                     <div class="card"><div class="number">۰۲</div><h3>سه‌گانه میراث آتش</h3><p>فیلمنامه بلند</p><span class="badge">بلند</span></div>
                     <div class="card"><div class="number">۰۳</div><h3>دژ شیرزنان</h3><p>فیلمنامه بلند</p><span class="badge">بلند</span></div>
                     <div class="card"><div class="number">۰۴</div><h3>داروخانه حکیم</h3><p>فیلمنامه بلند</p><span class="badge">بلند</span></div>
                 </div>
-
-                <h3 style="color:#feca57;margin-bottom:15px;margin-top:40px;">🎥 فیلمنامه‌های کوتاه</h3>
+                <h3 style="color:#6b4226;margin-bottom:16px;margin-top:40px;font-size:1.3rem;">🎞️ فیلمنامه‌های کوتاه</h3>
                 <div class="cards-grid">
                     <div class="card"><div class="number">۰۱</div><h3>چراغ راه</h3><p>فیلمنامه کوتاه</p><span class="badge">کوتاه</span></div>
                     <div class="card"><div class="number">۰۲</div><h3>عطر شیرین</h3><p>فیلمنامه کوتاه</p><span class="badge">کوتاه</span></div>
@@ -635,97 +657,49 @@
             </div>
         </section>
 
-        <!-- ===== SERIES ===== -->
-        <section id="series" class="section-dark">
+        <section id="series" class="section-warm">
             <div class="container">
                 <div class="text-center">
-                    <span style="color:#e94560;font-weight:600;letter-spacing:2px;">سریال‌ها و آثار نمایشی</span>
+                    <span class="eyebrow">📺 سریال‌ها و آثار نمایشی</span>
                     <h2 class="section-title">مجموعه‌های نمایشی</h2>
                     <p class="section-subtitle">آثار تلویزیونی و مجموعه‌های نمایشی</p>
+                    <div class="decor-line"></div>
                 </div>
-
                 <div class="cards-grid">
-                    <div class="card"><div class="number">۰۱</div><h3>دهوپادان</h3><p>سریال سی قسمتی</p><span class="badge">سریال</span></div>
-                    <div class="card"><div class="number">۰۲</div><h3>ققنوس زاگرس</h3><p>سریال سی قسمتی</p><span class="badge">سریال</span></div>
-                    <div class="card"><div class="number">۰۳</div><h3>حماسه زندیان</h3><p>سریال سی قسمتی</p><span class="badge">سریال</span></div>
-                    <div class="card"><div class="number">۰۴</div><h3>مرد ساده‌دل روستا</h3><p>مجموعه نمایشی</p><span class="badge">نمایشی</span></div>
-                    <div class="card"><div class="number">۰۵</div><h3>تولدی دوباره</h3><p>مجموعه نمایشی</p><span class="badge">نمایشی</span></div>
-                    <div class="card"><div class="number">۰۶</div><h3>برخاستن شیران زند</h3><p>مجموعه نمایشی</p><span class="badge">نمایشی</span></div>
-                    <div class="card"><div class="number">۰۷</div><h3>دون کیشوت روستا</h3><p>مجموعه نمایشی</p><span class="badge">نمایشی</span></div>
+                    <div class="card"><div class="number">۰۱</div><h3>دهوپادان</h3><p>سریال سی قسمتی</p><span class="badge">📺 سریال</span></div>
+                    <div class="card"><div class="number">۰۲</div><h3>ققنوس زاگرس</h3><p>سریال سی قسمتی</p><span class="badge">📺 سریال</span></div>
+                    <div class="card"><div class="number">۰۳</div><h3>حماسه زندیان</h3><p>سریال سی قسمتی</p><span class="badge">📺 سریال</span></div>
+                    <div class="card"><div class="number">۰۴</div><h3>مرد ساده‌دل روستا</h3><p>مجموعه نمایشی</p><span class="badge">🎭 نمایشی</span></div>
+                    <div class="card"><div class="number">۰۵</div><h3>تولدی دوباره</h3><p>مجموعه نمایشی</p><span class="badge">🎭 نمایشی</span></div>
+                    <div class="card"><div class="number">۰۶</div><h3>برخاستن شیران زند</h3><p>مجموعه نمایشی</p><span class="badge">🎭 نمایشی</span></div>
+                    <div class="card"><div class="number">۰۷</div><h3>دون کیشوت روستا</h3><p>مجموعه نمایشی</p><span class="badge">🎭 نمایشی</span></div>
                 </div>
             </div>
         </section>
 
-        <!-- ===== BLOG ===== -->
-        <section id="blog" class="section-light">
+        <section id="blog" class="section-cream">
             <div class="container">
                 <div class="text-center">
-                    <span style="color:#e94560;font-weight:600;letter-spacing:2px;">وبلاگ و نوشته‌ها</span>
+                    <span class="eyebrow">✍️ وبلاگ و نوشته‌ها</span>
                     <h2 class="section-title">یادداشت‌های حسین محمدی آمیرزا</h2>
-                    <p class="section-subtitle">در این بخش می‌توانید نوشته‌ها و فصل‌های منتشرشده را مطالعه کنید.</p>
+                    <p class="section-subtitle">نوشته‌ها و فصل‌های منتشرشده</p>
+                    <div class="decor-line"></div>
                 </div>
-
                 <div class="cards-grid">
                     <div class="card">
                         <div class="number">۱۷</div>
                         <h3>کشاورزی؛ وقتی انسان تصمیم گرفت طبیعت را تغییر دهد</h3>
                         <p>دانه‌ای که تاریخ را تغییر داد</p>
-                        <a href="https://6a6612921781e.mywebzi.ir/blog/uncategorized/P45342-%D9%81%D8%B5%D9%84-%D9%87%D9%81%D8%AF%D9%87%D9%85-%DA%A9%D8%B4%D8%A7%D9%88%D8%B1%D8%B2%DB%8C-%D9%88%D9%82%D8%AA%DB%8C-%D8%A7%D9%86%D8%B3%D8%A7%D9%86-%D8%AA%D8%B5%D9%85%DB%8C%D9%85-%DA%AF%D8%B1%D9%81%D8%AA-%D8%B7%D8%A8%DB%8C%D8%B9%D8%AA-%D8%B1%D8%A7-%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1-%D8%AF%D9%87%D8%AF-%D8%AF%D8%A7%D9%86%D9%87-%D8%A7%DB%8C-%DA%A9%D9%87-%D8%AA%D8%A7%D8%B1%DB%8C%D8%AE-%D8%B1%D8%A7-%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1-%D8%AF%D8%A7%D8%AF-%D8%A8%D8%A7-%D9%82%D9%84%D9%85-%D8%AD%D8%B3%DB%8C%D9%86-%D9%85%D8%AD%D9%85%D8%AF%DB%8C.html" target="_blank" class="btn btn-primary" style="margin-top:15px;padding:8px 20px;font-size:0.85rem;">خواندن یادداشت</a>
+                        <a href="https://6a6612921781e.mywebzi.ir/blog/uncategorized/P45342-%D9%81%D8%B5%D9%84-%D9%87%D9%81%D8%AF%D9%87%D9%85-%DA%A9%D8%B4%D8%A7%D9%88%D8%B1%D8%B2%DB%8C-%D9%88%D9%82%D8%AA%DB%8C-%D8%A7%D9%86%D8%B3%D8%A7%D9%86-%D8%AA%D8%B5%D9%85%DB%8C%D9%85-%DA%AF%D8%B1%D9%81%D8%AA-%D8%B7%D8%A8%DB%8C%D8%B9%D8%AA-%D8%B1%D8%A7-%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1-%D8%AF%D9%87%D8%AF-%D8%AF%D8%A7%D9%86%D9%87-%D8%A7%DB%8C-%DA%A9%D9%87-%D8%AA%D8%A7%D8%B1%DB%8C%D8%AE-%D8%B1%D8%A7-%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1-%D8%AF%D8%A7%D8%AF-%D8%A8%D8%A7-%D9%82%D9%84%D9%85-%D8%AD%D8%B3%DB%8C%D9%86-%D9%85%D8%AD%D9%85%D8%AF%DB%8C.html" target="_blank" class="btn btn-primary" style="margin-top:12px;padding:8px 20px;font-size:0.85rem;">خواندن یادداشت</a>
                     </div>
                     <div class="card">
                         <div class="number">۱۶</div>
                         <h3>زمان؛ وقتی انسان تلاش کرد گذر زمان را اندازه بگیرد</h3>
                         <p>چیزی که نمی‌توان متوقفش کرد</p>
-                        <a href="https://6a6612921781e.mywebzi.ir/blog/uncategorized/P45341-%D9%81%D8%B5%D9%84-%D8%B4%D8%A7%D9%86%D8%B2%D8%AF%D9%87%D9%85-%D8%B2%D9%85%D8%A7%D9%86-%D9%88%D9%82%D8%AA%DB%8C-%D8%A7%D9%86%D8%B3%D8%A7%D9%86-%D8%AA%D9%84%D8%A7%D8%B4-%DA%A9%D8%B1%D8%AF-%DA%AF%D8%B0%D8%B1-%D8%B2%D9%85%D8%A7%D9%86-%D8%B1%D8%A7-%D8%A7%D9%86%D8%AF%D8%A7%D8%B2%D9%87-%DA%AF%DB%8C%D8%B1%D8%AF-%DA%86%DB%8C%D8%B2%DB%8C-%DA%A9%D9%87-%D9%86%D9%85%DB%8C-%D8%AA%D9%88%D8%A7%D9%86-%D9%85%D8%AA%D9%88%D9%82%D9%81-%D8%B4%D8%AF.html" target="_blank" class="btn btn-primary" style="margin-top:15px;padding:8px 20px;font-size:0.85rem;">خواندن یادداشت</a>
+                        <a href="https://6a6612921781e.mywebzi.ir/blog/uncategorized/P45341-%D9%81%D8%B5%D9%84-%D8%B4%D8%A7%D9%86%D8%B2%D8%AF%D9%87%D9%85-%D8%B2%D9%85%D8%A7%D9%86-%D9%88%D9%82%D8%AA%DB%8C-%D8%A7%D9%86%D8%B3%D8%A7%D9%86-%D8%AA%D9%84%D8%A7%D8%B4-%DA%A9%D8%B1%D8%AF-%DA%AF%D8%B0%D8%B1-%D8%B2%D9%85%D8%A7%D9%86-%D8%B1%D8%A7-%D8%A7%D9%86%D8%AF%D8%A7%D8%B2%D9%87-%DA%AF%DB%8C%D8%B1%D8%AF-%DA%86%DB%8C%D8%B2%DB%8C-%DA%A9%D9%87-%D9%86%D9%85%DB%8C-%D8%AA%D9%88%D8%A7%D9%86-%D9%85%D8%AA%D9%88%D9%82%D9%81-%D8%B4%D8%AF.html" target="_blank" class="btn btn-primary" style="margin-top:12px;padding:8px 20px;font-size:0.85rem;">خواندن یادداشت</a>
                     </div>
                     <div class="card">
                         <div class="number">۱۵</div>
                         <h3>عدد؛ وقتی انسان جهان را شمرد</h3>
                         <p>از «یکی» تا «چندتا»</p>
-                        <a href="https://6a6612921781e.mywebzi.ir/blog/uncategorized/P45339-%D9%81%D8%B5%D9%84-%DA%86%D9%87%D8%A7%D8%B1%D8%AF%D9%87%D9%85-%D8%B9%D8%AF%D8%AF-%D9%88%D9%82%D8%AA%DB%8C-%D8%A7%D9%86%D8%B3%D8%A7%D9%86-%D8%AC%D9%87%D8%A7%D9%86-%D8%B1%D8%A7-%D8%B4%D9%85%D8%A7%D8%B1%D8%AF-%D8%A7%D8%B2-%DB%8C%DA%A9%DB%8C-%D8%AA%D8%A7-%DA%86%D9%86%D8%AF%D8%AA%D8%A7-%D8%A8%D8%A7-%D9%82%D9%84%D9%85-%DA%86%DB%8C%D8%B3%D8%AA-%DB%8C.html" target="_blank" class="btn btn-primary" style="margin-top:15px;padding:8px 20px;font-size:0.85rem;">خواندن یادداشت</a>
-                    </div>
-                </div>
-
-                <div class="text-center" style="margin-top:30px;">
-                    <a href="https://6a6612921781e.mywebzi.ir/blog/" target="_blank" class="btn btn-outline">مشاهده همه نوشته‌ها در وبلاگ</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- ===== CONTACT ===== -->
-        <section id="contact" class="section-dark">
-            <div class="container">
-                <div class="text-center">
-                    <span style="color:#e94560;font-weight:600;letter-spacing:2px;">ارتباط</span>
-                    <h2 class="section-title">راه‌های ارتباطی با من</h2>
-                    <p class="section-subtitle">برای ارتباط، پیشنهاد، همکاری و گفت‌وگو می‌توانید از راه‌های زیر استفاده کنید.</p>
-                </div>
-
-                <div class="contact-box">
-                    <p><strong>📧 ایمیل:</strong> <a href="mailto:hosseinmohammadi.writer@gmail.com">hosseinmohammadi.writer@gmail.com</a></p>
-                    <p><strong>📞 تلفن:</strong> <a href="tel:09199379791">09199379791</a></p>
-                    <p><strong>📍 محل:</strong> پاکدشت، روبه‌روی دانشگاه ابو ریحان</p>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- ===== FOOTER ===== -->
-    <footer>
-        <div class="container">
-            © <span id="year"></span> حسین محمدی آمیرزا
-            <span style="margin:0 10px;">—</span>
-            تمامی حقوق محفوظ است.
-            <br>
-            <span style="font-size:0.8rem;color:#444;">ساخته شده با <span class="heart">♥</span> برای هنر و تاریخ</span>
-        </div>
-    </footer>
-
-    <script>
-        // سال جاری در فوتر
-        document.getElementById('year').textContent = new Date().getFullYear();
-
-        // اسکرول نرم برای لینک‌های داخلی
-        document.querySelectorAll('a[href^="#"]').forEach(link => {
-            link.addEventListener('click', function(e
+                        <a href="https://6a6612921781e.mywebzi.ir/blog/uncategorized/P45339-%D9%81%D8%B5%D9%84-%DA%86%D9%87%D8%A7%D8%B1%D8%AF%D9%87%D9%85-%D8%B9%D8%AF%D8%AF-%D
