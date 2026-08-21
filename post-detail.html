@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title id="page-title">نوشته | حسین محمدی آمیرزا</title>
+<meta name="description" id="page-desc" content="نوشته‌ای از حسین محمدی آمیرزا">
+<meta name="author" content="حسین محمدی آمیرزا">
+<meta name="robots" content="index, follow">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="subhero compact">
+<nav class="nav wrap">
+<a class="brand" href="index.html">✍️ حسین محمدی آمیرزا</a>
+<div class="links"><a href="index.html">خانه</a><a href="blog.html">وبلاگ</a><a href="tarikh-adyan.html">تاریخ ادیان</a></div>
+</nav>
+</header>
+<main class="section">
+<article class="wrap article">
+<span class="tag" id="post-tag">نوشته</span>
+<h1 id="post-title">عنوان نوشته</h1>
+<p class="article-lead" id="post-excerpt">توضیح مختصر</p>
+<p class="muted" id="post-date" style="font-size:.9rem;margin-top:-10px;">تاریخ انتشار</p>
+<div class="article-body" id="post-content">
+<p>محتوای نوشته...</p>
+</div>
+<div class="article-nav">
+<a class="btn" href="blog.html">📚 بازگشت به وبلاگ</a>
+<a class="btn ghost" href="tarikh-adyan.html">📖 صفحه کتاب</a>
+</div>
+</article>
+</main>
+<footer><div class="wrap">© <span id="year"></span> حسین محمدی آمیرزا</div></footer>
+<script src="script.js"></script>
+<script>
+const params = new URLSearchParams(window.location.search);
+const postId = params.get('id');
+
+if (postId) {
+  fetch('posts/posts.json')
+    .then(res => res.json())
+    .then(posts => {
+      const post = posts.find(p => p.id == postId);
+      if (post) {
+        document.getElementById('page-title').textContent = post.title + ' | حسین محمدی آمیرزا';
+        document.getElementById('page-desc').content = post.excerpt || post.title;
+        document.getElementById('post-tag').textContent = post.tag || 'نوشته';
+        document.getElementById('post-title').textContent = post.title;
+        document.getElementById('post-excerpt').textContent = post.excerpt || '';
+        document.getElementById('post-date').textContent = '📅 ' + post.date || '';
+        document.getElementById('post-content').innerHTML = post.content || '<p>متن نوشته پیدا نشد.</p>';
+      } else {
+        document.getElementById('post-title').textContent = 'نوشته یافت نشد';
+        document.getElementById('post-content').innerHTML = '<p>نوشته‌ای با این شناسه وجود ندارد.</p>';
+      }
+    })
+    .catch(() => {
+      document.getElementById('post-title').textContent = 'خطا در بارگذاری';
+      document.getElementById('post-content').innerHTML = '<p>مشکلی در بارگذاری نوشته وجود دارد.</p>';
+    });
+}
+</script>
+</body>
+</html>
