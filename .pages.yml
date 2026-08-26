@@ -1,0 +1,43 @@
+media:
+  input: media
+  output: /media
+
+content:
+  - name: posts
+    label: نوشته‌های وبلاگ
+    type: collection
+    path: posts
+    filename: "{primary}.md"
+    format: yaml-frontmatter
+
+    fields:
+      - name: title
+        label: عنوان
+        type: string
+        required: true
+
+      - name: date
+        label: تاریخ
+        type: date
+        required: true
+
+      - name: tag
+        label: دسته‌بندی
+        type: string
+
+      - name: excerpt
+        label: خلاصه
+        type: text
+
+      - name: body
+        label: متن نوشته
+        type: rich-text
+        options:
+          format: markdown
+          media: true
+
+    view:
+      primary: title
+      sort: date
+      default:
+        order: desc
