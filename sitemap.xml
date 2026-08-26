@@ -1,4 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://hossein-amirza.github.io/hossein-mohammadi-amirza/</loc></url>
+
+  <!-- صفحه اصلی -->
+  <url>
+    <loc>https://hossein-amirza.github.io/hossein-mohammadi-amirza/</loc>
+  </url>
+
+  <!-- صفحات اصلی -->
+  <url>
+    <loc>https://hossein-amirza.github.io/hossein-mohammadi-amirza/index.html</loc>
+  </url>
+
+  <url>
+    <loc>https://hossein-amirza.github.io/hossein-mohammadi-amirza/blog.html</loc>
+  </url>
+
+  <!-- کتاب‌ها -->
+  <url>
+    <loc>https://hossein-amirza.github.io/hossein-mohammadi-amirza/tarikh-adyan.html</loc>
+  </url>
+
+  <url>
+    <loc>https://hossein-amirza.github.io/hossein-mohammadi-amirza/faraz-va-forud.html</loc>
+  </url>
+
+  <url>
+    <loc>https://hossein-amirza.github.io/hossein-mohammadi-amirza/golshani.html</loc>
+  </url>
+
+  <url>
+    <loc>https://hossein-amirza.github.io/hossein-mohammadi-amirza/honar-razm.html</loc>
+  </url>
+
+  <!-- نوشته‌ها و فصل‌های وبلاگ -->
+  <url>
+    <loc>https://hossein-amirza.github.io/hossein-mohammadi-amirza/post-14.html</loc>
+  </url>
+
+  <url>
+    <loc>https://hossein-amirza.github.io/hossein-mohammadi-amirza/post-15.html</loc>
+  </url>
+
+  <url>
+    <loc>https://hossein-amirza.github.io/hossein-mohammadi-amirza/post-16.html</loc>
+  </url>
+
+  <url>
+    <loc>https://hossein-amirza.github.io/hossein-mohammadi-amirza/post-17.html</loc>
+  </url>
+
+  <url>
+    <loc>https://hossein-amirza.github.io/hossein-mohammadi-amirza/post-detail.html</loc>
+  </url>
+
 </urlset>
