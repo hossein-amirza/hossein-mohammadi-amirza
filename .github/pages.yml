@@ -1,0 +1,15 @@
+content:
+  - name: posts
+    label: نوشته‌های وبلاگ
+    path: content/posts
+    type: collection
+    fields:
+      - name: title
+        label: عنوان
+        type: string
+      - name: date
+        label: تاریخ
+        type: date
+      - name: body
+        label: متن مقاله
+        type: markdown
