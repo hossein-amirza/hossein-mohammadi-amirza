@@ -20,24 +20,27 @@
   <main class="section">
     <div class="wrap">
       <h1>📝 وبلاگ حسین محمدی آمیرزا</h1>
-      <div class="blog-list">
-
-        <!-- ===== مقاله ۱ ===== -->
-        <a href="posts/post-1.html" class="post-card">
-          <h3>عنوان مقاله نمونه</h3>
-          <p>توضیح کوتاه مقاله</p>
-        </a>
-
-        <!-- مقاله‌های بعدی اینجا اضافه میشن -->
-
-      </div>
+      <div id="posts-container" class="blog-list"></div>
     </div>
   </main>
 
-  <footer>
-    <div class="wrap">© <span id="year"></span> حسین محمدی آمیرزا</div>
-  </footer>
-
+  <footer><div class="wrap">© <span id="year"></span> حسین محمدی آمیرزا</div></footer>
   <script src="../script.js"></script>
+  <script>
+    fetch('../content/posts.json')
+      .then(res => res.json())
+      .then(data => {
+        const container = document.getElementById('posts-container');
+        data.forEach(post => {
+          container.innerHTML += `
+            <div class="post-card">
+              <h3>${post.title}</h3>
+              <p>${post.date}</p>
+              <p>${post.body}</p>
+            </div>
+          `;
+        });
+      });
+  </script>
 </body>
 </html>
