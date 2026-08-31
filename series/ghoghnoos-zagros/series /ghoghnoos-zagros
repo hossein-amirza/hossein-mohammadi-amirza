@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ققنوس زاگرس | حسین محمدی</title>
+
+<meta
+name="description"
+content="طرح مجموعه نمایشی تاریخی ـ خانوادگی ققنوس زاگرس، نوشته و طراحی حسین محمدی"
+
+>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: #f5f1ea;
+      color: #2d2925;
+      font-family: Tahoma, Arial, sans-serif;
+      line-height: 2;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 40px 22px 70px;
+    }
+
+    .back {
+      display: inline-block;
+      margin-bottom: 28px;
+      padding: 9px 18px;
+      border: 1px solid #c9bba9;
+      border-radius: 8px;
+      background: rgba(255,255,255,.55);
+      font-size: 14px;
+    }
+
+    .back:hover {
+      background: #fff;
+    }
+
+    .hero {
+      background: #fffaf4;
+      border: 1px solid #ddd1c2;
+      border-radius: 18px;
+      padding: 35px 30px;
+      margin-bottom: 25px;
+      box-shadow: 0 8px 30px rgba(70, 50, 30, .07);
+    }
+
+    .eyebrow {
+      font-size: 14px;
+      color: #8b6b4a;
+      margin-bottom: 8px;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(32px, 5vw, 52px);
+      line-height: 1.5;
+      color: #3b3027;
+    }
+
+    .subtitle {
+      margin: 0;
+      font-size: 18px;
+      color: #6f6256;
+    }
+
+    .author {
+      margin-top: 18px;
+      font-weight: bold;
+      color: #7a5839;
+    }
+
+    .lead {
+      margin-top: 20px;
+      font-size: 17px;
+      color: #51473f;
+    }
+
+    .details {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .detail {
+      padding: 16px;
+      background: #f3ede5;
+      border-radius: 10px;
+    }
+
+    .detail strong {
+      display: block;
+      margin-bottom: 3px;
+      color: #705337;
+    }
+
+    .section {
+      background: #fffaf4;
+      border: 1px solid #ddd1c2;
+      border-radius: 18px;
+      padding: 30px;
+      margin-bottom: 25px;
+      box-shadow: 0 8px 30px rgba(70, 50, 30, .05);
+    }
+
+    h2 {
+      margin-top: 0;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #dfd3c5;
+      color: #3b3027;
+      font-size: 25px;
+    }
+
+    h3 {
+      margin-top: 0;
+      margin-bottom: 8px;
+      color: #594535;
+      font-size: 19px;
+    }
+
+    p {
+      margin: 0 0 18px;
+      text-align: justify;
+    }
+
+    .source {
+      background: #f3ede5;
+      border-right: 4px solid #9a7650;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .theme-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .theme {
+      padding: 20px;
+      background: #f3ede5;
+      border-radius: 10px;
+    }
+
+    .structure {
+      background: #eee6dc;
+      border-right: 4px solid #806044;
+      padding: 22px;
+      border-radius: 10px;
+    }
+
+    .episodes {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .episode {
+      background: #f3ede5;
+      border-radius: 10px;
+      padding: 18px;
+      border: 1px solid #e2d7ca;
+    }
+
+    .episode-number {
+      display: inline-block;
+      margin-bottom: 8px;
+      color: #8b6b4a;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .episode h3 {
+      margin-bottom: 8px;
+    }
+
+    .episode p {
+      margin-bottom: 0;
+      font-size: 15px;
+    }
+
+    .quote {
+      margin: 25px 0;
+      padding: 20px;
+      border-right: 3px solid #9a7650;
+      background: rgba(255,255,255,.55);
+      font-weight: bold;
+      color: #574536;
+    }
+
+    .ending {
+      background: #eee6dc;
+      border-right: 4px solid #806044;
+    }
+
+    .footer {
+      text-align: center;
+      color: #76695d;
+      font-size: 14px;
+      padding-top: 20px;
+    }
+
+    @media (max-width: 650px) {
+      .page {
+        padding: 22px 14px 45px;
+      }
+
+      .hero,
+      .section {
+        padding: 23px 18px;
+        border-radius: 14px;
+      }
+
+      .details,
+      .theme-grid,
+      .episodes {
+        grid-template-columns: 1fr;
+      }
+
+      p {
+        text-align: right;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <main class="page">
+
+```
+<a class="back" href="../../index.html">
+  ← بازگشت به آثار نمایشی
+</a>
+
+
+<!-- ===== معرفی اثر ===== -->
+
+<section class="hero">
+
+  <div class="eyebrow">
+    مجموعه نمایشی تاریخی ـ خانوادگی
+  </div>
+
+  <h1>ققنوس زاگرس</h1>
+
+  <p class="subtitle">
+    طرح مجموعه نمایشی
+  </p>
+
+  <p class="author">
+    نویسنده و طراح: حسین محمدی
+  </p>
+
+  <p class="lead">
+    روایتی چندنسلی از فروپاشی، پنهان‌کاری، رنج، مهاجرت، دوباره‌ساختن
+    و ماندگاری یک خانواده؛ داستانی که از روزهای پایانی خاندان زند آغاز
+    می‌شود و در مسیر تاریخ، میراث خود را به آموزش، شرافت و خدمت به مردم
+    منتقل می‌کند.
+  </p>
+
+  <div class="details">
+
+    <div class="detail">
+      <strong>قالب</strong>
+      مجموعه نمایشی ۳۰ قسمتی
+    </div>
+
+    <div class="detail">
+      <strong>تعداد قسمت</strong>
+      ۳۰ قسمت
+    </div>
+
+    <div class="detail">
+      <strong>ژانر</strong>
+      تاریخی، خانوادگی، درام
+    </div>
+
+    <div class="detail">
+      <strong>فضای داستان</strong>
+      ملایر، لرستان، طجر، دهچال و مناطق زاگرس
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ===== معرفی کلی ===== -->
+
+<section class="section">
+
+  <h2>معرفی مجموعه</h2>
+
+  <p>
+    «ققنوس زاگرس» داستان یک خاندان است که پس از شکست و فروپاشی سیاسی،
+    به جای آنکه در چرخه انتقام و خشونت گرفتار شود، مسیر تازه‌ای را برای
+    بقا و ساختن آینده انتخاب می‌کند.
+  </p>
+
+  <p>
+    روایت با محمدقلی‌خان زند و آخرین تلاش او برای بازپس‌گیری قدرت آغاز
+    می‌شود و با کشته شدن او، سرنوشت همسرش نرگس‌خاتون و فرزند خردسالش
+    غلامحسین وارد مرحله‌ای تازه می‌گردد.
+  </p>
+
+  <p>
+    نرگس‌خاتون برای نجات فرزند خود، هویت خاندان را پنهان می‌کند و زندگی
+    تازه‌ای را در طجر آغاز می‌نماید. از این نقطه، داستان از یک روایت صرفاً
+    سیاسی فاصله می‌گیرد و به قصه‌ای درباره خانواده، کار، ایمان، آبادی،
+    آموزش و انتقال میراث اخلاقی میان نسل‌ها تبدیل می‌شود.
+  </p>
+
+  <p>
+    در نسل‌های بعد، قلعه طجر به نمادی از امنیت و آبادانی تبدیل می‌شود،
+    اما ثروت و اختلافات خانوادگی سرانجام دوباره خاندان را به مرز فروپاشی
+    می‌رساند. میرزا احمد، یکی از قربانیان این فروپاشی، راه دیگری انتخاب
+    می‌کند و از صفر، با تجارت، صداقت و اعتبار، زندگی خود را از نو می‌سازد.
+  </p>
+
+  <p>
+    بخش پایانی روایت به نسل بعد تعلق دارد؛ نسلی که علم و آموزش را ادامه
+    راه می‌داند. علی‌احمد از مکتب دهچال تا میدان خدمت و دفاع از کشور
+    پیش می‌رود و در پایان، میراث واقعی خانواده نه زر و زمین، بلکه
+    شرافت، دانش و خدمت به مردم معرفی می‌شود.
+  </p>
+
+</section>
+
+
+<!-- ===== جهان اثر ===== -->
+
+<section class="section">
+
+  <h2>جهان «ققنوس زاگرس»</h2>
+
+  <div class="theme-grid">
+
+    <div class="theme">
+      <h3>میراث و هویت</h3>
+      <p>
+        حفظ ریشه‌های خانوادگی بدون گرفتار شدن در حسرت گذشته و انتقام.
+      </p>
+    </div>
+
+    <div class="theme">
+      <h3>خانواده و نسل‌ها</h3>
+      <p>
+        انتقال تجربه، اخلاق و خاطره از نرگس‌خاتون به فرزندان و نسل‌های بعد.
+      </p>
+    </div>
+
+    <div class="theme">
+      <h3>بازسازی پس از شکست</h3>
+      <p>
+        تبدیل فروپاشی و بی‌پناهی به فرصتی برای آغاز دوباره.
+      </p>
+    </div>
+
+    <div class="theme">
+      <h3>کار و اعتبار</h3>
+      <p>
+        اثبات این اندیشه که سرمایه واقعی انسان، اعتماد و درستکاری اوست.
+      </p>
+    </div>
+
+    <div class="theme">
+      <h3>آموزش</h3>
+      <p>
+        نقش سواد و دانش در تغییر سرنوشت فرد، خانواده و جامعه.
+      </p>
+    </div>
+
+    <div class="theme">
+      <h3>شرافت و خدمت</h3>
+      <p>
+        قرار دادن مسئولیت اجتماعی و خدمت به مردم فراتر از ثروت و قدرت.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ===== ساختار داستان ===== -->
+
+<section class="section">
+
+  <h2>ساختار داستان</h2>
+
+  <div class="structure">
+
+    <p>
+      روایت در چند نسل دنبال می‌شود و هر نسل، میراث نسل پیشین را به شکلی
+      متفاوت تفسیر می‌کند.
+    </p>
+
+    <p>
+      بخش نخست با سقوط محمدقلی‌خان زند، فرار نرگس‌خاتون و پنهان شدن هویت
+      خانوادگی آغاز می‌شود.
+    </p>
+
+    <p>
+      بخش دوم به رشد غلامحسین و شکل‌گیری قلعه طجر، امنیت منطقه و گسترش
+      اعتبار خاندان اختصاص دارد.
+    </p>
+
+    <p>
+      بخش سوم با ثروتمند شدن خاندان و ایجاد اختلافات داخلی، فروپاشی دوباره
+      و محروم شدن میرزا احمد از میراث آغاز می‌شود.
+    </p>
+
+    <p>
+      بخش چهارم، مسیر رهایی میرزا احمد، ورود او به بازار ملایر، تجربه
+      شکست اقتصادی و مهاجرت به دهچال را روایت می‌کند.
+    </p>
+
+    <p>
+      بخش پایانی بر آموزش علی‌احمد، شکل‌گیری مکتب دهچال، خدمت نظامی او،
+      نبرد و هم‌زمانی تلخ مرگ پدر با دریافت نشان شجاعت تمرکز دارد.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- ===== مرور قسمت‌ها ===== -->
+
+<section class="section">
+
+  <h2>مرور ۳۰ قسمت مجموعه</h2>
+
+  <div class="episodes">
+
+    <article class="episode">
+      <span class="episode-number">قسمت ۰۱</span>
+      <h3>آخرین فرماندار</h3>
+      <p>
+        محمدقلی‌خان زند در ملایر برای لشکرکشی آماده می‌شود، اما پیش از
+        نبرد سلطان‌آباد به دست یکی از نزدیکان خود کشته می‌شود و نرگس‌خاتون
+        برای نجات فرزند خردسالش می‌گریزد.
+      </p>
+    </article>
+
+    <article class="episode">
+      <span class="episode-number">قسمت ۰۲</span>
+      <h3>شب گنج</h3>
+      <p>
+        نرگس‌خاتون همراه گلبانو و کودک، شبانه از امارت خارج می‌شود و پس از
+        عبور از کوه‌ها به طجر و حرم امام‌زاده ابراهیم پناه می‌برد.
+      </p>
+    </article>
+
+    <article class="episode">
+      <span class="episode-number">قسمت ۰۳</span>
+      <h3>پناه غریبه</h3>
+      <p>
+        حاج ولی، مردی خوش‌نام از اهالی طجر، بدون پرسش درباره گذشته نرگس،
+        خانه خالی خانواده‌اش را در اختیار او قرار می‌دهد.
+      </p>
+    </article>
+
+    <article class="episode">
+      <span class="episode-number">قسمت ۰۴</span>
+      <h3>ریشه در خاک</h3>
+      <p>
+        نرگس‌خاتون خانه را می‌خرد و برای حفظ جان فرزندش هویت زند را پنهان
+        می‌کند و غلامحسین را با نامی تازه بزرگ می‌کند.
+      </p>
+    </article>
+
+    <article class="episode">
+      <span class="episode-number">قسمت ۰۵</span>
+      <h3>کوچک‌سالار</h3>
+      <p>
+        غلامحسین در طجر با کشاورزی، دامداری و سفالگری رشد می‌کند و در
+        سال‌های پایانی عمر نرگس، راز گذشته خاندان را می‌شنود.
+      </p>
+    </article>
+
+    <article class="episode">
+      <span class="episode-number">قسمت ۰۶</span>
+      <h3>سنگ بنای قلعه</h3>
+      <p>
+        غلامحسین با آباد کردن زمین‌ها، حل اختلافات و ایجاد امنیت، اعتماد
+        مردم را به دست می‌آورد و قلعه طجر ساخته می‌شود.
+      </p>
+    </article>
+
+    <article class="episode">
+      <span class="episode-number">قسمت ۰۷</span>
+      <h3>مرد صلح</h3>
+      <p>
+        غلامحسین به یکی از معتمدان منطقه تبدیل می‌شود و قلعه طجر به مرکز
+        دادوستد و تصمیم‌گیری بدل می‌گردد.
+      </p>
+    </article>
+
+    <article class="episode">
+      <span class="episode-number">قسمت ۰۸</span>
+      <h3>وصیت پدر</h3>
+      <p>
+        غلامحسین پیش از مرگ به یارمحمدخان هشدار می‌دهد که ثروت آزمون است،
+        نه پاداش؛ سپس میراث قلعه و نام نیک را به او می‌سپارد.
+      </p>
+    </article>
+
+    <article class="episode">
+      <span class="episode-number">قسمت ۰۹</span>
+      <h3>عصر یارمحمدخان</h3>
+      <p>
+        یارمحمدخان قلعه را به قطب تجارت و امنیت تبدیل می‌کند و با تدبیر،
+        مانع تعرض حکام قاجار به طجر می‌شود.
+      </p>
+    </article>
+
+    <article class="episode">
+      <span class="episode-number">قسمت ۱۰</span>
+      <h3>طلایی‌ترین روزها</h3>
+      <p>
+        حاج محمدخان به میراث خانوادگی می‌رسد و با افزایش ثروت و ازدواج‌های
+        متعدد، قدرت خاندان و زمینه اختلافات آینده را بیشتر می‌کند.
+      </p>
+    </article>
+
+    <article class="episode">
+      <span class="episode-number">قسمت ۱۱</span>
+      <h3>سایه گنج</h3>
+      <p>
+        زلیخا در اسناد قدیمی قلعه نشانه‌هایی از گنج یا اسناد مالکیت قدیمی
+        پیدا می‌کند و راز او فضای خاندان را به سوءظن آلوده می‌سازد.
+      </p>
+    </article>
+
+    <article class="episode">
+      <span class="episode-number">قسمت ۱۲</span>
+      <h3>بیماری مشکوک</h3>
+      <p>
+        بیماری ناگهانی زلیخا و مرگ او، اتهام‌ها و شکاف‌های خانوادگی را
+        عمیق‌تر می‌کند و وحدت خاندان را از بین می‌برد.
+      </p>
+    </article>
+
+    <article class="episode">
+      <span class="episode-number">قسمت ۱۳</span>
+      <h3>پایان یک دوران</h3>
+      <p>
+        حاج محمدخان در میان اختلافات خانوادگی بیمار می‌شود و پس از مرگ او،
+        میراث خاندان به میدان رقابت فرزندان تبدیل می‌شود.
+      </p>
+    </article>
+
+    <article class="episode">
+      <span class="episode-number">قسمت ۱۴</span>
+      <h3>پسر بی‌سهم</h3>
+      <p>
+        میرزا احمد، تنها فرزند زلیخا، از حق ارث محروم می‌شود و در همان
+        قلعه‌ای که روزگاری متعلق به خانواده‌اش بود، به خدمتکاری گماشته می‌شود.
+      </p>
+    </article>
+
+    <article class="episode">
+      <span class="episode-number">قسمت ۱۵</span>
+      <h3>روزهای ذلت</h3>
+      <p>
+        تحقیر و بی‌حقوقی، میرزا احمد را به جای کینه، به سمت اندیشه رهایی
+        و ساختن زندگی تازه سوق می‌دهد.
+      </p>
+    </article>
+
+    <article class="episode">
+      <span class="episode-number">قسمت ۱۶</span>
+      <h3>نجوای فرار</h3>
+      <p>
+        خاطره مادر و روایت نرگس‌خاتون، میرزا احمد را به تصمیمی سرنوشت‌ساز
+        برای ترک قلعه و آغاز زندگی از صفر می‌رساند.
+      </p>
+    </article>
+
+    <article class="episode">
+      <span class="episode-number">قسمت ۱۷</span>
+      <h3>شب رهایی</h3>
+      <p>
+        میرزا احمد شبانه می‌گریزد، از کوه‌های زاگرس عبور می‌کند و پس از
+        روزهایی سخت و بی‌پناه، به بازار ملایر می‌رسد.
+      </p>
+    </article>
+
+    <article class="episode">
+      <span class="episode-number">قسمت ۱۸</span>
+      <h3>مکتب بازار</h3>
+      <p>
+        استاد محمود او را به شاگردی می‌پذیرد و میرزا احمد حساب، تجارت،
+        نظم و مهم‌تر از همه ارزش اعتبار را می‌آموزد.
+      </p>
+    </article>
+
+    <article class="episode">
+      <span class="episode-number">قسمت ۱۹</span>
+      <h3>سرمایه اعتبار</h3>
+      <p>
+        میرزا احمد مغازه خود را راه‌اندازی می‌کند و به دلیل صداقت و
+        امانت‌داری به «میرزا احمد امین» شهرت می‌یابد.
+      </p>
+    </article>
+
+    <article class="episode">
+      <span class="episode-number">قسمت ۲۰</span>
+      <h3>گرداب هرج‌ومرج</h3>
+      <p>
+        با ناامنی اواخر قاجار، بازار ملایر مورد هجوم قرار می‌گیرد و تمام
+        سرمایه میرزا احمد از بین می‌رود.
+      </p>
+    </article>
+
+    <article class="episode">
+      <span class="episode-number">قسمت ۲۱</span>
+      <h3>دوره‌گردی</h3>
+      <p>
+        میرزا احمد با خانواده‌اش برای گذران زندگی به دوره‌گردی روی می‌آورد
+        و سرانجام دهچال توجه او را جلب می‌کند.
+      </p>
+    </article>
+
+    <article class="episode">
+      <span class="episode-number">قسمت ۲۲</span>
+      <h3>مهاجرت به دهچال</h3>
+      <p>
+        خانواده در دهچال ماندگار می‌شود و میرزا احمد با دکان‌داری و کشاورزی
+        دوباره زندگی را از صفر می‌سازد.
+      </p>
+    </article>
+
+    <article class="episode">
+      <span class="episode-number">قسمت ۲۳</span>
+      <h3>معلم خصوصی</h3>
+      <p>
+        ملا کاظم از ملایر می‌آید و آموزش علی‌احمد آغاز می‌شود؛ پدر نیز هر
+        شب پای درس او می‌نشیند و ارزش دانش را درمی‌یابد.
+      </p>
+    </article>
+
+    <article class="episode">
+      <span class="episode-number">قسمت ۲۴</span>
+      <h3>سکوت پدر</h3>
+      <p>
+        علی‌احمد درباره گذشته خانواده پرسش می‌کند، اما میرزا احمد گذشته
+        تلخ را پنهان می‌کند تا فرزندش با کینه بزرگ نشود.
+      </p>
+    </article>
+
+    <article class="episode">
+      <span class="episode-number">قسمت ۲۵</span>
+      <h3>آمیرزای دهچال</h3>
+      <p>
+        علی‌احمد به معلمی روستا می‌رسد و آموزش کودکان و بزرگسالان را آغاز
+        می‌کند و به «آمیرزا» شهرت می‌یابد.
+      </p>
+    </article>
+
+    <article class="episode">
+      <span class="episode-number">قسمت ۲۶</span>
+      <h3>سربازی سرنوشت</h3>
+      <p>
+        علی‌احمد به دلیل سواد و درایت، مسئول تدارکات می‌شود و برای خرید
+        دام به مناطق اطراف رضائیه اعزام می‌گردد.
+      </p>
+    </article>
+
+    <article class="episode">
+      <span class="episode-number">قسمت ۲۷</span>
+      <h3>کمین</h3>
+      <p>
+        گروه علی‌احمد مورد حمله مسلحانه قرار می‌گیرد. او با خونسردی مهمات
+        را مدیریت می‌کند و سربازان را در موضع دفاعی نگه می‌دارد.
+      </p>
+    </article>
+
+    <article class="episode">
+      <span class="episode-number">قسمت ۲۸</span>
+      <h3>دو خبر</h3>
+      <p>
+        علی‌احمد تا رسیدن نیروهای کمکی مقاومت می‌کند؛ هم‌زمان در دهچال
+        خبر اشتباه کشته شدن او به خانواده می‌رسد و میرزا احمد از شدت اندوه
+        جان می‌دهد.
+      </p>
+    </article>
+
+    <article class="episode">
+      <span class="episode-number">قسمت ۲۹</span>
+      <h3>شهادت و شجاعت</h3>
+      <p>
+        در حالی که مراسم خاکسپاری میرزا احمد برگزار می‌شود، علی‌احمد از
+        نبرد جان سالم به در برده و برای شجاعت خود شایسته دریافت نشان می‌شود.
+      </p>
+    </article>
+
+    <article class="episode">
+      <span class="episode-number">قسمت ۳۰</span>
+      <h3>میراث ماندگار</h3>
+      <p>
+        میراث واقعی خانواده در آموزش، اخلاق و خدمت به مردم معنا پیدا می‌کند.
+        علی‌احمد نشان شجاعت را دریافت می‌کند و پیام ماندگار میرزا احمد،
+        یعنی ماندگاری علم و شرافت، به پایان‌بندی داستان تبدیل می‌شود.
+      </p>
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- ===== پایان‌بندی ===== -->
+
+<section class="section ending">
+
+  <h2>میراث ماندگار</h2>
+
+  <p>
+    «ققنوس زاگرس» داستان بازگشت از خاکستر است؛ اما نه بازگشت به قدرتی
+    از دست‌رفته، بلکه بازگشت به انسانی که پس از شکست دوباره می‌ایستد
+    و آینده را از نو می‌سازد.
+  </p>
+
+  <p>
+    نرگس‌خاتون با فرار، یک زندگی را نجات می‌دهد؛ غلامحسین با آبادانی،
+    امنیت می‌سازد؛ میرزا احمد با کار و اعتبار دوباره از صفر آغاز می‌کند؛
+    و علی‌احمد با آموزش و خدمت، میراث خانواده را به نسل بعد منتقل می‌نماید.
+  </p>
+
+  <div class="quote">
+    «ثروت می‌رود... اما علم و شرافت می‌ماند.»
+  </div>
+
+  <p>
+    پایان مجموعه، بیش از آنکه درباره پایان یک خاندان باشد، درباره تولد
+    یک میراث تازه است؛ میراثی که در زمین و زر نیست، بلکه در دانشی است
+    که به دیگران منتقل می‌شود و اخلاقی که در نسل‌های بعد زنده می‌ماند.
+  </p>
+
+</section>
+
+
+<!-- ===== درباره نویسنده ===== -->
+
+<section class="section">
+
+  <h2>درباره نویسنده و طراح</h2>
+
+  <p>
+    <strong>حسین محمدی</strong>
+  </p>
+
+  <p>
+    نویسنده و طراح مجموعه نمایشی تاریخی ـ خانوادگی «ققنوس زاگرس».
+  </p>
+
+</section>
+
+
+<!-- ===== FOOTER ===== -->
+
+<footer class="footer">
+
+  <p>
+    © حسین محمدی آمیرزا
+  </p>
+
+  <p>
+    تمامی حقوق این اثر محفوظ است.
+  </p>
+
+</footer>
+```
+
+  </main>
+
+</body>
+</html>
