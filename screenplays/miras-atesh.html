@@ -4,177 +4,486 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>سه‌گانه میراث آتش | حسین محمدی</title>
+  <title>آخرین نبرد سورنا | حسین محمدی امیرزا</title>
 
   <meta name="description"
-        content="سیناپس فیلمنامه سه‌گانه میراث آتش، بخش نخست، نوشته حسین محمدی.">
+        content="معرفی و سیناپس فیلمنامه بلند آخرین نبرد سورنا، نوشته حسین محمدی امیرزا.">
 
   <style>
     * {
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: Tahoma, Arial, sans-serif;
-      background: #f7f3eb;
-      color: #29251f;
-      line-height: 2;
+      background:
+        radial-gradient(circle at top, #241b12 0%, #0d0d0d 45%, #080808 100%);
+      color: #eee8df;
+      line-height: 2.1;
     }
 
     .page {
-      max-width: 900px;
+      width: min(1100px, 92%);
       margin: 0 auto;
-      padding: 50px 24px 80px;
+      padding: 35px 0 80px;
     }
 
+    /* بازگشت */
+
     .back {
-      display: inline-block;
-      margin-bottom: 35px;
-      color: #7b4b2a;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #d9ad63;
       text-decoration: none;
       font-size: 15px;
+      margin-bottom: 25px;
+      transition: 0.3s;
     }
 
     .back:hover {
-      text-decoration: underline;
+      color: #f0cb8a;
+      transform: translateX(-4px);
     }
+
+    /* هدر */
 
     header {
       text-align: center;
-      padding: 35px 20px 45px;
-      border-bottom: 1px solid #d8cdbd;
-      margin-bottom: 45px;
+      padding: 45px 20px 40px;
+      margin-bottom: 35px;
+      border-bottom: 1px solid rgba(218, 174, 98, 0.22);
     }
 
     .kicker {
-      display: block;
-      color: #8a5a32;
+      display: inline-block;
+      color: #d5a85d;
       font-size: 14px;
-      margin-bottom: 12px;
+      margin-bottom: 15px;
+      letter-spacing: 0.3px;
     }
 
     h1 {
       margin: 0;
-      font-size: 38px;
-      line-height: 1.5;
-      color: #33251b;
+      color: #e6bd76;
+      font-size: clamp(36px, 6vw, 62px);
+      line-height: 1.35;
+      text-shadow: 0 3px 25px rgba(0, 0, 0, 0.7);
     }
 
     .subtitle {
-      margin: 8px 0 0;
+      max-width: 760px;
+      margin: 18px auto 0;
+      color: #c5bbb0;
       font-size: 19px;
-      color: #76563d;
+      line-height: 1.9;
     }
 
     .author {
       margin-top: 22px;
+      color: #92877b;
       font-size: 15px;
-      color: #6c6258;
     }
 
+    .author strong {
+      color: #d8b06b;
+    }
+
+    /* پوستر */
+
+    .poster-wrap {
+      display: flex;
+      justify-content: center;
+      margin: 20px auto 55px;
+    }
+
+    .poster {
+      width: min(620px, 100%);
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(220, 175, 93, 0.35);
+      box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.65),
+        0 0 45px rgba(176, 122, 45, 0.08);
+      background: #171411;
+    }
+
+    .poster img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    /* بخش‌ها */
+
     section {
-      margin-bottom: 42px;
+      margin-bottom: 35px;
+    }
+
+    .section-card {
+      background:
+        linear-gradient(
+          145deg,
+          rgba(30, 27, 23, 0.98),
+          rgba(18, 17, 15, 0.98)
+        );
+      border: 1px solid rgba(220, 175, 93, 0.16);
+      border-radius: 18px;
+      padding: 34px 38px;
+      box-shadow: 0 15px 45px rgba(0, 0, 0, 0.28);
     }
 
     h2 {
-      margin: 0 0 18px;
-      font-size: 25px;
-      color: #6f4227;
-      border-right: 4px solid #9a6339;
-      padding-right: 12px;
+      position: relative;
+      margin: 0 0 25px;
+      padding-right: 17px;
+      color: #dfb568;
+      font-size: 27px;
       line-height: 1.6;
     }
 
-    h3 {
-      margin: 28px 0 12px;
-      font-size: 20px;
-      color: #684329;
+    h2::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 7px;
+      width: 4px;
+      height: 38px;
+      border-radius: 10px;
+      background: #c89545;
     }
 
     p {
-      margin: 0 0 18px;
+      margin: 0 0 20px;
+      color: #d8d0c7;
       font-size: 17px;
+      line-height: 2.25;
     }
 
-    .opening {
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    strong {
+      color: #e1bb78;
+    }
+
+    /* معرفی */
+
+    .intro {
       font-size: 19px;
-      color: #49372a;
+      color: #e3dbd2;
+      line-height: 2.3;
     }
 
-    .highlight {
+    /* مشخصات */
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .info-box {
+      background: rgba(255, 255, 255, 0.035);
+      border: 1px solid rgba(220, 175, 93, 0.12);
+      border-radius: 13px;
+      padding: 18px 20px;
+    }
+
+    .info-box span {
+      display: block;
+      color: #91877d;
+      font-size: 13px;
+      margin-bottom: 5px;
+    }
+
+    .info-box strong {
+      color: #e3bd78;
+      font-size: 16px;
+    }
+
+    /* سیناپس */
+
+    .synopsis-lead {
       padding: 22px 25px;
-      margin: 25px 0;
-      background: #eee6d8;
-      border-right: 4px solid #8a5a32;
-      font-size: 18px;
-      font-weight: bold;
+      margin-bottom: 30px;
+      background:
+        linear-gradient(
+          135deg,
+          rgba(137, 91, 32, 0.18),
+          rgba(255, 255, 255, 0.025)
+        );
+      border-right: 4px solid #c89545;
+      border-radius: 10px;
+      color: #eadcc9;
+      font-size: 19px;
+      line-height: 2.2;
     }
 
-    .symbolic {
-      background: #302820;
-      color: #f5eee4;
-      padding: 30px;
+    /* نقل قول */
+
+    .quote {
       margin: 30px 0;
-      border-radius: 4px;
+      padding: 27px 30px;
+      border-radius: 14px;
+      background:
+        linear-gradient(
+          135deg,
+          #292016,
+          #171411
+        );
+      border: 1px solid rgba(220, 175, 93, 0.2);
+      text-align: center;
+      box-shadow: inset 0 0 35px rgba(0, 0, 0, 0.25);
     }
 
-    .symbolic h3 {
-      color: #e5c49d;
-      margin-top: 0;
-    }
-
-    .symbolic p {
-      color: #f5eee4;
-    }
-
-    .keywords {
+    .quote p {
+      margin: 0;
+      color: #e7c789;
+      font-size: 21px;
       font-weight: bold;
-      color: #744827;
+      line-height: 2;
     }
+
+    /* بخش ویژه */
+
+    .cinematic {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at top right, #3a2b1a 0%, #171310 48%, #0e0d0c 100%);
+      border: 1px solid rgba(220, 175, 93, 0.2);
+      border-radius: 18px;
+      padding: 42px 40px;
+      margin-bottom: 35px;
+    }
+
+    .cinematic::after {
+      content: "";
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      left: -70px;
+      bottom: -90px;
+      border-radius: 50%;
+      background: rgba(212, 164, 82, 0.06);
+    }
+
+    .cinematic h2 {
+      color: #e6bf79;
+    }
+
+    .cinematic p {
+      color: #ddd3c7;
+    }
+
+    /* درونمایه */
+
+    .themes {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-top: 10px;
+    }
+
+    .theme {
+      padding: 19px 20px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.035);
+      border-right: 3px solid #9e7137;
+      color: #d8d0c6;
+      font-size: 16px;
+    }
+
+    /* ویژگی‌های اثر */
+
+    .features {
+      display: grid;
+      gap: 14px;
+    }
+
+    .feature {
+      padding: 20px 22px;
+      background: rgba(255, 255, 255, 0.035);
+      border-radius: 13px;
+      border: 1px solid rgba(255, 255, 255, 0.045);
+    }
+
+    .feature strong {
+      display: block;
+      margin-bottom: 5px;
+      color: #dfb568;
+    }
+
+    .feature span {
+      color: #c7beb4;
+      font-size: 15px;
+    }
+
+    /* پیام اثر */
+
+    .message {
+      text-align: center;
+      padding: 45px 35px;
+      background:
+        linear-gradient(
+          135deg,
+          rgba(126, 84, 34, 0.22),
+          rgba(29, 24, 18, 0.95)
+        );
+      border: 1px solid rgba(220, 175, 93, 0.25);
+      border-radius: 18px;
+    }
+
+    .message h2 {
+      display: inline-block;
+      margin-bottom: 25px;
+    }
+
+    .message-main {
+      color: #e9c982;
+      font-size: 23px;
+      font-weight: bold;
+      line-height: 2;
+      margin-bottom: 20px;
+    }
+
+    .question {
+      color: #d7cec4;
+      font-size: 18px;
+      line-height: 2.2;
+    }
+
+    /* نگاه نویسنده */
+
+    .author-note {
+      border-right: 4px solid #c89545;
+      padding: 5px 25px 5px 0;
+    }
+
+    .author-note p {
+      color: #d8d0c6;
+    }
+
+    /* وضعیت */
+
+    .status {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .status-badge {
+      display: inline-block;
+      padding: 10px 24px;
+      border-radius: 50px;
+      background: rgba(200, 149, 69, 0.12);
+      border: 1px solid rgba(200, 149, 69, 0.3);
+      color: #dfb568;
+      font-size: 15px;
+    }
+
+    /* پایان */
 
     .ending {
       text-align: center;
-      font-size: 21px;
-      font-weight: bold;
-      padding: 30px 20px;
-      margin-top: 35px;
-      border-top: 1px solid #d8cdbd;
-      border-bottom: 1px solid #d8cdbd;
-      color: #6f4227;
+      padding: 38px 25px;
+      margin-top: 15px;
+      border-top: 1px solid rgba(220, 175, 93, 0.18);
+      border-bottom: 1px solid rgba(220, 175, 93, 0.18);
     }
+
+    .ending p {
+      color: #e1c080;
+      font-size: 22px;
+      font-weight: bold;
+      line-height: 2;
+    }
+
+    /* فوتر */
 
     footer {
       text-align: center;
-      margin-top: 55px;
-      color: #746b62;
+      padding: 45px 20px 10px;
+      color: #756d65;
       font-size: 14px;
+      line-height: 2;
     }
 
-    @media (max-width: 600px) {
+    footer strong {
+      color: #b89459;
+    }
+
+    /* موبایل */
+
+    @media (max-width: 700px) {
+
       .page {
-        padding: 30px 18px 60px;
+        width: 92%;
+        padding-top: 25px;
+      }
+
+      header {
+        padding: 35px 10px 30px;
       }
 
       h1 {
-        font-size: 29px;
+        font-size: 34px;
       }
 
       .subtitle {
         font-size: 17px;
       }
 
+      .section-card,
+      .cinematic {
+        padding: 25px 21px;
+        border-radius: 14px;
+      }
+
       h2 {
-        font-size: 22px;
+        font-size: 23px;
       }
 
       p {
         font-size: 16px;
+        line-height: 2.15;
       }
 
-      .symbolic,
-      .highlight {
-        padding: 20px;
+      .intro,
+      .synopsis-lead {
+        font-size: 17px;
+      }
+
+      .info-grid,
+      .themes {
+        grid-template-columns: 1fr;
+      }
+
+      .quote {
+        padding: 22px 18px;
+      }
+
+      .quote p {
+        font-size: 18px;
+      }
+
+      .message {
+        padding: 30px 20px;
+      }
+
+      .message-main {
+        font-size: 20px;
+      }
+
+      .ending p {
+        font-size: 19px;
       }
     }
   </style>
@@ -184,315 +493,526 @@
 
   <main class="page">
 
-    <a class="back" href="../index.html">← بازگشت به صفحه اصلی</a>
+    <a class="back" href="../index.html">
+      ← بازگشت به صفحه اصلی
+    </a>
 
     <header>
-      <span class="kicker">فیلمنامه بلند | بخش نخست از سه‌گانه</span>
 
-      <h1>سه‌گانه میراث آتش</h1>
+      <span class="kicker">
+        فیلمنامه بلند | تاریخی ـ حماسی ـ انسانی
+      </span>
 
-      <div class="subtitle">میراث آتش — بخش نخست</div>
+      <h1>
+        آخرین نبرد سورنا
+      </h1>
+
+      <div class="subtitle">
+        روایتی درباره مردی که پس از پیروزی در جنگ، بزرگ‌ترین نبرد زندگی خود را
+        برای انتخاب میان ویران کردن و ساختن آغاز می‌کند.
+      </div>
 
       <div class="author">
-        نوشته‌ی <strong>حسین محمدی</strong>
+        نوشته‌ی <strong>حسین محمدی امیرزا</strong>
       </div>
+
     </header>
 
 
+    <!--
+      اگر پوستر این اثر را داری، می‌توانی این بخش را فعال کنی
+      و مسیر واقعی فایل پوستر را جایگزین کنی.
+    -->
+
+    <!--
+    <div class="poster-wrap">
+      <div class="poster">
+        <img
+          src="نام-واقعی-پوستر.jpg"
+          alt="پوستر فیلمنامه آخرین نبرد سورنا"
+          loading="eager"
+          decoding="async"
+        >
+      </div>
+    </div>
+    -->
+
+
     <section>
-      <h2>سیناپس</h2>
+      <div class="section-card">
 
-      <p class="opening">
-        در کوهستان‌های بادخیز ایران باستان، آخرین سنگر آزادی در آتش و فولاد
-        فرو می‌ریزد.
-      </p>
+        <h2>معرفی اثر</h2>
 
-      <p>
-        <strong>دژ نوشیجان</strong>، آخرین پناهگاه مدافعان ایرانی، زیر هجوم
-        سپاه مقدونی سقوط می‌کند. در میان ویرانی و شعله‌های جنگ،
-        <strong>هورام شیردل</strong>، فرمانده نامدار ایرانی، واپسین نفس‌های
-        خود را می‌کشد.
-      </p>
+        <p class="intro">
+          «آخرین نبرد سورنا» روایتی تاریخی، حماسی و انسانی درباره
+          <strong>سورنا</strong>، سردار نامدار اشکانی است؛ مردی که پس از
+          پیروزی در یکی از بزرگ‌ترین نبردهای تاریخ ایران، معنای واقعی
+          پیروزی را زیر سؤال می‌برد.
+        </p>
 
-      <p>
-        اما پیش از مرگ، دو امانت را به
-        <strong>کهزاد</strong>، پسر دانشمندش، و
-        <strong>ماهانا</strong>، شاگرد جنگجوی یتیم خود، می‌سپارد:
-      </p>
+        <p>
+          این اثر از نقطه‌ای آغاز می‌شود که یک قهرمان نظامی، پس از شکست
+          دشمن، با حقیقتی تلخ روبه‌رو می‌شود: گاهی پیروزی در میدان جنگ،
+          اگر با بهای از دست رفتن عزیزان و ویرانی سرزمین همراه باشد،
+          چیزی جز شکستی پنهان نیست.
+        </p>
 
-      <div class="highlight">
-        خاکستر آتش مقدس و طومارهای اوستا؛ میراث تمدنی که دشمن گمان می‌کند
-        برای همیشه نابود شده است.
-      </div>
+        <p>
+          سورنا در ادامه زندگی خود مسیری متفاوت را انتخاب می‌کند؛
+          مسیری که در آن <strong>شمشیر جای خود را به ابزار آبادانی</strong>
+          می‌دهد و مفهوم قدرت، از جنگیدن به ساختن تغییر می‌کند.
+        </p>
 
-      <p>
-        کهزاد و ماهانا با این امانت مقدس از میان دره‌های کوهستان می‌گریزند
-        و در <strong>دره پنهان جوزان</strong> پناه می‌گیرند. آنان در سرزمینی
-        دور از چشم فاتحان، جامعه‌ای کوچک اما مقاوم بنا می‌کنند؛ جامعه‌ای که
-        بعدها نام <strong>دِهوپادان</strong> بر آن نهاده می‌شود.
-      </p>
-
-      <p>
-        سال‌ها می‌گذرد.
-      </p>
-
-      <p>
-        از پیوند کهزاد و ماهانا، <strong>آرش</strong> زاده می‌شود؛ کودکی که
-        میراث دو جهان را در وجود خود دارد:
-      </p>
-
-      <div class="highlight">
-        شمشیر مادر و خرد پدر.
-      </div>
-
-      <p>
-        آرش از کودکی با دو میراث بزرگ می‌شود؛ از یک سو، ماهانا به او شجاعت،
-        مبارزه و دفاع از سرزمین را می‌آموزد و از سوی دیگر، کهزاد او را با
-        دانش، تاریخ و آموزه‌های اوستا آشنا می‌کند.
-      </p>
-
-      <p>
-        اما در قلب کوهستان، یک پرسش همواره با اوست:
-      </p>
-
-      <div class="highlight">
-        آیا میراث یک ملت تنها با شمشیر حفظ می‌شود، یا با دانشی که نسل به نسل
-        منتقل شود؟
       </div>
     </section>
 
 
-    <section class="symbolic">
-      <h3>🔥 شب اخگر</h3>
+    <section>
+      <div class="section-card">
+
+        <h2>مشخصات اثر</h2>
+
+        <div class="info-grid">
+
+          <div class="info-box">
+            <span>عنوان</span>
+            <strong>آخرین نبرد سورنا</strong>
+          </div>
+
+          <div class="info-box">
+            <span>نوع اثر</span>
+            <strong>فیلمنامه بلند</strong>
+          </div>
+
+          <div class="info-box">
+            <span>نویسنده</span>
+            <strong>حسین محمدی امیرزا</strong>
+          </div>
+
+          <div class="info-box">
+            <span>ژانر</span>
+            <strong>تاریخی / حماسی / انسانی</strong>
+          </div>
+
+          <div class="info-box">
+            <span>بستر تاریخی</span>
+            <strong>ایران اشکانی</strong>
+          </div>
+
+          <div class="info-box">
+            <span>مضمون</span>
+            <strong>صلح، آبادانی، فداکاری و غلبه بر چرخه جنگ</strong>
+          </div>
+
+          <div class="info-box">
+            <span>زبان</span>
+            <strong>فارسی</strong>
+          </div>
+
+          <div class="info-box">
+            <span>قالب</span>
+            <strong>فیلمنامه سینمایی</strong>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <section>
+      <div class="section-card">
+
+        <h2>سیناپس</h2>
+
+        <div class="synopsis-lead">
+          در دشت سوزان کارهه، باد هنوز بوی خون می‌دهد. سورنا، سردار جوان
+          و نامدار اشکانی، سپاه عظیم روم به فرماندهی کراسوس را در هم کوبیده
+          و یکی از بزرگ‌ترین پیروزی‌های تاریخ ایران را رقم زده است؛
+          اما این پیروزی برای او دیگر طعم افتخار ندارد.
+        </div>
+
+        <p>
+          در میان کشته‌شدگان، پیکر <strong>آرش</strong>، برادر کوچک سورنا،
+          قرار دارد؛ جوانی که سورنا خود تیراندازی و فنون جنگ را به او
+          آموخته بود. تکه‌ای از پارچه خونین لباس آرش، تنها یادگاری است که
+          سورنا از میدان نبرد با خود می‌برد.
+        </p>
+
+        <p>
+          سورنا برای نخستین‌بار درمی‌یابد که پیروزی در جنگ، اگر به بهای
+          از دست رفتن عزیزان و ویرانی سرزمین تمام شود، چیزی جز شکست نیست.
+        </p>
+
+        <p>
+          او به زادگاهش، <strong>سیستان</strong>، بازمی‌گردد؛ اما دیگر آن
+          سرداری نیست که در اندیشه فتح سرزمین‌های تازه باشد.
+        </p>
+
+        <div class="quote">
+          <p>
+            «از خاک دفاع کن؛ اما بدان که خاک فقط زمین نیست،
+            خاک، زندگیِ روی آن است.»
+          </p>
+        </div>
+
+        <p>
+          این سخن مسیر زندگی سورنا را تغییر می‌دهد. او تصمیم می‌گیرد
+          به جای آنکه سربازانش را برای جنگ‌های تازه آماده کند، آنان را
+          برای ساختن آینده‌ای تازه به میدان بفرستد.
+        </p>
+
+        <p>
+          شمشیرها باید کنار گذاشته شوند و <strong>بیل، کلنگ و داس</strong>
+          جای آنها را بگیرند.
+        </p>
+
+        <p>
+          سورنا «سپاه خورشید» را بنیان می‌گذارد؛ سپاهی که این‌بار نه برای
+          ویران کردن، بلکه برای آباد کردن می‌جنگد. سربازان سابق به
+          کشاورزی، ساخت جوی‌های آب، آباد کردن زمین‌ها و برپا کردن روستاها
+          روی می‌آورند.
+        </p>
+
+        <p>
+          اما این تغییر آسان نیست.
+        </p>
+
+        <p>
+          <strong>مهران</strong>، سیاستمداری قدرتمند و تشنه قدرت، محبوبیت
+          روزافزون سورنا را خطری برای موقعیت خود می‌بیند. او با شایعه‌پراکنی
+          و دسیسه تلاش می‌کند مردم را علیه سورنا بشوراند.
+        </p>
+
+        <p>
+          انبارهای آذوقه به آتش کشیده می‌شوند و تقصیرها به گردن سپاه
+          خورشید انداخته می‌شود.
+        </p>
+
+        <p>
+          از سوی دیگر، <strong>رستم</strong>، یکی از کهنه‌سربازان وفادار
+          سورنا، نمی‌تواند با زندگی تازه کنار بیاید. او و گروهی از
+          جنگجویان قدیمی معتقدند مردی که شمشیر را زمین بگذارد، دیگر
+          قدرت دفاع از سرزمینش را ندارد.
+        </p>
+
+        <div class="quote">
+          <p>
+            سیستان آرام‌آرام به دو جبهه تقسیم می‌شود:
+            <br>
+            «شمشیر یا بیل؟»
+          </p>
+        </div>
+
+        <p>
+          در همین آشفتگی، مهران پنهانی با نیروهای مهاجم شرقی ارتباط برقرار
+          می‌کند. خبر نزدیک شدن سپاه مهاجم به رهبری <strong>مهراب</strong>،
+          سیستان را در آستانه بحرانی بزرگ قرار می‌دهد.
+        </p>
+
+        <p>
+          شورای بزرگان تشکیل می‌شود. رستم فریاد می‌زند:
+          <strong>«جنگ!»</strong>
+          و مهران، با چهره‌ای ظاهراً دلسوز، پیشنهاد تسلیم می‌دهد.
+        </p>
+
+        <p>
+          اما سورنا راه سومی را انتخاب می‌کند؛ راهی که هیچ‌کس انتظارش را ندارد:
+        </p>
+
+        <div class="quote">
+          <p>
+            «قدرت آرامش.»
+          </p>
+        </div>
+
+        <p>
+          او تصمیم می‌گیرد تمام مردم سیستان را به سوی مرزها ببرد؛ نه با
+          سپاهی از شمشیر و نیزه، بلکه با مردان، زنان، پیران و جوانانی که
+          ابزار کار، دانه گندم، آب و خاک سرزمینشان را در دست دارند.
+        </p>
+
+        <p>
+          سپاه عظیم دشمن در افق ظاهر می‌شود. در برابر آنان، مردمی ایستاده‌اند
+          که نه از مرگ می‌ترسند و نه برای کشتن آمده‌اند.
+        </p>
+
+        <p>
+          سورنا، بی‌سلاح، از میان مردم عبور می‌کند و به سوی مهراب می‌رود.
+          در سکوت سنگین میان دو سپاه، مشتی از خاک حاصلخیز سیستان را
+          برمی‌دارد و در دست مهراب می‌گذارد.
+        </p>
+
+        <div class="quote">
+          <p>
+            «این خاک را به فرزندانت نشان بده.
+            اگر بتوانی در سرزمین خودت چنین خاکی را آباد کنی،
+            دیگر نیازی به خاک دیگران نخواهی داشت.»
+          </p>
+        </div>
+
+        <p>
+          مهراب که انتظار تهدید و جنگ دارد، در برابر این سخن خاموش می‌شود.
+          او به مردمی نگاه می‌کند که برای دفاع از سرزمینشان نیازی به
+          شمشیر ندارند؛ زیرا قدرت واقعی آنان در اتحاد و اراده ساختن است.
+        </p>
+
+        <p>
+          پس از لحظاتی طولانی، مهراب اسب خود را برمی‌گرداند و فرمان
+          عقب‌نشینی می‌دهد.
+        </p>
+
+        <div class="quote">
+          <p>
+            هیچ شمشیری از نیام بیرون نمی‌آید.
+            <br>
+            سیستان بدون یک قطره خون پیروز می‌شود.
+          </p>
+        </div>
+
+        <p>
+          اما پیروزی بزرگ‌تر، در درون سورنا اتفاق افتاده است.
+          او سرانجام توانسته بزرگ‌ترین دشمن خود را شکست دهد:
+          <strong>اندیشه جنگ در وجود خویش.</strong>
+        </p>
+
+        <p>
+          سال‌ها می‌گذرد. سیستان دیگر همان سرزمین تشنه و زخمی گذشته نیست.
+          زمین‌ها سبز شده‌اند، جوی‌های آب جاری‌اند، روستاها آباد شده‌اند
+          و کودکان در مدرسه‌ها درس می‌خوانند.
+        </p>
+
+        <p>
+          میراث سورنا دیگر یک شمشیر یا یک پیروزی نظامی نیست؛
+          <strong>میراث او اندیشه ساختن است.</strong>
+        </p>
+
+      </div>
+    </section>
+
+
+    <section>
+      <div class="cinematic">
+
+        <h2>تصویر نهایی اثر</h2>
+
+        <p>
+          در میدان مرکزی شهر، تندیسی از سورنا برپا می‌شود؛ اما نه با
+          شمشیر در دست.
+        </p>
+
+        <p>
+          در یک دست او <strong>بیل</strong> و در دست دیگرش
+          <strong>شاخه‌ای از زیتون</strong> است.
+        </p>
+
+        <p>
+          نسل جوان در کنار تندیس ایستاده و داستان او را برای فرزندان خود
+          بازگو می‌کند.
+        </p>
+
+        <div class="quote">
+          <p>
+            آخرین نبرد سورنا، نبردی برای شکست یک دشمن نیست؛
+            <br>
+            نبردی برای شکست دادن اندیشه ویران کردن است.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <section>
+      <div class="section-card">
+
+        <h2>درونمایه</h2>
+
+        <div class="themes">
+
+          <div class="theme">
+            پیروزی واقعی در برابر پیروزی نظامی
+          </div>
+
+          <div class="theme">
+            عبور از چرخه بی‌پایان جنگ و انتقام
+          </div>
+
+          <div class="theme">
+            پیوند میان انسان، خاک و زندگی
+          </div>
+
+          <div class="theme">
+            آبادانی به عنوان شکل دیگری از دفاع
+          </div>
+
+          <div class="theme">
+            فداکاری و معنای واقعی رهبری
+          </div>
+
+          <div class="theme">
+            اتحاد مردم در برابر تهدید و بحران
+          </div>
+
+          <div class="theme">
+            غلبه انسان بر خشم و غرور
+          </div>
+
+          <div class="theme">
+            امید و ساختن آینده پس از ویرانی
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <section>
+      <div class="section-card">
+
+        <h2>ویژگی‌های اثر</h2>
+
+        <div class="features">
+
+          <div class="feature">
+            <strong>نگاه متفاوت به یک قهرمان تاریخی</strong>
+            <span>
+              روایت، سورنا را تنها به عنوان یک سردار پیروز معرفی نمی‌کند؛
+              بلکه تحول درونی او را به مرکز داستان تبدیل می‌کند.
+            </span>
+          </div>
+
+          <div class="feature">
+            <strong>تقابل شمشیر و سازندگی</strong>
+            <span>
+              یکی از محورهای اصلی داستان، رویارویی دو نگاه به قدرت است:
+              قدرت برای ویران کردن یا قدرت برای ساختن.
+            </span>
+          </div>
+
+          <div class="feature">
+            <strong>فضای تاریخی و حماسی</strong>
+            <span>
+              داستان در بستر ایران باستان و در فضایی سرشار از جنگ،
+              سیاست، طبیعت و کشمکش‌های انسانی شکل می‌گیرد.
+            </span>
+          </div>
+
+          <div class="feature">
+            <strong>پایان متفاوت و ضدکلیشه</strong>
+            <span>
+              نقطه اوج داستان نه با یک نبرد خونین، بلکه با انتخاب
+              صلح و عقب‌نشینی دشمن شکل می‌گیرد.
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <section>
+      <div class="message">
+
+        <h2>پیام اثر</h2>
+
+        <div class="message-main">
+          «آخرین نبرد سورنا» داستان پیروزی یک سردار بر دشمن نیست؛
+          داستان پیروزی انسان بر خشم، غرور و چرخه بی‌پایان جنگ است.
+        </div>
+
+        <div class="question">
+          این اثر می‌پرسد:
+          <br>
+          <strong>آیا می‌توان با ساختن، از ویرانی پیشی گرفت؟</strong>
+        </div>
+
+        <p style="margin-top:25px;">
+          پاسخ داستان در خاکی نهفته است که اگر انسان جرئت کند شمشیر را
+          زمین بگذارد، می‌تواند آن را آباد کند.
+        </p>
+
+      </div>
+    </section>
+
+
+    <section>
+      <div class="section-card">
+
+        <h2>نگاه نویسنده</h2>
+
+        <div class="author-note">
+
+          <p>
+            «آخرین نبرد سورنا» تلاشی است برای نگاه کردن به مفهوم قهرمانی
+            از زاویه‌ای متفاوت.
+          </p>
+
+          <p>
+            در این روایت، قهرمان کسی نیست که بیشترین دشمن را شکست می‌دهد؛
+            قهرمان کسی است که در لحظه‌ای که می‌تواند دوباره جنگ را آغاز کند،
+            تصمیم می‌گیرد چرخه ویرانی را متوقف کند.
+          </p>
+
+          <p>
+            سورنا پس از سال‌ها زندگی با شمشیر، سرانجام درمی‌یابد که
+            دفاع از سرزمین تنها با جنگیدن معنا پیدا نمی‌کند؛ گاهی
+            ساختن یک زمین، آباد کردن یک روستا و ایجاد آینده‌ای برای
+            نسل بعد، بزرگ‌ترین شکل دفاع است.
+          </p>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <section>
+      <div class="section-card">
+
+        <h2>وضعیت اثر</h2>
+
+        <div class="status">
+
+          <div class="status-badge">
+            معرفی فیلمنامه | آماده ارائه به تهیه‌کننده، کارگردان و گروه‌های تولید
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <div class="ending">
 
       <p>
-        در شبی بی‌ماه، آرش خردسال در برابر آخرین اخگر آتش مقدس زانو می‌زند.
-      </p>
-
-      <p>
-        ماهانا در کنار او شمشیرش را تیز می‌کند و کهزاد، در نور لرزان شعله،
-        بخشی از یک متن کهن را از روی طومار اوستا بازنویسی می‌کند.
-      </p>
-
-      <p>
-        اخگر رو به خاموشی است.
-      </p>
-
-      <p>
-        آرش دست‌هایش را دور آن حلقه می‌کند.
-      </p>
-
-      <p>
-        نور از میان انگشتانش عبور می‌کند و چهره‌اش را روشن می‌سازد.
-      </p>
-
-      <p>
-        در یک سو <strong>شمشیر</strong> است.
+        گاهی بزرگ‌ترین پیروزی،
         <br>
-        در سوی دیگر <strong>طومار</strong>.
+        آن لحظه‌ای است که انسان تصمیم می‌گیرد
         <br>
-        و در میان آن دو، <strong>آتش</strong>.
+        به جای ویران کردن، بسازد.
       </p>
 
-      <p>
-        آرش در همان شب پیمان می‌بندد که روزی قدرت و دانش را در کنار یکدیگر
-        قرار دهد؛ نه برای انتقام، بلکه برای زنده نگه داشتن هویت مردمی که
-        تاریخ تصور کرده است از میان رفته‌اند.
-      </p>
-    </section>
-
-
-    <section>
-      <h2>بازگشت سایه امپراتوری</h2>
-
-      <p>
-        سال‌ها بعد، امپراتوری <strong>سلوکی</strong> بر بخش بزرگی از
-        سرزمین‌های ایران سایه افکنده است.
-      </p>
-
-      <p>
-        <strong>ژنرال لئونیداس</strong>، فرمانده‌ای بی‌رحم و بلندپرواز،
-        مأمور سرکوب آخرین مقاومت‌های ایرانیان است. او باور دارد که با سقوط
-        نوشیجان، کار ایران تمام شده و هر شعله‌ای از مقاومت باید پیش از آنکه
-        دوباره زبانه بکشد خاموش شود.
-      </p>
-
-      <p>
-        اما در کوهستان، آرش دیگر آن کودک خردسال نیست.
-      </p>
-
-      <p>
-        او به جوانی تبدیل شده که هم زبان شمشیر را می‌داند و هم زبان خرد را.
-      </p>
-
-      <p>
-        آرش درمی‌یابد که بزرگ‌ترین ضعف ایرانیان، کمبود شجاعت نیست؛
-        <span class="keywords">پراکنده بودن آنهاست.</span>
-      </p>
-
-      <p>
-        قبایل کوهستانی، سال‌هاست با یکدیگر اختلاف دارند. کردها، لرها و
-        بختیاری‌ها هر کدام تاریخ، زخم‌ها و غرور خود را دارند و هیچ‌کدام
-        حاضر نیستند به دیگری اعتماد کنند.
-      </p>
-
-      <p>
-        آرش راهی دشوار را آغاز می‌کند.
-      </p>
-
-      <p>
-        او ابتدا یک قبیله را متحد می‌کند.
-        <br>
-        سپس قبیله‌ای دیگر را.
-        <br>
-        نجوا به نجوا، پیمان به پیمان، دشمنی‌های قدیمی را کنار می‌زند.
-      </p>
-
-      <p>
-        آنچه ابتدا تنها صدایی ضعیف در دل کوهستان است، به تدریج تبدیل می‌شود
-        به:
-      </p>
-
-      <div class="highlight">
-        نجوا...<br>
-        غرش...<br>
-        و سرانجام توفان.
-      </div>
-    </section>
-
-
-    <section>
-      <h2>روز حساب در نوشیجان</h2>
-
-      <p>
-        لئونیداس سرانجام رد مقاومت را پیدا می‌کند.
-      </p>
-
-      <p>
-        سپاه سلوکی به سوی نوشیجان حرکت می‌کند؛ همان جایی که سال‌ها پیش
-        هورام شیردل در برابر دشمن ایستاد و جان داد.
-      </p>
-
-      <p>
-        آرش تصمیم می‌گیرد به جای جنگیدن در سرزمینی ناشناخته، دشمن را به
-        همان مکانی بکشاند که داستان زندگی او از آنجا آغاز شده است.
-      </p>
-
-      <p>
-        نبرد نهایی در حیاط دژ نوشیجان آغاز می‌شود.
-      </p>
-
-      <p>
-        در میان گردوغبار، آتش و فریاد، آرش با
-        <strong>لئونیداس</strong> روبه‌رو می‌شود.
-      </p>
-
-      <p>
-        اما این تنها نبرد دو فرمانده نیست.
-      </p>
-
-      <p>
-        این رویارویی میان دو نگاه به تاریخ است:
-      </p>
-
-      <div class="highlight">
-        یکی می‌خواهد گذشته را با شمشیر دفن کند.<br>
-        دیگری می‌خواهد آینده را با میراث گذشته بسازد.
-      </div>
-
-      <p>
-        آرش در آستانه کشتن دشمن، با بزرگ‌ترین آزمون زندگی خود روبه‌رو
-        می‌شود. انتقام پدر و مادر، خون هورام، سال‌های تبعید و رنج یک ملت
-        در برابر چشمانش قرار می‌گیرد.
-      </p>
-
-      <p>
-        او می‌تواند چرخه خون را ادامه دهد.
-      </p>
-
-      <p>
-        یا آن را متوقف کند.
-      </p>
-
-      <p>
-        آرش انتخاب می‌کند که
-        <strong>میراث آتش، میراث انتقام نباشد.</strong>
-      </p>
-
-      <p>
-        با اتحاد قبایل و شکست نیروهای سلوکی، نوشیجان دوباره به دست ایرانیان
-        می‌افتد.
-      </p>
-
-      <p>
-        اما پیروزی واقعی، بازپس‌گیری یک دژ نیست.
-      </p>
-
-      <div class="highlight">
-        پیروزی واقعی، بازپس‌گیری حق یک ملت برای تعریف آینده خویش است.
-      </div>
-    </section>
-
-
-    <section>
-      <h2>پایان</h2>
-
-      <p>
-        در پایان، آتش مقدس دوباره افروخته می‌شود.
-      </p>
-
-      <p>
-        شعله‌ای که زمانی قرار بود آخرین یادگار یک تمدن خاموش‌شده باشد،
-        اکنون در برابر چشمان نسل تازه زبانه می‌کشد.
-      </p>
-
-      <p>
-        اما این آتش برای سوزاندن نیست.
-      </p>
-
-      <p>
-        <strong>برای روشن کردن راه است.</strong>
-      </p>
-
-      <p>
-        آرش در برابر شعله می‌ایستد و می‌داند که این تنها پایان یک جنگ نیست؛
-        آغاز راهی است که در بخش‌های بعدی این سه‌گانه، سرنوشت ایران و میراث
-        این نسل را به آزمون‌های بزرگ‌تری خواهد کشاند.
-      </p>
-    </section>
-
-
-    <section>
-      <h2>پیام اثر</h2>
-
-      <p>
-        <strong>«میراث آتش» داستان ملتی است که سقوط کرد، اما تسلیم فراموشی
-        نشد.</strong>
-      </p>
-
-      <p>
-        داستانی درباره حافظه، هویت، مقاومت و انتخاب میان انتقام و آینده.
-      </p>
-
-      <p>
-        در این روایت، آتش نماد نابودی نیست؛ نماد
-        <strong>حافظه‌ای است که خاموش نمی‌شود.</strong>
-      </p>
-
-      <p>
-        و میراث واقعی، نه در شمشیر و قدرت، بلکه در چیزی است که یک نسل به
-        نسل بعد می‌سپارد:
-      </p>
-
-      <div class="ending">
-        دانش، شجاعت، هویت و امید.
-      </div>
-    </section>
+    </div>
 
 
     <footer>
-      <div>سه‌گانه میراث آتش — بخش نخست</div>
-      <div>نوشته‌ی حسین محمدی</div>
+
+      <div>
+        <strong>آخرین نبرد سورنا</strong>
+      </div>
+
+      <div>
+        فیلمنامه بلند — نوشته‌ی حسین محمدی امیرزا
+      </div>
+
+      <div>
+        تمامی حقوق اثر متعلق به نویسنده است.
+      </div>
+
     </footer>
 
   </main>
