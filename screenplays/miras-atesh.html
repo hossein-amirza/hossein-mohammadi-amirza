@@ -7,9 +7,10 @@
   <title>آخرین نبرد سورنا | حسین محمدی امیرزا</title>
 
   <meta name="description"
-        content="معرفی و سیناپس فیلمنامه بلند آخرین نبرد سورنا، نوشته حسین محمدی امیرزا.">
+        content="معرفی فیلمنامه بلند آخرین نبرد سورنا، نوشته حسین محمدی امیرزا.">
 
   <style>
+
     * {
       box-sizing: border-box;
     }
@@ -20,472 +21,677 @@
 
     body {
       margin: 0;
+      background: #080808;
+      color: #eee;
       font-family: Tahoma, Arial, sans-serif;
-      background:
-        radial-gradient(circle at top, #241b12 0%, #0d0d0d 45%, #080808 100%);
-      color: #eee8df;
-      line-height: 2.1;
+      line-height: 2;
     }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* =========================
+       GLOBAL
+    ========================= */
 
     .page {
-      width: min(1100px, 92%);
-      margin: 0 auto;
-      padding: 35px 0 80px;
+      width: min(1120px, 92%);
+      margin: auto;
+      padding-bottom: 90px;
     }
 
-    /* بازگشت */
+    .gold {
+      color: #d6ad5b;
+    }
+
+    /* =========================
+       TOP BAR
+    ========================= */
+
+    .topbar {
+      padding: 28px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(214,173,91,.18);
+    }
 
     .back {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      color: #d9ad63;
-      text-decoration: none;
+      color: #d6ad5b;
       font-size: 15px;
-      margin-bottom: 25px;
-      transition: 0.3s;
+      transition: .3s;
     }
 
     .back:hover {
-      color: #f0cb8a;
-      transform: translateX(-4px);
+      color: #f1d487;
     }
 
-    /* هدر */
+    .category {
+      color: #777;
+      font-size: 13px;
+    }
 
-    header {
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      padding: 70px 0 80px;
       text-align: center;
-      padding: 45px 20px 40px;
-      margin-bottom: 35px;
-      border-bottom: 1px solid rgba(218, 174, 98, 0.22);
     }
 
-    .kicker {
-      display: inline-block;
-      color: #d5a85d;
+    .hero-label {
+      color: #c99b4b;
       font-size: 14px;
-      margin-bottom: 15px;
-      letter-spacing: 0.3px;
+      letter-spacing: .5px;
+      margin-bottom: 18px;
     }
 
-    h1 {
+    .hero h1 {
       margin: 0;
-      color: #e6bd76;
-      font-size: clamp(36px, 6vw, 62px);
-      line-height: 1.35;
-      text-shadow: 0 3px 25px rgba(0, 0, 0, 0.7);
+      color: #e0b866;
+      font-size: clamp(44px, 7vw, 78px);
+      line-height: 1.25;
+      text-shadow: 0 5px 35px rgba(0,0,0,.8);
     }
 
-    .subtitle {
-      max-width: 760px;
-      margin: 18px auto 0;
-      color: #c5bbb0;
+    .hero-subtitle {
+      max-width: 800px;
+      margin: 25px auto 0;
+      color: #bdb5aa;
       font-size: 19px;
-      line-height: 1.9;
+      line-height: 2.1;
     }
 
-    .author {
-      margin-top: 22px;
-      color: #92877b;
+    .hero-author {
+      margin-top: 20px;
+      color: #777;
       font-size: 15px;
     }
 
-    .author strong {
-      color: #d8b06b;
+    .hero-author strong {
+      color: #cba45d;
     }
 
-    /* پوستر */
-
-    .poster-wrap {
-      display: flex;
-      justify-content: center;
-      margin: 20px auto 55px;
+    .hero-line {
+      width: 100px;
+      height: 2px;
+      margin: 30px auto;
+      background: #c99b4b;
     }
 
-    .poster {
-      width: min(620px, 100%);
-      border-radius: 18px;
-      overflow: hidden;
-      border: 1px solid rgba(220, 175, 93, 0.35);
+    /* =========================
+       POSTER
+    ========================= */
+
+    .poster-area {
+      text-align: center;
+      margin-bottom: 90px;
+    }
+
+    .poster-frame {
+      display: inline-block;
+      padding: 10px;
+      background: #111;
+      border: 1px solid rgba(214,173,91,.35);
+      border-radius: 20px;
       box-shadow:
-        0 25px 70px rgba(0, 0, 0, 0.65),
-        0 0 45px rgba(176, 122, 45, 0.08);
-      background: #171411;
+        0 30px 90px rgba(0,0,0,.8),
+        0 0 50px rgba(191,145,62,.08);
     }
 
-    .poster img {
+    .poster-frame img {
       display: block;
-      width: 100%;
-      height: auto;
+      width: min(620px, 100%);
+      max-height: 820px;
+      object-fit: contain;
+      border-radius: 12px;
     }
 
-    /* بخش‌ها */
+    /* =========================
+       SECTION
+    ========================= */
 
-    section {
-      margin-bottom: 35px;
+    .section {
+      margin-bottom: 38px;
     }
 
-    .section-card {
-      background:
-        linear-gradient(
-          145deg,
-          rgba(30, 27, 23, 0.98),
-          rgba(18, 17, 15, 0.98)
-        );
-      border: 1px solid rgba(220, 175, 93, 0.16);
-      border-radius: 18px;
-      padding: 34px 38px;
-      box-shadow: 0 15px 45px rgba(0, 0, 0, 0.28);
+    .section-box {
+      background: #111;
+      border: 1px solid rgba(214,173,91,.15);
+      border-radius: 20px;
+      padding: 42px;
+      box-shadow: 0 20px 55px rgba(0,0,0,.35);
     }
 
-    h2 {
-      position: relative;
-      margin: 0 0 25px;
-      padding-right: 17px;
-      color: #dfb568;
-      font-size: 27px;
-      line-height: 1.6;
+    .section-heading {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 28px;
     }
 
-    h2::before {
+    .section-heading .number {
+      color: #80642f;
+      font-size: 15px;
+      font-weight: bold;
+    }
+
+    .section-heading h2 {
+      margin: 0;
+      color: #d8b160;
+      font-size: 28px;
+      line-height: 1.5;
+    }
+
+    .section-heading::after {
       content: "";
-      position: absolute;
-      right: 0;
-      top: 7px;
-      width: 4px;
-      height: 38px;
-      border-radius: 10px;
-      background: #c89545;
+      height: 1px;
+      flex: 1;
+      background: linear-gradient(
+        to left,
+        rgba(214,173,91,.35),
+        transparent
+      );
     }
 
-    p {
-      margin: 0 0 20px;
-      color: #d8d0c7;
+    .section-box p {
+      color: #d0cbc4;
       font-size: 17px;
-      line-height: 2.25;
+      line-height: 2.35;
+      margin: 0 0 20px;
+      text-align: justify;
     }
 
-    p:last-child {
+    .section-box p:last-child {
       margin-bottom: 0;
     }
 
     strong {
-      color: #e1bb78;
+      color: #e0bb70;
     }
 
-    /* معرفی */
+    /* =========================
+       INTRO
+    ========================= */
 
-    .intro {
-      font-size: 19px;
-      color: #e3dbd2;
-      line-height: 2.3;
+    .intro-text {
+      font-size: 20px !important;
+      color: #e1dbd2 !important;
+      line-height: 2.35 !important;
     }
 
-    /* مشخصات */
+    /* =========================
+       INFO
+    ========================= */
 
     .info-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 14px;
     }
 
-    .info-box {
-      background: rgba(255, 255, 255, 0.035);
-      border: 1px solid rgba(220, 175, 93, 0.12);
-      border-radius: 13px;
-      padding: 18px 20px;
+    .info-card {
+      min-height: 120px;
+      padding: 22px;
+      background: #0b0b0b;
+      border-radius: 15px;
+      border: 1px solid rgba(214,173,91,.13);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      transition: .3s;
     }
 
-    .info-box span {
-      display: block;
-      color: #91877d;
-      font-size: 13px;
-      margin-bottom: 5px;
+    .info-card:hover {
+      border-color: rgba(214,173,91,.4);
+      transform: translateY(-3px);
     }
 
-    .info-box strong {
-      color: #e3bd78;
-      font-size: 16px;
+    .info-card small {
+      color: #777;
+      font-size: 12px;
+      margin-bottom: 8px;
     }
 
-    /* سیناپس */
+    .info-card strong {
+      color: #ddd;
+      font-size: 15px;
+      line-height: 1.8;
+    }
 
-    .synopsis-lead {
-      padding: 22px 25px;
+    /* =========================
+       STORY
+    ========================= */
+
+    .story-intro {
+      padding: 27px 30px;
       margin-bottom: 30px;
       background:
         linear-gradient(
           135deg,
-          rgba(137, 91, 32, 0.18),
-          rgba(255, 255, 255, 0.025)
+          rgba(173,125,43,.16),
+          rgba(255,255,255,.02)
         );
-      border-right: 4px solid #c89545;
-      border-radius: 10px;
-      color: #eadcc9;
-      font-size: 19px;
-      line-height: 2.2;
+      border-right: 4px solid #c69a4b;
+      border-radius: 12px;
     }
 
-    /* نقل قول */
+    .story-intro p {
+      margin: 0;
+      color: #e2d6c5;
+      font-size: 19px;
+      line-height: 2.25;
+    }
+
+    .story-part {
+      position: relative;
+      padding: 32px 32px 32px 25px;
+      margin-bottom: 20px;
+      background: #0c0c0c;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,.05);
+      overflow: hidden;
+    }
+
+    .story-part::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 4px;
+      height: 100%;
+      background: #9d7739;
+    }
+
+    .story-part:last-child {
+      margin-bottom: 0;
+    }
+
+    .story-part-number {
+      color: #665127;
+      font-size: 13px;
+      margin-bottom: 5px;
+    }
+
+    .story-part h3 {
+      margin: 0 0 15px;
+      color: #d5ad5b;
+      font-size: 22px;
+    }
+
+    .story-part p {
+      margin: 0;
+      font-size: 16px;
+      line-height: 2.25;
+    }
+
+    /* =========================
+       QUOTE
+    ========================= */
 
     .quote {
-      margin: 30px 0;
-      padding: 27px 30px;
-      border-radius: 14px;
-      background:
-        linear-gradient(
-          135deg,
-          #292016,
-          #171411
-        );
-      border: 1px solid rgba(220, 175, 93, 0.2);
+      margin: 35px 0;
+      padding: 38px 35px;
       text-align: center;
-      box-shadow: inset 0 0 35px rgba(0, 0, 0, 0.25);
+      border-top: 1px solid rgba(214,173,91,.25);
+      border-bottom: 1px solid rgba(214,173,91,.25);
+      background:
+        radial-gradient(
+          circle at center,
+          rgba(177,132,49,.13),
+          transparent 70%
+        );
     }
 
     .quote p {
       margin: 0;
-      color: #e7c789;
-      font-size: 21px;
+      color: #e5c77f;
+      font-size: 24px;
       font-weight: bold;
-      line-height: 2;
+      line-height: 2.1;
+      text-align: center;
     }
 
-    /* بخش ویژه */
+    /* =========================
+       CINEMATIC MOMENTS
+    ========================= */
 
-    .cinematic {
-      position: relative;
-      overflow: hidden;
+    .moment {
+      padding: 55px 45px;
+      margin: 38px 0;
+      border-radius: 20px;
+      border: 1px solid rgba(214,173,91,.25);
+      text-align: center;
       background:
-        radial-gradient(circle at top right, #3a2b1a 0%, #171310 48%, #0e0d0c 100%);
-      border: 1px solid rgba(220, 175, 93, 0.2);
-      border-radius: 18px;
-      padding: 42px 40px;
-      margin-bottom: 35px;
+        radial-gradient(
+          circle at center,
+          #251c10 0%,
+          #12100d 50%,
+          #0a0a0a 100%
+        );
+      box-shadow: inset 0 0 60px rgba(0,0,0,.4);
     }
 
-    .cinematic::after {
-      content: "";
-      position: absolute;
-      width: 180px;
-      height: 180px;
-      left: -70px;
-      bottom: -90px;
-      border-radius: 50%;
-      background: rgba(212, 164, 82, 0.06);
+    .moment-label {
+      color: #99783d;
+      font-size: 13px;
+      margin-bottom: 12px;
     }
 
-    .cinematic h2 {
-      color: #e6bf79;
+    .moment h2 {
+      margin: 0 0 18px;
+      color: #e1ba6a;
+      font-size: 34px;
     }
 
-    .cinematic p {
-      color: #ddd3c7;
+    .moment p {
+      max-width: 760px;
+      margin: auto;
+      color: #cfc7bc;
+      font-size: 18px;
+      line-height: 2.3;
     }
 
-    /* درونمایه */
+    /* =========================
+       THEMES
+    ========================= */
 
-    .themes {
+    .theme-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
-      margin-top: 10px;
+      gap: 16px;
     }
 
     .theme {
-      padding: 19px 20px;
-      border-radius: 12px;
-      background: rgba(255, 255, 255, 0.035);
-      border-right: 3px solid #9e7137;
-      color: #d8d0c6;
+      padding: 23px;
+      background: #0b0b0b;
+      border: 1px solid rgba(214,173,91,.12);
+      border-radius: 14px;
+      color: #d1cbc2;
       font-size: 16px;
+      line-height: 2;
     }
 
-    /* ویژگی‌های اثر */
+    .theme::before {
+      content: "◆";
+      color: #a47d3c;
+      margin-left: 10px;
+      font-size: 9px;
+    }
 
-    .features {
+    /* =========================
+       FEATURES
+    ========================= */
+
+    .feature-list {
       display: grid;
-      gap: 14px;
+      gap: 15px;
     }
 
     .feature {
-      padding: 20px 22px;
-      background: rgba(255, 255, 255, 0.035);
-      border-radius: 13px;
-      border: 1px solid rgba(255, 255, 255, 0.045);
+      padding: 23px 25px;
+      background: #0c0c0c;
+      border-radius: 14px;
+      border-right: 3px solid #80602d;
     }
 
-    .feature strong {
-      display: block;
-      margin-bottom: 5px;
-      color: #dfb568;
+    .feature h3 {
+      margin: 0 0 8px;
+      color: #d6ad5b;
+      font-size: 18px;
     }
 
-    .feature span {
-      color: #c7beb4;
+    .feature p {
+      margin: 0;
       font-size: 15px;
+      line-height: 2;
     }
 
-    /* پیام اثر */
+    /* =========================
+       MESSAGE
+    ========================= */
 
     .message {
+      padding: 65px 45px;
       text-align: center;
-      padding: 45px 35px;
+      border-radius: 22px;
+      border: 1px solid rgba(214,173,91,.35);
       background:
-        linear-gradient(
-          135deg,
-          rgba(126, 84, 34, 0.22),
-          rgba(29, 24, 18, 0.95)
+        radial-gradient(
+          circle at center,
+          rgba(176,130,45,.16),
+          #111 65%
         );
-      border: 1px solid rgba(220, 175, 93, 0.25);
-      border-radius: 18px;
     }
 
     .message h2 {
-      display: inline-block;
-      margin-bottom: 25px;
+      margin: 0 0 28px;
+      color: #dcb466;
+      font-size: 31px;
     }
 
     .message-main {
-      color: #e9c982;
+      max-width: 850px;
+      margin: auto;
+      color: #e8cc8a;
       font-size: 23px;
       font-weight: bold;
-      line-height: 2;
-      margin-bottom: 20px;
+      line-height: 2.2;
     }
 
-    .question {
-      color: #d7cec4;
+    .message-question {
+      max-width: 700px;
+      margin: 25px auto 0;
+      color: #bdb5ab;
       font-size: 18px;
       line-height: 2.2;
     }
 
-    /* نگاه نویسنده */
+    /* =========================
+       AUTHOR NOTE
+    ========================= */
 
     .author-note {
-      border-right: 4px solid #c89545;
-      padding: 5px 25px 5px 0;
+      padding-right: 25px;
+      border-right: 3px solid #a47c39;
     }
 
     .author-note p {
-      color: #d8d0c6;
+      color: #cbc4bb;
     }
 
-    /* وضعیت */
+    /* =========================
+       STATUS
+    ========================= */
 
     .status {
-      display: flex;
-      justify-content: center;
-      margin-top: 10px;
+      text-align: center;
     }
 
     .status-badge {
       display: inline-block;
-      padding: 10px 24px;
+      padding: 12px 27px;
+      color: #d9b466;
+      background: rgba(178,132,46,.1);
+      border: 1px solid rgba(178,132,46,.3);
       border-radius: 50px;
-      background: rgba(200, 149, 69, 0.12);
-      border: 1px solid rgba(200, 149, 69, 0.3);
-      color: #dfb568;
-      font-size: 15px;
+      font-size: 14px;
     }
 
-    /* پایان */
+    /* =========================
+       FINAL
+    ========================= */
 
-    .ending {
+    .final {
+      padding: 80px 20px 50px;
       text-align: center;
-      padding: 38px 25px;
-      margin-top: 15px;
-      border-top: 1px solid rgba(220, 175, 93, 0.18);
-      border-bottom: 1px solid rgba(220, 175, 93, 0.18);
     }
 
-    .ending p {
-      color: #e1c080;
-      font-size: 22px;
+    .final-symbol {
+      color: #927139;
+      font-size: 24px;
+      margin-bottom: 25px;
+    }
+
+    .final p {
+      max-width: 850px;
+      margin: auto;
+      color: #d7b86f;
+      font-size: 24px;
       font-weight: bold;
-      line-height: 2;
+      line-height: 2.3;
     }
 
-    /* فوتر */
+    /* =========================
+       FOOTER
+    ========================= */
 
     footer {
+      padding: 40px 20px 15px;
+      border-top: 1px solid rgba(214,173,91,.15);
       text-align: center;
-      padding: 45px 20px 10px;
-      color: #756d65;
-      font-size: 14px;
-      line-height: 2;
+      color: #666;
+      font-size: 13px;
+      line-height: 2.2;
     }
 
     footer strong {
-      color: #b89459;
+      color: #b28d4e;
     }
 
-    /* موبایل */
+    /* =========================
+       MOBILE
+    ========================= */
 
-    @media (max-width: 700px) {
+    @media (max-width: 850px) {
+
+      .info-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero {
+        padding: 50px 0 55px;
+      }
+
+      .section-box {
+        padding: 30px 25px;
+      }
+
+    }
+
+    @media (max-width: 600px) {
 
       .page {
-        width: 92%;
-        padding-top: 25px;
+        width: 94%;
       }
 
-      header {
-        padding: 35px 10px 30px;
+      .topbar {
+        padding: 20px 0;
       }
 
-      h1 {
-        font-size: 34px;
+      .category {
+        display: none;
       }
 
-      .subtitle {
-        font-size: 17px;
+      .hero h1 {
+        font-size: 38px;
       }
 
-      .section-card,
-      .cinematic {
-        padding: 25px 21px;
-        border-radius: 14px;
+      .hero-subtitle {
+        font-size: 16px;
       }
 
-      h2 {
+      .poster-area {
+        margin-bottom: 55px;
+      }
+
+      .section-box {
+        padding: 25px 19px;
+        border-radius: 15px;
+      }
+
+      .section-heading h2 {
         font-size: 23px;
       }
 
-      p {
+      .section-box p {
         font-size: 16px;
-        line-height: 2.15;
+        line-height: 2.2;
+        text-align: right;
       }
 
-      .intro,
-      .synopsis-lead {
-        font-size: 17px;
+      .intro-text {
+        font-size: 18px !important;
       }
 
-      .info-grid,
-      .themes {
+      .info-grid {
         grid-template-columns: 1fr;
       }
 
-      .quote {
-        padding: 22px 18px;
+      .story-part {
+        padding: 25px 22px 25px 18px;
       }
 
-      .quote p {
-        font-size: 18px;
-      }
-
-      .message {
-        padding: 30px 20px;
-      }
-
-      .message-main {
+      .story-part h3 {
         font-size: 20px;
       }
 
-      .ending p {
+      .story-part p {
+        font-size: 15px;
+      }
+
+      .story-intro p {
+        font-size: 17px;
+      }
+
+      .quote {
+        padding: 30px 18px;
+      }
+
+      .quote p {
         font-size: 19px;
       }
+
+      .moment {
+        padding: 40px 22px;
+      }
+
+      .moment h2 {
+        font-size: 28px;
+      }
+
+      .moment p {
+        font-size: 16px;
+      }
+
+      .theme-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .message {
+        padding: 45px 20px;
+      }
+
+      .message-main {
+        font-size: 19px;
+      }
+
+      .message-question {
+        font-size: 16px;
+      }
+
+      .final {
+        padding-top: 55px;
+      }
+
+      .final p {
+        font-size: 19px;
+      }
+
     }
+
   </style>
 </head>
 
@@ -493,312 +699,456 @@
 
   <main class="page">
 
-    <a class="back" href="../index.html">
-      ← بازگشت به صفحه اصلی
-    </a>
+    <div class="topbar">
 
-    <header>
+      <a href="../index.html" class="back">
+        ← بازگشت به صفحه اصلی
+      </a>
 
-      <span class="kicker">
-        فیلمنامه بلند | تاریخی ـ حماسی ـ انسانی
+      <span class="category">
+        فیلمنامه بلند
       </span>
+
+    </div>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+      <div class="hero-label">
+        فیلمنامه بلند | تاریخی ـ حماسی ـ انسانی
+      </div>
 
       <h1>
         آخرین نبرد سورنا
       </h1>
 
-      <div class="subtitle">
-        روایتی درباره مردی که پس از پیروزی در جنگ، بزرگ‌ترین نبرد زندگی خود را
-        برای انتخاب میان ویران کردن و ساختن آغاز می‌کند.
-      </div>
+      <div class="hero-line"></div>
 
-      <div class="author">
+      <p class="hero-subtitle">
+        روایتی درباره مردی که پس از پیروزی در بزرگ‌ترین جنگ زندگی‌اش،
+        درمی‌یابد که ارزشمندترین پیروزی، نه در ویران کردن،
+        بلکه در ساختن است.
+      </p>
+
+      <div class="hero-author">
         نوشته‌ی <strong>حسین محمدی امیرزا</strong>
       </div>
 
-    </header>
-
-
-    <!--
-      اگر پوستر این اثر را داری، می‌توانی این بخش را فعال کنی
-      و مسیر واقعی فایل پوستر را جایگزین کنی.
-    -->
-
-    <!--
-    <div class="poster-wrap">
-      <div class="poster">
-        <img
-          src="نام-واقعی-پوستر.jpg"
-          alt="پوستر فیلمنامه آخرین نبرد سورنا"
-          loading="eager"
-          decoding="async"
-        >
-      </div>
-    </div>
-    -->
-
-
-    <section>
-      <div class="section-card">
-
-        <h2>معرفی اثر</h2>
-
-        <p class="intro">
-          «آخرین نبرد سورنا» روایتی تاریخی، حماسی و انسانی درباره
-          <strong>سورنا</strong>، سردار نامدار اشکانی است؛ مردی که پس از
-          پیروزی در یکی از بزرگ‌ترین نبردهای تاریخ ایران، معنای واقعی
-          پیروزی را زیر سؤال می‌برد.
-        </p>
-
-        <p>
-          این اثر از نقطه‌ای آغاز می‌شود که یک قهرمان نظامی، پس از شکست
-          دشمن، با حقیقتی تلخ روبه‌رو می‌شود: گاهی پیروزی در میدان جنگ،
-          اگر با بهای از دست رفتن عزیزان و ویرانی سرزمین همراه باشد،
-          چیزی جز شکستی پنهان نیست.
-        </p>
-
-        <p>
-          سورنا در ادامه زندگی خود مسیری متفاوت را انتخاب می‌کند؛
-          مسیری که در آن <strong>شمشیر جای خود را به ابزار آبادانی</strong>
-          می‌دهد و مفهوم قدرت، از جنگیدن به ساختن تغییر می‌کند.
-        </p>
-
-      </div>
     </section>
 
 
-    <section>
-      <div class="section-card">
+    <!-- POSTER -->
 
-        <h2>مشخصات اثر</h2>
+    <div class="poster-area">
+
+      <div class="poster-frame">
+
+        <!--
+          این خط را با همان مسیر درست پوستر فعلی خودت قرار بده.
+          فقط مقدار src را تغییر بده.
+        -->
+
+        <img
+          src="مسیر-فعلی-پوستر-سورنا"
+          alt="پوستر فیلمنامه آخرین نبرد سورنا"
+          loading="eager"
+        >
+
+      </div>
+
+    </div>
+
+
+    <!-- INTRO -->
+
+    <section class="section">
+
+      <div class="section-box">
+
+        <div class="section-heading">
+          <span class="number">۰۱</span>
+          <h2>معرفی اثر</h2>
+        </div>
+
+        <p class="intro-text">
+          «آخرین نبرد سورنا» روایتی تاریخی، حماسی و انسانی درباره
+          <strong>سورنا</strong>، سردار جوان و نامدار اشکانی است؛
+          اما داستان او تنها داستان یک سردار و یک جنگ نیست.
+        </p>
+
+        <p>
+          داستان از جایی آغاز می‌شود که سورنا پس از پیروزی بزرگ در کارهه،
+          در میان سپرهای شکسته و پیکرهای بی‌جان، با حقیقتی روبه‌رو می‌شود
+          که مسیر زندگی او را تغییر می‌دهد.
+        </p>
+
+        <p>
+          او درمی‌یابد که اگر پیروزی به بهای از دست رفتن عزیزان و
+          ویرانی سرزمین تمام شود، شاید چیزی جز شکستی پنهان نباشد.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- INFO -->
+
+    <section class="section">
+
+      <div class="section-box">
+
+        <div class="section-heading">
+          <span class="number">۰۲</span>
+          <h2>مشخصات اثر</h2>
+        </div>
 
         <div class="info-grid">
 
-          <div class="info-box">
-            <span>عنوان</span>
+          <div class="info-card">
+            <small>عنوان</small>
             <strong>آخرین نبرد سورنا</strong>
           </div>
 
-          <div class="info-box">
-            <span>نوع اثر</span>
+          <div class="info-card">
+            <small>نوع اثر</small>
             <strong>فیلمنامه بلند</strong>
           </div>
 
-          <div class="info-box">
-            <span>نویسنده</span>
+          <div class="info-card">
+            <small>نویسنده</small>
             <strong>حسین محمدی امیرزا</strong>
           </div>
 
-          <div class="info-box">
-            <span>ژانر</span>
-            <strong>تاریخی / حماسی / انسانی</strong>
-          </div>
-
-          <div class="info-box">
-            <span>بستر تاریخی</span>
-            <strong>ایران اشکانی</strong>
-          </div>
-
-          <div class="info-box">
-            <span>مضمون</span>
-            <strong>صلح، آبادانی، فداکاری و غلبه بر چرخه جنگ</strong>
-          </div>
-
-          <div class="info-box">
-            <span>زبان</span>
+          <div class="info-card">
+            <small>زبان</small>
             <strong>فارسی</strong>
           </div>
 
-          <div class="info-box">
-            <span>قالب</span>
+          <div class="info-card">
+            <small>ژانر</small>
+            <strong>تاریخی / حماسی / انسانی</strong>
+          </div>
+
+          <div class="info-card">
+            <small>دوره تاریخی</small>
+            <strong>ایران اشکانی</strong>
+          </div>
+
+          <div class="info-card">
+            <small>مضمون</small>
+            <strong>صلح و آبادانی</strong>
+          </div>
+
+          <div class="info-card">
+            <small>قالب</small>
             <strong>فیلمنامه سینمایی</strong>
           </div>
 
         </div>
 
       </div>
+
     </section>
 
 
-    <section>
-      <div class="section-card">
+    <!-- SYNOPSIS -->
 
-        <h2>سیناپس</h2>
+    <section class="section">
 
-        <div class="synopsis-lead">
-          در دشت سوزان کارهه، باد هنوز بوی خون می‌دهد. سورنا، سردار جوان
-          و نامدار اشکانی، سپاه عظیم روم به فرماندهی کراسوس را در هم کوبیده
-          و یکی از بزرگ‌ترین پیروزی‌های تاریخ ایران را رقم زده است؛
-          اما این پیروزی برای او دیگر طعم افتخار ندارد.
+      <div class="section-box">
+
+        <div class="section-heading">
+          <span class="number">۰۳</span>
+          <h2>سیناپس</h2>
         </div>
 
-        <p>
-          در میان کشته‌شدگان، پیکر <strong>آرش</strong>، برادر کوچک سورنا،
-          قرار دارد؛ جوانی که سورنا خود تیراندازی و فنون جنگ را به او
-          آموخته بود. تکه‌ای از پارچه خونین لباس آرش، تنها یادگاری است که
-          سورنا از میدان نبرد با خود می‌برد.
-        </p>
 
-        <p>
-          سورنا برای نخستین‌بار درمی‌یابد که پیروزی در جنگ، اگر به بهای
-          از دست رفتن عزیزان و ویرانی سرزمین تمام شود، چیزی جز شکست نیست.
-        </p>
+        <div class="story-intro">
 
-        <p>
-          او به زادگاهش، <strong>سیستان</strong>، بازمی‌گردد؛ اما دیگر آن
-          سرداری نیست که در اندیشه فتح سرزمین‌های تازه باشد.
-        </p>
+          <p>
+            در دشت سوزان <strong>کارهه</strong>، باد هنوز بوی خون می‌دهد.
+            سورنا، سردار جوان و نامدار اشکانی، سپاه عظیم روم به فرماندهی
+            کراسوس را در هم کوبیده است؛ اما بزرگ‌ترین پیروزی او،
+            برای نخستین‌بار، طعم تلخ شکست دارد.
+          </p>
+
+        </div>
+
+
+        <div class="story-part">
+
+          <div class="story-part-number">آغاز</div>
+
+          <h3>کارهه؛ پیروزی‌ای با طعم شکست</h3>
+
+          <p>
+            در میان کشته‌شدگان، پیکر <strong>آرش</strong>،
+            برادر کوچک سورنا، قرار دارد؛ جوانی که سورنا خود تیراندازی
+            و فنون جنگ را به او آموخته بود.
+          </p>
+
+          <p>
+            تکه‌ای از پارچه خونین لباس آرش، تنها یادگاری است که سورنا
+            از میدان نبرد با خود می‌برد.
+          </p>
+
+        </div>
+
+
+        <div class="story-part">
+
+          <div class="story-part-number">تحول</div>
+
+          <h3>بازگشت به سیستان</h3>
+
+          <p>
+            سورنا به زادگاهش، <strong>سیستان</strong>، بازمی‌گردد؛
+            اما دیگر آن سرداری نیست که در اندیشه فتح سرزمین‌های تازه باشد.
+          </p>
+
+          <p>
+            خاطره پدر و آخرین سفارش او در ذهن سورنا زنده می‌شود:
+          </p>
+
+        </div>
+
 
         <div class="quote">
+
           <p>
             «از خاک دفاع کن؛ اما بدان که خاک فقط زمین نیست،
             خاک، زندگیِ روی آن است.»
           </p>
+
         </div>
 
-        <p>
-          این سخن مسیر زندگی سورنا را تغییر می‌دهد. او تصمیم می‌گیرد
-          به جای آنکه سربازانش را برای جنگ‌های تازه آماده کند، آنان را
-          برای ساختن آینده‌ای تازه به میدان بفرستد.
-        </p>
 
-        <p>
-          شمشیرها باید کنار گذاشته شوند و <strong>بیل، کلنگ و داس</strong>
-          جای آنها را بگیرند.
-        </p>
+        <div class="story-part">
 
-        <p>
-          سورنا «سپاه خورشید» را بنیان می‌گذارد؛ سپاهی که این‌بار نه برای
-          ویران کردن، بلکه برای آباد کردن می‌جنگد. سربازان سابق به
-          کشاورزی، ساخت جوی‌های آب، آباد کردن زمین‌ها و برپا کردن روستاها
-          روی می‌آورند.
-        </p>
+          <div class="story-part-number">آغاز یک راه تازه</div>
 
-        <p>
-          اما این تغییر آسان نیست.
-        </p>
+          <h3>سپاه خورشید</h3>
 
-        <p>
-          <strong>مهران</strong>، سیاستمداری قدرتمند و تشنه قدرت، محبوبیت
-          روزافزون سورنا را خطری برای موقعیت خود می‌بیند. او با شایعه‌پراکنی
-          و دسیسه تلاش می‌کند مردم را علیه سورنا بشوراند.
-        </p>
-
-        <p>
-          انبارهای آذوقه به آتش کشیده می‌شوند و تقصیرها به گردن سپاه
-          خورشید انداخته می‌شود.
-        </p>
-
-        <p>
-          از سوی دیگر، <strong>رستم</strong>، یکی از کهنه‌سربازان وفادار
-          سورنا، نمی‌تواند با زندگی تازه کنار بیاید. او و گروهی از
-          جنگجویان قدیمی معتقدند مردی که شمشیر را زمین بگذارد، دیگر
-          قدرت دفاع از سرزمینش را ندارد.
-        </p>
-
-        <div class="quote">
           <p>
-            سیستان آرام‌آرام به دو جبهه تقسیم می‌شود:
-            <br>
-            «شمشیر یا بیل؟»
+            سورنا تصمیم می‌گیرد سربازانش را نه برای جنگ‌های تازه،
+            بلکه برای ساختن آینده‌ای تازه آماده کند.
           </p>
-        </div>
 
-        <p>
-          در همین آشفتگی، مهران پنهانی با نیروهای مهاجم شرقی ارتباط برقرار
-          می‌کند. خبر نزدیک شدن سپاه مهاجم به رهبری <strong>مهراب</strong>،
-          سیستان را در آستانه بحرانی بزرگ قرار می‌دهد.
-        </p>
-
-        <p>
-          شورای بزرگان تشکیل می‌شود. رستم فریاد می‌زند:
-          <strong>«جنگ!»</strong>
-          و مهران، با چهره‌ای ظاهراً دلسوز، پیشنهاد تسلیم می‌دهد.
-        </p>
-
-        <p>
-          اما سورنا راه سومی را انتخاب می‌کند؛ راهی که هیچ‌کس انتظارش را ندارد:
-        </p>
-
-        <div class="quote">
           <p>
-            «قدرت آرامش.»
+            شمشیرها کنار گذاشته می‌شوند و <strong>بیل، کلنگ و داس</strong>
+            جای آنها را می‌گیرند.
           </p>
+
+          <p>
+            او «سپاه خورشید» را بنیان می‌گذارد؛ سپاهی که این بار
+            نه برای ویران کردن، بلکه برای آباد کردن می‌جنگد.
+          </p>
+
         </div>
 
-        <p>
-          او تصمیم می‌گیرد تمام مردم سیستان را به سوی مرزها ببرد؛ نه با
-          سپاهی از شمشیر و نیزه، بلکه با مردان، زنان، پیران و جوانانی که
-          ابزار کار، دانه گندم، آب و خاک سرزمینشان را در دست دارند.
-        </p>
 
-        <p>
-          سپاه عظیم دشمن در افق ظاهر می‌شود. در برابر آنان، مردمی ایستاده‌اند
-          که نه از مرگ می‌ترسند و نه برای کشتن آمده‌اند.
-        </p>
+        <div class="story-part">
 
-        <p>
-          سورنا، بی‌سلاح، از میان مردم عبور می‌کند و به سوی مهراب می‌رود.
-          در سکوت سنگین میان دو سپاه، مشتی از خاک حاصلخیز سیستان را
-          برمی‌دارد و در دست مهراب می‌گذارد.
-        </p>
+          <div class="story-part-number">بحران</div>
+
+          <h3>مهران و بازگشت اندیشه جنگ</h3>
+
+          <p>
+            <strong>مهران</strong>، سیاستمداری قدرتمند و تشنه قدرت،
+            محبوبیت روزافزون سورنا را خطری برای موقعیت خود می‌بیند.
+          </p>
+
+          <p>
+            با شایعه‌پراکنی، دسیسه و آتش زدن انبارهای آذوقه،
+            او تلاش می‌کند مردم را علیه سپاه خورشید بشوراند.
+          </p>
+
+          <p>
+            از سوی دیگر، <strong>رستم</strong>، یکی از کهنه‌سربازان
+            وفادار سورنا، نمی‌تواند با زندگی تازه کنار بیاید.
+          </p>
+
+        </div>
+
+
+        <div class="moment">
+
+          <div class="moment-label">
+            دو نگاه در برابر یکدیگر
+          </div>
+
+          <h2>شمشیر یا بیل؟</h2>
+
+          <p>
+            سیستان آرام‌آرام به دو جبهه تقسیم می‌شود؛
+            آنان که امنیت را در شمشیر می‌بینند
+            و آنان که آینده را در ساختن.
+          </p>
+
+        </div>
+
+
+        <div class="story-part">
+
+          <div class="story-part-number">تهدید</div>
+
+          <h3>سپاه مهراب</h3>
+
+          <p>
+            مهران پنهانی با نیروهای مهاجم شرقی ارتباط برقرار می‌کند.
+            خبر نزدیک شدن سپاه مهاجم به رهبری
+            <strong>مهراب</strong>، سیستان را در آستانه بحرانی بزرگ قرار می‌دهد.
+          </p>
+
+          <p>
+            شورای بزرگان تشکیل می‌شود. رستم فریاد می‌زند:
+            <strong>«جنگ!»</strong>
+            و مهران پیشنهاد تسلیم می‌دهد.
+          </p>
+
+        </div>
+
+
+        <div class="moment">
+
+          <div class="moment-label">
+            انتخاب سورنا
+          </div>
+
+          <h2>قدرت آرامش</h2>
+
+          <p>
+            سورنا راه سومی را انتخاب می‌کند؛ راهی که هیچ‌کس انتظارش را ندارد.
+            او مردم سیستان را به سوی مرزها می‌برد؛ نه با سپاهی از شمشیر،
+            بلکه با مردان و زنان و جوانانی که ابزار کار، دانه گندم،
+            آب و خاک سرزمینشان را در دست دارند.
+          </p>
+
+        </div>
+
+
+        <div class="story-part">
+
+          <div class="story-part-number">اوج داستان</div>
+
+          <h3>رویارویی با مهراب</h3>
+
+          <p>
+            سپاه عظیم دشمن در افق ظاهر می‌شود. در برابر آنان،
+            مردمی ایستاده‌اند که برای کشتن نیامده‌اند.
+          </p>
+
+          <p>
+            سورنا، بی‌سلاح، از میان مردم عبور می‌کند و به سوی مهراب می‌رود.
+            سپس مشتی از خاک حاصلخیز سیستان را در دست او می‌گذارد.
+          </p>
+
+        </div>
+
 
         <div class="quote">
+
           <p>
             «این خاک را به فرزندانت نشان بده.
             اگر بتوانی در سرزمین خودت چنین خاکی را آباد کنی،
             دیگر نیازی به خاک دیگران نخواهی داشت.»
           </p>
+
         </div>
 
-        <p>
-          مهراب که انتظار تهدید و جنگ دارد، در برابر این سخن خاموش می‌شود.
-          او به مردمی نگاه می‌کند که برای دفاع از سرزمینشان نیازی به
-          شمشیر ندارند؛ زیرا قدرت واقعی آنان در اتحاد و اراده ساختن است.
-        </p>
 
-        <p>
-          پس از لحظاتی طولانی، مهراب اسب خود را برمی‌گرداند و فرمان
-          عقب‌نشینی می‌دهد.
-        </p>
+        <div class="story-part">
+
+          <div class="story-part-number">پایان نبرد</div>
+
+          <h3>پیروزی بدون یک قطره خون</h3>
+
+          <p>
+            مهراب که انتظار تهدید و جنگ دارد، در برابر این سخن خاموش می‌شود.
+            او به مردمی نگاه می‌کند که قدرت واقعی خود را در اتحاد و
+            اراده ساختن یافته‌اند.
+          </p>
+
+          <p>
+            مهراب اسب خود را برمی‌گرداند و فرمان عقب‌نشینی می‌دهد.
+          </p>
+
+        </div>
+
 
         <div class="quote">
+
           <p>
             هیچ شمشیری از نیام بیرون نمی‌آید.
             <br>
             سیستان بدون یک قطره خون پیروز می‌شود.
           </p>
+
         </div>
 
-        <p>
-          اما پیروزی بزرگ‌تر، در درون سورنا اتفاق افتاده است.
-          او سرانجام توانسته بزرگ‌ترین دشمن خود را شکست دهد:
-          <strong>اندیشه جنگ در وجود خویش.</strong>
-        </p>
 
-        <p>
-          سال‌ها می‌گذرد. سیستان دیگر همان سرزمین تشنه و زخمی گذشته نیست.
-          زمین‌ها سبز شده‌اند، جوی‌های آب جاری‌اند، روستاها آباد شده‌اند
-          و کودکان در مدرسه‌ها درس می‌خوانند.
-        </p>
+        <div class="story-part">
 
-        <p>
-          میراث سورنا دیگر یک شمشیر یا یک پیروزی نظامی نیست؛
-          <strong>میراث او اندیشه ساختن است.</strong>
-        </p>
+          <div class="story-part-number">آخرین نبرد</div>
+
+          <h3>دشمن واقعی سورنا</h3>
+
+          <p>
+            پیروزی بزرگ‌تر در درون سورنا اتفاق افتاده است.
+            او سرانجام توانسته بزرگ‌ترین دشمن خود را شکست دهد:
+            <strong>اندیشه جنگ در وجود خویش.</strong>
+          </p>
+
+          <p>
+            شمشیرهای کهنه در کوره‌ها ذوب می‌شوند و آهن آنها به
+            بیل، داس و ابزار آبادانی تبدیل می‌شود.
+          </p>
+
+        </div>
+
+
+        <div class="story-part">
+
+          <div class="story-part-number">سال‌ها بعد</div>
+
+          <h3>میراث سورنا</h3>
+
+          <p>
+            سال‌ها می‌گذرد. سیستان دیگر همان سرزمین تشنه و زخمی گذشته نیست.
+            زمین‌ها سبز شده‌اند، جوی‌های آب جاری‌اند، روستاها آباد شده‌اند
+            و کودکان در مدرسه‌ها درس می‌خوانند.
+          </p>
+
+          <p>
+            میراث سورنا دیگر یک شمشیر یا یک پیروزی نظامی نیست؛
+            <strong>میراث او اندیشه ساختن است.</strong>
+          </p>
+
+        </div>
 
       </div>
+
     </section>
 
 
-    <section>
-      <div class="cinematic">
+    <!-- FINAL IMAGE -->
 
-        <h2>تصویر نهایی اثر</h2>
+    <section class="section">
+
+      <div class="moment">
+
+        <div class="moment-label">
+          تصویر پایانی
+        </div>
+
+        <h2>سورنا، بدون شمشیر</h2>
 
         <p>
-          در میدان مرکزی شهر، تندیسی از سورنا برپا می‌شود؛ اما نه با
-          شمشیر در دست.
+          در میدان مرکزی شهر، تندیسی از سورنا برپا می‌شود؛
+          نه با شمشیر در دست.
         </p>
 
         <p>
@@ -807,28 +1157,27 @@
         </p>
 
         <p>
-          نسل جوان در کنار تندیس ایستاده و داستان او را برای فرزندان خود
-          بازگو می‌کند.
+          نسل جوان در کنار تندیس ایستاده و داستان او را
+          برای فرزندان خود بازگو می‌کند.
         </p>
 
-        <div class="quote">
-          <p>
-            آخرین نبرد سورنا، نبردی برای شکست یک دشمن نیست؛
-            <br>
-            نبردی برای شکست دادن اندیشه ویران کردن است.
-          </p>
-        </div>
-
       </div>
+
     </section>
 
 
-    <section>
-      <div class="section-card">
+    <!-- THEMES -->
 
-        <h2>درونمایه</h2>
+    <section class="section">
 
-        <div class="themes">
+      <div class="section-box">
+
+        <div class="section-heading">
+          <span class="number">۰۴</span>
+          <h2>درونمایه اثر</h2>
+        </div>
+
+        <div class="theme-grid">
 
           <div class="theme">
             پیروزی واقعی در برابر پیروزی نظامی
@@ -839,7 +1188,7 @@
           </div>
 
           <div class="theme">
-            پیوند میان انسان، خاک و زندگی
+            پیوند انسان با خاک و سرزمین
           </div>
 
           <div class="theme">
@@ -851,7 +1200,7 @@
           </div>
 
           <div class="theme">
-            اتحاد مردم در برابر تهدید و بحران
+            اتحاد مردم در برابر تهدید
           </div>
 
           <div class="theme">
@@ -865,55 +1214,66 @@
         </div>
 
       </div>
+
     </section>
 
 
-    <section>
-      <div class="section-card">
+    <!-- FEATURES -->
 
-        <h2>ویژگی‌های اثر</h2>
+    <section class="section">
 
-        <div class="features">
+      <div class="section-box">
+
+        <div class="section-heading">
+          <span class="number">۰۵</span>
+          <h2>ویژگی‌های اثر</h2>
+        </div>
+
+        <div class="feature-list">
 
           <div class="feature">
-            <strong>نگاه متفاوت به یک قهرمان تاریخی</strong>
-            <span>
-              روایت، سورنا را تنها به عنوان یک سردار پیروز معرفی نمی‌کند؛
-              بلکه تحول درونی او را به مرکز داستان تبدیل می‌کند.
-            </span>
+            <h3>قهرمانی متفاوت</h3>
+            <p>
+              سورنا تنها یک سردار پیروز نیست؛ تحول درونی او
+              هسته اصلی داستان را شکل می‌دهد.
+            </p>
           </div>
 
           <div class="feature">
-            <strong>تقابل شمشیر و سازندگی</strong>
-            <span>
-              یکی از محورهای اصلی داستان، رویارویی دو نگاه به قدرت است:
-              قدرت برای ویران کردن یا قدرت برای ساختن.
-            </span>
+            <h3>تقابل شمشیر و سازندگی</h3>
+            <p>
+              داستان دو نگاه به قدرت را در برابر یکدیگر قرار می‌دهد:
+              قدرت برای ویران کردن و قدرت برای ساختن.
+            </p>
           </div>
 
           <div class="feature">
-            <strong>فضای تاریخی و حماسی</strong>
-            <span>
-              داستان در بستر ایران باستان و در فضایی سرشار از جنگ،
-              سیاست، طبیعت و کشمکش‌های انسانی شکل می‌گیرد.
-            </span>
+            <h3>فضای تاریخی و حماسی</h3>
+            <p>
+              داستان در بستر ایران اشکانی و در فضایی سرشار از
+              سیاست، جنگ، طبیعت و کشمکش انسانی روایت می‌شود.
+            </p>
           </div>
 
           <div class="feature">
-            <strong>پایان متفاوت و ضدکلیشه</strong>
-            <span>
-              نقطه اوج داستان نه با یک نبرد خونین، بلکه با انتخاب
-              صلح و عقب‌نشینی دشمن شکل می‌گیرد.
-            </span>
+            <h3>پایان ضدکلیشه</h3>
+            <p>
+              نقطه اوج داستان نه یک نبرد خونین، بلکه پیروزی
+              آرامش بر خشونت است.
+            </p>
           </div>
 
         </div>
 
       </div>
+
     </section>
 
 
-    <section>
+    <!-- MESSAGE -->
+
+    <section class="section">
+
       <div class="message">
 
         <h2>پیام اثر</h2>
@@ -923,31 +1283,33 @@
           داستان پیروزی انسان بر خشم، غرور و چرخه بی‌پایان جنگ است.
         </div>
 
-        <div class="question">
+        <div class="message-question">
           این اثر می‌پرسد:
           <br>
           <strong>آیا می‌توان با ساختن، از ویرانی پیشی گرفت؟</strong>
         </div>
 
-        <p style="margin-top:25px;">
-          پاسخ داستان در خاکی نهفته است که اگر انسان جرئت کند شمشیر را
-          زمین بگذارد، می‌تواند آن را آباد کند.
-        </p>
-
       </div>
+
     </section>
 
 
-    <section>
-      <div class="section-card">
+    <!-- AUTHOR -->
 
-        <h2>نگاه نویسنده</h2>
+    <section class="section">
+
+      <div class="section-box">
+
+        <div class="section-heading">
+          <span class="number">۰۶</span>
+          <h2>نگاه نویسنده</h2>
+        </div>
 
         <div class="author-note">
 
           <p>
-            «آخرین نبرد سورنا» تلاشی است برای نگاه کردن به مفهوم قهرمانی
-            از زاویه‌ای متفاوت.
+            «آخرین نبرد سورنا» تلاشی است برای نگاه کردن به مفهوم
+            قهرمانی از زاویه‌ای متفاوت.
           </p>
 
           <p>
@@ -966,27 +1328,41 @@
         </div>
 
       </div>
+
     </section>
 
 
-    <section>
-      <div class="section-card">
+    <!-- STATUS -->
 
-        <h2>وضعیت اثر</h2>
+    <section class="section">
+
+      <div class="section-box">
+
+        <div class="section-heading">
+          <span class="number">۰۷</span>
+          <h2>وضعیت اثر</h2>
+        </div>
 
         <div class="status">
 
-          <div class="status-badge">
+          <span class="status-badge">
             معرفی فیلمنامه | آماده ارائه به تهیه‌کننده، کارگردان و گروه‌های تولید
-          </div>
+          </span>
 
         </div>
 
       </div>
+
     </section>
 
 
-    <div class="ending">
+    <!-- ENDING -->
+
+    <div class="final">
+
+      <div class="final-symbol">
+        ✦
+      </div>
 
       <p>
         گاهی بزرگ‌ترین پیروزی،
@@ -1001,17 +1377,17 @@
 
     <footer>
 
-      <div>
-        <strong>آخرین نبرد سورنا</strong>
-      </div>
+      <p>
+        <strong>حسین محمدی امیرزا</strong>
+      </p>
 
-      <div>
-        فیلمنامه بلند — نوشته‌ی حسین محمدی امیرزا
-      </div>
+      <p>
+        فیلمنامه بلند «آخرین نبرد سورنا»
+      </p>
 
-      <div>
+      <p>
         تمامی حقوق اثر متعلق به نویسنده است.
-      </div>
+      </p>
 
     </footer>
 
