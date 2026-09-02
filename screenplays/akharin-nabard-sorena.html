@@ -1,103 +1,1065 @@
- آخرین نبرد سورنا
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
- سیناپس
+  <title>آخرین نبرد سورنا | حسین محمدی امیرزا</title>
 
-در دشت سوزان **کارهه**، باد هنوز بوی خون می‌دهد. **سورنا**، سردار جوان و نامدار اشکانی، در میان سپرهای شکسته و پیکرهای بی‌جان ایستاده است. او سپاه عظیم روم به فرماندهی **کراسوس** را در هم کوبیده و یکی از بزرگ‌ترین پیروزی‌های تاریخ ایران را رقم زده است؛ اما این پیروزی برای او دیگر طعم افتخار ندارد.
+  <meta name="description"
+        content="معرفی فیلمنامه بلند آخرین نبرد سورنا نوشته حسین محمدی امیرزا">
 
-در میان کشته‌شدگان، پیکر **برادر کوچکش، آرش**، قرار دارد؛ جوانی که سورنا خود تیراندازی و فنون جنگ را به او آموخته بود. تکه‌ای از پارچه خونین لباس آرش، تنها یادگاری است که سورنا از میدان نبرد با خود می‌برد.
+  <style>
 
-سورنا برای نخستین‌بار درمی‌یابد که پیروزی در جنگ، اگر به بهای از دست رفتن عزیزان و ویرانی سرزمین تمام شود، چیزی جز شکست نیست.
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-او به زادگاهش، **سیستان**، بازمی‌گردد؛ اما دیگر آن سرداری نیست که در اندیشه فتح سرزمین‌های تازه باشد. در سکوت شب، خاطره پدر و آخرین سفارش او در ذهن سورنا زنده می‌شود:
+    html {
+      scroll-behavior: smooth;
+    }
 
-«از خاک دفاع کن؛ اما بدان که خاک فقط زمین نیست، خاک، زندگیِ روی آن است.»
+    body {
+      background:
+        radial-gradient(circle at top, #241b0b 0%, #0d0d0d 42%, #080808 100%);
+      color: #eeeeee;
+      font-family: Tahoma, Arial, sans-serif;
+      line-height: 2;
+    }
 
-این سخن مسیر زندگی سورنا را تغییر می‌دهد.
+    a {
+      text-decoration: none;
+    }
 
-او تصمیم می‌گیرد به جای آنکه سربازانش را برای جنگ‌های تازه آماده کند، آنان را برای ساختن آینده‌ای تازه به میدان بفرستد. شمشیرها باید کنار گذاشته شوند و بیل، کلنگ و داس جای آنها را بگیرند.
+    .container {
+      width: min(1120px, calc(100% - 32px));
+      margin: auto;
+    }
 
-سورنا **«سپاه خورشید»** را بنیان می‌گذارد؛ سپاهی که این‌بار نه برای ویران کردن، بلکه برای آباد کردن می‌جنگد. سربازان سابق به کشاورزی، ساختن جوی‌های آب، آباد کردن زمین‌ها و برپا کردن روستاها روی می‌آورند.
+    /* ---------------- HEADER ---------------- */
 
-اما این تغییر آسان نیست.
+    header {
+      border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+      background: rgba(8, 8, 8, 0.94);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(10px);
+    }
 
-مهران**، سیاستمداری قدرتمند و تشنه قدرت، محبوبیت روزافزون سورنا را خطری برای موقعیت خود می‌بیند. او با شایعه‌پراکنی و دسیسه تلاش می‌کند مردم را علیه سورنا بشوراند. انبارهای آذوقه به آتش کشیده می‌شوند و تقصیرها به گردن سپاه خورشید انداخته می‌شود.
+    .header-inner {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
 
-از سوی دیگر، **رستم**، یکی از کهنه‌سربازان وفادار سورنا، نمی‌تواند با زندگی تازه کنار بیاید. او و گروهی از جنگجویان قدیمی معتقدند مردی که شمشیر را زمین بگذارد، دیگر قدرت دفاع از سرزمینش را ندارد.
+    .back {
+      color: #d4af37;
+      font-size: 15px;
+      transition: 0.3s;
+    }
 
-سیستان آرام‌آرام به دو جبهه تقسیم می‌شود:
+    .back:hover {
+      color: #f1d878;
+    }
 
-**شمشیر یا بیل؟**
+    .header-title {
+      color: #999;
+      font-size: 13px;
+    }
 
-در همین آشفتگی، مهران پنهانی با نیروهای مهاجم شرقی ارتباط برقرار می‌کند. او امیدوار است حمله‌ای خارجی، سورنا را شکست دهد و راه را برای تصاحب قدرت باز کند.
+    /* ---------------- HERO ---------------- */
 
-خبر نزدیک شدن سپاه مهاجم به رهبری **مهراب**، سرداری باتجربه و جنگاور، سیستان را در آستانه بحرانی بزرگ قرار می‌دهد.
+    .hero {
+      padding: 75px 0 65px;
+    }
 
-شورای بزرگان تشکیل می‌شود.
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 60px;
+      align-items: center;
+    }
 
-رستم فریاد می‌زند:
+    .poster-wrap {
+      position: relative;
+    }
 
-**«جنگ!»**
+    .poster-wrap::before {
+      content: "";
+      position: absolute;
+      inset: -14px;
+      border: 1px solid rgba(212, 175, 55, 0.22);
+      border-radius: 20px;
+      pointer-events: none;
+    }
 
-و مهران، با چهره‌ای ظاهراً دلسوز، پیشنهاد تسلیم می‌دهد.
+    .poster {
+      width: 100%;
+      max-width: 500px;
+      display: block;
+      margin: auto;
+      border-radius: 16px;
+      border: 1px solid rgba(212, 175, 55, 0.45);
+      box-shadow:
+        0 25px 70px rgba(0,0,0,0.75),
+        0 0 35px rgba(212,175,55,0.08);
+    }
 
-اما سورنا راه سومی را انتخاب می‌کند؛ راهی که هیچ‌کس انتظارش را ندارد:
+    .hero-content {
+      text-align: right;
+    }
 
-**«قدرت آرامش.»**
+    .eyebrow {
+      color: #d4af37;
+      font-size: 14px;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+    }
 
-او تصمیم می‌گیرد تمام مردم سیستان را به سوی مرزها ببرد؛ نه با سپاهی از شمشیر و نیزه، بلکه با مردان، زنان، پیران و جوانانی که ابزار کار، دانه گندم، آب و خاک سرزمینشان را در دست دارند.
+    h1 {
+      color: #d4af37;
+      font-size: clamp(38px, 5vw, 64px);
+      line-height: 1.35;
+      margin-bottom: 18px;
+      font-weight: 700;
+    }
 
-سپاه عظیم دشمن در افق ظاهر می‌شود.
+    .subtitle {
+      color: #c9c9c9;
+      font-size: 19px;
+      line-height: 2;
+      max-width: 650px;
+    }
 
-در برابر آنان، مردمی ایستاده‌اند که نه از مرگ می‌ترسند و نه برای کشتن آمده‌اند.
+    .hero-line {
+      width: 110px;
+      height: 3px;
+      background: #d4af37;
+      margin: 28px 0;
+    }
 
-سورنا، بی‌سلاح، از میان مردم عبور می‌کند و به سوی مهراب می‌رود.
+    .hero-quote {
+      color: #aaa;
+      font-size: 17px;
+      border-right: 3px solid #d4af37;
+      padding-right: 18px;
+    }
 
-در سکوت سنگین میان دو سپاه، مشتی از خاک حاصلخیز سیستان را برمی‌دارد و در دست مهراب می‌گذارد.
+    /* ---------------- SECTION ---------------- */
 
-سورنا می‌گوید:
+    section {
+      margin-bottom: 32px;
+    }
 
-**«این خاک را به فرزندانت نشان بده. اگر بتوانی در سرزمین خودت چنین خاکی را آباد کنی، دیگر نیازی به خاک دیگران نخواهی داشت.»**
+    .section-box {
+      background: linear-gradient(
+        145deg,
+        rgba(28,28,28,0.98),
+        rgba(15,15,15,0.98)
+      );
+      border: 1px solid rgba(212,175,55,0.18);
+      border-radius: 18px;
+      padding: 38px 42px;
+      box-shadow: 0 18px 45px rgba(0,0,0,0.28);
+    }
 
-مهراب که انتظار تهدید و جنگ دارد، در برابر این سخن خاموش می‌شود.
+    .section-title {
+      color: #d4af37;
+      font-size: 27px;
+      margin-bottom: 24px;
+      padding-right: 17px;
+      border-right: 4px solid #d4af37;
+      line-height: 1.5;
+    }
 
-او به مردمی نگاه می‌کند که برای دفاع از سرزمینشان نیازی به شمشیر ندارند؛ زیرا قدرت واقعی آنان در اتحاد و اراده ساختن است.
+    .section-box p {
+      color: #d0d0d0;
+      font-size: 17px;
+      line-height: 2.25;
+      margin-bottom: 18px;
+      text-align: justify;
+    }
 
-پس از لحظاتی طولانی، مهراب اسب خود را برمی‌گرداند و فرمان عقب‌نشینی می‌دهد.
+    .section-box p:last-child {
+      margin-bottom: 0;
+    }
 
-هیچ شمشیری از نیام بیرون نمی‌آید.
+    /* ---------------- INTRO ---------------- */
 
-**سیستان بدون یک قطره خون پیروز می‌شود.**
+    .intro {
+      border-top: 1px solid rgba(212,175,55,0.25);
+    }
 
-اما پیروزی بزرگ‌تر، در درون سورنا اتفاق افتاده است.
+    /* ---------------- INFO CARDS ---------------- */
 
-او سرانجام توانسته بزرگ‌ترین دشمن خود را شکست دهد: **اندیشه جنگ در وجود خویش.**
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
 
-شمشیرهای کهنه در کوره‌ها ذوب می‌شوند و آهن آنها به بیل، داس و ابزار آبادانی تبدیل می‌شود.
+    .info-card {
+      background: #111111;
+      border: 1px solid rgba(212,175,55,0.16);
+      border-radius: 14px;
+      padding: 22px;
+      transition: 0.3s;
+    }
 
-سال‌ها می‌گذرد.
+    .info-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(212,175,55,0.45);
+    }
 
-سیستان دیگر همان سرزمین تشنه و زخمی گذشته نیست. زمین‌ها سبز شده‌اند، جوی‌های آب جاری‌اند، روستاها آباد شده‌اند و کودکان در مدرسه‌ها درس می‌خوانند.
+    .info-label {
+      display: block;
+      color: #8d8d8d;
+      font-size: 13px;
+      margin-bottom: 7px;
+    }
 
-میراث سورنا دیگر یک شمشیر یا یک پیروزی نظامی نیست؛ **میراث او اندیشه ساختن است.**
+    .info-value {
+      color: #eeeeee;
+      font-size: 16px;
+      font-weight: bold;
+    }
 
-در میدان مرکزی شهر، تندیسی از سورنا برپا می‌شود؛ اما نه با شمشیر در دست.
+    /* ---------------- STORY PARTS ---------------- */
 
-در یک دست او **بیل** و در دست دیگرش **شاخه‌ای از زیتون** است.
+    .story-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
 
-نسل جوان در کنار تندیس ایستاده و داستان او را برای فرزندان خود بازگو می‌کند.
+    .story-card {
+      background: #101010;
+      border-radius: 15px;
+      border: 1px solid rgba(212,175,55,0.14);
+      padding: 28px;
+      position: relative;
+      overflow: hidden;
+    }
 
-و چنین، آخرین نبرد سورنا نه نبردی برای شکست یک دشمن، بلکه نبردی برای شکست دادن **اندیشه ویران کردن** است.
+    .story-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 4px;
+      height: 100%;
+      background: #d4af37;
+    }
 
-داستانی درباره مردی که پس از پیروزی در بزرگ‌ترین جنگ زندگی‌اش، فهمید:
+    .story-number {
+      color: #665522;
+      font-size: 40px;
+      font-weight: bold;
+      line-height: 1;
+      margin-bottom: 12px;
+    }
 
-**گاهی بزرگ‌ترین پیروزی، آن لحظه‌ای است که انسان تصمیم می‌گیرد به جای ویران کردن، بسازد.**
+    .story-card h3 {
+      color: #d4af37;
+      font-size: 21px;
+      margin-bottom: 13px;
+    }
 
-### پیام اثر
+    .story-card p {
+      font-size: 16px;
+      line-height: 2.15;
+      margin: 0;
+      text-align: right;
+    }
 
-**«آخرین نبرد سورنا» داستان پیروزی یک سردار بر دشمن نیست؛ داستان پیروزی انسان بر خشم، غرور و چرخه بی‌پایان جنگ است.**
+    /* ---------------- QUOTES ---------------- */
 
-این اثر می‌پرسد:
+    .quote-box {
+      margin: 28px 0;
+      padding: 30px 34px;
+      background:
+        linear-gradient(
+          135deg,
+          rgba(212,175,55,0.10),
+          rgba(212,175,55,0.025)
+        );
+      border: 1px solid rgba(212,175,55,0.35);
+      border-radius: 16px;
+      text-align: center;
+    }
 
-**آیا می‌توان با ساختن، از ویرانی پیشی گرفت؟**
+    .quote-box p {
+      color: #e5d08a;
+      font-size: 22px;
+      line-height: 2;
+      font-weight: bold;
+      text-align: center;
+      margin: 0;
+    }
 
-و پاسخ آن در خاکی نهفته است که اگر انسان جرئت کند شمشیر را زمین بگذارد، می‌تواند آن را آباد کند.
+    .quote-small {
+      color: #999 !important;
+      font-size: 14px !important;
+      font-weight: normal !important;
+      margin-top: 12px !important;
+    }
+
+    /* ---------------- THEMES ---------------- */
+
+    .theme-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .theme-card {
+      padding: 22px;
+      background: #111;
+      border-radius: 14px;
+      border: 1px solid rgba(212,175,55,0.13);
+    }
+
+    .theme-card h3 {
+      color: #d4af37;
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .theme-card p {
+      font-size: 15px;
+      line-height: 2;
+      margin: 0;
+    }
+
+    /* ---------------- FINAL MESSAGE ---------------- */
+
+    .final-message {
+      position: relative;
+      padding: 55px 45px;
+      text-align: center;
+      background:
+        radial-gradient(
+          circle at center,
+          rgba(212,175,55,0.13),
+          rgba(15,15,15,0.98) 68%
+        );
+      border: 1px solid rgba(212,175,55,0.45);
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .final-message::before,
+    .final-message::after {
+      content: "✦";
+      position: absolute;
+      color: rgba(212,175,55,0.22);
+      font-size: 70px;
+    }
+
+    .final-message::before {
+      top: 8px;
+      right: 25px;
+    }
+
+    .final-message::after {
+      bottom: 8px;
+      left: 25px;
+    }
+
+    .final-message h2 {
+      color: #d4af37;
+      font-size: 30px;
+      margin-bottom: 25px;
+    }
+
+    .final-message p {
+      color: #ddd;
+      font-size: 19px;
+      line-height: 2.35;
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .final-message strong {
+      color: #e4c85d;
+    }
+
+    /* ---------------- STATUS ---------------- */
+
+    .status {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      color: #ccc;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    .status-dot {
+      width: 9px;
+      height: 9px;
+      background: #d4af37;
+      border-radius: 50%;
+      display: inline-block;
+      box-shadow: 0 0 12px rgba(212,175,55,0.7);
+    }
+
+    /* ---------------- FOOTER ---------------- */
+
+    footer {
+      margin-top: 70px;
+      padding: 45px 0;
+      border-top: 1px solid rgba(212,175,55,0.2);
+      background: #080808;
+      text-align: center;
+    }
+
+    footer strong {
+      color: #d4af37;
+      font-size: 17px;
+    }
+
+    footer p {
+      color: #777;
+      font-size: 14px;
+      margin-top: 7px;
+    }
+
+    /* ---------------- MOBILE ---------------- */
+
+    @media (max-width: 850px) {
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+
+      .hero-content {
+        text-align: center;
+      }
+
+      .hero-line {
+        margin: 25px auto;
+      }
+
+      .hero-quote {
+        text-align: right;
+      }
+
+      .info-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .story-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .theme-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      .container {
+        width: min(100% - 22px, 1120px);
+      }
+
+      .hero {
+        padding: 45px 0;
+      }
+
+      h1 {
+        font-size: 38px;
+      }
+
+      .subtitle {
+        font-size: 16px;
+      }
+
+      .section-box {
+        padding: 26px 20px;
+        border-radius: 14px;
+      }
+
+      .section-title {
+        font-size: 23px;
+      }
+
+      .section-box p {
+        font-size: 16px;
+        line-height: 2.15;
+        text-align: right;
+      }
+
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .story-card {
+        padding: 23px;
+      }
+
+      .quote-box {
+        padding: 25px 20px;
+      }
+
+      .quote-box p {
+        font-size: 19px;
+      }
+
+      .final-message {
+        padding: 38px 22px;
+      }
+
+      .final-message h2 {
+        font-size: 25px;
+      }
+
+      .final-message p {
+        font-size: 17px;
+      }
+
+      .header-title {
+        display: none;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container header-inner">
+    <a href="../../index.html" class="back">← بازگشت به صفحه اصلی</a>
+    <span class="header-title">فیلمنامه بلند</span>
+  </div>
+</header>
+
+
+<main>
+
+  <!-- HERO -->
+
+  <section class="hero">
+    <div class="container hero-grid">
+
+      <div class="poster-wrap">
+
+        <!-- مسیر پوستر فعلی خودت را اینجا نگه دار -->
+        <img
+          src="مسیر-پوستر-فعلی-سورنا"
+          alt="پوستر فیلمنامه آخرین نبرد سورنا"
+          class="poster"
+        >
+
+      </div>
+
+
+      <div class="hero-content">
+
+        <div class="eyebrow">
+          فیلمنامه بلند
+        </div>
+
+        <h1>
+          آخرین نبرد سورنا
+        </h1>
+
+        <div class="hero-line"></div>
+
+        <p class="subtitle">
+          روایتی تاریخی، حماسی و انسانی درباره سرداری
+          که پس از پیروزی در بزرگ‌ترین جنگ زندگی‌اش،
+          معنای واقعی پیروزی را کشف می‌کند.
+        </p>
+
+        <div class="hero-quote">
+          گاهی بزرگ‌ترین پیروزی، آن لحظه‌ای است که انسان
+          تصمیم می‌گیرد به جای ویران کردن، بسازد.
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <div class="container">
+
+
+    <!-- معرفی -->
+
+    <section>
+      <div class="section-box intro">
+
+        <h2 class="section-title">
+          معرفی اثر
+        </h2>
+
+        <p>
+          «آخرین نبرد سورنا» روایتی تاریخی و انسانی از
+          یکی از نامدارترین سرداران ایران است؛ اما این اثر
+          تنها درباره جنگ و پیروزی نظامی نیست.
+        </p>
+
+        <p>
+          داستان از جایی آغاز می‌شود که سورنا پس از پیروزی
+          بزرگ در کارهه، در میان سپرهای شکسته و پیکرهای
+          کشته‌شدگان، با حقیقتی تلخ روبه‌رو می‌شود:
+          پیروزی‌ای که به بهای از دست رفتن عزیزان و
+          ویرانی سرزمین به دست آمده، شاید در حقیقت
+          چیزی جز شکست نباشد.
+        </p>
+
+        <p>
+          این تجربه مسیر زندگی او را تغییر می‌دهد و سرداری
+          که روزی برای جنگ آماده می‌شد، تصمیم می‌گیرد
+          سربازانش را برای ساختن آینده‌ای تازه به میدان بفرستد.
+        </p>
+
+      </div>
+    </section>
+
+
+    <!-- مشخصات -->
+
+    <section>
+
+      <div class="section-box">
+
+        <h2 class="section-title">
+          مشخصات فیلمنامه
+        </h2>
+
+        <div class="info-grid">
+
+          <div class="info-card">
+            <span class="info-label">عنوان</span>
+            <span class="info-value">آخرین نبرد سورنا</span>
+          </div>
+
+          <div class="info-card">
+            <span class="info-label">نوع اثر</span>
+            <span class="info-value">فیلمنامه بلند</span>
+          </div>
+
+          <div class="info-card">
+            <span class="info-label">نویسنده</span>
+            <span class="info-value">حسین محمدی امیرزا</span>
+          </div>
+
+          <div class="info-card">
+            <span class="info-label">ژانر</span>
+            <span class="info-value">تاریخی / حماسی / انسانی</span>
+          </div>
+
+          <div class="info-card">
+            <span class="info-label">دوره تاریخی</span>
+            <span class="info-value">اشکانی</span>
+          </div>
+
+          <div class="info-card">
+            <span class="info-label">مضمون</span>
+            <span class="info-value">صلح، آبادانی و غلبه بر جنگ</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- خلاصه داستان -->
+
+    <section>
+
+      <div class="section-box">
+
+        <h2 class="section-title">
+          خلاصه داستان
+        </h2>
+
+
+        <div class="story-grid">
+
+
+          <article class="story-card">
+
+            <div class="story-number">۰۱</div>
+
+            <h3>
+              پیروزی در کارهه
+            </h3>
+
+            <p>
+              در دشت سوزان کارهه، سورنا سپاه عظیم روم
+              به فرماندهی کراسوس را در هم می‌کوبد و یکی
+              از بزرگ‌ترین پیروزی‌های تاریخ ایران را رقم می‌زند.
+              اما در میان کشته‌شدگان، برادر کوچک او،
+              آرش، نیز جان باخته است.
+            </p>
+
+          </article>
+
+
+          <article class="story-card">
+
+            <div class="story-number">۰۲</div>
+
+            <h3>
+              بازگشت به سیستان
+            </h3>
+
+            <p>
+              سورنا با تکه‌ای از لباس خونین آرش به سیستان
+              بازمی‌گردد. خاطره پدر و سفارش او درباره
+              معنای واقعی خاک، نگاه سورنا به جنگ و
+              قدرت را برای همیشه تغییر می‌دهد.
+            </p>
+
+          </article>
+
+
+          <article class="story-card">
+
+            <div class="story-number">۰۳</div>
+
+            <h3>
+              سپاه خورشید
+            </h3>
+
+            <p>
+              سورنا به جای آماده کردن سربازان برای جنگ‌های
+              تازه، «سپاه خورشید» را بنیان می‌گذارد؛
+              سپاهی که این بار با بیل، کلنگ و داس برای
+              آباد کردن زمین‌ها و ساختن آینده می‌جنگد.
+            </p>
+
+          </article>
+
+
+          <article class="story-card">
+
+            <div class="story-number">۰۴</div>
+
+            <h3>
+              شمشیر یا بیل؟
+            </h3>
+
+            <p>
+              تغییر مسیر سورنا با مخالفت روبه‌رو می‌شود.
+              رستم و گروهی از کهنه‌سربازان هنوز معتقدند
+              قدرت بدون شمشیر معنایی ندارد و سیستان
+              آرام‌آرام میان دو نگاه متضاد تقسیم می‌شود.
+            </p>
+
+          </article>
+
+
+          <article class="story-card">
+
+            <div class="story-number">۰۵</div>
+
+            <h3>
+              توطئه مهران
+            </h3>
+
+            <p>
+              مهران، سیاستمداری تشنه قدرت، محبوبیت سورنا
+              را تهدیدی برای موقعیت خود می‌بیند. او با
+              شایعه‌پراکنی، آتش زدن انبارهای آذوقه و ارتباط
+              پنهانی با نیروهای مهاجم، بحران را شدت می‌بخشد.
+            </p>
+
+          </article>
+
+
+          <article class="story-card">
+
+            <div class="story-number">۰۶</div>
+
+            <h3>
+              قدرت آرامش
+            </h3>
+
+            <p>
+              با نزدیک شدن سپاه مهراب، همه انتظار جنگ دارند.
+              اما سورنا راهی متفاوت انتخاب می‌کند:
+              مردم سیستان را به مرز می‌برد؛ نه با سپاه
+              شمشیر و نیزه، بلکه با مردمی متحد و ابزار ساختن.
+            </p>
+
+          </article>
+
+
+          <article class="story-card">
+
+            <div class="story-number">۰۷</div>
+
+            <h3>
+              مشتی از خاک
+            </h3>
+
+            <p>
+              سورنا بی‌سلاح در برابر مهراب می‌ایستد و
+              مشتی خاک حاصلخیز سیستان را در دست او می‌گذارد.
+              پیام او ساده است: اگر می‌توانی سرزمین خودت
+              را آباد کنی، دیگر نیازی به خاک دیگران نداری.
+            </p>
+
+          </article>
+
+
+          <article class="story-card">
+
+            <div class="story-number">۰۸</div>
+
+            <h3>
+              پیروزی بدون خون
+            </h3>
+
+            <p>
+              مهراب که انتظار تهدید و جنگ داشت، در برابر
+              این منطق خاموش می‌شود و فرمان عقب‌نشینی می‌دهد.
+              هیچ شمشیری از نیام بیرون نمی‌آید و سیستان
+              بدون حتی یک قطره خون پیروز می‌شود.
+            </p>
+
+          </article>
+
+
+          <article class="story-card">
+
+            <div class="story-number">۰۹</div>
+
+            <h3>
+              آخرین نبرد
+            </h3>
+
+            <p>
+              سورنا درمی‌یابد که بزرگ‌ترین دشمن او دیگر
+              یک سپاه خارجی نیست؛ بلکه اندیشه جنگ و
+              ویران کردن در وجود خودش است.
+            </p>
+
+          </article>
+
+
+          <article class="story-card">
+
+            <div class="story-number">۱۰</div>
+
+            <h3>
+              میراث سورنا
+            </h3>
+
+            <p>
+              سال‌ها بعد، سیستان سرسبز و آباد شده است.
+              تندیس سورنا در میدان شهر برپا می‌شود؛
+              نه با شمشیر، بلکه با بیل در یک دست و
+              شاخه‌ای از زیتون در دست دیگر.
+            </p>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- نقل قول -->
+
+    <section>
+
+      <div class="quote-box">
+
+        <p>
+          «این خاک را به فرزندانت نشان بده.
+          اگر بتوانی در سرزمین خودت چنین خاکی را آباد کنی،
+          دیگر نیازی به خاک دیگران نخواهی داشت.»
+        </p>
+
+        <p class="quote-small">
+          — سورنا
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- درونمایه -->
+
+    <section>
+
+      <div class="section-box">
+
+        <h2 class="section-title">
+          درونمایه اثر
+        </h2>
+
+        <div class="theme-grid">
+
+          <div class="theme-card">
+            <h3>پیروزی واقعی</h3>
+            <p>
+              پیروزی تنها شکست دادن دشمن نیست؛
+              گاهی پیروزی، غلبه بر میل به ویران کردن است.
+            </p>
+          </div>
+
+          <div class="theme-card">
+            <h3>صلح و آرامش</h3>
+            <p>
+              اثر به امکان دفاع از سرزمین بدون گرفتار شدن
+              در چرخه بی‌پایان خشونت می‌پردازد.
+            </p>
+          </div>
+
+          <div class="theme-card">
+            <h3>آبادانی</h3>
+            <p>
+              ساختن زمین، جاری کردن آب و پرورش نسل آینده،
+              شکل تازه‌ای از مبارزه برای بقاست.
+            </p>
+          </div>
+
+          <div class="theme-card">
+            <h3>میراث انسان</h3>
+            <p>
+              میراث واقعی یک انسان می‌تواند اندیشه‌ای باشد
+              که پس از او زندگی دیگران را بهتر می‌کند.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- پیام اثر -->
+
+    <section>
+
+      <div class="final-message">
+
+        <h2>
+          پیام اثر
+        </h2>
+
+        <p>
+          <strong>
+            «آخرین نبرد سورنا» داستان پیروزی یک سردار بر دشمن نیست؛
+            داستان پیروزی انسان بر خشم، غرور و چرخه بی‌پایان جنگ است.
+          </strong>
+        </p>
+
+        <br>
+
+        <p>
+          این اثر می‌پرسد:
+          <strong>آیا می‌توان با ساختن، از ویرانی پیشی گرفت؟</strong>
+          و پاسخ خود را در خاکی جست‌وجو می‌کند که اگر انسان
+          جرئت کند شمشیر را زمین بگذارد، می‌تواند آن را آباد کند.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- نگاه نویسنده -->
+
+    <section>
+
+      <div class="section-box">
+
+        <h2 class="section-title">
+          نگاه نویسنده
+        </h2>
+
+        <p>
+          «آخرین نبرد سورنا» تلاشی است برای نگاه کردن به
+          مفهوم قهرمان از زاویه‌ای متفاوت.
+        </p>
+
+        <p>
+          قهرمان این داستان کسی نیست که بیشترین دشمن را
+          شکست می‌دهد؛ بلکه کسی است که در لحظه‌ای دشوار
+          جرئت می‌کند مسیر خود را تغییر دهد.
+        </p>
+
+        <p>
+          سورنا پس از آنکه طعم بزرگ‌ترین پیروزی نظامی را
+          می‌چشد، درمی‌یابد که ارزشمندترین پیروزی ممکن است
+          در ساختن باشد، نه در ویران کردن.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- وضعیت -->
+
+    <section>
+
+      <div class="section-box">
+
+        <h2 class="section-title">
+          وضعیت اثر
+        </h2>
+
+        <div class="status">
+
+          <span class="status-dot"></span>
+
+          <span>
+            فیلمنامه آماده معرفی و ارائه به تهیه‌کننده،
+            کارگردان و گروه‌های تولید
+          </span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </div>
+
+</main>
+
+
+<footer>
+
+  <div class="container">
+
+    <p>
+      <strong>حسین محمدی امیرزا</strong>
+    </p>
+
+    <p>
+      فیلمنامه بلند «آخرین نبرد سورنا»
+    </p>
+
+  </div>
+
+</footer>
+
+</body>
+</html>
