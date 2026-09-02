@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>مرد ساده‌دل روستا | حسین محمدی آمیرزا</title>
+
+  <meta name="description"
+        content="معرفی مجموعه نمایشی مرد ساده‌دل روستا؛ اثری کمدی موقعیت روستایی از حسین محمدی آمیرزا.">
+
+  <meta name="author" content="حسین محمدی آمیرزا">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap');
+
+    :root {
+      --gold: #c49a52;
+      --gold-light: #e0c27b;
+      --dark: #100d0b;
+      --dark-2: #191411;
+      --cream: #f5efe6;
+      --paper: #fffaf3;
+      --text: #2b241f;
+      --muted: #766b61;
+      --line: #dfd1bf;
+      --shadow: 0 20px 60px rgba(0,0,0,.14);
+      --radius: 22px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--cream);
+      color: var(--text);
+      font-family: "Vazirmatn", Tahoma, sans-serif;
+      line-height: 2.1;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1100px, calc(100% - 32px));
+      margin: auto;
+    }
+
+    /* HEADER */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(16,13,11,.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    .nav {
+      min-height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      color: #fff;
+      font-weight: 800;
+      font-size: 1rem;
+    }
+
+    .back {
+      color: var(--gold-light);
+      border: 1px solid rgba(224,194,123,.35);
+      padding: 7px 16px;
+      border-radius: 30px;
+      font-size: .85rem;
+      transition: .3s;
+    }
+
+    .back:hover {
+      background: var(--gold);
+      color: #17120e;
+    }
+
+    /* HERO */
+
+    .hero {
+      background:
+        radial-gradient(circle at 20% 20%, rgba(196,154,82,.18), transparent 30%),
+        linear-gradient(135deg, #100d0b, #241b15);
+      color: white;
+      padding: 80px 0;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .cover {
+      background: #211913;
+      border-radius: 20px;
+      padding: 10px;
+      box-shadow: 0 30px 80px rgba(0,0,0,.4);
+      border: 1px solid rgba(224,194,123,.25);
+    }
+
+    .cover img {
+      width: 100%;
+      border-radius: 14px;
+      display: block;
+    }
+
+    .eyebrow {
+      color: var(--gold-light);
+      font-size: .9rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 5vw, 4.4rem);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+
+    .subtitle {
+      color: #d9cec2;
+      font-size: 1.1rem;
+      margin-bottom: 25px;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .meta span {
+      padding: 7px 14px;
+      border-radius: 30px;
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.1);
+      color: #eee4d9;
+      font-size: .82rem;
+    }
+
+    /* CONTENT */
+
+    main {
+      padding: 65px 0;
+    }
+
+    section {
+      margin-bottom: 55px;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      margin-bottom: 18px;
+      color: #211a15;
+    }
+
+    .section-title::after {
+      content: "";
+      display: block;
+      width: 65px;
+      height: 3px;
+      margin-top: 8px;
+      background: var(--gold);
+      border-radius: 5px;
+    }
+
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .logline {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #46382d;
+    }
+
+    .intro {
+      font-size: 1.05rem;
+    }
+
+    /* INFO */
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    .info-box {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 20px;
+    }
+
+    .info-box strong {
+      display: block;
+      color: var(--gold);
+      margin-bottom: 5px;
+    }
+
+    /* CHARACTERS */
+
+    .characters {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .character {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 23px;
+    }
+
+    .character h3 {
+      margin-bottom: 8px;
+      color: #30261f;
+    }
+
+    /* INCIDENTS */
+
+    .incidents {
+      display: grid;
+      gap: 15px;
+    }
+
+    .incident {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 23px;
+      display: grid;
+      grid-template-columns: 55px 1fr;
+      gap: 15px;
+      align-items: start;
+    }
+
+    .number {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--gold);
+      color: #17120e;
+      font-weight: 900;
+    }
+
+    .incident h3 {
+      margin-bottom: 5px;
+    }
+
+    /* COLUMNS */
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    ul {
+      padding-right: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: var(--dark);
+      color: #d8ccc0;
+      text-align: center;
+      padding: 35px 20px;
+    }
+
+    footer strong {
+      color: var(--gold-light);
+    }
+
+    .contact {
+      margin-top: 10px;
+      color: #bfb1a4;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 800px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .cover {
+        width: min(300px, 80%);
+        margin: auto;
+      }
+
+      .meta {
+        justify-content: center;
+      }
+
+      .info-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .characters {
+        grid-template-columns: 1fr;
+      }
+
+      .two-col {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .hero {
+        padding: 55px 0;
+      }
+
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .card,
+      .character,
+      .incident,
+      .info-box {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="brand">حسین محمدی آمیرزا</div>
+
+    <a class="back" href="../../index.html">
+      ← بازگشت به صفحه اصلی
+    </a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-grid">
+
+    <div class="cover">
+      <img
+        src="../../ساده دل.jpg"
+        alt="جلد مجموعه نمایشی مرد ساده‌دل روستا">
+    </div>
+
+    <div>
+      <div class="eyebrow">مجموعه نمایشی</div>
+
+      <h1>مرد ساده‌دل روستا</h1>
+
+      <div class="subtitle">
+        عنوان موقت: «نیت خیر؛ فاجعه به بار می‌آورد»
+      </div>
+
+      <div class="meta">
+        <span>کمدی موقعیت روستایی</span>
+        <span>مناسب نمایش خانگی</span>
+        <span>زمان: امروز</span>
+        <span>روستای «گِردی کَمَر»</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<main>
+  <div class="container">
+
+    <section>
+      <h2 class="section-title">لاگ‌لاین</h2>
+
+      <div class="card logline">
+        قاسم، مردی ساده‌دل، خوش‌نیت و خودشیفته است که تصور می‌کند هر روز باید مشکلی از مشکلات مردم روستا را حل کند؛ اما نیت‌های خیرخواهانه و راه‌حل‌های عجیب او، تقریباً همیشه به فاجعه‌ای خنده‌دار تبدیل می‌شوند.
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">معرفی اثر</h2>
+
+      <div class="card intro">
+        «مرد ساده‌دل روستا» یک مجموعه کمدی موقعیت با محوریت زندگی روزمره مردم یک روستای دورافتاده است.
+
+        <br><br>
+
+        مرکز داستان، شخصیت «قاسم» است؛ مردی که خودش را باهوش‌ترین و کارآمدترین فرد روستا می‌داند و همیشه آماده است تا برای دیگران کاری انجام دهد. مشکل اصلی اینجاست که قاسم معمولاً پیش از آنکه درباره نتیجه کارش فکر کند، دست به اقدام می‌زند.
+
+        <br><br>
+
+        همین فاصله میان نیت خوب و نتیجه فاجعه‌بار، موتور اصلی طنز مجموعه را شکل می‌دهد.
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">مشخصات اثر</h2>
+
+      <div class="info-grid">
+
+        <div class="info-box">
+          <strong>عنوان</strong>
+          مرد ساده‌دل روستا
+        </div>
+
+        <div class="info-box">
+          <strong>عنوان موقت</strong>
+          نیت خیر؛ فاجعه به بار می‌آورد
+        </div>
+
+        <div class="info-box">
+          <strong>ژانر</strong>
+          کمدی موقعیت روستایی
+        </div>
+
+        <div class="info-box">
+          <strong>خالق</strong>
+          حسین محمدی
+        </div>
+
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">شخصیت‌ها</h2>
+
+      <div class="characters">
+
+        <div class="character">
+          <h3>قاسم</h3>
+          <p>
+            مردی ساده‌دل، خوش‌قلب و به‌شدت مطمئن به خودش. قاسم باور دارد که همیشه راه‌حل مشکلات را می‌داند، اما دخالت‌هایش معمولاً دردسر تازه‌ای ایجاد می‌کند.
+          </p>
+        </div>
+
+        <div class="character">
+          <h3>قدسی</h3>
+          <p>
+            همسر قاسم؛ زنی واقع‌بین که بهتر از هرکس می‌داند شوهرش چگونه با یک نیت خوب، یک دردسر بزرگ به وجود می‌آورد.
+          </p>
+        </div>
+
+        <div class="character">
+          <h3>رجب</h3>
+          <p>
+            یکی از اهالی روستا که گاهی با شیطنت‌های خود قاسم را دست می‌اندازد و ناخواسته یا عمداً وارد ماجراهای او می‌شود.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">موقعیت‌های شاخص داستان</h2>
+
+      <div class="incidents">
+
+        <div class="incident">
+          <div class="number">۱</div>
+          <div>
+            <h3>غول روی کلاه</h3>
+            <p>
+              نخ سفیدی روی کلاه قاسم در نور ماه دیده می‌شود. قاسم آن را غولی عظیم تصور می‌کند و با وحشت به خانه می‌دود. قدسی نخ را از روی کلاه برمی‌دارد و قاسم با افتخار می‌گوید:
+              «دعا کردم، خدا غول را کور کرد.»
+            </p>
+          </div>
+        </div>
+
+        <div class="incident">
+          <div class="number">۲</div>
+          <div>
+            <h3>لکه روی چادر</h3>
+            <p>
+              قاسم در اتوبوس متوجه لکه‌ای روی چادر یک زن می‌شود و برای کمک دستش را جلو می‌برد تا آن را پاک کند؛ اما در عوض سیلی می‌خورد.
+            </p>
+          </div>
+        </div>
+
+        <div class="incident">
+          <div class="number">۳</div>
+          <div>
+            <h3>چهل تا گرگ</h3>
+            <p>
+              رجب پشت درخت صدای گرگ درمی‌آورد. قاسم با وحشت فرار می‌کند و بعد برای بچه‌ها تعریف می‌کند که «چهل تا گرگ» دیده؛ سپس خودش عدد را اصلاح می‌کند و می‌گوید شاید سی‌وپنج تا بوده‌اند.
+            </p>
+          </div>
+        </div>
+
+        <div class="incident">
+          <div class="number">۴</div>
+          <div>
+            <h3>پیکان بی‌گواهینامه</h3>
+            <p>
+              قاسم بدون گواهینامه یک پیکان وانت می‌خرد و دو بار به دروازه خانه می‌زند. وقتی اعتراض می‌کنند، با اعتمادبه‌نفس می‌گوید:
+              «ماشین مال خودمه، دیوار هم مال خودمه. دلم می‌خواد بزنم بهش.»
+            </p>
+          </div>
+        </div>
+
+        <div class="incident">
+          <div class="number">۵</div>
+          <div>
+            <h3>نشستن روی میز</h3>
+            <p>
+              در بستنی‌فروشی به قاسم می‌گویند «برو روی آن میز بنشین» و قاسم این جمله را کاملاً تحت‌اللفظی اجرا می‌کند و روی خود میز می‌نشیند.
+            </p>
+          </div>
+        </div>
+
+        <div class="incident">
+          <div class="number">۶</div>
+          <div>
+            <h3>تانکر نفت</h3>
+            <p>
+              تانکر نفت برای حمام روستا می‌آید اما شیلنگ به مخزن نمی‌رسد. قاسم پیشنهاد می‌کند تانکر برگردد؛ اما کامیون در چاله فاضلاب سقوط می‌کند و تمام روستا تا شب درگیر بیرون کشیدن آن با تراکتور می‌شود.
+            </p>
+          </div>
+        </div>
+
+        <div class="incident">
+          <div class="number">۷</div>
+          <div>
+            <h3>الاغ راه‌بلد</h3>
+            <p>
+              قاسم از روستای همسایه الاغی می‌خرد و در مسیر روی آن خوابش می‌برد. الاغ راه خانه قبلی خود را بلد است و قاسم را دوباره به همان روستای همسایه می‌برد؛ جایی که چند زن روستا با خنده سقوط او را تماشا می‌کنند.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">موتور اصلی کمدی</h2>
+
+      <div class="two-col">
+
+        <div class="card">
+          <h3>نیت خوب</h3>
+          <p>
+            قاسم تقریباً هیچ‌وقت با قصد بد وارد ماجرا نمی‌شود. انگیزه او معمولاً کمک کردن، حل کردن مشکل یا نشان دادن توانایی خودش است.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>نتیجه فاجعه‌بار</h3>
+          <p>
+            مشکل زمانی ایجاد می‌شود که برداشت اشتباه، عجله، اعتمادبه‌نفس بیش از حد و ناآگاهی قاسم، یک اتفاق ساده را به بحرانی خنده‌دار تبدیل می‌کند.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">ساختار پیشنهادی قسمت‌ها</h2>
+
+      <div class="card">
+
+        <ul>
+          <li>شروع هر قسمت با یک مسئله ساده در روستا</li>
+          <li>ورود قاسم با ادعای اینکه خودش مشکل را حل می‌کند</li>
+          <li>تصمیم عجولانه یا برداشت اشتباه قاسم</li>
+          <li>گسترش تدریجی بحران</li>
+          <li>درگیر شدن قدسی، رجب و سایر اهالی</li>
+          <li>رسیدن ماجرا به نقطه اوج کمدی</li>
+          <li>حل شدن ظاهری مشکل</li>
+          <li>پایان قسمت با یک جمله یا اتفاق خنده‌دار</li>
+        </ul>
+
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">فضای روایی و تصویری</h2>
+
+      <div class="card">
+        فضای اثر ساده، صمیمی و روستایی است. زندگی روزمره، روابط خانوادگی، مناسبات اهالی، لهجه و رفتارهای بومی می‌توانند زمینه‌ای طبیعی برای شکل‌گیری موقعیت‌های کمدی فراهم کنند.
+
+        <br><br>
+
+        طنز مجموعه بیشتر بر پایه شخصیت، سوءتفاهم، رفتارهای روزمره و تضاد میان تصور قاسم از خودش و واقعیت استوار است.
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">تم اصلی</h2>
+
+      <div class="card">
+        گاهی نیت خوب، اگر با شناخت و درایت همراه نباشد، می‌تواند نتیجه‌ای کاملاً متفاوت ایجاد کند.
+
+        <br><br>
+
+        مجموعه در کنار فضای طنزآمیز خود، بر اهمیت شناخت، مسئولیت‌پذیری، فروتنی و توجه به نتیجه اعمال تأکید دارد.
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">ویژگی متمایز اثر</h2>
+
+      <div class="card">
+        شخصیت قاسم قابلیت ایجاد موقعیت‌های متعدد و مستقل را دارد؛ بنابراین داستان می‌تواند بدون وابستگی شدید به یک خط داستانی واحد، در قسمت‌های مختلف ادامه پیدا کند.
+
+        <br><br>
+
+        همین ویژگی، امکان تولید اپیزودهای متنوع و حتی ادامه داستان در فصل‌های بعدی را فراهم می‌کند.
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">پایان</h2>
+
+      <div class="card logline">
+        و ماجرا همچنان ادامه دارد...
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <strong>مرد ساده‌دل روستا</strong>
+
+  <div class="contact">
+    خالق: حسین محمدی آمیرزا<br>
+    تلفن / ایتا / بله / تلگرام: 9791 037 0919
+  </div>
+
+  <br>
+
+  © کلیه حقوق اثر متعلق به حسین محمدی آمیرزا است.
+</footer>
+
+</body>
+</html>
