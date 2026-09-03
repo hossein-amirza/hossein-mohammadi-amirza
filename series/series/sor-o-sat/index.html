@@ -3,27 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>سور و سات | حسین محمدی امیرزا</title>
-  <meta name="description" content="فیلمنامه کوتاه سور و سات، نوشته حسین محمدی امیرزا؛ داستانی طنزآمیز و انسانی درباره خانواده، فقر، شرافت و قدرت انسانیت.">
+
+  <meta
+    name="description"
+    content="فیلمنامه کوتاه سور و سات، نوشته حسین محمدی امیرزا؛ داستانی طنزآمیز و انسانی درباره خانواده، فقر، شرافت و قدرت انسانیت."
+  >
+
   <style>
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      background: radial-gradient(circle at top, rgba(184,145,61,0.10), transparent 35%), #090909;
+      background:
+        radial-gradient(
+          circle at top,
+          rgba(184, 145, 61, 0.10),
+          transparent 35%
+        ),
+        #090909;
       color: #eee;
       font-family: Vazirmatn, "IRANSans", Tahoma, Arial, sans-serif;
       line-height: 2;
     }
-    a { color: inherit; text-decoration: none; }
-    .container { width: min(1080px, calc(100% - 32px)); margin: auto; }
 
-    /* header */
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1080px, calc(100% - 32px));
+      margin: auto;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
     header {
       padding: 55px 0 35px;
       text-align: center;
-      border-bottom: 1px solid rgba(212,175,76,0.18);
+      border-bottom: 1px solid rgba(212, 175, 76, 0.18);
     }
+
     .back-link {
       display: inline-block;
       color: #d8b45a;
@@ -31,77 +61,134 @@
       margin-bottom: 28px;
       transition: 0.3s;
     }
-    .back-link:hover { color: #f4d98a; transform: translateX(4px); }
-    .eyebrow { color: #b99a50; font-size: 14px; letter-spacing: 1px; margin-bottom: 8px; }
+
+    .back-link:hover {
+      color: #f4d98a;
+      transform: translateX(4px);
+    }
+
+    .eyebrow {
+      color: #b99a50;
+      font-size: 14px;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+
     h1 {
       margin: 0;
       color: #e2bd63;
       font-size: clamp(38px, 7vw, 72px);
       font-weight: 800;
       line-height: 1.25;
-      text-shadow: 0 4px 25px rgba(212,175,76,0.14);
+      text-shadow: 0 4px 25px rgba(212, 175, 76, 0.14);
     }
+
     .subtitle {
       max-width: 760px;
       margin: 18px auto 0;
       color: #c8c8c8;
       font-size: 18px;
     }
+
     .author {
       margin-top: 18px;
       color: #9d9d9d;
       font-size: 14px;
     }
 
-    /* hero */
-    .hero { padding: 45px 0 25px; }
+    .author strong {
+      color: #d8b45a;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      padding: 45px 0 25px;
+    }
+
     .poster-wrap {
       display: flex;
       justify-content: center;
       margin-bottom: 42px;
     }
+
     .poster {
       width: min(720px, 100%);
       padding: 8px;
-      border: 1px solid rgba(212,175,76,0.55);
+
+      border: 1px solid rgba(212, 175, 76, 0.55);
       border-radius: 20px;
-      background: linear-gradient(145deg, rgba(212,175,76,0.18), rgba(255,255,255,0.02));
-      box-shadow: 0 25px 70px rgba(0,0,0,0.65), 0 0 40px rgba(212,175,76,0.08);
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(212, 175, 76, 0.18),
+          rgba(255, 255, 255, 0.02)
+        );
+
+      box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.65),
+        0 0 40px rgba(212, 175, 76, 0.08);
     }
+
     .poster img {
       display: block;
       width: 100%;
-      border-radius: 14px;
       height: auto;
+      border-radius: 14px;
     }
 
-    /* logline */
+    /* =========================
+       LOGLINE
+    ========================= */
+
     .logline {
       position: relative;
+
       padding: 34px 38px;
       margin: 0 auto 50px;
       max-width: 920px;
-      background: linear-gradient(135deg, rgba(212,175,76,0.12), rgba(255,255,255,0.025));
-      border: 1px solid rgba(212,175,76,0.28);
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(212, 175, 76, 0.12),
+          rgba(255, 255, 255, 0.025)
+        );
+
+      border: 1px solid rgba(212, 175, 76, 0.28);
       border-radius: 18px;
-      box-shadow: 0 20px 55px rgba(0,0,0,0.35);
+
+      box-shadow: 0 20px 55px rgba(0, 0, 0, 0.35);
       overflow: hidden;
     }
+
     .logline::before {
       content: "";
+
       position: absolute;
       right: 0;
       top: 0;
+
       width: 5px;
       height: 100%;
-      background: linear-gradient(#e0bd64, #866a2e);
+
+      background:
+        linear-gradient(
+          #e0bd64,
+          #866a2e
+        );
     }
+
     .logline-label {
       color: #d9b75d;
       font-size: 13px;
       font-weight: bold;
       margin-bottom: 8px;
     }
+
     .logline p {
       margin: 0;
       color: #f1f1f1;
@@ -109,326 +196,908 @@
       line-height: 2;
     }
 
-    /* sections */
-    section { margin: 0 0 34px; }
+    /* =========================
+       SECTIONS
+    ========================= */
+
+    section {
+      margin: 0 0 34px;
+    }
+
     .section-card {
       padding: 34px;
-      background: linear-gradient(145deg, rgba(255,255,255,0.045), rgba(255,255,255,0.018));
-      border: 1px solid rgba(255,255,255,0.08);
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255, 255, 255, 0.045),
+          rgba(255, 255, 255, 0.018)
+        );
+
+      border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 18px;
-      box-shadow: 0 15px 45px rgba(0,0,0,0.28);
+
+      box-shadow: 0 15px 45px rgba(0, 0, 0, 0.28);
     }
+
     .section-title {
       display: flex;
       align-items: center;
       gap: 12px;
+
       margin: 0 0 24px;
+
       color: #dfbd66;
       font-size: 25px;
       line-height: 1.4;
     }
+
     .section-title::before {
       content: "";
+
       display: block;
+
       width: 5px;
       height: 30px;
-      border-radius: 5px;
-      background: linear-gradient(#e6c66f, #8c6d2e);
-    }
-    .section-card p { color: #d1d1d1; margin: 0 0 16px; }
-    .section-card p:last-child { margin-bottom: 0; }
 
-    /* info grid */
+      border-radius: 5px;
+
+      background:
+        linear-gradient(
+          #e6c66f,
+          #8c6d2e
+        );
+    }
+
+    .section-card p {
+      color: #d1d1d1;
+      margin: 0 0 16px;
+    }
+
+    .section-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* =========================
+       INFO GRID
+    ========================= */
+
     .info-grid {
       display: grid;
-      grid-template-columns: repeat(3,1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 16px;
     }
+
     .info-box {
       padding: 23px;
-      background: rgba(0,0,0,0.25);
-      border: 1px solid rgba(212,175,76,0.14);
+
+      background: rgba(0, 0, 0, 0.25);
+
+      border: 1px solid rgba(212, 175, 76, 0.14);
       border-radius: 14px;
+
+      transition: 0.3s;
     }
+
+    .info-box:hover {
+      transform: translateY(-3px);
+      border-color: rgba(212, 175, 76, 0.30);
+    }
+
     .info-box span {
       display: block;
+
       color: #9e9e9e;
       font-size: 13px;
+
       margin-bottom: 5px;
     }
+
     .info-box strong {
       color: #eee;
       font-size: 17px;
     }
 
-    .story-intro { font-size: 18px; color: #eee !important; }
+    /* =========================
+       STORY
+    ========================= */
+
+    .story-intro {
+      font-size: 18px;
+      color: #eee !important;
+    }
+
     .story-highlight {
       margin: 25px 0;
       padding: 25px;
+
       border-radius: 14px;
-      background: rgba(212,175,76,0.07);
-      border: 1px solid rgba(212,175,76,0.16);
+
+      background: rgba(212, 175, 76, 0.07);
+      border: 1px solid rgba(212, 175, 76, 0.16);
     }
-    .story-highlight strong { color: #e0bd65; }
+
+    .story-highlight strong {
+      color: #e0bd65;
+    }
+
+    /* =========================
+       CHARACTERS
+    ========================= */
 
     .characters {
       display: grid;
-      grid-template-columns: repeat(2,1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 17px;
     }
+
     .character {
       padding: 23px;
+
       border-radius: 15px;
-      background: rgba(0,0,0,0.28);
-      border: 1px solid rgba(255,255,255,0.07);
+
+      background: rgba(0, 0, 0, 0.28);
+
+      border: 1px solid rgba(255, 255, 255, 0.07);
+
+      transition: 0.3s;
     }
+
+    .character:hover {
+      transform: translateY(-3px);
+      border-color: rgba(212, 175, 76, 0.25);
+    }
+
     .character h3 {
       margin: 0 0 8px;
+
       color: #dfbd66;
       font-size: 19px;
     }
+
     .character p {
       margin: 0;
+
       color: #c2c2c2;
       font-size: 15px;
       line-height: 1.9;
     }
 
+    /* =========================
+       THEMES
+    ========================= */
+
     .themes {
       display: grid;
-      grid-template-columns: repeat(4,1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 14px;
     }
+
     .theme {
       text-align: center;
+
       padding: 22px 12px;
-      border: 1px solid rgba(212,175,76,0.15);
+
+      border: 1px solid rgba(212, 175, 76, 0.15);
       border-radius: 14px;
-      background: rgba(212,175,76,0.045);
+
+      background: rgba(212, 175, 76, 0.045);
+
+      transition: 0.3s;
     }
-    .theme strong { color: #dfbd66; font-size: 16px; }
+
+    .theme:hover {
+      transform: translateY(-3px);
+      background: rgba(212, 175, 76, 0.08);
+    }
+
+    .theme strong {
+      color: #dfbd66;
+      font-size: 16px;
+    }
+
+    /* =========================
+       QUOTE
+    ========================= */
 
     .quote {
       margin: 0;
+
       padding: 42px 35px;
+
       text-align: center;
+
       border-radius: 20px;
-      background: radial-gradient(circle at center, rgba(212,175,76,0.13), rgba(255,255,255,0.02));
-      border: 1px solid rgba(212,175,76,0.25);
+
+      background:
+        radial-gradient(
+          circle at center,
+          rgba(212, 175, 76, 0.13),
+          rgba(255, 255, 255, 0.02)
+        );
+
+      border: 1px solid rgba(212, 175, 76, 0.25);
     }
+
     .quote p {
       margin: 0;
+
       color: #f0dfad;
+
       font-size: clamp(21px, 3vw, 30px);
+
       line-height: 1.9;
+
       font-weight: 600;
     }
+
     .quote small {
       display: block;
+
       margin-top: 15px;
+
       color: #999;
     }
 
+    /* =========================
+       MESSAGE
+    ========================= */
+
     .message {
       text-align: center;
+
       padding: 45px 35px;
+
       border-radius: 20px;
-      background: linear-gradient(135deg, rgba(212,175,76,0.13), rgba(255,255,255,0.025));
-      border: 1px solid rgba(212,175,76,0.3);
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(212, 175, 76, 0.13),
+          rgba(255, 255, 255, 0.025)
+        );
+
+      border: 1px solid rgba(212, 175, 76, 0.3);
     }
+
     .message h2 {
       margin: 0 0 18px;
+
       color: #e3c36d;
+
       font-size: 28px;
     }
+
     .message p {
       max-width: 850px;
+
       margin: auto;
+
       color: #e0e0e0;
+
       font-size: 19px;
+
       line-height: 2.1;
     }
 
-    .status { text-align: center; }
+    /* =========================
+       STATUS
+    ========================= */
+
+    .status {
+      text-align: center;
+    }
+
     .status-badge {
       display: inline-block;
+
       padding: 8px 20px;
+
       border-radius: 30px;
+
       color: #e1c06a;
-      background: rgba(212,175,76,0.08);
-      border: 1px solid rgba(212,175,76,0.28);
+
+      background: rgba(212, 175, 76, 0.08);
+
+      border: 1px solid rgba(212, 175, 76, 0.28);
+
       font-size: 14px;
     }
 
+    /* =========================
+       FOOTER
+    ========================= */
+
     footer {
       margin-top: 70px;
+
       padding: 35px 0;
+
       text-align: center;
-      border-top: 1px solid rgba(212,175,76,0.15);
+
+      border-top: 1px solid rgba(212, 175, 76, 0.15);
+
       color: #888;
     }
-    footer strong { color: #d8b45a; }
-    footer p { margin: 5px 0; font-size: 14px; }
+
+    footer strong {
+      color: #d8b45a;
+    }
+
+    footer p {
+      margin: 5px 0;
+      font-size: 14px;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
 
     @media (max-width: 800px) {
-      .info-grid, .characters { grid-template-columns: 1fr; }
-      .themes { grid-template-columns: repeat(2,1fr); }
-      .section-card { padding: 25px 21px; }
-      .logline { padding: 28px 25px; }
+
+      .info-grid,
+      .characters {
+        grid-template-columns: 1fr;
+      }
+
+      .themes {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .section-card {
+        padding: 25px 21px;
+      }
+
+      .logline {
+        padding: 28px 25px;
+      }
     }
+
     @media (max-width: 520px) {
-      .container { width: min(100% - 22px, 1080px); }
-      header { padding-top: 35px; }
-      .subtitle { font-size: 16px; }
-      .logline p { font-size: 17px; }
-      .section-title { font-size: 22px; }
-      .themes { grid-template-columns: 1fr 1fr; }
-      .quote, .message { padding: 30px 20px; }
-      .message p { font-size: 17px; }
+
+      .container {
+        width: min(100% - 22px, 1080px);
+      }
+
+      header {
+        padding-top: 35px;
+      }
+
+      .subtitle {
+        font-size: 16px;
+      }
+
+      .logline p {
+        font-size: 17px;
+      }
+
+      .section-title {
+        font-size: 22px;
+      }
+
+      .themes {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .quote,
+      .message {
+        padding: 30px 20px;
+      }
+
+      .message p {
+        font-size: 17px;
+      }
     }
   </style>
 </head>
+
 <body>
 
-<header>
-  <div class="container">
-    <a class="back-link" href="../../index.html">← بازگشت به صفحه اصلی</a>
-    <div class="eyebrow">فیلمنامه کوتاه</div>
-    <h1>سور و سات</h1>
-    <p class="subtitle">روایتی طنزآمیز و انسانی درباره خانواده، فقر، شرافت و قدرت انسانیت</p>
-    <div class="author">نوشته <strong>حسین محمدی امیرزا</strong></div>
-  </div>
-</header>
+  <!-- =========================
+       HEADER
+  ========================= -->
 
-<main class="container">
+  <header>
+    <div class="container">
 
-  <div class="hero">
-    <!-- پوستر -->
-    <div class="poster-wrap">
-      <div class="poster">
-        <img src="سور%20و%20سات.jpg" alt="پوستر فیلمنامه سور و سات" loading="eager" decoding="async">
+      <a class="back-link" href="../../index.html">
+        ← بازگشت به صفحه اصلی
+      </a>
+
+      <div class="eyebrow">
+        فیلمنامه کوتاه
       </div>
-    </div>
 
-    <!-- لوگ‌لاین -->
-    <div class="logline">
-      <div class="logline-label">لوگ‌لاین</div>
-      <p>مرد روستایی فقیری که آخرین یادگار همسرش را برای نجات فرزندش می‌فروشد، در راه بازگشت گرفتار گروهی راهزن کمیک می‌شود و با نیروی هوش و انسانیت، بر آنان پیروز می‌گردد.</p>
-    </div>
-  </div>
+      <h1>
+        سور و سات
+      </h1>
 
-  <!-- معرفی اثر -->
-  <section>
-    <div class="section-card">
-      <h2 class="section-title">معرفی اثر</h2>
-      <p class="story-intro">«سور و سات» داستان حسن، مردی روستایی و ساده‌دل است که وقتی پسر کوچکش بیمار می‌شود، ناچار می‌شود تنها یادگار ارزشمند خانواده را بفروشد تا داروی او را تهیه کند.</p>
-      <p>در راه بازگشت، حسن و خر وفادارش «سیاه» گرفتار سه راهزن عجیب‌وغریب می‌شوند؛ راهزنانی که بیشتر از آنکه ترسناک باشند، گرفتار ادعاهای پوچ و «اصول راهزنی» خودشان هستند.</p>
-      <p>وقتی راهزنان داروهای کودک بیمار را هم به غنیمت می‌برند، حسن که چیزی جز امید و ایمان به انسانیت ندارد، به جای زور و درگیری، با کلام و رفتار خود شکاف میان ادعای شرافت و حقیقت زندگی راهزنان را آشکار می‌کند.</p>
-      <div class="story-highlight">
-        <strong>نقطه عطف داستان:</strong> رویارویی حسن با راهزنان نشان می‌دهد که گاهی یک انسان بی‌سلاح می‌تواند با کلام، وجدان و انسانیت، مسیری را تغییر دهد که زور و خشونت قادر به تغییر آن نیست.
+      <p class="subtitle">
+        روایتی طنزآمیز و انسانی درباره خانواده، فقر، شرافت و قدرت انسانیت
+      </p>
+
+      <div class="author">
+        نوشته <strong>حسین محمدی امیرزا</strong>
       </div>
-      <p>«سور و سات» در بستری طنزآمیز، داستانی گرم و انسانی درباره خانواده، فقر، شرافت و انتخاب میان زور و انسانیت روایت می‌کند.</p>
-    </div>
-  </section>
 
-  <!-- مشخصات -->
-  <section>
-    <div class="section-card">
-      <h2 class="section-title">مشخصات اثر</h2>
-      <div class="info-grid">
-        <div class="info-box"><span>عنوان</span><strong>سور و سات</strong></div>
-        <div class="info-box"><span>گونه</span><strong>فیلمنامه کوتاه</strong></div>
-        <div class="info-box"><span>نویسنده</span><strong>حسین محمدی امیرزا</strong></div>
-        <div class="info-box"><span>فضا</span><strong>روستایی، جاده و بیابان</strong></div>
-        <div class="info-box"><span>لحن</span><strong>طنز، انسانی و گرم</strong></div>
-        <div class="info-box"><span>محور داستان</span><strong>خانواده و انسانیت</strong></div>
+    </div>
+  </header>
+
+
+  <!-- =========================
+       MAIN
+  ========================= -->
+
+  <main class="container">
+
+    <!-- HERO -->
+
+    <div class="hero">
+
+      <!-- پوستر -->
+
+      <div class="poster-wrap">
+
+        <div class="poster">
+
+          <img
+            src="../../سور%20و%20سات.jpg"
+            alt="پوستر فیلمنامه سور و سات"
+            loading="eager"
+            decoding="async"
+          >
+
+        </div>
+
       </div>
-    </div>
-  </section>
 
-  <!-- شخصیت‌ها -->
-  <section>
-    <div class="section-card">
-      <h2 class="section-title">شخصیت‌ها</h2>
-      <div class="characters">
-        <div class="character"><h3>حسن</h3><p>مردی حدوداً ۴۵ ساله؛ ساده‌دل اما با اراده‌ای آهنین و قلبی سرشار از عشق به خانواده. قدرت واقعی او نه در زور، بلکه در انسانیت و نگاه عمیقش به زندگی است.</p></div>
-        <div class="character"><h3>سیاه</h3><p>خر وفادار و کم‌حوصله حسن؛ همراه همیشگی او که در دل ماجراهای سخت، حضوری شیرین و طنزآمیز دارد.</p></div>
-        <div class="character"><h3>راهزن رهبر</h3><p>مردی خودشیفته، نمایشی و مدعی «راهزنی با اصول» که بیش از آنکه قدرتمند باشد، گرفتار غرور و تصویری ساختگی از خودش است.</p></div>
-        <div class="character"><h3>راهزن چاق</h3><p>راهزنی ساده‌لوح و همیشه گرسنه که علاقه‌اش به خوردن، فضای کمیک داستان را پررنگ‌تر می‌کند.</p></div>
-        <div class="character"><h3>راهزن لاغر</h3><p>تازه‌کاری مشتاق که در عمق وجودش هنوز نشانه‌هایی از شرم و وجدان باقی مانده و در مواجهه با حسن، میان راهزنی و انسانیت گرفتار می‌شود.</p></div>
-        <div class="character"><h3>فاطمه و علی</h3><p>خانواده حسن؛ انگیزه اصلی او برای عبور از سختی‌ها و نمادی از عشقی که ارزشمندترین تصمیم‌های زندگی او را شکل می‌دهد.</p></div>
+
+      <!-- لوگ‌لاین -->
+
+      <div class="logline">
+
+        <div class="logline-label">
+          لوگ‌لاین
+        </div>
+
+        <p>
+          مرد روستایی فقیری که آخرین یادگار همسرش را برای نجات فرزندش می‌فروشد،
+          در راه بازگشت گرفتار گروهی راهزن کمیک می‌شود و با نیروی هوش و انسانیت،
+          بر آنان پیروز می‌گردد.
+        </p>
+
       </div>
-    </div>
-  </section>
 
-  <!-- نقل قول -->
-  <section>
-    <div class="quote">
-      <p>«او دست گدایی دراز می‌کند، اما شما با زور می‌گیرید و نامش را "اصول" می‌گذارید.»</p>
-      <small>از دیالوگ‌های حسن</small>
     </div>
-  </section>
 
-  <!-- درونمایه‌ها -->
-  <section>
-    <div class="section-card">
-      <h2 class="section-title">درونمایه‌های اثر</h2>
-      <div class="themes">
-        <div class="theme"><strong>خانواده</strong></div>
-        <div class="theme"><strong>انسانیت</strong></div>
-        <div class="theme"><strong>شرافت</strong></div>
-        <div class="theme"><strong>فقر</strong></div>
-        <div class="theme"><strong>امید</strong></div>
-        <div class="theme"><strong>وجدان</strong></div>
-        <div class="theme"><strong>طنز اجتماعی</strong></div>
-        <div class="theme"><strong>انتخاب اخلاقی</strong></div>
+
+    <!-- =========================
+         معرفی اثر
+    ========================= -->
+
+    <section>
+
+      <div class="section-card">
+
+        <h2 class="section-title">
+          معرفی اثر
+        </h2>
+
+        <p class="story-intro">
+          «سور و سات» داستان حسن، مردی روستایی و ساده‌دل است که وقتی پسر کوچکش
+          بیمار می‌شود، ناچار می‌شود تنها یادگار ارزشمند خانواده را بفروشد تا
+          داروی او را تهیه کند.
+        </p>
+
+        <p>
+          در راه بازگشت، حسن و خر وفادارش «سیاه» گرفتار سه راهزن عجیب‌وغریب
+          می‌شوند؛ راهزنانی که بیشتر از آنکه ترسناک باشند، گرفتار ادعاهای پوچ
+          و «اصول راهزنی» خودشان هستند.
+        </p>
+
+        <p>
+          وقتی راهزنان داروهای کودک بیمار را هم به غنیمت می‌برند، حسن که چیزی
+          جز امید و ایمان به انسانیت ندارد، به جای زور و درگیری، با کلام و
+          رفتار خود شکاف میان ادعای شرافت و حقیقت زندگی راهزنان را آشکار می‌کند.
+        </p>
+
+        <div class="story-highlight">
+
+          <strong>
+            نقطه عطف داستان:
+          </strong>
+
+          رویارویی حسن با راهزنان نشان می‌دهد که گاهی یک انسان بی‌سلاح
+          می‌تواند با کلام، وجدان و انسانیت، مسیری را تغییر دهد که زور و
+          خشونت قادر به تغییر آن نیست.
+
+        </div>
+
+        <p>
+          «سور و سات» در بستری طنزآمیز، داستانی گرم و انسانی درباره خانواده،
+          فقر، شرافت و انتخاب میان زور و انسانیت روایت می‌کند.
+        </p>
+
       </div>
+
+    </section>
+
+
+    <!-- =========================
+         مشخصات اثر
+    ========================= -->
+
+    <section>
+
+      <div class="section-card">
+
+        <h2 class="section-title">
+          مشخصات اثر
+        </h2>
+
+        <div class="info-grid">
+
+          <div class="info-box">
+            <span>عنوان</span>
+            <strong>سور و سات</strong>
+          </div>
+
+          <div class="info-box">
+            <span>گونه</span>
+            <strong>فیلمنامه کوتاه</strong>
+          </div>
+
+          <div class="info-box">
+            <span>نویسنده</span>
+            <strong>حسین محمدی امیرزا</strong>
+          </div>
+
+          <div class="info-box">
+            <span>فضا</span>
+            <strong>روستایی، جاده و بیابان</strong>
+          </div>
+
+          <div class="info-box">
+            <span>لحن</span>
+            <strong>طنز، انسانی و گرم</strong>
+          </div>
+
+          <div class="info-box">
+            <span>محور داستان</span>
+            <strong>خانواده و انسانیت</strong>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         شخصیت‌ها
+    ========================= -->
+
+    <section>
+
+      <div class="section-card">
+
+        <h2 class="section-title">
+          شخصیت‌ها
+        </h2>
+
+        <div class="characters">
+
+          <div class="character">
+
+            <h3>
+              حسن
+            </h3>
+
+            <p>
+              مردی حدوداً ۴۵ ساله؛ ساده‌دل اما با اراده‌ای آهنین و قلبی
+              سرشار از عشق به خانواده. قدرت واقعی او نه در زور، بلکه در
+              انسانیت و نگاه عمیقش به زندگی است.
+            </p>
+
+          </div>
+
+
+          <div class="character">
+
+            <h3>
+              سیاه
+            </h3>
+
+            <p>
+              خر وفادار و کم‌حوصله حسن؛ همراه همیشگی او که در دل ماجراهای
+              سخت، حضوری شیرین و طنزآمیز دارد.
+            </p>
+
+          </div>
+
+
+          <div class="character">
+
+            <h3>
+              راهزن رهبر
+            </h3>
+
+            <p>
+              مردی خودشیفته، نمایشی و مدعی «راهزنی با اصول» که بیش از آنکه
+              قدرتمند باشد، گرفتار غرور و تصویری ساختگی از خودش است.
+            </p>
+
+          </div>
+
+
+          <div class="character">
+
+            <h3>
+              راهزن چاق
+            </h3>
+
+            <p>
+              راهزنی ساده‌لوح و همیشه گرسنه که علاقه‌اش به خوردن، فضای کمیک
+              داستان را پررنگ‌تر می‌کند.
+            </p>
+
+          </div>
+
+
+          <div class="character">
+
+            <h3>
+              راهزن لاغر
+            </h3>
+
+            <p>
+              تازه‌کاری مشتاق که در عمق وجودش هنوز نشانه‌هایی از شرم و وجدان
+              باقی مانده و در مواجهه با حسن، میان راهزنی و انسانیت گرفتار می‌شود.
+            </p>
+
+          </div>
+
+
+          <div class="character">
+
+            <h3>
+              فاطمه و علی
+            </h3>
+
+            <p>
+              خانواده حسن؛ انگیزه اصلی او برای عبور از سختی‌ها و نمادی از
+              عشقی که ارزشمندترین تصمیم‌های زندگی او را شکل می‌دهد.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         نقل قول
+    ========================= -->
+
+    <section>
+
+      <div class="quote">
+
+        <p>
+          «او دست گدایی دراز می‌کند، اما شما با زور می‌گیرید و نامش را "اصول" می‌گذارید.»
+        </p>
+
+        <small>
+          از دیالوگ‌های حسن
+        </small>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         درونمایه‌ها
+    ========================= -->
+
+    <section>
+
+      <div class="section-card">
+
+        <h2 class="section-title">
+          درونمایه‌های اثر
+        </h2>
+
+        <div class="themes">
+
+          <div class="theme">
+            <strong>خانواده</strong>
+          </div>
+
+          <div class="theme">
+            <strong>انسانیت</strong>
+          </div>
+
+          <div class="theme">
+            <strong>شرافت</strong>
+          </div>
+
+          <div class="theme">
+            <strong>فقر</strong>
+          </div>
+
+          <div class="theme">
+            <strong>امید</strong>
+          </div>
+
+          <div class="theme">
+            <strong>وجدان</strong>
+          </div>
+
+          <div class="theme">
+            <strong>طنز اجتماعی</strong>
+          </div>
+
+          <div class="theme">
+            <strong>انتخاب اخلاقی</strong>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         ویژگی‌های اثر
+    ========================= -->
+
+    <section>
+
+      <div class="section-card">
+
+        <h2 class="section-title">
+          ویژگی‌های اثر
+        </h2>
+
+        <p>
+          <strong style="color:#dfbd66;">
+            ترکیب طنز و احساس:
+          </strong>
+
+          داستان در کنار موقعیت‌های کمیک راهزنان، مسئله‌ای جدی و عاطفی درباره
+          بیماری یک کودک و فداکاری پدر را دنبال می‌کند.
+        </p>
+
+        <p>
+          <strong style="color:#dfbd66;">
+            قهرمانی متفاوت:
+          </strong>
+
+          حسن برای پیروز شدن نیازی به شمشیر یا قدرت فیزیکی ندارد؛ ابزار او
+          هوش، آرامش و قدرت کلام است.
+        </p>
+
+        <p>
+          <strong style="color:#dfbd66;">
+            شخصیت‌پردازی کمیک:
+          </strong>
+
+          سه راهزن، هرکدام با ویژگی متفاوت، فضای داستان را از یک ماجرای ساده
+          به موقعیتی طنزآمیز و انسانی تبدیل می‌کنند.
+        </p>
+
+        <p>
+          <strong style="color:#dfbd66;">
+            پایانی انسانی:
+          </strong>
+
+          پیروزی حسن نه با شکست فیزیکی راهزنان، بلکه با بیدار شدن وجدان
+          یکی از آنان شکل می‌گیرد.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         پیام اثر
+    ========================= -->
+
+    <section>
+
+      <div class="message">
+
+        <h2>
+          پیام اثر
+        </h2>
+
+        <p>
+          «سور و سات» یادآوری می‌کند که انسانیت، حتی در سخت‌ترین شرایط،
+          می‌تواند راهی برای عبور از خشونت و بی‌رحمی پیدا کند.
+          گاهی لازم نیست برای پیروز شدن قوی‌تر باشی؛ کافی است انسان بمانی.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         نگاه نویسنده
+    ========================= -->
+
+    <section>
+
+      <div class="section-card">
+
+        <h2 class="section-title">
+          نگاه نویسنده
+        </h2>
+
+        <p>
+          در «سور و سات» تلاش شده است یک موقعیت ساده و آشنا به روایتی درباره
+          انتخاب تبدیل شود؛ انتخاب میان ترس و شجاعت، میان زور و منطق، و میان
+          بی‌تفاوتی و انسانیت.
+        </p>
+
+        <p>
+          حسن قهرمانی نیست که با شکست دادن دیگران پیروز شود. او مردی معمولی
+          است که در سخت‌ترین لحظه زندگی، اجازه نمی‌دهد فقر و ترس، انسانیتش
+          را از او بگیرند.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         وضعیت اثر
+    ========================= -->
+
+    <section>
+
+      <div class="status">
+
+        <span class="status-badge">
+          فیلمنامه کوتاه · اثر آماده ارائه
+        </span>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    <div class="container">
+
+      <p>
+        <strong>
+          حسین محمدی امیرزا
+        </strong>
+      </p>
+
+      <p>
+        فیلمنامه کوتاه «سور و سات»
+      </p>
+
     </div>
-  </section>
 
-  <!-- ویژگی‌ها -->
-  <section>
-    <div class="section-card">
-      <h2 class="section-title">ویژگی‌های اثر</h2>
-      <p><strong style="color:#dfbd66;">ترکیب طنز و احساس:</strong> داستان در کنار موقعیت‌های کمیک راهزنان، مسئله‌ای جدی و عاطفی درباره بیماری یک کودک و فداکاری پدر را دنبال می‌کند.</p>
-      <p><strong style="color:#dfbd66;">قهرمانی متفاوت:</strong> حسن برای پیروز شدن نیازی به شمشیر یا قدرت فیزیکی ندارد؛ ابزار او هوش، آرامش و قدرت کلام است.</p>
-      <p><strong style="color:#dfbd66;">شخصیت‌پردازی کمیک:</strong> سه راهزن، هرکدام با ویژگی متفاوت، فضای داستان را از یک ماجرای ساده به موقعیتی طنزآمیز و انسانی تبدیل می‌کنند.</p>
-      <p><strong style="color:#dfbd66;">پایانی انسانی:</strong> پیروزی حسن نه با شکست فیزیکی راهزنان، بلکه با بیدار شدن وجدان یکی از آنان شکل می‌گیرد.</p>
-    </div>
-  </section>
-
-  <!-- پیام اثر -->
-  <section>
-    <div class="message">
-      <h2>پیام اثر</h2>
-      <p>«سور و سات» یادآوری می‌کند که انسانیت، حتی در سخت‌ترین شرایط، می‌تواند راهی برای عبور از خشونت و بی‌رحمی پیدا کند. گاهی لازم نیست برای پیروز شدن قوی‌تر باشی؛ کافی است انسان بمانی.</p>
-    </div>
-  </section>
-
-  <!-- نگاه نویسنده -->
-  <section>
-    <div class="section-card">
-      <h2 class="section-title">نگاه نویسنده</h2>
-      <p>در «سور و سات» تلاش شده است یک موقعیت ساده و آشنا به روایتی درباره انتخاب تبدیل شود؛ انتخاب میان ترس و شجاعت، میان زور و منطق، و میان بی‌تفاوتی و انسانیت.</p>
-      <p>حسن قهرمانی نیست که با شکست دادن دیگران پیروز شود. او مردی معمولی است که در سخت‌ترین لحظه زندگی، اجازه نمی‌دهد فقر و ترس، انسانیتش را از او بگیرند.</p>
-    </div>
-  </section>
-
-  <!-- وضعیت -->
-  <section>
-    <div class="status">
-      <span class="status-badge">فیلمنامه کوتاه · اثر آماده ارائه</span>
-    </div>
-  </section>
-
-</main>
-
-<footer>
-  <div class="container">
-    <p><strong>حسین محمدی امیرزا</strong></p>
-    <p>فیلمنامه کوتاه «سور و سات»</p>
-  </div>
-</footer>
+  </footer>
 
 </body>
 </html>
