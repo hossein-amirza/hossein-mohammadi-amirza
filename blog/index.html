@@ -6,10 +6,13 @@
   <title>وبلاگ حسین محمدی آمیرزا</title>
   <link rel="stylesheet" href="../style.css">
 </head>
+
 <body>
+
   <header class="subhero compact">
     <nav class="nav wrap">
       <a class="brand" href="../index.html">حسین محمدی آمیرزا</a>
+
       <div class="links">
         <a href="../index.html">خانه</a>
         <a href="index.html">وبلاگ</a>
@@ -19,28 +22,94 @@
 
   <main class="section">
     <div class="wrap">
+
       <h1>📝 وبلاگ حسین محمدی آمیرزا</h1>
-      <div id="posts-container" class="blog-list"></div>
+
+      <div id="posts-container" class="blog-list">
+        <p>در حال بارگذاری نوشته‌ها...</p>
+      </div>
+
     </div>
   </main>
 
-  <footer><div class="wrap">© <span id="year"></span> حسین محمدی آمیرزا</div></footer>
+  <footer>
+    <div class="wrap">
+      © <span id="year"></span> حسین محمدی آمیرزا
+    </div>
+  </footer>
+
   <script src="../script.js"></script>
+
   <script>
-    fetch('../content/posts.json')
-      .then(res => res.json())
-      .then(data => {
-        const container = document.getElementById('posts-container');
-        data.forEach(post => {
-          container.innerHTML += `
-            <div class="post-card">
-              <h3>${post.title}</h3>
-              <p>${post.date}</p>
-              <p>${post.body}</p>
-            </div>
-          `;
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    fetch("../content/posts.json")
+      .then(function(response) {
+        if (!response.ok) {
+          throw new Error("posts.json پیدا نشد");
+        }
+        return response.json();
+      })
+      .then(function(posts) {
+
+        const container = document.getElementById("posts-container");
+
+        if (!posts || posts.length === 0) {
+          container.innerHTML = "<p>هنوز نوشته‌ای منتشر نشده است.</p>";
+          return;
+        }
+
+        container.innerHTML = "";
+
+        posts.forEach(function(post) {
+
+          const card = document.createElement("article");
+          card.className = "post-card";
+
+          const title = document.createElement("h2");
+          title.textContent = post.title || "بدون عنوان";
+
+          const date = document.createElement("p");
+          date.className = "post-date";
+          date.textContent = post.date || "";
+
+          const tag = document.createElement("p");
+          tag.className = "post-tag";
+          tag.textContent = post.tag ? "دسته‌بندی: " + post.tag : "";
+
+          const excerpt = document.createElement("p");
+          excerpt.textContent =
+            post.excerpt ||
+            post.body ||
+            "برای خواندن این نوشته کلیک کنید.";
+
+          const link = document.createElement("a");
+          link.href =
+            "../post-detail.html?id=" +
+            encodeURIComponent(post.id || post.title || "");
+
+          link.textContent = "ادامه مطلب ←";
+          link.className = "read-more";
+
+          card.appendChild(title);
+          card.appendChild(date);
+          card.appendChild(tag);
+          card.appendChild(excerpt);
+          card.appendChild(link);
+
+          container.appendChild(card);
         });
+
+      })
+      .catch(function(error) {
+
+        console.error(error);
+
+        document.getElementById("posts-container").innerHTML =
+          "<p>فعلاً نوشته‌ها قابل نمایش نیستند.</p>";
+
       });
   </script>
+
 </body>
 </html>
