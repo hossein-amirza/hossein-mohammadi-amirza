@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="fa" dir="rtl">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,105 +12,242 @@
 
   <header class="subhero compact">
     <nav class="nav wrap">
-      <a class="brand" href="../index.html">حسین محمدی آمیرزا</a>
+
+      <a class="brand" href="../index.html">
+        حسین محمدی آمیرزا
+      </a>
 
       <div class="links">
         <a href="../index.html">خانه</a>
         <a href="index.html">وبلاگ</a>
       </div>
+
     </nav>
   </header>
 
+
   <main class="section">
+
     <div class="wrap">
 
       <h1>📝 وبلاگ حسین محمدی آمیرزا</h1>
 
       <div id="posts-container" class="blog-list">
+
         <p>در حال بارگذاری نوشته‌ها...</p>
+
       </div>
 
     </div>
+
   </main>
 
+
   <footer>
+
     <div class="wrap">
       © <span id="year"></span> حسین محمدی آمیرزا
     </div>
+
   </footer>
+
 
   <script src="../script.js"></script>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
 
-    fetch("../content/posts.json")
+  <script>
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+
+    fetch("../posts/posts/posts.json")
+
       .then(function(response) {
+
         if (!response.ok) {
           throw new Error("posts.json پیدا نشد");
         }
-        return response.json();
-      })
-      .then(function(posts) {
 
-        const container = document.getElementById("posts-container");
+        return response.json();
+
+      })
+
+
+      .then(function(data) {
+
+        /*
+         * فایل فعلی posts.json به صورت یک
+         * شیء شامل content ذخیره شده است.
+         * اگر content رشته باشد، آن را به JSON تبدیل می‌کنیم.
+         */
+
+        let posts;
+
+        if (Array.isArray(data)) {
+
+          posts = data;
+
+        } else if (data && typeof data.content === "string") {
+
+          posts = JSON.parse(data.content);
+
+        } else if (data && Array.isArray(data.content)) {
+
+          posts = data.content;
+
+        } else {
+
+          posts = [];
+
+        }
+
+
+        const container =
+          document.getElementById("posts-container");
+
 
         if (!posts || posts.length === 0) {
-          container.innerHTML = "<p>هنوز نوشته‌ای منتشر نشده است.</p>";
+
+          container.innerHTML =
+            "<p>هنوز نوشته‌ای منتشر نشده است.</p>";
+
           return;
+
         }
+
 
         container.innerHTML = "";
 
-        posts.forEach(function(post) {
 
-          const card = document.createElement("article");
+        posts.forEach(function(post, index) {
+
+          const card =
+            document.createElement("article");
+
           card.className = "post-card";
 
-          const title = document.createElement("h2");
-          title.textContent = post.title || "بدون عنوان";
 
-          const date = document.createElement("p");
+          const title =
+            document.createElement("h2");
+
+          title.textContent =
+            post.title || "بدون عنوان";
+
+
+          const date =
+            document.createElement("p");
+
           date.className = "post-date";
-          date.textContent = post.date || "";
 
-          const tag = document.createElement("p");
+          date.textContent =
+            post.date || "";
+
+
+          const tag =
+            document.createElement("p");
+
           tag.className = "post-tag";
-          tag.textContent = post.tag ? "دسته‌بندی: " + post.tag : "";
 
-          const excerpt = document.createElement("p");
-          excerpt.textContent =
-            post.excerpt ||
-            post.body ||
-            "برای خواندن این نوشته کلیک کنید.";
+          if (post.tag) {
 
-          const link = document.createElement("a");
+            tag.textContent =
+              "دسته‌بندی: " + post.tag;
+
+          }
+
+
+          const excerpt =
+            document.createElement("p");
+
+          excerpt.className = "post-excerpt";
+
+
+          if (post.excerpt) {
+
+            excerpt.textContent =
+              post.excerpt;
+
+          } else if (post.body) {
+
+            let text = post.body;
+
+            text = text.replace(/<[^>]*>/g, "");
+
+            text = text.replace(/[#*_`]/g, "");
+
+            if (text.length > 300) {
+              text = text.substring(0, 300) + "…";
+            }
+
+            excerpt.textContent = text;
+
+          } else {
+
+            excerpt.textContent =
+              "برای خواندن این نوشته کلیک کنید.";
+
+          }
+
+
+          const link =
+            document.createElement("a");
+
+          let postId =
+            post.id || post.slug || post.title || index;
+
+
           link.href =
             "../post-detail.html?id=" +
-            encodeURIComponent(post.id || post.title || "");
+            encodeURIComponent(postId);
 
-          link.textContent = "ادامه مطلب ←";
-          link.className = "read-more";
+
+          link.textContent =
+            "ادامه مطلب ←";
+
+          link.className =
+            "read-more";
+
 
           card.appendChild(title);
-          card.appendChild(date);
-          card.appendChild(tag);
+
+          if (date.textContent) {
+            card.appendChild(date);
+          }
+
+          if (tag.textContent) {
+            card.appendChild(tag);
+          }
+
           card.appendChild(excerpt);
+
           card.appendChild(link);
 
+
           container.appendChild(card);
+
         });
 
       })
+
+
       .catch(function(error) {
 
-        console.error(error);
+        console.error(
+          "خطا در بارگذاری نوشته‌ها:",
+          error
+        );
 
-        document.getElementById("posts-container").innerHTML =
+
+        document.getElementById(
+          "posts-container"
+        ).innerHTML =
           "<p>فعلاً نوشته‌ها قابل نمایش نیستند.</p>";
 
       });
+
   </script>
 
 </body>
+
 </html>
