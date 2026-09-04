@@ -1,72 +1,194 @@
-/* ===== ظاهر جدید مقاله ===== */
+/* ===== طراحی هنری و ادبی مقاله ===== */
 
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Noto+Nastaliq+Urdu:wght@400;500&display=swap');
+
+/* پس‌زمینهٔ کل صفحه */
 body {
   background:
-    radial-gradient(circle at top right, rgba(255, 255, 255, 0.9), transparent 35%),
-    linear-gradient(135deg, #f4efe6 0%, #e8e1d5 45%, #dfe8e4 100%);
+    radial-gradient(circle at 8% 12%, rgba(255,255,255,.72), transparent 24%),
+    radial-gradient(circle at 92% 88%, rgba(188,205,190,.32), transparent 26%),
+    linear-gradient(135deg, #eee5d5 0%, #e7dfcf 48%, #dce7e1 100%);
 }
 
+/* قاب اصلی مقاله */
 .article {
-  max-width: 900px;
-  margin: 50px auto;
-  padding: 55px 65px;
-  background: rgba(255, 255, 255, 0.92);
-  border-radius: 24px;
-  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.10);
+  position: relative;
+  max-width: 920px;
+  margin: 58px auto;
+  padding: 64px 72px 70px;
+  background: rgba(255, 252, 245, .96);
+  border: 1px solid rgba(125, 110, 82, .20);
+  border-radius: 30px;
+  box-shadow:
+    0 28px 70px rgba(65, 58, 46, .12),
+    0 6px 18px rgba(65, 58, 46, .06);
 }
 
+/* یک حاشیهٔ ظریف داخلی */
+.article::before {
+  content: "";
+  position: absolute;
+  inset: 14px;
+  border: 1px solid rgba(154, 137, 101, .18);
+  border-radius: 22px;
+  pointer-events: none;
+}
+
+/* دسته‌بندی */
+#post-tag {
+  display: table;
+  margin: 0 auto 24px;
+  padding: 7px 20px;
+  border-radius: 50px;
+  background: #e8e1d4;
+  color: #68705f;
+  font-family: "Noto Naskh Arabic", serif;
+  font-size: .95rem;
+}
+
+/* عنوان */
 .article h1 {
-  font-size: 2.4rem;
-  line-height: 1.8;
-  margin: 20px 0 18px;
+  font-family: "Noto Nastaliq Urdu", "Amiri", serif;
+  font-size: 2.45rem;
+  font-weight: 400;
+  line-height: 2.15;
+  text-align: center;
+  color: #354338;
+  margin: 10px auto 26px;
+  max-width: 820px;
 }
 
+/* خلاصه */
 .article-lead {
-  font-size: 1.15rem;
-  line-height: 2.2;
-  margin-bottom: 20px;
-  opacity: 0.85;
-}
-
-.article-body {
-  font-size: 1.08rem;
+  max-width: 760px;
+  margin: 0 auto 22px;
+  font-family: "Noto Naskh Arabic", serif;
+  font-size: 1.14rem;
   line-height: 2.25;
+  text-align: center;
+  color: #756f64;
+}
+
+/* تاریخ */
+#post-date {
+  text-align: center;
+  font-family: "Noto Naskh Arabic", serif;
+  font-size: .92rem;
+  color: #9a8f7c;
+  margin-bottom: 42px;
+}
+
+/* جداکنندهٔ هنری */
+#post-date::after {
+  content: "❈";
+  display: block;
+  margin-top: 18px;
+  color: #ad9b76;
+  font-size: 1.15rem;
+}
+
+/* متن اصلی */
+.article-body {
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: "Noto Naskh Arabic", "Amiri", serif;
+  font-size: 1.13rem;
+  line-height: 2.35;
   text-align: right;
-  color: #333;
+  color: #343630;
 }
 
+/* فاصلهٔ واضح بین پاراگراف‌ها */
 .article-body p {
-  margin: 0 0 1.5em;
+  margin: 0 0 1.65em;
 }
 
+/* پاراگراف اول کمی متفاوت */
+.article-body p:first-child::first-letter {
+  font-size: 2.2em;
+  font-weight: 700;
+  color: #6f795f;
+  float: right;
+  line-height: .9;
+  margin-left: 5px;
+}
+
+/* تیترهای مقاله */
 .article-body h2 {
-  margin-top: 2.2em;
-  margin-bottom: 0.8em;
-  font-size: 1.6rem;
+  position: relative;
+  font-family: "Noto Nastaliq Urdu", "Amiri", serif;
+  font-size: 1.75rem;
+  font-weight: 400;
+  line-height: 2;
+  color: #55644f;
+  text-align: right;
+  margin: 2.8em 0 1em;
+  padding-right: 22px;
 }
 
+.article-body h2::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 15%;
+  width: 5px;
+  height: 70%;
+  border-radius: 10px;
+  background: #b29f77;
+}
+
+/* تیتر کوچک‌تر */
 .article-body h3 {
-  margin-top: 2em;
-  margin-bottom: 0.7em;
-  font-size: 1.35rem;
+  font-family: "Noto Nastaliq Urdu", "Amiri", serif;
+  font-size: 1.45rem;
+  font-weight: 400;
+  color: #6a735f;
+  margin: 2.2em 0 .8em;
 }
 
+/* کلمات برجسته */
 .article-body strong {
+  color: #52624d;
   font-weight: 700;
 }
 
+/* دکمهٔ بازگشت */
+.article-nav {
+  margin-top: 48px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(125, 110, 82, .18);
+  text-align: center;
+}
+
+/* موبایل */
 @media (max-width: 700px) {
+
   .article {
-    margin: 20px 12px;
-    padding: 30px 22px;
+    margin: 20px 10px;
+    padding: 40px 24px 45px;
+    border-radius: 22px;
+  }
+
+  .article::before {
+    inset: 9px;
+    border-radius: 16px;
   }
 
   .article h1 {
     font-size: 1.8rem;
+    line-height: 2.05;
+  }
+
+  .article-lead {
+    font-size: 1rem;
   }
 
   .article-body {
     font-size: 1rem;
-    line-height: 2.1;
+    line-height: 2.2;
+  }
+
+  .article-body h2 {
+    font-size: 1.4rem;
   }
 }
