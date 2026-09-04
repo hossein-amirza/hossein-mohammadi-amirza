@@ -1,166 +1,137 @@
-<!doctype html>
-<html lang="fa" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+/* ===== طراحی هنری وبلاگ ===== */
 
-  <title id="page-title">نوشته | حسین محمدی آمیرزا</title>
-  <meta name="description" id="page-desc" content="نوشته‌ای از حسین محمدی آمیرزا">
+@import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Noto+Nastaliq+Urdu:wght@400;500;600&display=swap');
 
-  <link rel="stylesheet" href="style.css">
-</head>
+body {
+  background:
+    radial-gradient(circle at 15% 10%, rgba(255, 255, 255, 0.75), transparent 28%),
+    radial-gradient(circle at 85% 85%, rgba(197, 214, 196, 0.35), transparent 30%),
+    linear-gradient(135deg, #f3eee3 0%, #e8e0d1 50%, #dfe8e2 100%);
+  color: #2f302d;
+}
 
-<body>
+/* عنوان مقاله */
+.article h1 {
+  font-family: "Noto Nastaliq Urdu", "Noto Naskh Arabic", serif;
+  font-weight: 500;
+  font-size: 2.45rem;
+  line-height: 2.15;
+  text-align: center;
+  color: #30352f;
+  margin: 25px 0 22px;
+}
 
-<header class="subhero compact">
-  <nav class="nav wrap">
-    <a class="brand" href="index.html">
-      ✍️ حسین محمدی آمیرزا
-    </a>
+/* خلاصه */
+.article-lead {
+  font-family: "Noto Naskh Arabic", Tahoma, sans-serif;
+  font-size: 1.15rem;
+  line-height: 2.2;
+  text-align: center;
+  color: #666257;
+  max-width: 760px;
+  margin: 0 auto 25px;
+}
 
-    <div class="links">
-      <a href="index.html">خانه</a>
-      <a href="blog/index.html">وبلاگ</a>
-    </div>
-  </nav>
-</header>
+/* تاریخ */
+#post-date {
+  text-align: center;
+  color: #8a806e;
+  margin-bottom: 35px;
+}
 
-<main class="section">
+/* متن اصلی */
+.article-body {
+  font-family: "Noto Naskh Arabic", Tahoma, sans-serif;
+  font-size: 1.12rem;
+  line-height: 2.25;
+  text-align: justify;
+  color: #353732;
+}
 
-  <article class="wrap article">
+/* هر پاراگراف جدا و نفس‌دار */
+.article-body p {
+  margin: 0 0 1.45em;
+  text-indent: 1.2em;
+}
 
-    <span class="tag" id="post-tag">نوشته</span>
+/* تیترهای داخل مقاله */
+.article-body h2 {
+  font-family: "Noto Nastaliq Urdu", "Noto Naskh Arabic", serif;
+  font-size: 1.75rem;
+  font-weight: 500;
+  line-height: 2;
+  text-align: right;
+  color: #596453;
+  margin: 2.1em 0 0.8em;
+  padding-right: 14px;
+  border-right: 4px solid #a99b7d;
+}
 
-    <h1 id="post-title">در حال بارگذاری...</h1>
+.article-body h3 {
+  font-family: "Noto Nastaliq Urdu", "Noto Naskh Arabic", serif;
+  font-size: 1.45rem;
+  font-weight: 500;
+  color: #6b6958;
+  margin: 1.8em 0 0.7em;
+}
 
-    <p class="article-lead" id="post-excerpt"></p>
+/* تأکیدها */
+.article-body strong {
+  color: #4d5b4a;
+  font-weight: 700;
+}
 
-    <p class="muted" id="post-date"></p>
+/* کارت مقاله */
+.article {
+  max-width: 900px;
+  margin: 55px auto;
+  padding: 60px 68px;
+  background: rgba(255, 253, 248, 0.94);
+  border: 1px solid rgba(122, 113, 94, 0.16);
+  border-radius: 28px;
+  box-shadow:
+    0 25px 60px rgba(53, 51, 43, 0.10),
+    0 2px 8px rgba(53, 51, 43, 0.05);
+}
 
-    <div class="article-body" id="post-content">
-      <p>در حال بارگذاری متن نوشته...</p>
-    </div>
+/* برچسب دسته */
+#post-tag {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 7px 18px;
+  border-radius: 999px;
+  background: #e9e4d8;
+  color: #6a715f;
+  font-size: 0.9rem;
+}
 
-    <div class="article-nav">
-      <a class="btn" href="blog/index.html">
-        📚 بازگشت به وبلاگ
-      </a>
-    </div>
+/* موبایل */
+@media (max-width: 700px) {
 
-  </article>
+  .article {
+    margin: 20px 12px;
+    padding: 35px 22px;
+    border-radius: 20px;
+  }
 
-</main>
+  .article h1 {
+    font-size: 1.8rem;
+    line-height: 2;
+  }
 
-<footer>
-  <div class="wrap">
-    © <span id="year"></span> حسین محمدی آمیرزا
-  </div>
-</footer>
+  .article-body {
+    font-size: 1rem;
+    line-height: 2.15;
+    text-align: right;
+  }
 
-<script src="script.js"></script>
+  .article-body p {
+    text-indent: 0;
+    margin-bottom: 1.3em;
+  }
 
-<script>
-
-document.getElementById("year").textContent =
-  new Date().getFullYear();
-
-const params = new URLSearchParams(window.location.search);
-const postId = params.get("id");
-
-fetch("posts/posts/posts.json")
-  .then(function(response) {
-
-    if (!response.ok) {
-      throw new Error("posts.json پیدا نشد");
-    }
-
-    return response.json();
-
-  })
-  .then(function(data) {
-
-    let posts;
-
-    if (Array.isArray(data)) {
-
-      posts = data;
-
-    } else if (data && typeof data.content === "string") {
-
-      posts = JSON.parse(data.content);
-
-    } else if (data && Array.isArray(data.content)) {
-
-      posts = data.content;
-
-    } else {
-
-      posts = [];
-
-    }
-
-    const post = posts.find(function(item) {
-
-      return String(item.id) === String(postId);
-
-    });
-
-    if (!post) {
-
-      document.getElementById("post-title").textContent =
-        "نوشته یافت نشد";
-
-      document.getElementById("post-content").innerHTML =
-        "<p>این نوشته پیدا نشد.</p>";
-
-      return;
-    }
-
-    document.getElementById("page-title").textContent =
-      post.title + " | حسین محمدی آمیرزا";
-
-    document.getElementById("page-desc").content =
-      post.excerpt || post.title;
-
-    document.getElementById("post-tag").textContent =
-      post.tag || "نوشته";
-
-    document.getElementById("post-title").textContent =
-      post.title || "بدون عنوان";
-
-    document.getElementById("post-excerpt").textContent =
-      post.excerpt || "";
-
-    document.getElementById("post-date").textContent =
-      post.date ? "📅 " + post.date : "";
-
-    let body = post.content || post.body || "";
-
-    if (body) {
-
-      document.getElementById("post-content").innerHTML = body;
-
-    } else {
-
-      document.getElementById("post-content").innerHTML =
-        "<p>متن نوشته پیدا نشد.</p>";
-
-    }
-
-  })
-  .catch(function(error) {
-
-    console.error(error);
-
-    document.getElementById("post-title").textContent =
-      "خطا در بارگذاری";
-
-    document.getElementById("post-content").innerHTML =
-      "<p>مشکلی در بارگذاری نوشته به وجود آمده است.</p>";
-
-  });
-
-</script>
-
-</body>
-</html>
+  .article-body h2 {
+    font-size: 1.4rem;
+  }
+}
