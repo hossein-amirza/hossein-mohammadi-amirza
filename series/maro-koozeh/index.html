@@ -1,80 +1,755 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-← بازگشت به صفحه اصلی
-فیلمنامه کوتاه
-کوزه و مار
-روایتی تلخ و نمادین درباره تشنگی، قدرت، تقسیم و برهم خوردن نظم یک خانه
+  <title>کوزه و مار | فیلمنامه کوتاه</title>
 
-نوشته و کارگردان ................................
-پوستر فیلمنامه کوزه و مار
-لوگ‌لاین
-یک روز سوزان، نبرد یک کشاورز با یک مار بر سر یک کوزه آب، به جنگی خانگی بر سر یک خمره دوغ تبدیل می‌شود و نظم یک خانه را برای همیشه برهم می‌زند.
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap');
 
-معرفی اثر
-«کوزه و مار» داستان کاظم، کشاورزی خسته و تهی‌دست است که در اوج گرمای مزرعه، برای رسیدن به تنها کوزه آب با یک مار سبز روبه‌رو می‌شود.
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-کاظم در لحظه‌ای از تشنگی و استیصال، کوزه را می‌شکند؛ اما آب پیش از آن‌که به او برسد در خاک فرو می‌رود و مار بی‌اعتنا در میان گندم‌ها ناپدید می‌شود. او نیمه‌جان به خانه بازمی‌گردد و در هذیان، تصویر خمره‌ای از دوغ را می‌بیند.
+    html {
+      scroll-behavior: smooth;
+    }
 
-وقتی به خانه می‌رسد، خمره واقعی دوغ را پیدا می‌کند و برای نخستین بار در برابر غزال، همسر مستبد و فرسوده‌اش، ایستادگی می‌کند. این تشنگی جسمانی به نقطه آغاز تغییری عمیق در رابطه قدرت میان زن و مرد تبدیل می‌شود.
+    body {
+      font-family: "Vazirmatn", Tahoma, sans-serif;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(190, 150, 55, 0.13), transparent 35%),
+        linear-gradient(135deg, #050505 0%, #101010 50%, #050505 100%);
+      color: #e8e1d2;
+      line-height: 2.1;
+      min-height: 100vh;
+    }
 
-نقطه عطف داستان: کاظم پس از نوشیدن دوغ، با آرامشی تازه می‌گوید: «از امروز… نصف هر چی تو این خونه‌س، مال منه.» از همین لحظه، نظم قدیمی خانه فرو می‌ریزد و نظم تازه‌ای شکل می‌گیرد.
-در پایان، کاظم و غزال برای نخستین بار غذا را میان خود تقسیم می‌کنند و کاظم سهمی از نان را برای همان مار می‌گذارد؛ دشمنی که حالا به نشانه‌ای از شناخت و پذیرش تبدیل شده است.
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background:
+        linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
+      background-size: 45px 45px;
+      opacity: 0.25;
+      z-index: -1;
+    }
 
-مشخصات اثر
-عنوان
-کوزه و مار
-گونه
-فیلمنامه کوتاه
-نویسنده / کارگردان
-................................
-فضا
-روستا، خانه و مزرعه گندم
-لحن
-تلخ، انسانی و نمادین
-محور داستان
-قدرت، تشنگی و تقسیم
-شخصیت‌ها
-کاظم
-۴۵ ساله؛ کشاورزی زحمتکش و ساده‌دل که در آغاز داستان فرسوده و درمانده است، اما فشار تشنگی و تحقیر او را به نقطه‌ای می‌رساند که برای نخستین بار جایگاه خود را در خانه مطالبه می‌کند.
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-غزال
-۴۰ ساله؛ همسر کاظم، زنی مستبد و صاحب صدایی رسا. در آغاز با فرسودگی و بی‌اعتنایی زندگی را اداره می‌کند، اما پس از تغییر کاظم با نظمی تازه در خانه روبه‌رو می‌شود.
+    .container {
+      width: min(1100px, calc(100% - 32px));
+      margin: auto;
+    }
 
-سم‌طلا
-خر خاکستری، کم‌حوصله و وفادار کاظم؛ همراهی خاموش که کاظم را از مزرعه تا خانه حمل می‌کند و حضورش رگه‌ای از طنز و زندگی روزمره به داستان می‌دهد.
+    /* بازگشت */
 
-مار
-ماری سبز و زیرک؛ حضوری سرد و بی‌تفاوت که ابتدا در برابر کاظم قرار می‌گیرد و در پایان به نمادی از شناخت، سهم و پذیرش نظم تازه تبدیل می‌شود.
+    .back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin: 28px 0 15px;
+      padding: 9px 18px;
+      border: 1px solid rgba(210, 170, 80, 0.45);
+      border-radius: 30px;
+      color: #d9b866;
+      font-size: 14px;
+      transition: 0.3s;
+    }
 
-«از امروز… نصف هر چی تو این خونه‌س، مال منه.»
+    .back:hover {
+      background: rgba(210, 170, 80, 0.1);
+      border-color: #d9b866;
+      transform: translateX(3px);
+    }
 
-از دیالوگ کاظم
-درونمایه‌های اثر
-قدرت
-تشنگی
-فقر
-تقسیم
-کرامت
-رابطه زن و مرد
-تغییر نظم
-پذیرش
-ویژگی‌های اثر
-نمادپردازی ساده و سینمایی: کوزه آب، خمره دوغ، مار و دو کاسه خالی، عناصر روزمره‌ای هستند که در طول داستان به نشانه‌هایی از نیاز، قدرت و تقسیم تبدیل می‌شوند.
+    /* هدر */
 
-تغییر قدرت بدون خشونت بزرگ: نقطه تحول کاظم با یک جمله آرام و کوتاه اتفاق می‌افتد؛ همین سکوت، تغییر جایگاه او را از همیشه پررنگ‌تر می‌کند.
+    .hero {
+      position: relative;
+      text-align: center;
+      padding: 55px 20px 70px;
+      border-bottom: 1px solid rgba(212, 173, 83, 0.25);
+    }
 
-پایان‌بندی نمادین: تقسیم نان و پنیر میان کاظم و غزال و گذاشتن سهمی برای مار، مفهوم «تقسیم» را از یک مطالبه شخصی به نوعی نظم تازه و انسانی‌تر تبدیل می‌کند.
+    .eyebrow {
+      color: #c9a65b;
+      font-size: 14px;
+      letter-spacing: 1px;
+      margin-bottom: 15px;
+    }
 
-تصویرپردازی قدرتمند: گرمای مزرعه، کوزه شکسته، آبِ بلعیده‌شده توسط خاک، خمره سفید دوغ و دو کاسه خالی در نور ماه، ستون‌های تصویری اصلی فیلم هستند.
+    .hero h1 {
+      color: #d9b866;
+      font-size: clamp(42px, 8vw, 76px);
+      font-weight: 800;
+      line-height: 1.2;
+      text-shadow: 0 0 30px rgba(211, 169, 75, 0.16);
+      margin-bottom: 20px;
+    }
 
-پیام اثر
-«کوزه و مار» نشان می‌دهد که گاهی یک نیاز ساده و انسانی می‌تواند پرده از سال‌ها نابرابری و سکوت بردارد. تغییر همیشه با فریاد آغاز نمی‌شود؛ گاهی با یک جرعه آب، یک سهم نان و جمله‌ای آرام آغاز می‌شود: این‌که انسان بالاخره حق خود را به رسمیت بشناسد.
+    .hero .tagline {
+      max-width: 720px;
+      margin: auto;
+      color: #bdb5a6;
+      font-size: 17px;
+      font-weight: 300;
+    }
 
-نگاه نویسنده
-هسته اصلی داستان، تبدیل یک موقعیت بسیار ساده ــ تشنگی یک کشاورز در مزرعه ــ به بحرانی در رابطه قدرت داخل خانه است.
+    .author {
+      margin-top: 25px;
+      color: #8f887b;
+      font-size: 14px;
+    }
 
-کاظم در پایان به یک قهرمان کلاسیک تبدیل نمی‌شود؛ فقط برای نخستین بار از جایگاه خود دفاع می‌کند. از همین رو، پایان داستان به جای پیروزی یک نفر، به شکل‌گیری مفهومی تازه از «سهم» و «تقسیم» ختم می‌شود.
+    .author strong {
+      color: #d2ae63;
+      font-weight: 500;
+    }
 
-فیلمنامه کوتاه · اثر آماده ارائه
-................................
+    /* پوستر */
 
-فیلمنامه کوتاه «کوزه و مار»
+    .poster-area {
+      padding: 70px 20px;
+      text-align: center;
+    }
+
+    .poster-frame {
+      position: relative;
+      display: inline-block;
+      padding: 10px;
+      background: linear-gradient(135deg, #b99245, #f0d58c, #8c692c, #d5b264);
+      box-shadow:
+        0 0 0 1px rgba(220, 180, 90, 0.2),
+        0 25px 70px rgba(0,0,0,0.7),
+        0 0 50px rgba(194, 148, 55, 0.12);
+    }
+
+    .poster-frame::before,
+    .poster-frame::after {
+      content: "";
+      position: absolute;
+      width: 45px;
+      height: 45px;
+      border: 1px solid rgba(240, 213, 140, 0.65);
+    }
+
+    .poster-frame::before {
+      top: -8px;
+      right: -8px;
+      border-left: 0;
+      border-bottom: 0;
+    }
+
+    .poster-frame::after {
+      bottom: -8px;
+      left: -8px;
+      border-right: 0;
+      border-top: 0;
+    }
+
+    .poster-frame img {
+      display: block;
+      width: min(520px, 82vw);
+      height: auto;
+      max-height: 720px;
+      object-fit: contain;
+      background: #080808;
+    }
+
+    .poster-caption {
+      margin-top: 20px;
+      color: #777064;
+      font-size: 13px;
+    }
+
+    /* بخش‌ها */
+
+    .section {
+      position: relative;
+      padding: 70px 0;
+      border-top: 1px solid rgba(212, 173, 83, 0.12);
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 32px;
+    }
+
+    .section-title::before {
+      content: "";
+      width: 42px;
+      height: 1px;
+      background: #c9a65b;
+      flex-shrink: 0;
+    }
+
+    .section-title h2 {
+      color: #d5b367;
+      font-size: 25px;
+      font-weight: 600;
+    }
+
+    .section p {
+      color: #c3bcaf;
+      font-size: 16px;
+      font-weight: 300;
+      margin-bottom: 20px;
+    }
+
+    /* لوگ‌لاین */
+
+    .logline {
+      padding: 35px 40px;
+      border: 1px solid rgba(205, 165, 75, 0.35);
+      background: linear-gradient(
+        135deg,
+        rgba(205,165,75,0.08),
+        rgba(255,255,255,0.015)
+      );
+      box-shadow: inset 0 0 40px rgba(201, 166, 91, 0.025);
+    }
+
+    .logline p {
+      color: #e0d6c3;
+      font-size: 18px;
+      line-height: 2.3;
+      margin: 0;
+    }
+
+    /* مشخصات */
+
+    .specs {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      border-top: 1px solid rgba(212, 173, 83, 0.2);
+      border-right: 1px solid rgba(212, 173, 83, 0.2);
+    }
+
+    .spec {
+      padding: 22px 25px;
+      border-left: 1px solid rgba(212, 173, 83, 0.2);
+      border-bottom: 1px solid rgba(212, 173, 83, 0.2);
+    }
+
+    .spec span {
+      display: block;
+      color: #8c8578;
+      font-size: 13px;
+      margin-bottom: 5px;
+    }
+
+    .spec strong {
+      color: #d8c29a;
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    /* شخصیت‌ها */
+
+    .characters {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .character {
+      padding: 28px;
+      border: 1px solid rgba(212, 173, 83, 0.18);
+      background: rgba(255,255,255,0.018);
+      transition: 0.3s;
+    }
+
+    .character:hover {
+      border-color: rgba(212, 173, 83, 0.45);
+      transform: translateY(-3px);
+      background: rgba(212, 173, 83, 0.035);
+    }
+
+    .character h3 {
+      color: #d7b567;
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+
+    .character p {
+      margin: 0;
+      font-size: 14px;
+      color: #aaa397;
+    }
+
+    /* نقل قول */
+
+    .quote {
+      position: relative;
+      margin: 30px 0;
+      padding: 45px 35px;
+      text-align: center;
+      border-top: 1px solid rgba(212, 173, 83, 0.4);
+      border-bottom: 1px solid rgba(212, 173, 83, 0.4);
+    }
+
+    .quote::before {
+      content: "“";
+      display: block;
+      color: #b28a3c;
+      font-family: Georgia, serif;
+      font-size: 65px;
+      height: 45px;
+      line-height: 60px;
+    }
+
+    .quote p {
+      color: #e3c87d;
+      font-size: clamp(20px, 4vw, 30px);
+      font-weight: 500;
+      margin: 5px 0 10px;
+    }
+
+    .quote span {
+      color: #756e63;
+      font-size: 13px;
+    }
+
+    /* لیست درونمایه */
+
+    .themes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .theme {
+      padding: 9px 18px;
+      border: 1px solid rgba(212, 173, 83, 0.3);
+      color: #cbb98e;
+      font-size: 14px;
+      background: rgba(212, 173, 83, 0.035);
+    }
+
+    /* ویژگی‌ها */
+
+    .features {
+      display: grid;
+      gap: 18px;
+    }
+
+    .feature {
+      padding: 24px 28px;
+      border-right: 2px solid #a98238;
+      background: rgba(255,255,255,0.018);
+    }
+
+    .feature h3 {
+      color: #d4b66f;
+      font-size: 17px;
+      margin-bottom: 8px;
+    }
+
+    .feature p {
+      margin: 0;
+      font-size: 14px;
+    }
+
+    /* نگاه نویسنده */
+
+    .writer-note {
+      padding: 38px;
+      background:
+        linear-gradient(135deg, rgba(190,150,65,0.08), rgba(0,0,0,0.1));
+      border: 1px solid rgba(212, 173, 83, 0.2);
+    }
+
+    .writer-note p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* فوتر */
+
+    footer {
+      margin-top: 40px;
+      padding: 45px 20px;
+      text-align: center;
+      border-top: 1px solid rgba(212, 173, 83, 0.2);
+      color: #625d55;
+      font-size: 13px;
+    }
+
+    footer strong {
+      display: block;
+      color: #a68a52;
+      margin-bottom: 5px;
+      font-weight: 400;
+    }
+
+    /* موبایل */
+
+    @media (max-width: 700px) {
+
+      .container {
+        width: min(100% - 24px, 1100px);
+      }
+
+      .hero {
+        padding: 35px 10px 50px;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .hero .tagline {
+        font-size: 14px;
+      }
+
+      .poster-area {
+        padding: 45px 10px;
+      }
+
+      .section {
+        padding: 50px 0;
+      }
+
+      .section-title h2 {
+        font-size: 21px;
+      }
+
+      .specs,
+      .characters {
+        grid-template-columns: 1fr;
+      }
+
+      .logline {
+        padding: 25px 20px;
+      }
+
+      .logline p {
+        font-size: 15px;
+      }
+
+      .quote {
+        padding: 35px 15px;
+      }
+
+      .writer-note {
+        padding: 25px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <a href="../../index.html" class="back">← بازگشت به صفحه اصلی</a>
+
+    <header class="hero">
+      <div class="eyebrow">فیلمنامه کوتاه</div>
+
+      <h1>کوزه و مار</h1>
+
+      <p class="tagline">
+        روایتی تلخ و نمادین درباره تشنگی، قدرت، تقسیم و برهم خوردن نظم یک خانه
+      </p>
+
+      <div class="author">
+        نوشته و کارگردان
+        <strong>................................</strong>
+      </div>
+    </header>
+
+
+    <section class="poster-area">
+
+      <div class="poster-frame">
+        <img
+          src="../../%DA%A9%D9%88%D8%B2%D9%87%20%D9%88%20%D9%85%D8%A7%D8%B1.jpg"
+          alt="پوستر فیلمنامه کوزه و مار"
+        >
+      </div>
+
+      <div class="poster-caption">
+        پوستر فیلمنامه «کوزه و مار»
+      </div>
+
+    </section>
+
+
+    <main>
+
+      <section class="section">
+        <div class="section-title">
+          <h2>لوگ‌لاین</h2>
+        </div>
+
+        <div class="logline">
+          <p>
+            یک روز سوزان، نبرد یک کشاورز با یک مار بر سر یک کوزه آب،
+            به جنگی خانگی بر سر یک خمره دوغ تبدیل می‌شود و نظم یک خانه
+            را برای همیشه برهم می‌زند.
+          </p>
+        </div>
+      </section>
+
+
+      <section class="section">
+        <div class="section-title">
+          <h2>معرفی اثر</h2>
+        </div>
+
+        <p>
+          «کوزه و مار» داستان کاظم، کشاورزی خسته و تهی‌دست است که در اوج
+          گرمای مزرعه، برای رسیدن به تنها کوزه آب با یک مار سبز روبه‌رو می‌شود.
+        </p>
+
+        <p>
+          کاظم در لحظه‌ای از تشنگی و استیصال، کوزه را می‌شکند؛ اما آب پیش از
+          آن‌که به او برسد در خاک فرو می‌رود و مار بی‌اعتنا در میان گندم‌ها
+          ناپدید می‌شود. او نیمه‌جان به خانه بازمی‌گردد و در هذیان، تصویر
+          خمره‌ای از دوغ را می‌بیند.
+        </p>
+
+        <p>
+          وقتی به خانه می‌رسد، خمره واقعی دوغ را پیدا می‌کند و برای نخستین بار
+          در برابر غزال، همسر مستبد و فرسوده‌اش، ایستادگی می‌کند. این تشنگی
+          جسمانی به نقطه آغاز تغییری عمیق در رابطه قدرت میان زن و مرد تبدیل می‌شود.
+        </p>
+
+        <p>
+          نقطه عطف داستان: کاظم پس از نوشیدن دوغ، با آرامشی تازه می‌گوید:
+          «از امروز… نصف هر چی تو این خونه‌س، مال منه.»
+          از همین لحظه، نظم قدیمی خانه فرو می‌ریزد و نظم تازه‌ای شکل می‌گیرد.
+        </p>
+
+        <p>
+          در پایان، کاظم و غزال برای نخستین بار غذا را میان خود تقسیم می‌کنند
+          و کاظم سهمی از نان را برای همان مار می‌گذارد؛ دشمنی که حالا به نشانه‌ای
+          از شناخت و پذیرش تبدیل شده است.
+        </p>
+      </section>
+
+
+      <section class="section">
+        <div class="section-title">
+          <h2>مشخصات اثر</h2>
+        </div>
+
+        <div class="specs">
+
+          <div class="spec">
+            <span>عنوان</span>
+            <strong>کوزه و مار</strong>
+          </div>
+
+          <div class="spec">
+            <span>گونه</span>
+            <strong>فیلمنامه کوتاه</strong>
+          </div>
+
+          <div class="spec">
+            <span>نویسنده / کارگردان</span>
+            <strong>................................</strong>
+          </div>
+
+          <div class="spec">
+            <span>فضا</span>
+            <strong>روستا، خانه و مزرعه گندم</strong>
+          </div>
+
+          <div class="spec">
+            <span>لحن</span>
+            <strong>تلخ، انسانی و نمادین</strong>
+          </div>
+
+          <div class="spec">
+            <span>محور داستان</span>
+            <strong>قدرت، تشنگی و تقسیم</strong>
+          </div>
+
+        </div>
+      </section>
+
+
+      <section class="section">
+        <div class="section-title">
+          <h2>شخصیت‌ها</h2>
+        </div>
+
+        <div class="characters">
+
+          <article class="character">
+            <h3>کاظم</h3>
+            <p>
+              ۴۵ ساله؛ کشاورزی زحمتکش و ساده‌دل که در آغاز داستان فرسوده و
+              درمانده است، اما فشار تشنگی و تحقیر او را به نقطه‌ای می‌رساند
+              که برای نخستین بار جایگاه خود را در خانه مطالبه می‌کند.
+            </p>
+          </article>
+
+          <article class="character">
+            <h3>غزال</h3>
+            <p>
+              ۴۰ ساله؛ همسر کاظم، زنی مستبد و صاحب صدایی رسا. در آغاز با
+              فرسودگی و بی‌اعتنایی زندگی را اداره می‌کند، اما پس از تغییر
+              کاظم با نظمی تازه در خانه روبه‌رو می‌شود.
+            </p>
+          </article>
+
+          <article class="character">
+            <h3>سم‌طلا</h3>
+            <p>
+              خر خاکستری، کم‌حوصله و وفادار کاظم؛ همراهی خاموش که کاظم را
+              از مزرعه تا خانه حمل می‌کند و حضورش رگه‌ای از طنز و زندگی
+              روزمره به داستان می‌دهد.
+            </p>
+          </article>
+
+          <article class="character">
+            <h3>مار</h3>
+            <p>
+              ماری سبز و زیرک؛ حضوری سرد و بی‌تفاوت که ابتدا در برابر کاظم
+              قرار می‌گیرد و در پایان به نمادی از شناخت، سهم و پذیرش نظم
+              تازه تبدیل می‌شود.
+            </p>
+          </article>
+
+        </div>
+      </section>
+
+
+      <section class="section">
+
+        <div class="quote">
+          <p>«از امروز… نصف هر چی تو این خونه‌س، مال منه.»</p>
+          <span>از دیالوگ کاظم</span>
+        </div>
+
+      </section>
+
+
+      <section class="section">
+        <div class="section-title">
+          <h2>درونمایه‌های اثر</h2>
+        </div>
+
+        <div class="themes">
+          <span class="theme">قدرت</span>
+          <span class="theme">تشنگی</span>
+          <span class="theme">فقر</span>
+          <span class="theme">تقسیم</span>
+          <span class="theme">کرامت</span>
+          <span class="theme">رابطه زن و مرد</span>
+          <span class="theme">تغییر نظم</span>
+          <span class="theme">پذیرش</span>
+        </div>
+      </section>
+
+
+      <section class="section">
+        <div class="section-title">
+          <h2>ویژگی‌های اثر</h2>
+        </div>
+
+        <div class="features">
+
+          <div class="feature">
+            <h3>نمادپردازی ساده و سینمایی</h3>
+            <p>
+              کوزه آب، خمره دوغ، مار و دو کاسه خالی، عناصر روزمره‌ای هستند
+              که در طول داستان به نشانه‌هایی از نیاز، قدرت و تقسیم تبدیل می‌شوند.
+            </p>
+          </div>
+
+          <div class="feature">
+            <h3>تغییر قدرت بدون خشونت بزرگ</h3>
+            <p>
+              نقطه تحول کاظم با یک جمله آرام و کوتاه اتفاق می‌افتد؛ همین سکوت،
+              تغییر جایگاه او را از همیشه پررنگ‌تر می‌کند.
+            </p>
+          </div>
+
+          <div class="feature">
+            <h3>پایان‌بندی نمادین</h3>
+            <p>
+              تقسیم نان و پنیر میان کاظم و غزال و گذاشتن سهمی برای مار،
+              مفهوم «تقسیم» را از یک مطالبه شخصی به نوعی نظم تازه و انسانی‌تر
+              تبدیل می‌کند.
+            </p>
+          </div>
+
+          <div class="feature">
+            <h3>تصویرپردازی قدرتمند</h3>
+            <p>
+              گرمای مزرعه، کوزه شکسته، آبِ بلعیده‌شده توسط خاک، خمره سفید دوغ
+              و دو کاسه خالی در نور ماه، ستون‌های تصویری اصلی فیلم هستند.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+
+      <section class="section">
+        <div class="section-title">
+          <h2>پیام اثر</h2>
+        </div>
+
+        <div class="writer-note">
+          <p>
+            «کوزه و مار» نشان می‌دهد که گاهی یک نیاز ساده و انسانی می‌تواند
+            پرده از سال‌ها نابرابری و سکوت بردارد. تغییر همیشه با فریاد آغاز
+            نمی‌شود؛ گاهی با یک جرعه آب، یک سهم نان و جمله‌ای آرام آغاز می‌شود:
+            این‌که انسان بالاخره حق خود را به رسمیت بشناسد.
+          </p>
+        </div>
+      </section>
+
+
+      <section class="section">
+        <div class="section-title">
+          <h2>نگاه نویسنده</h2>
+        </div>
+
+        <div class="writer-note">
+
+          <p>
+            هسته اصلی داستان، تبدیل یک موقعیت بسیار ساده ــ تشنگی یک کشاورز
+            در مزرعه ــ به بحرانی در رابطه قدرت داخل خانه است.
+          </p>
+
+          <p>
+            کاظم در پایان به یک قهرمان کلاسیک تبدیل نمی‌شود؛ فقط برای نخستین
+            بار از جایگاه خود دفاع می‌کند. از همین رو، پایان داستان به جای
+            پیروزی یک نفر، به شکل‌گیری مفهومی تازه از «سهم» و «تقسیم» ختم می‌شود.
+          </p>
+
+        </div>
+      </section>
+
+    </main>
+
+
+    <footer>
+      <strong>فیلمنامه کوتاه · اثر آماده ارائه</strong>
+      ................................
+      <br>
+      فیلمنامه کوتاه «کوزه و مار»
+    </footer>
+
+  </div>
+
+</body>
+</html>
