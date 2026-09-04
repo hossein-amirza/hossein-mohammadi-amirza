@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>دژ شیرزنان | حسین محمدی</title>
+
+  <meta name="description" content="دژ شیرزنان؛ روایتی میان تاریخ و افسانه، نوشته حسین محمدی.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background:
+        radial-gradient(circle at 50% 0%, rgba(184, 134, 11, 0.12), transparent 35%),
+        #080808;
+      color: #e8e1d3;
+      font-family: Tahoma, Arial, sans-serif;
+      line-height: 2;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1100px, 92%);
+      margin: auto;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(
+          to bottom,
+          rgba(0,0,0,0.25),
+          rgba(0,0,0,0.92)
+        );
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 70px 20px;
+    }
+
+    .eyebrow {
+      color: #d4af37;
+      font-size: 14px;
+      letter-spacing: 5px;
+      margin-bottom: 25px;
+    }
+
+    .hero h1 {
+      font-size: clamp(55px, 11vw, 120px);
+      line-height: 1;
+      color: #d4af37;
+      text-shadow: 0 0 35px rgba(212, 175, 55, 0.18);
+      margin-bottom: 25px;
+      font-weight: 700;
+    }
+
+    .hero h2 {
+      font-size: clamp(20px, 3vw, 32px);
+      font-weight: 400;
+      color: #f0eadc;
+      margin-bottom: 30px;
+    }
+
+    .author {
+      font-size: 18px;
+      color: #bdb5a6;
+    }
+
+    .gold-line {
+      width: 100px;
+      height: 2px;
+      background: #d4af37;
+      margin: 35px auto;
+    }
+
+    /* COVER */
+
+    .cover-section {
+      padding: 90px 0;
+      text-align: center;
+    }
+
+    .cover-frame {
+      max-width: 600px;
+      margin: auto;
+      padding: 10px;
+      border: 1px solid rgba(212, 175, 55, 0.55);
+      box-shadow:
+        0 0 50px rgba(212, 175, 55, 0.08),
+        0 20px 70px rgba(0, 0, 0, 0.7);
+    }
+
+    .cover-frame img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    /* SECTIONS */
+
+    section.content-section {
+      padding: 85px 0;
+      border-top: 1px solid rgba(212, 175, 55, 0.12);
+    }
+
+    .section-title {
+      text-align: center;
+      color: #d4af37;
+      font-size: clamp(28px, 5vw, 45px);
+      margin-bottom: 45px;
+    }
+
+    .section-title::after {
+      content: "";
+      display: block;
+      width: 65px;
+      height: 2px;
+      background: #d4af37;
+      margin: 18px auto 0;
+    }
+
+    .prologue {
+      max-width: 850px;
+      margin: auto;
+      font-size: 18px;
+      color: #d4cec1;
+    }
+
+    .prologue p {
+      margin-bottom: 28px;
+    }
+
+    .opening {
+      text-align: center;
+      font-size: 20px;
+      color: #d4af37;
+      margin-bottom: 45px;
+      line-height: 2.2;
+    }
+
+    /* THREE ACTS */
+
+    .acts {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .act {
+      background:
+        linear-gradient(
+          145deg,
+          rgba(212,175,55,0.08),
+          rgba(255,255,255,0.015)
+        );
+      border: 1px solid rgba(212,175,55,0.2);
+      padding: 35px 28px;
+      transition: transform .3s ease, border-color .3s ease;
+    }
+
+    .act:hover {
+      transform: translateY(-7px);
+      border-color: rgba(212,175,55,0.6);
+    }
+
+    .act-number {
+      color: #d4af37;
+      font-size: 14px;
+      letter-spacing: 3px;
+      margin-bottom: 10px;
+    }
+
+    .act h3 {
+      color: #f0eadc;
+      font-size: 25px;
+      margin-bottom: 18px;
+    }
+
+    .act p {
+      color: #bbb4a8;
+      font-size: 16px;
+    }
+
+    /* CHARACTERS */
+
+    .characters {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 15px;
+    }
+
+    .character {
+      text-align: center;
+      padding: 28px 12px;
+      border-top: 1px solid rgba(212,175,55,0.25);
+      border-bottom: 1px solid rgba(212,175,55,0.12);
+    }
+
+    .character strong {
+      display: block;
+      color: #d4af37;
+      font-size: 19px;
+      margin-bottom: 8px;
+    }
+
+    .character span {
+      color: #aaa397;
+      font-size: 14px;
+    }
+
+    /* THEMES */
+
+    .themes {
+      max-width: 900px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .theme {
+      padding: 30px;
+      background: rgba(255,255,255,0.025);
+      border-right: 2px solid #d4af37;
+    }
+
+    .theme h3 {
+      color: #d4af37;
+      margin-bottom: 10px;
+      font-size: 21px;
+    }
+
+    .theme p {
+      color: #bcb5a9;
+    }
+
+    /* QUOTE */
+
+    .quote-section {
+      padding: 120px 20px;
+      text-align: center;
+      background:
+        radial-gradient(
+          circle,
+          rgba(212,175,55,0.09),
+          transparent 65%
+        );
+      border-top: 1px solid rgba(212,175,55,0.2);
+      border-bottom: 1px solid rgba(212,175,55,0.2);
+    }
+
+    blockquote {
+      max-width: 850px;
+      margin: auto;
+      font-size: clamp(25px, 4vw, 42px);
+      line-height: 1.8;
+      color: #eee7d9;
+    }
+
+    blockquote::before {
+      content: "«";
+      display: block;
+      color: #d4af37;
+      font-size: 70px;
+      line-height: .7;
+    }
+
+    /* SIGNATURE */
+
+    .signature {
+      text-align: center;
+      padding: 80px 20px 100px;
+    }
+
+    .signature p {
+      color: #aaa397;
+      margin-bottom: 15px;
+    }
+
+    .signature strong {
+      color: #d4af37;
+      font-size: 25px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      border-top: 1px solid rgba(212,175,55,0.15);
+      padding: 30px 20px;
+      text-align: center;
+      color: #777166;
+      font-size: 13px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 800px) {
+      .acts {
+        grid-template-columns: 1fr;
+      }
+
+      .characters {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .themes {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: 85vh;
+      }
+
+      section.content-section {
+        padding: 65px 0;
+      }
+
+      .prologue {
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .characters {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 58px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO -->
+
+  <header class="hero">
+    <div class="hero-content">
+
+      <div class="eyebrow">رمان تاریخی ـ حماسی</div>
+
+      <h1>دژ شیرزنان</h1>
+
+      <h2>در میانه تاریخ و افسانه</h2>
+
+      <div class="gold-line"></div>
+
+      <div class="author">
+        نوشتهٔ <strong>حسین محمدی</strong>
+      </div>
+
+    </div>
+  </header>
+
+
+  <!-- COVER -->
+
+  <section class="cover-section">
+    <div class="container">
+
+      <div class="cover-frame">
+        <!-- مسیر تصویر جلد موجود در پوشه covers را در src قرار بده -->
+        <img
+          src="../covers/dej-shirzanan.jpg"
+          alt="جلد دژ شیرزنان"
+        >
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- PROLOGUE -->
+
+  <section class="content-section">
+    <div class="container">
+
+      <h2 class="section-title">پیش‌گفتار</h2>
+
+      <div class="opening">
+        به نام خدایی که<br>
+        به مادران توانایی ویژه‌ای بخشیده است
+      </div>
+
+      <div class="prologue">
+
+        <p>
+          <strong>دژ شیرزنان: در میانه تاریخ و افسانه</strong>
+        </p>
+
+        <p>
+          این داستان، روایت شکست نیست؛ روایت پیروزیِ روحی است که در برابر زوال
+          می‌ایستد. «دژ شیرزنان» حماسه‌ای است که در قلمروی میان تاریخ و اسطوره
+          می‌زید، برآمده از خاطره‌ی جمعی مردمانی که خاکشان را با جان خریدند و
+          شرافت را به زندگی ترجیح دادند.
+        </p>
+
+        <p>
+          آنچه در پیش رو دارید، تنها یک رمان تاریخی نیست؛ سفری است به ژرفای
+          جان‌هایی که در تاریک‌ترین لحظات، یکرنگی را برگزیدند و در آستانه مرگ،
+          جاودانگی را به میراث بردند.
+        </p>
+
+        <p>
+          در پس این صفحه‌ها، پرسشی بنیادین نهفته است:
+          آیا می‌توان تمدنی را به زور شمشیر از میان برداشت؟
+        </p>
+
+        <p>
+          این رمان پاسخی است به آنان که گمان می‌برند فرهنگ و هویت مردمان را
+          می‌توان به زنجیر کشید یا به فراموشی سپرد.
+        </p>
+
+        <p>
+          داستان از سه نسل می‌گوید: نسل پدران که در آرامش، بنیان آینده را
+          می‌ریزند؛ نسل فرزندان که در آتش حمله، قربانی می‌شوند؛ و نسل واپسین،
+          که از خاکستر برمی‌خیزد تا معنای راستین پایداری را به نمایش بگذارد.
+        </p>
+
+        <p>
+          این سه‌گانگی، نمادی است از چرخه‌ی ابدی زندگی، مرگ و تولد دوباره.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- THREE ACTS -->
+
+  <section class="content-section">
+    <div class="container">
+
+      <h2 class="section-title">سه پردهٔ داستان</h2>
+
+      <div class="acts">
+
+        <article class="act">
+          <div class="act-number">پردهٔ یکم</div>
+
+          <h3>پیش از طوفان</h3>
+
+          <p>
+            با گودرز و کامیار آشنا می‌شویم؛ دو سردار که رفاقت‌شان در سایه
+            رقابت می‌درخشد. آنان نماینده ایران قدرتمند و خودباورند.
+            گیسیا و کیان، زاده این فضای پرورش‌یافته‌اند و عشق آنان نماد
+            امیدی است که در دل سخت‌ترین شرایط می‌روید.
+          </p>
+        </article>
+
+
+        <article class="act">
+          <div class="act-number">پردهٔ دوم</div>
+
+          <h3>آتش و سقوط</h3>
+
+          <p>
+            حمله سپاهان تازی همچون سیلابی ویرانگر همه چیز را با خود می‌برد.
+            مردان از گودرز و کامیار تا کیان و یارانش در راه دفاع از میهن
+            جان می‌بازند. مرگ آنان، اگرچه شکست نظامی را به دنبال دارد،
+            آغاز مقاومتی بزرگ‌تر است.
+          </p>
+        </article>
+
+
+        <article class="act">
+          <div class="act-number">پردهٔ سوم</div>
+
+          <h3>دژ شیرزنان</h3>
+
+          <p>
+            گیسیا پس از از دست دادن همسر، پدر و برادرش، به نمادی از عزم
+            و اراده بدل می‌شود. زنان دژ گرد هم می‌آیند تا در برابر سپاهی
+            مجهز و بی‌رحم بایستند؛ نبردی نابرابر که در آن روح بر ماده
+            پیروز می‌شود.
+          </p>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- CHARACTERS -->
+
+  <section class="content-section">
+    <div class="container">
+
+      <h2 class="section-title">شخصیت‌ها</h2>
+
+      <div class="characters">
+
+        <div class="character">
+          <strong>گیسیا</strong>
+          <span>نماد عزم و آزادگی</span>
+        </div>
+
+        <div class="character">
+          <strong>آتوسا</strong>
+          <span>زن جنگجو</span>
+        </div>
+
+        <div class="character">
+          <strong>ماهتابان</strong>
+          <span>نماد فداکاری</span>
+        </div>
+
+        <div class="character">
+          <strong>پروین</strong>
+          <span>زن خردمند</span>
+        </div>
+
+        <div class="character">
+          <strong>گلچهره</strong>
+          <span>نماد مهر و شجاعت</span>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- THEMES -->
+
+  <section class="content-section">
+    <div class="container">
+
+      <h2 class="section-title">درونمایهٔ اثر</h2>
+
+      <div class="themes">
+
+        <div class="theme">
+          <h3>مقاومت</h3>
+          <p>
+            مقاومت همیشه مسلح به شمشیر نیست؛ گاهی با قلبی سرشار از عشق
+            به فرزندان می‌توان دیواری شکست‌ناپذیر ساخت.
+          </p>
+        </div>
+
+        <div class="theme">
+          <h3>هویت</h3>
+          <p>
+            فرهنگ و هویت مردمان، حتی در تاریک‌ترین دوره‌های تاریخ،
+            به آسانی قابل تسخیر و نابودی نیست.
+          </p>
+        </div>
+
+        <div class="theme">
+          <h3>فداکاری</h3>
+          <p>
+            مرگ شخصیت‌ها پایان راه نیست؛ فداکاری آنان بذری است که
+            در نسل‌های بعد به امید تبدیل می‌شود.
+          </p>
+        </div>
+
+        <div class="theme">
+          <h3>روح زنانه</h3>
+          <p>
+            گیسیا، آتوسا، ماهتابان، پروین و گلچهره هر یک جلوه‌ای از
+            مادری، جنگاوری، خردورزی و شهامت زنانه‌اند.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- FINAL -->
+
+  <section class="content-section">
+    <div class="container">
+
+      <h2 class="section-title">میراث دژ</h2>
+
+      <div class="prologue">
+
+        <p>
+          صحنه پایانی و یورش نهایی زنان، اگرچه به کشته شدن تمامی آنان
+          می‌انجامد، اما در حقیقت اوج پیروزی نمادین آنان است.
+        </p>
+
+        <p>
+          تغییر نام دژ به «دژ شیرزنان» توسط خود فاتحان، گواه این حقیقت
+          است که حتی دشمنان نیز در برابر شکوه این پایداری سر تعظیم فرود
+          می‌آورند.
+        </p>
+
+        <p>
+          «دژ شیرزنان» در نهایت، روایتی از امید است؛ امیدی که در نسل بعد،
+          در چشمان کودکانی که از این ماجرا جان به در برده‌اند، جریان می‌یابد.
+        </p>
+
+        <p>
+          این اثر به همه ما یادآوری می‌کند که قلمرو فرهنگ و هویت،
+          هرگز به طور کامل تسخیرشدنی نیست و روح آزادگی، از گذرگاه تاریخ
+          عبور می‌کند و به آیندگان می‌رسد.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- QUOTE -->
+
+  <section class="quote-section">
+
+    <blockquote>
+      ما، در جایگاه خود، برای چه چیزی می‌ایستیم؟
+    </blockquote>
+
+  </section>
+
+
+  <!-- SIGNATURE -->
+
+  <section class="signature">
+
+    <p>با احترام</p>
+
+    <strong>حسین محمدی</strong>
+
+  </section>
+
+
+  <footer>
+    © دژ شیرزنان — حسین محمدی
+  </footer>
+
+</body>
+</html>
