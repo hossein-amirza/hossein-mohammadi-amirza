@@ -6,15 +6,24 @@
 <title>وبلاگ حسین محمدی آمیرزا | نوشته‌ها و پژوهش‌ها</title>
 <meta name="description" content="وبلاگ رسمی حسین محمدی آمیرزا؛ یادداشت‌ها، فصل‌های کتاب، پژوهش‌های تاریخی و نوشته‌های ادبی.">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://hossein-amirza.github.io/hossein-mohammadi-amirza/blog.html">
-<link rel="stylesheet" href="style.css">
+<link rel="canonical" href="https://hossein-amirza.github.io/hossein-mohammadi-amirza/blog/">
+<link rel="stylesheet" href="../style.css">
 </head>
+
 <body>
+
 <header class="subhero">
 <nav class="nav wrap">
-<a class="brand" href="index.html">✍️ حسین محمدی آمیرزا</a>
-<div class="links"><a href="index.html">خانه</a><a href="tarikh-adyan.html">تاریخ ادیان</a><a href="blog.html">وبلاگ</a><a href="index.html#contact">تماس</a></div>
+<a class="brand" href="../index.html">✍️ حسین محمدی آمیرزا</a>
+
+<div class="links">
+<a href="../index.html">خانه</a>
+<a href="../tarikh-adyan.html">تاریخ ادیان</a>
+<a href="index.html">وبلاگ</a>
+<a href="../index.html#contact">تماس</a>
+</div>
 </nav>
+
 <div class="wrap subhero-content">
 <span class="eyebrow">📝 دفتر نوشته‌ها</span>
 <h1>وبلاگ حسین محمدی آمیرزا</h1>
@@ -24,65 +33,103 @@
 
 <main class="section">
 <div class="wrap blog-list" id="blog-posts">
-  <div style="text-align:center;padding:40px;color:#77675d;">در حال بارگذاری نوشته‌ها...</div>
+
+<div style="text-align:center;padding:40px;color:#77675d;">
+در حال بارگذاری نوشته‌ها...
+</div>
+
 </div>
 </main>
 
-<footer><div class="wrap">© <span id="year"></span> حسین محمدی آمیرزا</div></footer>
-<script src="script.js"></script>
+<footer>
+<div class="wrap">
+© <span id="year"></span> حسین محمدی آمیرزا
+</div>
+</footer>
+
+<script src="../script.js"></script>
+
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-  fetch('posts/posts.json')
-    .then(res => res.json())
-    .then(posts => {
-      const container = document.getElementById('blog-posts');
-      posts.sort((a, b) => new Date(b.date) - new Date(a.date));
-      
-      let html = '';
-      posts.forEach(post => {
-        html += `
-          <article class="post-card">
-            <span class="tag">${post.tag || 'نوشته'}</span>
-            <h2>${post.title}</h2>
-            <p>${post.excerpt || ''}</p>
-            <a class="btn" href="post-detail.html?id=${post.id}">📖 خواندن مطلب</a>
-          </article>
-        `;
-      });
-      
-      container.innerHTML = html;
-    })
-    .catch(() => {
-      document.getElementById('blog-posts').innerHTML = `
-        <div class="blog-list">
-          <article class="post-card">
-            <span class="tag">فصل هفدهم</span>
-            <h2>کشاورزی؛ وقتی انسان تصمیم گرفت طبیعت را تغییر دهد</h2>
-            <p>دانه‌ای که تاریخ را تغییر داد</p>
-            <a class="btn" href="post-17.html">📖 خواندن مطلب</a>
-          </article>
-          <article class="post-card">
-            <span class="tag">فصل شانزدهم</span>
-            <h2>زمان؛ وقتی انسان تلاش کرد گذر زمان را اندازه بگیرد</h2>
-            <p>چیزی که نمی‌توان متوقفش کرد</p>
-            <a class="btn" href="post-16.html">📖 خواندن مطلب</a>
-          </article>
-          <article class="post-card">
-            <span class="tag">فصل پانزدهم</span>
-            <h2>زمان؛ وقتی انسان تلاش کرد گذر جهان را اندازه بگیرد</h2>
-            <p>چیزی که نمی‌توان متوقفش کرد</p>
-            <a class="btn" href="post-15.html">📖 خواندن مطلب</a>
-          </article>
-          <article class="post-card">
-            <span class="tag">فصل چهاردهم</span>
-            <h2>عدد؛ وقتی انسان جهان را شمرد</h2>
-            <p>از «یکی» تا «چندتا»</p>
-            <a class="btn" href="post-14.html">📖 خواندن مطلب</a>
-          </article>
-        </div>
-      `;
-    });
+document.addEventListener("DOMContentLoaded", function () {
+
+const container = document.getElementById("blog-posts");
+
+fetch("../content/posts.json")
+.then(response => {
+
+if (!response.ok) {
+throw new Error("posts.json پیدا نشد");
+}
+
+return response.json();
+
+})
+.then(posts => {
+
+if (!Array.isArray(posts) || posts.length === 0) {
+throw new Error("هیچ نوشته‌ای پیدا نشد");
+}
+
+posts.sort((a, b) => {
+return new Date(b.date || 0) - new Date(a.date || 0);
+});
+
+let html = "";
+
+posts.forEach(post => {
+
+html += `
+<article class="post-card">
+
+<span class="tag">
+${post.tag || "نوشته"}
+</span>
+
+<h2>
+${post.title || "بدون عنوان"}
+</h2>
+
+<p>
+${post.excerpt || ""}
+</p>
+
+<a class="btn" href="../post-detail.html?id=${encodeURIComponent(post.id)}">
+📖 خواندن مطلب
+</a>
+
+</article>
+`;
+
+});
+
+container.innerHTML = html;
+
+})
+
+.catch(error => {
+
+console.log(error);
+
+container.innerHTML = `
+<article class="post-card">
+
+<span class="tag">وبلاگ</span>
+
+<h2>
+نوشته‌ها به‌زودی نمایش داده می‌شوند
+</h2>
+
+<p>
+نوشته‌های منتشرشده در حال آماده‌سازی برای نمایش در وبلاگ هستند.
+</p>
+
+</article>
+`;
+
+});
+
 });
 </script>
+
 </body>
 </html>
