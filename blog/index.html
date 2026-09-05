@@ -2,59 +2,39 @@
 <html lang="fa" dir="rtl">
 
 <head>
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>وبلاگ حسین محمدی آمیرزا</title>
-  <meta name="description" content="وبلاگ حسین محمدی آمیرزا؛ جست‌وجوی معنا در تاریخ، ادیان و اندیشه">
 
-  <!-- فونت‌ها -->
+  <title>وبلاگ حسین محمدی آمیرزا</title>
+
+  <meta
+    name="description"
+    content="وبلاگ حسین محمدی آمیرزا؛ جست‌وجوی معنا در تاریخ، ادیان و اندیشه"
+  >
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Noto+Nastaliq+Urdu:wght@400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Noto+Nastaliq+Urdu:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
 
   <style>
 
-    /* ============================================================
-       ✦  وبلاگ حسین محمدی آمیرزا — نسخهٔ ارتقاءیافته با افکت خمیر برجسته  ✦
-       ============================================================ */
-
     :root {
-
-      --black-deep: #070605;
-      --black: #0d0b09;
-      --black-soft: #16120d;
-      --black-card: #0a0806;
+      --black: #080705;
+      --black-2: #11100d;
+      --black-3: #1a1711;
 
       --gold: #d4af37;
-      --gold-light: #f0d36c;
-      --gold-soft: #b99a52;
-      --gold-pale: rgba(212, 175, 55, 0.08);
+      --gold-light: #efd574;
+      --gold-dark: #9f8126;
 
-      --cream: #e8deca;
-      --cream-soft: #c9bea9;
-      --muted: #958974;
-
-      --shadow-deep: 0 35px 95px rgba(0, 0, 0, 0.70);
-      --shadow-medium: 0 16px 45px rgba(0, 0, 0, 0.36);
-      --shadow-light: 0 5px 16px rgba(0, 0, 0, 0.35);
-
-      --border-gold: rgba(212, 175, 55, 0.24);
-      --border-gold-light: rgba(212, 175, 55, 0.16);
-      --border-gold-soft: rgba(212, 175, 55, 0.08);
-
-      --radius-large: 32px;
-      --radius-medium: 24px;
-      --radius-small: 18px;
-      --radius-pill: 999px;
-
-      --transition-smooth: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+      --text: #e6ddca;
+      --text-soft: #c6baa4;
+      --muted: #958975;
     }
-
-
-    /* ============================================================
-       پایه
-       ============================================================ */
 
     * {
       margin: 0;
@@ -67,171 +47,98 @@
     }
 
     body {
-
       min-height: 100vh;
 
       background:
-
         radial-gradient(
-          circle at 8% 7%,
-          rgba(212, 175, 55, 0.10),
-          transparent 28%
+          circle at 12% 8%,
+          rgba(212,175,55,.12),
+          transparent 25%
         ),
-
         radial-gradient(
-          circle at 92% 88%,
-          rgba(139, 111, 48, 0.07),
-          transparent 32%
+          circle at 88% 82%,
+          rgba(138,108,42,.10),
+          transparent 30%
         ),
-
-        radial-gradient(
-          circle at 50% 50%,
-          rgba(255, 255, 255, 0.02),
-          transparent 50%
-        ),
-
-        repeating-linear-gradient(
-          45deg,
-          rgba(50, 45, 38, 0.015) 0px,
-          rgba(50, 45, 38, 0.015) 2px,
-          transparent 2px,
-          transparent 8px
-        ),
-
         linear-gradient(
           145deg,
           #070605 0%,
-          #11100d 45%,
-          #090806 100%
+          #12100d 45%,
+          #080705 100%
         );
 
       background-attachment: fixed;
-
-      color: var(--cream);
 
       font-family:
         "Noto Naskh Arabic",
         "Amiri",
         serif;
 
-      -webkit-font-smoothing: antialiased;
+      color: var(--text);
     }
 
-
-    /* ============================================================
+    /* ==============================
        قاب اصلی
-       ============================================================ */
+       ============================== */
 
     .blog-container {
+      width: min(calc(100% - 28px), 1050px);
 
-      width: min(calc(100% - 28px), 1080px);
+      margin: 48px auto 65px;
 
-      margin: 45px auto 65px;
-
-      padding: 58px 64px 70px;
+      padding: 58px 62px 65px;
 
       position: relative;
 
       background:
-
         linear-gradient(
           145deg,
-          rgba(25, 21, 16, 0.98),
-          rgba(10, 9, 7, 0.98)
+          rgba(27,24,19,.98),
+          rgba(10,9,7,.98)
         );
 
-      border: 1px solid var(--border-gold);
+      border:
+        1px solid rgba(212,175,55,.27);
 
-      border-radius: var(--radius-large);
+      border-radius: 30px;
 
       box-shadow:
+        0 35px 90px rgba(0,0,0,.72),
+        0 10px 30px rgba(0,0,0,.46),
+        inset 0 1px 0 rgba(255,255,255,.035);
 
-        var(--shadow-deep),
-
-        0 8px 28px
-        rgba(0, 0, 0, 0.45),
-
-        inset 0 1px 0
-        rgba(255, 255, 255, 0.035),
-
-        /* سایهٔ طلاییِ بسیار ملایم برای درخشش */
-        inset 0 0 80px
-        rgba(212, 175, 55, 0.01);
-
-      transition: var(--transition-smooth);
+      overflow: hidden;
     }
 
-    /* افکت شناور قاب */
-    .blog-container:hover {
-      box-shadow:
-        var(--shadow-deep),
-        0 12px 40px rgba(0, 0, 0, 0.50),
-        inset 0 1px 0 rgba(255, 255, 255, 0.04),
-        inset 0 0 100px rgba(212, 175, 55, 0.015);
-      transform: translateY(-2px);
-    }
-
-    /* قاب داخلی با دو لایه */
     .blog-container::before {
-
       content: "";
 
       position: absolute;
-
       inset: 15px;
 
-      border: 1px solid var(--border-gold-soft);
+      border:
+        1px solid rgba(212,175,55,.09);
 
-      border-radius: var(--radius-medium);
-
-      pointer-events: none;
-
-      box-shadow:
-        inset 0 0 60px rgba(212, 175, 55, 0.015),
-        0 0 40px rgba(212, 175, 55, 0.01);
-    }
-
-    /* لایهٔ دوم حاشیه */
-    .blog-container::after {
-
-      content: "✦  ✦  ✦";
-
-      position: absolute;
-
-      top: 14px;
-
-      left: 50%;
-
-      transform: translateX(-50%);
-
-      color: rgba(212, 175, 55, 0.30);
-
-      font-size: 0.75rem;
-
-      letter-spacing: 12px;
+      border-radius: 23px;
 
       pointer-events: none;
     }
 
-
-    /* ============================================================
+    /* ==============================
        هدر
-       ============================================================ */
+       ============================== */
 
     .blog-header {
-
+      text-align: center;
       position: relative;
 
-      text-align: center;
-
-      padding: 12px 20px 40px;
+      padding:
+        10px 15px 40px;
 
       margin-bottom: 38px;
     }
 
-    /* نگین بالای هدر */
     .blog-header::before {
-
       content: "❈";
 
       display: block;
@@ -240,96 +147,53 @@
 
       color: var(--gold);
 
-      font-size: 1.5rem;
-
-      animation: gentleGlow 4s ease-in-out infinite;
+      font-size: 1.45rem;
     }
-
-    @keyframes gentleGlow {
-      0%, 100% { opacity: 0.4; transform: scale(1); }
-      50% { opacity: 0.9; transform: scale(1.08); }
-    }
-
-    /* ===== عنوان اصلی با افکت خمیر برجسته (Embossed Paste) ===== */
 
     .blog-header h1 {
-
       font-family:
         "Noto Nastaliq Urdu",
         "Amiri",
         serif;
 
-      font-size: clamp(2rem, 5vw, 3.1rem);
+      font-size:
+        clamp(2rem, 5vw, 3.1rem);
 
       font-weight: 400;
 
       line-height: 2.1;
 
+      color: var(--gold-light);
+
       text-align: center;
 
-      color: var(--gold);
-
       text-shadow:
-        /* برجستگی مثل خمیر — ۷ لایه سایه */
-        0 1px 0 rgba(255, 255, 255, 0.08),
-        0 2px 0 rgba(212, 175, 55, 0.30),
-        0 3px 0 rgba(180, 150, 50, 0.20),
-        0 4px 0 rgba(150, 120, 40, 0.12),
-        0 5px 8px rgba(0, 0, 0, 0.60),
-        0 8px 20px rgba(0, 0, 0, 0.40),
-        0 12px 40px rgba(0, 0, 0, 0.20);
-
-      letter-spacing: 0.5px;
-
-      transition: var(--transition-smooth);
-    }
-
-    .blog-header h1:hover {
-      color: #f0d86c;
-      text-shadow:
-        0 1px 0 rgba(255, 255, 255, 0.10),
-        0 2px 0 rgba(212, 175, 55, 0.40),
-        0 3px 0 rgba(180, 150, 50, 0.25),
-        0 4px 0 rgba(150, 120, 40, 0.15),
-        0 6px 12px rgba(0, 0, 0, 0.60),
-        0 10px 30px rgba(0, 0, 0, 0.40);
+        0 2px 6px rgba(0,0,0,.85),
+        0 0 25px rgba(212,175,55,.05);
     }
 
     .blog-header .subtitle {
-
       margin-top: 13px;
 
       font-family:
-        "EB Garamond",
         "Amiri",
         "Noto Naskh Arabic",
         serif;
 
-      font-size: 1.15rem;
-
-      font-style: italic;
+      font-size: 1.12rem;
 
       line-height: 2;
 
+      color: var(--gold-dark);
+
       text-align: center;
-
-      color: var(--gold-soft);
-
-      text-shadow:
-        0 1px 0 rgba(0, 0, 0, 0.60),
-        0 2px 8px rgba(0, 0, 0, 0.30);
-
-      letter-spacing: 0.3px;
     }
 
-    /* خط طلایی زیر عنوان */
     .gold-line {
-
       width: 220px;
+      height: 1px;
 
-      height: 1.5px;
-
-      margin: 24px auto 0;
+      margin: 23px auto 0;
 
       background:
         linear-gradient(
@@ -339,196 +203,148 @@
           transparent
         );
 
-      opacity: 0.65;
-
-      border-radius: 4px;
-
-      box-shadow: 0 0 20px rgba(212, 175, 55, 0.06);
+      opacity: .7;
     }
 
-
-    /* ============================================================
-       لیست نوشته‌ها
-       ============================================================ */
+    /* ==============================
+       فهرست
+       ============================== */
 
     .post-list {
-
       display: flex;
-
       flex-direction: column;
-
-      gap: 35px;
+      gap: 32px;
     }
 
-
-    /* ============================================================
-       کارت مقاله — با افکت برجسته و عمق
-       ============================================================ */
+    /* ==============================
+       کارت مقاله
+       ============================== */
 
     .post-card {
-
       position: relative;
 
-      padding: 38px 45px 42px;
+      padding:
+        37px
+        43px
+        40px;
 
       background:
-
         linear-gradient(
           145deg,
-          rgba(28, 24, 18, 0.98),
-          rgba(10, 8, 6, 0.98)
+          rgba(28,24,18,.98),
+          rgba(9,8,6,.98)
         );
 
-      border: 1px solid var(--border-gold-light);
+      border:
+        1px solid rgba(212,175,55,.17);
 
-      border-radius: var(--radius-medium);
+      border-radius: 23px;
 
       box-shadow:
+        0 15px 42px rgba(0,0,0,.38),
+        inset 0 1px 0 rgba(255,255,255,.025);
 
-        var(--shadow-medium),
-
-        inset 0 1px 0
-        rgba(255, 255, 255, 0.025),
-
-        inset 0 0 60px
-        rgba(212, 175, 55, 0.01);
-
-      overflow: hidden;
-
-      transition: var(--transition-smooth);
+      transition:
+        transform .28s ease,
+        box-shadow .28s ease,
+        border-color .28s ease;
     }
 
-    /* حاشیهٔ داخلی کارت */
     .post-card::before {
-
       content: "";
 
       position: absolute;
-
       inset: 10px;
 
-      border: 1px solid rgba(212, 175, 55, 0.04);
+      border:
+        1px solid rgba(212,175,55,.045);
 
-      border-radius: 17px;
+      border-radius: 16px;
 
       pointer-events: none;
     }
 
-    /* نگین سمت چپ کارت */
     .post-card::after {
-
       content: "✦";
 
       position: absolute;
 
+      top: 18px;
       left: 23px;
 
-      top: 18px;
+      color:
+        rgba(212,175,55,.34);
 
-      color: rgba(212, 175, 55, 0.20);
-
-      font-size: 0.8rem;
-
-      pointer-events: none;
+      font-size: .8rem;
     }
 
-    /* افکت هاور کارت */
     .post-card:hover {
+      transform: translateY(-5px);
 
-      transform: translateY(-6px) scale(1.005);
-
-      border-color: rgba(212, 175, 55, 0.35);
+      border-color:
+        rgba(212,175,55,.35);
 
       box-shadow:
-
-        0 28px 70px
-        rgba(0, 0, 0, 0.50),
-
-        0 0 40px
-        rgba(212, 175, 55, 0.02),
-
-        inset 0 1px 0
-        rgba(255, 255, 255, 0.03);
+        0 25px 58px rgba(0,0,0,.50);
     }
 
-    /* ===== خط نورانی طلایی زیر کارت در هاور ===== */
-    .post-card::after {
-      transition: var(--transition-smooth);
-    }
-
-    .post-card:hover::after {
-      color: rgba(212, 175, 55, 0.45);
-      transform: scale(1.2);
-    }
-
-
-    /* ============================================================
-       شماره مقاله — با افکت خمیر برجسته
-       ============================================================ */
+    /* ==============================
+       شماره مقاله
+       ============================== */
 
     .article-number {
-
       width: fit-content;
 
-      margin: 0 auto 22px;
+      margin: 0 auto 23px;
 
-      padding: 6px 22px;
+      padding:
+        6px
+        20px;
 
-      background: #050403;
+      background:
+        linear-gradient(
+          180deg,
+          #15110b,
+          #050403
+        );
 
-      border: 1px solid rgba(212, 175, 55, 0.35);
+      border:
+        1px solid rgba(212,175,55,.45);
 
-      border-radius: var(--radius-pill);
+      border-radius: 999px;
 
-      color: var(--gold);
+      color: var(--gold-light);
 
-      font-family:
-        "Noto Naskh Arabic",
-        sans-serif;
-
-      font-size: 0.88rem;
-
-      font-weight: 600;
+      font-size: .9rem;
 
       box-shadow:
-        0 5px 16px rgba(0, 0, 0, 0.35),
-        inset 0 1px 0 rgba(212, 175, 55, 0.04);
+        0 5px 14px rgba(0,0,0,.35),
+        inset 0 1px 0 rgba(212,175,55,.07);
 
-      text-shadow:
-        0 1px 0 rgba(0, 0, 0, 0.60),
-        0 2px 4px rgba(0, 0, 0, 0.30);
-
-      letter-spacing: 0.5px;
-
-      transition: var(--transition-smooth);
+      text-align: center;
     }
 
-    .post-card:hover .article-number {
-      border-color: rgba(212, 175, 55, 0.55);
-      box-shadow:
-        0 5px 20px rgba(0, 0, 0, 0.40),
-        0 0 30px rgba(212, 175, 55, 0.04);
-    }
-
-
-    /* ============================================================
-       عنوان مقاله — با افکت خمیر برجسته
-       ============================================================ */
+    /* ==============================
+       عنوان مقاله
+       ============================== */
 
     .post-title {
-
       display: block;
 
       max-width: 850px;
 
-      margin: 0 auto 22px;
+      margin:
+        0
+        auto
+        20px;
 
       font-family:
         "Noto Nastaliq Urdu",
         "Amiri",
         serif;
 
-      font-size: clamp(1.55rem, 3vw, 2.25rem);
+      font-size:
+        clamp(1.55rem, 3vw, 2.25rem);
 
       font-weight: 400;
 
@@ -541,170 +357,129 @@
       text-decoration: none;
 
       text-shadow:
-        /* برجستگی مثل خمیر — ۶ لایه سایه */
-        0 1px 0 rgba(255, 255, 255, 0.04),
-        0 2px 0 rgba(212, 175, 55, 0.20),
-        0 3px 0 rgba(180, 150, 50, 0.12),
-        0 4px 0 rgba(150, 120, 40, 0.08),
-        0 6px 12px rgba(0, 0, 0, 0.60),
-        0 10px 30px rgba(0, 0, 0, 0.30);
+        0 2px 8px rgba(0,0,0,.65);
 
-      transition: var(--transition-smooth);
+      transition: color .25s ease;
     }
 
     .post-title:hover {
-
-      color: #ffe49a;
-
-      text-shadow:
-        0 1px 0 rgba(255, 255, 255, 0.06),
-        0 2px 0 rgba(212, 175, 55, 0.30),
-        0 3px 0 rgba(180, 150, 50, 0.18),
-        0 4px 0 rgba(150, 120, 40, 0.10),
-        0 6px 16px rgba(0, 0, 0, 0.60),
-        0 12px 40px rgba(0, 0, 0, 0.30),
-        0 0 40px rgba(212, 175, 55, 0.04);
-
-      transform: scale(1.005);
+      color: #ffe9a0;
     }
 
-
-    /* ============================================================
-       اطلاعات مقاله
-       ============================================================ */
+    /* ==============================
+       اطلاعات
+       ============================== */
 
     .post-meta {
-
       display: flex;
 
       justify-content: center;
-
       align-items: center;
 
       flex-wrap: wrap;
 
-      gap: 10px;
+      gap: 9px;
 
       margin-bottom: 22px;
     }
 
     .post-meta span {
-
-      display: inline-block;
-
-      padding: 6px 18px;
+      padding:
+        6px
+        16px;
 
       background: #090806;
 
-      border: 1px solid rgba(212, 175, 55, 0.23);
+      border:
+        1px solid rgba(212,175,55,.25);
 
-      border-radius: var(--radius-pill);
+      border-radius: 999px;
 
       color: var(--gold);
 
-      font-size: 0.89rem;
+      font-size: .88rem;
 
       line-height: 1.7;
-
-      font-weight: 500;
-
-      text-shadow:
-        0 1px 0 rgba(0, 0, 0, 0.50);
-
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.20);
-
-      transition: var(--transition-smooth);
     }
 
     .post-meta .date {
-
-      color: #e4d5ab;
+      color: #e5d7ad;
     }
 
     .post-meta .category {
-
       color: var(--gold);
-      border-color: rgba(212, 175, 55, 0.30);
     }
 
-    .post-card:hover .post-meta span {
-      border-color: rgba(212, 175, 55, 0.35);
-    }
-
-
-    /* ============================================================
+    /* ==============================
        جداکننده
-       ============================================================ */
+       ============================== */
 
     .post-divider {
+      width: 100px;
+      height: 1px;
 
-      width: 95px;
-
-      height: 1.5px;
-
-      margin: 0 auto 24px;
+      margin:
+        0
+        auto
+        24px;
 
       background:
         linear-gradient(
           to right,
           transparent,
-          rgba(212, 175, 55, 0.70),
+          var(--gold),
           transparent
         );
 
-      border-radius: 4px;
-
-      box-shadow: 0 0 16px rgba(212, 175, 55, 0.04);
+      opacity: .65;
     }
 
-
-    /* ============================================================
+    /* ==============================
        خلاصه
-       ============================================================ */
+       ============================== */
 
     .post-excerpt {
+      max-width: 800px;
 
-      max-width: 810px;
-
-      margin: 0 auto 27px;
+      margin:
+        0
+        auto
+        27px;
 
       font-family:
         "Noto Naskh Arabic",
         "Amiri",
         serif;
 
-      font-size: 1.08rem;
+      font-size: 1.07rem;
 
-      line-height: 2.3;
+      line-height: 2.35;
+
+      color: var(--text-soft);
 
       text-align: right;
-
-      color: var(--cream-soft);
-
-      text-shadow:
-        0 1px 2px rgba(0, 0, 0, 0.40);
-
-      letter-spacing: 0.2px;
     }
 
-
-    /* ============================================================
-       دکمهٔ ادامه مطلب — با افکت خمیر برجسته
-       ============================================================ */
+    /* ==============================
+       دکمه
+       ============================== */
 
     .read-more {
-
       display: table;
 
       margin: 0 auto;
 
-      padding: 9px 30px;
+      padding:
+        9px
+        28px;
 
-      background: #050403;
+      background:
+        #050403;
 
-      border: 1.5px solid rgba(212, 175, 55, 0.43);
+      border:
+        1px solid rgba(212,175,55,.48);
 
-      border-radius: var(--radius-pill);
+      border-radius: 999px;
 
       color: var(--gold-light);
 
@@ -712,351 +487,155 @@
         "Noto Naskh Arabic",
         sans-serif;
 
-      font-size: 0.95rem;
-
+      font-size: .95rem;
       font-weight: 600;
 
       text-decoration: none;
 
       box-shadow:
-        0 5px 16px rgba(0, 0, 0, 0.38),
-        inset 0 1px 0 rgba(212, 175, 55, 0.04);
+        0 5px 16px rgba(0,0,0,.38);
 
-      text-shadow:
-        0 1px 0 rgba(0, 0, 0, 0.50);
-
-      transition: var(--transition-smooth);
-
-      cursor: pointer;
-
-      letter-spacing: 0.5px;
+      transition: all .25s ease;
     }
 
-    /* ===== هاور دکمه — طلایی با نوشتهٔ مشکی ===== */
     .read-more:hover {
-
       background: var(--gold);
 
-      color: #090806;
+      color: #080705;
 
       border-color: var(--gold);
 
-      transform: translateY(-3px) scale(1.02);
+      transform:
+        translateY(-2px);
 
       box-shadow:
-        0 12px 32px
-        rgba(212, 175, 55, 0.25),
-        0 0 40px
-        rgba(212, 175, 55, 0.06);
-
-      text-shadow:
-        0 1px 0 rgba(255, 255, 255, 0.20);
+        0 9px 25px rgba(212,175,55,.20);
     }
 
-    /* ===== کلیک دکمه ===== */
-    .read-more:active {
-      transform: scale(0.96);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.30);
-    }
-
-
-    /* ============================================================
+    /* ==============================
        فوتر
-       ============================================================ */
+       ============================== */
 
     .blog-footer {
-
       position: relative;
 
-      margin-top: 58px;
+      margin-top: 55px;
 
-      padding-top: 32px;
+      padding-top: 31px;
 
-      border-top: 1px solid rgba(212, 175, 55, 0.14);
+      border-top:
+        1px solid rgba(212,175,55,.14);
 
       text-align: center;
 
       color: var(--muted);
 
-      font-size: 0.9rem;
-
-      font-family:
-        "Noto Naskh Arabic",
-        Tahoma,
-        sans-serif;
-
-      text-shadow:
-        0 1px 2px rgba(0, 0, 0, 0.30);
+      font-size: .88rem;
     }
 
     .blog-footer::before {
-
       content: "❧  ✦  ❧";
 
       position: absolute;
 
-      top: -17px;
+      top: -16px;
 
       left: 50%;
 
-      transform: translateX(-50%);
+      transform:
+        translateX(-50%);
 
-      padding: 0 18px;
+      padding: 0 15px;
 
-      background: #110e0a;
+      background: #0f0c09;
 
-      color: rgba(212, 175, 55, 0.50);
+      color:
+        rgba(212,175,55,.55);
 
-      font-size: 0.85rem;
+      font-size: .8rem;
 
-      letter-spacing: 6px;
+      letter-spacing: 5px;
     }
 
-
-    /* ============================================================
-       انیمیشن ورود کارت‌ها
-       ============================================================ */
-
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .post-card {
-      animation: fadeInUp 0.6s ease forwards;
-    }
-
-    .post-card:nth-child(2) {
-      animation-delay: 0.1s;
-    }
-    .post-card:nth-child(3) {
-      animation-delay: 0.2s;
-    }
-    .post-card:nth-child(4) {
-      animation-delay: 0.3s;
-    }
-    .post-card:nth-child(5) {
-      animation-delay: 0.4s;
-    }
-
-
-    /* ============================================================
-       انتخاب متن
-       ============================================================ */
-
-    ::selection {
-      background: rgba(212, 175, 55, 0.20);
-      color: var(--gold-light);
-    }
-
-    ::-moz-selection {
-      background: rgba(212, 175, 55, 0.20);
-      color: var(--gold-light);
-    }
-
-
-    /* ============================================================
-       اسکرول‌بار
-       ============================================================ */
-
-    ::-webkit-scrollbar {
-      width: 6px;
-      height: 6px;
-    }
-
-    ::-webkit-scrollbar-track {
-      background: #0a0806;
-    }
-
-    ::-webkit-scrollbar-thumb {
-      background: var(--gold-soft);
-      border-radius: 999px;
-    }
-
-    ::-webkit-scrollbar-thumb:hover {
-      background: var(--gold);
-    }
-
-
-    /* ============================================================
+    /* ==============================
        موبایل
-       ============================================================ */
+       ============================== */
 
     @media (max-width: 700px) {
 
       .blog-container {
-
         width: calc(100% - 16px);
 
-        margin: 15px auto 28px;
+        margin:
+          15px auto
+          28px;
 
-        padding: 42px 20px 48px;
+        padding:
+          40px
+          19px
+          48px;
 
-        border-radius: var(--radius-medium);
+        border-radius: 24px;
       }
 
       .blog-container::before {
-
         inset: 9px;
-
-        border-radius: var(--radius-small);
-      }
-
-      .blog-container::after {
-        display: none;
+        border-radius: 17px;
       }
 
       .blog-header {
+        padding:
+          10px
+          8px
+          30px;
 
-        padding: 10px 8px 30px;
-
-        margin-bottom: 30px;
+        margin-bottom: 29px;
       }
 
       .blog-header h1 {
-
         font-size: 1.85rem;
-
         line-height: 2.05;
       }
 
       .blog-header .subtitle {
-
-        font-size: 1rem;
-
-        line-height: 2.1;
-      }
-
-      .gold-line {
-
-        width: 150px;
+        font-size: .98rem;
       }
 
       .post-list {
-
         gap: 23px;
       }
 
       .post-card {
-
-        padding: 32px 20px 35px;
+        padding:
+          31px
+          20px
+          34px;
 
         border-radius: 20px;
       }
 
-      .post-card::after {
-        display: none;
-      }
-
       .post-title {
-
         font-size: 1.48rem;
-
         line-height: 2.05;
       }
 
       .post-excerpt {
-
-        font-size: 0.98rem;
-
+        font-size: .98rem;
         line-height: 2.2;
       }
 
       .post-meta span {
-
-        font-size: 0.82rem;
-
-        padding: 5px 12px;
-      }
-
-      .article-number {
-
-        font-size: 0.80rem;
-
-        padding: 5px 16px;
+        font-size: .80rem;
+        padding:
+          5px
+          11px;
       }
 
       .read-more {
-
-        font-size: 0.88rem;
-
-        padding: 8px 22px;
-      }
-
-      .blog-footer {
-        font-size: 0.82rem;
-      }
-
-      .blog-footer::before {
-        font-size: 0.7rem;
-        letter-spacing: 4px;
-        padding: 0 12px;
-      }
-    }
-
-    @media (max-width: 420px) {
-
-      .blog-container {
-
-        padding: 32px 14px 38px;
-      }
-
-      .blog-header h1 {
-        font-size: 1.5rem;
-      }
-
-      .post-card {
-        padding: 24px 14px 28px;
-      }
-
-      .post-title {
-        font-size: 1.25rem;
-        line-height: 1.9;
-      }
-
-      .post-excerpt {
-        font-size: 0.92rem;
-        line-height: 2.1;
-      }
-
-      .post-meta span {
-        font-size: 0.75rem;
-        padding: 4px 10px;
-      }
-
-      .read-more {
-        font-size: 0.82rem;
-        padding: 6px 18px;
-      }
-    }
-
-
-    /* ============================================================
-       کاهش حرکت
-       ============================================================ */
-
-    @media (prefers-reduced-motion: reduce) {
-      *,
-      *::before,
-      *::after {
-        animation-duration: 0.01ms !important;
-        transition-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-      }
-      .post-card {
-        animation: none !important;
-      }
-      .blog-container:hover {
-        transform: none !important;
-      }
-      .post-card:hover {
-        transform: none !important;
+        font-size: .88rem;
+        padding:
+          8px
+          22px;
       }
     }
 
@@ -1067,11 +646,8 @@
 
 <body>
 
-
   <main class="blog-container">
 
-
-    <!-- هدر -->
 
     <header class="blog-header">
 
@@ -1087,8 +663,6 @@
 
     </header>
 
-
-    <!-- نوشته‌ها -->
 
     <section
       id="posts-container"
@@ -1110,8 +684,6 @@
     </section>
 
 
-    <!-- فوتر -->
-
     <footer class="blog-footer">
 
       ©
@@ -1126,21 +698,18 @@
 
   <script>
 
-    /* ============================================================
-       سال
-       ============================================================ */
+    /* سال */
 
     document.getElementById("year").textContent =
       new Date().getFullYear();
 
 
-    /* ============================================================
-       اعداد انگلیسی به فارسی
-       ============================================================ */
+    /* اعداد فارسی */
 
     function toPersianNumbers(value) {
 
       return String(value)
+
         .replace(/0/g, "۰")
         .replace(/1/g, "۱")
         .replace(/2/g, "۲")
@@ -1155,52 +724,45 @@
     }
 
 
-    /* ============================================================
-       تبدیل میلادی به شمسی با فرمت فارسی
-       ============================================================ */
+    /* تاریخ شمسی */
 
-    function gregorianToJalali(input) {
+    function gregorianToJalali(value) {
 
-      if (!input) {
+      if (!value) {
         return "";
       }
 
       const date =
-        new Date(input);
+        new Date(value);
 
       if (isNaN(date.getTime())) {
-        return input;
+        return value;
       }
 
-      const formatter =
-        new Intl.DateTimeFormat(
-          "fa-IR-u-ca-persian",
-          {
-            year: "numeric",
-            month: "2-digit",
-            day: "2-digit"
-          }
-        );
-
-      return formatter.format(date);
+      return new Intl.DateTimeFormat(
+        "fa-IR-u-ca-persian",
+        {
+          year: "numeric",
+          month: "2-digit",
+          day: "2-digit"
+        }
+      ).format(date);
 
     }
 
 
-    /* ============================================================
-       دریافت نوشته‌ها از posts.json
-       ============================================================ */
+    /* ==========================================
+       خواندن posts.json
+       ========================================== */
 
     fetch("../posts/posts/posts.json")
 
       .then(function(response) {
 
         if (!response.ok) {
-
           throw new Error(
             "posts.json پیدا نشد"
           );
-
         }
 
         return response.json();
@@ -1210,17 +772,20 @@
       .then(function(data) {
 
         /*
-         * فایل posts.json در سایت فعلی
-         * ممکن است آرایه باشد یا content
-         * داخل آن به صورت رشته ذخیره شده باشد.
+         * ساختار فعلی فایل شما:
+         *
+         * {
+         *   "content": "[ ... ]"
+         * }
+         *
+         * بنابراین اگر content رشته باشد
+         * باید یک بار دیگر JSON.parse شود.
          */
 
         let posts = [];
 
 
-        if (
-          Array.isArray(data)
-        ) {
+        if (Array.isArray(data)) {
 
           posts = data;
 
@@ -1232,9 +797,7 @@
         ) {
 
           posts =
-            JSON.parse(
-              data.content
-            );
+            JSON.parse(data.content);
 
         }
 
@@ -1275,10 +838,11 @@
             '</article>';
 
           return;
+
         }
 
 
-        /* مرتب‌سازی جدیدترین نوشته در ابتدا */
+        /* جدیدترین نوشته اول */
 
         posts.sort(
           function(a, b) {
@@ -1295,7 +859,7 @@
         container.innerHTML = "";
 
 
-        /* ساخت کارت‌ها */
+        /* ساخت نوشته‌ها */
 
         posts.forEach(
           function(post, index) {
@@ -1309,7 +873,7 @@
               "post-card";
 
 
-            /* شماره مقاله */
+            /* شماره */
 
             const number =
               document.createElement(
@@ -1355,7 +919,7 @@
               );
 
 
-            /* اطلاعات مقاله */
+            /* اطلاعات */
 
             const meta =
               document.createElement(
@@ -1448,20 +1012,25 @@
                 post.content ||
                 "";
 
+
               text =
                 String(text)
+
                   .replace(
                     /<[^>]*>/g,
                     " "
                   )
+
                   .replace(
                     /[#*_`]/g,
                     ""
                   )
+
                   .replace(
                     /\s+/g,
                     " "
                   )
+
                   .trim();
 
 
@@ -1503,54 +1072,36 @@
               title.href;
 
 
-            /* ساخت نهایی کارت */
+            /* ساخت کارت */
 
-            card.appendChild(
-              number
-            );
+            card.appendChild(number);
 
-            card.appendChild(
-              title
-            );
+            card.appendChild(title);
 
 
             if (
               meta.children.length
             ) {
 
-              card.appendChild(
-                meta
-              );
+              card.appendChild(meta);
 
             }
 
 
-            card.appendChild(
-              divider
-            );
+            card.appendChild(divider);
 
-            card.appendChild(
-              excerpt
-            );
+            card.appendChild(excerpt);
 
-            card.appendChild(
-              readMore
-            );
+            card.appendChild(readMore);
 
 
-            container.appendChild(
-              card
-            );
+            container.appendChild(card);
 
           }
         );
 
       })
 
-
-      /* ============================================================
-         خطا
-         ============================================================ */
 
       .catch(function(error) {
 
@@ -1579,7 +1130,6 @@
       });
 
   </script>
-
 
 </body>
 
