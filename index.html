@@ -2887,59 +2887,1831 @@
     </div>
   </div>
 </section>
-```
-    <!-- ===== BLOG ===== -->
-    <section class="section blog-section" id="blog" aria-labelledby="blog-title">
-      <div class="container">
-        <div class="section-heading section-heading-split">
-          <div>
-            <span class="section-kicker">دفتر نوشته‌ها</span>
-            <h2 id="blog-title">یادداشت‌ها و روایت‌ها</h2>
-            <p>فصل‌هایی از یک جست‌وجوی ادامه‌دار</p>
+```<!-- =========================================================
+     BLOG GATEWAY — CINEMATIC / PREMIUM EDITION
+     ========================================================= -->
+<section class="blog-gateway" id="blog" aria-labelledby="blog-gateway-title">
+
+  <style>
+    /* =====================================================
+       BLOG GATEWAY — VARIABLES
+       ===================================================== */
+    .blog-gateway {
+      --bg: #080808;
+      --bg-deep: #050505;
+      --surface: rgba(255, 255, 255, .035);
+      --surface-hover: rgba(255, 255, 255, .065);
+
+      --gold: #d4af37;
+      --gold-light: #f0d88e;
+      --gold-soft: rgba(212, 175, 55, .18);
+      --gold-border: rgba(212, 175, 55, .30);
+
+      --text: #f5f2e9;
+      --text-soft: rgba(245, 242, 233, .68);
+      --text-muted: rgba(245, 242, 233, .42);
+
+      --ease: cubic-bezier(.22, 1, .36, 1);
+      --ease-soft: cubic-bezier(.4, 0, .2, 1);
+
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+
+      min-height: 720px;
+      padding: 120px 24px;
+
+      background:
+        radial-gradient(
+          circle at 50% 0%,
+          rgba(212, 175, 55, .11),
+          transparent 38%
+        ),
+        radial-gradient(
+          circle at 15% 80%,
+          rgba(212, 175, 55, .045),
+          transparent 28%
+        ),
+        radial-gradient(
+          circle at 85% 70%,
+          rgba(255, 255, 255, .025),
+          transparent 25%
+        ),
+        linear-gradient(
+          180deg,
+          var(--bg-deep) 0%,
+          var(--bg) 48%,
+          #0a0a09 100%
+        );
+
+      color: var(--text);
+      border-top: 1px solid rgba(255, 255, 255, .05);
+      border-bottom: 1px solid rgba(212, 175, 55, .12);
+    }
+
+    /* =====================================================
+       ATMOSPHERE
+       ===================================================== */
+
+    .blog-gateway::before {
+      content: "";
+      position: absolute;
+      inset: 18px;
+      z-index: -1;
+
+      border: 1px solid rgba(212, 175, 55, .13);
+
+      pointer-events: none;
+
+      mask-image:
+        linear-gradient(
+          to bottom,
+          black,
+          transparent 12%,
+          transparent 88%,
+          black
+        );
+
+      opacity: .7;
+    }
+
+    .blog-gateway::after {
+      content: "";
+      position: absolute;
+
+      width: 560px;
+      height: 560px;
+
+      left: 50%;
+      top: 50%;
+
+      transform: translate(-50%, -50%);
+
+      border-radius: 50%;
+
+      background:
+        radial-gradient(
+          circle,
+          rgba(212, 175, 55, .065) 0%,
+          rgba(212, 175, 55, .025) 35%,
+          transparent 70%
+        );
+
+      filter: blur(10px);
+      pointer-events: none;
+      z-index: -1;
+
+      animation: blogGlow 8s ease-in-out infinite alternate;
+    }
+
+    @keyframes blogGlow {
+      from {
+        opacity: .55;
+        transform: translate(-50%, -50%) scale(.92);
+      }
+
+      to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.08);
+      }
+    }
+
+    /* =====================================================
+       PARTICLES
+       ===================================================== */
+
+    .blog-particles {
+      position: absolute;
+      inset: 0;
+
+      overflow: hidden;
+      pointer-events: none;
+
+      z-index: -1;
+    }
+
+    .blog-particle {
+      position: absolute;
+
+      width: 2px;
+      height: 2px;
+
+      border-radius: 50%;
+
+      background: var(--gold);
+
+      opacity: 0;
+
+      animation:
+        blogParticleFloat
+        var(--duration)
+        var(--delay)
+        ease-in-out
+        infinite;
+    }
+
+    @keyframes blogParticleFloat {
+      0% {
+        opacity: 0;
+        transform: translate3d(0, 35px, 0) scale(.6);
+      }
+
+      20% {
+        opacity: .4;
+      }
+
+      70% {
+        opacity: .12;
+      }
+
+      100% {
+        opacity: 0;
+        transform: translate3d(var(--move-x), -100px, 0) scale(1);
+      }
+    }
+
+    /* =====================================================
+       INNER
+       ===================================================== */
+
+    .blog-gateway-inner {
+      width: min(940px, 100%);
+      margin-inline: auto;
+
+      position: relative;
+      z-index: 2;
+
+      text-align: center;
+    }
+
+    /* =====================================================
+       KICKER
+       ===================================================== */
+
+    .blog-kicker {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+
+      margin-bottom: 24px;
+
+      color: var(--gold-light);
+
+      font-size: .78rem;
+      font-weight: 700;
+
+      letter-spacing: .20em;
+      line-height: 1.8;
+    }
+
+    .blog-kicker::before,
+    .blog-kicker::after {
+      content: "";
+
+      width: 42px;
+      height: 1px;
+
+      background:
+        linear-gradient(
+          90deg,
+          transparent,
+          var(--gold)
+        );
+
+      opacity: .65;
+    }
+
+    .blog-kicker::after {
+      background:
+        linear-gradient(
+          90deg,
+          var(--gold),
+          transparent
+        );
+    }
+
+    /* =====================================================
+       TITLE
+       ===================================================== */
+
+    .blog-gateway-title {
+      margin: 0;
+
+      color: var(--text);
+
+      font-size: clamp(2.15rem, 5vw, 4.6rem);
+      font-weight: 800;
+
+      line-height: 1.18;
+      letter-spacing: -.035em;
+
+      text-shadow:
+        0 0 45px rgba(212, 175, 55, .07);
+    }
+
+    .blog-gateway-title span {
+      display: block;
+
+      margin-top: 13px;
+
+      color: var(--gold);
+
+      font-size: .34em;
+      font-weight: 500;
+
+      letter-spacing: .06em;
+      line-height: 1.7;
+
+      opacity: .95;
+    }
+
+    /* =====================================================
+       DIVIDER
+       ===================================================== */
+
+    .blog-divider {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+
+      width: min(440px, 80%);
+
+      margin: 34px auto 38px;
+    }
+
+    .blog-divider-line {
+      flex: 1;
+
+      height: 1px;
+
+      background:
+        linear-gradient(
+          90deg,
+          transparent,
+          rgba(212, 175, 55, .45)
+        );
+    }
+
+    .blog-divider-line:last-child {
+      background:
+        linear-gradient(
+          90deg,
+          rgba(212, 175, 55, .45),
+          transparent
+        );
+    }
+
+    .blog-divider-mark {
+      color: var(--gold);
+
+      font-size: .72rem;
+
+      transform: rotate(45deg);
+
+      text-shadow:
+        0 0 18px rgba(212, 175, 55, .45);
+    }
+
+    /* =====================================================
+       QUOTE AREA
+       ===================================================== */
+
+    .blog-quote-wrap {
+      position: relative;
+
+      width: min(760px, 100%);
+
+      margin-inline: auto;
+    }
+
+    .blog-quote {
+      position: relative;
+
+      min-height: 175px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 48px 54px;
+
+      border: 1px solid var(--gold-border);
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(255,255,255,.045),
+          rgba(255,255,255,.012)
+        );
+
+      box-shadow:
+        0 30px 100px rgba(0,0,0,.35),
+        inset 0 1px 0 rgba(255,255,255,.035);
+
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+
+    .blog-quote::before {
+      content: "“";
+
+      position: absolute;
+
+      top: 0;
+      right: 28px;
+
+      color: rgba(212, 175, 55, .13);
+
+      font-family: Georgia, serif;
+      font-size: 8rem;
+
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .blog-quote::after {
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+      bottom: 0;
+
+      width: 100%;
+      height: 1px;
+
+      background:
+        linear-gradient(
+          90deg,
+          transparent,
+          var(--gold),
+          transparent
+        );
+
+      opacity: .45;
+    }
+
+    .blog-quote-content {
+      position: relative;
+      z-index: 2;
+
+      width: 100%;
+    }
+
+    .blog-quote-text {
+      margin: 0;
+
+      color: var(--text);
+
+      font-size: clamp(1rem, 2vw, 1.28rem);
+      font-weight: 500;
+
+      line-height: 2.15;
+
+      transition:
+        opacity .35s var(--ease),
+        transform .35s var(--ease);
+    }
+
+    .blog-quote-text.is-changing {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+
+    .blog-quote-meta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+
+      margin-top: 20px;
+
+      min-height: 24px;
+    }
+
+    .blog-quote-number {
+      color: var(--gold);
+
+      font-size: .72rem;
+      font-weight: 800;
+
+      letter-spacing: .08em;
+    }
+
+    .blog-quote-source {
+      color: var(--text-muted);
+
+      font-size: .72rem;
+
+      line-height: 1.8;
+    }
+
+    .blog-quote-source::before {
+      content: "— ";
+
+      color: var(--gold);
+
+      opacity: .6;
+    }
+
+    /* =====================================================
+       PROGRESS
+       ===================================================== */
+
+    .blog-progress {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+
+      margin-top: 23px;
+    }
+
+    .blog-progress button {
+      appearance: none;
+
+      width: 22px;
+      height: 3px;
+
+      padding: 0;
+      border: 0;
+
+      border-radius: 99px;
+
+      background: rgba(255,255,255,.18);
+
+      cursor: pointer;
+
+      transition:
+        width .4s var(--ease),
+        background .3s ease,
+        opacity .3s ease;
+    }
+
+    .blog-progress button:hover {
+      background: rgba(212,175,55,.6);
+    }
+
+    .blog-progress button[aria-selected="true"] {
+      width: 42px;
+
+      background: var(--gold);
+    }
+
+    /* =====================================================
+       ACTIONS
+       ===================================================== */
+
+    .blog-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+
+      margin-top: 38px;
+    }
+
+    .blog-action {
+      position: relative;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+
+      min-width: 205px;
+      min-height: 54px;
+
+      padding: 13px 24px;
+
+      border: 1px solid var(--gold-border);
+
+      color: var(--text);
+
+      background: rgba(255,255,255,.025);
+
+      font-size: .88rem;
+      font-weight: 700;
+
+      text-decoration: none;
+
+      overflow: hidden;
+
+      transition:
+        transform .35s var(--ease),
+        border-color .35s ease,
+        background .35s ease,
+        box-shadow .35s ease;
+    }
+
+    .blog-action::before {
+      content: "";
+
+      position: absolute;
+      inset: 0;
+
+      background:
+        linear-gradient(
+          110deg,
+          transparent 25%,
+          rgba(255,255,255,.12) 50%,
+          transparent 75%
+        );
+
+      transform: translateX(-120%);
+
+      transition:
+        transform .65s var(--ease);
+    }
+
+    .blog-action span {
+      position: relative;
+      z-index: 2;
+    }
+
+    .blog-action:hover {
+      transform: translateY(-4px);
+
+      border-color: rgba(212,175,55,.65);
+
+      background: rgba(212,175,55,.08);
+
+      box-shadow:
+        0 14px 40px rgba(0,0,0,.3),
+        0 0 30px rgba(212,175,55,.07);
+    }
+
+    .blog-action:hover::before {
+      transform: translateX(120%);
+    }
+
+    .blog-action-primary {
+      color: #111;
+
+      border-color: var(--gold);
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--gold-light),
+          var(--gold)
+        );
+
+      box-shadow:
+        0 10px 35px rgba(212,175,55,.12);
+    }
+
+    .blog-action-primary:hover {
+      color: #080808;
+
+      background:
+        linear-gradient(
+          135deg,
+          #f6e5a8,
+          #d4af37
+        );
+
+      box-shadow:
+        0 16px 45px rgba(212,175,55,.22);
+    }
+
+    /* =====================================================
+       HINT
+       ===================================================== */
+
+    .blog-hint {
+      margin: 32px 0 0;
+
+      color: var(--text-muted);
+
+      font-size: .72rem;
+
+      letter-spacing: .02em;
+    }
+
+    .blog-hint-dots {
+      display: inline-flex;
+      gap: 4px;
+
+      margin-inline-start: 7px;
+    }
+
+    .blog-hint-dots i {
+      width: 3px;
+      height: 3px;
+
+      border-radius: 50%;
+
+      background: var(--gold);
+
+      animation: blogHintDot 1.5s infinite ease-in-out;
+    }
+
+    .blog-hint-dots i:nth-child(2) {
+      animation-delay: .18s;
+    }
+
+    .blog-hint-dots i:nth-child(3) {
+      animation-delay: .36s;
+    }
+
+    @keyframes blogHintDot {
+      0%, 60%, 100% {
+        opacity: .25;
+        transform: translateY(0);
+      }
+
+      30% {
+        opacity: 1;
+        transform: translateY(-3px);
+      }
+    }
+
+    /* =====================================================
+       LOADING
+       ===================================================== */
+
+    .blog-loading {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      gap: 8px;
+
+      color: var(--text-muted);
+
+      font-size: .72rem;
+    }
+
+    .blog-loading::before {
+      content: "";
+
+      width: 12px;
+      height: 12px;
+
+      border: 1px solid rgba(212,175,55,.22);
+      border-top-color: var(--gold);
+
+      border-radius: 50%;
+
+      animation: blogSpinner .8s linear infinite;
+    }
+
+    @keyframes blogSpinner {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* =====================================================
+       FOCUS
+       ===================================================== */
+
+    .blog-action:focus-visible,
+    .blog-progress button:focus-visible {
+      outline: 2px solid var(--gold-light);
+      outline-offset: 5px;
+    }
+
+    /* =====================================================
+       RESPONSIVE
+       ===================================================== */
+
+    @media (max-width: 768px) {
+      .blog-gateway {
+        min-height: auto;
+
+        padding: 90px 18px;
+      }
+
+      .blog-gateway::before {
+        inset: 10px;
+      }
+
+      .blog-quote {
+        min-height: 160px;
+
+        padding: 40px 25px;
+      }
+
+      .blog-quote::before {
+        right: 12px;
+
+        font-size: 6rem;
+      }
+
+      .blog-actions {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        width: min(360px, 100%);
+
+        margin-inline: auto;
+      }
+
+      .blog-action {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .blog-gateway {
+        padding: 76px 15px;
+      }
+
+      .blog-kicker {
+        gap: 9px;
+
+        font-size: .68rem;
+      }
+
+      .blog-kicker::before,
+      .blog-kicker::after {
+        width: 25px;
+      }
+
+      .blog-gateway-title {
+        font-size: 2rem;
+      }
+
+      .blog-gateway-title span {
+        margin-top: 10px;
+
+        font-size: .39em;
+      }
+
+      .blog-divider {
+        margin: 28px auto 30px;
+      }
+
+      .blog-quote {
+        padding: 35px 19px;
+      }
+
+      .blog-quote-text {
+        font-size: .94rem;
+
+        line-height: 2;
+      }
+
+      .blog-quote-meta {
+        flex-direction: column;
+
+        gap: 2px;
+      }
+
+      .blog-quote-source::before {
+        content: "";
+      }
+    }
+
+    /* =====================================================
+       REDUCED MOTION
+       ===================================================== */
+
+    @media (prefers-reduced-motion: reduce) {
+      .blog-gateway *,
+      .blog-gateway::after {
+        animation-duration: .001ms !important;
+        animation-iteration-count: 1 !important;
+
+        scroll-behavior: auto !important;
+
+        transition-duration: .001ms !important;
+      }
+
+      .blog-particles {
+        display: none;
+      }
+    }
+
+    /* =====================================================
+       PRINT
+       ===================================================== */
+
+    @media print {
+      .blog-gateway {
+        min-height: auto;
+
+        padding: 40px 20px;
+
+        color: #000;
+        background: #fff;
+
+        border: 0;
+      }
+
+      .blog-gateway-title,
+      .blog-quote-text {
+        color: #000;
+      }
+
+      .blog-actions,
+      .blog-progress,
+      .blog-hint,
+      .blog-particles {
+        display: none;
+      }
+    }
+  </style>
+
+  <!-- Ambient particles -->
+  <div
+    class="blog-particles"
+    id="blogParticles"
+    aria-hidden="true">
+  </div>
+
+  <div class="blog-gateway-inner">
+
+    <!-- Kicker -->
+    <div class="blog-kicker">
+      <span>دفتر نوشته‌ها</span>
+    </div>
+
+    <!-- Title -->
+    <h2
+      class="blog-gateway-title"
+      id="blog-gateway-title">
+
+      وبلاگ حسین محمدی آمیرزا
+
+      <span>
+        جست‌وجوی معنا در مسیر تاریخ، ادیان، انسان و اندیشه
+      </span>
+
+    </h2>
+
+    <!-- Divider -->
+    <div class="blog-divider" aria-hidden="true">
+      <span class="blog-divider-line"></span>
+
+      <span class="blog-divider-mark">◆</span>
+
+      <span class="blog-divider-line"></span>
+    </div>
+
+    <!-- Quote -->
+    <div class="blog-quote-wrap">
+
+      <div
+        class="blog-quote"
+        aria-live="polite">
+
+        <div class="blog-quote-content">
+
+          <p
+            class="blog-quote-text"
+            id="blogQuoteText">
+
+            <span class="blog-loading">
+              در حال گشودن دفتر نوشته‌ها...
+            </span>
+
+          </p>
+
+          <div class="blog-quote-meta">
+
+            <span
+              class="blog-quote-number"
+              id="blogQuoteNumber">
+            </span>
+
+            <span
+              class="blog-quote-source"
+              id="blogQuoteSource">
+            </span>
+
           </div>
-          <div class="section-index">۰۵</div>
+
         </div>
 
-        <div class="blog-grid">
-          <article class="post-card featured-post">
-            <span class="post-number">۱۷</span>
-            <span class="post-category">فصل هفدهم</span>
-            <h3>کشاورزی؛ وقتی انسان تصمیم گرفت طبیعت را تغییر دهد</h3>
-            <p>دانه‌ای که تاریخ را تغییر داد؛ روایتی از یکی از بزرگ‌ترین دگرگونی‌های زندگی انسان.</p>
-            <a href="blog/posts/post-17.html">خواندن نوشته <span aria-hidden="true">←</span></a>
-          </article>
-
-          <article class="post-card">
-            <span class="post-number">۱۶</span>
-            <span class="post-category">فصل شانزدهم</span>
-            <h3>زمان؛ وقتی انسان تلاش کرد گذر زمان را اندازه بگیرد</h3>
-            <p>چیزی که نمی‌توان متوقفش کرد.</p>
-            <a href="blog/posts/post-16.html">خواندن نوشته <span aria-hidden="true">←</span></a>
-          </article>
-
-          <article class="post-card">
-            <span class="post-number">۱۵</span>
-            <span class="post-category">فصل پانزدهم</span>
-            <h3>زمان؛ وقتی انسان تلاش کرد گذر جهان را اندازه بگیرد</h3>
-            <p>یادداشتی درباره انسان و مفهوم زمان.</p>
-            <a href="blog/posts/post-15.html">خواندن نوشته <span aria-hidden="true">←</span></a>
-          </article>
-
-          <article class="post-card">
-            <span class="post-number">۱۴</span>
-            <span class="post-category">فصل چهاردهم</span>
-            <h3>عدد؛ وقتی انسان جهان را شمرد</h3>
-            <p>از یکی تا چندتا؛ داستان تلاش انسان برای شمردن جهان.</p>
-            <a href="blog/posts/post-14.html">خواندن نوشته <span aria-hidden="true">←</span></a>
-          </article>
-        </div>
-
-        <div class="blog-more">
-          <a href="blog/index.html" class="btn btn-dark">مشاهده همه نوشته‌ها</a>
-        </div>
       </div>
-    </section>
 
+      <!-- Slider progress -->
+      <div
+        class="blog-progress"
+        id="blogProgress"
+        role="tablist"
+        aria-label="انتخاب نوشته">
+
+      </div>
+
+    </div>
+
+    <!-- Actions -->
+    <div class="blog-actions">
+
+      <a
+        class="blog-action blog-action-primary"
+        href="blog/index.html"
+        aria-label="ورود به وبلاگ">
+
+        <span>ورود به وبلاگ</span>
+        <span aria-hidden="true">←</span>
+
+      </a>
+
+      <a
+        class="blog-action"
+        href="blog/index.html"
+        aria-label="مشاهده همه نوشته‌ها">
+
+        <span aria-hidden="true">📖</span>
+        <span>مشاهده همه نوشته‌ها</span>
+
+      </a>
+
+    </div>
+
+    <!-- Hint -->
+    <p class="blog-hint">
+      فصل‌های بیشتری در انتظار خوانده‌شدن‌اند
+
+      <span
+        class="blog-hint-dots"
+        aria-hidden="true">
+
+        <i></i>
+        <i></i>
+        <i></i>
+
+      </span>
+    </p>
+
+  </div>
+
+  <script>
+    (() => {
+      "use strict";
+
+      /* ===================================================
+         CONFIG
+         =================================================== */
+
+      /*
+       * اگر فایل JSON شما جای دیگری است،
+       * فقط همین مسیر را تغییر بده.
+       */
+      const POSTS_URL = "posts/posts/posts.json";
+
+      const AUTO_PLAY_DELAY = 7000;
+
+      const MAX_QUOTES = 6;
+
+      /* ===================================================
+         ELEMENTS
+         =================================================== */
+
+      const gateway = document.querySelector(".blog-gateway");
+
+      const particlesEl =
+        document.getElementById("blogParticles");
+
+      const quoteTextEl =
+        document.getElementById("blogQuoteText");
+
+      const quoteNumberEl =
+        document.getElementById("blogQuoteNumber");
+
+      const quoteSourceEl =
+        document.getElementById("blogQuoteSource");
+
+      const progressEl =
+        document.getElementById("blogProgress");
+
+      if (!gateway || !quoteTextEl) {
+        return;
+      }
+
+      /* ===================================================
+         FALLBACK CONTENT
+         =================================================== */
+
+      const FALLBACK_QUOTES = [
+        {
+          text:
+            "گاهی برای فهمیدن امروز، باید به دورترین نقطه‌ی تاریخ بازگشت.",
+          source:
+            "دفتر نوشته‌ها",
+          number:
+            "—"
+        },
+        {
+          text:
+            "انسان تنها جهان را تغییر نداده است؛ او هم‌زمان در حال تغییر خودش بوده است.",
+          source:
+            "روایت انسان",
+          number:
+            "—"
+        },
+        {
+          text:
+            "پشت هر عدد، هر آیین و هر تمدن، داستانی از تلاش انسان برای فهم جهان وجود دارد.",
+          source:
+            "یادداشت‌های تاریخی",
+          number:
+            "—"
+        },
+        {
+          text:
+            "تاریخ فقط مجموعه‌ای از اتفاقات گذشته نیست؛ آینه‌ای است که انسان امروز را در آن می‌توان دید.",
+          source:
+            "جست‌وجوی معنا",
+          number:
+            "—"
+        }
+      ];
+
+      /* ===================================================
+         STATE
+         =================================================== */
+
+      let quotes = [];
+
+      let currentIndex = 0;
+
+      let timer = null;
+
+      let paused = false;
+
+      let touchStarted = false;
+
+      /* ===================================================
+         HELPERS
+         =================================================== */
+
+      function cleanText(value) {
+        if (value === null || value === undefined) {
+          return "";
+        }
+
+        const div = document.createElement("div");
+
+        div.innerHTML = String(value);
+
+        return (div.textContent || div.innerText || "")
+          .replace(/\s+/g, " ")
+          .trim();
+      }
+
+      function normalizePost(post) {
+        if (!post || typeof post !== "object") {
+          return null;
+        }
+
+        const title =
+          cleanText(
+            post.title ||
+            post.name ||
+            post.heading
+          );
+
+        const body =
+          cleanText(
+            post.excerpt ||
+            post.summary ||
+            post.description ||
+            post.body ||
+            post.content ||
+            ""
+          );
+
+        if (!title && !body) {
+          return null;
+        }
+
+        const date =
+          post.date ||
+          post.publishedAt ||
+          post.createdAt ||
+          "";
+
+        const number =
+          post.number ||
+          post.chapter ||
+          post.id ||
+          "";
+
+        return {
+          title: title || body,
+          body,
+          date,
+          number
+        };
+      }
+
+      function postToQuote(post) {
+        if (!post) {
+          return null;
+        }
+
+        let text = post.title;
+
+        if (post.body) {
+          text = post.body;
+
+          /*
+           * اگر body خیلی طولانی بود،
+           * فقط یک بخش کوتاه و خوانا نمایش می‌دهیم.
+           */
+          if (text.length > 220) {
+            text = text.slice(0, 217).trim() + "…";
+          }
+        }
+
+        return {
+          text,
+          source: post.title,
+          number: post.number
+            ? String(post.number)
+            : "✦"
+        };
+      }
+
+      function shuffle(array) {
+        const copy = [...array];
+
+        for (
+          let i = copy.length - 1;
+          i > 0;
+          i--
+        ) {
+          const j =
+            Math.floor(Math.random() * (i + 1));
+
+          [copy[i], copy[j]] =
+            [copy[j], copy[i]];
+        }
+
+        return copy;
+      }
+
+      /* ===================================================
+         JSON EXTRACTION
+         =================================================== */
+
+      function extractPosts(data) {
+
+        if (Array.isArray(data)) {
+          return data;
+        }
+
+        if (!data || typeof data !== "object") {
+          return [];
+        }
+
+        if (Array.isArray(data.posts)) {
+          return data.posts;
+        }
+
+        if (Array.isArray(data.items)) {
+          return data.items;
+        }
+
+        if (Array.isArray(data.data)) {
+          return data.data;
+        }
+
+        if (
+          data.data &&
+          Array.isArray(data.data.posts)
+        ) {
+          return data.data.posts;
+        }
+
+        if (
+          data.data &&
+          Array.isArray(data.data.items)
+        ) {
+          return data.data.items;
+        }
+
+        if (
+          data.data &&
+          Array.isArray(data.data.content)
+        ) {
+          return data.data.content;
+        }
+
+        if (
+          data.data &&
+          typeof data.data.content === "string"
+        ) {
+          try {
+            const parsed =
+              JSON.parse(data.data.content);
+
+            if (Array.isArray(parsed)) {
+              return parsed;
+            }
+          } catch (error) {
+            // Ignore malformed nested JSON.
+          }
+        }
+
+        if (
+          typeof data.content === "string"
+        ) {
+          try {
+            const parsed =
+              JSON.parse(data.content);
+
+            if (Array.isArray(parsed)) {
+              return parsed;
+            }
+          } catch (error) {
+            // Ignore malformed nested JSON.
+          }
+        }
+
+        return [];
+      }
+
+      /* ===================================================
+         LOAD POSTS
+         =================================================== */
+
+      async function loadPosts() {
+
+        try {
+
+          const response =
+            await fetch(
+              POSTS_URL,
+              {
+                method: "GET",
+                cache: "no-store",
+                headers: {
+                  "Accept":
+                    "application/json"
+                }
+              }
+            );
+
+          if (!response.ok) {
+            throw new Error(
+              `HTTP ${response.status}`
+            );
+          }
+
+          const data =
+            await response.json();
+
+          const rawPosts =
+            extractPosts(data);
+
+          const normalized =
+            rawPosts
+              .map(normalizePost)
+              .filter(Boolean);
+
+          normalized.sort(
+            (a, b) => {
+
+              const dateA =
+                Date.parse(a.date) || 0;
+
+              const dateB =
+                Date.parse(b.date) || 0;
+
+              return dateB - dateA;
+            }
+          );
+
+          const dynamicQuotes =
+            normalized
+              .map(postToQuote)
+              .filter(Boolean);
+
+          if (dynamicQuotes.length) {
+            quotes =
+              dynamicQuotes.slice(
+                0,
+                MAX_QUOTES
+              );
+          } else {
+            quotes =
+              shuffle(
+                FALLBACK_QUOTES
+              );
+          }
+
+        } catch (error) {
+
+          /*
+           * خطای JSON نباید باعث خراب شدن
+           * سکشن شود.
+           */
+          console.warn(
+            "Blog Gateway:",
+            "Posts JSON could not be loaded.",
+            error
+          );
+
+          quotes =
+            shuffle(
+              FALLBACK_QUOTES
+            );
+        }
+
+        currentIndex = 0;
+
+        buildProgress();
+
+        renderQuote(
+          currentIndex,
+          false
+        );
+
+        startAutoPlay();
+      }
+
+      /* ===================================================
+         RENDER
+         =================================================== */
+
+      function renderQuote(
+        index,
+        animate = true
+      ) {
+
+        if (!quotes.length) {
+          return;
+        }
+
+        const item =
+          quotes[index];
+
+        if (!item) {
+          return;
+        }
+
+        if (animate) {
+          quoteTextEl.classList.add(
+            "is-changing"
+          );
+
+          window.setTimeout(
+            () => {
+
+              updateQuoteContent(item);
+
+              quoteTextEl.classList.remove(
+                "is-changing"
+              );
+
+            },
+            220
+          );
+
+        } else {
+
+          updateQuoteContent(item);
+
+        }
+
+        updateProgress();
+      }
+
+      function updateQuoteContent(item) {
+
+        quoteTextEl.textContent =
+          item.text || "";
+
+        quoteNumberEl.textContent =
+          item.number || "✦";
+
+        quoteSourceEl.textContent =
+          item.source || "";
+      }
+
+      /* ===================================================
+         PROGRESS BUTTONS
+         =================================================== */
+
+      function buildProgress() {
+
+        progressEl.innerHTML = "";
+
+        quotes.forEach(
+          (_, index) => {
+
+            const button =
+              document.createElement("button");
+
+            button.type = "button";
+
+            button.setAttribute(
+              "role",
+              "tab"
+            );
+
+            button.setAttribute(
+              "aria-label",
+              `نمایش نوشته ${index + 1}`
+            );
+
+            button.setAttribute(
+              "aria-selected",
+              index === currentIndex
+                ? "true"
+                : "false"
+            );
+
+            button.addEventListener(
+              "click",
+              () => {
+
+                goTo(index);
+
+                restartAutoPlay();
+
+              }
+            );
+
+            progressEl.appendChild(
+              button
+            );
+          }
+        );
+      }
+
+      function updateProgress() {
+
+        const buttons =
+          progressEl.querySelectorAll(
+            "button"
+          );
+
+        buttons.forEach(
+          (button, index) => {
+
+            button.setAttribute(
+              "aria-selected",
+              index === currentIndex
+                ? "true"
+                : "false"
+            );
+          }
+        );
+      }
+
+      /* ===================================================
+         NAVIGATION
+         =================================================== */
+
+      function goTo(index) {
+
+        if (!quotes.length) {
+          return;
+        }
+
+        currentIndex =
+          (index + quotes.length) %
+          quotes.length;
+
+        renderQuote(
+          currentIndex,
+          true
+        );
+      }
+
+      function next() {
+        goTo(currentIndex + 1);
+      }
+
+      function previous() {
+        goTo(currentIndex - 1);
+      }
+
+      /* ===================================================
+         AUTOPLAY
+         =================================================== */
+
+      function startAutoPlay() {
+
+        stopAutoPlay();
+
+        if (
+          quotes.length <= 1 ||
+          paused ||
+          window.matchMedia(
+            "(prefers-reduced-motion: reduce)"
+          ).matches
+        ) {
+          return;
+        }
+
+        timer =
+          window.setInterval(
+            () => {
+
+              if (!paused) {
+                next();
+              }
+
+            },
+            AUTO_PLAY_DELAY
+          );
+      }
+
+      function stopAutoPlay() {
+
+        if (timer !== null) {
+
+          window.clearInterval(
+            timer
+          );
+
+          timer = null;
+        }
+      }
+
+      function restartAutoPlay() {
+
+        stopAutoPlay();
+
+        startAutoPlay();
+      }
+
+      /* ===================================================
+         PARTICLES
+         =================================================== */
+
+      function createParticles() {
+
+        if (!particlesEl) {
+          return;
+        }
+
+        const fragment =
+          document.createDocumentFragment();
+
+        const count =
+          window.innerWidth < 600
+            ? 16
+            : 30;
+
+        for (
+          let i = 0;
+          i < count;
+          i++
+        ) {
+
+          const particle =
+            document.createElement("span");
+
+          particle.className =
+            "blog-particle";
+
+          particle.style.left =
+            `${Math.random() * 100}%`;
+
+          particle.style.top =
+            `${65 + Math.random() * 40}%`;
+
+          particle.style.setProperty(
+            "--duration",
+            `${5 + Math.random() * 8}s`
+          );
+
+          particle.style.setProperty(
+            "--delay",
+            `${Math.random() * 7}s`
+          );
+
+          particle.style.setProperty(
+            "--move-x",
+            `${-70 + Math.random() * 140}px`
+          );
+
+          fragment.appendChild(
+            particle
+          );
+        }
+
+        particlesEl.appendChild(
+          fragment
+        );
+      }
+
+      /* ===================================================
+         POINTER / TOUCH
+         =================================================== */
+
+      gateway.addEventListener(
+        "mouseenter",
+        () => {
+
+          paused = true;
+
+          stopAutoPlay();
+
+        }
+      );
+
+      gateway.addEventListener(
+        "mouseleave",
+        () => {
+
+          paused = false;
+
+          startAutoPlay();
+
+        }
+      );
+
+      gateway.addEventListener(
+        "touchstart",
+        () => {
+
+          touchStarted = true;
+
+          paused = true;
+
+          stopAutoPlay();
+
+        },
+        {
+          passive: true
+        }
+      );
+
+      gateway.addEventListener(
+        "touchend",
+        () => {
+
+          if (!touchStarted) {
+            return;
+          }
+
+          touchStarted = false;
+
+          paused = false;
+
+          startAutoPlay();
+
+        },
+        {
+          passive: true
+        }
+      );
+
+      /* ===================================================
+         KEYBOARD
+         =================================================== */
+
+      gateway.addEventListener(
+        "keydown",
+        (event) => {
+
+          if (
+            event.key === "ArrowLeft"
+          ) {
+
+            event.preventDefault();
+
+            next();
+
+            restartAutoPlay();
+
+          }
+
+          if (
+            event.key === "ArrowRight"
+          ) {
+
+            event.preventDefault();
+
+            previous();
+
+            restartAutoPlay();
+
+          }
+        }
+      );
+
+      /*
+       * برای دسترسی بهتر، سکشن قابل فوکوس است.
+       */
+      gateway.setAttribute(
+        "tabindex",
+        "0"
+      );
+
+      /* ===================================================
+         VISIBILITY
+         =================================================== */
+
+      document.addEventListener(
+        "visibilitychange",
+        () => {
+
+          if (
+            document.hidden
+          ) {
+
+            stopAutoPlay();
+
+          } else {
+
+            startAutoPlay();
+
+          }
+
+        }
+      );
+
+      /* ===================================================
+         RESIZE
+         =================================================== */
+
+      let resizeTimer = null;
+
+      window.addEventListener(
+        "resize",
+        () => {
+
+          window.clearTimeout(
+            resizeTimer
+          );
+
+          resizeTimer =
+            window.setTimeout(
+              () => {
+
+                if (
+                  particlesEl
+                ) {
+
+                  particlesEl.innerHTML =
+                    "";
+
+                  createParticles();
+
+                }
+
+              },
+              250
+            );
+        }
+      );
+
+      /* ===================================================
+         INIT
+         =================================================== */
+
+      createParticles();
+
+      loadPosts();
+
+    })();
+  </script>
+
+</section>
     <!-- ===== PHILOSOPHY ===== -->
     <section class="philosophy-section" aria-labelledby="philosophy-title">
       <div class="container philosophy-grid">
