@@ -1,3 +1,4 @@
+```html
 <!doctype html>
 <html lang="fa" dir="rtl">
 
@@ -19,35 +20,44 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
-    href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&family=Amiri:wght@400;700&display=swap"
-    rel="stylesheet"
-  >
+    href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Vazirmatn:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
 
   <style>
+
     :root {
-      --bg: #0f1a2e;
-      --bg-soft: #1a2740;
-      --card: rgba(255, 255, 255, 0.04);
+      --night: #07131f;
+      --night-2: #0b1e2d;
+      --navy: #102d40;
+      --navy-2: #173c50;
 
-      --gold: #c9a24a;
-      --gold-light: #e0c178;
-      --gold-dark: #7d6228;
+      --turquoise: #54aaa7;
+      --turquoise-light: #83d0c8;
+      --turquoise-dark: #2e7778;
 
-      --turquoise: #4a9b9b;
-      --turquoise-dark: #2f6b6b;
+      --gold: #c9a55b;
+      --gold-light: #e4ca88;
+      --gold-dark: #866b32;
 
-      --sand: #b8a07a;
+      --paper: #f4ecdc;
+      --paper-2: #e8dcc4;
+      --ink: #283238;
 
-      --text: #ede4d0;
-      --text-soft: #b8ad96;
-      --muted: #8a8070;
+      --text: #eee5d4;
+      --text-soft: #c2b9a8;
+      --muted: #8e8b82;
 
-      --border: rgba(201, 162, 74, 0.25);
-      --max: 1080px;
+      --line: rgba(201, 165, 91, .25);
+      --line-light: rgba(244, 236, 220, .12);
 
-      --ease: cubic-bezier(0.4, 0, 0.2, 1);
-      --duration: 0.3s;
+      --max: 1180px;
+      --ease: cubic-bezier(.2,.8,.2,1);
     }
+
+
+    /* ================================
+       RESET
+    ================================= */
 
     * {
       box-sizing: border-box;
@@ -60,16 +70,30 @@
     }
 
     body {
+      min-height: 100vh;
       font-family: "Vazirmatn", Tahoma, sans-serif;
-      background:
-        radial-gradient(circle at 50% -10%, rgba(74, 155, 155, 0.12), transparent 45%),
-        radial-gradient(circle at 15% 70%, rgba(201, 162, 74, 0.08), transparent 40%),
-        linear-gradient(135deg, #0a1220, #0f1a2e 45%, #0a1220);
-      background-attachment: fixed;
       color: var(--text);
       line-height: 2.15;
-      min-height: 100vh;
-      position: relative;
+
+      background:
+        radial-gradient(
+          circle at 80% 5%,
+          rgba(84,170,167,.16),
+          transparent 28%
+        ),
+        radial-gradient(
+          circle at 10% 30%,
+          rgba(201,165,91,.08),
+          transparent 30%
+        ),
+        linear-gradient(
+          135deg,
+          #06111c 0%,
+          #0b1c2a 48%,
+          #081722 100%
+        );
+
+      overflow-x: hidden;
     }
 
     body::before {
@@ -77,21 +101,24 @@
       position: fixed;
       inset: 0;
       pointer-events: none;
+      z-index: -1;
+
       background:
+        linear-gradient(
+          90deg,
+          transparent 49.8%,
+          rgba(255,255,255,.018) 50%,
+          transparent 50.2%
+        ),
         repeating-linear-gradient(
           45deg,
-          rgba(255, 255, 255, 0.008) 0px,
-          rgba(255, 255, 255, 0.008) 1px,
+          rgba(255,255,255,.012) 0,
+          rgba(255,255,255,.012) 1px,
           transparent 1px,
-          transparent 14px
+          transparent 18px
         );
-      opacity: 0.7;
-      z-index: 0;
-    }
 
-    body > * {
-      position: relative;
-      z-index: 1;
+      opacity: .5;
     }
 
     a {
@@ -99,354 +126,1357 @@
       text-decoration: none;
     }
 
+    img {
+      max-width: 100%;
+    }
+
     :focus-visible {
-      outline: 2px solid var(--gold);
-      outline-offset: 3px;
-      border-radius: 4px;
+      outline: 2px solid var(--turquoise-light);
+      outline-offset: 4px;
     }
 
     .wrap {
-      width: min(var(--max), calc(100% - 32px));
-      margin: auto;
+      width: min(var(--max), calc(100% - 36px));
+      margin-inline: auto;
     }
 
-    /* =========================
-       NAV
-    ========================= */
 
-    .subhero {
-      border-bottom: 1px solid var(--border);
-      background: rgba(10, 18, 32, 0.65);
-      backdrop-filter: blur(8px);
+    /* ================================
+       TOP NAV
+    ================================= */
+
+    .topbar {
+      position: relative;
+      z-index: 20;
+
+      border-bottom: 1px solid var(--line-light);
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(5,15,24,.94),
+          rgba(13,37,53,.92),
+          rgba(5,15,24,.94)
+        );
+
+      backdrop-filter: blur(16px);
     }
 
     .nav {
+      min-height: 72px;
+
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 18px 0;
-      gap: 20px;
-      flex-wrap: wrap;
+
+      gap: 25px;
     }
 
     .brand {
       font-family: "Amiri", serif;
-      font-size: 22px;
+      font-size: 23px;
       font-weight: 700;
       color: var(--gold-light);
-      letter-spacing: 0.5px;
-      transition: color var(--duration) var(--ease);
+
+      white-space: nowrap;
+
+      transition:
+        color .3s var(--ease),
+        transform .3s var(--ease);
     }
 
     .brand:hover {
-      color: var(--gold);
+      color: #f0d99c;
+      transform: translateY(-1px);
     }
 
-    .links {
+    .nav-links {
       display: flex;
       align-items: center;
-      gap: 22px;
-      font-size: 15px;
-    }
+      gap: 26px;
 
-    .links a {
       color: var(--text-soft);
-      position: relative;
-      padding: 4px 0;
-      transition: color var(--duration) var(--ease);
+      font-size: 14px;
     }
 
-    .links a::after {
+    .nav-links a {
+      position: relative;
+      padding: 5px 0;
+    }
+
+    .nav-links a::after {
       content: "";
+
       position: absolute;
-      bottom: 0;
       right: 0;
+      bottom: 0;
+
       width: 0;
       height: 1px;
-      background: var(--gold);
-      transition: width var(--duration) var(--ease);
+
+      background: var(--turquoise-light);
+
+      transition: width .3s var(--ease);
     }
 
-    .links a:hover {
-      color: var(--gold-light);
+    .nav-links a:hover {
+      color: var(--turquoise-light);
     }
 
-    .links a:hover::after {
+    .nav-links a:hover::after {
       width: 100%;
     }
 
-    /* =========================
-       BOOK DETAIL
-    ========================= */
 
-    .section {
-      padding: 70px 0 90px;
+    /* ================================
+       HERO
+    ================================= */
+
+    .hero {
+      position: relative;
+      min-height: 720px;
+
+      display: flex;
+      align-items: center;
+
+      padding: 90px 0 100px;
+
+      overflow: hidden;
     }
 
-    .book-detail {
+    .hero::before {
+      content: "";
+
+      position: absolute;
+
+      width: 650px;
+      height: 650px;
+
+      top: -250px;
+      right: -160px;
+
+      border-radius: 50%;
+
+      background:
+        radial-gradient(
+          circle,
+          rgba(84,170,167,.17),
+          transparent 68%
+        );
+
+      filter: blur(20px);
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: "";
+
+      position: absolute;
+
+      width: 520px;
+      height: 520px;
+
+      bottom: -330px;
+      left: -150px;
+
+      border-radius: 50%;
+
+      background:
+        radial-gradient(
+          circle,
+          rgba(201,165,91,.12),
+          transparent 68%
+        );
+
+      filter: blur(30px);
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 2;
+
       display: grid;
-      grid-template-columns: minmax(260px, 380px) 1fr;
-      gap: 55px;
-      align-items: start;
+
+      grid-template-columns:
+        minmax(310px, 440px)
+        minmax(0, 1fr);
+
+      gap: 80px;
+
+      align-items: center;
     }
 
-    /* Cover */
 
-    .detail-cover {
-      position: sticky;
-      top: 30px;
-      text-align: center;
+    /* ================================
+       COVER
+    ================================= */
+
+    .cover-stage {
+      position: relative;
+
+      display: flex;
+      justify-content: center;
+
+      padding: 24px;
     }
 
-    .detail-cover img {
-      display: block;
-      width: 100%;
-      max-width: 380px;
-      height: auto;
-      aspect-ratio: 2 / 3;
-      object-fit: cover;
-      margin: auto;
-      border: 6px solid var(--gold-dark);
-      outline: 1px solid var(--gold);
-      outline-offset: 6px;
+    .cover-stage::before {
+      content: "";
+
+      position: absolute;
+
+      width: 85%;
+      height: 88%;
+
+      top: 6%;
+      left: 7.5%;
+
+      border: 1px solid rgba(84,170,167,.28);
+
+      transform: rotate(-5deg);
+
       box-shadow:
-        0 25px 70px rgba(0, 0, 0, 0.7),
-        0 0 50px rgba(74, 155, 155, 0.2);
-      background: #0a1220;
+        0 0 70px rgba(84,170,167,.10);
+
+      pointer-events: none;
     }
 
-    /* Copy */
+    .cover-stage::after {
+      content: "";
 
-    .detail-copy {
-      max-width: 720px;
+      position: absolute;
+
+      width: 80%;
+      height: 84%;
+
+      top: 9%;
+      left: 10%;
+
+      border: 1px solid rgba(201,165,91,.23);
+
+      transform: rotate(4deg);
+
+      pointer-events: none;
+    }
+
+    .cover-frame {
+      position: relative;
+      z-index: 3;
+
+      width: min(390px, 100%);
+
+      padding: 12px;
+
+      background:
+        linear-gradient(
+          145deg,
+          var(--gold-dark),
+          var(--gold),
+          var(--turquoise-dark),
+          var(--gold-dark)
+        );
+
+      box-shadow:
+        0 35px 80px rgba(0,0,0,.7),
+        0 0 80px rgba(84,170,167,.15);
+
+      transform: rotate(-1.5deg);
+
+      transition:
+        transform .6s var(--ease),
+        box-shadow .6s var(--ease);
+    }
+
+    .cover-frame:hover {
+      transform: rotate(0) translateY(-8px);
+
+      box-shadow:
+        0 45px 100px rgba(0,0,0,.75),
+        0 0 100px rgba(84,170,167,.2);
+    }
+
+    .cover-inner {
+      position: relative;
+
+      background: var(--night);
+
+      padding: 7px;
+    }
+
+    .cover-inner::before {
+      content: "";
+
+      position: absolute;
+      inset: 5px;
+
+      border: 1px solid rgba(255,255,255,.16);
+
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    .cover-frame img {
+      display: block;
+
+      width: 100%;
+      aspect-ratio: 2 / 3;
+
+      object-fit: cover;
+
+      background: #09141e;
+    }
+
+    .cover-caption {
+      position: absolute;
+
+      right: 0;
+      bottom: -38px;
+
+      width: 100%;
+
+      text-align: center;
+
+      color: var(--muted);
+
+      font-size: 11px;
+      letter-spacing: 1px;
+    }
+
+
+    /* ================================
+       HERO CONTENT
+    ================================= */
+
+    .hero-copy {
+      max-width: 680px;
     }
 
     .eyebrow {
-      display: inline-block;
-      color: var(--gold);
-      font-size: 13px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+
+      color: var(--turquoise-light);
+
+      font-size: 12px;
       letter-spacing: 3px;
-      padding: 5px 14px;
-      border: 1px solid var(--border);
-      border-radius: 30px;
-      margin-bottom: 18px;
+
+      border: 1px solid rgba(84,170,167,.35);
+
+      padding: 7px 15px;
+
+      background: rgba(84,170,167,.06);
+
+      margin-bottom: 24px;
     }
 
-    .detail-copy h1 {
+    .eyebrow::before {
+      content: "";
+
+      width: 7px;
+      height: 7px;
+
+      border-radius: 50%;
+
+      background: var(--turquoise-light);
+
+      box-shadow:
+        0 0 14px rgba(84,170,167,.8);
+    }
+
+    .hero-copy h1 {
       font-family: "Amiri", serif;
-      color: var(--gold-light);
-      font-size: clamp(34px, 5vw, 52px);
-      line-height: 1.2;
+
+      color: var(--paper);
+
+      font-size: clamp(52px, 7vw, 82px);
+
+      line-height: 1.05;
+
       font-weight: 700;
-      margin-bottom: 12px;
-      text-shadow: 0 0 30px rgba(201, 162, 74, 0.15);
+
+      margin-bottom: 10px;
+
+      text-shadow:
+        0 10px 40px rgba(0,0,0,.35);
     }
 
-    .detail-copy h2 {
-      color: var(--text-soft);
-      font-size: 18px;
-      font-weight: 400;
-      margin-bottom: 18px;
-    }
-
-    .author-line {
-      color: var(--gold);
-      font-weight: 600;
-      font-size: 15px;
-      padding-bottom: 22px;
-      border-bottom: 1px solid var(--border);
-      line-height: 1.9;
-    }
-
-    /* =========================
-       FOREWORD / MOGHADDAME
-    ========================= */
-
-    .foreword {
-      margin-top: 35px;
-    }
-
-    .foreword h3 {
+    .hero-subtitle {
       font-family: "Amiri", serif;
+
       color: var(--gold-light);
-      font-size: 26px;
-      font-weight: 700;
-      margin-bottom: 8px;
+
+      font-size: clamp(23px, 3vw, 32px);
+
+      line-height: 1.6;
+
+      margin-bottom: 23px;
+    }
+
+    .hero-author {
       display: flex;
       align-items: center;
       gap: 12px;
-    }
 
-    .foreword h3::before {
-      content: "";
-      width: 36px;
-      height: 2px;
-      background: var(--gold);
-      flex-shrink: 0;
-    }
-
-    .foreword h4 {
-      color: var(--turquoise);
-      font-size: 17px;
-      font-weight: 500;
-      margin-bottom: 28px;
-      padding-right: 48px;
-      letter-spacing: 0.5px;
-    }
-
-    .foreword p {
       color: var(--text-soft);
+
+      padding-bottom: 25px;
+
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero-author strong {
+      color: var(--gold-light);
+      font-weight: 600;
+    }
+
+    .hero-author .dot {
+      width: 5px;
+      height: 5px;
+
+      background: var(--turquoise);
+
+      border-radius: 50%;
+    }
+
+
+    /* ================================
+       BOOK META
+    ================================= */
+
+    .book-meta {
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 10px;
+
+      margin-top: 27px;
+    }
+
+    .meta-card {
+      padding: 15px 14px;
+
+      border: 1px solid var(--line-light);
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(255,255,255,.045),
+          rgba(255,255,255,.015)
+        );
+    }
+
+    .meta-label {
+      display: block;
+
+      color: var(--muted);
+
+      font-size: 11px;
+
+      margin-bottom: 3px;
+    }
+
+    .meta-value {
+      color: var(--text-soft);
+
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+
+    /* ================================
+       HERO INTRO
+    ================================= */
+
+    .hero-intro {
+      margin-top: 28px;
+
+      color: var(--text-soft);
+
       font-size: 16px;
       font-weight: 300;
-      line-height: 2.2;
-      margin-bottom: 22px;
-      text-align: justify;
+
+      line-height: 2.3;
     }
 
-    .foreword p:last-of-type {
+    .hero-intro strong {
+      color: var(--turquoise-light);
+      font-weight: 500;
+    }
+
+
+    /* ================================
+       QUICK NAV
+    ================================= */
+
+    .quick-nav {
+      position: sticky;
+      top: 0;
+      z-index: 15;
+
+      border-top: 1px solid var(--line-light);
+      border-bottom: 1px solid var(--line-light);
+
+      background: rgba(6,17,28,.88);
+
+      backdrop-filter: blur(14px);
+    }
+
+    .quick-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      gap: 10px;
+
+      overflow-x: auto;
+
+      scrollbar-width: none;
+
+      padding: 10px 0;
+    }
+
+    .quick-inner::-webkit-scrollbar {
+      display: none;
+    }
+
+    .quick-inner a {
+      flex: 0 0 auto;
+
+      color: var(--muted);
+
+      font-size: 12px;
+
+      padding: 7px 13px;
+
+      border: 1px solid transparent;
+
+      transition: all .25s var(--ease);
+    }
+
+    .quick-inner a:hover {
+      color: var(--turquoise-light);
+
+      border-color: rgba(84,170,167,.25);
+
+      background: rgba(84,170,167,.05);
+    }
+
+
+    /* ================================
+       INTRO SECTION
+    ================================= */
+
+    .section {
+      padding: 105px 0;
+    }
+
+    .section-heading {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+
+      gap: 30px;
+
+      margin-bottom: 45px;
+    }
+
+    .section-kicker {
+      color: var(--turquoise);
+
+      font-size: 12px;
+
+      letter-spacing: 3px;
+
+      margin-bottom: 7px;
+    }
+
+    .section-title {
+      font-family: "Amiri", serif;
+
+      color: var(--paper);
+
+      font-size: clamp(31px, 4vw, 45px);
+
+      line-height: 1.3;
+    }
+
+    .section-number {
+      font-family: "Amiri", serif;
+
+      color: rgba(201,165,91,.2);
+
+      font-size: 70px;
+
+      line-height: 1;
+
+      user-select: none;
+    }
+
+
+    /* ================================
+       PAPER
+    ================================= */
+
+    .paper {
+      position: relative;
+
+      padding: clamp(30px, 5vw, 65px);
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--paper),
+          #efe5d2
+        );
+
+      color: var(--ink);
+
+      box-shadow:
+        0 30px 80px rgba(0,0,0,.28);
+
+      overflow: hidden;
+    }
+
+    .paper::before {
+      content: "";
+
+      position: absolute;
+
+      inset: 14px;
+
+      border: 1px solid rgba(120,92,45,.2);
+
+      pointer-events: none;
+    }
+
+    .paper::after {
+      content: "";
+
+      position: absolute;
+
+      width: 300px;
+      height: 300px;
+
+      left: -120px;
+      bottom: -150px;
+
+      border-radius: 50%;
+
+      border: 1px solid rgba(84,170,167,.16);
+
+      pointer-events: none;
+    }
+
+    .paper-lead {
+      max-width: 820px;
+
+      margin-bottom: 38px;
+
+      color: #536066;
+
+      font-size: 18px;
+
+      line-height: 2.25;
+    }
+
+    .paper-lead strong {
+      color: #285f61;
+      font-weight: 700;
+    }
+
+    .text-column {
+      max-width: 850px;
+    }
+
+    .text-column p {
+      color: #3e4a4f;
+
+      font-size: 16px;
+      font-weight: 400;
+
+      line-height: 2.35;
+
+      text-align: justify;
+
+      margin-bottom: 26px;
+    }
+
+    .text-column p:last-child {
       margin-bottom: 0;
     }
 
-    /* پرسش‌های تأکیدی */
 
-    .foreword p.question {
-      text-align: center;
-      font-weight: 600;
-      color: var(--gold-light);
+    /* ================================
+       CHAPTER MARKERS
+    ================================= */
+
+    .chapter-marker {
+      display: flex;
+      align-items: center;
+
+      gap: 14px;
+
+      margin: 45px 0 24px;
+
+      color: #326e6e;
+
       font-family: "Amiri", serif;
-      font-size: clamp(18px, 2.2vw, 22px);
+
+      font-size: 23px;
+      font-weight: 700;
+    }
+
+    .chapter-marker::before {
+      content: "";
+
+      width: 34px;
+      height: 2px;
+
+      background:
+        linear-gradient(
+          90deg,
+          var(--gold-dark),
+          var(--turquoise)
+        );
+
+      flex-shrink: 0;
+    }
+
+
+    /* ================================
+       JOURNEY CARDS
+    ================================= */
+
+    .journey-section {
+      background:
+        linear-gradient(
+          180deg,
+          transparent,
+          rgba(16,45,64,.42),
+          transparent
+        );
+    }
+
+    .journey-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 18px;
+    }
+
+    .journey-card {
+      position: relative;
+
+      min-height: 255px;
+
+      padding: 31px 27px;
+
+      border: 1px solid var(--line-light);
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,.045),
+          rgba(255,255,255,.012)
+        );
+
+      overflow: hidden;
+
+      transition:
+        transform .35s var(--ease),
+        border-color .35s var(--ease),
+        background .35s var(--ease);
+    }
+
+    .journey-card::before {
+      content: "";
+
+      position: absolute;
+
+      right: 0;
+      top: 0;
+
+      width: 4px;
+      height: 100%;
+
+      background:
+        linear-gradient(
+          var(--turquoise),
+          var(--gold)
+        );
+
+      opacity: .75;
+    }
+
+    .journey-card:hover {
+      transform: translateY(-7px);
+
+      border-color: rgba(84,170,167,.38);
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(84,170,167,.07),
+          rgba(255,255,255,.015)
+        );
+    }
+
+    .journey-number {
+      font-family: "Amiri", serif;
+
+      color: rgba(201,165,91,.35);
+
+      font-size: 42px;
+
+      line-height: 1;
+
+      margin-bottom: 20px;
+    }
+
+    .journey-card h3 {
+      font-family: "Amiri", serif;
+
+      color: var(--paper);
+
+      font-size: 25px;
+
+      margin-bottom: 12px;
+    }
+
+    .journey-card p {
+      color: var(--text-soft);
+
+      font-size: 14px;
+
+      line-height: 2.05;
+    }
+
+
+    /* ================================
+       QUESTIONS
+    ================================= */
+
+    .questions {
+      position: relative;
+
+      padding: 105px 0;
+
+      overflow: hidden;
+
+      background:
+        radial-gradient(
+          circle at center,
+          rgba(84,170,167,.12),
+          transparent 55%
+        );
+    }
+
+    .questions::before {
+      content: "؟";
+
+      position: absolute;
+
+      left: 50%;
+      top: 50%;
+
+      transform: translate(-50%, -50%);
+
+      font-family: "Amiri", serif;
+
+      font-size: 430px;
+
+      line-height: 1;
+
+      color: rgba(201,165,91,.025);
+
+      pointer-events: none;
+    }
+
+    .questions-head {
+      position: relative;
+      z-index: 2;
+
+      text-align: center;
+
+      margin-bottom: 45px;
+    }
+
+    .questions-head .section-kicker {
+      color: var(--gold);
+    }
+
+    .questions-head h2 {
+      font-family: "Amiri", serif;
+
+      color: var(--paper);
+
+      font-size: clamp(32px, 5vw, 48px);
+    }
+
+    .questions-grid {
+      position: relative;
+      z-index: 2;
+
+      display: grid;
+
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 20px;
+    }
+
+    .question-card {
+      position: relative;
+
+      padding: 42px 35px;
+
+      border: 1px solid rgba(84,170,167,.3);
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(84,170,167,.075),
+          rgba(201,165,91,.035)
+        );
+
+      box-shadow:
+        0 20px 55px rgba(0,0,0,.18);
+
+      text-align: center;
+    }
+
+    .question-card::before {
+      content: "«";
+
+      position: absolute;
+
+      right: 20px;
+      top: 4px;
+
+      font-family: "Amiri", serif;
+
+      color: rgba(201,165,91,.4);
+
+      font-size: 55px;
+    }
+
+    .question-card p {
+      font-family: "Amiri", serif;
+
+      color: var(--gold-light);
+
+      font-size: clamp(20px, 2.4vw, 26px);
+
       line-height: 2;
-      padding: 20px 22px;
-      margin: 28px 0;
-      background: linear-gradient(135deg, rgba(74, 155, 155, 0.1), rgba(201, 162, 74, 0.05));
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
+
+      font-weight: 700;
     }
 
-    .foreword p.question + p.question {
-      margin-top: -10px;
-      border-top: 0;
+
+    /* ================================
+       FEATURE QUOTE
+    ================================= */
+
+    .quote-section {
+      padding: 100px 0;
     }
 
-    /* =========================
-       SIGNATURE
-    ========================= */
+    .quote {
+      position: relative;
+
+      max-width: 920px;
+
+      margin: auto;
+
+      padding: 65px 60px;
+
+      text-align: center;
+
+      border-top: 1px solid var(--gold-dark);
+      border-bottom: 1px solid var(--turquoise-dark);
+    }
+
+    .quote-mark {
+      font-family: "Amiri", serif;
+
+      color: var(--gold);
+
+      font-size: 90px;
+
+      line-height: .6;
+
+      margin-bottom: 25px;
+    }
+
+    .quote p {
+      font-family: "Amiri", serif;
+
+      color: var(--paper);
+
+      font-size: clamp(22px, 3vw, 31px);
+
+      line-height: 2;
+
+      font-weight: 700;
+    }
+
+    .quote-caption {
+      display: block;
+
+      color: var(--turquoise-light);
+
+      font-size: 12px;
+
+      letter-spacing: 2px;
+
+      margin-top: 25px;
+    }
+
+
+    /* ================================
+       CLOSING
+    ================================= */
+
+    .closing {
+      padding: 110px 0 125px;
+
+      background:
+        linear-gradient(
+          180deg,
+          transparent,
+          rgba(7,19,31,.7)
+        );
+    }
+
+    .closing-box {
+      max-width: 850px;
+
+      margin: auto;
+
+      text-align: center;
+    }
+
+    .closing-box .small-line {
+      width: 65px;
+      height: 1px;
+
+      margin: 0 auto 28px;
+
+      background:
+        linear-gradient(
+          90deg,
+          var(--turquoise),
+          var(--gold)
+        );
+    }
+
+    .closing-box h2 {
+      font-family: "Amiri", serif;
+
+      color: var(--gold-light);
+
+      font-size: clamp(32px, 5vw, 48px);
+
+      margin-bottom: 25px;
+    }
+
+    .closing-box p {
+      color: var(--text-soft);
+
+      font-size: 17px;
+
+      line-height: 2.35;
+
+      margin-bottom: 10px;
+    }
+
+    .closing-box .final-line {
+      color: var(--turquoise-light);
+
+      font-family: "Amiri", serif;
+
+      font-size: 24px;
+
+      font-weight: 700;
+
+      margin-top: 22px;
+    }
 
     .signature {
-      margin-top: 32px;
-      padding-top: 22px;
-      border-top: 1px solid var(--border);
+      margin-top: 42px;
+
       color: var(--gold);
-      font-weight: 600;
-      font-size: 15px;
-      line-height: 1.9;
+
+      font-size: 14px;
+
+      line-height: 2;
     }
 
-    /* =========================
-       BACK BUTTON
-    ========================= */
 
-    .btn {
+    /* ================================
+       BUTTON
+    ================================= */
+
+    .back-button {
       display: inline-flex;
       align-items: center;
       justify-content: center;
+
       margin-top: 35px;
-      padding: 13px 28px;
-      border: 1px solid var(--gold-dark);
-      background: linear-gradient(135deg, rgba(201, 162, 74, 0.18), rgba(201, 162, 74, 0.04));
-      color: var(--gold-light);
-      font-size: 15px;
-      font-weight: 500;
-      transition: background var(--duration) var(--ease),
-                  border-color var(--duration) var(--ease),
-                  transform var(--duration) var(--ease),
-                  box-shadow var(--duration) var(--ease);
+
+      padding: 12px 25px;
+
+      border: 1px solid rgba(84,170,167,.35);
+
+      color: var(--turquoise-light);
+
+      background: rgba(84,170,167,.05);
+
+      font-size: 14px;
+
+      transition:
+        transform .3s var(--ease),
+        background .3s var(--ease),
+        border-color .3s var(--ease);
     }
 
-    .btn:hover {
-      background: rgba(201, 162, 74, 0.2);
-      border-color: var(--gold);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 25px rgba(74, 155, 155, 0.25);
+    .back-button:hover {
+      transform: translateY(-3px);
+
+      background: rgba(84,170,167,.12);
+
+      border-color: var(--turquoise);
     }
 
-    /* =========================
+
+    /* ================================
        FOOTER
-    ========================= */
+    ================================= */
 
     footer {
-      padding: 40px 0;
-      text-align: center;
-      border-top: 1px solid var(--border);
+      padding: 35px 0;
+
+      border-top: 1px solid var(--line-light);
+
       color: var(--muted);
-      font-size: 13px;
-      background: rgba(10, 18, 32, 0.5);
+
+      text-align: center;
+
+      font-size: 12px;
+
+      background: rgba(3,10,17,.7);
     }
 
-    /* =========================
-       MOBILE
-    ========================= */
+    footer strong {
+      color: var(--gold);
+      font-weight: 500;
+    }
 
-    @media (max-width: 860px) {
-      .book-detail {
+
+    /* ================================
+       RESPONSIVE
+    ================================= */
+
+    @media (max-width: 950px) {
+
+      .hero {
+        min-height: auto;
+
+        padding: 65px 0 85px;
+      }
+
+      .hero-grid {
         grid-template-columns: 1fr;
-        gap: 40px;
+
+        gap: 70px;
       }
 
-      .detail-cover {
-        position: static;
+      .cover-stage {
+        order: 1;
       }
 
-      .detail-cover img {
-        max-width: 300px;
-      }
+      .hero-copy {
+        order: 2;
 
-      .section {
-        padding: 45px 0 70px;
-      }
-    }
+        max-width: 760px;
 
-    @media (max-width: 600px) {
-      .nav {
-        justify-content: center;
+        margin-inline: auto;
+
         text-align: center;
       }
 
-      .links {
-        gap: 16px;
-        font-size: 14px;
+      .hero-author {
+        justify-content: center;
       }
 
-      .detail-copy h1 {
-        font-size: 32px;
+      .book-meta {
+        max-width: 600px;
+
+        margin-inline: auto;
       }
 
-      .detail-copy h2 {
-        font-size: 16px;
-      }
-
-      .foreword p {
-        font-size: 15px;
+      .hero-intro {
         text-align: right;
-        line-height: 2.25;
       }
 
-      .foreword h4 {
-        padding-right: 0;
-        font-size: 15px;
+      .journey-grid {
+        grid-template-columns: 1fr;
       }
 
-      .foreword p.question {
-        font-size: 17px;
-        padding: 16px 14px;
+      .journey-card {
+        min-height: auto;
       }
     }
 
-    /* =========================
+
+    @media (max-width: 700px) {
+
+      .wrap {
+        width: min(var(--max), calc(100% - 24px));
+      }
+
+      .nav {
+        min-height: 65px;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        padding: 12px 0;
+
+        gap: 5px;
+      }
+
+      .brand {
+        font-size: 20px;
+      }
+
+      .nav-links {
+        gap: 18px;
+
+        font-size: 13px;
+      }
+
+      .hero {
+        padding: 48px 0 70px;
+      }
+
+      .cover-stage {
+        padding: 12px;
+      }
+
+      .cover-frame {
+        width: min(310px, 100%);
+      }
+
+      .hero-copy h1 {
+        font-size: 49px;
+      }
+
+      .hero-subtitle {
+        font-size: 23px;
+      }
+
+      .hero-author {
+        font-size: 13px;
+      }
+
+      .book-meta {
+        grid-template-columns: 1fr;
+
+        text-align: right;
+      }
+
+      .section {
+        padding: 75px 0;
+      }
+
+      .section-heading {
+        margin-bottom: 30px;
+      }
+
+      .section-number {
+        display: none;
+      }
+
+      .paper {
+        padding: 31px 23px;
+      }
+
+      .paper::before {
+        inset: 9px;
+      }
+
+      .paper-lead {
+        font-size: 16px;
+      }
+
+      .text-column p {
+        font-size: 15px;
+
+        text-align: right;
+
+        line-height: 2.25;
+      }
+
+      .chapter-marker {
+        font-size: 21px;
+
+        margin-top: 38px;
+      }
+
+      .questions {
+        padding: 80px 0;
+      }
+
+      .questions-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .question-card {
+        padding: 32px 22px;
+      }
+
+      .question-card p {
+        font-size: 20px;
+      }
+
+      .quote-section {
+        padding: 75px 0;
+      }
+
+      .quote {
+        padding: 45px 20px;
+      }
+
+      .quote p {
+        font-size: 21px;
+      }
+
+      .closing {
+        padding: 80px 0 90px;
+      }
+
+      .closing-box p {
+        font-size: 15px;
+      }
+
+      .closing-box .final-line {
+        font-size: 21px;
+      }
+    }
+
+
+    /* ================================
        REDUCED MOTION
-    ========================= */
+    ================================= */
 
     @media (prefers-reduced-motion: reduce) {
+
       html {
         scroll-behavior: auto;
       }
@@ -454,163 +1484,555 @@
       *,
       *::before,
       *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
+        animation: none !important;
+        transition: none !important;
       }
+
     }
+
   </style>
 </head>
 
+
 <body>
 
-  <header class="subhero compact">
+
+  <!-- ================================
+       NAVIGATION
+  ================================= -->
+
+  <header class="topbar">
+
     <nav class="nav wrap" aria-label="ناوبری اصلی">
 
       <a class="brand" href="../index.html">
         حسین محمدی آمیرزا
       </a>
 
-      <div class="links">
+      <div class="nav-links">
         <a href="../index.html">خانه</a>
         <a href="../blog.html">وبلاگ</a>
         <a href="tarikh-adyan.html">تاریخ ادیان</a>
       </div>
 
     </nav>
+
   </header>
+
 
   <main>
 
-    <section class="section wrap book-detail">
 
-      <div class="detail-cover">
-        <img
-          src="../images/books/tarikh-adyan.jpg"
-          alt="جلد دوم کتاب تاریخ ادیان؛ روانشناسی انسان تا عصر حیرت"
-          loading="lazy"
-          width="600"
-          height="850"
-          decoding="async">
+    <!-- ================================
+         HERO
+    ================================= -->
+
+    <section class="hero">
+
+      <div class="wrap hero-grid">
+
+
+        <div class="cover-stage">
+
+          <div class="cover-frame">
+
+            <div class="cover-inner">
+
+              <img
+                src="../images/books/tarikh-adyan.jpg"
+                alt="جلد دوم کتاب تاریخ ادیان؛ روانشناسی انسان تا عصر حیرت"
+                width="600"
+                height="850"
+                decoding="async">
+
+            </div>
+
+          </div>
+
+          <div class="cover-caption">
+            جلد دوم کتاب تاریخ ادیان
+          </div>
+
+        </div>
+
+
+        <div class="hero-copy">
+
+          <span class="eyebrow">
+            کتاب · جلد دوم
+          </span>
+
+          <h1>
+            تاریخ ادیان
+          </h1>
+
+          <div class="hero-subtitle">
+            روانشناسی انسان تا عصر حیرت
+          </div>
+
+          <div class="hero-author">
+
+            <strong>
+              حسین محمدی
+            </strong>
+
+            <span class="dot"></span>
+
+            <span>
+              نویسنده، پژوهشگر
+            </span>
+
+          </div>
+
+
+          <div class="book-meta">
+
+            <div class="meta-card">
+              <span class="meta-label">
+                موضوع
+              </span>
+              <span class="meta-value">
+                تاریخ ادیان
+              </span>
+            </div>
+
+            <div class="meta-card">
+              <span class="meta-label">
+                رویکرد
+              </span>
+              <span class="meta-value">
+                تاریخی ـ فلسفی
+              </span>
+            </div>
+
+            <div class="meta-card">
+              <span class="meta-label">
+                محور
+              </span>
+              <span class="meta-value">
+                انسان و ایمان
+              </span>
+            </div>
+
+          </div>
+
+
+          <p class="hero-intro">
+            سفری از <strong>سپیده‌دم باور</strong> تا جهان پیچیده و
+            حیرت‌انگیز امروز؛ روایتی درباره ایمان، توحید، انسان،
+            ادیان و پرسش‌هایی که در طول تاریخ هرگز خاموش نشده‌اند.
+          </p>
+
+        </div>
+
       </div>
 
-      <div class="detail-copy">
+    </section>
 
-        <span class="eyebrow">کتاب</span>
 
-        <h1>تاریخ ادیان</h1>
+    <!-- ================================
+         QUICK NAV
+    ================================= -->
 
-        <h2>روانشناسی انسان تا عصر حیرت</h2>
+    <div class="quick-nav">
 
-        <p class="author-line">
-          جلد دوم<br>
-          نویسنده: حسین محمدی
-        </p>
+      <div class="wrap quick-inner">
 
-        <div class="foreword">
+        <a href="#introduction">
+          مقدمه
+        </a>
 
-          <h3>مقدمه</h3>
+        <a href="#journey">
+          مسیر این سفر
+        </a>
 
-          <h4>در جستجوی خدای یگانه</h4>
+        <a href="#questions">
+          پرسش‌های اصلی
+        </a>
+
+        <a href="#quote">
+          یک تأمل
+        </a>
+
+        <a href="#ending">
+          پایان سفر
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- ================================
+         INTRODUCTION
+    ================================= -->
+
+    <section class="section" id="introduction">
+
+      <div class="wrap">
+
+        <div class="section-heading">
+
+          <div>
+
+            <div class="section-kicker">
+              آغاز سفر
+            </div>
+
+            <h2 class="section-title">
+              در جستجوی خدای یگانه
+            </h2>
+
+          </div>
+
+          <div class="section-number">
+            ۰۱
+          </div>
+
+        </div>
+
+
+        <div class="paper">
+
+          <p class="paper-lead">
+            در جلد نخست، از <strong>سپیده‌دم باور</strong> گفتیم؛
+            از روزگاری که انسان، خدا را در سنگ و ستاره و رود و درختان
+            می‌جست. این جلد، روایت گسستی بزرگ است؛ لحظه‌ای که تاریخ
+            ایمان، ورقی تازه خورد.
+          </p>
+
+
+          <div class="text-column">
+
+
+            <p>
+              در جلد نخست، از سپیده‌دم باور گفتیم؛ از روزگاری که انسان،
+              خدا را در سنگ و ستاره و رود و درختان می‌جست. از میان‌رودان،
+              که مردمانش با دستان خویش بت می‌تراشیدند و در برابر ساختهٔ
+              خود زانو می‌زدند. از مصر، سرزمین نیل، که در آن آخناتون
+              خورشید را «آتون» خواند و رؤیای یکتاپرستی را در دل معابد
+              کهن افروخت. از هند، با سرودهای رازآلود وداها و آتش‌های
+              همیشه‌فروزان قربانی. و از ایران، جایی که زرتشت انسان را
+              میان روشنایی و تاریکی نشاند و او را آزاد و مسئول انتخاب
+              خویش خواند.
+            </p>
+
+
+            <div class="chapter-marker">
+              لحظه گسست
+            </div>
+
+
+            <p>
+              اما این جلد، روایت گسستی بزرگ است؛ لحظه‌ای که تاریخ ایمان،
+              ورقی تازه خورد. لحظه‌ای که مردی در برابر ستاره و ماه و
+              خورشید ایستاد و گفت: «غروب‌کنندگان را دوست ندارم.»
+            </p>
+
+
+            <p>
+              او ابراهیم بود؛ پدر ایمان. آغازگر راهی که به توحید انجامید.
+              خدا را نه در سنگ و چوب یافت و نه در سپهر، بلکه در ژرفای
+              جان آدمی و در قلب انسان یافت. با او، فصل یکتاپرستی آغاز
+              شد؛ فصلی که هنوز ادامه دارد.
+            </p>
+
+
+            <div class="chapter-marker">
+              رشته پیامبران
+            </div>
+
+
+            <p>
+              از ابراهیم تا موسی، از موسی تا عیسی، و از عیسی تا محمد(ص)،
+              رشته‌ای از پیامبران امتداد یافت؛ پیام‌آورانی که در زمانه‌های
+              گوناگون، ندای بازگشت به خدای یگانه را سر دادند. آنان حقیقتی
+              نو نیاوردند؛ حقیقتی کهن را یادآور شدند. گفتند که در هر عصر،
+              صدایی برای بیداری برخاسته است.
+            </p>
+
+
+            <div class="chapter-marker">
+              یهودیت؛ پیمان و غربت
+            </div>
+
+
+            <p>
+              در این مسیر، با یهودیت همراه می‌شویم؛ با قومی که در دامنه‌های
+              کوه سینا با خدا پیمان بستند. از شریعت موسی خواهیم گفت، از
+              تورات و تلمود، از شکوه معبد سلیمان و ویرانی‌هایش، و از
+              کنیسه‌هایی که در غربت، چراغ ایمان را زنده نگاه داشتند. از
+              رنج ایوب خواهیم گفت و از نغمه‌های نیایش که در مزامیر داوود
+              جاری شد.
+            </p>
+
+
+            <div class="chapter-marker">
+              مسیحیت؛ محبت و دگرگونی
+            </div>
+
+
+            <p>
+              سپس به مسیحیت می‌رسیم؛ دینی که از دل یهودیت برخاست، اما
+              مرزها را درنوردید. از عیسی ناصری خواهیم گفت؛ پیام‌آور محبت
+              و بخشایش، که با فرودستان نشست و از پادشاهی خدا سخن گفت.
+              از پولس که پیام او را به سراسر امپراتوری روم برد، و از
+              پطرس که ایمانش را با جان خویش مهر کرد. از کلیسایی که از
+              دخمه‌ها برخاست و بر تخت قدرت نشست؛ از انشقاق بزرگ شرق و
+              غرب، و از اصلاحات پروتستانی که سیمای مسیحیت را دگرگون ساخت.
+            </p>
+
+
+            <div class="chapter-marker">
+              اسلام؛ واپسین حلقه زنجیره توحید
+            </div>
+
+
+            <p>
+              و آنگاه به اسلام می‌رسیم؛ واپسین حلقهٔ زنجیرهٔ توحید. از
+              محمد(ص) خواهیم گفت؛ یتیمی از قریش که در غار حرا آوایی
+              شنید که تاریخ را دگرگون کرد. از قرآن، کتابی که در صحرا
+              نازل شد و به اقصای نقاط جهان رسید. از شریعت و طریقت و
+              حقیقت؛ از فقیهان و فیلسوفان و عارفانی که تمدنی گسترده از
+              اندلس تا هند بنا کردند. و از تشیع خواهیم گفت؛ شاخه‌ای که
+              در واقعهٔ کربلا با خون خویش تاریخ را نوشت و قرن‌ها چشم به
+              افق انتظار دوخت.
+            </p>
+
+
+            <div class="chapter-marker">
+              انسان در جهان مدرن
+            </div>
+
+
+            <p>
+              اما روایت ما در گذشته متوقف نمی‌شود. جهان مدرن با پرسش‌های
+              تازه‌اش فرا رسیده است. عصر روشنگری ایمان را به محک عقل زد.
+              علم، روایت‌های کهن آفرینش را بازخوانی کرد. سکولاریسم، دین
+              را از اریکهٔ قدرت کنار نشاند. و انسان امروز، در میان هیاهوی
+              رسانه‌ها و تصویرها، هنوز در جست‌وجوی معنایی است که جانش را
+              آرام کند.
+            </p>
+
+
+            <div class="chapter-marker">
+              عصر حیرت
+            </div>
+
+
+            <p>
+              در فصل پایانی، به این عصر حیرت خواهیم پرداخت؛ به گفت‌وگوی
+              ادیان، به کشاکش بنیادگرایی و مدرنیسم، به مسئلهٔ حقوق زنان
+              و دغدغهٔ محیط زیست، به الحاد نوین و معنویت‌های نوظهور.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================================
+         JOURNEY
+    ================================= -->
+
+    <section class="section journey-section" id="journey">
+
+      <div class="wrap">
+
+        <div class="section-heading">
+
+          <div>
+
+            <div class="section-kicker">
+              نقشه این سفر
+            </div>
+
+            <h2 class="section-title">
+              از سپیده‌دم باور تا عصر حیرت
+            </h2>
+
+          </div>
+
+          <div class="section-number">
+            ۰۲
+          </div>
+
+        </div>
+
+
+        <div class="journey-grid">
+
+
+          <article class="journey-card">
+
+            <div class="journey-number">
+              ۰۱
+            </div>
+
+            <h3>
+              تولد توحید
+            </h3>
+
+            <p>
+              از باورهای نخستین انسان و خدایان طبیعت تا زرتشت
+              و ظهور اندیشه توحیدی؛ جست‌وجوی معنای خدا در آغاز
+              تاریخ اندیشه انسان.
+            </p>
+
+          </article>
+
+
+          <article class="journey-card">
+
+            <div class="journey-number">
+              ۰۲
+            </div>
+
+            <h3>
+              ادیان ابراهیمی
+            </h3>
+
+            <p>
+              از ابراهیم تا موسی، عیسی و محمد(ص)؛ روایت شکل‌گیری
+              سنت‌های بزرگ توحیدی و تأثیر آنها بر فرهنگ و تمدن.
+            </p>
+
+          </article>
+
+
+          <article class="journey-card">
+
+            <div class="journey-number">
+              ۰۳
+            </div>
+
+            <h3>
+              عصر حیرت
+            </h3>
+
+            <p>
+              مواجهه ایمان با علم، عقل، سکولاریسم، مدرنیسم،
+              الحاد نوین، معنویت‌های نوظهور و پرسش‌های انسان
+              در جهان معاصر.
+            </p>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================================
+         QUESTIONS
+    ================================= -->
+
+    <section class="questions" id="questions">
+
+      <div class="wrap">
+
+        <div class="questions-head">
+
+          <div class="section-kicker">
+            پرسش‌هایی برای امروز
+          </div>
+
+          <h2>
+            و اکنون، سؤال اصلی چیست؟
+          </h2>
+
+        </div>
+
+
+        <div class="questions-grid">
+
+
+          <article class="question-card">
+
+            <p>
+              آیا ادیان، پس از هزاران سال، هنوز برای انسان معاصر
+              سخنی دارند؟
+            </p>
+
+          </article>
+
+
+          <article class="question-card">
+
+            <p>
+              آیا می‌توانند پلی برای آرامش و صلح باشند، یا همچنان
+              آتش تعصب را شعله‌ور می‌کنند؟
+            </p>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================================
+         REFLECTION
+    ================================= -->
+
+    <section class="quote-section" id="quote">
+
+      <div class="wrap">
+
+        <div class="quote">
+
+          <div class="quote-mark">
+            «
+          </div>
 
           <p>
-            در جلد نخست، از سپیده‌دم باور گفتیم؛ از روزگاری که انسان،
-            خدا را در سنگ و ستاره و رود و درختان می‌جست. از میان‌رودان،
-            که مردمانش با دستان خویش بت می‌تراشیدند و در برابر ساختهٔ
-            خود زانو می‌زدند. از مصر، سرزمین نیل، که در آن آخناتون
-            خورشید را «آتون» خواند و رؤیای یکتاپرستی را در دل معابد
-            کهن افروخت. از هند، با سرودهای رازآلود وداها و آتش‌های
-            همیشه‌فروزان قربانی. و از ایران، جایی که زرتشت انسان را
-            میان روشنایی و تاریکی نشاند و او را آزاد و مسئول انتخاب
-            خویش خواند.
+            شاید بزرگ‌ترین میراث ادیان همین باشد:
+            یادآوری اینکه پرسش‌هایی هست که پایان نمی‌پذیرند؛
+            و همین بی‌پایانی، نشانه‌ای از بی‌نهایت است.
           </p>
 
-          <p>
-            اما این جلد، روایت گسستی بزرگ است؛ لحظه‌ای که تاریخ ایمان،
-            ورقی تازه خورد. لحظه‌ای که مردی در برابر ستاره و ماه و
-            خورشید ایستاد و گفت: «غروب‌کنندگان را دوست ندارم.»
-          </p>
+          <span class="quote-caption">
+            تأملی در پایان سفر
+          </span>
 
-          <p>
-            او ابراهیم بود؛ پدر ایمان. آغازگر راهی که به توحید انجامید.
-            خدا را نه در سنگ و چوب یافت و نه در سپهر، بلکه در ژرفای
-            جان آدمی و در قلب انسان یافت. با او، فصل یکتاپرستی آغاز
-            شد؛ فصلی که هنوز ادامه دارد.
-          </p>
+        </div>
 
-          <p>
-            از ابراهیم تا موسی، از موسی تا عیسی، و از عیسی تا محمد(ص)،
-            رشته‌ای از پیامبران امتداد یافت؛ پیام‌آورانی که در زمانه‌های
-            گوناگون، ندای بازگشت به خدای یگانه را سر دادند. آنان حقیقتی
-            نو نیاوردند؛ حقیقتی کهن را یادآور شدند. گفتند که در هر عصر،
-            صدایی برای بیداری برخاسته است.
-          </p>
+      </div>
 
-          <p>
-            در این مسیر، با یهودیت همراه می‌شویم؛ با قومی که در دامنه‌های
-            کوه سینا با خدا پیمان بستند. از شریعت موسی خواهیم گفت، از
-            تورات و تلمود، از شکوه معبد سلیمان و ویرانی‌هایش، و از
-            کنیسه‌هایی که در غربت، چراغ ایمان را زنده نگاه داشتند. از
-            رنج ایوب خواهیم گفت و از نغمه‌های نیایش که در مزامیر داوود
-            جاری شد.
-          </p>
+    </section>
 
-          <p>
-            سپس به مسیحیت می‌رسیم؛ دینی که از دل یهودیت برخاست، اما
-            مرزها را درنوردید. از عیسی ناصری خواهیم گفت؛ پیام‌آور محبت
-            و بخشایش، که با فرودستان نشست و از پادشاهی خدا سخن گفت.
-            از پولس که پیام او را به سراسر امپراتوری روم برد، و از
-            پطرس که ایمانش را با جان خویش مهر کرد. از کلیسایی که از
-            دخمه‌ها برخاست و بر تخت قدرت نشست؛ از انشقاق بزرگ شرق و
-            غرب، و از اصلاحات پروتستانی که سیمای مسیحیت را دگرگون ساخت.
-          </p>
 
-          <p>
-            و آنگاه به اسلام می‌رسیم؛ واپسین حلقهٔ زنجیرهٔ توحید. از
-            محمد(ص) خواهیم گفت؛ یتیمی از قریش که در غار حرا آوایی
-            شنید که تاریخ را دگرگون کرد. از قرآن، کتابی که در صحرا
-            نازل شد و به اقصای نقاط جهان رسید. از شریعت و طریقت و
-            حقیقت؛ از فقیهان و فیلسوفان و عارفانی که تمدنی گسترده از
-            اندلس تا هند بنا کردند. و از تشیع خواهیم گفت؛ شاخه‌ای که
-            در واقعهٔ کربلا با خون خویش تاریخ را نوشت و قرن‌ها چشم به
-            افق انتظار دوخت.
-          </p>
+    <!-- ================================
+         ENDING
+    ================================= -->
 
-          <p>
-            اما روایت ما در گذشته متوقف نمی‌شود. جهان مدرن با پرسش‌های
-            تازه‌اش فرا رسیده است. عصر روشنگری ایمان را به محک عقل زد.
-            علم، روایت‌های کهن آفرینش را بازخوانی کرد. سکولاریسم، دین
-            را از اریکهٔ قدرت کنار نشاند. و انسان امروز، در میان هیاهوی
-            رسانه‌ها و تصویرها، هنوز در جست‌وجوی معنایی است که جانش را
-            آرام کند.
-          </p>
+    <section class="closing" id="ending">
 
-          <p>
-            در فصل پایانی، به این عصر حیرت خواهیم پرداخت؛ به گفت‌وگوی
-            ادیان، به کشاکش بنیادگرایی و مدرنیسم، به مسئلهٔ حقوق زنان
-            و دغدغهٔ محیط زیست، به الحاد نوین و معنویت‌های نوظهور.
-          </p>
+      <div class="wrap">
 
-          <p class="question">
-            آیا ادیان، پس از هزاران سال، هنوز برای انسان معاصر سخنی دارند؟
-          </p>
+        <div class="closing-box">
 
-          <p class="question">
-            آیا می‌توانند پلی برای آرامش و صلح باشند، یا همچنان آتش تعصب را شعله‌ور می‌کنند؟
-          </p>
+          <div class="small-line"></div>
+
+          <h2>
+            پایان سفر، آغاز پرسش
+          </h2>
 
           <p>
             از غارهای کهن تا جهان پرهیاهوی امروز، سفری دراز پیموده‌ایم.
             اما شاید مقصد این سفر، یافتن پاسخی قطعی نباشد؛ بلکه آموختن
             هنر پرسیدن باشد. پرسیدن از خویشتن، از جهان، و از آن حقیقت
             بی‌کرانی که هستی را در آغوش گرفته است.
-          </p>
-
-          <p>
-            شاید بزرگ‌ترین میراث ادیان همین باشد: یادآوری اینکه پرسش‌هایی
-            هست که پایان نمی‌پذیرند؛ و همین بی‌پایانی، نشانه‌ای از
-            بی‌نهایت است.
           </p>
 
           <p>
@@ -622,41 +2044,74 @@
             و در جست‌وجوی خویشتن، خویش.
           </p>
 
-          <p>
+          <p class="final-line">
             چرا که خودشناسی، نخستین گام خداشناسی است.
           </p>
 
+
           <div class="signature">
+
             با احترام<br>
-            حسین محمدی
+
+            <strong>
+              حسین محمدی
+            </strong>
+
           </div>
 
-        </div>
 
-        <a class="btn" href="../index.html#books">
-          ← بازگشت به کتاب‌ها
-        </a>
+          <a
+            class="back-button"
+            href="../index.html#books">
+            ← بازگشت به کتاب‌ها
+          </a>
+
+        </div>
 
       </div>
 
     </section>
 
+
   </main>
 
+
+  <!-- ================================
+       FOOTER
+  ================================= -->
+
   <footer>
+
     <div class="wrap">
-      © <span id="year"></span> حسین محمدی آمیرزا
+
+      © <span id="year"></span>
+
+      <strong>
+        حسین محمدی آمیرزا
+      </strong>
+
+      · تمامی حقوق محفوظ است.
+
     </div>
+
   </footer>
 
+
   <script>
+
     (function () {
-      var el = document.getElementById("year");
-      if (el) {
-        el.textContent = new Date().getFullYear();
+
+      var year = document.getElementById("year");
+
+      if (year) {
+        year.textContent = new Date().getFullYear();
       }
+
     })();
+
   </script>
+
 
 </body>
 </html>
+```
