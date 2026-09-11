@@ -16,169 +16,2207 @@
   <link rel="canonical"
         href="https://hossein-amirza.github.io/hossein-mohammadi-amirza/honar-razm.html">
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&family=Amiri:wght@400;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+
+    :root {
+      --cream: #f4ead8;
+      --cream-light: #fffaf0;
+      --paper: #ead8bb;
+
+      --orange: #c76525;
+      --orange-light: #e48a43;
+      --copper: #a94e20;
+      --rust: #8e321f;
+
+      --navy: #173b4d;
+      --navy-light: #24576d;
+
+      --red: #8e2924;
+
+      --brown: #5b3928;
+      --brown-light: #79533a;
+
+      --text: #30251e;
+      --text-soft: #5d5046;
+      --muted: #806f60;
+
+      --white: #fffdf8;
+
+      --border: rgba(116, 69, 37, 0.20);
+      --border-strong: rgba(199, 101, 37, 0.45);
+
+      --shadow: 0 20px 60px rgba(65, 38, 20, 0.18);
+
+      --max: 1120px;
+
+      --ease: cubic-bezier(.4, 0, .2, 1);
+      --duration: .3s;
+    }
+
+
+    /* ------------------------------
+       RESET
+    ------------------------------ */
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Vazirmatn", Tahoma, sans-serif;
+      color: var(--text);
+      line-height: 2.1;
+      min-height: 100vh;
+
+      background:
+        radial-gradient(
+          circle at 85% 5%,
+          rgba(199, 101, 37, .13),
+          transparent 28%
+        ),
+        radial-gradient(
+          circle at 10% 80%,
+          rgba(23, 59, 77, .08),
+          transparent 30%
+        ),
+        linear-gradient(
+          135deg,
+          #f6eddf 0%,
+          #efe0c9 50%,
+          #f5ead9 100%
+        );
+
+      overflow-x: hidden;
+    }
+
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+
+      background-image:
+        repeating-linear-gradient(
+          0deg,
+          rgba(80, 45, 25, .018) 0,
+          rgba(80, 45, 25, .018) 1px,
+          transparent 1px,
+          transparent 7px
+        );
+
+      opacity: .55;
+      z-index: -1;
+    }
+
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+
+    img {
+      max-width: 100%;
+    }
+
+
+    :focus-visible {
+      outline: 3px solid var(--orange-light);
+      outline-offset: 4px;
+      border-radius: 4px;
+    }
+
+
+    .wrap {
+      width: min(var(--max), calc(100% - 36px));
+      margin-inline: auto;
+    }
+
+
+    /* ------------------------------
+       TOP BAR
+    ------------------------------ */
+
+    .topbar {
+      background: var(--navy);
+      color: #f8eee0;
+      border-bottom: 4px solid var(--orange);
+
+      position: relative;
+      z-index: 10;
+    }
+
+
+    .nav {
+      min-height: 70px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 25px;
+    }
+
+
+    .brand {
+      font-family: "Amiri", serif;
+      font-size: 23px;
+      font-weight: 700;
+      color: #fff6e9;
+
+      transition:
+        color var(--duration) var(--ease);
+    }
+
+
+    .brand:hover {
+      color: var(--orange-light);
+    }
+
+
+    .links {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+
+    .links a {
+      color: rgba(255,255,255,.82);
+      font-size: 14px;
+      position: relative;
+      padding: 4px 0;
+
+      transition:
+        color var(--duration) var(--ease);
+    }
+
+
+    .links a::after {
+      content: "";
+
+      position: absolute;
+      right: 0;
+      bottom: 0;
+
+      width: 0;
+      height: 2px;
+
+      background: var(--orange-light);
+
+      transition:
+        width var(--duration) var(--ease);
+    }
+
+
+    .links a:hover {
+      color: #fff;
+    }
+
+
+    .links a:hover::after {
+      width: 100%;
+    }
+
+
+    /* ------------------------------
+       HERO
+    ------------------------------ */
+
+    .hero {
+      padding: 80px 0 70px;
+
+      position: relative;
+      overflow: hidden;
+    }
+
+
+    .hero::before {
+      content: "";
+
+      position: absolute;
+
+      width: 460px;
+      height: 460px;
+
+      left: -180px;
+      top: -180px;
+
+      border: 1px solid rgba(199,101,37,.14);
+      border-radius: 50%;
+
+      box-shadow:
+        0 0 0 40px rgba(199,101,37,.035),
+        0 0 0 80px rgba(199,101,37,.025);
+
+      pointer-events: none;
+    }
+
+
+    .hero::after {
+      content: "هنر رزم ایرانیان";
+
+      position: absolute;
+
+      left: -30px;
+      bottom: -65px;
+
+      font-family: "Amiri", serif;
+      font-size: 150px;
+      font-weight: 700;
+
+      color: rgba(23,59,77,.035);
+
+      white-space: nowrap;
+      pointer-events: none;
+    }
+
+
+    .hero-grid {
+      display: grid;
+
+      grid-template-columns:
+        minmax(270px, 390px)
+        minmax(0, 1fr);
+
+      gap: 75px;
+
+      align-items: center;
+    }
+
+
+    /* ------------------------------
+       COVER
+    ------------------------------ */
+
+    .cover-area {
+      position: relative;
+      text-align: center;
+    }
+
+
+    .cover-frame {
+      position: relative;
+
+      width: min(100%, 360px);
+
+      margin-inline: auto;
+
+      padding: 14px;
+
+      background:
+        linear-gradient(
+          145deg,
+          var(--orange),
+          var(--copper) 50%,
+          var(--rust)
+        );
+
+      box-shadow:
+        0 30px 70px rgba(72,38,20,.28);
+
+      transform: rotate(-1deg);
+
+      transition:
+        transform .5s var(--ease),
+        box-shadow .5s var(--ease);
+    }
+
+
+    .cover-frame:hover {
+      transform: rotate(0deg) translateY(-5px);
+
+      box-shadow:
+        0 40px 85px rgba(72,38,20,.32);
+    }
+
+
+    .cover-frame::before {
+      content: "";
+
+      position: absolute;
+      inset: -9px;
+
+      border: 1px solid rgba(23,59,77,.35);
+
+      pointer-events: none;
+    }
+
+
+    .cover-frame::after {
+      content: "";
+
+      position: absolute;
+      inset: 5px;
+
+      border: 1px solid rgba(255,240,214,.65);
+
+      pointer-events: none;
+    }
+
+
+    .cover-frame img {
+      display: block;
+
+      width: 100%;
+      aspect-ratio: 2 / 3;
+
+      object-fit: cover;
+
+      background: #d8c4a7;
+
+      position: relative;
+      z-index: 1;
+    }
+
+
+    .cover-caption {
+      margin-top: 25px;
+
+      color: var(--muted);
+
+      font-size: 13px;
+    }
+
+
+    .cover-caption strong {
+      display: block;
+
+      color: var(--navy);
+
+      font-size: 14px;
+
+      margin-bottom: 3px;
+    }
+
+
+    /* ------------------------------
+       HERO CONTENT
+    ------------------------------ */
+
+    .hero-copy {
+      position: relative;
+      z-index: 2;
+    }
+
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+
+      padding: 6px 15px;
+
+      background: rgba(199,101,37,.09);
+
+      border: 1px solid var(--border-strong);
+
+      color: var(--orange);
+
+      font-size: 13px;
+      font-weight: 600;
+
+      border-radius: 30px;
+
+      margin-bottom: 22px;
+    }
+
+
+    .eyebrow::before {
+      content: "";
+
+      width: 7px;
+      height: 7px;
+
+      background: var(--orange);
+
+      border-radius: 50%;
+    }
+
+
+    .hero h1 {
+      font-family: "Amiri", serif;
+
+      color: var(--navy);
+
+      font-size: clamp(46px, 7vw, 76px);
+
+      line-height: 1.15;
+
+      margin-bottom: 8px;
+
+      letter-spacing: -.5px;
+    }
+
+
+    .hero h2 {
+      color: var(--orange);
+
+      font-size: clamp(18px, 2.5vw, 24px);
+
+      font-weight: 400;
+
+      margin-bottom: 24px;
+    }
+
+
+    .author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      color: var(--brown);
+
+      font-size: 15px;
+      font-weight: 600;
+
+      margin-bottom: 32px;
+    }
+
+
+    .author-line {
+      width: 45px;
+      height: 2px;
+
+      background: var(--orange);
+    }
+
+
+    .hero-description {
+      max-width: 720px;
+
+      color: var(--text-soft);
+
+      font-size: 17px;
+
+      line-height: 2.2;
+    }
+
+
+    /* ------------------------------
+       HERO TAGS
+    ------------------------------ */
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+
+      margin-top: 30px;
+    }
+
+
+    .tag {
+      padding: 7px 14px;
+
+      background: rgba(255,255,255,.5);
+
+      border: 1px solid var(--border);
+
+      color: var(--brown-light);
+
+      font-size: 13px;
+
+      border-radius: 3px;
+    }
+
+
+    /* ------------------------------
+       QUICK NAV
+    ------------------------------ */
+
+    .quick-nav {
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+
+      background: rgba(255,250,240,.72);
+
+      backdrop-filter: blur(8px);
+
+      position: sticky;
+      top: 0;
+
+      z-index: 20;
+    }
+
+
+    .quick-inner {
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      gap: 8px;
+
+      min-height: 58px;
+
+      overflow-x: auto;
+    }
+
+
+    .quick-inner a {
+      white-space: nowrap;
+
+      padding: 6px 15px;
+
+      color: var(--muted);
+
+      font-size: 13px;
+
+      border-radius: 20px;
+
+      transition:
+        color var(--duration) var(--ease),
+        background var(--duration) var(--ease);
+    }
+
+
+    .quick-inner a:hover {
+      color: var(--orange);
+
+      background: rgba(199,101,37,.08);
+    }
+
+
+    /* ------------------------------
+       MAIN SECTIONS
+    ------------------------------ */
+
+    .section {
+      padding: 85px 0;
+    }
+
+
+    .section-heading {
+      margin-bottom: 38px;
+    }
+
+
+    .section-kicker {
+      display: block;
+
+      color: var(--orange);
+
+      font-size: 12px;
+      font-weight: 700;
+
+      letter-spacing: 2px;
+
+      margin-bottom: 6px;
+    }
+
+
+    .section-heading h2 {
+      font-family: "Amiri", serif;
+
+      color: var(--navy);
+
+      font-size: clamp(30px, 4vw, 42px);
+
+      line-height: 1.3;
+    }
+
+
+    .section-heading p {
+      max-width: 700px;
+
+      color: var(--muted);
+
+      font-size: 14px;
+
+      margin-top: 8px;
+    }
+
+
+    /* ------------------------------
+       FOREWORD
+    ------------------------------ */
+
+    .reading-card {
+      background: rgba(255,253,248,.76);
+
+      border: 1px solid var(--border);
+
+      box-shadow: var(--shadow);
+
+      position: relative;
+
+      overflow: hidden;
+    }
+
+
+    .reading-card::before {
+      content: "";
+
+      position: absolute;
+
+      right: 0;
+      top: 0;
+      bottom: 0;
+
+      width: 5px;
+
+      background:
+        linear-gradient(
+          to bottom,
+          var(--orange),
+          var(--red),
+          var(--navy)
+        );
+    }
+
+
+    .reading-inner {
+      padding: 50px clamp(25px, 5vw, 70px);
+    }
+
+
+    .opening-poem {
+      font-family: "Amiri", serif;
+
+      color: var(--red);
+
+      text-align: center;
+
+      font-size: clamp(21px, 3vw, 29px);
+
+      line-height: 2.1;
+
+      padding: 30px 20px;
+
+      margin-bottom: 40px;
+
+      border-top: 1px solid var(--border-strong);
+      border-bottom: 1px solid var(--border-strong);
+
+      background:
+        linear-gradient(
+          90deg,
+          transparent,
+          rgba(199,101,37,.07),
+          transparent
+        );
+    }
+
+
+    .opening-poem small {
+      display: block;
+
+      margin-top: 8px;
+
+      color: var(--muted);
+
+      font-family: "Vazirmatn", Tahoma, sans-serif;
+
+      font-size: 11px;
+    }
+
+
+    .foreword p {
+      color: var(--text-soft);
+
+      font-size: 16px;
+
+      line-height: 2.35;
+
+      margin-bottom: 24px;
+
+      text-align: justify;
+    }
+
+
+    .foreword p:last-child {
+      margin-bottom: 0;
+    }
+
+
+    /* ------------------------------
+       FEATURE QUOTE
+    ------------------------------ */
+
+    .feature-quote {
+      margin: 0;
+
+      padding: 55px 25px;
+
+      text-align: center;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--navy),
+          #204e61
+        );
+
+      color: #fff7e9;
+
+      position: relative;
+
+      overflow: hidden;
+    }
+
+
+    .feature-quote::before {
+      content: "«";
+
+      position: absolute;
+
+      right: 30px;
+      top: -35px;
+
+      font-family: "Amiri", serif;
+
+      font-size: 180px;
+
+      color: rgba(255,255,255,.06);
+    }
+
+
+    .feature-quote blockquote {
+      position: relative;
+      z-index: 1;
+
+      font-family: "Amiri", serif;
+
+      font-size: clamp(24px, 4vw, 38px);
+
+      line-height: 1.9;
+
+      max-width: 850px;
+
+      margin: auto;
+    }
+
+
+    .feature-quote cite {
+      display: block;
+
+      margin-top: 18px;
+
+      color: #e9b27d;
+
+      font-family: "Vazirmatn", Tahoma, sans-serif;
+
+      font-size: 13px;
+
+      font-style: normal;
+    }
+
+
+    /* ------------------------------
+       THREE PRINCIPLES
+    ------------------------------ */
+
+    .principles {
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 20px;
+    }
+
+
+    .principle {
+      padding: 32px 25px;
+
+      background: rgba(255,253,248,.7);
+
+      border: 1px solid var(--border);
+
+      position: relative;
+
+      transition:
+        transform var(--duration) var(--ease),
+        box-shadow var(--duration) var(--ease),
+        border-color var(--duration) var(--ease);
+    }
+
+
+    .principle:hover {
+      transform: translateY(-5px);
+
+      border-color: var(--border-strong);
+
+      box-shadow: 0 18px 40px rgba(65,38,20,.12);
+    }
+
+
+    .principle-number {
+      display: inline-flex;
+
+      align-items: center;
+      justify-content: center;
+
+      width: 42px;
+      height: 42px;
+
+      margin-bottom: 18px;
+
+      background: var(--orange);
+
+      color: white;
+
+      font-family: "Amiri", serif;
+
+      font-size: 20px;
+
+      border-radius: 50%;
+    }
+
+
+    .principle h3 {
+      font-family: "Amiri", serif;
+
+      color: var(--navy);
+
+      font-size: 25px;
+
+      margin-bottom: 8px;
+    }
+
+
+    .principle p {
+      color: var(--text-soft);
+
+      font-size: 14px;
+
+      line-height: 2;
+    }
+
+
+    /* ------------------------------
+       VISION
+    ------------------------------ */
+
+    .vision {
+      display: grid;
+
+      grid-template-columns: 1fr 1.5fr;
+
+      gap: 35px;
+
+      align-items: stretch;
+    }
+
+
+    .vision-title {
+      background: var(--orange);
+
+      color: white;
+
+      padding: 45px 35px;
+
+      position: relative;
+
+      overflow: hidden;
+    }
+
+
+    .vision-title::after {
+      content: "رزم";
+
+      position: absolute;
+
+      left: -20px;
+      bottom: -60px;
+
+      font-family: "Amiri", serif;
+
+      font-size: 160px;
+
+      color: rgba(255,255,255,.08);
+    }
+
+
+    .vision-title h2 {
+      position: relative;
+      z-index: 1;
+
+      font-family: "Amiri", serif;
+
+      font-size: 37px;
+
+      line-height: 1.5;
+    }
+
+
+    .vision-title p {
+      position: relative;
+      z-index: 1;
+
+      margin-top: 18px;
+
+      color: rgba(255,255,255,.84);
+
+      font-size: 14px;
+    }
+
+
+    .vision-copy {
+      padding: 40px;
+
+      background: rgba(255,253,248,.75);
+
+      border: 1px solid var(--border);
+    }
+
+
+    .vision-copy p {
+      color: var(--text-soft);
+
+      font-size: 16px;
+
+      line-height: 2.3;
+
+      margin-bottom: 18px;
+    }
+
+
+    .vision-copy p:last-child {
+      margin-bottom: 0;
+    }
+
+
+    /* ------------------------------
+       BOOK INFORMATION
+    ------------------------------ */
+
+    .book-info {
+      display: grid;
+
+      grid-template-columns: repeat(2, 1fr);
+
+      border: 1px solid var(--border);
+
+      background: rgba(255,253,248,.7);
+    }
+
+
+    .info-item {
+      padding: 24px 28px;
+
+      border-bottom: 1px solid var(--border);
+
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 4px;
+    }
+
+
+    .info-item:nth-child(odd) {
+      border-left: 1px solid var(--border);
+    }
+
+
+    .info-item:nth-last-child(-n+2) {
+      border-bottom: 0;
+    }
+
+
+    .info-label {
+      color: var(--orange);
+
+      font-size: 12px;
+
+      font-weight: 700;
+    }
+
+
+    .info-value {
+      color: var(--navy);
+
+      font-size: 15px;
+
+      font-weight: 600;
+    }
+
+
+    /* ------------------------------
+       COLLABORATORS
+    ------------------------------ */
+
+    .collaborators {
+      background: var(--navy);
+
+      color: white;
+
+      padding: 45px;
+
+      position: relative;
+
+      overflow: hidden;
+    }
+
+
+    .collaborators::after {
+      content: "";
+
+      position: absolute;
+
+      left: -100px;
+      bottom: -130px;
+
+      width: 300px;
+      height: 300px;
+
+      border: 1px solid rgba(255,255,255,.1);
+
+      border-radius: 50%;
+
+      box-shadow:
+        0 0 0 35px rgba(255,255,255,.025),
+        0 0 0 70px rgba(255,255,255,.018);
+    }
+
+
+    .collaborators h2 {
+      position: relative;
+      z-index: 1;
+
+      font-family: "Amiri", serif;
+
+      color: #fff6e7;
+
+      font-size: 31px;
+
+      margin-bottom: 25px;
+    }
+
+
+    .collaborator-list {
+      display: grid;
+
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 20px;
+
+      position: relative;
+      z-index: 1;
+    }
+
+
+    .collaborator {
+      padding: 25px;
+
+      border: 1px solid rgba(255,255,255,.14);
+
+      background: rgba(255,255,255,.045);
+    }
+
+
+    .collaborator strong {
+      display: block;
+
+      color: #f0a365;
+
+      font-size: 16px;
+
+      margin-bottom: 8px;
+    }
+
+
+    .collaborator span {
+      color: rgba(255,255,255,.72);
+
+      font-size: 13px;
+
+      line-height: 2;
+    }
+
+
+    /* ------------------------------
+       AUTHOR NOTE
+    ------------------------------ */
+
+    .author-note {
+      max-width: 800px;
+
+      margin: auto;
+
+      text-align: center;
+    }
+
+
+    .author-note-mark {
+      width: 50px;
+      height: 3px;
+
+      background: var(--orange);
+
+      margin: 0 auto 25px;
+    }
+
+
+    .author-note p {
+      font-family: "Amiri", serif;
+
+      color: var(--brown);
+
+      font-size: clamp(21px, 3vw, 27px);
+
+      line-height: 2;
+
+      margin-bottom: 25px;
+    }
+
+
+    .author-signature {
+      color: var(--navy);
+
+      font-weight: 700;
+
+      font-size: 15px;
+    }
+
+
+    .author-signature small {
+      display: block;
+
+      color: var(--muted);
+
+      font-weight: 400;
+
+      font-size: 12px;
+
+      margin-top: 5px;
+    }
+
+
+    /* ------------------------------
+       BUTTON
+    ------------------------------ */
+
+    .back-area {
+      text-align: center;
+
+      padding-top: 15px;
+    }
+
+
+    .btn {
+      display: inline-flex;
+
+      align-items: center;
+      justify-content: center;
+
+      gap: 10px;
+
+      padding: 13px 25px;
+
+      background: var(--orange);
+
+      color: white;
+
+      font-size: 14px;
+      font-weight: 600;
+
+      border: 1px solid var(--orange);
+
+      transition:
+        transform var(--duration) var(--ease),
+        background var(--duration) var(--ease),
+        box-shadow var(--duration) var(--ease);
+    }
+
+
+    .btn:hover {
+      background: var(--rust);
+
+      transform: translateY(-2px);
+
+      box-shadow: 0 10px 25px rgba(142,50,31,.22);
+    }
+
+
+    /* ------------------------------
+       FOOTER
+    ------------------------------ */
+
+    footer {
+      margin-top: 50px;
+
+      padding: 40px 0;
+
+      background: var(--navy);
+
+      color: rgba(255,255,255,.6);
+
+      text-align: center;
+
+      font-size: 13px;
+
+      border-top: 5px solid var(--orange);
+    }
+
+
+    footer strong {
+      color: #f0a365;
+    }
+
+
+    /* ------------------------------
+       RESPONSIVE
+    ------------------------------ */
+
+    @media (max-width: 900px) {
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+
+        gap: 55px;
+
+        text-align: center;
+      }
+
+
+      .cover-area {
+        order: 1;
+      }
+
+
+      .hero-copy {
+        order: 2;
+      }
+
+
+      .author {
+        justify-content: center;
+      }
+
+
+      .hero-description {
+        margin-inline: auto;
+      }
+
+
+      .hero-tags {
+        justify-content: center;
+      }
+
+
+      .principles {
+        grid-template-columns: 1fr;
+      }
+
+
+      .vision {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+
+    @media (max-width: 700px) {
+
+      .nav {
+        flex-direction: column;
+
+        justify-content: center;
+
+        padding: 18px 0;
+      }
+
+
+      .links {
+        gap: 17px;
+      }
+
+
+      .hero {
+        padding: 55px 0;
+      }
+
+
+      .hero h1 {
+        font-size: 45px;
+      }
+
+
+      .hero h2 {
+        font-size: 18px;
+      }
+
+
+      .section {
+        padding: 60px 0;
+      }
+
+
+      .reading-inner {
+        padding: 35px 22px;
+      }
+
+
+      .foreword p {
+        text-align: right;
+
+        font-size: 15px;
+
+        line-height: 2.3;
+      }
+
+
+      .book-info {
+        grid-template-columns: 1fr;
+      }
+
+
+      .info-item {
+        border-left: 0 !important;
+      }
+
+
+      .info-item:nth-last-child(-n+2) {
+        border-bottom: 1px solid var(--border);
+      }
+
+
+      .info-item:last-child {
+        border-bottom: 0;
+      }
+
+
+      .collaborator-list {
+        grid-template-columns: 1fr;
+      }
+
+
+      .collaborators {
+        padding: 32px 22px;
+      }
+
+
+      .vision-copy {
+        padding: 28px 22px;
+      }
+
+    }
+
+
+    @media (max-width: 480px) {
+
+      .wrap {
+        width: min(var(--max), calc(100% - 26px));
+      }
+
+
+      .links {
+        font-size: 13px;
+
+        gap: 13px;
+      }
+
+
+      .hero h1 {
+        font-size: 39px;
+      }
+
+
+      .hero-description {
+        font-size: 15px;
+      }
+
+
+      .cover-frame {
+        padding: 10px;
+      }
+
+
+      .quick-inner {
+        justify-content: flex-start;
+      }
+
+
+      .opening-poem {
+        font-size: 20px;
+      }
+
+
+      .feature-quote {
+        padding: 40px 18px;
+      }
+
+
+      .feature-quote blockquote {
+        font-size: 24px;
+      }
+
+    }
+
+
+    @media (prefers-reduced-motion: reduce) {
+
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+      }
+
+    }
+
+  </style>
 </head>
+
 
 <body>
 
-<header class="subhero compact">
 
-  <nav class="nav wrap">
+  <!-- ============================
+       HEADER
+  ============================= -->
 
-    <a class="brand" href="index.html">
-      حسین محمدی آمیرزا
-    </a>
+  <header class="topbar">
 
-    <div class="links">
+    <nav class="nav wrap" aria-label="ناوبری اصلی">
 
-      <a href="index.html">
-        خانه
+      <a class="brand" href="index.html">
+        حسین محمدی آمیرزا
       </a>
 
-      <a href="blog.html">
-        وبلاگ
-      </a>
+      <div class="links">
 
-      <a href="tarikh-adyan.html">
-        تاریخ ادیان
-      </a>
+        <a href="index.html">
+          خانه
+        </a>
 
-    </div>
+        <a href="blog.html">
+          وبلاگ
+        </a>
 
-  </nav>
-
-</header>
-
-
-<main>
-
-  <section class="section wrap book-detail">
-
-    <div class="detail-cover">
-
-      <img
-        src="honar-razm.jpg"
-        alt="جلد کتاب هنر رزم ایرانیان"
-      >
-
-    </div>
-
-
-    <div class="detail-copy">
-
-      <span class="eyebrow">
-        کتاب
-      </span>
-
-      <h1>
-        هنر رزم ایرانیان
-      </h1>
-
-      <h2>
-        پژوهشی درباره تاریخ و فرهنگ رزم ایرانیان
-      </h2>
-
-      <p style="color:#6b4226;font-weight:600;">
-        نویسنده: حسین محمدی
-      </p>
-
-
-      <div style="margin-top:25px;padding-top:20px;border-top:1px solid #e8d5c4;">
-
-        <h3 style="color:#6b4226;">
-          📖 پیشگفتار
-        </h3>
-
-
-        <p style="color:#4a3522;line-height:2.2;font-size:1.05rem;text-align:center;font-weight:600;">
-          به نام خداوندی که هستی از اوست<br>
-          جهان را همه شور و مستی از اوست
-        </p>
-
-
-        <p style="color:#4a3522;line-height:2.2;font-size:1.05rem;">
-          ایران، سرزمین پهلوانان و دلاوران، دیاری است که از ژرفای تاریخ، هنر رزم و آیین پهلوانی در تار و پود فرهنگ و زندگی مردمانش جاری بوده است. پهلوانان این سرزمین تنها به سبب نیروی جسمانی و توانایی در نبرد شناخته نمی‌شدند، بلکه پاسداران خرد، شجاعت، جوانمردی، عدالت و ارزش‌های والای انسانی بودند. آنان برای کشورگشایی و برتری‌طلبی نمی‌جنگیدند، بلکه برای پاسداری از میهن، حقیقت، ناموس و کرامت انسان به میدان رزم گام می‌نهادند.
-        </p>
-
-
-        <p style="color:#4a3522;line-height:2.2;font-size:1.05rem;">
-          در شاهنامه فردوسی، داستان‌های رستم، اسفندیار، زریر، کیخسرو، سهراب، کاوه آهنگر و دیگر قهرمانان، تنها روایت جنگ و نبرد نیست؛ بلکه تجلی ارزش‌های جاودانه‌ای همچون خرد، عدالت، وفاداری، شجاعت و فداکاری است. این روایت‌ها نگرشی عمیق به مفهوم رزم ارائه می‌دهند؛ نگرشی که رزم را صرفاً مهارتی برای پیروزی در میدان نبرد نمی‌داند، بلکه آن را راهی برای پرورش جسم، تعالی روح و تکامل شخصیت انسان می‌شناسد.
-        </p>
-
-
-        <p style="color:#4a3522;line-height:2.2;font-size:1.05rem;">
-          در دهه‌های اخیر، سبک‌های رزمی شرق آسیا، همچون کونگ‌فو، کاراته، جودو، تای‌چی، موی‌تای و دیگر هنرهای رزمی، با فلسفه و شیوه‌های آموزشی خود در سراسر جهان گسترش یافته و در میان جوانان ایران نیز محبوبیت فراوانی پیدا کرده‌اند. اما این پرسش همچنان پابرجاست: چرا ایرانیان، با پیشینه‌ای چنین پرافتخار در هنر رزم، نباید دارای سبک رزمی اصیل و مستقل خود باشند؟
-        </p>
-
-
-        <p style="color:#4a3522;line-height:2.2;font-size:1.05rem;">
-          سبکی که با واژگان فارسی سخن بگوید، از فرهنگ و تاریخ ایران الهام بگیرد، بر پایه اخلاق پهلوانی استوار باشد و بتواند نیازهای انسان امروز را نیز پاسخ دهد. آرزو آن است که روزی جوانان این سرزمین، به جای آنکه خود را کاراته‌کار، کونگ‌فوکار یا جودوکار معرفی کنند، با افتخار بگویند: «من هنر رزم ایرانی را آموخته‌ام؛ من یک رزم‌جو هستم.»
-        </p>
-
-
-        <p style="color:#4a3522;line-height:2.2;font-size:1.05rem;">
-          اکنون زمان آن فرارسیده است که هنر رزم ایرانی، این میراث گران‌بهای نیاکان، در قالبی نوین، علمی و اصیل بازآفرینی شود؛ سبکی که ریشه در فرهنگ، تاریخ و اندیشه ایران دارد و در عین حال، با نگاهی آینده‌نگر، پاسخگوی نیازهای جامعه امروز است.
-        </p>
-
-
-        <p style="color:#4a3522;line-height:2.2;font-size:1.05rem;">
-          «هنر رزم ایرانیان» دعوتی است به همه کسانی که می‌خواهند با زبان فارسی، فرهنگ ایرانی و منش پهلوانی، معنایی تازه به هنر رزم ببخشند. این سبک، آمیزه‌ای از خرد، استقامت، انضباط، اخلاق و مهارت است؛ مکتبی که از دل تاریخ ایران برخاسته و افق آینده را پیش روی خود دارد.
-        </p>
-
-
-        <p style="color:#4a3522;line-height:2.2;font-size:1.05rem;">
-          این کتاب تنها مجموعه‌ای از آموزش‌های فنی و مهارت‌های مبارزه نیست؛ بلکه دعوتی است به خودسازی، نیرومندی نفس، هماهنگی جسم و جان، و پیوند دوباره رزم با اخلاق، فرهنگ و هویت ایرانی. راهی است برای بازگشت به اصالت، بازشناسی ریشه‌های پهلوانی و زنده کردن میراثی که در آتش، آهن، ایمان و جوانمردی این سرزمین شکل گرفته است.
-        </p>
-
-
-        <p style="color:#4a3522;line-height:2.2;font-size:1.05rem;">
-          بیایید این مسیر را با هم آغاز کنیم؛ مسیری که از ژرفای تاریخ ایران سربرآورده و به آینده‌ای روشن می‌نگرد؛ آینده‌ای که در آن، هر رزم‌آور ایرانی، نماینده خرد، شجاعت، اخلاق و اصالت این سرزمین باشد. اگر آماده‌اید تا جنگاوری نوین، پاسدار میراث نیاکان و راهبر آینده باشید، این کتاب همراه و راهنمای شما خواهد بود.
-        </p>
-
-
-        <p style="margin-top:30px;color:#8b6914;font-weight:600;text-align:left;">
-          حسین محمدی<br>
-          نویسنده و بنیان‌گذار سبک نوین «هنر رزم ایرانیان»
-        </p>
-
-
-        <p style="color:#6b5540;font-size:0.95rem;margin-top:10px;">
-          با همکاری:<br>
-          استاد حسن محمدی — دان هشتم نیوکونگ‌فو، استاد و مربی کونگ‌فو توآ و موی‌تای<br>
-          استاد مریم ناصری — دان ششم نیوکونگ‌فو، استاد و مربی کونگ‌فو توآ
-        </p>
+        <a href="tarikh-adyan.html">
+          تاریخ ادیان
+        </a>
 
       </div>
 
+    </nav>
 
-      <a
-        class="btn"
-        href="index.html#books"
-        style="margin-top:25px;"
-      >
+  </header>
+
+
+
+  <!-- ============================
+       HERO
+  ============================= -->
+
+  <main>
+
+    <section class="hero">
+
+      <div class="wrap hero-grid">
+
+
+        <div class="cover-area">
+
+          <div class="cover-frame">
+
+            <img
+              src="honar-razm.jpg"
+              alt="جلد کتاب هنر رزم ایرانیان"
+              width="380"
+              height="570"
+              loading="eager"
+              decoding="async"
+            >
+
+          </div>
+
+          <div class="cover-caption">
+
+            <strong>
+              هنر رزم ایرانیان
+            </strong>
+
+            پژوهشی درباره تاریخ و فرهنگ رزم ایرانیان
+
+          </div>
+
+        </div>
+
+
+
+        <div class="hero-copy">
+
+          <span class="eyebrow">
+            کتاب | پژوهش و اندیشه
+          </span>
+
+          <h1>
+            هنر رزم ایرانیان
+          </h1>
+
+          <h2>
+            پژوهشی درباره تاریخ و فرهنگ رزم ایرانیان
+          </h2>
+
+          <div class="author">
+
+            <span class="author-line"></span>
+
+            نویسنده: حسین محمدی
+
+          </div>
+
+
+          <p class="hero-description">
+
+            اثری درباره پیوند تاریخ، فرهنگ، اخلاق پهلوانی و هنر رزم؛
+            تلاشی برای بازشناسی میراث رزمی ایران و اندیشیدن به شکل
+            نوین و ایرانی هنر رزم برای انسان امروز.
+
+          </p>
+
+
+          <div class="hero-tags">
+
+            <span class="tag">فرهنگ ایرانی</span>
+
+            <span class="tag">آیین پهلوانی</span>
+
+            <span class="tag">هنر رزم</span>
+
+            <span class="tag">تاریخ</span>
+
+            <span class="tag">خودسازی</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ============================
+         QUICK NAV
+    ============================= -->
+
+    <nav class="quick-nav" aria-label="دسترسی سریع">
+
+      <div class="quick-inner wrap">
+
+        <a href="#foreword">
+          پیشگفتار
+        </a>
+
+        <a href="#quote">
+          نگاه اثر
+        </a>
+
+        <a href="#principles">
+          اصول
+        </a>
+
+        <a href="#vision">
+          چشم‌انداز
+        </a>
+
+        <a href="#info">
+          مشخصات
+        </a>
+
+        <a href="#collaborators">
+          همکاران
+        </a>
+
+      </div>
+
+    </nav>
+
+
+
+    <!-- ============================
+         FOREWORD
+    ============================= -->
+
+    <section class="section" id="foreword">
+
+      <div class="wrap">
+
+        <div class="section-heading">
+
+          <span class="section-kicker">
+            آغاز سخن
+          </span>
+
+          <h2>
+            پیشگفتار
+          </h2>
+
+          <p>
+            نگاهی به ریشه‌های فرهنگی، اخلاقی و تاریخی هنر رزم ایرانی.
+          </p>
+
+        </div>
+
+
+
+        <article class="reading-card">
+
+          <div class="reading-inner">
+
+            <div class="opening-poem">
+
+              به نام خداوندی که هستی از اوست<br>
+              جهان را همه شور و مستی از اوست
+
+              <small>
+                از پیشگفتار اثر
+              </small>
+
+            </div>
+
+
+
+            <div class="foreword">
+
+              <p>
+                ایران، سرزمین پهلوانان و دلاوران، دیاری است که از ژرفای تاریخ،
+                هنر رزم و آیین پهلوانی در تار و پود فرهنگ و زندگی مردمانش جاری
+                بوده است. پهلوانان این سرزمین تنها به سبب نیروی جسمانی و توانایی
+                در نبرد شناخته نمی‌شدند، بلکه پاسداران خرد، شجاعت، جوانمردی،
+                عدالت و ارزش‌های والای انسانی بودند. آنان برای کشورگشایی و
+                برتری‌طلبی نمی‌جنگیدند، بلکه برای پاسداری از میهن، حقیقت، ناموس
+                و کرامت انسان به میدان رزم گام می‌نهادند.
+              </p>
+
+
+              <p>
+                در شاهنامه فردوسی، داستان‌های رستم، اسفندیار، زریر، کیخسرو،
+                سهراب، کاوه آهنگر و دیگر قهرمانان، تنها روایت جنگ و نبرد نیست؛
+                بلکه تجلی ارزش‌های جاودانه‌ای همچون خرد، عدالت، وفاداری، شجاعت
+                و فداکاری است. این روایت‌ها نگرشی عمیق به مفهوم رزم ارائه می‌دهند؛
+                نگرشی که رزم را صرفاً مهارتی برای پیروزی در میدان نبرد نمی‌داند،
+                بلکه آن را راهی برای پرورش جسم، تعالی روح و تکامل شخصیت انسان
+                می‌شناسد.
+              </p>
+
+
+              <p>
+                در دهه‌های اخیر، سبک‌های رزمی شرق آسیا، همچون کونگ‌فو، کاراته،
+                جودو، تای‌چی، موی‌تای و دیگر هنرهای رزمی، با فلسفه و شیوه‌های
+                آموزشی خود در سراسر جهان گسترش یافته و در میان جوانان ایران نیز
+                محبوبیت فراوانی پیدا کرده‌اند. اما این پرسش همچنان پابرجاست:
+                چرا ایرانیان، با پیشینه‌ای چنین پرافتخار در هنر رزم، نباید دارای
+                سبک رزمی اصیل و مستقل خود باشند؟
+              </p>
+
+
+              <p>
+                سبکی که با واژگان فارسی سخن بگوید، از فرهنگ و تاریخ ایران الهام
+                بگیرد، بر پایه اخلاق پهلوانی استوار باشد و بتواند نیازهای انسان
+                امروز را نیز پاسخ دهد. آرزو آن است که روزی جوانان این سرزمین،
+                به جای آنکه خود را کاراته‌کار، کونگ‌فوکار یا جودوکار معرفی کنند،
+                با افتخار بگویند: «من هنر رزم ایرانی را آموخته‌ام؛ من یک رزم‌جو
+                هستم.»
+              </p>
+
+
+              <p>
+                اکنون زمان آن فرارسیده است که هنر رزم ایرانی، این میراث گران‌بهای
+                نیاکان، در قالبی نوین، علمی و اصیل بازآفرینی شود؛ سبکی که ریشه
+                در فرهنگ، تاریخ و اندیشه ایران دارد و در عین حال، با نگاهی
+                آینده‌نگر، پاسخگوی نیازهای جامعه امروز است.
+              </p>
+
+
+              <p>
+                «هنر رزم ایرانیان» دعوتی است به همه کسانی که می‌خواهند با زبان
+                فارسی، فرهنگ ایرانی و منش پهلوانی، معنایی تازه به هنر رزم ببخشند.
+                این سبک، آمیزه‌ای از خرد، استقامت، انضباط، اخلاق و مهارت است؛
+                مکتبی که از دل تاریخ ایران برخاسته و افق آینده را پیش روی خود دارد.
+              </p>
+
+
+              <p>
+                این کتاب تنها مجموعه‌ای از آموزش‌های فنی و مهارت‌های مبارزه نیست؛
+                بلکه دعوتی است به خودسازی، نیرومندی نفس، هماهنگی جسم و جان، و
+                پیوند دوباره رزم با اخلاق، فرهنگ و هویت ایرانی. راهی است برای
+                بازگشت به اصالت، بازشناسی ریشه‌های پهلوانی و زنده کردن میراثی
+                که در آتش، آهن، ایمان و جوانمردی این سرزمین شکل گرفته است.
+              </p>
+
+
+              <p>
+                بیایید این مسیر را با هم آغاز کنیم؛ مسیری که از ژرفای تاریخ ایران
+                سربرآورده و به آینده‌ای روشن می‌نگرد؛ آینده‌ای که در آن، هر
+                رزم‌آور ایرانی، نماینده خرد، شجاعت، اخلاق و اصالت این سرزمین باشد.
+                اگر آماده‌اید تا جنگاوری نوین، پاسدار میراث نیاکان و راهبر آینده
+                باشید، این کتاب همراه و راهنمای شما خواهد بود.
+              </p>
+
+            </div>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ============================
+         FEATURE QUOTE
+    ============================= -->
+
+    <section id="quote">
+
+      <div class="feature-quote">
+
+        <blockquote>
+          «من هنر رزم ایرانی را آموخته‌ام؛
+          من یک رزم‌جو هستم.»
+        </blockquote>
+
+        <cite>
+          از پیشگفتار «هنر رزم ایرانیان»
+        </cite>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ============================
+         PRINCIPLES
+    ============================= -->
+
+    <section class="section" id="principles">
+
+      <div class="wrap">
+
+        <div class="section-heading">
+
+          <span class="section-kicker">
+            روح اثر
+          </span>
+
+          <h2>
+            سه ستون هنر رزم ایرانی
+          </h2>
+
+          <p>
+            مفاهیمی که در متن پیشگفتار، در مرکز نگاه نویسنده به رزم قرار گرفته‌اند.
+          </p>
+
+        </div>
+
+
+        <div class="principles">
+
+
+          <article class="principle">
+
+            <span class="principle-number">
+              ۱
+            </span>
+
+            <h3>
+              خرد
+            </h3>
+
+            <p>
+              رزم تنها نیروی جسمانی نیست؛ خرد و اندیشه، بخشی از منش پهلوانی
+              و راهی برای تعالی انسان در میدان زندگی و رزم است.
+            </p>
+
+          </article>
+
+
+
+          <article class="principle">
+
+            <span class="principle-number">
+              ۲
+            </span>
+
+            <h3>
+              شجاعت
+            </h3>
+
+            <p>
+              شجاعت در این نگاه با مسئولیت، فداکاری و پاسداری از میهن،
+              حقیقت و کرامت انسان پیوند می‌خورد.
+            </p>
+
+          </article>
+
+
+
+          <article class="principle">
+
+            <span class="principle-number">
+              ۳
+            </span>
+
+            <h3>
+              جوانمردی
+            </h3>
+
+            <p>
+              هنر رزم زمانی معنا پیدا می‌کند که مهارت و توانایی با اخلاق،
+              عدالت و منش پهلوانی همراه شود.
+            </p>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ============================
+         VISION
+    ============================= -->
+
+    <section class="section" id="vision">
+
+      <div class="wrap">
+
+        <div class="section-heading">
+
+          <span class="section-kicker">
+            افق اثر
+          </span>
+
+          <h2>
+            از میراث گذشته تا آینده
+          </h2>
+
+        </div>
+
+
+        <div class="vision">
+
+
+          <div class="vision-title">
+
+            <h2>
+              رزم ایرانی؛
+              <br>
+              میراثی برای آینده
+            </h2>
+
+            <p>
+              پیوند فرهنگ، تاریخ، اخلاق و مهارت
+            </p>
+
+          </div>
+
+
+          <div class="vision-copy">
+
+            <p>
+              اکنون زمان آن فرارسیده است که هنر رزم ایرانی، این میراث گران‌بهای
+              نیاکان، در قالبی نوین، علمی و اصیل بازآفرینی شود.
+            </p>
+
+            <p>
+              این نگاه می‌خواهد ریشه‌های هنر رزم را در فرهنگ و تاریخ ایران
+              بازشناسی کند و در عین حال، با نگاهی آینده‌نگر به نیازهای انسان
+              امروز پاسخ دهد.
+            </p>
+
+            <p>
+              در این مسیر، رزم تنها مجموعه‌ای از تکنیک‌ها و مهارت‌های مبارزه
+              نیست؛ بلکه می‌تواند راهی برای خودسازی، انضباط، هماهنگی جسم و جان
+              و پیوند دوباره انسان با اخلاق و هویت فرهنگی باشد.
+            </p>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ============================
+         BOOK INFO
+    ============================= -->
+
+    <section class="section" id="info">
+
+      <div class="wrap">
+
+        <div class="section-heading">
+
+          <span class="section-kicker">
+            شناسنامه
+          </span>
+
+          <h2>
+            درباره اثر
+          </h2>
+
+        </div>
+
+
+        <div class="book-info">
+
+
+          <div class="info-item">
+
+            <span class="info-label">
+              عنوان
+            </span>
+
+            <span class="info-value">
+              هنر رزم ایرانیان
+            </span>
+
+          </div>
+
+
+          <div class="info-item">
+
+            <span class="info-label">
+              نویسنده
+            </span>
+
+            <span class="info-value">
+              حسین محمدی
+            </span>
+
+          </div>
+
+
+          <div class="info-item">
+
+            <span class="info-label">
+              حوزه
+            </span>
+
+            <span class="info-value">
+              تاریخ، فرهنگ و هنر رزم
+            </span>
+
+          </div>
+
+
+          <div class="info-item">
+
+            <span class="info-label">
+              رویکرد
+            </span>
+
+            <span class="info-value">
+              ایرانی، فرهنگی و پهلوانی
+            </span>
+
+          </div>
+
+
+          <div class="info-item">
+
+            <span class="info-label">
+              موضوعات
+            </span>
+
+            <span class="info-value">
+              رزم، خودسازی، اخلاق و هویت ایرانی
+            </span>
+
+          </div>
+
+
+          <div class="info-item">
+
+            <span class="info-label">
+              زبان اثر
+            </span>
+
+            <span class="info-value">
+              فارسی
+            </span>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ============================
+         COLLABORATORS
+    ============================= -->
+
+    <section class="section" id="collaborators">
+
+      <div class="wrap">
+
+        <div class="collaborators">
+
+          <h2>
+            با همکاری
+          </h2>
+
+
+          <div class="collaborator-list">
+
+
+            <div class="collaborator">
+
+              <strong>
+                استاد حسن محمدی
+              </strong>
+
+              <span>
+                دان هشتم نیوکونگ‌فو، استاد و مربی کونگ‌فو توآ و موی‌تای
+              </span>
+
+            </div>
+
+
+            <div class="collaborator">
+
+              <strong>
+                استاد مریم ناصری
+              </strong>
+
+              <span>
+                دان ششم نیوکونگ‌فو، استاد و مربی کونگ‌فو توآ
+              </span>
+
+            </div>
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ============================
+         AUTHOR NOTE
+    ============================= -->
+
+    <section class="section">
+
+      <div class="wrap">
+
+        <div class="author-note">
+
+          <div class="author-note-mark"></div>
+
+          <p>
+            «این سبک، آمیزه‌ای از خرد، استقامت، انضباط، اخلاق و مهارت است؛
+            مکتبی که از دل تاریخ ایران برخاسته و افق آینده را پیش روی خود دارد.»
+          </p>
+
+          <div class="author-signature">
+
+            حسین محمدی
+
+            <small>
+              نویسنده و بنیان‌گذار سبک نوین «هنر رزم ایرانیان»
+            </small>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ============================
+         BACK BUTTON
+    ============================= -->
+
+    <div class="back-area wrap">
+
+      <a class="btn" href="index.html#books">
         ← بازگشت به کتاب‌ها
       </a>
 
     </div>
 
-  </section>
 
-</main>
-
-
-<footer>
-
-  <div class="wrap">
-
-    © <span id="year"></span>
-    حسین محمدی آمیرزا
-
-  </div>
-
-</footer>
+  </main>
 
 
-<script src="script.js"></script>
+
+  <!-- ============================
+       FOOTER
+  ============================= -->
+
+  <footer>
+
+    <div class="wrap">
+
+      © <span id="year"></span>
+      <strong>حسین محمدی آمیرزا</strong>
+
+      <br>
+
+      هنر رزم ایرانیان
+
+    </div>
+
+  </footer>
+
+
+
+  <script>
+
+    (function () {
+
+      var year = document.getElementById("year");
+
+      if (year) {
+        year.textContent = new Date().getFullYear();
+      }
+
+    })();
+
+  </script>
+
 
 </body>
 
