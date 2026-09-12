@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
+
 <head>
+
   <meta charset="UTF-8">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>تاریخ ادیان | حسین محمدی آمیرزا</title>
+  <title>تاریخ ادیان | روانشناسی انسان تا عصر حیرت | جلد دوم</title>
 
   <meta name="description"
-        content="تاریخ ادیان؛ هفتاد هزار سال انسان در جست‌وجوی معنا، اثر حسین محمدی آمیرزا">
+        content="تاریخ ادیان؛ روانشناسی انسان تا عصر حیرت، جلد دوم، اثر حسین محمدی آمیرزا">
 
   <link rel="canonical"
-        href="https://hossein-amirza.github.io/hossein-mohammadi-amirza/books/tarikh-adyan.html">
+        href="https://hossein-amirza.github.io/hossein-mohammadi-amirza/books/tarikh-adyan-jeld-2.html">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,693 +21,1638 @@
   <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Vazirmatn:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 
-  <style>
-
-    :root {
-      --deep-blue: #102f3d;
-      --blue: #17485a;
-      --blue-light: #2d7180;
-
-      --turquoise: #2d9b98;
-      --turquoise-light: #69c3b9;
-
-      --gold: #b28a45;
-      --gold-light: #d5b86d;
-
-      --sand: #d9c8a7;
-      --paper: #f2eadb;
-      --paper-light: #fbf7ef;
-
-      --brown: #66513d;
-      --brown-light: #8b765c;
-
-      --text: #29251f;
-      --text-soft: #5b5147;
-      --muted: #827566;
-
-      --white: #fffdf8;
-
-      --shadow: 0 22px 60px rgba(16, 47, 61, .15);
-      --shadow-soft: 0 10px 30px rgba(16, 47, 61, .10);
-
-      --radius: 24px;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      background:
-        radial-gradient(circle at 15% 10%, rgba(45,155,152,.08), transparent 28%),
-        radial-gradient(circle at 85% 20%, rgba(178,138,69,.09), transparent 30%),
-        var(--paper);
-      color: var(--text);
-      font-family: "Vazirmatn", sans-serif;
-      line-height: 2;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    /* =========================
-       HEADER
-    ========================= */
-
-    header {
-      position: relative;
-      overflow: hidden;
-      background:
-        linear-gradient(135deg, rgba(16,47,61,.98), rgba(23,72,90,.96));
-      color: white;
-      border-bottom: 5px solid var(--gold);
-    }
-
-    header::before {
-      content: "";
-      position: absolute;
-      width: 600px;
-      height: 600px;
-      border: 1px solid rgba(213,184,109,.18);
-      border-radius: 50%;
-      top: -330px;
-      right: -160px;
-    }
-
-    header::after {
-      content: "";
-      position: absolute;
-      width: 420px;
-      height: 420px;
-      border: 1px solid rgba(105,195,185,.15);
-      border-radius: 50%;
-      bottom: -300px;
-      left: -120px;
-    }
-
-    .topbar {
-      max-width: 1180px;
-      margin: auto;
-      padding: 22px 25px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: relative;
-      z-index: 2;
-    }
-
-    .brand {
-      font-weight: 700;
-      color: #f5dfaa;
-      letter-spacing: .5px;
-    }
-
-    .nav {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .nav a {
-      padding: 7px 15px;
-      border: 1px solid rgba(255,255,255,.15);
-      border-radius: 30px;
-      color: rgba(255,255,255,.86);
-      font-size: .9rem;
-      transition: .25s;
-    }
-
-    .nav a:hover {
-      background: rgba(255,255,255,.1);
-      border-color: rgba(213,184,109,.55);
-      color: white;
-    }
-
-    /* =========================
-       HERO
-    ========================= */
-
-    .hero {
-      max-width: 1180px;
-      margin: auto;
-      padding: 80px 25px 105px;
-      display: grid;
-      grid-template-columns: 390px 1fr;
-      gap: 75px;
-      align-items: center;
-      position: relative;
-      z-index: 1;
-    }
-
-    .cover-wrap {
-      position: relative;
-      display: flex;
-      justify-content: center;
-    }
-
-    .cover-frame {
-      padding: 14px;
-      background:
-        linear-gradient(135deg, var(--gold-light), var(--gold), #80612d);
-      box-shadow:
-        0 30px 70px rgba(0,0,0,.38),
-        0 0 0 1px rgba(255,255,255,.15);
-      transform: rotate(-1.5deg);
-      position: relative;
-    }
-
-    .cover-frame::before {
-      content: "";
-      position: absolute;
-      inset: 7px;
-      border: 1px solid rgba(255,255,255,.35);
-      pointer-events: none;
-    }
-
-    .cover-frame img {
-      width: 100%;
-      max-width: 350px;
-      display: block;
-      background: #ddd;
-    }
-
-    .cover-caption {
-      position: absolute;
-      bottom: -27px;
-      right: 25px;
-      left: 25px;
-      text-align: center;
-      color: rgba(255,255,255,.68);
-      font-size: .78rem;
-      letter-spacing: 2px;
-    }
-
-    .hero-content {
-      max-width: 720px;
-    }
-
-    .eyebrow {
-      color: var(--turquoise-light);
-      font-size: .95rem;
-      font-weight: 600;
-      margin-bottom: 15px;
-      letter-spacing: 1px;
-    }
-
-    .hero h1 {
-      font-family: "Amiri", serif;
-      font-size: clamp(3.5rem, 7vw, 6.3rem);
-      line-height: 1.05;
-      font-weight: 700;
-      color: #fff8e7;
-      margin-bottom: 22px;
-    }
-
-    .hero-subtitle {
-      color: var(--gold-light);
-      font-family: "Amiri", serif;
-      font-size: clamp(1.35rem, 2.4vw, 2rem);
-      margin-bottom: 22px;
-    }
-
-    .hero-author {
-      font-size: 1rem;
-      color: rgba(255,255,255,.76);
-      margin-bottom: 25px;
-    }
-
-    .hero-description {
-      font-size: 1.05rem;
-      color: rgba(255,255,255,.78);
-      max-width: 680px;
-      line-height: 2.25;
-    }
-
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 9px;
-      margin-top: 28px;
-    }
-
-    .tag {
-      border: 1px solid rgba(105,195,185,.3);
-      color: #d8f3ef;
-      background: rgba(45,155,152,.09);
-      padding: 5px 13px;
-      border-radius: 30px;
-      font-size: .82rem;
-    }
-
-    /* =========================
-       QUICK NAV
-    ========================= */
-
-    .quick-nav {
-      max-width: 1050px;
-      margin: -38px auto 0;
-      padding: 0 20px;
-      position: relative;
-      z-index: 5;
-    }
-
-    .quick-inner {
-      background: var(--paper-light);
-      border: 1px solid rgba(178,138,69,.25);
-      box-shadow: var(--shadow-soft);
-      border-radius: 18px;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 8px;
-      padding: 15px;
-    }
-
-    .quick-inner a {
-      color: var(--blue);
-      padding: 7px 15px;
-      border-radius: 25px;
-      font-size: .88rem;
-      transition: .2s;
-    }
-
-    .quick-inner a:hover {
-      background: var(--deep-blue);
-      color: white;
-    }
-
-    /* =========================
-       MAIN
-    ========================= */
-
-    main {
-      max-width: 1000px;
-      margin: auto;
-      padding: 90px 20px;
-    }
-
-    .section {
-      margin-bottom: 85px;
-    }
-
-    .section-heading {
-      margin-bottom: 35px;
-    }
-
-    .section-kicker {
-      color: var(--turquoise);
-      font-size: .85rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-      margin-bottom: 5px;
-    }
-
-    .section-title {
-      font-family: "Amiri", serif;
-      font-size: 2.7rem;
-      color: var(--deep-blue);
-      line-height: 1.35;
-    }
-
-    .section-title::after {
-      content: "";
-      display: block;
-      width: 65px;
-      height: 3px;
-      background: var(--gold);
-      margin-top: 12px;
-      border-radius: 5px;
-    }
-
-    /* =========================
-       PREFACE
-    ========================= */
-
-    .reading-card {
-      background:
-        linear-gradient(135deg, rgba(255,253,248,.97), rgba(242,234,219,.97));
-      border: 1px solid rgba(178,138,69,.28);
-      border-radius: var(--radius);
-      padding: 55px 65px;
-      box-shadow: var(--shadow);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .reading-card::before {
-      content: "«";
-      position: absolute;
-      top: -55px;
-      left: 25px;
-      font-family: Georgia, serif;
-      font-size: 210px;
-      color: rgba(45,155,152,.08);
-      line-height: 1;
-    }
-
-    .reading-card p {
-      position: relative;
-      margin-bottom: 25px;
-      font-family: "Amiri", serif;
-      font-size: 1.17rem;
-      line-height: 2.35;
-      color: var(--text-soft);
-      text-align: justify;
-    }
-
-    .reading-card p:last-child {
-      margin-bottom: 0;
-    }
-
-    .reading-card p:first-child::first-letter {
-      font-size: 3.8rem;
-      color: var(--turquoise);
-      float: right;
-      line-height: .9;
-      padding-left: 8px;
-    }
-
-    /* =========================
-       QUOTE
-    ========================= */
-
-    .quote-section {
-      margin: 100px 0;
-    }
-
-    .quote {
-      background:
-        linear-gradient(135deg, var(--deep-blue), var(--blue));
-      border-radius: var(--radius);
-      padding: 65px 70px;
-      text-align: center;
-      color: white;
-      position: relative;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-    }
-
-    .quote::before,
-    .quote::after {
-      content: "";
-      position: absolute;
-      width: 180px;
-      height: 180px;
-      border: 1px solid rgba(213,184,109,.2);
-      border-radius: 50%;
-    }
-
-    .quote::before {
-      top: -110px;
-      right: -70px;
-    }
-
-    .quote::after {
-      bottom: -110px;
-      left: -70px;
-    }
-
-    .quote-mark {
-      font-family: Georgia, serif;
-      font-size: 4rem;
-      color: var(--gold-light);
-      line-height: .6;
-      margin-bottom: 25px;
-    }
-
-    .quote p {
-      position: relative;
-      z-index: 2;
-      font-family: "Amiri", serif;
-      font-size: 1.65rem;
-      line-height: 1.9;
-    }
-
-    /* =========================
-       SEVEN THOUSAND / THEMES
-    ========================= */
-
-    .journey {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .journey-card {
-      background: var(--paper-light);
-      border: 1px solid rgba(23,72,90,.13);
-      padding: 30px 25px;
-      border-radius: 18px;
-      box-shadow: var(--shadow-soft);
-      transition: .25s;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .journey-card:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow);
-      border-color: rgba(45,155,152,.35);
-    }
-
-    .journey-number {
-      font-size: 2.4rem;
-      color: var(--gold);
-      font-family: "Amiri", serif;
-      margin-bottom: 10px;
-    }
-
-    .journey-card h3 {
-      font-family: "Amiri", serif;
-      color: var(--deep-blue);
-      font-size: 1.35rem;
-      margin-bottom: 8px;
-    }
-
-    .journey-card p {
-      color: var(--text-soft);
-      font-size: .92rem;
-      line-height: 1.9;
-    }
-
-    /* =========================
-       BOOK INFO
-    ========================= */
-
-    .book-info {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      border: 1px solid rgba(178,138,69,.25);
-      border-radius: var(--radius);
-      overflow: hidden;
-      box-shadow: var(--shadow-soft);
-    }
-
-    .info-item {
-      padding: 23px 28px;
-      background: rgba(255,253,248,.75);
-      border-bottom: 1px solid rgba(178,138,69,.14);
-    }
-
-    .info-item:nth-child(odd) {
-      border-left: 1px solid rgba(178,138,69,.14);
-    }
-
-    .info-label {
-      display: block;
-      color: var(--turquoise);
-      font-size: .78rem;
-      font-weight: 700;
-      margin-bottom: 4px;
-    }
-
-    .info-value {
-      color: var(--deep-blue);
-      font-weight: 500;
-    }
-
-    /* =========================
-       AUTHOR NOTE
-    ========================= */
-
-    .author-note {
-      background:
-        linear-gradient(135deg, rgba(45,155,152,.1), rgba(178,138,69,.1));
-      border-right: 5px solid var(--turquoise);
-      border-radius: 15px;
-      padding: 35px 40px;
-    }
-
-    .author-note h3 {
-      font-family: "Amiri", serif;
-      color: var(--deep-blue);
-      font-size: 1.6rem;
-      margin-bottom: 12px;
-    }
-
-    .author-note p {
-      font-family: "Amiri", serif;
-      font-size: 1.15rem;
-      color: var(--text-soft);
-      line-height: 2.2;
-    }
-
-    /* =========================
-       BACK BUTTON
-    ========================= */
-
-    .back-area {
-      text-align: center;
-      margin-top: 75px;
-    }
-
-    .back-button {
-      display: inline-block;
-      padding: 11px 28px;
-      border-radius: 30px;
-      background: var(--deep-blue);
-      color: white;
-      transition: .25s;
-      box-shadow: 0 8px 25px rgba(16,47,61,.18);
-    }
-
-    .back-button:hover {
-      background: var(--turquoise);
-      transform: translateY(-2px);
-    }
-
-    /* =========================
-       FOOTER
-    ========================= */
-
-    footer {
-      background: var(--deep-blue);
-      color: rgba(255,255,255,.68);
-      text-align: center;
-      padding: 45px 20px;
-      border-top: 4px solid var(--gold);
-    }
-
-    footer strong {
-      color: var(--gold-light);
-    }
-
-    footer p {
-      font-size: .86rem;
-      margin: 5px 0;
-    }
-
-    /* =========================
-       RESPONSIVE
-    ========================= */
-
-    @media (max-width: 850px) {
-
-      .topbar {
-        flex-direction: column;
-        gap: 15px;
-      }
-
-      .hero {
-        grid-template-columns: 1fr;
-        gap: 55px;
-        text-align: center;
-        padding-top: 60px;
-      }
-
-      .hero-content {
-        margin: auto;
-      }
-
-      .cover-wrap {
-        order: 2;
-      }
-
-      .hero-content {
-        order: 1;
-      }
-
-      .tags {
-        justify-content: center;
-      }
-
-      .journey {
-        grid-template-columns: 1fr;
-      }
-
-      .book-info {
-        grid-template-columns: 1fr;
-      }
-
-      .info-item:nth-child(odd) {
-        border-left: none;
-      }
-
-      .reading-card {
-        padding: 38px 28px;
-      }
-
-      .quote {
-        padding: 45px 30px;
-      }
-    }
-
-    @media (max-width: 520px) {
-
-      .nav {
-        justify-content: center;
-      }
-
-      .hero h1 {
-        font-size: 3.4rem;
-      }
-
-      .hero-subtitle {
-        font-size: 1.35rem;
-      }
-
-      .section-title {
-        font-size: 2.25rem;
-      }
-
-      .reading-card p {
-        font-size: 1.05rem;
-        text-align: right;
-      }
-
-      .quote p {
-        font-size: 1.3rem;
-      }
-
-      .cover-frame {
-        margin: 0 15px;
-      }
-    }
-
-  </style>
+
+<style>
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+:root {
+
+  --night: #101c29;
+  --deep: #162c3d;
+  --blue: #21495b;
+  --blue-light: #356f7d;
+
+  --turquoise: #2e9892;
+  --turquoise-light: #6ac5b9;
+
+  --gold: #b89552;
+  --gold-light: #dbc27d;
+
+  --sand: #d8c8a9;
+  --paper: #f2eadb;
+  --paper-light: #fcf8ef;
+
+  --brown: #685542;
+  --brown-light: #88735c;
+
+  --text: #29251f;
+  --text-soft: #5b5147;
+  --muted: #817465;
+
+  --white: #fffdf8;
+
+  --shadow:
+    0 25px 70px rgba(16, 43, 58, .16);
+
+  --shadow-soft:
+    0 10px 30px rgba(16, 43, 58, .10);
+
+  --radius: 24px;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(46,152,146,.08),
+      transparent 27%
+    ),
+
+    radial-gradient(
+      circle at 90% 15%,
+      rgba(184,149,82,.10),
+      transparent 28%
+    ),
+
+    var(--paper);
+
+  color: var(--text);
+
+  font-family:
+    "Vazirmatn",
+    sans-serif;
+
+  line-height: 2;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+header {
+
+  position: relative;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 75% 30%,
+      rgba(46,152,146,.16),
+      transparent 28%
+    ),
+
+    linear-gradient(
+      135deg,
+      #0d1c28,
+      #17384a 55%,
+      #102b3b
+    );
+
+  color: white;
+
+  border-bottom:
+    5px solid var(--gold);
+}
+
+
+/* Decorative circles */
+
+header::before {
+
+  content: "";
+
+  position: absolute;
+
+  width: 620px;
+  height: 620px;
+
+  border:
+    1px solid
+    rgba(219,194,125,.16);
+
+  border-radius: 50%;
+
+  top: -360px;
+  right: -180px;
+}
+
+
+header::after {
+
+  content: "";
+
+  position: absolute;
+
+  width: 430px;
+  height: 430px;
+
+  border:
+    1px solid
+    rgba(106,197,185,.13);
+
+  border-radius: 50%;
+
+  bottom: -320px;
+  left: -150px;
+}
+
+
+/* =========================================================
+   TOPBAR
+========================================================= */
+
+.topbar {
+
+  max-width: 1200px;
+
+  margin: auto;
+
+  padding:
+    22px 25px;
+
+  display: flex;
+
+  justify-content:
+    space-between;
+
+  align-items:
+    center;
+
+  position: relative;
+
+  z-index: 5;
+}
+
+
+.brand {
+
+  color:
+    var(--gold-light);
+
+  font-weight: 700;
+
+  font-size: .95rem;
+}
+
+
+.nav {
+
+  display: flex;
+
+  gap: 9px;
+
+  flex-wrap: wrap;
+}
+
+
+.nav a {
+
+  padding:
+    7px 15px;
+
+  border:
+    1px solid
+    rgba(255,255,255,.14);
+
+  border-radius:
+    30px;
+
+  color:
+    rgba(255,255,255,.84);
+
+  font-size:
+    .86rem;
+
+  transition:
+    .25s;
+}
+
+
+.nav a:hover {
+
+  background:
+    rgba(255,255,255,.10);
+
+  border-color:
+    rgba(219,194,125,.55);
+
+  color: white;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+
+  max-width: 1200px;
+
+  margin: auto;
+
+  padding:
+    85px 25px
+    110px;
+
+  display: grid;
+
+  grid-template-columns:
+    390px 1fr;
+
+  gap: 80px;
+
+  align-items:
+    center;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+
+/* =========================================================
+   COVER
+========================================================= */
+
+.cover-wrap {
+
+  position: relative;
+
+  display: flex;
+
+  justify-content:
+    center;
+}
+
+
+.cover-frame {
+
+  padding: 14px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--gold-light),
+      var(--gold),
+      #79602f
+    );
+
+  box-shadow:
+    0 30px 75px rgba(0,0,0,.42);
+
+  transform:
+    rotate(-1.4deg);
+
+  position: relative;
+}
+
+
+.cover-frame::before {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 7px;
+
+  border:
+    1px solid
+    rgba(255,255,255,.38);
+
+  pointer-events: none;
+}
+
+
+.cover-frame img {
+
+  display: block;
+
+  width: 100%;
+
+  max-width: 350px;
+
+  background:
+    #ddd;
+}
+
+
+.cover-caption {
+
+  position: absolute;
+
+  bottom: -32px;
+
+  right: 20px;
+  left: 20px;
+
+  text-align: center;
+
+  color:
+    rgba(255,255,255,.60);
+
+  font-size:
+    .76rem;
+
+  letter-spacing:
+    2px;
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.hero-content {
+  max-width: 720px;
+}
+
+
+.eyebrow {
+
+  color:
+    var(--turquoise-light);
+
+  font-size:
+    .9rem;
+
+  font-weight:
+    600;
+
+  margin-bottom:
+    14px;
+
+  letter-spacing:
+    .5px;
+}
+
+
+.hero h1 {
+
+  font-family:
+    "Amiri",
+    serif;
+
+  font-size:
+    clamp(3rem, 6vw, 5.7rem);
+
+  line-height:
+    1.05;
+
+  color:
+    #fff8e7;
+
+  margin-bottom:
+    12px;
+}
+
+
+.hero-subtitle {
+
+  font-family:
+    "Amiri",
+    serif;
+
+  color:
+    var(--gold-light);
+
+  font-size:
+    clamp(1.4rem, 2.6vw, 2.15rem);
+
+  line-height:
+    1.6;
+
+  margin-bottom:
+    4px;
+}
+
+
+.volume {
+
+  display:
+    inline-block;
+
+  margin:
+    12px 0 20px;
+
+  padding:
+    5px 18px;
+
+  border:
+    1px solid
+    rgba(219,194,125,.4);
+
+  color:
+    #f4dfa8;
+
+  border-radius:
+    30px;
+
+  font-size:
+    .82rem;
+
+  letter-spacing:
+    1px;
+}
+
+
+.hero-author {
+
+  color:
+    rgba(255,255,255,.75);
+
+  margin-bottom:
+    22px;
+
+  font-size:
+    .95rem;
+}
+
+
+.hero-description {
+
+  color:
+    rgba(255,255,255,.76);
+
+  font-size:
+    1.02rem;
+
+  line-height:
+    2.25;
+
+  max-width:
+    670px;
+}
+
+
+.tags {
+
+  display:
+    flex;
+
+  flex-wrap:
+    wrap;
+
+  gap:
+    8px;
+
+  margin-top:
+    26px;
+}
+
+
+.tag {
+
+  border:
+    1px solid
+    rgba(106,197,185,.27);
+
+  background:
+    rgba(46,152,146,.09);
+
+  color:
+    #d8f1ed;
+
+  padding:
+    5px 13px;
+
+  border-radius:
+    30px;
+
+  font-size:
+    .79rem;
+}
+
+
+/* =========================================================
+   QUICK NAV
+========================================================= */
+
+.quick-nav {
+
+  max-width:
+    1060px;
+
+  margin:
+    -38px auto 0;
+
+  padding:
+    0 20px;
+
+  position:
+    relative;
+
+  z-index:
+    10;
+}
+
+
+.quick-inner {
+
+  background:
+    var(--paper-light);
+
+  border:
+    1px solid
+    rgba(184,149,82,.25);
+
+  box-shadow:
+    var(--shadow-soft);
+
+  border-radius:
+    18px;
+
+  padding:
+    14px;
+
+  display:
+    flex;
+
+  justify-content:
+    center;
+
+  flex-wrap:
+    wrap;
+
+  gap:
+    7px;
+}
+
+
+.quick-inner a {
+
+  color:
+    var(--blue);
+
+  padding:
+    7px 15px;
+
+  border-radius:
+    25px;
+
+  font-size:
+    .85rem;
+
+  transition:
+    .2s;
+}
+
+
+.quick-inner a:hover {
+
+  background:
+    var(--deep);
+
+  color:
+    white;
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+main {
+
+  max-width:
+    1000px;
+
+  margin:
+    auto;
+
+  padding:
+    90px 20px;
+}
+
+
+.section {
+
+  margin-bottom:
+    90px;
+}
+
+
+.section-heading {
+
+  margin-bottom:
+    35px;
+}
+
+
+.section-kicker {
+
+  color:
+    var(--turquoise);
+
+  font-size:
+    .82rem;
+
+  font-weight:
+    700;
+
+  margin-bottom:
+    5px;
+}
+
+
+.section-title {
+
+  font-family:
+    "Amiri",
+    serif;
+
+  color:
+    var(--deep);
+
+  font-size:
+    2.65rem;
+
+  line-height:
+    1.4;
+}
+
+
+.section-title::after {
+
+  content:
+    "";
+
+  display:
+    block;
+
+  width:
+    65px;
+
+  height:
+    3px;
+
+  background:
+    var(--gold);
+
+  margin-top:
+    11px;
+
+  border-radius:
+    5px;
+}
+
+
+/* =========================================================
+   INTRODUCTION
+========================================================= */
+
+.reading-card {
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(252,248,239,.98),
+      rgba(242,234,219,.96)
+    );
+
+  border:
+    1px solid
+    rgba(184,149,82,.30);
+
+  border-radius:
+    var(--radius);
+
+  padding:
+    58px 65px;
+
+  box-shadow:
+    var(--shadow);
+
+  position:
+    relative;
+
+  overflow:
+    hidden;
+}
+
+
+.reading-card::before {
+
+  content:
+    "۲";
+
+  position:
+    absolute;
+
+  left:
+    10px;
+
+  top:
+    -65px;
+
+  font-family:
+    "Amiri",
+    serif;
+
+  font-size:
+    230px;
+
+  color:
+    rgba(46,152,146,.055);
+
+  line-height:
+    1;
+}
+
+
+.reading-card::after {
+
+  content:
+    "";
+
+  position:
+    absolute;
+
+  width:
+    170px;
+
+  height:
+    170px;
+
+  border:
+    1px solid
+    rgba(184,149,82,.15);
+
+  border-radius:
+    50%;
+
+  left:
+    -90px;
+
+  bottom:
+    -90px;
+}
+
+
+.reading-card p {
+
+  position:
+    relative;
+
+  z-index:
+    2;
+
+  font-family:
+    "Amiri",
+    serif;
+
+  font-size:
+    1.16rem;
+
+  color:
+    var(--text-soft);
+
+  line-height:
+    2.35;
+
+  text-align:
+    justify;
+
+  margin-bottom:
+    26px;
+}
+
+
+.reading-card p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* First paragraph drop cap */
+
+.reading-card p:first-child::first-letter {
+
+  font-size:
+    4rem;
+
+  color:
+    var(--turquoise);
+
+  float:
+    right;
+
+  line-height:
+    .85;
+
+  padding-left:
+    8px;
+}
+
+
+/* =========================================================
+   FEATURE QUOTE
+========================================================= */
+
+.quote-section {
+
+  margin:
+    100px 0;
+}
+
+
+.quote {
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--night),
+      var(--deep)
+    );
+
+  color:
+    white;
+
+  border-radius:
+    var(--radius);
+
+  padding:
+    68px 70px;
+
+  text-align:
+    center;
+
+  position:
+    relative;
+
+  overflow:
+    hidden;
+
+  box-shadow:
+    var(--shadow);
+}
+
+
+.quote::before {
+
+  content:
+    "";
+
+  position:
+    absolute;
+
+  width:
+    260px;
+
+  height:
+    260px;
+
+  border:
+    1px solid
+    rgba(106,197,185,.15);
+
+  border-radius:
+    50%;
+
+  top:
+    -160px;
+
+  right:
+    -90px;
+}
+
+
+.quote::after {
+
+  content:
+    "";
+
+  position:
+    absolute;
+
+  width:
+    190px;
+
+  height:
+    190px;
+
+  border:
+    1px solid
+    rgba(219,194,125,.16);
+
+  border-radius:
+    50%;
+
+  bottom:
+    -120px;
+
+  left:
+    -60px;
+}
+
+
+.quote-mark {
+
+  font-family:
+    Georgia,
+    serif;
+
+  color:
+    var(--gold-light);
+
+  font-size:
+    4rem;
+
+  line-height:
+    .7;
+
+  margin-bottom:
+    24px;
+}
+
+
+.quote p {
+
+  position:
+    relative;
+
+  z-index:
+    2;
+
+  font-family:
+    "Amiri",
+    serif;
+
+  font-size:
+    1.65rem;
+
+  line-height:
+    2;
+}
+
+
+/* =========================================================
+   QUESTIONS
+========================================================= */
+
+.questions {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap:
+    20px;
+}
+
+
+.question-card {
+
+  background:
+    var(--paper-light);
+
+  border:
+    1px solid
+    rgba(23,72,90,.12);
+
+  border-radius:
+    20px;
+
+  padding:
+    32px 28px;
+
+  box-shadow:
+    var(--shadow-soft);
+
+  position:
+    relative;
+}
+
+
+.question-card::before {
+
+  content:
+    "؟";
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  width:
+    45px;
+
+  height:
+    45px;
+
+  border-radius:
+    50%;
+
+  background:
+    rgba(46,152,146,.10);
+
+  color:
+    var(--turquoise);
+
+  font-family:
+    "Amiri",
+    serif;
+
+  font-size:
+    1.7rem;
+
+  margin-bottom:
+    15px;
+}
+
+
+.question-card p {
+
+  font-family:
+    "Amiri",
+    serif;
+
+  color:
+    var(--deep);
+
+  font-size:
+    1.25rem;
+
+  line-height:
+    2;
+}
+
+
+/* =========================================================
+   THEMES
+========================================================= */
+
+.themes {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap:
+    17px;
+}
+
+
+.theme {
+
+  background:
+    rgba(255,253,248,.85);
+
+  border:
+    1px solid
+    rgba(184,149,82,.18);
+
+  border-radius:
+    18px;
+
+  padding:
+    28px 22px;
+
+  transition:
+    .25s;
+}
+
+
+.theme:hover {
+
+  transform:
+    translateY(-5px);
+
+  box-shadow:
+    var(--shadow-soft);
+
+  border-color:
+    rgba(46,152,146,.3);
+}
+
+
+.theme-number {
+
+  color:
+    var(--gold);
+
+  font-family:
+    "Amiri",
+    serif;
+
+  font-size:
+    2rem;
+
+  margin-bottom:
+    7px;
+}
+
+
+.theme h3 {
+
+  color:
+    var(--deep);
+
+  font-family:
+    "Amiri",
+    serif;
+
+  font-size:
+    1.35rem;
+
+  margin-bottom:
+    7px;
+}
+
+
+.theme p {
+
+  color:
+    var(--text-soft);
+
+  font-size:
+    .9rem;
+
+  line-height:
+    1.95;
+}
+
+
+/* =========================================================
+   BOOK INFORMATION
+========================================================= */
+
+.book-info {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  border:
+    1px solid
+    rgba(184,149,82,.25);
+
+  border-radius:
+    var(--radius);
+
+  overflow:
+    hidden;
+
+  box-shadow:
+    var(--shadow-soft);
+}
+
+
+.info-item {
+
+  padding:
+    23px 28px;
+
+  background:
+    rgba(252,248,239,.72);
+
+  border-bottom:
+    1px solid
+    rgba(184,149,82,.13);
+}
+
+
+.info-item:nth-child(odd) {
+
+  border-left:
+    1px solid
+    rgba(184,149,82,.13);
+}
+
+
+.info-label {
+
+  display:
+    block;
+
+  color:
+    var(--turquoise);
+
+  font-size:
+    .77rem;
+
+  font-weight:
+    700;
+
+  margin-bottom:
+    3px;
+}
+
+
+.info-value {
+
+  color:
+    var(--deep);
+
+  font-weight:
+    500;
+}
+
+
+/* =========================================================
+   AUTHOR NOTE
+========================================================= */
+
+.author-note {
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(46,152,146,.09),
+      rgba(184,149,82,.10)
+    );
+
+  border-right:
+    5px solid
+    var(--turquoise);
+
+  border-radius:
+    16px;
+
+  padding:
+    38px 42px;
+}
+
+
+.author-note h3 {
+
+  font-family:
+    "Amiri",
+    serif;
+
+  color:
+    var(--deep);
+
+  font-size:
+    1.65rem;
+
+  margin-bottom:
+    12px;
+}
+
+
+.author-note p {
+
+  font-family:
+    "Amiri",
+    serif;
+
+  color:
+    var(--text-soft);
+
+  font-size:
+    1.15rem;
+
+  line-height:
+    2.25;
+}
+
+
+/* =========================================================
+   SIGNATURE
+========================================================= */
+
+.signature {
+
+  text-align:
+    center;
+
+  margin-top:
+    40px;
+}
+
+
+.signature-label {
+
+  color:
+    var(--muted);
+
+  font-size:
+    .85rem;
+
+  margin-bottom:
+    5px;
+}
+
+
+.signature-name {
+
+  color:
+    var(--deep);
+
+  font-family:
+    "Amiri",
+    serif;
+
+  font-size:
+    1.8rem;
+}
+
+
+/* =========================================================
+   BACK BUTTON
+========================================================= */
+
+.back-area {
+
+  text-align:
+    center;
+
+  margin-top:
+    75px;
+}
+
+
+.back-button {
+
+  display:
+    inline-block;
+
+  background:
+    var(--deep);
+
+  color:
+    white;
+
+  padding:
+    11px 30px;
+
+  border-radius:
+    30px;
+
+  box-shadow:
+    0 9px 25px rgba(16,43,58,.18);
+
+  transition:
+    .25s;
+}
+
+
+.back-button:hover {
+
+  background:
+    var(--turquoise);
+
+  transform:
+    translateY(-2px);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+
+  background:
+    var(--night);
+
+  color:
+    rgba(255,255,255,.66);
+
+  text-align:
+    center;
+
+  padding:
+    45px 20px;
+
+  border-top:
+    4px solid
+    var(--gold);
+}
+
+
+footer strong {
+
+  color:
+    var(--gold-light);
+}
+
+
+footer p {
+
+  font-size:
+    .84rem;
+
+  margin:
+    5px 0;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .topbar {
+
+    flex-direction:
+      column;
+
+    gap:
+      15px;
+  }
+
+
+  .hero {
+
+    grid-template-columns:
+      1fr;
+
+    gap:
+      55px;
+
+    text-align:
+      center;
+
+    padding-top:
+      60px;
+  }
+
+
+  .hero-content {
+
+    margin:
+      auto;
+  }
+
+
+  .cover-wrap {
+
+    order:
+      2;
+  }
+
+
+  .hero-content {
+
+    order:
+      1;
+  }
+
+
+  .tags {
+
+    justify-content:
+      center;
+  }
+
+
+  .themes {
+
+    grid-template-columns:
+      1fr 1fr;
+  }
+
+
+  .questions {
+
+    grid-template-columns:
+      1fr;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .hero h1 {
+
+    font-size:
+      3.4rem;
+  }
+
+
+  .hero-subtitle {
+
+    font-size:
+      1.35rem;
+  }
+
+
+  .section-title {
+
+    font-size:
+      2.25rem;
+  }
+
+
+  .reading-card {
+
+    padding:
+      38px 26px;
+  }
+
+
+  .reading-card p {
+
+    font-size:
+      1.04rem;
+
+    text-align:
+      right;
+  }
+
+
+  .quote {
+
+    padding:
+      45px 28px;
+  }
+
+
+  .quote p {
+
+    font-size:
+      1.3rem;
+  }
+
+
+  .themes {
+
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .book-info {
+
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .info-item:nth-child(odd) {
+
+    border-left:
+      none;
+  }
+
+
+  .cover-frame {
+
+    margin:
+      0 15px;
+  }
+
+}
+
+</style>
+
 </head>
+
 
 <body>
 
-<!-- =========================
+
+<!-- =====================================================
      HEADER
-========================= -->
+===================================================== -->
 
 <header>
+
 
   <div class="topbar">
 
     <div class="brand">
       حسین محمدی آمیرزا
     </div>
+
 
     <nav class="nav">
 
@@ -717,8 +1664,8 @@
         وبلاگ
       </a>
 
-      <a href="tarikh-adyan-jeld-2.html">
-        جلد دوم
+      <a href="tarikh-adyan.html">
+        جلد اول
       </a>
 
     </nav>
@@ -726,58 +1673,102 @@
   </div>
 
 
+
   <div class="hero">
+
+
+    <!-- COVER -->
 
     <div class="cover-wrap">
 
       <div class="cover-frame">
 
         <img
-          src="../images/books/tarikh-adyan.jpg"
-          alt="جلد کتاب تاریخ ادیان">
+          src="../images/books/tarikh-adyan-jeld-2.jpg"
+          alt="جلد دوم کتاب تاریخ ادیان">
 
       </div>
 
       <div class="cover-caption">
-        تاریخ ادیان
+        تاریخ ادیان · جلد دوم
       </div>
 
     </div>
 
 
+
+    <!-- HERO TEXT -->
+
     <div class="hero-content">
 
       <div class="eyebrow">
-        پژوهشی در تاریخ، معنا و تجربه انسانی
+        تاریخ ادیان
       </div>
+
 
       <h1>
         تاریخ ادیان
       </h1>
 
+
       <div class="hero-subtitle">
-        هفتاد هزار سال، انسان در جست‌وجوی معنا
+        روانشناسی انسان تا عصر حیرت
       </div>
+
+
+      <div class="volume">
+        جلد دوم
+      </div>
+
 
       <div class="hero-author">
-        نویسنده: <strong>حسین محمدی آمیرزا</strong>
+        نویسنده:
+        <strong>
+          حسین محمدی
+        </strong>
       </div>
 
+
       <p class="hero-description">
-        روایتی از یکی از عمیق‌ترین تجربه‌های بشر؛
-        از نخستین مواجهه انسان با مرگ، ترس و ناشناخته‌ها
-        تا شکل‌گیری آیین‌ها، ادیان و جهان‌بینی‌هایی که
-        در طول تاریخ به انسان معنا، هویت و امید بخشیده‌اند.
+
+        سفری از جست‌وجوی خدای یگانه تا جهان مدرن؛
+        روایتی از ابراهیم، موسی، عیسی و محمد(ص)،
+        ادیان ابراهیمی، تحولات تاریخی ایمان و سرانجام
+        مواجهه انسان معاصر با پرسش‌های تازه درباره دین،
+        عقل، علم، معنا و خویشتن.
+
       </p>
+
 
       <div class="tags">
 
-        <span class="tag">تاریخ ادیان</span>
-        <span class="tag">انسان و معنا</span>
-        <span class="tag">اسطوره</span>
-        <span class="tag">دین و جامعه</span>
-        <span class="tag">روان انسان</span>
-        <span class="tag">فرهنگ و تمدن</span>
+        <span class="tag">
+          توحید
+        </span>
+
+        <span class="tag">
+          ابراهیم
+        </span>
+
+        <span class="tag">
+          یهودیت
+        </span>
+
+        <span class="tag">
+          مسیحیت
+        </span>
+
+        <span class="tag">
+          اسلام
+        </span>
+
+        <span class="tag">
+          مدرنیته
+        </span>
+
+        <span class="tag">
+          معنویت
+        </span>
 
       </div>
 
@@ -788,432 +1779,829 @@
 </header>
 
 
-<!-- =========================
+
+<!-- =====================================================
      QUICK NAV
-========================= -->
+===================================================== -->
 
 <div class="quick-nav">
 
   <div class="quick-inner">
 
-    <a href="#preface">پیشگفتار</a>
-    <a href="#journey">مسیر کتاب</a>
-    <a href="#themes">درونمایه‌ها</a>
-    <a href="#info">مشخصات اثر</a>
-    <a href="#author">نگاه نویسنده</a>
+    <a href="#introduction">
+      مقدمه
+    </a>
+
+    <a href="#journey">
+      مسیر جلد دوم
+    </a>
+
+    <a href="#questions">
+      پرسش‌های پایانی
+    </a>
+
+    <a href="#themes">
+      محورهای کتاب
+    </a>
+
+    <a href="#info">
+      مشخصات اثر
+    </a>
+
+    <a href="#author">
+      سخن نویسنده
+    </a>
 
   </div>
 
 </div>
 
 
-<!-- =========================
+
+<!-- =====================================================
      MAIN
-========================= -->
+===================================================== -->
 
 <main>
 
 
-  <!-- PREQUEL -->
 
-  <section class="section" id="preface">
+<!-- =====================================================
+     INTRODUCTION
+===================================================== -->
 
-    <div class="section-heading">
+<section
+  class="section"
+  id="introduction"
+>
 
-      <div class="section-kicker">
-        آغاز روایت
-      </div>
 
-      <h2 class="section-title">
-        📖 پیشگفتار
-      </h2>
+  <div class="section-heading">
 
+    <div class="section-kicker">
+      آغاز جلد دوم
     </div>
 
+    <h2 class="section-title">
+      مقدمه · در جستجوی خدای یگانه
+    </h2>
 
-    <div class="reading-card">
+  </div>
 
-      <p>
-        پیش از آن‌که نامی از خدا بر زبان انسان جاری شود، پیش از آن‌که متنی مقدس نوشته شود یا آیینی صورت‌بندی گردد، انسان تنها بود؛ تنها، لرزان و خیره به تاریکی‌ها که پاسخی نمی‌داد. در آن لحظهٔ نخستین، فریادی خاموش از ژرفای وجود بشر برخاست؛ نه دعا بود و نه ستایش، بلکه پرسشی عریان و بی‌رحم که از دل ترس، رنج و حیرت زاده شد: چگونه می‌توان در جهانی زیست که بر بستر مرگ بنا شده، رنج در آن ذاتی است و آینده‌اش در مهی غلیظ و ناشناخته پنهان است؟
-      </p>
 
-      <p>
-        این پرسش، سرچشمهٔ همهٔ جست‌وجوهای معنوی بشر است و مادر تمام ادیان. نخستین آیین‌ها نه زادهٔ آرامش، بلکه فرزندان وحشت بودند؛ واکنش‌هایی زنده و تن‌به‌تن به هستی که بی‌تفاوت می‌نمود. آیین‌ها ابزار بقا بودند: راه‌هایی برای فهم جهان، برای مهار ترس جمعی و برای ساختن پلی از معنا بر فراز پرتگاه هولناک عدم.
-      </p>
 
-      <p>
-        در آغاز، آیین نیازی به «مؤمن» نداشت؛ نیازمند انسانی جسور بود که جرأت می‌کرد در برابر آسمان خاموش بایستد، به گسترهٔ بی‌کران هستی چشم بدوزد و بپرسد: «چرا؟» تاریخ، شاهدی صادق اما بی‌رحم است. تمدن‌ها آمده‌اند و فروپاشیده‌اند، امپراتوری‌ها در خاک حل شده‌اند، اما این پرسش هرگز خاموش نشده است. ادیان نمرده‌اند؛ آن‌ها فقط پوست انداخته‌اند.
-      </p>
+  <div class="reading-card">
 
-      <p>
-        آیین‌ها همچون جریانی زیرزمینی و پیوسته، از دل غارهای نخستین با نقش‌های اُخرایی به سوی معابد میان‌رودان روان شده‌اند؛ از آیین رازآلود میترا تا نظم اخلاقی اهورامزدا، از ریاضت رهایی‌بخش بودا تا هماهنگی شگفت‌انگیز شینتو با طبیعت، از آیین ابراهیم تا عهد کهن قوم یهود تا پیام انقلابی مسیح، از دوگانه‌انگاری افراطی مانی تا شور مساوات‌خواهانهٔ مزدک، و از آن‌جا تا ندای یکتاپرستانهٔ اسلام. صورت‌ها دگرگون شده‌اند و خدایان جای یکدیگر را گرفته‌اند، اما زخم همان است و پرسش همان.
-      </p>
 
-      <p>
-        امروز، شاید بیش از هر زمان دیگر، این پرسش تیز و سوزان است: در جهانی آکنده از رنج و مرگ، چگونه باید زیست؟ هر تلاشی برای تقلیل آیین به «خطای فکری» خیانتی است به پیچیدگی شگفت این پدیده. آیین‌ها نه صرفاً توهم بودند و نه الزاماً همه آنها وحی ناب؛ آیین‌ها ضرورتی انسانی است، زبانی که جوامع از طریق آن با امر قدسی سخن گفته‌اند، با مرگ چانه زده‌اند و هویت جمعی خود را ساخته‌اند.
-      </p>
+    <p>
+      در جلد نخست، از سپیده‌دم باور گفتیم؛ از
+      روزگاری که انسان، خدا را در سنگ و ستاره و رود و درختان می‌جست. از میان‌رودان،
+      که مردمانش با دستان خویش بت می‌تراشیدند و در برابر ساخته ی خود زانو می‌زدند. از
+      مصر، سرزمین نیل، که در آن، آخناتون خورشید را «آتون» خواند و رؤیای یکتاپرستی را
+      در دل معابد کهن افروخت. از هند، با سرودهای رازآلود وداها و آتش‌های همیشه‌فروزان
+      قربانی. و از ایران، جایی که زرتشت انسان را میان روشنایی و تاریکی نشاند و او را
+      آزاد و مسئول انتخاب خویش خواند.
+    </p>
 
-      <p>
-        این کتاب، تاریخ ادیان را به‌عنوان فهرستی خشک از باورها روایت نمی‌کند. آنچه در این‌جا خوانده می‌شود، تاریخ تکامل روح انسان است. در این مسیر، آیین گاه چراغ معرفت بوده و گاه سلاح قدرت؛ گاه بنیان اخلاق و گاه توجیه‌گر خون‌ریزی. آیین همزاد قدرت است، اما بارها به بزرگ‌ترین دشمن آن تبدیل شده است. آیین معنا می‌بخشد، اما گاه خود به معمایی هولناک‌تر بدل می‌شود.
-      </p>
 
-      <p>
-        در این روایت، آیین‌هایی چون میترائیسم، زرتشتی‌گری، بودیسم، مانویت، شینتو، مزدکی‌گری و ادیان ابراهیمی نه به‌صورت انتزاعی، بلکه در بستر خون، خاک، سیاست و آرزوهای مردمان‌شان بررسی می‌شوند. آیین‌ها را انسان‌ها می‌سازند و آیین‌ها، در بازتولید خود، انسان‌ها را دوباره می‌سازند.
-      </p>
+    <p>
+      اما این جلد، روایت گسستی بزرگ است؛ لحظه‌ای که
+      تاریخ ایمان، ورقی تازه خورد. لحظه‌ای که مردی در برابر ستاره و ماه و خورشید
+      ایستاد و گفت: «غروب‌کنندگان را دوست ندارم.»
+    </p>
 
-      <p>
-        در این کتاب، اسطوره‌های آفرینش گزارش تاریخی نیستند؛ آن‌ها شعرِ هستی‌اند. فرجام‌شناسی پیش‌بینی آینده نیست؛ رویای عدالت است. و مدرنیته، پایان دین به‌شمار نمی‌آید، بلکه صحنه‌ای تازه است که در آن، ایدئولوژی‌های سکولار گاه خود به کیش‌هایی نو با خدایانی زمینی بدل می‌شوند.
-      </p>
 
-      <p>
-        این کتاب داوری نهایی صادر نمی‌کند، اما ادعای بی‌طرفی سرد و بی‌جان نیز ندارد. فهم آیین، چشمی تیزبین و قلبی شجاع می‌طلبد؛ نگاهی که بتواند فراتر از ستایش کورکورانه یا انکار متعصبانه بایستد و این عمیق‌ترین تجربهٔ انسانی را در تمام تناقض‌های درهم‌تنیده‌اش ببیند.
-      </p>
+    <p>
+      او ابراهیم بود؛ پدر ایمان. آغازگر راهی که به توحید انجامید. خدا را نه در سنگ
+      چوب یافت و نه در سپهر، بلکه در ژرفای جان آدمی و در قلب انسان یافت . با او، فصل
+      یکتا‌پرستی آغاز شد؛ فصلی که هنوز ادامه دارد.
+    </p>
 
-      <p>
-        این داستان، داستان انسان است در مواجهه با مرگ، در معامله با رنج و در آفرینش معنا. و اگر این سطرها را می‌خوانید، باید بدانید که این داستان، در نهایت، داستان شما نیز هست.
-      </p>
 
+    <p>
+      از ابراهیم تا موسی، از موسی تا عیسی، و از عیسی
+      تا محمد(ص)، رشته‌ای از پیامبران امتداد یافت؛ پیام‌آورانی که در زمانه‌های
+      گوناگون، ندای بازگشت به خدای یگانه را سر دادند. آنان حقیقتی نو نیاوردند؛ حقیقتی
+      کهن را یادآور شدند. گفتند که در هر عصر، صدایی برای بیداری برخاسته است.
+    </p>
+
+
+    <p>
+      در این مسیر، با یهودیت همراه می‌شویم؛ با قومی
+      که در دامنه‌های کوه سینا با خدا پیمان بستند. از شریعت موسی خواهیم گفت، از تورات
+      و تلمود، از شکوه معبد سلیمان و ویرانی‌هاش، و از کنیسه‌هایی که در غربت، چراغ
+      ایمان را زنده نگاه داشتند. از رنج ایوب خواهیم گفت، و از نغمه‌های نیایش که در
+      مزامیر داوود جاری شد.
+    </p>
+
+
+    <p>
+      سپس به مسیحیت می‌رسیم؛ دینی که از دل یهودیت
+      برخاست اما مرزها را درنوردید. از عیسی ناصری خواهیم گفت؛ پیام‌آور محبت و بخشایش، که
+      با فرودستان نشست و از پادشاهی خدا سخن گفت. از پولس که پیام او را به سراسر
+      امپراتوری روم برد، و از پطرس که ایمانش را با جان خویش مهر کرد. از کلیسایی که از
+      دخمه‌ها برخاست و بر تخت قدرت نشست؛ از انشقاق بزرگ شرق و غرب، و از اصلاحات
+      پروتستانی که سیمای مسیحیت را دگرگون ساخت.
+    </p>
+
+
+    <p>
+      و آنگاه به اسلام می‌رسیم؛ واپسین حلقه‌ی زنجیره‌ی
+      توحید. از محمد (ص) خواهیم گفت؛ یتیمی از قریش که در غار حرا آوایی شنید که تاریخ
+      را دگرگون کرد. از قرآن، کتابی که در صحرا نازل شد و به اقصانقاط جهان رسید. از
+      شریعت و طریقت و حقیقت؛ از فقیهان و فیلسوفان و عارفانی که تمدنی گسترده از اندلس
+      تا هند بنا کردند. و از تشیع خواهیم گفت؛ شاخه‌ای که در واقعه کربلا با خون خویش
+      تاریخ را نوشت و قرن‌ها چشم به افق انتظار دوخت.
+    </p>
+
+
+    <p>
+      اما روایت ما در گذشته متوقف نمی‌شود. جهان مدرن
+      با پرسش‌های تازه‌اش فرا رسیده است. عصر روشنگری ایمان را به محک عقل زد. علم،
+      روایت‌های کهن آفرینش را بازخوانی کرد. سکولاریسم، دین را از اریکه‌ی قدرت کنار
+      نشاند. و انسان امروز، در میان هیاهوی رسانه‌ها و تصویرها، هنوز در جست‌وجوی
+      معنایی است که جانش را آرام کند.
+    </p>
+
+
+    <p>
+      در فصل پایانی، به این عصر حیرت خواهیم پرداخت؛
+      به گفت‌وگوی ادیان، به کشاکش بنیادگرایی و مدرنیسم، به مسئله‌ی حقوق زنان و دغدغه‌ی
+      محیط زیست، به الحاد نوین و معنویت‌های نوظهور. خواهیم پرسید:
+    </p>
+
+
+    <p>
+      آیا ادیان، پس از هزاران سال، هنوز برای انسان معاصر سخنی دارند؟
+    </p>
+
+
+    <p>
+      آیا می‌توانند پلی برای آرامش و صلح باشند، یا همچنان آتش تعصب را شعله‌ور می‌کنند؟
+    </p>
+
+
+    <p>
+      از غارهای کهن تا جهان پرهیاهوی امروز، سفری
+      دراز پیموده‌ایم. اما شاید مقصد این سفر، یافتن پاسخی قطعی نباشد؛ بلکه آموختن هنر
+      پرسیدن باشد. پرسیدن از خویشتن، از جهان، و از آن حقیقت بی‌کرانی که هستی را در
+      آغوش گرفته است.
+    </p>
+
+
+    <p>
+      شاید بزرگ‌ترین میراث ادیان همین باشد: یادآوری
+      اینکه پرسش‌هایی هست که پایان نمی‌پذیرند؛ و همین بی‌پایانی، نشانه‌ای از بی‌نهایت است.
+    </p>
+
+
+    <p>
+      با ما همراه شوید؛ در سفری از اعماق تاریخ تا لبه‌های اکنون، سفری در جست‌وجوی
+      خدای یگانه.
+    </p>
+
+
+    <p>
+      و در جست‌وجوی خویشتن، خویش.
+    </p>
+
+
+    <p>
+      چرا که خودشناسی نخستین گام خداشناسی است.
+    </p>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     QUOTE
+===================================================== -->
+
+<section class="quote-section">
+
+  <div class="quote">
+
+    <div class="quote-mark">
+      “
     </div>
 
-  </section>
+    <p>
+      «خودشناسی نخستین گام خداشناسی است.»
+    </p>
+
+  </div>
+
+</section>
 
 
-  <!-- QUOTE -->
 
-  <section class="quote-section">
+<!-- =====================================================
+     JOURNEY
+===================================================== -->
 
-    <div class="quote">
+<section
+  class="section"
+  id="journey"
+>
 
-      <div class="quote-mark">
-        “
-      </div>
 
-      <p>
-        «این داستان، داستان انسان است در مواجهه با مرگ،
-        در معامله با رنج و در آفرینش معنا.»
-      </p>
+  <div class="section-heading">
 
+    <div class="section-kicker">
+      از ایمان تا عصر حیرت
     </div>
 
-  </section>
+    <h2 class="section-title">
+      مسیر جلد دوم
+    </h2>
+
+  </div>
 
 
-  <!-- JOURNEY -->
+  <div class="themes">
 
-  <section class="section" id="journey">
 
-    <div class="section-heading">
+    <div class="theme">
 
-      <div class="section-kicker">
-        مسیر یک جست‌وجوی تاریخی
+      <div class="theme-number">
+        ۰۱
       </div>
-
-      <h2 class="section-title">
-        هفتاد هزار سال جست‌وجوی معنا
-      </h2>
-
-    </div>
-
-
-    <div class="journey">
-
-      <div class="journey-card">
-
-        <div class="journey-number">
-          ۰۱
-        </div>
-
-        <h3>
-          ترس و حیرت
-        </h3>
-
-        <p>
-          انسان نخستین در برابر مرگ، طبیعت و ناشناخته ایستاد
-          و نخستین پرسش‌های معنایی از همین مواجهه زاده شدند.
-        </p>
-
-      </div>
-
-
-      <div class="journey-card">
-
-        <div class="journey-number">
-          ۰۲
-        </div>
-
-        <h3>
-          اسطوره و آیین
-        </h3>
-
-        <p>
-          جهان ناشناخته در قالب اسطوره، نماد و آیین
-          قابل فهم شد و جامعه به زبان مشترکی برای معنا دست یافت.
-        </p>
-
-      </div>
-
-
-      <div class="journey-card">
-
-        <div class="journey-number">
-          ۰۳
-        </div>
-
-        <h3>
-          خدایان و تمدن
-        </h3>
-
-        <p>
-          آیین‌ها با شهر، قدرت، سیاست و تمدن پیوند خوردند
-          و نهادهای دینی شکل تازه‌ای به زندگی اجتماعی دادند.
-        </p>
-
-      </div>
-
-
-      <div class="journey-card">
-
-        <div class="journey-number">
-          ۰۴
-        </div>
-
-        <h3>
-          پیامبران و اخلاق
-        </h3>
-
-        <p>
-          پرسش از عدالت، خیر، شر، مسئولیت و سرنوشت انسان
-          در ادیان بزرگ صورت تازه‌ای پیدا کرد.
-        </p>
-
-      </div>
-
-
-      <div class="journey-card">
-
-        <div class="journey-number">
-          ۰۵
-        </div>
-
-        <h3>
-          قدرت و ایمان
-        </h3>
-
-        <p>
-          دین گاه پناه انسان و بنیان اخلاق شد و گاه
-          در کنار قدرت سیاسی قرار گرفت و با تاریخ درآمیخت.
-        </p>
-
-      </div>
-
-
-      <div class="journey-card">
-
-        <div class="journey-number">
-          ۰۶
-        </div>
-
-        <h3>
-          انسان امروز
-        </h3>
-
-        <p>
-          در جهان مدرن، پرسش از معنا ناپدید نشده است؛
-          تنها زبان آن تغییر کرده و شکل‌های تازه‌ای یافته است.
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- THEMES -->
-
-  <section class="section" id="themes">
-
-    <div class="section-heading">
-
-      <div class="section-kicker">
-        محورهای اصلی
-      </div>
-
-      <h2 class="section-title">
-        کتاب درباره چیست؟
-      </h2>
-
-    </div>
-
-
-    <div class="book-info">
-
-      <div class="info-item">
-
-        <span class="info-label">
-          موضوع
-        </span>
-
-        <span class="info-value">
-          تاریخ و تحول ادیان
-        </span>
-
-      </div>
-
-
-      <div class="info-item">
-
-        <span class="info-label">
-          نگاه
-        </span>
-
-        <span class="info-value">
-          تاریخی، انسانی و انتقادی
-        </span>
-
-      </div>
-
-
-      <div class="info-item">
-
-        <span class="info-label">
-          محور
-        </span>
-
-        <span class="info-value">
-          انسان و جست‌وجوی معنا
-        </span>
-
-      </div>
-
-
-      <div class="info-item">
-
-        <span class="info-label">
-          موضوعات
-        </span>
-
-        <span class="info-value">
-          اسطوره، آیین، دین، قدرت و جامعه
-        </span>
-
-      </div>
-
-
-      <div class="info-item">
-
-        <span class="info-label">
-          گستره
-        </span>
-
-        <span class="info-value">
-          از آیین‌های نخستین تا جهان مدرن
-        </span>
-
-      </div>
-
-
-      <div class="info-item">
-
-        <span class="info-label">
-          زبان
-        </span>
-
-        <span class="info-value">
-          فارسی
-        </span>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- AUTHOR -->
-
-  <section class="section" id="author">
-
-    <div class="section-heading">
-
-      <div class="section-kicker">
-        یادداشت نویسنده
-      </div>
-
-      <h2 class="section-title">
-        نگاهی فراتر از داوری
-      </h2>
-
-    </div>
-
-
-    <div class="author-note">
 
       <h3>
-        فهم دین، فهم انسان است
+        ابراهیم و توحید
       </h3>
 
       <p>
-        تاریخ ادیان برای من صرفاً تاریخ باورها نیست؛
-        تاریخ مواجهه انسان با بنیادی‌ترین پرسش‌های هستی است.
-        انسان در طول هزاران سال کوشیده است برای مرگ،
-        رنج، امید، عدالت و ناشناخته‌ها معنایی بیابد.
-        این کتاب تلاشی است برای دیدن این مسیر،
-        نه از جایگاه ستایش کورکورانه و نه از موضع انکار،
-        بلکه با نگاهی انسانی به تجربه‌ای که بخش بزرگی
-        از تاریخ و روان بشر را شکل داده است.
+        گسست بزرگ از جهان خدایان متعدد و آغاز روایت
+        خدای یگانه در سنت ابراهیمی.
       </p>
 
     </div>
 
-  </section>
+
+    <div class="theme">
+
+      <div class="theme-number">
+        ۰۲
+      </div>
+
+      <h3>
+        موسی و یهودیت
+      </h3>
+
+      <p>
+        پیمان، شریعت، تورات، تلمود و تاریخ پر فراز و نشیب
+        قوم یهود و حافظه دینی آن.
+      </p>
+
+    </div>
 
 
-  <!-- FINAL -->
+    <div class="theme">
 
-  <section class="quote-section">
+      <div class="theme-number">
+        ۰۳
+      </div>
 
-    <div class="quote">
+      <h3>
+        عیسی و مسیحیت
+      </h3>
 
-      <div class="quote-mark">
+      <p>
+        پیام محبت و بخشایش، گسترش مسیحیت و تبدیل کلیسا
+        به یکی از بزرگ‌ترین نهادهای تاریخ.
+      </p>
+
+    </div>
+
+
+    <div class="theme">
+
+      <div class="theme-number">
+        ۰۴
+      </div>
+
+      <h3>
+        محمد و اسلام
+      </h3>
+
+      <p>
+        ظهور اسلام، قرآن، شریعت، طریقت، حقیقت و شکل‌گیری
+        تمدنی گسترده از اندلس تا هند.
+      </p>
+
+    </div>
+
+
+    <div class="theme">
+
+      <div class="theme-number">
+        ۰۵
+      </div>
+
+      <h3>
+        تشیع و کربلا
+      </h3>
+
+      <p>
+        روایت تاریخی تشیع، واقعه کربلا، مفهوم شهادت
+        و افق انتظار در حافظه شیعی.
+      </p>
+
+    </div>
+
+
+    <div class="theme">
+
+      <div class="theme-number">
+        ۰۶
+      </div>
+
+      <h3>
+        انسان مدرن
+      </h3>
+
+      <p>
+        روشنگری، علم، سکولاریسم، الحاد نوین و معنویت‌های
+        تازه در جهان معاصر.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     QUESTIONS
+===================================================== -->
+
+<section
+  class="section"
+  id="questions"
+>
+
+
+  <div class="section-heading">
+
+    <div class="section-kicker">
+      پرسش‌های عصر حیرت
+    </div>
+
+    <h2 class="section-title">
+      پرسش‌هایی که هنوز باقی‌اند
+    </h2>
+
+  </div>
+
+
+  <div class="questions">
+
+
+    <div class="question-card">
+
+      <p>
+        آیا ادیان، پس از هزاران سال،
+        هنوز برای انسان معاصر سخنی دارند؟
+      </p>
+
+    </div>
+
+
+    <div class="question-card">
+
+      <p>
+        آیا دین می‌تواند پلی برای آرامش و صلح باشد،
+        یا همچنان آتش تعصب را شعله‌ور می‌کند؟
+      </p>
+
+    </div>
+
+
+    <div class="question-card">
+
+      <p>
+        انسان امروز در جهانی که علم و فناوری
+        بسیاری از رازهای طبیعت را گشوده‌اند،
+        چگونه با مسئله معنا روبه‌رو می‌شود؟
+      </p>
+
+    </div>
+
+
+    <div class="question-card">
+
+      <p>
+        آیا جست‌وجوی خدا در نهایت،
+        سفری برای شناخت خویشتن نیست؟
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     THEMES
+===================================================== -->
+
+<section
+  class="section"
+  id="themes"
+>
+
+
+  <div class="section-heading">
+
+    <div class="section-kicker">
+      گستره بحث
+    </div>
+
+    <h2 class="section-title">
+      در این جلد با چه موضوعاتی روبه‌رو می‌شویم؟
+    </h2>
+
+  </div>
+
+
+  <div class="themes">
+
+
+    <div class="theme">
+
+      <div class="theme-number">
         ✦
       </div>
 
+      <h3>
+        ادیان ابراهیمی
+      </h3>
+
       <p>
-        «ادیان نمرده‌اند؛
-        آن‌ها فقط پوست انداخته‌اند.»
+        یهودیت، مسیحیت و اسلام در امتداد یک سنت تاریخی
+        و معنوی بررسی می‌شوند.
       </p>
 
     </div>
 
-  </section>
+
+    <div class="theme">
+
+      <div class="theme-number">
+        ✦
+      </div>
+
+      <h3>
+        عقل و ایمان
+      </h3>
+
+      <p>
+        مواجهه ایمان با عقل، فلسفه، علم و تحولات فکری
+        دوران جدید.
+      </p>
+
+    </div>
 
 
-  <div class="back-area">
+    <div class="theme">
 
-    <a class="back-button" href="../index.html">
-      ← بازگشت به صفحه اصلی
-    </a>
+      <div class="theme-number">
+        ✦
+      </div>
+
+      <h3>
+        دین و قدرت
+      </h3>
+
+      <p>
+        رابطه پیچیده نهادهای دینی با حکومت، جامعه
+        و ساختارهای قدرت.
+      </p>
+
+    </div>
+
+
+    <div class="theme">
+
+      <div class="theme-number">
+        ✦
+      </div>
+
+      <h3>
+        بنیادگرایی و مدرنیسم
+      </h3>
+
+      <p>
+        کشاکش سنت و جهان مدرن و چالش‌های تازه پیش روی
+        جوامع دینی.
+      </p>
+
+    </div>
+
+
+    <div class="theme">
+
+      <div class="theme-number">
+        ✦
+      </div>
+
+      <h3>
+        گفت‌وگوی ادیان
+      </h3>
+
+      <p>
+        امکان همزیستی، گفت‌وگو و ساختن پلی میان سنت‌های
+        مختلف دینی.
+      </p>
+
+    </div>
+
+
+    <div class="theme">
+
+      <div class="theme-number">
+        ✦
+      </div>
+
+      <h3>
+        معنویت نوین
+      </h3>
+
+      <p>
+        الحاد نوین، معنویت‌های نوظهور و جست‌وجوی معنا
+        در جهان معاصر.
+      </p>
+
+    </div>
 
   </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     BOOK INFO
+========================================================= -->
+
+<section
+  class="section"
+  id="info"
+>
+
+
+  <div class="section-heading">
+
+    <div class="section-kicker">
+      شناسنامه اثر
+    </div>
+
+    <h2 class="section-title">
+      مشخصات کتاب
+    </h2>
+
+  </div>
+
+
+  <div class="book-info">
+
+
+    <div class="info-item">
+
+      <span class="info-label">
+        عنوان
+      </span>
+
+      <span class="info-value">
+        تاریخ ادیان
+      </span>
+
+    </div>
+
+
+    <div class="info-item">
+
+      <span class="info-label">
+        عنوان فرعی
+      </span>
+
+      <span class="info-value">
+        روانشناسی انسان تا عصر حیرت
+      </span>
+
+    </div>
+
+
+    <div class="info-item">
+
+      <span class="info-label">
+        جلد
+      </span>
+
+      <span class="info-value">
+        دوم
+      </span>
+
+    </div>
+
+
+    <div class="info-item">
+
+      <span class="info-label">
+        نویسنده
+      </span>
+
+      <span class="info-value">
+        حسین محمدی
+      </span>
+
+    </div>
+
+
+    <div class="info-item">
+
+      <span class="info-label">
+        حوزه
+      </span>
+
+      <span class="info-value">
+        تاریخ ادیان و اندیشه
+      </span>
+
+    </div>
+
+
+    <div class="info-item">
+
+      <span class="info-label">
+        رویکرد
+      </span>
+
+      <span class="info-value">
+        تاریخی، انسانی و تأمل‌محور
+      </span>
+
+    </div>
+
+
+    <div class="info-item">
+
+      <span class="info-label">
+        محور اصلی
+      </span>
+
+      <span class="info-value">
+        جست‌وجوی خدای یگانه و خویشتن
+      </span>
+
+    </div>
+
+
+    <div class="info-item">
+
+      <span class="info-label">
+        زبان
+      </span>
+
+      <span class="info-value">
+        فارسی
+      </span>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     AUTHOR
+========================================================= -->
+
+<section
+  class="section"
+  id="author"
+>
+
+
+  <div class="section-heading">
+
+    <div class="section-kicker">
+      سخن پایانی
+    </div>
+
+    <h2 class="section-title">
+      در جست‌وجوی خویشتن
+    </h2>
+
+  </div>
+
+
+  <div class="author-note">
+
+    <h3>
+      سفر هنوز ادامه دارد
+    </h3>
+
+
+    <p>
+      از غارهای کهن تا جهان پرهیاهوی امروز، سفری دراز
+      پیموده‌ایم. اما شاید مقصد این سفر، یافتن پاسخی قطعی
+      نباشد؛ بلکه آموختن هنر پرسیدن باشد. پرسیدن از خویشتن،
+      از جهان، و از آن حقیقت بی‌کرانی که هستی را در آغوش
+      گرفته است.
+    </p>
+
+
+    <div class="signature">
+
+      <div class="signature-label">
+        با احترام
+      </div>
+
+      <div class="signature-name">
+        حسین محمدی
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FINAL QUOTE
+========================================================= -->
+
+<section class="quote-section">
+
+  <div class="quote">
+
+    <div class="quote-mark">
+      ✦
+    </div>
+
+    <p>
+      «شاید بزرگ‌ترین میراث ادیان همین باشد:
+      یادآوری اینکه پرسش‌هایی هست که پایان نمی‌پذیرند؛
+      و همین بی‌پایانی، نشانه‌ای از بی‌نهایت است.»
+    </p>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     BACK
+========================================================= -->
+
+<div class="back-area">
+
+  <a
+    class="back-button"
+    href="../index.html"
+  >
+    ← بازگشت به صفحه اصلی
+  </a>
+
+</div>
 
 
 </main>
 
 
-<!-- =========================
+
+<!-- =====================================================
      FOOTER
-========================= -->
+========================================================= -->
 
 <footer>
 
   <p>
-    <strong>تاریخ ادیان</strong>
-    · هفتاد هزار سال، انسان در جست‌وجوی معنا
+    <strong>
+      تاریخ ادیان · جلد دوم
+    </strong>
   </p>
 
   <p>
-    نوشتهٔ حسین محمدی آمیرزا
+    روانشناسی انسان تا عصر حیرت
+  </p>
+
+  <p>
+    نوشتهٔ حسین محمدی
   </p>
 
   <p>
