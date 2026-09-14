@@ -153,10 +153,6 @@
       margin-inline: auto;
     }
 
-    /* =========================================
-       TOP BAR
-    ========================================= */
-
     .topbar {
       padding-top: 25px;
     }
@@ -166,15 +162,11 @@
       align-items: center;
       gap: 9px;
       padding: 9px 18px;
-
       border: 1px solid var(--border);
       border-radius: 999px;
-
       color: var(--gold-light);
       background: rgba(255,255,255,.018);
-
       font-size: 13px;
-
       transition:
         transform var(--speed) var(--ease),
         background var(--speed) var(--ease),
@@ -186,10 +178,6 @@
       border-color: var(--gold);
       background: rgba(215,173,85,.07);
     }
-
-    /* =========================================
-       HERO
-    ========================================= */
 
     .hero {
       position: relative;
@@ -207,7 +195,6 @@
       top: 20px;
       transform: translateX(-50%);
       border-radius: 50%;
-
       background:
         radial-gradient(
           circle,
@@ -215,7 +202,6 @@
           rgba(169,68,34,.035) 40%,
           transparent 70%
         );
-
       filter: blur(5px);
       pointer-events: none;
     }
@@ -236,11 +222,9 @@
       display: inline-flex;
       align-items: center;
       gap: 12px;
-
       color: var(--gold);
       font-size: 13px;
       letter-spacing: 1.5px;
-
       margin-bottom: 18px;
     }
 
@@ -270,13 +254,10 @@
       font-size: clamp(65px, 12vw, 125px);
       font-weight: 700;
       line-height: 1.05;
-
       color: var(--gold-light);
-
       text-shadow:
         0 0 15px rgba(215,173,85,.10),
         0 0 55px rgba(169,68,34,.08);
-
       margin-bottom: 22px;
     }
 
@@ -284,7 +265,6 @@
       position: relative;
       max-width: 730px;
       margin: auto;
-
       color: var(--text-soft);
       font-size: 16px;
       font-weight: 300;
@@ -329,10 +309,6 @@
       font-size: 14px;
     }
 
-    /* =========================================
-       HERO STATS
-    ========================================= */
-
     .hero-stats {
       display: flex;
       justify-content: center;
@@ -344,7 +320,6 @@
     .hero-stat {
       min-width: 125px;
       padding: 10px 18px;
-
       border: 1px solid var(--border);
       background: rgba(255,255,255,.018);
     }
@@ -361,10 +336,6 @@
       font-size: 13px;
       font-weight: 500;
     }
-
-    /* =========================================
-       COVER
-    ========================================= */
 
     .cover-section {
       padding: 10px 0 80px;
@@ -387,14 +358,12 @@
       height: 70%;
       left: 10%;
       top: 15%;
-
       background:
         radial-gradient(
           ellipse,
           rgba(215,173,85,.15),
           transparent 70%
         );
-
       filter: blur(35px);
       z-index: -1;
     }
@@ -402,7 +371,6 @@
     .cover-frame {
       position: relative;
       padding: 9px;
-
       background:
         linear-gradient(
           135deg,
@@ -412,7 +380,6 @@
           #e7cc83,
           #694b19
         );
-
       box-shadow:
         0 35px 100px rgba(0,0,0,.85),
         0 0 65px rgba(215,173,85,.08);
@@ -422,7 +389,6 @@
       content: "";
       position: absolute;
       inset: -7px;
-
       border: 1px solid rgba(240,213,140,.4);
       pointer-events: none;
     }
@@ -431,7 +397,6 @@
       content: "";
       position: absolute;
       inset: 13px;
-
       border: 1px solid rgba(255,238,183,.28);
       pointer-events: none;
     }
@@ -454,22 +419,17 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-
       margin-top: 25px;
       padding: 12px 27px;
-
       border: 1px solid var(--gold-dark);
-
       background:
         linear-gradient(
           135deg,
           rgba(215,173,85,.16),
           rgba(215,173,85,.035)
         );
-
       color: var(--gold-light);
       font-size: 14px;
-
       transition:
         transform var(--speed) var(--ease),
         background var(--speed) var(--ease),
@@ -482,42 +442,31 @@
       background: rgba(215,173,85,.11);
     }
 
-    /* =========================================
-       QUICK NAV
-    ========================================= */
-
     .quick-nav {
       position: sticky;
       top: 12px;
       z-index: 20;
-
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       gap: 6px;
-
       width: fit-content;
       max-width: 100%;
       margin: 0 auto 20px;
       padding: 6px;
-
       border: 1px solid rgba(215,173,85,.14);
       border-radius: 999px;
-
       background: rgba(7,6,5,.82);
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
-
       box-shadow: 0 12px 35px rgba(0,0,0,.35);
     }
 
     .quick-nav a {
       padding: 7px 13px;
       border-radius: 999px;
-
       color: var(--muted);
       font-size: 11px;
-
       transition:
         color var(--speed) var(--ease),
         background var(--speed) var(--ease);
@@ -527,10 +476,6 @@
       color: var(--gold-light);
       background: rgba(215,173,85,.08);
     }
-
-    /* =========================================
-       SECTIONS
-    ========================================= */
 
     .section {
       padding: 78px 0;
@@ -569,10 +514,6 @@
       font-weight: 600;
     }
 
-    /* =========================================
-       ABOUT
-    ========================================= */
-
     .about-intro {
       max-width: var(--reading);
       margin: auto;
@@ -594,21 +535,18 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 12px;
-
       max-width: var(--reading);
       margin: 35px auto 0;
     }
 
     .idea-card {
       padding: 24px 20px;
-
       background:
         linear-gradient(
           145deg,
           rgba(255,255,255,.035),
           rgba(255,255,255,.008)
         );
-
       border: 1px solid var(--border);
     }
 
@@ -632,18 +570,12 @@
       line-height: 1.9;
     }
 
-    /* =========================================
-       READING PAGE
-    ========================================= */
-
     .reading-page {
       max-width: var(--reading);
       margin: auto;
-
       padding:
         clamp(32px, 6vw, 68px)
         clamp(22px, 7vw, 78px);
-
       background:
         radial-gradient(
           circle at 50% 0%,
@@ -655,9 +587,7 @@
           rgba(255,255,255,.038),
           rgba(255,255,255,.012)
         );
-
       border: 1px solid rgba(215,173,85,.15);
-
       box-shadow:
         inset 0 0 90px rgba(215,173,85,.018),
         0 30px 80px rgba(0,0,0,.20);
@@ -694,18 +624,11 @@
       margin-bottom: 0;
     }
 
-    /* =========================================
-       POEM
-    ========================================= */
-
     .poem {
       position: relative;
-
       margin: 15px auto 42px;
       padding: 40px 15px;
-
       text-align: center;
-
       border-top: 1px solid rgba(215,173,85,.22);
       border-bottom: 1px solid rgba(215,173,85,.22);
     }
@@ -758,10 +681,6 @@
       font-size: 12px;
     }
 
-    /* =========================================
-       QUOTE
-    ========================================= */
-
     .quote-wrap {
       max-width: 900px;
       margin: auto;
@@ -770,12 +689,9 @@
     .quote {
       position: relative;
       padding: 55px 30px;
-
       text-align: center;
-
       border-top: 1px solid var(--border-strong);
       border-bottom: 1px solid var(--border-strong);
-
       background:
         radial-gradient(
           circle at 50% 50%,
@@ -787,9 +703,7 @@
     .quote::before {
       content: "“";
       display: block;
-
       height: 42px;
-
       color: var(--gold-dark);
       font-family: Georgia, serif;
       font-size: 82px;
@@ -808,10 +722,6 @@
       color: var(--muted);
       font-size: 12px;
     }
-
-    /* =========================================
-       LOVE
-    ========================================= */
 
     .love-box {
       max-width: var(--reading);
@@ -834,9 +744,7 @@
     .love-highlight {
       margin-top: 35px;
       padding: 25px;
-
       border-right: 2px solid var(--gold-dark);
-
       background:
         linear-gradient(
           to left,
@@ -854,17 +762,11 @@
       text-align: right;
     }
 
-    /* =========================================
-       SPECS
-    ========================================= */
-
     .specs {
       max-width: var(--reading);
       margin: auto;
-
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-
       border-top: 1px solid var(--border);
       border-right: 1px solid var(--border);
     }
@@ -889,14 +791,9 @@
       font-weight: 500;
     }
 
-    /* =========================================
-       THEMES
-    ========================================= */
-
     .themes {
       max-width: 800px;
       margin: auto;
-
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -905,13 +802,10 @@
 
     .theme {
       padding: 8px 17px;
-
       border: 1px solid rgba(215,173,85,.23);
       background: rgba(215,173,85,.032);
-
       color: #d3c094;
       font-size: 13px;
-
       transition:
         transform var(--speed) var(--ease),
         border-color var(--speed) var(--ease),
@@ -924,39 +818,27 @@
       background: rgba(215,173,85,.08);
     }
 
-    /* =========================================
-       WRITER NOTE
-    ========================================= */
-
     .writer-note {
       position: relative;
-
       max-width: var(--reading);
       margin: auto;
-
       padding: clamp(28px, 5vw, 45px);
-
       background:
         linear-gradient(
           135deg,
           rgba(215,173,85,.065),
           rgba(0,0,0,.10)
         );
-
       border: 1px solid var(--border);
     }
 
     .writer-note::before {
       content: "نگاه نویسنده";
       position: absolute;
-
       top: -12px;
       right: 25px;
-
       padding: 0 12px;
-
       background: var(--bg);
-
       color: var(--gold-dark);
       font-size: 11px;
     }
@@ -971,10 +853,6 @@
     .writer-note p:last-child {
       margin-bottom: 0;
     }
-
-    /* =========================================
-       FINAL
-    ========================================= */
 
     .final-message {
       max-width: 780px;
@@ -1001,18 +879,11 @@
       font-size: 12px;
     }
 
-    /* =========================================
-       FOOTER
-    ========================================= */
-
     footer {
       margin-top: 40px;
       padding: 60px 20px 45px;
-
       text-align: center;
-
       border-top: 1px solid rgba(215,173,85,.14);
-
       color: #7f776b;
       font-size: 12px;
     }
@@ -1030,12 +901,7 @@
       margin-bottom: 12px;
     }
 
-    /* =========================================
-       RESPONSIVE
-    ========================================= */
-
     @media (max-width: 800px) {
-
       .container {
         width: min(100% - 24px, var(--page));
       }
@@ -1092,7 +958,6 @@
     }
 
     @media (max-width: 520px) {
-
       .topbar {
         padding-top: 18px;
       }
@@ -1214,12 +1079,7 @@
       }
     }
 
-    /* =========================================
-       REDUCED MOTION
-    ========================================= */
-
     @media (prefers-reduced-motion: reduce) {
-
       html {
         scroll-behavior: auto;
       }
@@ -1240,10 +1100,6 @@
 
   <div class="container">
 
-    <!-- =====================================
-         BACK
-    ====================================== -->
-
     <div class="topbar">
       <a
         href="../../index.html"
@@ -1253,11 +1109,6 @@
         ← بازگشت به کتابخانه
       </a>
     </div>
-
-
-    <!-- =====================================
-         HERO
-    ====================================== -->
 
     <header class="hero">
 
@@ -1306,11 +1157,6 @@
 
     </header>
 
-
-    <!-- =====================================
-         COVER
-    ====================================== -->
-
     <section class="cover-section">
 
       <div class="cover-layout">
@@ -1321,8 +1167,9 @@
 
           <div class="cover-frame">
 
+            <!-- مسیر اصلاح‌شده عکس جلد -->
             <img
-              src="../../ghoghnoos-ashegh.jpg"
+              src="ghoghnoos-ashegh.jpg"
               alt="جلد منظومه ققنوس عاشق؛ اثر حسین محمدی"
               width="440"
               height="660"
@@ -1349,11 +1196,6 @@
 
     </section>
 
-
-    <!-- =====================================
-         QUICK NAV
-    ====================================== -->
-
     <nav
       class="quick-nav"
       aria-label="ناوبری صفحه"
@@ -1366,17 +1208,9 @@
       <a href="#vision">نگاه اثر</a>
     </nav>
 
-
     <main>
 
-      <!-- =====================================
-           ABOUT
-      ====================================== -->
-
-      <section
-        class="section"
-        id="about"
-      >
+      <section class="section" id="about">
 
         <div class="section-heading">
 
@@ -1427,7 +1261,6 @@
 
         </div>
 
-
         <div class="idea-cards">
 
           <article class="idea-card">
@@ -1458,15 +1291,7 @@
 
       </section>
 
-
-      <!-- =====================================
-           FOREWORD
-      ====================================== -->
-
-      <section
-        class="section"
-        id="foreword"
-      >
+      <section class="section" id="foreword">
 
         <div class="section-heading">
 
@@ -1479,7 +1304,6 @@
           </div>
 
         </div>
-
 
         <article class="reading-page">
 
@@ -1494,7 +1318,6 @@
             </div>
 
           </div>
-
 
           <div class="poem">
 
@@ -1527,7 +1350,6 @@
             </div>
 
           </div>
-
 
           <p>
             «ققنوس عاشق» منظومه‌ای حماسی و عاشقانه است که در بستر
@@ -1618,15 +1440,7 @@
 
       </section>
 
-
-      <!-- =====================================
-           LOVE
-      ====================================== -->
-
-      <section
-        class="section"
-        id="love"
-      >
+      <section class="section" id="love">
 
         <div class="section-heading">
 
@@ -1672,11 +1486,6 @@
 
       </section>
 
-
-      <!-- =====================================
-           QUOTE
-      ====================================== -->
-
       <section class="section">
 
         <div class="quote-wrap">
@@ -1698,15 +1507,7 @@
 
       </section>
 
-
-      <!-- =====================================
-           DETAILS
-      ====================================== -->
-
-      <section
-        class="section"
-        id="details"
-      >
+      <section class="section" id="details">
 
         <div class="section-heading">
 
@@ -1756,15 +1557,7 @@
 
       </section>
 
-
-      <!-- =====================================
-           THEMES
-      ====================================== -->
-
-      <section
-        class="section"
-        id="themes"
-      >
+      <section class="section" id="themes">
 
         <div class="section-heading">
 
@@ -1796,15 +1589,7 @@
 
       </section>
 
-
-      <!-- =====================================
-           VISION
-      ====================================== -->
-
-      <section
-        class="section"
-        id="vision"
-      >
+      <section class="section" id="vision">
 
         <div class="section-heading">
 
@@ -1840,11 +1625,6 @@
 
       </section>
 
-
-      <!-- =====================================
-           FINAL QUOTE
-      ====================================== -->
-
       <section class="section">
 
         <div class="final-message">
@@ -1867,11 +1647,6 @@
       </section>
 
     </main>
-
-
-    <!-- =====================================
-         FOOTER
-    ====================================== -->
 
     <footer>
 
