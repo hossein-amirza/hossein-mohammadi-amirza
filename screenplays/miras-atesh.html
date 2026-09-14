@@ -4,692 +4,1576 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>آخرین نبرد سورنا | حسین محمدی امیرزا</title>
+  <title>میراث آتش | حسین محمدی امیرزا</title>
 
-  <meta name="description"
-        content="معرفی فیلمنامه بلند آخرین نبرد سورنا، نوشته حسین محمدی امیرزا.">
+  <meta name="description" content="میراث آتش؛ حلقه‌ی اول از سه‌گانه‌ای حماسی از سقوط نوشیجان تا اتحاد قبایل و شکستن چرخه‌ی انتقام، نوشته حسین محمدی امیرزا.">
+  <meta name="author" content="حسین محمدی امیرزا">
+  <meta name="theme-color" content="#0a0806">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Vazirmatn:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <style>
 
-    * {
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
       box-sizing: border-box;
+    }
+
+    :root {
+      /* آتش / نارنجی-سرخ */
+      --fire-50:  #fff5e8;
+      --fire-100: #ffd9b0;
+      --fire-200: #ffb877;
+      --fire-300: #ff9440;
+      --fire-400: #f56a1c;
+      --fire-500: #d94a0a;
+      --fire-600: #a83305;
+      --fire-700: #7a2203;
+      --fire-800: #4d1402;
+
+      /* مسی */
+      --copper-100: #f0d5b8;
+      --copper-200: #d9a878;
+      --copper-300: #b87844;
+      --copper-400: #8e5528;
+      --copper-500: #663a17;
+      --copper-600: #442509;
+      --copper-700: #2a1605;
+
+      /* زغال / دود */
+      --char-50:  #f0eeec;
+      --char-100: #d5cfc9;
+      --char-200: #a89f96;
+      --char-300: #7a7068;
+      --char-400: #524a43;
+      --char-500: #322c27;
+      --char-600: #1f1b18;
+      --char-700: #12100e;
+      --char-800: #0a0806;
+
+      /* طلایی آتش */
+      --ember-100: #fcebb6;
+      --ember-200: #f5d276;
+      --ember-300: #e8b340;
+      --ember-400: #c98f1e;
+
+      /* کرم نسخه */
+      --cream-50:  #fdfaf0;
+      --cream-100: #f5eedd;
+      --cream-200: #e8dcc0;
+      --cream-300: #d4c4a0;
+
+      --shadow-deep: 0 30px 80px rgba(0, 0, 0, 0.55);
+      --shadow-soft: 0 15px 45px rgba(0, 0, 0, 0.3);
+      --transition: cubic-bezier(0.22, 0.61, 0.36, 1);
     }
 
     html {
       scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
 
     body {
-      margin: 0;
-      background: #080808;
-      color: #eee;
-      font-family: Tahoma, Arial, sans-serif;
+      font-family: "Vazirmatn", sans-serif;
+      font-weight: 400;
+      color: var(--char-100);
+      background: var(--char-800);
+      min-height: 100vh;
+      overflow-x: hidden;
       line-height: 2;
     }
 
-    a {
-      text-decoration: none;
+    ::selection {
+      background: rgba(245, 106, 28, 0.4);
+      color: #fff5e8;
     }
 
-    /* =========================
-       GLOBAL
-    ========================= */
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
 
-    .page {
-      width: min(1120px, 92%);
+    .container {
+      width: min(1180px, calc(100% - 48px));
       margin: auto;
-      padding-bottom: 90px;
-    }
-
-    .gold {
-      color: #d6ad5b;
-    }
-
-    /* =========================
-       TOP BAR
-    ========================= */
-
-    .topbar {
-      padding: 28px 0;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid rgba(214,173,91,.18);
-    }
-
-    .back {
-      color: #d6ad5b;
-      font-size: 15px;
-      transition: .3s;
-    }
-
-    .back:hover {
-      color: #f1d487;
-    }
-
-    .category {
-      color: #777;
-      font-size: 13px;
-    }
-
-    /* =========================
-       HERO
-    ========================= */
-
-    .hero {
-      padding: 70px 0 80px;
-      text-align: center;
-    }
-
-    .hero-label {
-      color: #c99b4b;
-      font-size: 14px;
-      letter-spacing: .5px;
-      margin-bottom: 18px;
-    }
-
-    .hero h1 {
-      margin: 0;
-      color: #e0b866;
-      font-size: clamp(44px, 7vw, 78px);
-      line-height: 1.25;
-      text-shadow: 0 5px 35px rgba(0,0,0,.8);
-    }
-
-    .hero-subtitle {
-      max-width: 800px;
-      margin: 25px auto 0;
-      color: #bdb5aa;
-      font-size: 19px;
-      line-height: 2.1;
-    }
-
-    .hero-author {
-      margin-top: 20px;
-      color: #777;
-      font-size: 15px;
-    }
-
-    .hero-author strong {
-      color: #cba45d;
-    }
-
-    .hero-line {
-      width: 100px;
-      height: 2px;
-      margin: 30px auto;
-      background: #c99b4b;
-    }
-
-    /* =========================
-       POSTER
-    ========================= */
-
-    .poster-area {
-      text-align: center;
-      margin-bottom: 90px;
-    }
-
-    .poster-frame {
-      display: inline-block;
-      padding: 10px;
-      background: #111;
-      border: 1px solid rgba(214,173,91,.35);
-      border-radius: 20px;
-      box-shadow:
-        0 30px 90px rgba(0,0,0,.8),
-        0 0 50px rgba(191,145,62,.08);
-    }
-
-    .poster-frame img {
-      display: block;
-      width: min(620px, 100%);
-      max-height: 820px;
-      object-fit: contain;
-      border-radius: 12px;
-    }
-
-    /* =========================
-       SECTION
-    ========================= */
-
-    .section {
-      margin-bottom: 38px;
-    }
-
-    .section-box {
-      background: #111;
-      border: 1px solid rgba(214,173,91,.15);
-      border-radius: 20px;
-      padding: 42px;
-      box-shadow: 0 20px 55px rgba(0,0,0,.35);
-    }
-
-    .section-heading {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      margin-bottom: 28px;
-    }
-
-    .section-heading .number {
-      color: #80642f;
-      font-size: 15px;
-      font-weight: bold;
-    }
-
-    .section-heading h2 {
-      margin: 0;
-      color: #d8b160;
-      font-size: 28px;
-      line-height: 1.5;
-    }
-
-    .section-heading::after {
-      content: "";
-      height: 1px;
-      flex: 1;
-      background: linear-gradient(
-        to left,
-        rgba(214,173,91,.35),
-        transparent
-      );
-    }
-
-    .section-box p {
-      color: #d0cbc4;
-      font-size: 17px;
-      line-height: 2.35;
-      margin: 0 0 20px;
-      text-align: justify;
-    }
-
-    .section-box p:last-child {
-      margin-bottom: 0;
-    }
-
-    strong {
-      color: #e0bb70;
-    }
-
-    /* =========================
-       INTRO
-    ========================= */
-
-    .intro-text {
-      font-size: 20px !important;
-      color: #e1dbd2 !important;
-      line-height: 2.35 !important;
-    }
-
-    /* =========================
-       INFO
-    ========================= */
-
-    .info-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
-    }
-
-    .info-card {
-      min-height: 120px;
-      padding: 22px;
-      background: #0b0b0b;
-      border-radius: 15px;
-      border: 1px solid rgba(214,173,91,.13);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      transition: .3s;
-    }
-
-    .info-card:hover {
-      border-color: rgba(214,173,91,.4);
-      transform: translateY(-3px);
-    }
-
-    .info-card small {
-      color: #777;
-      font-size: 12px;
-      margin-bottom: 8px;
-    }
-
-    .info-card strong {
-      color: #ddd;
-      font-size: 15px;
-      line-height: 1.8;
-    }
-
-    /* =========================
-       STORY
-    ========================= */
-
-    .story-intro {
-      padding: 27px 30px;
-      margin-bottom: 30px;
-      background:
-        linear-gradient(
-          135deg,
-          rgba(173,125,43,.16),
-          rgba(255,255,255,.02)
-        );
-      border-right: 4px solid #c69a4b;
-      border-radius: 12px;
-    }
-
-    .story-intro p {
-      margin: 0;
-      color: #e2d6c5;
-      font-size: 19px;
-      line-height: 2.25;
-    }
-
-    .story-part {
       position: relative;
-      padding: 32px 32px 32px 25px;
-      margin-bottom: 20px;
-      background: #0c0c0c;
-      border-radius: 16px;
-      border: 1px solid rgba(255,255,255,.05);
-      overflow: hidden;
+      z-index: 5;
     }
 
-    .story-part::before {
+    .grain {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.4;
+      mix-blend-mode: overlay;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.3'/%3E%3C/svg%3E");
+    }
+
+    /* TOP BAR */
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background:
+        linear-gradient(180deg, rgba(10, 8, 6, 0.97), rgba(18, 16, 14, 0.95));
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(245, 106, 28, 0.3);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);
+    }
+
+    .topbar::after {
+      content: "";
+      position: absolute;
+      bottom: -1px;
+      left: 15%;
+      right: 15%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--fire-400), transparent);
+      opacity: 0.7;
+    }
+
+    .topbar-inner {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .brand {
+      font-family: "Amiri", serif;
+      font-size: 1.4rem;
+      color: var(--fire-200);
+      white-space: nowrap;
+      letter-spacing: 0.3px;
+      position: relative;
+      padding-right: 18px;
+      transition: color 0.3s var(--transition);
+    }
+
+    .brand::before {
       content: "";
       position: absolute;
       right: 0;
-      top: 0;
-      width: 4px;
-      height: 100%;
-      background: #9d7739;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 5px;
+      height: 24px;
+      background: linear-gradient(to bottom, var(--fire-300), var(--fire-600));
+      border-radius: 2px;
+      box-shadow: 0 0 14px rgba(245, 106, 28, 0.9);
     }
 
-    .story-part:last-child {
-      margin-bottom: 0;
+    .brand:hover { color: var(--fire-100); }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
     }
 
-    .story-part-number {
-      color: #665127;
-      font-size: 13px;
-      margin-bottom: 5px;
+    .nav a {
+      color: var(--char-100);
+      font-size: 0.85rem;
+      font-weight: 400;
+      padding: 8px 14px;
+      border-radius: 999px;
+      transition: all 0.3s var(--transition);
+      white-space: nowrap;
     }
 
-    .story-part h3 {
-      margin: 0 0 15px;
-      color: #d5ad5b;
-      font-size: 22px;
+    .nav a:hover {
+      color: var(--fire-200);
+      background: rgba(245, 106, 28, 0.12);
     }
 
-    .story-part p {
-      margin: 0;
-      font-size: 16px;
-      line-height: 2.25;
-    }
-
-    /* =========================
-       QUOTE
-    ========================= */
-
-    .quote {
-      margin: 35px 0;
-      padding: 38px 35px;
-      text-align: center;
-      border-top: 1px solid rgba(214,173,91,.25);
-      border-bottom: 1px solid rgba(214,173,91,.25);
+    /* HERO */
+    .hero {
+      position: relative;
+      padding: 110px 0 90px;
+      overflow: hidden;
       background:
-        radial-gradient(
-          circle at center,
-          rgba(177,132,49,.13),
-          transparent 70%
-        );
+        radial-gradient(ellipse 60% 70% at 80% 30%, rgba(255, 148, 64, 0.4), transparent 55%),
+        radial-gradient(ellipse 50% 60% at 15% 80%, rgba(217, 74, 10, 0.5), transparent 60%),
+        radial-gradient(circle at 50% 50%, rgba(122, 34, 3, 0.4), transparent 70%),
+        linear-gradient(155deg, #7a2203 0%, #4d1402 30%, #1f1b18 65%, #0a0806 100%);
+      color: var(--fire-50);
     }
 
-    .quote p {
-      margin: 0;
-      color: #e5c77f;
-      font-size: 24px;
-      font-weight: bold;
-      line-height: 2.1;
-      text-align: center;
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.5;
+      background-image:
+        radial-gradient(circle at 20% 20%, rgba(255, 184, 119, 0.6) 0.7px, transparent 1.5px),
+        radial-gradient(circle at 80% 30%, rgba(255, 148, 64, 0.5) 0.5px, transparent 1.2px),
+        radial-gradient(circle at 40% 70%, rgba(255, 184, 119, 0.5) 0.6px, transparent 1.3px),
+        radial-gradient(circle at 70% 85%, rgba(255, 148, 64, 0.4) 0.5px, transparent 1.2px),
+        radial-gradient(circle at 90% 60%, rgba(255, 184, 119, 0.45) 0.4px, transparent 1px),
+        radial-gradient(circle at 10% 55%, rgba(255, 148, 64, 0.4) 0.6px, transparent 1.2px);
+      background-size: 500px 500px, 700px 700px, 800px 800px, 600px 600px, 900px 900px, 400px 400px;
     }
 
-    /* =========================
-       CINEMATIC MOMENTS
-    ========================= */
-
-    .moment {
-      padding: 55px 45px;
-      margin: 38px 0;
-      border-radius: 20px;
-      border: 1px solid rgba(214,173,91,.25);
-      text-align: center;
-      background:
-        radial-gradient(
-          circle at center,
-          #251c10 0%,
-          #12100d 50%,
-          #0a0a0a 100%
-        );
-      box-shadow: inset 0 0 60px rgba(0,0,0,.4);
+    .hero::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 140px;
+      background: linear-gradient(to bottom, transparent, rgba(10, 8, 6, 0.7));
+      pointer-events: none;
     }
 
-    .moment-label {
-      color: #99783d;
-      font-size: 13px;
-      margin-bottom: 12px;
-    }
-
-    .moment h2 {
-      margin: 0 0 18px;
-      color: #e1ba6a;
-      font-size: 34px;
-    }
-
-    .moment p {
-      max-width: 760px;
-      margin: auto;
-      color: #cfc7bc;
-      font-size: 18px;
-      line-height: 2.3;
-    }
-
-    /* =========================
-       THEMES
-    ========================= */
-
-    .theme-grid {
+    .hero-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 80px;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-content { position: relative; }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 8px 18px;
+      border: 1px solid rgba(255, 184, 119, 0.5);
+      border-radius: 999px;
+      color: var(--fire-100);
+      background: rgba(122, 34, 3, 0.35);
+      font-size: 0.82rem;
+      font-weight: 500;
+      margin-bottom: 28px;
+      letter-spacing: 0.5px;
+      backdrop-filter: blur(4px);
+    }
+
+    .eyebrow::before {
+      content: "🔥";
+      font-size: 1rem;
+      filter: drop-shadow(0 0 8px rgba(255, 148, 64, 0.9));
+      animation: pulse 3s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.15); opacity: 0.85; }
+    }
+
+    .hero h1 {
+      font-family: "Amiri", serif;
+      font-size: clamp(3rem, 6.5vw, 5.6rem);
+      line-height: 1.15;
+      color: #ffffff;
+      font-weight: 700;
+      text-shadow:
+        0 3px 20px rgba(0, 0, 0, 0.8),
+        0 0 80px rgba(255, 148, 64, 0.5);
+      margin-bottom: 16px;
+      letter-spacing: -0.5px;
+    }
+
+    .hero-subtitle {
+      font-family: "Amiri", serif;
+      font-size: clamp(1.3rem, 2.6vw, 1.9rem);
+      color: rgba(255, 217, 176, 0.9);
+      margin-bottom: 28px;
+      font-style: italic;
+      letter-spacing: 0.5px;
+    }
+
+    .hero-subtitle::before {
+      content: "— ";
+      color: var(--fire-300);
+    }
+
+    .hero-description {
+      color: rgba(255, 245, 232, 0.95);
+      font-size: 1.05rem;
+      font-weight: 300;
+      max-width: 620px;
+      line-height: 2.2;
+    }
+
+    .author {
+      margin-top: 32px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      color: var(--fire-100);
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    .author-line {
+      width: 60px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--fire-300));
+      position: relative;
+    }
+
+    .author-line::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 6px;
+      height: 6px;
+      background: var(--fire-300);
+      border-radius: 50%;
+      box-shadow: 0 0 12px rgba(255, 148, 64, 0.9);
+    }
+
+    .hero-tags {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+
+    .tag {
+      border: 1px solid rgba(255, 184, 119, 0.4);
+      color: rgba(255, 245, 232, 0.9);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.76rem;
+      font-weight: 400;
+      background: rgba(122, 34, 3, 0.3);
+      transition: all 0.3s var(--transition);
+      backdrop-filter: blur(4px);
+      cursor: default;
+    }
+
+    .tag:hover {
+      border-color: rgba(255, 184, 119, 0.8);
+      background: rgba(122, 34, 3, 0.55);
+      transform: translateY(-2px);
+    }
+
+    /* POSTER */
+    .cover-area {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 640px;
+    }
+
+    .cover-glow {
+      position: absolute;
+      width: 460px;
+      height: 580px;
+      border-radius: 50%;
+      background: radial-gradient(ellipse, rgba(255, 148, 64, 0.5), rgba(217, 74, 10, 0.15) 45%, transparent 70%);
+      filter: blur(40px);
+      animation: floatGlow 8s ease-in-out infinite;
+    }
+
+    @keyframes floatGlow {
+      0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.9; }
+      50% { transform: translate(-15px, 20px) scale(1.08); opacity: 1; }
+    }
+
+    .cover-frame {
+      position: relative;
+      width: min(390px, 80%);
+      padding: 14px;
+      background:
+        linear-gradient(145deg, #d9a878, #b87844 25%, #442509 60%, #b87844 85%, #f0d5b8);
+      border-radius: 6px;
+      box-shadow:
+        0 45px 100px rgba(0, 0, 0, 0.8),
+        0 0 90px rgba(245, 106, 28, 0.5),
+        inset 0 2px 0 rgba(255, 217, 176, 0.4);
+      transform: rotate(1.5deg);
+      transition: all 0.6s var(--transition);
+    }
+
+    .cover-frame::before {
+      content: "";
+      position: absolute;
+      inset: -4px;
+      border-radius: 8px;
+      background: linear-gradient(145deg, rgba(255, 184, 119, 0.6), transparent, rgba(217, 74, 10, 0.5));
+      z-index: -1;
+      filter: blur(10px);
+    }
+
+    .cover-frame:hover {
+      transform: rotate(0deg) translateY(-14px) scale(1.03);
+      box-shadow:
+        0 60px 120px rgba(0, 0, 0, 0.85),
+        0 0 130px rgba(245, 106, 28, 0.6),
+        inset 0 2px 0 rgba(255, 217, 176, 0.5);
+    }
+
+    .cover-inner {
+      padding: 7px;
+      background: #0a0806;
+      border: 1px solid rgba(255, 217, 176, 0.4);
+      border-radius: 3px;
+      overflow: hidden;
+    }
+
+    .cover-inner img {
+      width: 100%;
+      height: auto;
+      border-radius: 2px;
+      transition: transform 0.6s var(--transition);
+    }
+
+    .cover-frame:hover .cover-inner img {
+      transform: scale(1.04);
+    }
+
+    .cover-caption {
+      position: absolute;
+      bottom: -30px;
+      right: 50%;
+      transform: translateX(50%);
+      white-space: nowrap;
+      color: rgba(255, 217, 176, 0.9);
+      font-size: 0.76rem;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+      font-family: "Amiri", serif;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+    }
+
+    /* QUICK NAV */
+    .quick-nav {
+      padding: 40px 0;
+      background:
+        linear-gradient(180deg, #0a0806, #7a2203 30%, #f56a1c 70%, #e8b340);
+      position: relative;
+    }
+
+    .quick-nav::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 60px;
+      background: linear-gradient(to bottom, transparent, var(--char-800));
+      pointer-events: none;
+    }
+
+    .quick-inner {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 16px;
+      border: 1px solid rgba(255, 217, 176, 0.35);
+      background: rgba(10, 8, 6, 0.5);
+      backdrop-filter: blur(12px);
+      border-radius: 999px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+      position: relative;
+      z-index: 2;
+      width: fit-content;
+      margin: auto;
+    }
+
+    .quick-inner a {
+      padding: 9px 18px;
+      color: rgba(255, 245, 232, 0.9);
+      font-size: 0.82rem;
+      font-weight: 400;
+      border-radius: 999px;
+      transition: all 0.3s var(--transition);
+    }
+
+    .quick-inner a:hover {
+      color: #ffffff;
+      background: rgba(255, 245, 232, 0.18);
+      transform: translateY(-2px);
+    }
+
+    /* SECTION BASE */
+    section { scroll-margin-top: 100px; }
+
+    .section-heading {
+      margin-bottom: 50px;
+      text-align: center;
+      position: relative;
+    }
+
+    .section-kicker {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 3px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+
+    .section-title {
+      font-family: "Amiri", serif;
+      font-size: clamp(2rem, 4.2vw, 3.2rem);
+      line-height: 1.35;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+    }
+
+    .section-line {
+      width: 90px;
+      height: 1px;
+      margin: 24px auto 0;
+      position: relative;
+    }
+
+    .section-line::before {
+      content: "🔥";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 0.7rem;
+      padding: 0 10px;
+      background: inherit;
+    }
+
+    /* ABOUT */
+    .section-about {
+      padding: 100px 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 20% 0%, rgba(245, 106, 28, 0.1), transparent 60%),
+        radial-gradient(ellipse 50% 40% at 90% 100%, rgba(122, 34, 3, 0.15), transparent 60%),
+        linear-gradient(180deg, var(--char-700), var(--char-600) 50%, var(--char-700));
+      position: relative;
+    }
+
+    .section-about::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: 0.4;
+      background-image:
+        repeating-linear-gradient(0deg, rgba(255, 184, 119, 0.04) 0, rgba(255, 184, 119, 0.04) 1px, transparent 1px, transparent 26px),
+        repeating-linear-gradient(90deg, rgba(255, 184, 119, 0.03) 0, rgba(255, 184, 119, 0.03) 1px, transparent 1px, transparent 26px);
+      pointer-events: none;
+    }
+
+    .section-about .section-kicker { color: var(--fire-300); }
+    .section-about .section-title { color: var(--fire-100); }
+    .section-about .section-line {
+      background: linear-gradient(90deg, transparent, var(--fire-400), transparent);
+    }
+    .section-about .section-line::before {
+      color: var(--fire-400);
+      background: var(--char-600);
+    }
+
+    .intro-card {
+      position: relative;
+      max-width: 960px;
+      margin: auto;
+      padding: 55px 60px;
+      border: 1px solid rgba(255, 184, 119, 0.25);
+      border-radius: 24px;
+      background:
+        linear-gradient(145deg, rgba(31, 27, 24, 0.7), rgba(18, 16, 14, 0.85));
+      box-shadow:
+        var(--shadow-deep),
+        inset 0 1px 0 rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(6px);
+      overflow: hidden;
+    }
+
+    .intro-card::before {
+      content: "🔥";
+      position: absolute;
+      top: 24px;
+      right: 32px;
+      font-size: 1.5rem;
+      opacity: 0.6;
+    }
+
+    .intro-card::after {
+      content: "";
+      position: absolute;
+      top: -40px;
+      left: -40px;
+      width: 220px;
+      height: 220px;
+      background: radial-gradient(circle, rgba(245, 106, 28, 0.15), transparent 70%);
+      pointer-events: none;
+    }
+
+    .intro-card p {
+      color: rgba(240, 238, 236, 0.9);
+      font-size: 1.05rem;
+      font-weight: 400;
+      line-height: 2.35;
+      text-align: justify;
+    }
+
+    .intro-card p + p { margin-top: 22px; }
+
+    .intro-card p::first-letter {
+      font-family: "Amiri", serif;
+      font-size: 1.6em;
+      color: var(--fire-300);
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    /* SYNOPSIS */
+    .section-preface {
+      padding: 110px 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(245, 106, 28, 0.25), transparent 60%),
+        radial-gradient(ellipse 70% 50% at 20% 100%, rgba(10, 8, 6, 0.8), transparent 60%),
+        radial-gradient(circle at 90% 30%, rgba(255, 217, 176, 0.08), transparent 40%),
+        linear-gradient(160deg, #322c27 0%, #1f1b18 40%, #0a0806 100%);
+      position: relative;
+      color: var(--char-50);
+      overflow: hidden;
+    }
+
+    .section-preface::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.85;
+      background-image:
+        radial-gradient(circle at 15% 20%, rgba(255, 184, 119, 0.8) 0.6px, transparent 1.2px),
+        radial-gradient(circle at 45% 60%, rgba(255, 245, 232, 0.5) 0.4px, transparent 1px),
+        radial-gradient(circle at 78% 25%, rgba(255, 184, 119, 0.7) 0.7px, transparent 1.3px),
+        radial-gradient(circle at 88% 78%, rgba(255, 245, 232, 0.5) 0.5px, transparent 1px),
+        radial-gradient(circle at 25% 85%, rgba(255, 184, 119, 0.5) 0.4px, transparent 1px),
+        radial-gradient(circle at 60% 40%, rgba(255, 245, 232, 0.5) 0.3px, transparent 1px);
+      background-size: 500px 500px, 700px 700px, 800px 800px, 600px 600px, 900px 900px, 400px 400px;
+    }
+
+    .section-preface .section-kicker { color: var(--fire-300); }
+    .section-preface .section-title { color: #ffffff; }
+    .section-preface .section-line {
+      background: linear-gradient(90deg, transparent, var(--fire-400), transparent);
+    }
+    .section-preface .section-line::before {
+      color: var(--fire-400);
+      background: #1f1b18;
+    }
+
+    .preface-wrapper {
+      max-width: 960px;
+      margin: auto;
+      position: relative;
+    }
+
+    .preface-wrapper::before {
+      content: "";
+      position: absolute;
+      right: -28px;
+      top: 20px;
+      bottom: 20px;
+      width: 2px;
+      background: linear-gradient(to bottom, transparent, rgba(245, 106, 28, 0.5), rgba(245, 106, 28, 0.15), transparent);
+      border-radius: 1px;
+    }
+
+    .preface-card {
+      padding: 60px 65px;
+      border-radius: 24px;
+      background:
+        linear-gradient(145deg, rgba(31, 27, 24, 0.7), rgba(10, 8, 6, 0.85));
+      border: 1px solid rgba(255, 184, 119, 0.2);
+      box-shadow:
+        0 35px 90px rgba(0, 0, 0, 0.6),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(8px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .preface-card::before {
+      content: "";
+      position: absolute;
+      top: -80px;
+      right: -80px;
+      width: 320px;
+      height: 320px;
+      background: radial-gradient(circle, rgba(245, 106, 28, 0.15), transparent 70%);
+      pointer-events: none;
+    }
+
+    .preface-card p {
+      color: rgba(240, 238, 236, 0.92);
+      line-height: 2.55;
+      font-size: 1.05rem;
+      font-weight: 300;
+      text-align: justify;
+      margin-bottom: 26px;
+      position: relative;
+    }
+
+    .preface-card p:last-of-type { margin-bottom: 0; }
+
+    .preface-card p::first-letter {
+      font-family: "Amiri", serif;
+      font-size: 1.7em;
+      color: var(--fire-300);
+      font-weight: 700;
+      line-height: 1;
+      text-shadow: 0 0 20px rgba(245, 106, 28, 0.5);
+    }
+
+    .act-block {
+      margin: 50px 0;
+      padding: 35px 40px;
+      border-radius: 18px;
+      background: rgba(10, 8, 6, 0.5);
+      border: 1px solid rgba(255, 184, 119, 0.15);
+      position: relative;
+    }
+
+    .act-block::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--fire-400), transparent);
+    }
+
+    .act-title {
+      font-family: "Amiri", serif;
+      color: var(--fire-200);
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      text-align: right;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .act-title::before {
+      content: "🔥";
+      font-size: 1.1rem;
+      filter: drop-shadow(0 0 6px rgba(245, 106, 28, 0.8));
+    }
+
+    .act-time {
+      color: var(--fire-300);
+      font-size: 0.85rem;
+      font-weight: 500;
+      margin-bottom: 20px;
+      font-style: italic;
+      opacity: 0.85;
+    }
+
+    .act-block p {
+      color: rgba(240, 238, 236, 0.88);
+      line-height: 2.4;
+      font-size: 1rem;
+      font-weight: 300;
+      text-align: justify;
+      margin-bottom: 18px;
+    }
+
+    .act-block p:last-child { margin-bottom: 0; }
+
+    .act-block ul {
+      list-style: none;
+      margin: 18px 0;
+      padding-right: 12px;
+    }
+
+    .act-block ul li {
+      color: rgba(240, 238, 236, 0.88);
+      line-height: 2.2;
+      font-size: 0.98rem;
+      padding: 6px 0;
+      padding-right: 26px;
+      position: relative;
+    }
+
+    .act-block ul li::before {
+      content: "❖";
+      position: absolute;
+      right: 0;
+      top: 6px;
+      color: var(--fire-400);
+      font-size: 0.85rem;
+    }
+
+    .act-block strong {
+      color: var(--fire-200);
+      font-weight: 700;
+    }
+
+    .emphasis-line {
+      text-align: center;
+      font-family: "Amiri", serif;
+      font-size: 1.2rem;
+      color: var(--fire-200);
+      font-weight: 700;
+      line-height: 2.2;
+      margin: 25px 0;
+      padding: 20px;
+      border-top: 1px solid rgba(245, 106, 28, 0.2);
+      border-bottom: 1px solid rgba(245, 106, 28, 0.2);
+    }
+
+    /* CHARACTERS */
+    .section-figures {
+      padding: 110px 0;
+      background:
+        radial-gradient(ellipse 70% 50% at 15% 0%, rgba(245, 106, 28, 0.1), transparent 60%),
+        radial-gradient(ellipse 60% 60% at 85% 100%, rgba(122, 34, 3, 0.15), transparent 60%),
+        linear-gradient(180deg, var(--char-700), var(--char-600) 50%, var(--char-500));
+      position: relative;
+    }
+
+    .section-figures .section-kicker { color: var(--fire-300); }
+    .section-figures .section-title { color: var(--fire-100); }
+    .section-figures .section-line {
+      background: linear-gradient(90deg, transparent, var(--fire-400), transparent);
+    }
+    .section-figures .section-line::before {
+      color: var(--fire-400);
+      background: var(--char-500);
+    }
+
+    .figures-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .figure-card {
+      position: relative;
+      padding: 36px 30px;
+      border-radius: 22px;
+      border: 1px solid rgba(255, 184, 119, 0.15);
+      background:
+        linear-gradient(145deg, rgba(50, 44, 39, 0.6), rgba(18, 16, 14, 0.85));
+      transition: all 0.4s var(--transition);
+      overflow: hidden;
+      box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.04);
+      cursor: default;
+    }
+
+    .figure-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 140px;
+      height: 140px;
+      background: radial-gradient(circle, rgba(245, 106, 28, 0.18), transparent 70%);
+      opacity: 0;
+      transition: opacity 0.4s var(--transition);
+    }
+
+    .figure-card::after {
+      content: "";
+      position: absolute;
+      bottom: -70px;
+      left: -70px;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background: rgba(245, 106, 28, 0.08);
+      transition: all 0.4s var(--transition);
+    }
+
+    .figure-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(245, 106, 28, 0.5);
+      background:
+        linear-gradient(145deg, rgba(60, 52, 46, 0.7), rgba(24, 20, 18, 0.9));
+      box-shadow:
+        0 25px 55px rgba(0, 0, 0, 0.55),
+        0 0 45px rgba(245, 106, 28, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    }
+
+    .figure-card:hover::before { opacity: 1; }
+    .figure-card:hover::after {
+      transform: scale(1.3);
+      background: rgba(245, 106, 28, 0.15);
+    }
+
+    .figure-number {
+      color: var(--fire-300);
+      font-size: 0.78rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+      letter-spacing: 1.5px;
+    }
+
+    .figure-name {
+      font-family: "Amiri", serif;
+      color: var(--fire-100);
+      font-size: 1.45rem;
+      margin-bottom: 8px;
+      font-weight: 700;
+      line-height: 1.4;
+    }
+
+    .figure-role {
+      color: var(--copper-200);
+      font-size: 0.85rem;
+      font-weight: 500;
+      margin-bottom: 12px;
+      font-style: italic;
+    }
+
+    .figure-text {
+      color: rgba(240, 238, 236, 0.75);
+      font-size: 0.9rem;
+      font-weight: 400;
+      line-height: 2;
+    }
+
+    /* THEMES */
+    .section-themes {
+      padding: 110px 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(245, 106, 28, 0.2), transparent 60%),
+        radial-gradient(ellipse 70% 50% at 15% 100%, rgba(122, 34, 3, 0.25), transparent 60%),
+        linear-gradient(180deg, #12100e, #0a0806 50%, #1f1b18);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .section-themes::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.4;
+      background-image:
+        repeating-linear-gradient(45deg, rgba(255, 184, 119, 0.025) 0, rgba(255, 184, 119, 0.025) 1px, transparent 1px, transparent 8px);
+    }
+
+    .section-themes .section-kicker { color: var(--fire-300); }
+    .section-themes .section-title { color: #ffffff; }
+    .section-themes .section-line {
+      background: linear-gradient(90deg, transparent, var(--fire-400), transparent);
+    }
+    .section-themes .section-line::before {
+      color: var(--fire-400);
+      background: #0a0806;
+    }
+
+    .themes-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
       gap: 16px;
     }
 
-    .theme {
-      padding: 23px;
-      background: #0b0b0b;
-      border: 1px solid rgba(214,173,91,.12);
-      border-radius: 14px;
-      color: #d1cbc2;
-      font-size: 16px;
-      line-height: 2;
-    }
-
-    .theme::before {
-      content: "◆";
-      color: #a47d3c;
-      margin-left: 10px;
-      font-size: 9px;
-    }
-
-    /* =========================
-       FEATURES
-    ========================= */
-
-    .feature-list {
-      display: grid;
-      gap: 15px;
-    }
-
-    .feature {
-      padding: 23px 25px;
-      background: #0c0c0c;
-      border-radius: 14px;
-      border-right: 3px solid #80602d;
-    }
-
-    .feature h3 {
-      margin: 0 0 8px;
-      color: #d6ad5b;
-      font-size: 18px;
-    }
-
-    .feature p {
-      margin: 0;
-      font-size: 15px;
-      line-height: 2;
-    }
-
-    /* =========================
-       MESSAGE
-    ========================= */
-
-    .message {
-      padding: 65px 45px;
+    .theme-card {
+      min-height: 170px;
+      padding: 32px 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
-      border-radius: 22px;
-      border: 1px solid rgba(214,173,91,.35);
+      border-radius: 20px;
+      background: rgba(255, 184, 119, 0.03);
+      border: 1px solid rgba(245, 106, 28, 0.25);
+      transition: all 0.4s var(--transition);
+      position: relative;
+      overflow: hidden;
+      cursor: default;
+    }
+
+    .theme-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 50% 0%, rgba(245, 106, 28, 0.25), transparent 70%);
+      opacity: 0;
+      transition: opacity 0.4s var(--transition);
+    }
+
+    .theme-card::after {
+      content: "";
+      position: absolute;
+      inset: 4px;
+      border: 1px solid rgba(245, 106, 28, 0);
+      border-radius: 16px;
+      transition: border-color 0.4s var(--transition);
+    }
+
+    .theme-card:hover {
+      transform: translateY(-6px);
+      background: rgba(245, 106, 28, 0.1);
+      border-color: rgba(245, 106, 28, 0.6);
+      box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.6),
+        0 0 40px rgba(245, 106, 28, 0.2);
+    }
+
+    .theme-card:hover::before { opacity: 1; }
+    .theme-card:hover::after { border-color: rgba(245, 106, 28, 0.35); }
+
+    .theme-symbol {
+      font-size: 1.7rem;
+      color: var(--fire-300);
+      margin-bottom: 14px;
+      transition: all 0.4s var(--transition);
+      text-shadow: 0 0 25px rgba(245, 106, 28, 0.7);
+      position: relative;
+      z-index: 2;
+    }
+
+    .theme-card:hover .theme-symbol {
+      transform: scale(1.2) rotate(8deg);
+      color: var(--fire-200);
+    }
+
+    .theme-title {
+      color: #ffffff;
+      font-family: "Amiri", serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      line-height: 1.5;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* QUOTE */
+    .section-quote {
+      padding: 130px 0;
+      position: relative;
+      overflow: hidden;
       background:
-        radial-gradient(
-          circle at center,
-          rgba(176,130,45,.16),
-          #111 65%
-        );
+        radial-gradient(ellipse 70% 80% at 50% 50%, rgba(255, 220, 150, 0.4), transparent 65%),
+        radial-gradient(ellipse 90% 60% at 15% 20%, rgba(255, 148, 64, 0.5), transparent 60%),
+        radial-gradient(ellipse 80% 60% at 90% 80%, rgba(140, 40, 5, 0.6), transparent 60%),
+        linear-gradient(160deg, #ffb877 0%, #f56a1c 25%, #a83305 55%, #4d1402 85%, #1a0600 100%);
     }
 
-    .message h2 {
-      margin: 0 0 28px;
-      color: #dcb466;
-      font-size: 31px;
+    .section-quote::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 30% 40%, rgba(255, 240, 200, 0.3), transparent 45%),
+        radial-gradient(circle at 70% 70%, rgba(255, 200, 120, 0.25), transparent 40%);
     }
 
-    .message-main {
-      max-width: 850px;
+    .quote-box {
+      max-width: 960px;
       margin: auto;
-      color: #e8cc8a;
-      font-size: 23px;
-      font-weight: bold;
-      line-height: 2.2;
+      text-align: center;
+      padding: 90px 60px;
+      position: relative;
+      border-top: 1px solid rgba(255, 245, 232, 0.4);
+      border-bottom: 1px solid rgba(255, 245, 232, 0.4);
     }
 
-    .message-question {
-      max-width: 700px;
-      margin: 25px auto 0;
-      color: #bdb5ab;
-      font-size: 18px;
-      line-height: 2.2;
+    .quote-box::before,
+    .quote-box::after {
+      content: "";
+      position: absolute;
+      width: 70px;
+      height: 70px;
+      border-color: rgba(255, 245, 232, 0.6);
+      border-style: solid;
     }
 
-    /* =========================
-       AUTHOR NOTE
-    ========================= */
+    .quote-box::before {
+      top: -1px;
+      right: 0;
+      border-width: 2px 2px 0 0;
+    }
+
+    .quote-box::after {
+      bottom: -1px;
+      left: 0;
+      border-width: 0 0 2px 2px;
+    }
+
+    .quote-mark {
+      color: rgba(255, 245, 232, 0.6);
+      font-family: Georgia, serif;
+      font-size: 7rem;
+      line-height: 0.4;
+      margin-bottom: 40px;
+      display: block;
+      text-shadow: 0 4px 30px rgba(60, 10, 0, 0.5);
+    }
+
+    .quote-text {
+      font-family: "Amiri", serif;
+      font-size: clamp(1.5rem, 3.2vw, 2.3rem);
+      line-height: 2.1;
+      color: #ffffff;
+      font-weight: 700;
+      font-style: italic;
+      text-shadow:
+        0 3px 25px rgba(60, 10, 0, 0.7),
+        0 0 60px rgba(255, 240, 200, 0.5);
+    }
+
+    .quote-source {
+      margin-top: 32px;
+      color: rgba(255, 245, 232, 0.95);
+      font-size: 0.86rem;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+
+    .quote-source::before {
+      content: "— ";
+      color: rgba(255, 245, 232, 0.75);
+    }
+
+    /* STRUCTURE */
+    .section-structure {
+      padding: 110px 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 85% 0%, rgba(245, 106, 28, 0.12), transparent 60%),
+        linear-gradient(180deg, var(--char-600), var(--char-700));
+      position: relative;
+    }
+
+    .section-structure .section-kicker { color: var(--fire-300); }
+    .section-structure .section-title { color: var(--fire-100); }
+    .section-structure .section-line {
+      background: linear-gradient(90deg, transparent, var(--fire-400), transparent);
+    }
+    .section-structure .section-line::before {
+      color: var(--fire-400);
+      background: var(--char-700);
+    }
+
+    .trilogy-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .trilogy-card {
+      position: relative;
+      padding: 40px 32px;
+      border-radius: 22px;
+      border: 1px solid rgba(245, 106, 28, 0.25);
+      background:
+        linear-gradient(145deg, rgba(50, 44, 39, 0.6), rgba(18, 16, 14, 0.85));
+      transition: all 0.4s var(--transition);
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .trilogy-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--fire-400), transparent);
+    }
+
+    .trilogy-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(245, 106, 28, 0.5);
+      box-shadow:
+        0 25px 55px rgba(0, 0, 0, 0.5),
+        0 0 45px rgba(245, 106, 28, 0.15);
+    }
+
+    .trilogy-ring {
+      display: inline-block;
+      padding: 6px 16px;
+      border-radius: 999px;
+      background: rgba(245, 106, 28, 0.15);
+      color: var(--fire-300);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      margin-bottom: 18px;
+    }
+
+    .trilogy-title {
+      font-family: "Amiri", serif;
+      color: var(--fire-100);
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }
+
+    .trilogy-desc {
+      color: rgba(240, 238, 236, 0.8);
+      font-size: 0.9rem;
+      line-height: 2;
+      margin-bottom: 18px;
+    }
+
+    .trilogy-climax {
+      padding-top: 18px;
+      border-top: 1px solid rgba(245, 106, 28, 0.15);
+      color: var(--fire-200);
+      font-size: 0.85rem;
+      font-weight: 500;
+      font-style: italic;
+    }
+
+    .trilogy-climax::before {
+      content: "◆ ";
+      color: var(--fire-400);
+    }
+
+    /* NOTES */
+    .section-notes {
+      padding: 110px 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 20% 0%, rgba(245, 106, 28, 0.08), transparent 60%),
+        linear-gradient(180deg, var(--cream-50), var(--cream-100));
+      position: relative;
+    }
+
+    .section-notes .section-kicker { color: var(--copper-400); }
+    .section-notes .section-title { color: var(--char-600); }
+    .section-notes .section-line {
+      background: linear-gradient(90deg, transparent, var(--fire-500), transparent);
+    }
+    .section-notes .section-line::before {
+      color: var(--fire-500);
+      background: var(--cream-100);
+    }
+
+    .notes-card {
+      max-width: 940px;
+      margin: auto;
+      padding: 50px 55px;
+      border: 1px solid rgba(184, 120, 68, 0.25);
+      border-radius: 20px;
+      background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(245, 238, 221, 0.7));
+      box-shadow:
+        0 25px 65px rgba(68, 37, 9, 0.12),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(6px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .notes-card::before {
+      content: "❖";
+      position: absolute;
+      top: 22px;
+      right: 28px;
+      color: rgba(184, 120, 68, 0.4);
+      font-size: 1.4rem;
+    }
+
+    .notes-card h3 {
+      font-family: "Amiri", serif;
+      color: var(--char-600);
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      margin-top: 24px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .notes-card h3:first-child { margin-top: 0; }
+
+    .notes-card h3::before {
+      content: "◆";
+      color: var(--copper-400);
+      font-size: 0.75rem;
+    }
+
+    .notes-card p {
+      color: var(--char-500);
+      font-size: 0.98rem;
+      line-height: 2.3;
+      text-align: justify;
+      font-weight: 400;
+    }
+
+    /* AUTHOR NOTE */
+    .section-author-note {
+      padding: 120px 0;
+      background:
+        radial-gradient(ellipse 70% 60% at 50% 30%, rgba(245, 106, 28, 0.35), transparent 60%),
+        radial-gradient(ellipse 80% 50% at 20% 100%, rgba(10, 8, 6, 0.8), transparent 60%),
+        linear-gradient(180deg, #322c27, #0a0806);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .section-author-note::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.5;
+      background-image:
+        radial-gradient(circle at 25% 30%, rgba(255, 184, 119, 0.7) 0.5px, transparent 1px),
+        radial-gradient(circle at 75% 60%, rgba(255, 245, 232, 0.5) 0.6px, transparent 1px),
+        radial-gradient(circle at 40% 85%, rgba(255, 184, 119, 0.5) 0.4px, transparent 1px);
+      background-size: 600px 600px, 800px 800px, 700px 700px;
+    }
+
+    .section-author-note .section-kicker { color: var(--fire-300); }
+    .section-author-note .section-title { color: #ffffff; }
+    .section-author-note .section-line {
+      background: linear-gradient(90deg, transparent, var(--fire-400), transparent);
+    }
+    .section-author-note .section-line::before {
+      color: var(--fire-400);
+      background: #0a0806;
+    }
 
     .author-note {
-      padding-right: 25px;
-      border-right: 3px solid #a47c39;
+      max-width: 920px;
+      margin: auto;
+      text-align: center;
     }
 
     .author-note p {
-      color: #cbc4bb;
+      color: rgba(255, 245, 232, 0.9);
+      font-size: 1.1rem;
+      font-weight: 300;
+      line-height: 2.5;
     }
 
-    /* =========================
-       STATUS
-    ========================= */
-
-    .status {
-      text-align: center;
+    .author-note .final-line {
+      margin-top: 30px;
+      font-family: "Amiri", serif;
+      font-size: 1.6rem;
+      color: var(--fire-200);
+      font-weight: 700;
+      line-height: 2;
+      text-shadow: 0 0 40px rgba(245, 106, 28, 0.5);
     }
 
-    .status-badge {
+    .author-name {
       display: inline-block;
-      padding: 12px 27px;
-      color: #d9b466;
-      background: rgba(178,132,46,.1);
-      border: 1px solid rgba(178,132,46,.3);
-      border-radius: 50px;
-      font-size: 14px;
+      margin-top: 35px;
+      color: var(--fire-200);
+      font-family: "Amiri", serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      position: relative;
+      padding-bottom: 14px;
     }
 
-    /* =========================
-       FINAL
-    ========================= */
+    .author-name::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 50%;
+      transform: translateX(50%);
+      width: 60px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--fire-400), transparent);
+    }
 
-    .final {
-      padding: 80px 20px 50px;
+    /* BACK BUTTON */
+    .back-area {
+      padding: 50px 0 60px;
       text-align: center;
+      background: linear-gradient(180deg, #0a0806, #12100e);
     }
 
-    .final-symbol {
-      color: #927139;
-      font-size: 24px;
-      margin-bottom: 25px;
+    .back-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 15px 30px;
+      border-radius: 999px;
+      border: 1px solid rgba(245, 106, 28, 0.5);
+      color: var(--fire-200);
+      background: rgba(245, 106, 28, 0.1);
+      transition: all 0.4s var(--transition);
+      font-size: 0.95rem;
+      font-weight: 500;
     }
 
-    .final p {
-      max-width: 850px;
-      margin: auto;
-      color: #d7b86f;
-      font-size: 24px;
-      font-weight: bold;
-      line-height: 2.3;
+    .back-button:hover {
+      color: #ffffff;
+      background: rgba(245, 106, 28, 0.25);
+      border-color: var(--fire-400);
+      transform: translateY(-3px);
+      box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.6),
+        0 0 40px rgba(245, 106, 28, 0.3);
     }
 
-    /* =========================
-       FOOTER
-    ========================= */
+    .back-button span:first-child {
+      transition: transform 0.3s var(--transition);
+    }
 
+    .back-button:hover span:first-child {
+      transform: translateX(-5px);
+    }
+
+    /* FOOTER */
     footer {
-      padding: 40px 20px 15px;
-      border-top: 1px solid rgba(214,173,91,.15);
-      text-align: center;
-      color: #666;
-      font-size: 13px;
-      line-height: 2.2;
+      border-top: 1px solid rgba(245, 106, 28, 0.25);
+      padding: 45px 0;
+      background: linear-gradient(180deg, #12100e, #0a0806);
+      position: relative;
     }
 
-    footer strong {
-      color: #b28d4e;
+    footer::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 15%;
+      right: 15%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(245, 106, 28, 0.6), transparent);
     }
 
-    /* =========================
-       MOBILE
-    ========================= */
-
-    @media (max-width: 850px) {
-
-      .info-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .hero {
-        padding: 50px 0 55px;
-      }
-
-      .section-box {
-        padding: 30px 25px;
-      }
-
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
     }
 
-    @media (max-width: 600px) {
+    .footer-brand {
+      font-family: "Amiri", serif;
+      color: var(--fire-300);
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
 
-      .page {
-        width: 94%;
+    .footer-copy {
+      color: var(--char-200);
+      font-size: 0.78rem;
+      font-weight: 300;
+    }
+
+    /* REVEAL */
+    .reveal {
+      opacity: 0;
+      transform: translateY(35px);
+      transition: opacity 1s var(--transition), transform 1s var(--transition);
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 1024px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+      }
+      .hero-content { text-align: center; }
+      .hero-description { margin: auto; }
+      .author, .hero-tags { justify-content: center; }
+      .cover-area { min-height: 560px; }
+      .figures-grid { grid-template-columns: repeat(2, 1fr); }
+      .themes-grid { grid-template-columns: repeat(2, 1fr); }
+      .trilogy-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .container { width: min(100% - 32px, 1180px); }
+      .topbar-inner { min-height: 68px; }
+      .brand { font-size: 1.15rem; }
+      .nav { display: none; }
+
+      .hero { padding: 75px 0 50px; }
+      .hero h1 { font-size: clamp(2.5rem, 12vw, 4rem); }
+
+      .cover-area { min-height: 480px; }
+      .cover-frame { width: min(310px, 82%); }
+      .cover-caption { font-size: 0.7rem; }
+
+      .section-about, .section-preface, .section-figures,
+      .section-themes, .section-quote, .section-structure,
+      .section-notes, .section-author-note {
+        padding: 70px 0;
       }
 
-      .topbar {
-        padding: 20px 0;
+      .intro-card, .preface-card, .notes-card {
+        padding: 32px 26px;
+        border-radius: 16px;
       }
 
-      .category {
-        display: none;
-      }
+      .preface-wrapper::before { right: -10px; }
 
-      .hero h1 {
-        font-size: 38px;
-      }
-
-      .hero-subtitle {
-        font-size: 16px;
-      }
-
-      .poster-area {
-        margin-bottom: 55px;
-      }
-
-      .section-box {
-        padding: 25px 19px;
-        border-radius: 15px;
-      }
-
-      .section-heading h2 {
-        font-size: 23px;
-      }
-
-      .section-box p {
-        font-size: 16px;
-        line-height: 2.2;
+      .preface-card p {
         text-align: right;
+        font-size: 0.95rem;
+        line-height: 2.35;
       }
 
-      .intro-text {
-        font-size: 18px !important;
+      .act-block {
+        padding: 24px 22px;
       }
 
-      .info-grid {
-        grid-template-columns: 1fr;
+      .act-title {
+        font-size: 1.25rem;
       }
 
-      .story-part {
-        padding: 25px 22px 25px 18px;
-      }
+      .figures-grid { grid-template-columns: 1fr; }
+      .themes-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+      .theme-card { min-height: 150px; padding: 24px 18px; }
 
-      .story-part h3 {
-        font-size: 20px;
-      }
+      .quote-box { padding: 65px 25px; }
+      .quote-mark { font-size: 5rem; }
+      .quote-box::before, .quote-box::after { width: 50px; height: 50px; }
 
-      .story-part p {
-        font-size: 15px;
-      }
+      .quick-inner { border-radius: 18px; padding: 12px; }
+      .quick-inner a { font-size: 0.75rem; padding: 8px 12px; }
 
-      .story-intro p {
-        font-size: 17px;
-      }
+      .footer-inner { justify-content: center; text-align: center; }
+    }
 
-      .quote {
-        padding: 30px 18px;
-      }
+    @media (max-width: 440px) {
+      .themes-grid { grid-template-columns: 1fr; }
+      .hero-tags { gap: 6px; }
+      .tag { font-size: 0.7rem; padding: 5px 10px; }
+      .quote-text { font-size: 1.35rem; }
+      .quote-mark { font-size: 4rem; }
+      .section-title { font-size: 1.8rem; }
+      .act-block { padding: 20px 18px; }
+    }
 
-      .quote p {
-        font-size: 19px;
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        transition: none !important;
+        animation: none !important;
       }
-
-      .moment {
-        padding: 40px 22px;
-      }
-
-      .moment h2 {
-        font-size: 28px;
-      }
-
-      .moment p {
-        font-size: 16px;
-      }
-
-      .theme-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .message {
-        padding: 45px 20px;
-      }
-
-      .message-main {
-        font-size: 19px;
-      }
-
-      .message-question {
-        font-size: 16px;
-      }
-
-      .final {
-        padding-top: 55px;
-      }
-
-      .final p {
-        font-size: 19px;
-      }
-
+      .reveal { opacity: 1; transform: none; }
     }
 
   </style>
@@ -697,701 +1581,590 @@
 
 <body>
 
-  <main class="page">
+  <div class="grain" aria-hidden="true"></div>
 
-    <div class="topbar">
-
-      <a href="../index.html" class="back">
-        ← بازگشت به صفحه اصلی
-      </a>
-
-      <span class="category">
-        فیلمنامه بلند
-      </span>
-
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="../index.html">حسین محمدی امیرزا</a>
+      <nav class="nav" aria-label="منوی اصلی">
+        <a href="../index.html">خانه</a>
+        <a href="../blog.html">وبلاگ</a>
+        <a href="#synopsis">سیناپس</a>
+        <a href="#characters">شخصیت‌ها</a>
+        <a href="#themes">درون‌مایه‌ها</a>
+        <a href="#structure">سه‌گانه</a>
+      </nav>
     </div>
+  </header>
 
+
+  <main>
 
     <!-- HERO -->
-
     <section class="hero">
+      <div class="container hero-grid">
 
-      <div class="hero-label">
-        فیلمنامه بلند | تاریخی ـ حماسی ـ انسانی
+        <div class="hero-content">
+          <div class="eyebrow">حماسه · تاریخ · سه‌گانه</div>
+          <h1>میراث آتش</h1>
+          <div class="hero-subtitle">حلقه‌ی اول از سه‌گانه</div>
+          <p class="hero-description">
+            با سقوط آخرین دژ پارسیان به دست سپاه اسکندر مقدونی، فرمانده‌ی
+            افسانه‌ای ایران، هورام شیردل، آخرین شعله‌ی تمدن پارسی را به
+            پسر دانشمندش کهزاد و شاگرد جنگجویش ماهانا می‌سپارد. سال‌ها بعد،
+            کهزاد و ماهانا اقوام پارسی را متحد می‌کنند و با ژنرال لئون
+            روبرو می‌شوند — و آن اخگر را به آتشفشانی خاموش‌ناشدنی بدل
+            می‌کنند.
+          </p>
+          <div class="author">
+            <span class="author-line"></span>
+            <span>نوشتهٔ حسین محمدی امیرزا</span>
+          </div>
+          <div class="hero-tags">
+            <span class="tag">حماسه تاریخی</span>
+            <span class="tag">سه‌گانه</span>
+            <span class="tag">ایران باستان</span>
+            <span class="tag">نوشیجان</span>
+          </div>
+        </div>
+
+        <div class="cover-area">
+          <div class="cover-glow"></div>
+          <div class="cover-frame">
+            <div class="cover-inner">
+              <img
+                src="../covers/miras-atesh.jpg"
+                alt="پوستر میراث آتش"
+                loading="eager"
+                onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'padding:80px 20px; text-align:center; color:var(--fire-200); font-family:Amiri,serif; font-size:1.5rem;\'>میراث آتش</div>';"
+              >
+            </div>
+            <div class="cover-caption">میراث آتش · حلقه‌ی اول</div>
+          </div>
+        </div>
+
       </div>
-
-      <h1>
-        آخرین نبرد سورنا
-      </h1>
-
-      <div class="hero-line"></div>
-
-      <p class="hero-subtitle">
-        روایتی درباره مردی که پس از پیروزی در بزرگ‌ترین جنگ زندگی‌اش،
-        درمی‌یابد که ارزشمندترین پیروزی، نه در ویران کردن،
-        بلکه در ساختن است.
-      </p>
-
-      <div class="hero-author">
-        نوشته‌ی <strong>حسین محمدی امیرزا</strong>
-      </div>
-
     </section>
 
 
-    <!-- POSTER -->
-
-    <div class="poster-area">
-
-      <div class="poster-frame">
-
-        <!--
-          این خط را با همان مسیر درست پوستر فعلی خودت قرار بده.
-          فقط مقدار src را تغییر بده.
-        -->
-
-        <img
-          src="مسیر-فعلی-پوستر-سورنا"
-          alt="پوستر فیلمنامه آخرین نبرد سورنا"
-          loading="eager"
-        >
-
+    <!-- QUICK NAV -->
+    <div class="quick-nav">
+      <div class="container">
+        <nav class="quick-inner reveal" aria-label="دسترسی سریع">
+          <a href="#about">درباره اثر</a>
+          <a href="#synopsis">سیناپس</a>
+          <a href="#characters">شخصیت‌ها</a>
+          <a href="#themes">درون‌مایه‌ها</a>
+          <a href="#quote">نقل‌قول</a>
+          <a href="#structure">سه‌گانه</a>
+          <a href="#notes">یادداشت تاریخی</a>
+        </nav>
       </div>
-
     </div>
 
 
-    <!-- INTRO -->
-
-    <section class="section">
-
-      <div class="section-box">
-
-        <div class="section-heading">
-          <span class="number">۰۱</span>
-          <h2>معرفی اثر</h2>
+    <!-- ABOUT -->
+    <section class="section-about" id="about">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div class="section-kicker">ABOUT THE BOOK</div>
+          <h2 class="section-title">دربارهٔ این اثر</h2>
+          <div class="section-line"></div>
         </div>
 
-        <p class="intro-text">
-          «آخرین نبرد سورنا» روایتی تاریخی، حماسی و انسانی درباره
-          <strong>سورنا</strong>، سردار جوان و نامدار اشکانی است؛
-          اما داستان او تنها داستان یک سردار و یک جنگ نیست.
-        </p>
-
-        <p>
-          داستان از جایی آغاز می‌شود که سورنا پس از پیروزی بزرگ در کارهه،
-          در میان سپرهای شکسته و پیکرهای بی‌جان، با حقیقتی روبه‌رو می‌شود
-          که مسیر زندگی او را تغییر می‌دهد.
-        </p>
-
-        <p>
-          او درمی‌یابد که اگر پیروزی به بهای از دست رفتن عزیزان و
-          ویرانی سرزمین تمام شود، شاید چیزی جز شکستی پنهان نباشد.
-        </p>
-
+        <div class="intro-card reveal">
+          <p>
+            «میراث آتش» داستان ملتی است که اجازه نداد آتش تمدنش خاموش شود.
+            این روایت، فصل خاموشی از تاریخ ایران را از دل خاک‌های تپه‌ی
+            نوشیجان ملایر برمی‌آورد: پایداری دلیرانه‌ی گروه دهوپادان که
+            رو در روی امپراتوری اسکندر ایستادند.
+          </p>
+          <p>
+            این داستان، داستان آتش است — آتشی که هرگز خاموش نمی‌شود. از
+            سقوط نوشیجان تا تبعید در دره‌ی جوزان، از اتحاد قبایل پراکنده
+            تا شکستن چرخه‌ی انتقام، «میراث آتش» روایتی است از پایداری،
+            خرد و پیروزی نور بر خون.
+          </p>
+          <p>
+            این فیلم‌نامه، حلقه‌ی اول از سه‌گانه‌ای است که در آن نبرد میان
+            دو تاریخ روایت می‌شود: تاریخی که با خون نوشته می‌شود، و
+            تاریخی که منتظر است با نور نوشته شود و تمدنی را روشن کند.
+          </p>
+        </div>
       </div>
-
-    </section>
-
-
-    <!-- INFO -->
-
-    <section class="section">
-
-      <div class="section-box">
-
-        <div class="section-heading">
-          <span class="number">۰۲</span>
-          <h2>مشخصات اثر</h2>
-        </div>
-
-        <div class="info-grid">
-
-          <div class="info-card">
-            <small>عنوان</small>
-            <strong>آخرین نبرد سورنا</strong>
-          </div>
-
-          <div class="info-card">
-            <small>نوع اثر</small>
-            <strong>فیلمنامه بلند</strong>
-          </div>
-
-          <div class="info-card">
-            <small>نویسنده</small>
-            <strong>حسین محمدی امیرزا</strong>
-          </div>
-
-          <div class="info-card">
-            <small>زبان</small>
-            <strong>فارسی</strong>
-          </div>
-
-          <div class="info-card">
-            <small>ژانر</small>
-            <strong>تاریخی / حماسی / انسانی</strong>
-          </div>
-
-          <div class="info-card">
-            <small>دوره تاریخی</small>
-            <strong>ایران اشکانی</strong>
-          </div>
-
-          <div class="info-card">
-            <small>مضمون</small>
-            <strong>صلح و آبادانی</strong>
-          </div>
-
-          <div class="info-card">
-            <small>قالب</small>
-            <strong>فیلمنامه سینمایی</strong>
-          </div>
-
-        </div>
-
-      </div>
-
     </section>
 
 
     <!-- SYNOPSIS -->
-
-    <section class="section">
-
-      <div class="section-box">
-
-        <div class="section-heading">
-          <span class="number">۰۳</span>
-          <h2>سیناپس</h2>
+    <section class="section-preface" id="synopsis">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div class="section-kicker">SYNOPSIS</div>
+          <h2 class="section-title">سیناپس</h2>
+          <div class="section-line"></div>
         </div>
 
+        <div class="preface-wrapper reveal">
+          <article class="preface-card">
 
-        <div class="story-intro">
+            <div class="act-block">
+              <h3 class="act-title">پرده‌ی اول: سقوط نوشیجان</h3>
+              <div class="act-time">۳۳۰ پیش از میلاد، واپسین روزهای امپراتوری هخامنشی</div>
 
-          <p>
-            در دشت سوزان <strong>کارهه</strong>، باد هنوز بوی خون می‌دهد.
-            سورنا، سردار جوان و نامدار اشکانی، سپاه عظیم روم به فرماندهی
-            کراسوس را در هم کوبیده است؛ اما بزرگ‌ترین پیروزی او،
-            برای نخستین‌بار، طعم تلخ شکست دارد.
-          </p>
+              <p>
+                کوه‌های بادخیز اطراف ملایر، در دل خود دژی شکوهمند را پنهان کرده‌اند: <strong>نوشیجان</strong>. این دژ، آخرین سنگر آزادی ایران است. سپاه اسکندر مقدونی، با آهن و آتش یونانی، دیوارهای آن را می‌کوبد. در میان ویرانی، <strong>هورام شیردل</strong> — فرمانده‌ی افسانه‌ای ایران — در آستانه‌ی شهادت ایستاده است.
+              </p>
 
+              <p>
+                جهان پیرامونش در آتش می‌سوزد. اما هورام دو امانت گرانبها دارد که نباید به دست دشمن بیفتد:
+              </p>
+
+              <ul>
+                <li><strong>شمشیر شیرنشان</strong>، نماد پایداری و آزادگی پارسیان</li>
+                <li><strong>خاکستر آتش ابدی</strong> و <strong>طومارهای اوستا</strong>، میراث معنوی و دانش تمدن پارسی</li>
+              </ul>
+
+              <p>
+                هورام در واپسین نفس‌های خود، این امانت‌ها را به دو تن می‌سپارد:
+              </p>
+
+              <ul>
+                <li><strong>کهزاد</strong>، پسر دانشمندش، که خرد و دانش را حمل می‌کند</li>
+                <li><strong>ماهانا</strong>، شاگرد جنگجویش، که تیغ و بی‌باکی را به ارث می‌برد</li>
+              </ul>
+
+              <p>
+                سپس هورام در برابر چشمان آن دو، جان به جان‌آفرین تسلیم می‌کند. نوشیجان سقوط می‌کند. اما آتش تمدن پارسی، در دستان دو جوان، از خاکستر برمی‌خیزد.
+              </p>
+            </div>
+
+            <div class="act-block">
+              <h3 class="act-title">پرده‌ی دوم: تبعید و ریشه‌دوانی</h3>
+
+              <p>
+                کهزاد و ماهانا از <strong>قنات‌های زیرزمینی</strong> نوشیجان می‌گریزند. سپاه اسکندر در تعقیب آن‌هاست. سرانجام، در <strong>دره‌ی پنهان جوزان</strong>، پناه می‌گیرند — سرزمینی دورافتاده که کوه‌ها آن را در آغوش گرفته‌اند.
+              </p>
+
+              <p>
+                آنجا، در تبعید و تنگدستی، بذرهای <strong>«دهوپادان»</strong> را می‌کارند. دهوپادان جامعه‌ای است نوپا، مانند نهالی که ریشه می‌دواند. در انضباطی خاموش، با پشتکاری بی‌صدای، بنیان جامعه‌ای نو ساخته می‌شود:
+              </p>
+
+              <ul>
+                <li>کشاورزی بر پایه‌ی قنات‌ها</li>
+                <li>آموزش کودکان بر اساس طومارهای اوستا</li>
+                <li>آموزش نظامی بر اساس شمشیر شیرنشان</li>
+                <li>پرستش آتش ابدی، به‌عنوان نماد پایداری</li>
+              </ul>
+
+              <p>
+                سال‌ها می‌گذرد. کهزاد و ماهانا با یکدیگر ازدواج می‌کنند. از پیوند آن‌ها دو پسر به دنیا می‌آید:
+              </p>
+
+              <ul>
+                <li><strong>آرش</strong>، که تیغه‌ی بی‌باک مادر را به ارث برده است</li>
+                <li><strong>شیرزاد</strong>، که خردمندی شکست‌ناپذیر پدر را در وجودش دارد</li>
+              </ul>
+
+              <p>
+                این دو کودک، نقطه‌ی تلاقی دو جهان‌اند: جنگ و خرد. شمشیر و دانش. آتش و خاکستر.
+              </p>
+            </div>
+
+            <div class="act-block">
+              <h3 class="act-title">پرده‌ی سوم: سایه‌ی امپراتوری</h3>
+              <div class="act-time">حدود بیست سال بعد</div>
+
+              <p>
+                در سراسر سرزمین ایران، امپراتوری یونانی سایه‌ی خود را افکنده است. منطقه‌ی <strong>اکباتان</strong> (همدان) و <strong>نوشیجان</strong> ملایر، زیر اراده‌ی آهنین <strong>ژنرال لئون</strong> در حال خفه‌شدن است.
+              </p>
+
+              <p>
+                لئون، فرمانده‌ای بیرحم و کارآزموده، باور دارد داستان پارس باید به دست او پایان یابد. پدرش در نبردی با پارسیان کشته شده است. انتقام، خون او را به جوش می‌آورد. او چنگال‌هایش را به گلوی ایرانیان می‌فشارد:
+              </p>
+
+              <ul>
+                <li>مالیات‌های سنگین</li>
+                <li>اعدام‌های نمایشی</li>
+                <li>تخریب آتشکده‌ها</li>
+                <li>ممنوعیت زبان و خط پارسی</li>
+              </ul>
+
+              <p>
+                دهوپادان در دره‌ی جوزان، زیر سایه‌ی تهدید لئون، در خفا زندگی می‌کند. اما آرش و شیرزاد، که اکنون رهبرانی جوان، شجاع و زیرک هستند، تصمیم می‌گیرند دیگر سکوت نکنند.
+              </p>
+            </div>
+
+            <div class="act-block">
+              <h3 class="act-title">پرده‌ی چهارم: اتحاد</h3>
+
+              <p>
+                آرش و شیرزاد مأموریت دشواری را آغاز می‌کنند: <strong>متحد کردن قبایل پراکنده و رقیب</strong>.
+              </p>
+
+              <p>
+                این قبایل — <strong>کاسی‌ها</strong>، <strong>مادها</strong>، <strong>پارسی‌ها</strong>، <strong>الامی‌ها</strong> و <strong>سکاها</strong> — هر کدام زخم‌ها، شورش‌ها و غرور باستانی خود را با خود حمل می‌کنند. سال‌هاست که به یکدیگر بی‌اعتمادند. خون‌هایی که در گذشته ریخته شده، فراموش نشده است.
+              </p>
+
+              <p>
+                آرش و شیرزاد با چالش‌های گوناگونی روبرو می‌شوند:
+              </p>
+
+              <ul>
+                <li><strong>بی‌اعتمادی:</strong> چرا باید به دو جوان از یک جامعه‌ی کوچک اعتماد کنیم؟</li>
+                <li><strong>رقابت:</strong> چه کسی رهبر اتحاد خواهد بود؟</li>
+                <li><strong>خیانت:</strong> یکی از قبایل، مخفیانه با لئون ارتباط دارد</li>
+                <li><strong>ترس:</strong> بسیاری از جنگیدن می‌ترسند. اسکندر شکست‌ناپذیر به نظر می‌رسد</li>
+              </ul>
+
+              <p>
+                آرش، با تیغ و بی‌باکی، قبایل را به چالش می‌کشد. شیرزاد، با خرد و دانش طومارهای اوستا، به آن‌ها نشان می‌دهد که اتحاد تنها راه بقاست.
+              </p>
+
+              <div class="emphasis-line">
+                اتحاد، ابتدا نجوا می‌شود.<br>
+                سپس غرّش.<br>
+                و آنگاه توفان.
+              </div>
+            </div>
+
+            <div class="act-block">
+              <h3 class="act-title">پرده‌ی پنجم: روز حساب</h3>
+
+              <p>
+                رویارویی نهایی در همان صحن حیاطی فوران می‌کند که هورام جان خود را فدای میهن کرد: <strong>نوشیجان</strong>.
+              </p>
+
+              <p>
+                آرش و شیرزاد، با سپاهی از قبایل متحد، به دژ نزدیک می‌شوند. لئون، که از اتحاد قبایل آگاه شده، سپاه خود را آماده کرده است. نبردی سرشار از خشم و خاطرات آزاردهنده آغاز می‌شود.
+              </p>
+
+              <p>
+                آرش، با انگیزه‌ی انتقام خون هورام و سال‌ها ظلم، رو در روی لئون قرار می‌گیرد. لئون نیز با انگیزه‌ی انتقام پدرش، شمشیر می‌کشد. این دو، نماینده‌ی دو تاریخ‌اند:
+              </p>
+
+              <ul>
+                <li>یکی نوشته شدن با <strong>خون</strong></li>
+                <li>دیگری که منتظر است تا با <strong>نور</strong> نوشته شود و تمدنی را روشن کند</li>
+              </ul>
+
+              <p>
+                آرش بر لبه‌ی دو تاریخ ایستاده است. در لحظه‌ی حساس نبرد، او می‌تواند لئون را بکشد و انتقام بگیرد. اما با نگاهی به قبایل — به مردمی که سال‌ها منتظر عدالت بوده‌اند — و با دانش طومارهایی که از پدرش آموخته، راهی را برمی‌گزید که <strong>چرخه‌ی انتقام را می‌شکند</strong>.
+              </p>
+
+              <p>
+                او لئون را شکست می‌دهد، اما او را نمی‌کشد. به جای انتقام، <strong>حق مردم</strong> را بازمی‌ستاند:
+              </p>
+
+              <ul>
+                <li>دژ نوشیجان آزاد می‌شود</li>
+                <li>آتشکده‌ها دوباره روشن می‌شوند</li>
+                <li>زبان و خط پارسی آزاد می‌شود</li>
+                <li>قبایل، زیر یک پرچم متحد می‌شوند</li>
+              </ul>
+
+              <p>
+                آتش اتحاد دوباره افروخته می‌شود. فرهنگ و تمدن پارسی، بار دیگر بازسازی و زنده می‌شود.
+              </p>
+            </div>
+
+            <div class="act-block">
+              <h3 class="act-title">پرده‌ی ششم: آتش ابدی</h3>
+
+              <p>
+                در پایان، آرش و شیرزاد در برابر <strong>آتش ابدی</strong> می‌ایستند — همان آتشی که هورام شیردل از نوشیجان نجات داد. آتش، نماد میراثی است که از نسلی به نسل دیگر منتقل شده است.
+              </p>
+
+              <p>
+                آرش شمشیر شیرنشان را به دست می‌گیرد. شیرزاد طومارهای اوستا را در آغوش می‌فشارد. آن‌ها می‌دانند که این پایان راه نیست. این تنها <strong>حلقه‌ی اول</strong> از سه‌گانه است.
+              </p>
+
+              <div class="emphasis-line">
+                زیرا هنوز اسکندر زنده است.<br>
+                هنوز امپراتوری یونانی در اوج قدرت است.<br>
+                و هنوز آتش — این آتش ابدی — باید از توفان‌های آینده عبور کند.
+              </div>
+            </div>
+
+          </article>
         </div>
-
-
-        <div class="story-part">
-
-          <div class="story-part-number">آغاز</div>
-
-          <h3>کارهه؛ پیروزی‌ای با طعم شکست</h3>
-
-          <p>
-            در میان کشته‌شدگان، پیکر <strong>آرش</strong>،
-            برادر کوچک سورنا، قرار دارد؛ جوانی که سورنا خود تیراندازی
-            و فنون جنگ را به او آموخته بود.
-          </p>
-
-          <p>
-            تکه‌ای از پارچه خونین لباس آرش، تنها یادگاری است که سورنا
-            از میدان نبرد با خود می‌برد.
-          </p>
-
-        </div>
-
-
-        <div class="story-part">
-
-          <div class="story-part-number">تحول</div>
-
-          <h3>بازگشت به سیستان</h3>
-
-          <p>
-            سورنا به زادگاهش، <strong>سیستان</strong>، بازمی‌گردد؛
-            اما دیگر آن سرداری نیست که در اندیشه فتح سرزمین‌های تازه باشد.
-          </p>
-
-          <p>
-            خاطره پدر و آخرین سفارش او در ذهن سورنا زنده می‌شود:
-          </p>
-
-        </div>
-
-
-        <div class="quote">
-
-          <p>
-            «از خاک دفاع کن؛ اما بدان که خاک فقط زمین نیست،
-            خاک، زندگیِ روی آن است.»
-          </p>
-
-        </div>
-
-
-        <div class="story-part">
-
-          <div class="story-part-number">آغاز یک راه تازه</div>
-
-          <h3>سپاه خورشید</h3>
-
-          <p>
-            سورنا تصمیم می‌گیرد سربازانش را نه برای جنگ‌های تازه،
-            بلکه برای ساختن آینده‌ای تازه آماده کند.
-          </p>
-
-          <p>
-            شمشیرها کنار گذاشته می‌شوند و <strong>بیل، کلنگ و داس</strong>
-            جای آنها را می‌گیرند.
-          </p>
-
-          <p>
-            او «سپاه خورشید» را بنیان می‌گذارد؛ سپاهی که این بار
-            نه برای ویران کردن، بلکه برای آباد کردن می‌جنگد.
-          </p>
-
-        </div>
-
-
-        <div class="story-part">
-
-          <div class="story-part-number">بحران</div>
-
-          <h3>مهران و بازگشت اندیشه جنگ</h3>
-
-          <p>
-            <strong>مهران</strong>، سیاستمداری قدرتمند و تشنه قدرت،
-            محبوبیت روزافزون سورنا را خطری برای موقعیت خود می‌بیند.
-          </p>
-
-          <p>
-            با شایعه‌پراکنی، دسیسه و آتش زدن انبارهای آذوقه،
-            او تلاش می‌کند مردم را علیه سپاه خورشید بشوراند.
-          </p>
-
-          <p>
-            از سوی دیگر، <strong>رستم</strong>، یکی از کهنه‌سربازان
-            وفادار سورنا، نمی‌تواند با زندگی تازه کنار بیاید.
-          </p>
-
-        </div>
-
-
-        <div class="moment">
-
-          <div class="moment-label">
-            دو نگاه در برابر یکدیگر
-          </div>
-
-          <h2>شمشیر یا بیل؟</h2>
-
-          <p>
-            سیستان آرام‌آرام به دو جبهه تقسیم می‌شود؛
-            آنان که امنیت را در شمشیر می‌بینند
-            و آنان که آینده را در ساختن.
-          </p>
-
-        </div>
-
-
-        <div class="story-part">
-
-          <div class="story-part-number">تهدید</div>
-
-          <h3>سپاه مهراب</h3>
-
-          <p>
-            مهران پنهانی با نیروهای مهاجم شرقی ارتباط برقرار می‌کند.
-            خبر نزدیک شدن سپاه مهاجم به رهبری
-            <strong>مهراب</strong>، سیستان را در آستانه بحرانی بزرگ قرار می‌دهد.
-          </p>
-
-          <p>
-            شورای بزرگان تشکیل می‌شود. رستم فریاد می‌زند:
-            <strong>«جنگ!»</strong>
-            و مهران پیشنهاد تسلیم می‌دهد.
-          </p>
-
-        </div>
-
-
-        <div class="moment">
-
-          <div class="moment-label">
-            انتخاب سورنا
-          </div>
-
-          <h2>قدرت آرامش</h2>
-
-          <p>
-            سورنا راه سومی را انتخاب می‌کند؛ راهی که هیچ‌کس انتظارش را ندارد.
-            او مردم سیستان را به سوی مرزها می‌برد؛ نه با سپاهی از شمشیر،
-            بلکه با مردان و زنان و جوانانی که ابزار کار، دانه گندم،
-            آب و خاک سرزمینشان را در دست دارند.
-          </p>
-
-        </div>
-
-
-        <div class="story-part">
-
-          <div class="story-part-number">اوج داستان</div>
-
-          <h3>رویارویی با مهراب</h3>
-
-          <p>
-            سپاه عظیم دشمن در افق ظاهر می‌شود. در برابر آنان،
-            مردمی ایستاده‌اند که برای کشتن نیامده‌اند.
-          </p>
-
-          <p>
-            سورنا، بی‌سلاح، از میان مردم عبور می‌کند و به سوی مهراب می‌رود.
-            سپس مشتی از خاک حاصلخیز سیستان را در دست او می‌گذارد.
-          </p>
-
-        </div>
-
-
-        <div class="quote">
-
-          <p>
-            «این خاک را به فرزندانت نشان بده.
-            اگر بتوانی در سرزمین خودت چنین خاکی را آباد کنی،
-            دیگر نیازی به خاک دیگران نخواهی داشت.»
-          </p>
-
-        </div>
-
-
-        <div class="story-part">
-
-          <div class="story-part-number">پایان نبرد</div>
-
-          <h3>پیروزی بدون یک قطره خون</h3>
-
-          <p>
-            مهراب که انتظار تهدید و جنگ دارد، در برابر این سخن خاموش می‌شود.
-            او به مردمی نگاه می‌کند که قدرت واقعی خود را در اتحاد و
-            اراده ساختن یافته‌اند.
-          </p>
-
-          <p>
-            مهراب اسب خود را برمی‌گرداند و فرمان عقب‌نشینی می‌دهد.
-          </p>
-
-        </div>
-
-
-        <div class="quote">
-
-          <p>
-            هیچ شمشیری از نیام بیرون نمی‌آید.
-            <br>
-            سیستان بدون یک قطره خون پیروز می‌شود.
-          </p>
-
-        </div>
-
-
-        <div class="story-part">
-
-          <div class="story-part-number">آخرین نبرد</div>
-
-          <h3>دشمن واقعی سورنا</h3>
-
-          <p>
-            پیروزی بزرگ‌تر در درون سورنا اتفاق افتاده است.
-            او سرانجام توانسته بزرگ‌ترین دشمن خود را شکست دهد:
-            <strong>اندیشه جنگ در وجود خویش.</strong>
-          </p>
-
-          <p>
-            شمشیرهای کهنه در کوره‌ها ذوب می‌شوند و آهن آنها به
-            بیل، داس و ابزار آبادانی تبدیل می‌شود.
-          </p>
-
-        </div>
-
-
-        <div class="story-part">
-
-          <div class="story-part-number">سال‌ها بعد</div>
-
-          <h3>میراث سورنا</h3>
-
-          <p>
-            سال‌ها می‌گذرد. سیستان دیگر همان سرزمین تشنه و زخمی گذشته نیست.
-            زمین‌ها سبز شده‌اند، جوی‌های آب جاری‌اند، روستاها آباد شده‌اند
-            و کودکان در مدرسه‌ها درس می‌خوانند.
-          </p>
-
-          <p>
-            میراث سورنا دیگر یک شمشیر یا یک پیروزی نظامی نیست؛
-            <strong>میراث او اندیشه ساختن است.</strong>
-          </p>
-
-        </div>
-
       </div>
-
     </section>
 
 
-    <!-- FINAL IMAGE -->
-
-    <section class="section">
-
-      <div class="moment">
-
-        <div class="moment-label">
-          تصویر پایانی
+    <!-- CHARACTERS -->
+    <section class="section-figures" id="characters">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div class="section-kicker">CHARACTERS</div>
+          <h2 class="section-title">شخصیت‌های اصلی</h2>
+          <div class="section-line"></div>
         </div>
 
-        <h2>سورنا، بدون شمشیر</h2>
-
-        <p>
-          در میدان مرکزی شهر، تندیسی از سورنا برپا می‌شود؛
-          نه با شمشیر در دست.
-        </p>
-
-        <p>
-          در یک دست او <strong>بیل</strong> و در دست دیگرش
-          <strong>شاخه‌ای از زیتون</strong> است.
-        </p>
-
-        <p>
-          نسل جوان در کنار تندیس ایستاده و داستان او را
-          برای فرزندان خود بازگو می‌کند.
-        </p>
-
+        <div class="figures-grid">
+          <article class="figure-card reveal">
+            <div class="figure-number">۰۱</div>
+            <h3 class="figure-name">هورام شیردل</h3>
+            <div class="figure-role">فرمانده‌ی افسانه‌ای ایران</div>
+            <p class="figure-text">
+              شجاع، فداکار و الهام‌بخش. از جنگجوی شکست‌خورده به میراث‌دار تمدن پارسی.
+            </p>
+          </article>
+          <article class="figure-card reveal">
+            <div class="figure-number">۰۲</div>
+            <h3 class="figure-name">کهزاد</h3>
+            <div class="figure-role">پسر دانشمند هورام</div>
+            <p class="figure-text">
+              خردمند، صبور و آرام. از شاگرد به معلم، از پناهنده به بنیان‌گذار دهوپادان.
+            </p>
+          </article>
+          <article class="figure-card reveal">
+            <div class="figure-number">۰۳</div>
+            <h3 class="figure-name">ماهانا</h3>
+            <div class="figure-role">شاگرد جنگجوی هورام</div>
+            <p class="figure-text">
+              بی‌باک، تیزچنگ و وفادار. از جنگجوی انتقام‌جو به مادر و رهبر.
+            </p>
+          </article>
+          <article class="figure-card reveal">
+            <div class="figure-number">۰۴</div>
+            <h3 class="figure-name">آرش</h3>
+            <div class="figure-role">پسر کهزاد و ماهانا</div>
+            <p class="figure-text">
+              شجاع، جوان و زیرک. از انتقام‌جو به رهبری که چرخه‌ی خون را می‌شکند.
+            </p>
+          </article>
+          <article class="figure-card reveal">
+            <div class="figure-number">۰۵</div>
+            <h3 class="figure-name">شیرزاد</h3>
+            <div class="figure-role">پسر کهزاد و ماهانا</div>
+            <p class="figure-text">
+              خردمند، آرام و استراتژیست. از دانش‌آموز به معمار اتحاد قبایل.
+            </p>
+          </article>
+          <article class="figure-card reveal">
+            <div class="figure-number">۰۶</div>
+            <h3 class="figure-name">ژنرال لئون</h3>
+            <div class="figure-role">فرمانده‌ی یونانی</div>
+            <p class="figure-text">
+              بیرحم، کارآزموده و زخم‌خورده. از انتقام‌جو به آنتاگونیست تراژیک.
+            </p>
+          </article>
+        </div>
       </div>
-
     </section>
 
 
     <!-- THEMES -->
-
-    <section class="section">
-
-      <div class="section-box">
-
-        <div class="section-heading">
-          <span class="number">۰۴</span>
-          <h2>درونمایه اثر</h2>
+    <section class="section-themes" id="themes">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div class="section-kicker">THEMES</div>
+          <h2 class="section-title">درون‌مایه‌های اصلی</h2>
+          <div class="section-line"></div>
         </div>
 
-        <div class="theme-grid">
-
-          <div class="theme">
-            پیروزی واقعی در برابر پیروزی نظامی
+        <div class="themes-grid">
+          <div class="theme-card reveal">
+            <div class="theme-symbol">🔥</div>
+            <div class="theme-title">میراث در برابر نابودی</div>
           </div>
-
-          <div class="theme">
-            عبور از چرخه بی‌پایان جنگ و انتقام
+          <div class="theme-card reveal">
+            <div class="theme-symbol">⚔</div>
+            <div class="theme-title">اتحاد در برابر تفرقه</div>
           </div>
-
-          <div class="theme">
-            پیوند انسان با خاک و سرزمین
+          <div class="theme-card reveal">
+            <div class="theme-symbol">✦</div>
+            <div class="theme-title">خرد در برابر انتقام</div>
           </div>
-
-          <div class="theme">
-            آبادانی به عنوان شکل دیگری از دفاع
+          <div class="theme-card reveal">
+            <div class="theme-symbol">❖</div>
+            <div class="theme-title">هویت در برابر فراموشی</div>
           </div>
-
-          <div class="theme">
-            فداکاری و معنای واقعی رهبری
+          <div class="theme-card reveal">
+            <div class="theme-symbol">☾</div>
+            <div class="theme-title">پدران و پسران</div>
           </div>
-
-          <div class="theme">
-            اتحاد مردم در برابر تهدید
+          <div class="theme-card reveal">
+            <div class="theme-symbol">🔥</div>
+            <div class="theme-title">پایداری و امید</div>
           </div>
-
-          <div class="theme">
-            غلبه انسان بر خشم و غرور
+          <div class="theme-card reveal">
+            <div class="theme-symbol">⚔</div>
+            <div class="theme-title">شکستن چرخه‌ی خون</div>
           </div>
-
-          <div class="theme">
-            امید و ساختن آینده پس از ویرانی
+          <div class="theme-card reveal">
+            <div class="theme-symbol">✦</div>
+            <div class="theme-title">نور در برابر تاریکی</div>
           </div>
-
         </div>
-
       </div>
-
     </section>
 
 
-    <!-- FEATURES -->
-
-    <section class="section">
-
-      <div class="section-box">
-
-        <div class="section-heading">
-          <span class="number">۰۵</span>
-          <h2>ویژگی‌های اثر</h2>
+    <!-- QUOTE -->
+    <section class="section-quote" id="quote">
+      <div class="container">
+        <div class="quote-box reveal">
+          <div class="quote-mark">“</div>
+          <div class="quote-text">
+            یکی نوشته شدن با خون،<br>
+            دیگری که منتظر است<br>
+            تا با نور نوشته شود<br>
+            و تمدنی را روشن کند.
+          </div>
+          <div class="quote-source">از سیناپس «میراث آتش»</div>
         </div>
-
-        <div class="feature-list">
-
-          <div class="feature">
-            <h3>قهرمانی متفاوت</h3>
-            <p>
-              سورنا تنها یک سردار پیروز نیست؛ تحول درونی او
-              هسته اصلی داستان را شکل می‌دهد.
-            </p>
-          </div>
-
-          <div class="feature">
-            <h3>تقابل شمشیر و سازندگی</h3>
-            <p>
-              داستان دو نگاه به قدرت را در برابر یکدیگر قرار می‌دهد:
-              قدرت برای ویران کردن و قدرت برای ساختن.
-            </p>
-          </div>
-
-          <div class="feature">
-            <h3>فضای تاریخی و حماسی</h3>
-            <p>
-              داستان در بستر ایران اشکانی و در فضایی سرشار از
-              سیاست، جنگ، طبیعت و کشمکش انسانی روایت می‌شود.
-            </p>
-          </div>
-
-          <div class="feature">
-            <h3>پایان ضدکلیشه</h3>
-            <p>
-              نقطه اوج داستان نه یک نبرد خونین، بلکه پیروزی
-              آرامش بر خشونت است.
-            </p>
-          </div>
-
-        </div>
-
       </div>
-
     </section>
 
 
-    <!-- MESSAGE -->
-
-    <section class="section">
-
-      <div class="message">
-
-        <h2>پیام اثر</h2>
-
-        <div class="message-main">
-          «آخرین نبرد سورنا» داستان پیروزی یک سردار بر دشمن نیست؛
-          داستان پیروزی انسان بر خشم، غرور و چرخه بی‌پایان جنگ است.
+    <!-- STRUCTURE -->
+    <section class="section-structure" id="structure">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div class="section-kicker">TRILOGY</div>
+          <h2 class="section-title">ساختار سه‌گانه</h2>
+          <div class="section-line"></div>
         </div>
 
-        <div class="message-question">
-          این اثر می‌پرسد:
-          <br>
-          <strong>آیا می‌توان با ساختن، از ویرانی پیشی گرفت؟</strong>
-        </div>
+        <div class="trilogy-grid">
+          <article class="trilogy-card reveal">
+            <span class="trilogy-ring">حلقه‌ی اول</span>
+            <h3 class="trilogy-title">میراث آتش</h3>
+            <p class="trilogy-desc">
+              سقوط نوشیجان، تبعید در دره‌ی جوزان، اتحاد قبایل، آزادسازی دژ.
+            </p>
+            <div class="trilogy-climax">شکستن چرخه‌ی انتقام</div>
+          </article>
 
+          <article class="trilogy-card reveal">
+            <span class="trilogy-ring">حلقه‌ی دوم</span>
+            <h3 class="trilogy-title">سایه‌ی اسکندر</h3>
+            <p class="trilogy-desc">
+              گسترش امپراتوری، مقاومت در شهرها، خیانت و توطئه.
+            </p>
+            <div class="trilogy-climax">نبرد سرنوشت‌ساز با اسکندر</div>
+          </article>
+
+          <article class="trilogy-card reveal">
+            <span class="trilogy-ring">حلقه‌ی سوم</span>
+            <h3 class="trilogy-title">آتش ابدی</h3>
+            <p class="trilogy-desc">
+              فروپاشی امپراتوری، بازسازی تمدن، میراث نهایی.
+            </p>
+            <div class="trilogy-climax">روشن کردن آتش ابدی برای همیشه</div>
+          </article>
+        </div>
       </div>
-
     </section>
 
 
-    <!-- AUTHOR -->
-
-    <section class="section">
-
-      <div class="section-box">
-
-        <div class="section-heading">
-          <span class="number">۰۶</span>
-          <h2>نگاه نویسنده</h2>
+    <!-- HISTORICAL NOTES -->
+    <section class="section-notes" id="notes">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div class="section-kicker">HISTORICAL NOTES</div>
+          <h2 class="section-title">یادداشت تاریخی</h2>
+          <div class="section-line"></div>
         </div>
 
-        <div class="author-note">
-
+        <div class="notes-card reveal">
+          <h3>نوشیجان</h3>
           <p>
-            «آخرین نبرد سورنا» تلاشی است برای نگاه کردن به مفهوم
-            قهرمانی از زاویه‌ای متفاوت.
+            تپه‌ی باستانی در نزدیکی ملایر، استان همدان. کاوش‌های باستان‌شناسی نشان می‌دهد این مکان در دوره‌ی ماد و هخامنشی مسکونی بوده است.
           </p>
 
+          <h3>اسکندر مقدونی</h3>
           <p>
-            در این روایت، قهرمان کسی نیست که بیشترین دشمن را شکست می‌دهد؛
-            قهرمان کسی است که در لحظه‌ای که می‌تواند دوباره جنگ را آغاز کند،
-            تصمیم می‌گیرد چرخه ویرانی را متوقف کند.
+            در سال ۳۳۰ پیش از میلاد، امپراتوری هخامنشی را فتح کرد. پس از مرگش در ۳۲۳ پیش از میلاد، امپراتوری‌اش بین سردارانش تقسیم شد.
           </p>
 
+          <h3>قبایل</h3>
           <p>
-            سورنا پس از سال‌ها زندگی با شمشیر، سرانجام درمی‌یابد که
-            دفاع از سرزمین تنها با جنگیدن معنا پیدا نمی‌کند؛ گاهی
-            ساختن یک زمین، آباد کردن یک روستا و ایجاد آینده‌ای برای
-            نسل بعد، بزرگ‌ترین شکل دفاع است.
+            در دوران هخامنشی و سلوکی، اقوامی مانند کاسی‌ها، مادها، پارسی‌ها، الامی‌ها و سکاها در فلات ایران زندگی می‌کردند. نام‌هایی مانند «کرد»، «لر» و «بختیاری» مربوط به دوره‌های بسیار بعدتر است.
           </p>
 
+          <h3>اوستا</h3>
+          <p>
+            مجموعه‌ی متون مقدس زرتشتیان. در دوران هخامنشی، این متون به صورت شفاهی و سپس مکتوب حفظ می‌شدند.
+          </p>
+
+          <h3>آتش ابدی</h3>
+          <p>
+            در آیین زرتشتی، آتش نماد پاکی و پایداری است. آتشکده‌ها در دوران هخامنشی و ساسانی، مراکز مهم دینی و فرهنگی بودند.
+          </p>
         </div>
-
       </div>
-
     </section>
 
 
-    <!-- STATUS -->
-
-    <section class="section">
-
-      <div class="section-box">
-
-        <div class="section-heading">
-          <span class="number">۰۷</span>
-          <h2>وضعیت اثر</h2>
+    <!-- AUTHOR NOTE -->
+    <section class="section-author-note" id="author-note">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div class="section-kicker">FINAL MESSAGE</div>
+          <h2 class="section-title">پیام پایانی</h2>
+          <div class="section-line"></div>
         </div>
 
-        <div class="status">
-
-          <span class="status-badge">
-            معرفی فیلمنامه | آماده ارائه به تهیه‌کننده، کارگردان و گروه‌های تولید
-          </span>
-
+        <div class="author-note reveal">
+          <p>
+            «میراث آتش» داستان ملتی است که اجازه نداد آتش تمدنش خاموش شود.
+            این روایت، فصل خاموشی از تاریخ ایران را از دل خاک‌های تپه‌ی
+            نوشیجان ملایر برمی‌آورد: پایداری دلیرانه‌ی گروه دهوپادان که
+            رو در روی امپراتوری اسکندر ایستادند.
+          </p>
+          <div class="final-line">
+            این داستان، داستان آتش است<br>
+            — آتشی که هرگز خاموش نمی‌شود.
+          </div>
+          <div class="author-name">حسین محمدی امیرزا</div>
         </div>
-
       </div>
-
     </section>
 
 
-    <!-- ENDING -->
-
-    <div class="final">
-
-      <div class="final-symbol">
-        ✦
+    <!-- BACK -->
+    <div class="back-area">
+      <div class="container">
+        <a class="back-button" href="../index.html#screenplays">
+          <span>←</span>
+          <span>بازگشت به فیلم‌نامه‌ها</span>
+        </a>
       </div>
-
-      <p>
-        گاهی بزرگ‌ترین پیروزی،
-        <br>
-        آن لحظه‌ای است که انسان تصمیم می‌گیرد
-        <br>
-        به جای ویران کردن، بسازد.
-      </p>
-
     </div>
 
-
-    <footer>
-
-      <p>
-        <strong>حسین محمدی امیرزا</strong>
-      </p>
-
-      <p>
-        فیلمنامه بلند «آخرین نبرد سورنا»
-      </p>
-
-      <p>
-        تمامی حقوق اثر متعلق به نویسنده است.
-      </p>
-
-    </footer>
-
   </main>
+
+
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-brand">حسین محمدی امیرزا</div>
+      <div class="footer-copy">© حسین محمدی امیرزا · همه حقوق محفوظ است</div>
+    </div>
+  </footer>
+
+
+  <script>
+    (function () {
+      const reveals = document.querySelectorAll('.reveal');
+      if (!reveals.length) return;
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
+      );
+
+      reveals.forEach((el) => observer.observe(el));
+    })();
+  </script>
 
 </body>
 </html>
