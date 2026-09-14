@@ -1,0 +1,1930 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>باران و سنگ | حسین محمدی امیرزا</title>
+
+  <meta name="description" content="باران و سنگ؛ فیلم‌نامه کوتاهی از زندگی، فقدان و کفاره در دل کوه‌های سنگی، نوشته حسین محمدی امیرزا.">
+  <meta name="author" content="حسین محمدی امیرزا">
+  <meta name="theme-color" content="#0a0e14">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Vazirmatn:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      /* باران / آبی سرمه‌ای */
+      --rain-50:  #eef4fa;
+      --rain-100: #c9dcec;
+      --rain-200: #94b4d0;
+      --rain-300: #5f8aad;
+      --rain-400: #3d6489;
+      --rain-500: #294766;
+      --rain-600: #1a2f47;
+      --rain-700: #101d2e;
+      --rain-800: #0a0e14;
+
+      /* سنگ / خاکستری */
+      --stone-50:  #f0efec;
+      --stone-100: #d6d3cd;
+      --stone-200: #a8a39a;
+      --stone-300: #7a7468;
+      --stone-400: #524d44;
+      --stone-500: #35312a;
+      --stone-600: #221f1a;
+      --stone-700: #16130f;
+
+      /* کهربا / نور افق */
+      --amber-100: #fcebb6;
+      --amber-200: #f5d276;
+      --amber-300: #e8b340;
+      --amber-400: #c98f1e;
+      --amber-500: #9a6a10;
+
+      /* خون / تراژدی */
+      --blood-300: #c95a4a;
+      --blood-400: #a83324;
+      --blood-500: #7a1f13;
+
+      --shadow-deep: 0 30px 80px rgba(0, 0, 0, 0.6);
+      --shadow-soft: 0 15px 45px rgba(0, 0, 0, 0.35);
+      --transition: cubic-bezier(0.22, 0.61, 0.36, 1);
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: "Vazirmatn", sans-serif;
+      font-weight: 400;
+      color: var(--rain-100);
+      background: var(--rain-800);
+      min-height: 100vh;
+      overflow-x: hidden;
+      line-height: 2;
+    }
+
+    ::selection {
+      background: rgba(95, 138, 173, 0.4);
+      color: #eef4fa;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    .container {
+      width: min(1180px, calc(100% - 48px));
+      margin: auto;
+      position: relative;
+      z-index: 5;
+    }
+
+    .grain {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.35;
+      mix-blend-mode: overlay;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.3'/%3E%3C/svg%3E");
+    }
+
+    /* TOP BAR */
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background:
+        linear-gradient(180deg, rgba(10, 14, 20, 0.97), rgba(16, 29, 46, 0.95));
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(95, 138, 173, 0.3);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);
+    }
+
+    .topbar::after {
+      content: "";
+      position: absolute;
+      bottom: -1px;
+      left: 15%;
+      right: 15%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--rain-300), transparent);
+      opacity: 0.7;
+    }
+
+    .topbar-inner {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .brand {
+      font-family: "Amiri", serif;
+      font-size: 1.4rem;
+      color: var(--rain-200);
+      white-space: nowrap;
+      letter-spacing: 0.3px;
+      position: relative;
+      padding-right: 18px;
+      transition: color 0.3s var(--transition);
+    }
+
+    .brand::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 5px;
+      height: 24px;
+      background: linear-gradient(to bottom, var(--rain-200), var(--rain-500));
+      border-radius: 2px;
+      box-shadow: 0 0 14px rgba(95, 138, 173, 0.9);
+    }
+
+    .brand:hover { color: var(--rain-100); }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav a {
+      color: var(--rain-100);
+      font-size: 0.85rem;
+      font-weight: 400;
+      padding: 8px 14px;
+      border-radius: 999px;
+      transition: all 0.3s var(--transition);
+      white-space: nowrap;
+    }
+
+    .nav a:hover {
+      color: var(--rain-200);
+      background: rgba(95, 138, 173, 0.15);
+    }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      padding: 110px 0 90px;
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse 60% 70% at 80% 30%, rgba(232, 179, 64, 0.25), transparent 55%),
+        radial-gradient(ellipse 50% 60% at 15% 80%, rgba(26, 47, 71, 0.7), transparent 60%),
+        radial-gradient(circle at 50% 50%, rgba(10, 14, 20, 0.6), transparent 70%),
+        linear-gradient(155deg, #294766 0%, #1a2f47 30%, #101d2e 65%, #0a0e14 100%);
+      color: var(--rain-50);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.6;
+      background-image:
+        repeating-linear-gradient(
+          105deg,
+          rgba(201, 220, 236, 0.08) 0,
+          rgba(201, 220, 236, 0.08) 1px,
+          transparent 1px,
+          transparent 12px
+        ),
+        radial-gradient(circle at 20% 20%, rgba(201, 220, 236, 0.4) 0.7px, transparent 1.5px),
+        radial-gradient(circle at 80% 30%, rgba(201, 220, 236, 0.3) 0.5px, transparent 1.2px),
+        radial-gradient(circle at 40% 70%, rgba(201, 220, 236, 0.35) 0.6px, transparent 1.3px),
+        radial-gradient(circle at 70% 85%, rgba(201, 220, 236, 0.3) 0.5px, transparent 1.2px);
+      background-size: 100% 100%, 500px 500px, 700px 700px, 800px 800px, 600px 600px;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 140px;
+      background: linear-gradient(to bottom, transparent, rgba(10, 14, 20, 0.8));
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 80px;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-content { position: relative; }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 8px 18px;
+      border: 1px solid rgba(201, 220, 236, 0.4);
+      border-radius: 999px;
+      color: var(--rain-100);
+      background: rgba(26, 47, 71, 0.4);
+      font-size: 0.82rem;
+      font-weight: 500;
+      margin-bottom: 28px;
+      letter-spacing: 0.5px;
+      backdrop-filter: blur(4px);
+    }
+
+    .eyebrow::before {
+      content: "🌧";
+      font-size: 1rem;
+      filter: drop-shadow(0 0 8px rgba(201, 220, 236, 0.9));
+      animation: pulse 3s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.15); opacity: 0.85; }
+    }
+
+    .hero h1 {
+      font-family: "Amiri", serif;
+      font-size: clamp(3rem, 6.5vw, 5.6rem);
+      line-height: 1.15;
+      color: #ffffff;
+      font-weight: 700;
+      text-shadow:
+        0 3px 20px rgba(0, 0, 0, 0.8),
+        0 0 80px rgba(95, 138, 173, 0.5);
+      margin-bottom: 16px;
+      letter-spacing: -0.5px;
+    }
+
+    .hero-subtitle {
+      font-family: "Amiri", serif;
+      font-size: clamp(1.3rem, 2.6vw, 1.9rem);
+      color: rgba(201, 220, 236, 0.9);
+      margin-bottom: 28px;
+      font-style: italic;
+      letter-spacing: 0.5px;
+    }
+
+    .hero-subtitle::before {
+      content: "— ";
+      color: var(--rain-200);
+    }
+
+    .hero-description {
+      color: rgba(238, 244, 250, 0.95);
+      font-size: 1.05rem;
+      font-weight: 300;
+      max-width: 620px;
+      line-height: 2.2;
+    }
+
+    .author {
+      margin-top: 32px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      color: var(--rain-100);
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    .author-line {
+      width: 60px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--rain-200));
+      position: relative;
+    }
+
+    .author-line::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 6px;
+      height: 6px;
+      background: var(--rain-200);
+      border-radius: 50%;
+      box-shadow: 0 0 12px rgba(201, 220, 236, 0.9);
+    }
+
+    .hero-tags {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+
+    .tag {
+      border: 1px solid rgba(201, 220, 236, 0.35);
+      color: rgba(238, 244, 250, 0.9);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.76rem;
+      font-weight: 400;
+      background: rgba(26, 47, 71, 0.35);
+      transition: all 0.3s var(--transition);
+      backdrop-filter: blur(4px);
+      cursor: default;
+    }
+
+    .tag:hover {
+      border-color: rgba(201, 220, 236, 0.7);
+      background: rgba(26, 47, 71, 0.6);
+      transform: translateY(-2px);
+    }
+
+    /* POSTER */
+    .cover-area {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 640px;
+    }
+
+    .cover-glow {
+      position: absolute;
+      width: 460px;
+      height: 580px;
+      border-radius: 50%;
+      background: radial-gradient(ellipse, rgba(95, 138, 173, 0.5), rgba(41, 71, 102, 0.2) 45%, transparent 70%);
+      filter: blur(40px);
+      animation: floatGlow 8s ease-in-out infinite;
+    }
+
+    @keyframes floatGlow {
+      0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.9; }
+      50% { transform: translate(-15px, 20px) scale(1.08); opacity: 1; }
+    }
+
+    .cover-frame {
+      position: relative;
+      width: min(390px, 80%);
+      padding: 14px;
+      background:
+        linear-gradient(145deg, #94b4d0, #3d6489 25%, #101d2e 60%, #3d6489 85%, #c9dcec);
+      border-radius: 6px;
+      box-shadow:
+        0 45px 100px rgba(0, 0, 0, 0.85),
+        0 0 90px rgba(95, 138, 173, 0.5),
+        inset 0 2px 0 rgba(201, 220, 236, 0.4);
+      transform: rotate(1.5deg);
+      transition: all 0.6s var(--transition);
+    }
+
+    .cover-frame::before {
+      content: "";
+      position: absolute;
+      inset: -4px;
+      border-radius: 8px;
+      background: linear-gradient(145deg, rgba(201, 220, 236, 0.5), transparent, rgba(95, 138, 173, 0.5));
+      z-index: -1;
+      filter: blur(10px);
+    }
+
+    .cover-frame:hover {
+      transform: rotate(0deg) translateY(-14px) scale(1.03);
+      box-shadow:
+        0 60px 120px rgba(0, 0, 0, 0.9),
+        0 0 130px rgba(95, 138, 173, 0.6),
+        inset 0 2px 0 rgba(201, 220, 236, 0.5);
+    }
+
+    .cover-inner {
+      padding: 7px;
+      background: #0a0e14;
+      border: 1px solid rgba(201, 220, 236, 0.4);
+      border-radius: 3px;
+      overflow: hidden;
+    }
+
+    .cover-inner img {
+      width: 100%;
+      height: auto;
+      border-radius: 2px;
+      transition: transform 0.6s var(--transition);
+    }
+
+    .cover-frame:hover .cover-inner img {
+      transform: scale(1.04);
+    }
+
+    .cover-caption {
+      position: absolute;
+      bottom: -30px;
+      right: 50%;
+      transform: translateX(50%);
+      white-space: nowrap;
+      color: rgba(201, 220, 236, 0.9);
+      font-size: 0.76rem;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+      font-family: "Amiri", serif;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+    }
+
+    /* QUICK NAV */
+    .quick-nav {
+      padding: 40px 0;
+      background:
+        linear-gradient(180deg, #0a0e14, #1a2f47 30%, #3d6489 70%, #94b4d0);
+      position: relative;
+    }
+
+    .quick-nav::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 60px;
+      background: linear-gradient(to bottom, transparent, var(--rain-800));
+      pointer-events: none;
+    }
+
+    .quick-inner {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 16px;
+      border: 1px solid rgba(201, 220, 236, 0.35);
+      background: rgba(10, 14, 20, 0.5);
+      backdrop-filter: blur(12px);
+      border-radius: 999px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+      position: relative;
+      z-index: 2;
+      width: fit-content;
+      margin: auto;
+    }
+
+    .quick-inner a {
+      padding: 9px 18px;
+      color: rgba(238, 244, 250, 0.9);
+      font-size: 0.82rem;
+      font-weight: 400;
+      border-radius: 999px;
+      transition: all 0.3s var(--transition);
+    }
+
+    .quick-inner a:hover {
+      color: #ffffff;
+      background: rgba(238, 244, 250, 0.18);
+      transform: translateY(-2px);
+    }
+
+    /* SECTION BASE */
+    section { scroll-margin-top: 100px; }
+
+    .section-heading {
+      margin-bottom: 50px;
+      text-align: center;
+      position: relative;
+    }
+
+    .section-kicker {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 3px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+
+    .section-title {
+      font-family: "Amiri", serif;
+      font-size: clamp(2rem, 4.2vw, 3.2rem);
+      line-height: 1.35;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+    }
+
+    .section-line {
+      width: 90px;
+      height: 1px;
+      margin: 24px auto 0;
+      position: relative;
+    }
+
+    .section-line::before {
+      content: "🌧";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 0.7rem;
+      padding: 0 10px;
+      background: inherit;
+    }
+
+    /* ABOUT */
+    .section-about {
+      padding: 100px 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 20% 0%, rgba(95, 138, 173, 0.12), transparent 60%),
+        radial-gradient(ellipse 50% 40% at 90% 100%, rgba(41, 71, 102, 0.2), transparent 60%),
+        linear-gradient(180deg, var(--rain-700), var(--rain-600) 50%, var(--rain-700));
+      position: relative;
+    }
+
+    .section-about::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: 0.4;
+      background-image:
+        repeating-linear-gradient(0deg, rgba(201, 220, 236, 0.04) 0, rgba(201, 220, 236, 0.04) 1px, transparent 1px, transparent 26px),
+        repeating-linear-gradient(90deg, rgba(201, 220, 236, 0.03) 0, rgba(201, 220, 236, 0.03) 1px, transparent 1px, transparent 26px);
+      pointer-events: none;
+    }
+
+    .section-about .section-kicker { color: var(--rain-200); }
+    .section-about .section-title { color: var(--rain-100); }
+    .section-about .section-line {
+      background: linear-gradient(90deg, transparent, var(--rain-300), transparent);
+    }
+    .section-about .section-line::before {
+      color: var(--rain-300);
+      background: var(--rain-600);
+    }
+
+    .intro-card {
+      position: relative;
+      max-width: 960px;
+      margin: auto;
+      padding: 55px 60px;
+      border: 1px solid rgba(201, 220, 236, 0.25);
+      border-radius: 24px;
+      background:
+        linear-gradient(145deg, rgba(26, 47, 71, 0.7), rgba(10, 14, 20, 0.85));
+      box-shadow:
+        var(--shadow-deep),
+        inset 0 1px 0 rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(6px);
+      overflow: hidden;
+    }
+
+    .intro-card::before {
+      content: "🌧";
+      position: absolute;
+      top: 24px;
+      right: 32px;
+      font-size: 1.5rem;
+      opacity: 0.6;
+    }
+
+    .intro-card::after {
+      content: "";
+      position: absolute;
+      top: -40px;
+      left: -40px;
+      width: 220px;
+      height: 220px;
+      background: radial-gradient(circle, rgba(95, 138, 173, 0.15), transparent 70%);
+      pointer-events: none;
+    }
+
+    .intro-card p {
+      color: rgba(238, 244, 250, 0.9);
+      font-size: 1.05rem;
+      font-weight: 400;
+      line-height: 2.35;
+      text-align: justify;
+    }
+
+    .intro-card p + p { margin-top: 22px; }
+
+    .intro-card p::first-letter {
+      font-family: "Amiri", serif;
+      font-size: 1.6em;
+      color: var(--rain-200);
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    /* SYNOPSIS */
+    .section-preface {
+      padding: 110px 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(95, 138, 173, 0.25), transparent 60%),
+        radial-gradient(ellipse 70% 50% at 20% 100%, rgba(10, 14, 20, 0.8), transparent 60%),
+        radial-gradient(circle at 90% 30%, rgba(201, 220, 236, 0.08), transparent 40%),
+        linear-gradient(160deg, #1a2f47 0%, #101d2e 40%, #0a0e14 100%);
+      position: relative;
+      color: var(--rain-50);
+      overflow: hidden;
+    }
+
+    .section-preface::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.85;
+      background-image:
+        radial-gradient(circle at 15% 20%, rgba(201, 220, 236, 0.7) 0.6px, transparent 1.2px),
+        radial-gradient(circle at 45% 60%, rgba(238, 244, 250, 0.5) 0.4px, transparent 1px),
+        radial-gradient(circle at 78% 25%, rgba(201, 220, 236, 0.6) 0.7px, transparent 1.3px),
+        radial-gradient(circle at 88% 78%, rgba(238, 244, 250, 0.5) 0.5px, transparent 1px),
+        radial-gradient(circle at 25% 85%, rgba(201, 220, 236, 0.5) 0.4px, transparent 1px),
+        radial-gradient(circle at 60% 40%, rgba(238, 244, 250, 0.5) 0.3px, transparent 1px);
+      background-size: 500px 500px, 700px 700px, 800px 800px, 600px 600px, 900px 900px, 400px 400px;
+    }
+
+    .section-preface .section-kicker { color: var(--rain-200); }
+    .section-preface .section-title { color: #ffffff; }
+    .section-preface .section-line {
+      background: linear-gradient(90deg, transparent, var(--rain-300), transparent);
+    }
+    .section-preface .section-line::before {
+      color: var(--rain-300);
+      background: #101d2e;
+    }
+
+    .preface-wrapper {
+      max-width: 960px;
+      margin: auto;
+      position: relative;
+    }
+
+    .preface-wrapper::before {
+      content: "";
+      position: absolute;
+      right: -28px;
+      top: 20px;
+      bottom: 20px;
+      width: 2px;
+      background: linear-gradient(to bottom, transparent, rgba(95, 138, 173, 0.5), rgba(95, 138, 173, 0.15), transparent);
+      border-radius: 1px;
+    }
+
+    .preface-card {
+      padding: 60px 65px;
+      border-radius: 24px;
+      background:
+        linear-gradient(145deg, rgba(26, 47, 71, 0.7), rgba(10, 14, 20, 0.85));
+      border: 1px solid rgba(201, 220, 236, 0.2);
+      box-shadow:
+        0 35px 90px rgba(0, 0, 0, 0.6),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(8px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .preface-card::before {
+      content: "";
+      position: absolute;
+      top: -80px;
+      right: -80px;
+      width: 320px;
+      height: 320px;
+      background: radial-gradient(circle, rgba(95, 138, 173, 0.15), transparent 70%);
+      pointer-events: none;
+    }
+
+    .preface-card p {
+      color: rgba(238, 244, 250, 0.92);
+      line-height: 2.55;
+      font-size: 1.05rem;
+      font-weight: 300;
+      text-align: justify;
+      margin-bottom: 26px;
+      position: relative;
+    }
+
+    .preface-card p:last-of-type { margin-bottom: 0; }
+
+    .preface-card p::first-letter {
+      font-family: "Amiri", serif;
+      font-size: 1.7em;
+      color: var(--rain-200);
+      font-weight: 700;
+      line-height: 1;
+      text-shadow: 0 0 20px rgba(95, 138, 173, 0.5);
+    }
+
+    .act-block {
+      margin: 50px 0;
+      padding: 35px 40px;
+      border-radius: 18px;
+      background: rgba(10, 14, 20, 0.5);
+      border: 1px solid rgba(201, 220, 236, 0.15);
+      position: relative;
+    }
+
+    .act-block::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--rain-300), transparent);
+    }
+
+    .act-title {
+      font-family: "Amiri", serif;
+      color: var(--rain-100);
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      text-align: right;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .act-title::before {
+      content: "🌧";
+      font-size: 1.1rem;
+      filter: drop-shadow(0 0 6px rgba(95, 138, 173, 0.8));
+    }
+
+    .act-time {
+      color: var(--rain-200);
+      font-size: 0.85rem;
+      font-weight: 500;
+      margin-bottom: 20px;
+      font-style: italic;
+      opacity: 0.85;
+    }
+
+    .act-block p {
+      color: rgba(238, 244, 250, 0.88);
+      line-height: 2.4;
+      font-size: 1rem;
+      font-weight: 300;
+      text-align: justify;
+      margin-bottom: 18px;
+    }
+
+    .act-block p:last-child { margin-bottom: 0; }
+
+    .act-block ul {
+      list-style: none;
+      margin: 18px 0;
+      padding-right: 12px;
+    }
+
+    .act-block ul li {
+      color: rgba(238, 244, 250, 0.88);
+      line-height: 2.2;
+      font-size: 0.98rem;
+      padding: 6px 0;
+      padding-right: 26px;
+      position: relative;
+    }
+
+    .act-block ul li::before {
+      content: "◆";
+      position: absolute;
+      right: 0;
+      top: 6px;
+      color: var(--rain-300);
+      font-size: 0.7rem;
+    }
+
+    .act-block strong {
+      color: var(--rain-100);
+      font-weight: 700;
+    }
+
+    .emphasis-line {
+      text-align: center;
+      font-family: "Amiri", serif;
+      font-size: 1.2rem;
+      color: var(--rain-100);
+      font-weight: 700;
+      line-height: 2.2;
+      margin: 25px 0;
+      padding: 20px;
+      border-top: 1px solid rgba(95, 138, 173, 0.25);
+      border-bottom: 1px solid rgba(95, 138, 173, 0.25);
+    }
+
+    .dialogue-line {
+      padding: 16px 22px;
+      margin: 16px 0;
+      background: rgba(26, 47, 71, 0.5);
+      border-right: 3px solid var(--rain-300);
+      border-radius: 10px;
+      color: rgba(238, 244, 250, 0.95);
+      font-style: italic;
+      font-size: 1rem;
+      line-height: 2.2;
+    }
+
+    .dialogue-line::before {
+      content: "«";
+      color: var(--rain-300);
+      font-size: 1.3em;
+      font-weight: 700;
+      margin-left: 4px;
+    }
+
+    .dialogue-line::after {
+      content: "»";
+      color: var(--rain-300);
+      font-size: 1.3em;
+      font-weight: 700;
+      margin-right: 4px;
+    }
+
+    /* CHARACTERS */
+    .section-figures {
+      padding: 110px 0;
+      background:
+        radial-gradient(ellipse 70% 50% at 15% 0%, rgba(95, 138, 173, 0.12), transparent 60%),
+        radial-gradient(ellipse 60% 60% at 85% 100%, rgba(41, 71, 102, 0.2), transparent 60%),
+        linear-gradient(180deg, var(--rain-700), var(--rain-600) 50%, var(--rain-500));
+      position: relative;
+    }
+
+    .section-figures .section-kicker { color: var(--rain-200); }
+    .section-figures .section-title { color: var(--rain-100); }
+    .section-figures .section-line {
+      background: linear-gradient(90deg, transparent, var(--rain-300), transparent);
+    }
+    .section-figures .section-line::before {
+      color: var(--rain-300);
+      background: var(--rain-500);
+    }
+
+    .figures-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .figure-card {
+      position: relative;
+      padding: 36px 30px;
+      border-radius: 22px;
+      border: 1px solid rgba(201, 220, 236, 0.15);
+      background:
+        linear-gradient(145deg, rgba(41, 71, 102, 0.5), rgba(10, 14, 20, 0.85));
+      transition: all 0.4s var(--transition);
+      overflow: hidden;
+      box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.04);
+      cursor: default;
+    }
+
+    .figure-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 140px;
+      height: 140px;
+      background: radial-gradient(circle, rgba(95, 138, 173, 0.2), transparent 70%);
+      opacity: 0;
+      transition: opacity 0.4s var(--transition);
+    }
+
+    .figure-card::after {
+      content: "";
+      position: absolute;
+      bottom: -70px;
+      left: -70px;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background: rgba(95, 138, 173, 0.08);
+      transition: all 0.4s var(--transition);
+    }
+
+    .figure-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(95, 138, 173, 0.5);
+      background:
+        linear-gradient(145deg, rgba(52, 90, 130, 0.6), rgba(20, 30, 45, 0.9));
+      box-shadow:
+        0 25px 55px rgba(0, 0, 0, 0.55),
+        0 0 45px rgba(95, 138, 173, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    }
+
+    .figure-card:hover::before { opacity: 1; }
+    .figure-card:hover::after {
+      transform: scale(1.3);
+      background: rgba(95, 138, 173, 0.15);
+    }
+
+    .figure-number {
+      color: var(--rain-200);
+      font-size: 0.78rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+      letter-spacing: 1.5px;
+    }
+
+    .figure-name {
+      font-family: "Amiri", serif;
+      color: var(--rain-100);
+      font-size: 1.45rem;
+      margin-bottom: 8px;
+      font-weight: 700;
+      line-height: 1.4;
+    }
+
+    .figure-role {
+      color: var(--rain-200);
+      font-size: 0.85rem;
+      font-weight: 500;
+      margin-bottom: 12px;
+      font-style: italic;
+    }
+
+    .figure-text {
+      color: rgba(238, 244, 250, 0.75);
+      font-size: 0.9rem;
+      font-weight: 400;
+      line-height: 2;
+    }
+
+    /* THEMES */
+    .section-themes {
+      padding: 110px 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(95, 138, 173, 0.2), transparent 60%),
+        radial-gradient(ellipse 70% 50% at 15% 100%, rgba(41, 71, 102, 0.3), transparent 60%),
+        linear-gradient(180deg, #101d2e, #0a0e14 50%, #1a2f47);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .section-themes::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.4;
+      background-image:
+        repeating-linear-gradient(45deg, rgba(201, 220, 236, 0.025) 0, rgba(201, 220, 236, 0.025) 1px, transparent 1px, transparent 8px);
+    }
+
+    .section-themes .section-kicker { color: var(--rain-200); }
+    .section-themes .section-title { color: #ffffff; }
+    .section-themes .section-line {
+      background: linear-gradient(90deg, transparent, var(--rain-300), transparent);
+    }
+    .section-themes .section-line::before {
+      color: var(--rain-300);
+      background: #0a0e14;
+    }
+
+    .themes-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .theme-card {
+      min-height: 170px;
+      padding: 32px 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      border-radius: 20px;
+      background: rgba(201, 220, 236, 0.03);
+      border: 1px solid rgba(95, 138, 173, 0.25);
+      transition: all 0.4s var(--transition);
+      position: relative;
+      overflow: hidden;
+      cursor: default;
+    }
+
+    .theme-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 50% 0%, rgba(95, 138, 173, 0.25), transparent 70%);
+      opacity: 0;
+      transition: opacity 0.4s var(--transition);
+    }
+
+    .theme-card::after {
+      content: "";
+      position: absolute;
+      inset: 4px;
+      border: 1px solid rgba(95, 138, 173, 0);
+      border-radius: 16px;
+      transition: border-color 0.4s var(--transition);
+    }
+
+    .theme-card:hover {
+      transform: translateY(-6px);
+      background: rgba(95, 138, 173, 0.1);
+      border-color: rgba(95, 138, 173, 0.6);
+      box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.6),
+        0 0 40px rgba(95, 138, 173, 0.2);
+    }
+
+    .theme-card:hover::before { opacity: 1; }
+    .theme-card:hover::after { border-color: rgba(95, 138, 173, 0.35); }
+
+    .theme-symbol {
+      font-size: 1.7rem;
+      color: var(--rain-200);
+      margin-bottom: 14px;
+      transition: all 0.4s var(--transition);
+      text-shadow: 0 0 25px rgba(95, 138, 173, 0.7);
+      position: relative;
+      z-index: 2;
+    }
+
+    .theme-card:hover .theme-symbol {
+      transform: scale(1.2) rotate(8deg);
+      color: var(--rain-100);
+    }
+
+    .theme-title {
+      color: #ffffff;
+      font-family: "Amiri", serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      line-height: 1.5;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* QUOTE */
+    .section-quote {
+      padding: 130px 0;
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse 70% 80% at 50% 50%, rgba(201, 220, 236, 0.3), transparent 65%),
+        radial-gradient(ellipse 90% 60% at 15% 20%, rgba(95, 138, 173, 0.5), transparent 60%),
+        radial-gradient(ellipse 80% 60% at 90% 80%, rgba(26, 47, 71, 0.6), transparent 60%),
+        linear-gradient(160deg, #94b4d0 0%, #5f8aad 25%, #294766 55%, #101d2e 85%, #0a0e14 100%);
+    }
+
+    .section-quote::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 30% 40%, rgba(238, 244, 250, 0.3), transparent 45%),
+        radial-gradient(circle at 70% 70%, rgba(201, 220, 236, 0.25), transparent 40%);
+    }
+
+    .quote-box {
+      max-width: 960px;
+      margin: auto;
+      text-align: center;
+      padding: 90px 60px;
+      position: relative;
+      border-top: 1px solid rgba(238, 244, 250, 0.4);
+      border-bottom: 1px solid rgba(238, 244, 250, 0.4);
+    }
+
+    .quote-box::before,
+    .quote-box::after {
+      content: "";
+      position: absolute;
+      width: 70px;
+      height: 70px;
+      border-color: rgba(238, 244, 250, 0.6);
+      border-style: solid;
+    }
+
+    .quote-box::before {
+      top: -1px;
+      right: 0;
+      border-width: 2px 2px 0 0;
+    }
+
+    .quote-box::after {
+      bottom: -1px;
+      left: 0;
+      border-width: 0 0 2px 2px;
+    }
+
+    .quote-mark {
+      color: rgba(238, 244, 250, 0.6);
+      font-family: Georgia, serif;
+      font-size: 7rem;
+      line-height: 0.4;
+      margin-bottom: 40px;
+      display: block;
+      text-shadow: 0 4px 30px rgba(10, 14, 20, 0.5);
+    }
+
+    .quote-text {
+      font-family: "Amiri", serif;
+      font-size: clamp(1.5rem, 3.2vw, 2.3rem);
+      line-height: 2.1;
+      color: #ffffff;
+      font-weight: 700;
+      font-style: italic;
+      text-shadow:
+        0 3px 25px rgba(10, 14, 20, 0.7),
+        0 0 60px rgba(201, 220, 236, 0.5);
+    }
+
+    .quote-source {
+      margin-top: 32px;
+      color: rgba(238, 244, 250, 0.95);
+      font-size: 0.86rem;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+
+    .quote-source::before {
+      content: "— ";
+      color: rgba(238, 244, 250, 0.75);
+    }
+
+    /* DETAILS */
+    .section-details {
+      padding: 110px 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 85% 0%, rgba(95, 138, 173, 0.15), transparent 60%),
+        linear-gradient(180deg, var(--rain-700), var(--rain-600));
+      position: relative;
+    }
+
+    .section-details .section-kicker { color: var(--rain-200); }
+    .section-details .section-title { color: var(--rain-100); }
+    .section-details .section-line {
+      background: linear-gradient(90deg, transparent, var(--rain-300), transparent);
+    }
+    .section-details .section-line::before {
+      color: var(--rain-300);
+      background: var(--rain-600);
+    }
+
+    .details-card {
+      max-width: 900px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      border: 1px solid rgba(95, 138, 173, 0.35);
+      border-radius: 20px;
+      overflow: hidden;
+      background: rgba(26, 47, 71, 0.5);
+      box-shadow:
+        0 25px 65px rgba(0, 0, 0, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(8px);
+    }
+
+    .detail-item {
+      padding: 32px 38px;
+      border-bottom: 1px solid rgba(95, 138, 173, 0.15);
+      transition: background 0.3s var(--transition);
+      position: relative;
+    }
+
+    .detail-item:hover {
+      background: rgba(95, 138, 173, 0.08);
+    }
+
+    .detail-item:nth-child(odd) {
+      border-left: 1px solid rgba(95, 138, 173, 0.15);
+    }
+
+    .detail-item:nth-last-child(-n+2) { border-bottom: none; }
+
+    .detail-label {
+      color: var(--rain-200);
+      font-size: 0.76rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      letter-spacing: 1px;
+    }
+
+    .detail-value {
+      color: var(--rain-100);
+      font-family: "Amiri", serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      line-height: 1.6;
+    }
+
+    /* AUTHOR NOTE */
+    .section-author-note {
+      padding: 120px 0;
+      background:
+        radial-gradient(ellipse 70% 60% at 50% 30%, rgba(95, 138, 173, 0.3), transparent 60%),
+        radial-gradient(ellipse 80% 50% at 20% 100%, rgba(10, 14, 20, 0.8), transparent 60%),
+        linear-gradient(180deg, #1a2f47, #0a0e14);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .section-author-note::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.5;
+      background-image:
+        radial-gradient(circle at 25% 30%, rgba(201, 220, 236, 0.7) 0.5px, transparent 1px),
+        radial-gradient(circle at 75% 60%, rgba(238, 244, 250, 0.5) 0.6px, transparent 1px),
+        radial-gradient(circle at 40% 85%, rgba(201, 220, 236, 0.5) 0.4px, transparent 1px);
+      background-size: 600px 600px, 800px 800px, 700px 700px;
+    }
+
+    .section-author-note .section-kicker { color: var(--rain-200); }
+    .section-author-note .section-title { color: #ffffff; }
+    .section-author-note .section-line {
+      background: linear-gradient(90deg, transparent, var(--rain-300), transparent);
+    }
+    .section-author-note .section-line::before {
+      color: var(--rain-300);
+      background: #0a0e14;
+    }
+
+    .author-note {
+      max-width: 920px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .author-note p {
+      color: rgba(238, 244, 250, 0.9);
+      font-size: 1.1rem;
+      font-weight: 300;
+      line-height: 2.5;
+    }
+
+    .author-note .final-line {
+      margin-top: 30px;
+      font-family: "Amiri", serif;
+      font-size: 1.6rem;
+      color: var(--rain-100);
+      font-weight: 700;
+      line-height: 2;
+      text-shadow: 0 0 40px rgba(95, 138, 173, 0.5);
+    }
+
+    .author-name {
+      display: inline-block;
+      margin-top: 35px;
+      color: var(--rain-100);
+      font-family: "Amiri", serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      position: relative;
+      padding-bottom: 14px;
+    }
+
+    .author-name::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 50%;
+      transform: translateX(50%);
+      width: 60px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--rain-300), transparent);
+    }
+
+    /* BACK BUTTON */
+    .back-area {
+      padding: 50px 0 60px;
+      text-align: center;
+      background: linear-gradient(180deg, #0a0e14, #101d2e);
+    }
+
+    .back-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 15px 30px;
+      border-radius: 999px;
+      border: 1px solid rgba(95, 138, 173, 0.5);
+      color: var(--rain-100);
+      background: rgba(95, 138, 173, 0.1);
+      transition: all 0.4s var(--transition);
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    .back-button:hover {
+      color: #ffffff;
+      background: rgba(95, 138, 173, 0.25);
+      border-color: var(--rain-300);
+      transform: translateY(-3px);
+      box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.6),
+        0 0 40px rgba(95, 138, 173, 0.3);
+    }
+
+    .back-button span:first-child {
+      transition: transform 0.3s var(--transition);
+    }
+
+    .back-button:hover span:first-child {
+      transform: translateX(-5px);
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid rgba(95, 138, 173, 0.25);
+      padding: 45px 0;
+      background: linear-gradient(180deg, #101d2e, #0a0e14);
+      position: relative;
+    }
+
+    footer::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 15%;
+      right: 15%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(95, 138, 173, 0.6), transparent);
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .footer-brand {
+      font-family: "Amiri", serif;
+      color: var(--rain-200);
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    .footer-copy {
+      color: var(--rain-200);
+      font-size: 0.78rem;
+      font-weight: 300;
+    }
+
+    /* REVEAL */
+    .reveal {
+      opacity: 0;
+      transform: translateY(35px);
+      transition: opacity 1s var(--transition), transform 1s var(--transition);
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 1024px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+      }
+      .hero-content { text-align: center; }
+      .hero-description { margin: auto; }
+      .author, .hero-tags { justify-content: center; }
+      .cover-area { min-height: 560px; }
+      .figures-grid { grid-template-columns: repeat(2, 1fr); }
+      .themes-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+      .container { width: min(100% - 32px, 1180px); }
+      .topbar-inner { min-height: 68px; }
+      .brand { font-size: 1.15rem; }
+      .nav { display: none; }
+
+      .hero { padding: 75px 0 50px; }
+      .hero h1 { font-size: clamp(2.5rem, 12vw, 4rem); }
+
+      .cover-area { min-height: 480px; }
+      .cover-frame { width: min(310px, 82%); }
+      .cover-caption { font-size: 0.7rem; }
+
+      .section-about, .section-preface, .section-figures,
+      .section-themes, .section-quote, .section-details,
+      .section-author-note {
+        padding: 70px 0;
+      }
+
+      .intro-card, .preface-card {
+        padding: 32px 26px;
+        border-radius: 16px;
+      }
+
+      .preface-wrapper::before { right: -10px; }
+
+      .preface-card p {
+        text-align: right;
+        font-size: 0.95rem;
+        line-height: 2.35;
+      }
+
+      .act-block {
+        padding: 24px 22px;
+      }
+
+      .act-title {
+        font-size: 1.25rem;
+      }
+
+      .figures-grid { grid-template-columns: 1fr; }
+      .themes-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+      .theme-card { min-height: 150px; padding: 24px 18px; }
+
+      .details-card { grid-template-columns: 1fr; }
+      .detail-item:nth-child(odd) { border-left: none; }
+      .detail-item { padding: 24px 28px; }
+      .detail-item:nth-last-child(-n+2) { border-bottom: 1px solid rgba(95, 138, 173, 0.15); }
+      .detail-item:last-child { border-bottom: none; }
+
+      .quote-box { padding: 65px 25px; }
+      .quote-mark { font-size: 5rem; }
+      .quote-box::before, .quote-box::after { width: 50px; height: 50px; }
+
+      .quick-inner { border-radius: 18px; padding: 12px; }
+      .quick-inner a { font-size: 0.75rem; padding: 8px 12px; }
+
+      .footer-inner { justify-content: center; text-align: center; }
+    }
+
+    @media (max-width: 440px) {
+      .themes-grid { grid-template-columns: 1fr; }
+      .hero-tags { gap: 6px; }
+      .tag { font-size: 0.7rem; padding: 5px 10px; }
+      .quote-text { font-size: 1.35rem; }
+      .quote-mark { font-size: 4rem; }
+      .section-title { font-size: 1.8rem; }
+      .act-block { padding: 20px 18px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        transition: none !important;
+        animation: none !important;
+      }
+      .reveal { opacity: 1; transform: none; }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="../index.html">حسین محمدی امیرزا</a>
+      <nav class="nav" aria-label="منوی اصلی">
+        <a href="../index.html">خانه</a>
+        <a href="../blog.html">وبلاگ</a>
+        <a href="#synopsis">سیناپس</a>
+        <a href="#characters">شخصیت‌ها</a>
+        <a href="#themes">درون‌مایه‌ها</a>
+        <a href="#quote">نقل‌قول</a>
+      </nav>
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+
+        <div class="hero-content">
+          <div class="eyebrow">درام · خانوادگی · انسانی</div>
+          <h1>باران و سنگ</h1>
+          <div class="hero-subtitle">فیلم‌نامه کوتاه</div>
+          <p class="hero-description">
+            در دل کوه‌های سرد و بارانی، چوپانی سالخورده در یک شب طوفانی،
+            پسرش را در پی اثبات شجاعت از دست می‌دهد — و مجبور می‌شود بقیه‌ی
+            عمرش را با کفاره‌ی گناهی بگذراند که خودش را مسئول آن می‌داند.
+          </p>
+          <div class="author">
+            <span class="author-line"></span>
+            <span>نوشتهٔ حسین محمدی امیرزا</span>
+          </div>
+          <div class="hero-tags">
+            <span class="tag">فیلم‌نامه کوتاه</span>
+            <span class="tag">درام روستایی</span>
+            <span class="tag">پدر و پسر</span>
+            <span class="tag">کفاره</span>
+          </div>
+        </div>
+
+        <div class="cover-area">
+          <div class="cover-glow"></div>
+          <div class="cover-frame">
+            <div class="cover-inner">
+              <img
+                src="../covers/baran-va-sang.jpg"
+                alt="پوستر فیلم‌نامه باران و سنگ"
+                loading="eager"
+                onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'padding:120px 20px; text-align:center; color:#c9dcec; font-family:Amiri,serif; font-size:1.5rem;\'>باران و سنگ</div>';"
+              >
+            </div>
+            <div class="cover-caption">باران و سنگ · فیلم‌نامه کوتاه</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- QUICK NAV -->
+    <div class="quick-nav">
+      <div class="container">
+        <nav class="quick-inner reveal" aria-label="دسترسی سریع">
+          <a href="#about">درباره اثر</a>
+          <a href="#synopsis">سیناپس</a>
+          <a href="#characters">شخصیت‌ها</a>
+          <a href="#themes">درون‌مایه‌ها</a>
+          <a href="#quote">نقل‌قول</a>
+          <a href="#details">مشخصات</a>
+        </nav>
+      </div>
+    </div>
+
+
+    <!-- ABOUT -->
+    <section class="section-about" id="about">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div class="section-kicker">ABOUT THE BOOK</div>
+          <h2 class="section-title">دربارهٔ این اثر</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="intro-card reveal">
+          <p>
+            «باران و سنگ» فیلم‌نامه‌ای کوتاه است که در دل کوه‌های سنگی و
+            بارانی می‌گذرد. داستان چوپانی سالخورده به نام حاج میرزا و
+            پسرش رضا، که در سکوتی سنگین کنار هم زندگی می‌کنند — تا
+            شب طوفانی که همه‌چیز را تغییر می‌دهد.
+          </p>
+          <p>
+            این اثر، روایتی است از عشق در سکوت، شکافی که در یک لحظه
+            بی‌بازگشت اتفاق می‌افتد، و کفاره‌ای که هیچ‌گاه تمام
+            نمی‌شود. باران، شاهد است. سنگ، بی‌تفاوت. و انسان، تنها
+            با حسرت خودش.
+          </p>
+          <p>
+            در این فیلم‌نامه، طبیعت نه پس‌زمینه، بلکه شخصیتی زنده است —
+            باران، کوه، خرس، چراغ نفتی. همه حضور دارند، اما هیچ‌کدام
+            قضاوت نمی‌کنند.
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SYNOPSIS -->
+    <section class="section-preface" id="synopsis">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div class="section-kicker">SYNOPSIS</div>
+          <h2 class="section-title">سیناپس</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="preface-wrapper reveal">
+          <article class="preface-card">
+
+            <div class="act-block">
+              <h3 class="act-title">پرده‌ی اول: زندگی خشک</h3>
+              <div class="act-time">کوهستان‌های سرد، روزهای بی‌شمار</div>
+
+              <p>
+                حاج میرزا، چوپان سالخورده‌ای است که با پسر جوانش <strong>رضا</strong> و برادرش در دل کوه‌های سنگی و خشک زندگی می‌کند. زندگی‌شان ساده و پر از رنج است — فروش گوسفندان به شهر، جمع کردن چوب، و تحمل سرما.
+              </p>
+
+              <p>
+                دیالوگ‌ها کوتاه‌اند، نگاه‌ها سنگین. رضا می‌خواهد از این زندگی بیرون بزند، حاج میرزا نه — او به سنگ و باران خو گرفته، به سکوت کوه.
+              </p>
+
+              <div class="dialogue-line">
+                رضا: «می‌خواهم به شهر بروم برای تحصیل.»
+              </div>
+
+              <div class="dialogue-line">
+                حاج میرزا: «تو فقط به فکر خودتی! مثل وقتی که گوسفندان عمو یداله را...»
+              </div>
+
+            </div>
+
+            <div class="act-block">
+              <h3 class="act-title">پرده‌ی دوم: شکاف</h3>
+              <div class="act-time">شب. غار. باران آغاز می‌شود.</div>
+
+              <p>
+                در غاری که پناهگاهشان است، تنش میان پدر و پسر بالا می‌گیرد. حاج میرزا مخالفت می‌کند و زخم کهنه‌ای را باز می‌کند — حرفی که تمام نمی‌شود، اما همه‌چیز را می‌گوید.
+              </p>
+
+              <div class="dialogue-line">
+                رضا: «برم هوایی بخورم.»
+              </div>
+
+              <p>
+                رضا از غار بیرون می‌زند. باران شروع می‌شود. حاج میرزا از خواب می‌پرد. صدایش می‌زند:
+              </p>
+
+              <div class="dialogue-line">
+                حاج میرزا: «رضا!»
+              </div>
+
+            </div>
+
+            <div class="act-block">
+              <h3 class="act-title">پرده‌ی سوم: کفاره</h3>
+              <div class="act-time">باران و مه. تاریکی. صدای خرس.</div>
+
+              <p>
+                حاج میرزا در باران و مه به دنبال رضا می‌رود. صدای خرس از تاریکی می‌آید. سایه‌ای بزرگ در مه.
+              </p>
+
+              <div class="dialogue-line">
+                رضا (فریاد): «بابا! کمک!»
+              </div>
+
+              <p>
+                شلیک. دویدن به جلو. رضا زخمی روی زمین. خرس از صدای شلیک می‌گریزد — اما دیر شده.
+              </p>
+
+              <div class="dialogue-line">
+                رضا (در آغوش پدر): «می‌خواستم ثابت کنم شجاعم.»
+              </div>
+
+              <p>
+                رضا می‌میرد.
+              </p>
+
+            </div>
+
+            <div class="act-block">
+              <h3 class="act-title">پایان: سنگ و باران</h3>
+              <div class="act-time">کلیه. چراغ نفتی. عکس رضا و عمو یداله.</div>
+
+              <p>
+                حاج میرزا در کلیه‌ی خود نشسته، روبروی عکس رضا و عمو یداله، در نور لرزان چراغ نفتی. بیرون، باران بر سنگ می‌بارد — همان بارانی که هم شاهد بود، هم بی‌تفاوت.
+              </p>
+
+              <div class="dialogue-line">
+                حاج میرزا: «گناه من بود که تو رو کشتم... حالا باید با این گناه دوباره زندگی کنم.»
+              </div>
+
+            </div>
+
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- CHARACTERS -->
+    <section class="section-figures" id="characters">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div class="section-kicker">CHARACTERS</div>
+          <h2 class="section-title">شخصیت‌های اصلی</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="figures-grid">
+          <article class="figure-card reveal">
+            <div class="figure-number">۰۱</div>
+            <h3 class="figure-name">حاج میرزا</h3>
+            <div class="figure-role">چوپان سالخورده</div>
+            <p class="figure-text">
+              سخت، خاموش، زخم‌خورده. از پدر مقتدر به انسانی شکننده و پشیمان.
+            </p>
+          </article>
+          <article class="figure-card reveal">
+            <div class="figure-number">۰۲</div>
+            <h3 class="figure-name">رضا</h3>
+            <div class="figure-role">پسر جوان</div>
+            <p class="figure-text">
+              جسور، آرزومند، ناشکیبا. از پسر سرکش به قربانی آرزوهایش.
+            </p>
+          </article>
+          <article class="figure-card reveal">
+            <div class="figure-number">۰۳</div>
+            <h3 class="figure-name">عمو یداله</h3>
+            <div class="figure-role">برادر (در گذشته)</div>
+            <p class="figure-text">
+              غایب، اما حاضر در وجدان. نماد زخم کهنه‌ی خانواده.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- THEMES -->
+    <section class="section-themes" id="themes">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div class="section-kicker">THEMES</div>
+          <h2 class="section-title">درون‌مایه‌های اصلی</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="themes-grid">
+          <div class="theme-card reveal">
+            <div class="theme-symbol">🌧</div>
+            <div class="theme-title">سنگ و باران</div>
+          </div>
+          <div class="theme-card reveal">
+            <div class="theme-symbol">◆</div>
+            <div class="theme-title">پدر و پسر</div>
+          </div>
+          <div class="theme-card reveal">
+            <div class="theme-symbol">✦</div>
+            <div class="theme-title">کفاره</div>
+          </div>
+          <div class="theme-card reveal">
+            <div class="theme-symbol">❖</div>
+            <div class="theme-title">زندگی در کوه</div>
+          </div>
+          <div class="theme-card reveal">
+            <div class="theme-symbol">☾</div>
+            <div class="theme-title">فقدان</div>
+          </div>
+          <div class="theme-card reveal">
+            <div class="theme-symbol">🌧</div>
+            <div class="theme-title">سکوت</div>
+          </div>
+          <div class="theme-card reveal">
+            <div class="theme-symbol">◆</div>
+            <div class="theme-title">حسرت</div>
+          </div>
+          <div class="theme-card reveal">
+            <div class="theme-symbol">✦</div>
+            <div class="theme-title">سرنوشت</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- QUOTE -->
+    <section class="section-quote" id="quote">
+      <div class="container">
+        <div class="quote-box reveal">
+          <div class="quote-mark">“</div>
+          <div class="quote-text">
+            گاهی بزرگ‌ترین گناه،<br>
+            نه کاری است که می‌کنیم،<br>
+            بلکه حرفی است که نمی‌زنیم.
+          </div>
+          <div class="quote-source">از فیلم‌نامه «باران و سنگ»</div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- DETAILS -->
+    <section class="section-details" id="details">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div class="section-kicker">FILM DETAILS</div>
+          <h2 class="section-title">مشخصات اثر</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="details-card reveal">
+          <div class="detail-item">
+            <div class="detail-label">عنوان</div>
+            <div class="detail-value">باران و سنگ</div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-label">نوع اثر</div>
+            <div class="detail-value">فیلم‌نامه کوتاه</div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-label">نویسنده</div>
+            <div class="detail-value">حسین محمدی امیرزا</div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-label">ژانر</div>
+            <div class="detail-value">درام / خانوادگی / انسانی</div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-label">فضا</div>
+            <div class="detail-value">کوهستان، غار، باران</div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-label">مضمون</div>
+            <div class="detail-value">کفاره و فقدان</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- AUTHOR NOTE -->
+    <section class="section-author-note" id="author-note">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div class="section-kicker">FINAL MESSAGE</div>
+          <h2 class="section-title">پیام پایانی</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="author-note reveal">
+          <p>
+            «باران و سنگ» داستان سکوتی است که یک خانواده را از هم پاشید —
+            و کفاره‌ای که هیچ‌گاه تمام نمی‌شود. این فیلم‌نامه می‌پرسد:
+            آیا انسان می‌تواند خودش را ببخشد، وقتی طبیعت هم شهادت
+            نمی‌دهد؟
+          </p>
+          <div class="final-line">
+            باران می‌بارد، سنگ می‌ماند،<br>
+            و انسان — تنها با حسرتش.
+          </div>
+          <div class="author-name">حسین محمدی امیرزا</div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- BACK -->
+    <div class="back-area">
+      <div class="container">
+        <a class="back-button" href="../index.html#screenplays">
+          <span>←</span>
+          <span>بازگشت به فیلم‌نامه‌ها</span>
+        </a>
+      </div>
+    </div>
+
+  </main>
+
+
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-brand">حسین محمدی امیرزا</div>
+      <div class="footer-copy">© حسین محمدی امیرزا · همه حقوق محفوظ است</div>
+    </div>
+  </footer>
+
+
+  <script>
+    (function () {
+      const reveals = document.querySelectorAll('.reveal');
+      if (!reveals.length) return;
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
+      );
+
+      reveals.forEach((el) => observer.observe(el));
+    })();
+  </script>
+
+</body>
+</html>
