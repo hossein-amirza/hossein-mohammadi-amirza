@@ -8,12 +8,12 @@
 
   <meta name="description" content="فراز و فرود سرنوشت قوم زند؛ روایتی تاریخی از هویت، فرهنگ، دلاوری و فراز و فرودهای قوم زند، نوشته حسین محمدی.">
   <meta name="author" content="حسین محمدی">
-  <meta name="theme-color" content="#0a0e0a">
+  <meta name="theme-color" content="#1a1208">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Vazirmatn:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Vazirmatn:wght@200;300;400;500;600;700;800;900&family=Lalezar&display=swap" rel="stylesheet">
 
   <style>
 
@@ -30,39 +30,53 @@
     }
 
     :root {
+      /* طلایی */
+      --gold-50:  #fdf6e3;
       --gold-100: #f5e6c8;
-      --gold-200: #e8d5a8;
+      --gold-200: #ecd9a8;
       --gold-300: #d4b978;
       --gold-400: #c9a961;
       --gold-500: #b8923f;
       --gold-600: #9a7730;
       --gold-700: #7a5d24;
 
-      --green-900: #0a0e0a;
-      --green-800: #0f140f;
-      --green-700: #151c15;
-      --green-600: #1d261d;
-      --green-500: #2a362a;
-      --green-400: #3d4d3d;
+      /* قهوه‌ای */
+      --brown-100: #e8dcc4;
+      --brown-200: #c9b896;
+      --brown-300: #a8916a;
+      --brown-400: #8a6f4a;
+      --brown-500: #6b5233;
+      --brown-600: #4a3822;
+      --brown-700: #2e2214;
+      --brown-800: #1e160c;
 
-      --blue-900: #0d1520;
-      --blue-800: #15202e;
-      --blue-700: #1f3040;
-      --blue-600: #2a4055;
+      /* کرم / کاغذ */
+      --cream-50:  #faf6ee;
+      --cream-100: #f5efe0;
+      --cream-200: #ece3d0;
+      --cream-300: #ddd0b5;
 
-      --cream: #e4d7bb;
-      --cream-dim: #b8ae98;
-      --cream-muted: #8a8272;
+      /* آبی سرمه‌ای */
+      --blue-100: #cdd8e8;
+      --blue-200: #9db1cc;
+      --blue-300: #6b85a8;
+      --blue-400: #3f5a7d;
+      --blue-500: #253c5c;
+      --blue-600: #16273f;
+      --blue-700: #0d1a2b;
+      --blue-800: #07101c;
 
-      --shadow-deep: 0 30px 80px rgba(0, 0, 0, 0.55);
-      --shadow-soft: 0 15px 45px rgba(0, 0, 0, 0.35);
-      --shadow-glow: 0 0 60px rgba(184, 146, 63, 0.12);
+      /* مشکی طلایی */
+      --ink-100: #d9cdb3;
+      --ink-200: #a89878;
+      --ink-300: #6e6148;
+      --ink-400: #3d3423;
+      --ink-500: #241d11;
+      --ink-600: #16110a;
+      --ink-700: #0c0905;
 
-      --radius-sm: 10px;
-      --radius-md: 18px;
-      --radius-lg: 28px;
-      --radius-xl: 36px;
-
+      --shadow-deep: 0 30px 80px rgba(0, 0, 0, 0.35);
+      --shadow-soft: 0 15px 45px rgba(0, 0, 0, 0.2);
       --transition: cubic-bezier(0.22, 0.61, 0.36, 1);
     }
 
@@ -74,81 +88,21 @@
 
     body {
       font-family: "Vazirmatn", sans-serif;
-      font-weight: 300;
-      color: var(--cream);
-      background: var(--green-900);
+      font-weight: 400;
+      color: var(--brown-700);
+      background: var(--cream-100);
       min-height: 100vh;
       overflow-x: hidden;
       line-height: 2;
-      position: relative;
-    }
-
-    /* =========================================================
-       BACKGROUND TEXTURE & ATMOSPHERE
-    ========================================================= */
-
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      z-index: 0;
-      background:
-        radial-gradient(ellipse 80% 50% at 15% 0%, rgba(184, 146, 63, 0.08), transparent 60%),
-        radial-gradient(ellipse 70% 60% at 85% 15%, rgba(31, 48, 64, 0.35), transparent 55%),
-        radial-gradient(ellipse 90% 70% at 50% 100%, rgba(29, 38, 29, 0.6), transparent 60%),
-        linear-gradient(160deg, #080b08 0%, #0f140f 35%, #0d1210 70%, #0a0e0a 100%);
-    }
-
-    body::after {
-      content: "";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      z-index: 1;
-      opacity: 0.35;
-      background-image:
-        repeating-linear-gradient(
-          0deg,
-          rgba(255, 255, 255, 0.012) 0,
-          rgba(255, 255, 255, 0.012) 1px,
-          transparent 1px,
-          transparent 3px
-        ),
-        repeating-linear-gradient(
-          90deg,
-          rgba(255, 255, 255, 0.008) 0,
-          rgba(255, 255, 255, 0.008) 1px,
-          transparent 1px,
-          transparent 4px
-        );
-    }
-
-    /* Grain overlay */
-    .grain {
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      z-index: 2;
-      opacity: 0.5;
-      mix-blend-mode: overlay;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
     }
 
     ::selection {
       background: rgba(184, 146, 63, 0.35);
-      color: #fff8e8;
+      color: var(--brown-800);
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
 
     .container {
       width: min(1180px, calc(100% - 48px));
@@ -158,32 +112,48 @@
     }
 
     /* =========================================================
-       TOP NAVIGATION
+       UNIVERSAL TEXTURE / GRAIN
+    ========================================================= */
+
+    .grain {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.35;
+      mix-blend-mode: multiply;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.25'/%3E%3C/svg%3E");
+    }
+
+    /* =========================================================
+       TOP NAVIGATION — مشکی طلایی
     ========================================================= */
 
     .topbar {
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(8, 11, 8, 0.72);
-      backdrop-filter: blur(24px) saturate(1.4);
-      -webkit-backdrop-filter: blur(24px) saturate(1.4);
-      border-bottom: 1px solid rgba(184, 146, 63, 0.1);
-      transition: background 0.4s var(--transition);
+      background:
+        linear-gradient(180deg, rgba(22, 17, 10, 0.97), rgba(12, 9, 5, 0.95));
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(184, 146, 63, 0.25);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
     }
 
     .topbar::after {
       content: "";
       position: absolute;
       bottom: -1px;
-      left: 10%;
-      right: 10%;
+      left: 15%;
+      right: 15%;
       height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(184, 146, 63, 0.25), transparent);
+      background: linear-gradient(90deg, transparent, var(--gold-400), transparent);
+      opacity: 0.6;
     }
 
     .topbar-inner {
-      min-height: 76px;
+      min-height: 78px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -197,7 +167,7 @@
       white-space: nowrap;
       letter-spacing: 0.3px;
       position: relative;
-      padding-right: 16px;
+      padding-right: 18px;
       transition: color 0.3s var(--transition);
     }
 
@@ -207,16 +177,14 @@
       right: 0;
       top: 50%;
       transform: translateY(-50%);
-      width: 4px;
-      height: 22px;
-      background: linear-gradient(to bottom, var(--gold-400), var(--gold-600));
+      width: 5px;
+      height: 24px;
+      background: linear-gradient(to bottom, var(--gold-300), var(--gold-600));
       border-radius: 2px;
-      box-shadow: 0 0 12px rgba(184, 146, 63, 0.5);
+      box-shadow: 0 0 14px rgba(184, 146, 63, 0.7);
     }
 
-    .brand:hover {
-      color: var(--gold-100);
-    }
+    .brand:hover { color: var(--gold-100); }
 
     .nav {
       display: flex;
@@ -227,75 +195,62 @@
     }
 
     .nav a {
-      color: var(--cream-dim);
+      color: var(--ink-100);
       font-size: 0.85rem;
       font-weight: 400;
       padding: 8px 14px;
       border-radius: 999px;
       transition: all 0.3s var(--transition);
-      position: relative;
       white-space: nowrap;
-    }
-
-    .nav a::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      border-radius: 999px;
-      background: linear-gradient(135deg, rgba(184, 146, 63, 0.12), rgba(184, 146, 63, 0.04));
-      opacity: 0;
-      transition: opacity 0.3s var(--transition);
     }
 
     .nav a:hover {
       color: var(--gold-200);
-    }
-
-    .nav a:hover::before {
-      opacity: 1;
+      background: rgba(184, 146, 63, 0.12);
     }
 
     /* =========================================================
-       HERO
+       HERO — طلایی چرمی / چرم کهنه
     ========================================================= */
 
     .hero {
       position: relative;
-      padding: 100px 0 80px;
+      padding: 110px 0 90px;
       overflow: hidden;
+      background:
+        radial-gradient(ellipse 70% 80% at 80% 20%, rgba(255, 210, 130, 0.18), transparent 55%),
+        radial-gradient(ellipse 60% 70% at 15% 80%, rgba(90, 40, 10, 0.35), transparent 60%),
+        linear-gradient(155deg, #b8923f 0%, #a67c34 20%, #8a6428 45%, #6b4d1e 75%, #4a3413 100%);
+      color: var(--gold-50);
     }
 
     .hero::before {
       content: "";
       position: absolute;
-      width: 700px;
-      height: 700px;
-      top: -280px;
-      right: -220px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(184, 146, 63, 0.14), rgba(184, 146, 63, 0.04) 40%, transparent 70%);
-      filter: blur(40px);
+      inset: 0;
       pointer-events: none;
-      animation: floatGlow 12s ease-in-out infinite;
+      opacity: 0.5;
+      background-image:
+        radial-gradient(circle at 20% 30%, rgba(255, 220, 150, 0.15), transparent 40%),
+        radial-gradient(circle at 75% 65%, rgba(60, 30, 5, 0.3), transparent 50%),
+        repeating-linear-gradient(
+          45deg,
+          rgba(255, 255, 255, 0.02) 0,
+          rgba(255, 255, 255, 0.02) 2px,
+          transparent 2px,
+          transparent 6px
+        );
     }
 
     .hero::after {
       content: "";
       position: absolute;
-      width: 550px;
-      height: 550px;
-      bottom: -280px;
-      left: -180px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(31, 48, 64, 0.4), rgba(31, 48, 64, 0.1) 45%, transparent 70%);
-      filter: blur(50px);
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 120px;
+      background: linear-gradient(to bottom, transparent, rgba(20, 14, 8, 0.35));
       pointer-events: none;
-      animation: floatGlow 15s ease-in-out infinite reverse;
-    }
-
-    @keyframes floatGlow {
-      0%, 100% { transform: translate(0, 0) scale(1); }
-      50% { transform: translate(-20px, 20px) scale(1.08); }
     }
 
     .hero-grid {
@@ -303,53 +258,52 @@
       grid-template-columns: 1.1fr 0.9fr;
       gap: 80px;
       align-items: center;
-    }
-
-    .hero-content {
       position: relative;
       z-index: 2;
     }
+
+    .hero-content { position: relative; }
 
     .eyebrow {
       display: inline-flex;
       align-items: center;
       gap: 12px;
       padding: 8px 18px;
-      border: 1px solid rgba(184, 146, 63, 0.22);
+      border: 1px solid rgba(253, 246, 227, 0.4);
       border-radius: 999px;
-      color: var(--gold-300);
-      background: linear-gradient(135deg, rgba(184, 146, 63, 0.08), rgba(184, 146, 63, 0.02));
+      color: var(--gold-50);
+      background: rgba(20, 12, 4, 0.25);
       font-size: 0.82rem;
-      font-weight: 400;
+      font-weight: 500;
       margin-bottom: 28px;
-      letter-spacing: 0.3px;
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+      letter-spacing: 0.5px;
+      backdrop-filter: blur(4px);
     }
 
     .eyebrow::before {
       content: "";
       width: 8px;
       height: 8px;
-      background: radial-gradient(circle, var(--gold-300), var(--gold-500));
+      background: radial-gradient(circle, var(--gold-100), var(--gold-400));
       border-radius: 50%;
-      box-shadow: 0 0 14px rgba(184, 146, 63, 0.8);
+      box-shadow: 0 0 14px rgba(253, 246, 227, 0.9);
       animation: pulse 3s ease-in-out infinite;
     }
 
     @keyframes pulse {
       0%, 100% { transform: scale(1); opacity: 1; }
-      50% { transform: scale(1.2); opacity: 0.7; }
+      50% { transform: scale(1.25); opacity: 0.7; }
     }
 
     .hero h1 {
       font-family: "Amiri", serif;
-      font-size: clamp(2.8rem, 6vw, 5.2rem);
-      line-height: 1.22;
-      color: var(--gold-100);
+      font-size: clamp(3rem, 6.5vw, 5.6rem);
+      line-height: 1.15;
+      color: #fffaf0;
       font-weight: 700;
       text-shadow:
-        0 3px 30px rgba(0, 0, 0, 0.6),
-        0 0 60px rgba(184, 146, 63, 0.1);
+        0 3px 20px rgba(40, 20, 0, 0.5),
+        0 0 80px rgba(255, 220, 150, 0.25);
       margin-bottom: 16px;
       letter-spacing: -0.5px;
     }
@@ -357,7 +311,7 @@
     .hero-subtitle {
       font-family: "Amiri", serif;
       font-size: clamp(1.3rem, 2.6vw, 1.9rem);
-      color: var(--cream-muted);
+      color: rgba(253, 246, 227, 0.75);
       margin-bottom: 28px;
       font-style: italic;
       letter-spacing: 0.5px;
@@ -365,12 +319,12 @@
 
     .hero-subtitle::before {
       content: "— ";
-      color: var(--gold-500);
+      color: rgba(253, 246, 227, 0.5);
     }
 
     .hero-description {
-      color: var(--cream-dim);
-      font-size: 1.02rem;
+      color: rgba(255, 250, 240, 0.9);
+      font-size: 1.05rem;
       font-weight: 300;
       max-width: 620px;
       line-height: 2.2;
@@ -381,15 +335,15 @@
       display: flex;
       align-items: center;
       gap: 16px;
-      color: var(--gold-300);
+      color: var(--gold-50);
       font-size: 1rem;
-      font-weight: 400;
+      font-weight: 500;
     }
 
     .author-line {
       width: 60px;
       height: 1px;
-      background: linear-gradient(90deg, transparent, var(--gold-500));
+      background: linear-gradient(90deg, transparent, var(--gold-100));
       position: relative;
     }
 
@@ -401,9 +355,9 @@
       transform: translateY(-50%);
       width: 6px;
       height: 6px;
-      background: var(--gold-400);
+      background: var(--gold-100);
       border-radius: 50%;
-      box-shadow: 0 0 10px rgba(184, 146, 63, 0.6);
+      box-shadow: 0 0 12px rgba(253, 246, 227, 0.9);
     }
 
     .hero-tags {
@@ -414,21 +368,21 @@
     }
 
     .tag {
-      border: 1px solid rgba(184, 146, 63, 0.16);
-      color: var(--cream-muted);
+      border: 1px solid rgba(253, 246, 227, 0.3);
+      color: rgba(253, 246, 227, 0.95);
       padding: 6px 14px;
       border-radius: 999px;
       font-size: 0.76rem;
       font-weight: 400;
-      background: rgba(255, 255, 255, 0.02);
+      background: rgba(20, 12, 4, 0.25);
       transition: all 0.3s var(--transition);
+      backdrop-filter: blur(4px);
       cursor: default;
     }
 
     .tag:hover {
-      border-color: rgba(184, 146, 63, 0.35);
-      color: var(--gold-200);
-      background: rgba(184, 146, 63, 0.06);
+      border-color: rgba(253, 246, 227, 0.7);
+      background: rgba(20, 12, 4, 0.4);
       transform: translateY(-2px);
     }
 
@@ -441,30 +395,35 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 620px;
+      min-height: 640px;
     }
 
     .cover-glow {
       position: absolute;
-      width: 420px;
-      height: 540px;
+      width: 460px;
+      height: 580px;
       border-radius: 50%;
-      background: radial-gradient(ellipse, rgba(184, 146, 63, 0.2), rgba(31, 48, 64, 0.1) 45%, transparent 70%);
-      filter: blur(30px);
+      background: radial-gradient(ellipse, rgba(255, 220, 150, 0.35), rgba(255, 180, 80, 0.1) 45%, transparent 70%);
+      filter: blur(40px);
       animation: floatGlow 8s ease-in-out infinite;
+    }
+
+    @keyframes floatGlow {
+      0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.9; }
+      50% { transform: translate(-15px, 20px) scale(1.08); opacity: 1; }
     }
 
     .cover-frame {
       position: relative;
-      width: min(370px, 78%);
-      padding: 12px;
+      width: min(390px, 80%);
+      padding: 14px;
       background:
-        linear-gradient(145deg, rgba(212, 185, 120, 0.7), rgba(92, 72, 37, 0.4), rgba(212, 185, 120, 0.55));
+        linear-gradient(145deg, #f5e6c8, #b8923f 30%, #6b4d1e 70%, #f5e6c8);
       border-radius: 6px;
       box-shadow:
-        0 40px 90px rgba(0, 0, 0, 0.7),
-        0 0 70px rgba(184, 146, 63, 0.1),
-        inset 0 1px 0 rgba(255, 255, 255, 0.15);
+        0 45px 100px rgba(20, 10, 0, 0.65),
+        0 0 90px rgba(255, 220, 150, 0.3),
+        inset 0 2px 0 rgba(255, 255, 255, 0.3);
       transform: rotate(1.5deg);
       transition: all 0.6s var(--transition);
     }
@@ -472,25 +431,25 @@
     .cover-frame::before {
       content: "";
       position: absolute;
-      inset: -3px;
+      inset: -4px;
       border-radius: 8px;
-      background: linear-gradient(145deg, rgba(212, 185, 120, 0.3), transparent, rgba(212, 185, 120, 0.2));
+      background: linear-gradient(145deg, rgba(255, 240, 200, 0.4), transparent, rgba(255, 240, 200, 0.3));
       z-index: -1;
-      filter: blur(8px);
+      filter: blur(10px);
     }
 
     .cover-frame:hover {
-      transform: rotate(0deg) translateY(-12px) scale(1.02);
+      transform: rotate(0deg) translateY(-14px) scale(1.03);
       box-shadow:
-        0 55px 110px rgba(0, 0, 0, 0.75),
-        0 0 90px rgba(184, 146, 63, 0.18),
-        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        0 60px 120px rgba(20, 10, 0, 0.7),
+        0 0 120px rgba(255, 220, 150, 0.4),
+        inset 0 2px 0 rgba(255, 255, 255, 0.4);
     }
 
     .cover-inner {
-      padding: 6px;
-      background: #12150f;
-      border: 1px solid rgba(212, 185, 120, 0.3);
+      padding: 7px;
+      background: #1a1208;
+      border: 1px solid rgba(245, 230, 200, 0.5);
       border-radius: 3px;
       overflow: hidden;
     }
@@ -503,85 +462,92 @@
     }
 
     .cover-frame:hover .cover-inner img {
-      transform: scale(1.03);
+      transform: scale(1.04);
     }
 
     .cover-caption {
       position: absolute;
-      bottom: -26px;
+      bottom: -30px;
       right: 50%;
       transform: translateX(50%);
       white-space: nowrap;
-      color: var(--cream-muted);
-      font-size: 0.72rem;
-      font-weight: 300;
+      color: rgba(253, 246, 227, 0.9);
+      font-size: 0.76rem;
+      font-weight: 400;
       letter-spacing: 0.5px;
       font-family: "Amiri", serif;
+      text-shadow: 0 2px 8px rgba(40, 20, 0, 0.5);
     }
 
     /* =========================================================
-       QUICK NAV
+       QUICK NAV — پل بین طلایی و کرم
     ========================================================= */
 
     .quick-nav {
-      margin: 30px 0 80px;
+      padding: 40px 0;
+      background:
+        linear-gradient(180deg, #4a3413, #6b4d1e 30%, #a67c34 70%, #b8923f);
+      position: relative;
+    }
+
+    .quick-nav::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 60px;
+      background: linear-gradient(to bottom, transparent, var(--cream-100));
+      pointer-events: none;
     }
 
     .quick-inner {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 6px;
-      padding: 14px;
-      border: 1px solid rgba(184, 146, 63, 0.1);
-      background: rgba(15, 20, 15, 0.65);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border-radius: var(--radius-md);
-      box-shadow:
-        0 20px 55px rgba(0, 0, 0, 0.25),
-        inset 0 1px 0 rgba(255, 255, 255, 0.03);
+      gap: 8px;
+      padding: 16px;
+      border: 1px solid rgba(253, 246, 227, 0.25);
+      background: rgba(20, 12, 4, 0.35);
+      backdrop-filter: blur(12px);
+      border-radius: 999px;
+      box-shadow: 0 15px 40px rgba(20, 10, 0, 0.3);
+      position: relative;
+      z-index: 2;
+      width: fit-content;
+      margin: auto;
     }
 
     .quick-inner a {
       padding: 9px 18px;
-      color: var(--cream-muted);
+      color: rgba(253, 246, 227, 0.85);
       font-size: 0.82rem;
       font-weight: 400;
-      border-radius: var(--radius-sm);
+      border-radius: 999px;
       transition: all 0.3s var(--transition);
-      position: relative;
     }
 
     .quick-inner a:hover {
-      color: var(--gold-200);
-      background: rgba(184, 146, 63, 0.08);
+      color: #fffaf0;
+      background: rgba(253, 246, 227, 0.15);
       transform: translateY(-2px);
     }
 
     /* =========================================================
-       SECTION
+       SECTION BASE
     ========================================================= */
 
-    section {
-      scroll-margin-top: 100px;
-    }
-
-    .section {
-      padding: 85px 0;
-      position: relative;
-    }
+    section { scroll-margin-top: 100px; }
 
     .section-heading {
-      margin-bottom: 45px;
+      margin-bottom: 50px;
       text-align: center;
       position: relative;
     }
 
     .section-kicker {
-      color: var(--gold-500);
       font-size: 0.75rem;
-      font-weight: 500;
+      font-weight: 600;
       letter-spacing: 3px;
       margin-bottom: 12px;
       text-transform: uppercase;
@@ -590,95 +556,158 @@
 
     .section-title {
       font-family: "Amiri", serif;
-      font-size: clamp(2rem, 4.2vw, 3rem);
-      color: var(--gold-100);
-      line-height: 1.4;
+      font-size: clamp(2rem, 4.2vw, 3.2rem);
+      line-height: 1.35;
       font-weight: 700;
       letter-spacing: -0.3px;
     }
 
     .section-line {
-      width: 80px;
+      width: 90px;
       height: 1px;
-      margin: 22px auto 0;
-      background: linear-gradient(90deg, transparent, var(--gold-500), transparent);
+      margin: 24px auto 0;
       position: relative;
     }
 
     .section-line::before {
-      content: "◆";
+      content: "❖";
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      color: var(--gold-500);
-      font-size: 0.55rem;
-      background: var(--green-900);
-      padding: 0 8px;
+      font-size: 0.7rem;
+      padding: 0 10px;
+      background: inherit;
     }
 
     /* =========================================================
-       INTRO CARD
+       ABOUT — کرم کاغذی
     ========================================================= */
+
+    .section-about {
+      padding: 100px 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 20% 0%, rgba(184, 146, 63, 0.08), transparent 60%),
+        radial-gradient(ellipse 50% 40% at 90% 100%, rgba(107, 82, 51, 0.06), transparent 60%),
+        linear-gradient(180deg, var(--cream-100), var(--cream-50) 50%, var(--cream-100));
+      position: relative;
+    }
+
+    .section-about::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: 0.4;
+      background-image:
+        repeating-linear-gradient(0deg, rgba(139, 111, 74, 0.03) 0, rgba(139, 111, 74, 0.03) 1px, transparent 1px, transparent 22px);
+      pointer-events: none;
+    }
+
+    .section-about .section-kicker { color: var(--gold-600); }
+    .section-about .section-title { color: var(--brown-700); }
+    .section-about .section-line {
+      background: linear-gradient(90deg, transparent, var(--gold-500), transparent);
+    }
+    .section-about .section-line::before {
+      color: var(--gold-500);
+      background: var(--cream-50);
+    }
 
     .intro-card {
       position: relative;
       max-width: 960px;
       margin: auto;
-      padding: 50px 55px;
-      border: 1px solid rgba(184, 146, 63, 0.14);
-      border-radius: var(--radius-xl);
+      padding: 55px 60px;
+      border: 1px solid rgba(184, 146, 63, 0.2);
+      border-radius: 24px;
       background:
-        linear-gradient(145deg, rgba(29, 38, 29, 0.5), rgba(13, 18, 13, 0.85));
+        linear-gradient(145deg, rgba(255, 255, 255, 0.6), rgba(236, 227, 208, 0.4));
       box-shadow:
-        var(--shadow-deep),
-        inset 0 1px 0 rgba(255, 255, 255, 0.03);
-      backdrop-filter: blur(8px);
+        0 25px 70px rgba(139, 111, 74, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(6px);
       overflow: hidden;
     }
 
     .intro-card::before {
       content: "❖";
       position: absolute;
-      top: 22px;
-      right: 30px;
-      color: rgba(184, 146, 63, 0.15);
-      font-size: 1.4rem;
+      top: 24px;
+      right: 32px;
+      color: rgba(184, 146, 63, 0.4);
+      font-size: 1.5rem;
     }
 
     .intro-card::after {
       content: "";
       position: absolute;
-      top: 0;
-      right: 0;
-      width: 200px;
-      height: 200px;
-      background: radial-gradient(circle, rgba(184, 146, 63, 0.06), transparent 70%);
+      top: -40px;
+      left: -40px;
+      width: 220px;
+      height: 220px;
+      background: radial-gradient(circle, rgba(184, 146, 63, 0.08), transparent 70%);
       pointer-events: none;
     }
 
     .intro-card p {
-      color: var(--cream-dim);
-      font-size: 1.02rem;
-      font-weight: 300;
-      line-height: 2.3;
+      color: var(--brown-600);
+      font-size: 1.05rem;
+      font-weight: 400;
+      line-height: 2.35;
       text-align: justify;
     }
 
-    .intro-card p + p {
-      margin-top: 22px;
-    }
+    .intro-card p + p { margin-top: 22px; }
 
     .intro-card p::first-letter {
       font-family: "Amiri", serif;
-      font-size: 1.4em;
-      color: var(--gold-300);
+      font-size: 1.6em;
+      color: var(--gold-600);
       font-weight: 700;
+      line-height: 1;
     }
 
     /* =========================================================
-       PREFACE
+       PREFACE — آبی سرمه‌ای شب کویر
     ========================================================= */
+
+    .section-preface {
+      padding: 110px 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(63, 90, 125, 0.25), transparent 60%),
+        radial-gradient(ellipse 70% 50% at 20% 100%, rgba(20, 30, 50, 0.5), transparent 60%),
+        radial-gradient(circle at 90% 30%, rgba(157, 177, 204, 0.08), transparent 40%),
+        linear-gradient(160deg, #16273f 0%, #0d1a2b 40%, #07101c 100%);
+      position: relative;
+      color: var(--cream-100);
+      overflow: hidden;
+    }
+
+    .section-preface::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.8;
+      background-image:
+        radial-gradient(circle at 15% 20%, rgba(255, 255, 255, 0.6) 0.5px, transparent 1px),
+        radial-gradient(circle at 45% 60%, rgba(255, 255, 255, 0.5) 0.4px, transparent 1px),
+        radial-gradient(circle at 78% 25%, rgba(255, 255, 255, 0.4) 0.6px, transparent 1px),
+        radial-gradient(circle at 88% 78%, rgba(255, 255, 255, 0.5) 0.5px, transparent 1px),
+        radial-gradient(circle at 25% 85%, rgba(255, 255, 255, 0.3) 0.4px, transparent 1px),
+        radial-gradient(circle at 60% 40%, rgba(255, 255, 255, 0.4) 0.3px, transparent 1px);
+      background-size: 500px 500px, 700px 700px, 800px 800px, 600px 600px, 900px 900px, 400px 400px;
+    }
+
+    .section-preface .section-kicker { color: var(--gold-400); }
+    .section-preface .section-title { color: var(--gold-100); }
+    .section-preface .section-line {
+      background: linear-gradient(90deg, transparent, var(--gold-400), transparent);
+    }
+    .section-preface .section-line::before {
+      color: var(--gold-400);
+      background: var(--blue-700);
+    }
 
     .preface-wrapper {
       max-width: 960px;
@@ -689,23 +718,24 @@
     .preface-wrapper::before {
       content: "";
       position: absolute;
-      right: -24px;
+      right: -28px;
       top: 20px;
       bottom: 20px;
       width: 2px;
-      background: linear-gradient(to bottom, transparent, rgba(184, 146, 63, 0.35), rgba(184, 146, 63, 0.1), transparent);
+      background: linear-gradient(to bottom, transparent, rgba(212, 185, 120, 0.5), rgba(212, 185, 120, 0.15), transparent);
       border-radius: 1px;
     }
 
     .preface-card {
-      padding: 55px 60px;
-      border-radius: var(--radius-xl);
+      padding: 60px 65px;
+      border-radius: 28px;
       background:
-        linear-gradient(135deg, rgba(25, 33, 27, 0.85), rgba(13, 17, 13, 0.95));
-      border: 1px solid rgba(184, 146, 63, 0.1);
+        linear-gradient(145deg, rgba(30, 48, 76, 0.55), rgba(10, 20, 35, 0.7));
+      border: 1px solid rgba(212, 185, 120, 0.15);
       box-shadow:
-        var(--shadow-deep),
-        inset 0 1px 0 rgba(255, 255, 255, 0.02);
+        0 35px 90px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(8px);
       position: relative;
       overflow: hidden;
     }
@@ -713,72 +743,88 @@
     .preface-card::before {
       content: "";
       position: absolute;
-      top: 0;
-      right: 0;
-      width: 300px;
-      height: 300px;
-      background: radial-gradient(circle, rgba(184, 146, 63, 0.04), transparent 70%);
+      top: -80px;
+      right: -80px;
+      width: 320px;
+      height: 320px;
+      background: radial-gradient(circle, rgba(212, 185, 120, 0.08), transparent 70%);
       pointer-events: none;
     }
 
     .preface-card p {
-      color: var(--cream-dim);
-      line-height: 2.5;
-      font-size: 1rem;
+      color: rgba(228, 215, 187, 0.92);
+      line-height: 2.55;
+      font-size: 1.02rem;
       font-weight: 300;
       text-align: justify;
       margin-bottom: 26px;
       position: relative;
     }
 
-    .preface-card p:last-of-type {
-      margin-bottom: 0;
-    }
+    .preface-card p:last-of-type { margin-bottom: 0; }
 
     .preface-card p::first-letter {
       font-family: "Amiri", serif;
-      font-size: 1.5em;
+      font-size: 1.7em;
       color: var(--gold-300);
       font-weight: 700;
       line-height: 1;
+      text-shadow: 0 0 20px rgba(212, 185, 120, 0.3);
     }
 
     .signature {
-      margin-top: 40px;
-      padding-top: 28px;
-      border-top: 1px solid rgba(184, 146, 63, 0.08);
+      margin-top: 45px;
+      padding-top: 30px;
+      border-top: 1px solid rgba(212, 185, 120, 0.15);
       color: var(--gold-300);
       font-family: "Amiri", serif;
-      font-size: 1.25rem;
+      font-size: 1.3rem;
       text-align: left;
       line-height: 1.8;
+      position: relative;
     }
 
     /* =========================================================
-       FIGURES
+       FIGURES — کرم قهوه‌ای گرم
     ========================================================= */
 
-    .figures-section {
+    .section-figures {
+      padding: 110px 0;
       background:
-        linear-gradient(180deg, transparent, rgba(31, 48, 64, 0.06), transparent);
+        radial-gradient(ellipse 70% 50% at 15% 0%, rgba(184, 146, 63, 0.12), transparent 60%),
+        radial-gradient(ellipse 60% 60% at 85% 100%, rgba(122, 93, 36, 0.1), transparent 60%),
+        linear-gradient(180deg, var(--cream-100), #ece3d0 50%, #e2d6bd);
       position: relative;
+    }
+
+    .section-figures .section-kicker { color: var(--gold-600); }
+    .section-figures .section-title { color: var(--brown-700); }
+    .section-figures .section-line {
+      background: linear-gradient(90deg, transparent, var(--gold-500), transparent);
+    }
+    .section-figures .section-line::before {
+      color: var(--gold-500);
+      background: #e2d6bd;
     }
 
     .figures-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
+      gap: 22px;
     }
 
     .figure-card {
       position: relative;
-      padding: 32px 28px;
-      border-radius: var(--radius-lg);
-      border: 1px solid rgba(184, 146, 63, 0.1);
+      padding: 36px 30px;
+      border-radius: 22px;
+      border: 1px solid rgba(139, 111, 74, 0.15);
       background:
-        linear-gradient(145deg, rgba(31, 48, 64, 0.25), rgba(15, 20, 15, 0.7));
+        linear-gradient(145deg, rgba(255, 255, 255, 0.75), rgba(236, 227, 208, 0.5));
       transition: all 0.4s var(--transition);
       overflow: hidden;
+      box-shadow:
+        0 8px 25px rgba(139, 111, 74, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
       cursor: default;
     }
 
@@ -787,9 +833,9 @@
       position: absolute;
       top: 0;
       right: 0;
-      width: 120px;
-      height: 120px;
-      background: radial-gradient(circle, rgba(184, 146, 63, 0.06), transparent 70%);
+      width: 140px;
+      height: 140px;
+      background: radial-gradient(circle, rgba(184, 146, 63, 0.12), transparent 70%);
       opacity: 0;
       transition: opacity 0.4s var(--transition);
     }
@@ -797,80 +843,108 @@
     .figure-card::after {
       content: "";
       position: absolute;
-      bottom: -60px;
-      left: -60px;
-      width: 130px;
-      height: 130px;
+      bottom: -70px;
+      left: -70px;
+      width: 150px;
+      height: 150px;
       border-radius: 50%;
-      background: rgba(184, 146, 63, 0.03);
+      background: rgba(184, 146, 63, 0.06);
       transition: all 0.4s var(--transition);
     }
 
     .figure-card:hover {
       transform: translateY(-8px);
-      border-color: rgba(184, 146, 63, 0.25);
+      border-color: rgba(184, 146, 63, 0.4);
       background:
-        linear-gradient(145deg, rgba(36, 56, 77, 0.35), rgba(20, 26, 20, 0.8));
+        linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(236, 227, 208, 0.7));
       box-shadow:
-        0 25px 60px rgba(0, 0, 0, 0.4),
-        0 0 40px rgba(184, 146, 63, 0.06);
+        0 25px 55px rgba(139, 111, 74, 0.18),
+        0 0 45px rgba(184, 146, 63, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 1);
     }
 
-    .figure-card:hover::before {
-      opacity: 1;
-    }
-
+    .figure-card:hover::before { opacity: 1; }
     .figure-card:hover::after {
       transform: scale(1.3);
-      background: rgba(184, 146, 63, 0.05);
+      background: rgba(184, 146, 63, 0.1);
     }
 
     .figure-number {
       color: var(--gold-600);
-      font-size: 0.75rem;
-      font-weight: 500;
-      margin-bottom: 10px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      margin-bottom: 12px;
       font-family: "Vazirmatn", sans-serif;
-      letter-spacing: 1px;
+      letter-spacing: 1.5px;
     }
 
     .figure-name {
       font-family: "Amiri", serif;
-      color: var(--gold-200);
-      font-size: 1.4rem;
-      margin-bottom: 10px;
+      color: var(--brown-700);
+      font-size: 1.45rem;
+      margin-bottom: 12px;
       font-weight: 700;
       line-height: 1.4;
     }
 
     .figure-text {
-      color: var(--cream-muted);
-      font-size: 0.87rem;
-      font-weight: 300;
+      color: var(--brown-500);
+      font-size: 0.9rem;
+      font-weight: 400;
       line-height: 2;
     }
 
     /* =========================================================
-       THEMES
+       THEMES — مشکی طلایی ملایم
     ========================================================= */
+
+    .section-themes {
+      padding: 110px 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(184, 146, 63, 0.12), transparent 60%),
+        radial-gradient(ellipse 70% 50% at 15% 100%, rgba(122, 93, 36, 0.15), transparent 60%),
+        linear-gradient(180deg, #1e160c, #16110a 50%, #241d11);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .section-themes::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.4;
+      background-image:
+        repeating-linear-gradient(45deg, rgba(245, 230, 200, 0.015) 0, rgba(245, 230, 200, 0.015) 1px, transparent 1px, transparent 8px);
+    }
+
+    .section-themes .section-kicker { color: var(--gold-400); }
+    .section-themes .section-title { color: var(--gold-100); }
+    .section-themes .section-line {
+      background: linear-gradient(90deg, transparent, var(--gold-400), transparent);
+    }
+    .section-themes .section-line::before {
+      color: var(--gold-400);
+      background: #16110a;
+    }
 
     .themes-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
+      gap: 16px;
     }
 
     .theme-card {
-      min-height: 160px;
-      padding: 28px 20px;
+      min-height: 170px;
+      padding: 32px 22px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
-      border-radius: var(--radius-lg);
-      background: rgba(255, 255, 255, 0.015);
-      border: 1px solid rgba(184, 146, 63, 0.08);
+      border-radius: 20px;
+      background: rgba(245, 230, 200, 0.03);
+      border: 1px solid rgba(184, 146, 63, 0.18);
       transition: all 0.4s var(--transition);
       position: relative;
       overflow: hidden;
@@ -881,170 +955,254 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: radial-gradient(circle at 50% 0%, rgba(184, 146, 63, 0.08), transparent 70%);
+      background: radial-gradient(circle at 50% 0%, rgba(184, 146, 63, 0.18), transparent 70%);
       opacity: 0;
       transition: opacity 0.4s var(--transition);
     }
 
+    .theme-card::after {
+      content: "";
+      position: absolute;
+      inset: 4px;
+      border: 1px solid rgba(184, 146, 63, 0);
+      border-radius: 16px;
+      transition: border-color 0.4s var(--transition);
+    }
+
     .theme-card:hover {
       transform: translateY(-6px);
-      background: rgba(184, 146, 63, 0.04);
-      border-color: rgba(184, 146, 63, 0.2);
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+      background: rgba(184, 146, 63, 0.08);
+      border-color: rgba(184, 146, 63, 0.5);
+      box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.5),
+        0 0 40px rgba(184, 146, 63, 0.12);
     }
 
-    .theme-card:hover::before {
-      opacity: 1;
-    }
+    .theme-card:hover::before { opacity: 1; }
+    .theme-card:hover::after { border-color: rgba(184, 146, 63, 0.25); }
 
     .theme-symbol {
-      font-size: 1.6rem;
+      font-size: 1.7rem;
       color: var(--gold-400);
       margin-bottom: 14px;
       transition: all 0.4s var(--transition);
-      text-shadow: 0 0 20px rgba(184, 146, 63, 0.3);
+      text-shadow: 0 0 25px rgba(184, 146, 63, 0.5);
+      position: relative;
+      z-index: 2;
     }
 
     .theme-card:hover .theme-symbol {
-      transform: scale(1.15) rotate(5deg);
+      transform: scale(1.2) rotate(8deg);
       color: var(--gold-200);
     }
 
     .theme-title {
-      color: var(--cream);
+      color: var(--gold-100);
       font-family: "Amiri", serif;
-      font-size: 1.1rem;
+      font-size: 1.15rem;
       font-weight: 700;
       line-height: 1.5;
+      position: relative;
+      z-index: 2;
     }
 
     /* =========================================================
-       QUOTE
+       QUOTE — غروب طلایی نارنجی
     ========================================================= */
 
-    .quote-section {
-      padding: 100px 0;
+    .section-quote {
+      padding: 130px 0;
       position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse 70% 80% at 50% 50%, rgba(255, 180, 80, 0.3), transparent 65%),
+        radial-gradient(ellipse 90% 60% at 15% 20%, rgba(220, 130, 40, 0.35), transparent 60%),
+        radial-gradient(ellipse 80% 60% at 90% 80%, rgba(140, 60, 20, 0.4), transparent 60%),
+        linear-gradient(160deg, #d68a3c 0%, #b86a26 25%, #8a4a18 55%, #5a2e0e 85%, #3a1c08 100%);
+    }
+
+    .section-quote::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 30% 40%, rgba(255, 220, 160, 0.2), transparent 45%),
+        radial-gradient(circle at 70% 70%, rgba(255, 180, 90, 0.15), transparent 40%);
     }
 
     .quote-box {
-      max-width: 940px;
+      max-width: 960px;
       margin: auto;
       text-align: center;
-      padding: 80px 50px;
+      padding: 90px 60px;
       position: relative;
-      border-top: 1px solid rgba(184, 146, 63, 0.18);
-      border-bottom: 1px solid rgba(184, 146, 63, 0.18);
+      border-top: 1px solid rgba(255, 240, 200, 0.3);
+      border-bottom: 1px solid rgba(255, 240, 200, 0.3);
     }
 
     .quote-box::before,
     .quote-box::after {
       content: "";
       position: absolute;
-      width: 60px;
-      height: 60px;
-      border-color: rgba(184, 146, 63, 0.25);
+      width: 70px;
+      height: 70px;
+      border-color: rgba(255, 240, 200, 0.5);
       border-style: solid;
     }
 
     .quote-box::before {
       top: -1px;
       right: 0;
-      border-width: 1px 1px 0 0;
+      border-width: 2px 2px 0 0;
     }
 
     .quote-box::after {
       bottom: -1px;
       left: 0;
-      border-width: 0 0 1px 1px;
+      border-width: 0 0 2px 2px;
     }
 
     .quote-mark {
-      color: rgba(184, 146, 63, 0.35);
+      color: rgba(255, 240, 200, 0.5);
       font-family: Georgia, serif;
-      font-size: 6rem;
+      font-size: 7rem;
       line-height: 0.4;
-      margin-bottom: 35px;
+      margin-bottom: 40px;
       display: block;
+      text-shadow: 0 4px 30px rgba(80, 30, 0, 0.4);
     }
 
     .quote-text {
       font-family: "Amiri", serif;
-      font-size: clamp(1.4rem, 3vw, 2.1rem);
+      font-size: clamp(1.5rem, 3.2vw, 2.3rem);
       line-height: 2.1;
-      color: var(--gold-100);
-      font-weight: 400;
+      color: #fffaf0;
+      font-weight: 700;
       font-style: italic;
-      text-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
+      text-shadow:
+        0 3px 25px rgba(60, 20, 0, 0.6),
+        0 0 60px rgba(255, 220, 150, 0.3);
     }
 
     .quote-source {
-      margin-top: 28px;
-      color: var(--cream-muted);
-      font-size: 0.82rem;
-      font-weight: 400;
+      margin-top: 32px;
+      color: rgba(255, 240, 200, 0.85);
+      font-size: 0.86rem;
+      font-weight: 500;
       letter-spacing: 0.5px;
     }
 
     .quote-source::before {
       content: "— ";
-      color: var(--gold-500);
+      color: rgba(255, 240, 200, 0.6);
     }
 
     /* =========================================================
-       DETAILS
+       DETAILS — کرم روشن با قاب طلایی
     ========================================================= */
 
+    .section-details {
+      padding: 110px 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 85% 0%, rgba(184, 146, 63, 0.1), transparent 60%),
+        linear-gradient(180deg, var(--cream-50), var(--cream-100));
+    }
+
+    .section-details .section-kicker { color: var(--gold-600); }
+    .section-details .section-title { color: var(--brown-700); }
+    .section-details .section-line {
+      background: linear-gradient(90deg, transparent, var(--gold-500), transparent);
+    }
+    .section-details .section-line::before {
+      color: var(--gold-500);
+      background: var(--cream-100);
+    }
+
     .details-card {
-      max-width: 880px;
+      max-width: 900px;
       margin: auto;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      border: 1px solid rgba(184, 146, 63, 0.12);
-      border-radius: var(--radius-lg);
+      border: 1px solid rgba(184, 146, 63, 0.3);
+      border-radius: 24px;
       overflow: hidden;
-      background: rgba(15, 20, 15, 0.7);
-      box-shadow: var(--shadow-soft);
+      background: rgba(255, 255, 255, 0.7);
+      box-shadow:
+        0 25px 65px rgba(139, 111, 74, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
       backdrop-filter: blur(8px);
     }
 
     .detail-item {
-      padding: 28px 34px;
-      border-bottom: 1px solid rgba(184, 146, 63, 0.06);
+      padding: 32px 38px;
+      border-bottom: 1px solid rgba(184, 146, 63, 0.12);
       transition: background 0.3s var(--transition);
+      position: relative;
     }
 
     .detail-item:hover {
-      background: rgba(184, 146, 63, 0.03);
+      background: rgba(184, 146, 63, 0.06);
     }
 
     .detail-item:nth-child(odd) {
-      border-left: 1px solid rgba(184, 146, 63, 0.06);
+      border-left: 1px solid rgba(184, 146, 63, 0.12);
     }
 
-    .detail-item:nth-last-child(-n+2) {
-      border-bottom: none;
-    }
+    .detail-item:nth-last-child(-n+2) { border-bottom: none; }
 
     .detail-label {
-      color: var(--cream-muted);
+      color: var(--gold-600);
       font-size: 0.76rem;
-      font-weight: 400;
-      margin-bottom: 6px;
-      letter-spacing: 0.5px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      letter-spacing: 1px;
     }
 
     .detail-value {
-      color: var(--gold-200);
+      color: var(--brown-700);
       font-family: "Amiri", serif;
-      font-size: 1.15rem;
+      font-size: 1.2rem;
       font-weight: 700;
       line-height: 1.6;
     }
 
     /* =========================================================
-       AUTHOR NOTE
+       AUTHOR NOTE — آبی تیره پایانی
     ========================================================= */
+
+    .section-author-note {
+      padding: 120px 0;
+      background:
+        radial-gradient(ellipse 70% 60% at 50% 30%, rgba(63, 90, 125, 0.3), transparent 60%),
+        radial-gradient(ellipse 80% 50% at 20% 100%, rgba(10, 20, 35, 0.6), transparent 60%),
+        linear-gradient(180deg, #0d1a2b, #07101c);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .section-author-note::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.5;
+      background-image:
+        radial-gradient(circle at 25% 30%, rgba(255, 255, 255, 0.5) 0.5px, transparent 1px),
+        radial-gradient(circle at 75% 60%, rgba(255, 255, 255, 0.4) 0.6px, transparent 1px),
+        radial-gradient(circle at 40% 85%, rgba(255, 255, 255, 0.5) 0.4px, transparent 1px);
+      background-size: 600px 600px, 800px 800px, 700px 700px;
+    }
+
+    .section-author-note .section-kicker { color: var(--gold-400); }
+    .section-author-note .section-title { color: var(--gold-100); }
+    .section-author-note .section-line {
+      background: linear-gradient(90deg, transparent, var(--gold-400), transparent);
+    }
+    .section-author-note .section-line::before {
+      color: var(--gold-400);
+      background: #07101c;
+    }
 
     .author-note {
       max-width: 920px;
@@ -1053,21 +1211,21 @@
     }
 
     .author-note p {
-      color: var(--cream-dim);
-      font-size: 1.02rem;
+      color: rgba(228, 215, 187, 0.9);
+      font-size: 1.05rem;
       font-weight: 300;
-      line-height: 2.4;
+      line-height: 2.5;
     }
 
     .author-name {
       display: inline-block;
-      margin-top: 30px;
+      margin-top: 35px;
       color: var(--gold-300);
       font-family: "Amiri", serif;
-      font-size: 1.4rem;
+      font-size: 1.5rem;
       font-weight: 700;
       position: relative;
-      padding-bottom: 12px;
+      padding-bottom: 14px;
     }
 
     .author-name::after {
@@ -1076,9 +1234,9 @@
       bottom: 0;
       right: 50%;
       transform: translateX(50%);
-      width: 50px;
+      width: 60px;
       height: 1px;
-      background: linear-gradient(90deg, transparent, var(--gold-500), transparent);
+      background: linear-gradient(90deg, transparent, var(--gold-400), transparent);
     }
 
     /* =========================================================
@@ -1086,45 +1244,33 @@
     ========================================================= */
 
     .back-area {
-      padding: 40px 0 100px;
+      padding: 50px 0 60px;
       text-align: center;
+      background: linear-gradient(180deg, #07101c, #16110a);
     }
 
     .back-button {
       display: inline-flex;
       align-items: center;
       gap: 12px;
-      padding: 14px 28px;
+      padding: 15px 30px;
       border-radius: 999px;
-      border: 1px solid rgba(184, 146, 63, 0.22);
+      border: 1px solid rgba(184, 146, 63, 0.5);
       color: var(--gold-300);
-      background: linear-gradient(135deg, rgba(184, 146, 63, 0.06), rgba(184, 146, 63, 0.02));
+      background: rgba(184, 146, 63, 0.08);
       transition: all 0.4s var(--transition);
-      font-size: 0.92rem;
-      font-weight: 400;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .back-button::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(184, 146, 63, 0.15), transparent);
-      opacity: 0;
-      transition: opacity 0.4s var(--transition);
+      font-size: 0.95rem;
+      font-weight: 500;
     }
 
     .back-button:hover {
       color: var(--gold-100);
-      background: rgba(184, 146, 63, 0.1);
-      border-color: rgba(184, 146, 63, 0.4);
+      background: rgba(184, 146, 63, 0.18);
+      border-color: var(--gold-400);
       transform: translateY(-3px);
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3), 0 0 30px rgba(184, 146, 63, 0.1);
-    }
-
-    .back-button:hover::before {
-      opacity: 1;
+      box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.5),
+        0 0 40px rgba(184, 146, 63, 0.2);
     }
 
     .back-button span:first-child {
@@ -1132,18 +1278,28 @@
     }
 
     .back-button:hover span:first-child {
-      transform: translateX(-4px);
+      transform: translateX(-5px);
     }
 
     /* =========================================================
-       FOOTER
+       FOOTER — مشکی طلایی
     ========================================================= */
 
     footer {
-      border-top: 1px solid rgba(184, 146, 63, 0.08);
-      padding: 40px 0;
-      background: rgba(5, 8, 6, 0.5);
+      border-top: 1px solid rgba(184, 146, 63, 0.15);
+      padding: 45px 0;
+      background: linear-gradient(180deg, #16110a, #0c0905);
       position: relative;
+    }
+
+    footer::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 15%;
+      right: 15%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(184, 146, 63, 0.4), transparent);
     }
 
     .footer-inner {
@@ -1157,13 +1313,13 @@
     .footer-brand {
       font-family: "Amiri", serif;
       color: var(--gold-400);
-      font-size: 1.15rem;
+      font-size: 1.2rem;
       font-weight: 700;
     }
 
     .footer-copy {
-      color: var(--cream-muted);
-      font-size: 0.76rem;
+      color: var(--ink-200);
+      font-size: 0.78rem;
       font-weight: 300;
     }
 
@@ -1173,8 +1329,8 @@
 
     .reveal {
       opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.8s var(--transition), transform 0.8s var(--transition);
+      transform: translateY(35px);
+      transition: opacity 1s var(--transition), transform 1s var(--transition);
     }
 
     .reveal.visible {
@@ -1189,163 +1345,75 @@
     @media (max-width: 1024px) {
       .hero-grid {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 50px;
       }
-
-      .hero-content {
-        text-align: center;
-      }
-
-      .hero-description {
-        margin: auto;
-      }
-
-      .author,
-      .hero-tags {
-        justify-content: center;
-      }
-
-      .cover-area {
-        min-height: 540px;
-      }
-
-      .figures-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .themes-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
+      .hero-content { text-align: center; }
+      .hero-description { margin: auto; }
+      .author, .hero-tags { justify-content: center; }
+      .cover-area { min-height: 560px; }
+      .figures-grid { grid-template-columns: repeat(2, 1fr); }
+      .themes-grid { grid-template-columns: repeat(2, 1fr); }
     }
 
     @media (max-width: 768px) {
-      .container {
-        width: min(100% - 32px, 1180px);
+      .container { width: min(100% - 32px, 1180px); }
+      .topbar-inner { min-height: 68px; }
+      .brand { font-size: 1.15rem; }
+      .nav { display: none; }
+
+      .hero { padding: 75px 0 50px; }
+      .hero h1 { font-size: clamp(2.5rem, 12vw, 4rem); }
+
+      .cover-area { min-height: 480px; }
+      .cover-frame { width: min(310px, 82%); }
+      .cover-caption { font-size: 0.7rem; }
+
+      .section-about, .section-preface, .section-figures,
+      .section-themes, .section-quote, .section-details,
+      .section-author-note {
+        padding: 70px 0;
       }
 
-      .topbar-inner {
-        min-height: 68px;
-      }
-
-      .brand {
-        font-size: 1.15rem;
-      }
-
-      .nav {
-        display: none;
-      }
-
-      .hero {
-        padding: 70px 0 40px;
-      }
-
-      .hero h1 {
-        font-size: clamp(2.4rem, 11vw, 3.8rem);
-      }
-
-      .cover-area {
-        min-height: 460px;
-      }
-
-      .cover-frame {
-        width: min(300px, 82%);
-      }
-
-      .section {
-        padding: 60px 0;
-      }
-
-      .intro-card,
-      .preface-card {
+      .intro-card, .preface-card {
         padding: 32px 26px;
-        border-radius: var(--radius-lg);
+        border-radius: 18px;
       }
 
-      .preface-wrapper::before {
-        right: -10px;
-      }
+      .preface-wrapper::before { right: -10px; }
 
       .preface-card p {
         text-align: right;
-        font-size: 0.94rem;
+        font-size: 0.95rem;
         line-height: 2.35;
       }
 
-      .figures-grid {
-        grid-template-columns: 1fr;
-      }
+      .figures-grid { grid-template-columns: 1fr; }
+      .themes-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+      .theme-card { min-height: 150px; padding: 24px 18px; }
 
-      .themes-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-      }
+      .details-card { grid-template-columns: 1fr; }
+      .detail-item:nth-child(odd) { border-left: none; }
+      .detail-item { padding: 24px 28px; }
+      .detail-item:nth-last-child(-n+2) { border-bottom: 1px solid rgba(184, 146, 63, 0.12); }
+      .detail-item:last-child { border-bottom: none; }
 
-      .theme-card {
-        min-height: 140px;
-        padding: 22px 16px;
-      }
+      .quote-box { padding: 65px 25px; }
+      .quote-mark { font-size: 5rem; }
+      .quote-box::before, .quote-box::after { width: 50px; height: 50px; }
 
-      .details-card {
-        grid-template-columns: 1fr;
-      }
+      .quick-inner { border-radius: 18px; padding: 12px; }
+      .quick-inner a { font-size: 0.75rem; padding: 8px 12px; }
 
-      .detail-item:nth-child(odd) {
-        border-left: none;
-      }
-
-      .detail-item {
-        padding: 22px 26px;
-      }
-
-      .detail-item:nth-last-child(-n+2) {
-        border-bottom: 1px solid rgba(184, 146, 63, 0.06);
-      }
-
-      .detail-item:last-child {
-        border-bottom: none;
-      }
-
-      .quote-box {
-        padding: 60px 24px;
-      }
-
-      .quick-inner {
-        border-radius: var(--radius-sm);
-      }
-
-      .quick-inner a {
-        font-size: 0.75rem;
-        padding: 8px 12px;
-      }
-
-      .footer-inner {
-        justify-content: center;
-        text-align: center;
-      }
+      .footer-inner { justify-content: center; text-align: center; }
     }
 
     @media (max-width: 440px) {
-      .themes-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-tags {
-        gap: 6px;
-      }
-
-      .tag {
-        font-size: 0.7rem;
-        padding: 5px 10px;
-      }
-
-      .quote-text {
-        font-size: 1.3rem;
-      }
-
-      .intro-card p::first-letter,
-      .preface-card p::first-letter {
-        font-size: 1.2em;
-      }
+      .themes-grid { grid-template-columns: 1fr; }
+      .hero-tags { gap: 6px; }
+      .tag { font-size: 0.7rem; padding: 5px 10px; }
+      .quote-text { font-size: 1.35rem; }
+      .quote-mark { font-size: 4rem; }
+      .section-title { font-size: 1.8rem; }
     }
 
     /* =========================================================
@@ -1353,21 +1421,12 @@
     ========================================================= */
 
     @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
-
-      *,
-      *::before,
-      *::after {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
         transition: none !important;
         animation: none !important;
       }
-
-      .reveal {
-        opacity: 1;
-        transform: none;
-      }
+      .reveal { opacity: 1; transform: none; }
     }
 
   </style>
@@ -1375,7 +1434,6 @@
 
 <body>
 
-  <!-- Grain overlay -->
   <div class="grain" aria-hidden="true"></div>
 
   <!-- =======================================================
@@ -1384,11 +1442,7 @@
 
   <header class="topbar">
     <div class="container topbar-inner">
-
-      <a class="brand" href="../../index.html">
-        حسین محمدی آمیرزا
-      </a>
-
+      <a class="brand" href="../../index.html">حسین محمدی آمیرزا</a>
       <nav class="nav" aria-label="منوی اصلی">
         <a href="../../index.html">خانه</a>
         <a href="../../blog.html">وبلاگ</a>
@@ -1397,7 +1451,6 @@
         <a href="#figures">چهره‌ها</a>
         <a href="#themes">درونمایه‌ها</a>
       </nav>
-
     </div>
   </header>
 
@@ -1405,137 +1458,94 @@
   <main>
 
     <!-- =====================================================
-         HERO
+         HERO — طلایی چرمی
     ====================================================== -->
 
     <section class="hero">
-
       <div class="container hero-grid">
 
         <div class="hero-content">
-
-          <div class="eyebrow">
-            روایت تاریخی · ایران · زندیه
-          </div>
-
-          <h1>
-            فراز و فرود<br>
-            سرنوشت قوم زند
-          </h1>
-
-          <div class="hero-subtitle">
-            در گذر تاریخ
-          </div>
-
+          <div class="eyebrow">روایت تاریخی · ایران · زندیه</div>
+          <h1>فراز و فرود<br>سرنوشت قوم زند</h1>
+          <div class="hero-subtitle">در گذر تاریخ</div>
           <p class="hero-description">
             روایتی از هویت، فرهنگ، دلاوری، میراث و فراز و فرودهای مردمانی
             که نامشان در بخشی از تاریخ ایران ماندگار شده است.
           </p>
-
           <div class="author">
             <span class="author-line"></span>
             <span>نوشتهٔ حسین محمدی</span>
           </div>
-
           <div class="hero-tags">
             <span class="tag">تاریخ ایران</span>
             <span class="tag">قوم زند</span>
             <span class="tag">زندیه</span>
             <span class="tag">هویت و فرهنگ</span>
           </div>
-
         </div>
 
-
         <div class="cover-area">
-
           <div class="cover-glow"></div>
-
           <div class="cover-frame">
-
             <div class="cover-inner">
-
               <img
                 src="https://hossein-amirza.github.io/hossein-mohammadi-amirza/images/books/faraz-va-forud.jpg"
                 alt="تصویر جلد کتاب فراز و فرود سرنوشت قوم زند"
-                loading="lazy"
+                loading="eager"
               >
-
             </div>
-
-            <div class="cover-caption">
-              فراز و فرود سرنوشت قوم زند
-            </div>
-
+            <div class="cover-caption">فراز و فرود سرنوشت قوم زند</div>
           </div>
-
         </div>
 
       </div>
-
     </section>
 
 
     <!-- =====================================================
-         QUICK NAV
+         QUICK NAV — پل طلایی
     ====================================================== -->
 
-    <div class="container quick-nav reveal">
-
-      <nav class="quick-inner" aria-label="دسترسی سریع">
-
-        <a href="#about">درباره اثر</a>
-        <a href="#preface">پیشگفتار</a>
-        <a href="#figures">چهره‌ها</a>
-        <a href="#themes">درونمایه‌ها</a>
-        <a href="#quote">نقل‌قول</a>
-        <a href="#details">مشخصات</a>
-        <a href="#author-note">نگاه نویسنده</a>
-
-      </nav>
-
+    <div class="quick-nav">
+      <div class="container">
+        <nav class="quick-inner reveal" aria-label="دسترسی سریع">
+          <a href="#about">درباره اثر</a>
+          <a href="#preface">پیشگفتار</a>
+          <a href="#figures">چهره‌ها</a>
+          <a href="#themes">درونمایه‌ها</a>
+          <a href="#quote">نقل‌قول</a>
+          <a href="#details">مشخصات</a>
+          <a href="#author-note">نگاه نویسنده</a>
+        </nav>
+      </div>
     </div>
 
 
     <!-- =====================================================
-         ABOUT
+         ABOUT — کرم کاغذی
     ====================================================== -->
 
-    <section class="section" id="about">
-
+    <section class="section-about" id="about">
       <div class="container">
-
         <div class="section-heading reveal">
-
-          <div class="section-kicker">
-            ABOUT THE BOOK
-          </div>
-
-          <h2 class="section-title">
-            دربارهٔ این اثر
-          </h2>
-
+          <div class="section-kicker">ABOUT THE BOOK</div>
+          <h2 class="section-title">دربارهٔ این اثر</h2>
           <div class="section-line"></div>
-
         </div>
 
-
         <div class="intro-card reveal">
-
           <p>
             تاریخ ایران، تنها مجموعه‌ای از نام شاهان، جنگ‌ها و دگرگونی‌های
             سیاسی نیست؛ تاریخ، روایت انسان‌هایی است که در بزنگاه‌های زمان،
             با اندیشه، شجاعت، وفاداری و کوشش خود در ساختن سرنوشت این سرزمین
             سهم داشته‌اند.
           </p>
-
           <p>
             «فراز و فرود سرنوشت قوم زند» به بخشی از همین روایت می‌پردازد؛
             روایتی که از میراث فرهنگی و هویت ایرانی آغاز می‌شود و از
             مردمانی سخن می‌گوید که در میان کوه‌ها و دشت‌های ملایر و در
             گذر حوادث تاریخی، نام و خاطرهٔ خود را حفظ کردند.
           </p>
-
           <p>
             در این روایت، شکوه و فروتنی در کنار یکدیگر قرار می‌گیرند؛
             از چهره‌های تاریخی و سرداران و حاکمان گرفته تا انسان‌هایی
@@ -1543,39 +1553,24 @@
             از همین منظر، تاریخ نه تنها گذشته، بلکه حافظه‌ای زنده از
             انسان و هویت اوست.
           </p>
-
         </div>
-
       </div>
-
     </section>
 
 
     <!-- =====================================================
-         PREFACE
+         PREFACE — آبی سرمه‌ای شب کویر
     ====================================================== -->
 
-    <section class="section preface" id="preface">
-
+    <section class="section-preface" id="preface">
       <div class="container">
-
         <div class="section-heading reveal">
-
-          <div class="section-kicker">
-            PREFACE
-          </div>
-
-          <h2 class="section-title">
-            پیشگفتار
-          </h2>
-
+          <div class="section-kicker">PREFACE</div>
+          <h2 class="section-title">پیشگفتار</h2>
           <div class="section-line"></div>
-
         </div>
 
-
         <div class="preface-wrapper reveal">
-
           <article class="preface-card">
 
             <p>
@@ -1648,325 +1643,202 @@
             </div>
 
           </article>
-
         </div>
-
       </div>
-
     </section>
 
 
     <!-- =====================================================
-         FIGURES
+         FIGURES — کرم قهوه‌ای گرم
     ====================================================== -->
 
-    <section class="section figures-section" id="figures">
-
+    <section class="section-figures" id="figures">
       <div class="container">
-
         <div class="section-heading reveal">
-
-          <div class="section-kicker">
-            HISTORICAL FIGURES
-          </div>
-
-          <h2 class="section-title">
-            چهره‌ها و نام‌های روایت
-          </h2>
-
+          <div class="section-kicker">HISTORICAL FIGURES</div>
+          <h2 class="section-title">چهره‌ها و نام‌های روایت</h2>
           <div class="section-line"></div>
-
         </div>
 
-
         <div class="figures-grid">
-
           <article class="figure-card reveal">
             <div class="figure-number">۰۱</div>
             <h3 class="figure-name">هوارم شیردل</h3>
-            <p class="figure-text">
-              از نیاکان زندیان که در روایت کتاب، نماد شجاعت، وفاداری و پاسداری از سرزمین معرفی شده است.
-            </p>
+            <p class="figure-text">از نیاکان زندیان که در روایت کتاب، نماد شجاعت، وفاداری و پاسداری از سرزمین معرفی شده است.</p>
           </article>
-
           <article class="figure-card reveal">
             <div class="figure-number">۰۲</div>
             <h3 class="figure-name">کهزاد دهوپاد</h3>
-            <p class="figure-text">
-              چهره‌ای از روایت میراث فرهنگی که در کنار ماهانا برای حفاظت از نسخه‌های یسنا و دانش اوستا تلاش کرد.
-            </p>
+            <p class="figure-text">چهره‌ای از روایت میراث فرهنگی که در کنار ماهانا برای حفاظت از نسخه‌های یسنا و دانش اوستا تلاش کرد.</p>
           </article>
-
           <article class="figure-card reveal">
             <div class="figure-number">۰۳</div>
             <h3 class="figure-name">ماهانای تیزچنگ</h3>
-            <p class="figure-text">
-              همسر دلیر کهزاد دهوپاد و یکی از چهره‌های روایت در مسیر حفاظت از میراث فرهنگی.
-            </p>
+            <p class="figure-text">همسر دلیر کهزاد دهوپاد و یکی از چهره‌های روایت در مسیر حفاظت از میراث فرهنگی.</p>
           </article>
-
           <article class="figure-card reveal">
             <div class="figure-number">۰۴</div>
             <h3 class="figure-name">مهراسپندان آذرپاد</h3>
-            <p class="figure-text">
-              دانشمندی از این خاندان که در روایت کتاب با شرح و تفسیر اوستا و کتاب زند اوستا پیوند یافته است.
-            </p>
+            <p class="figure-text">دانشمندی از این خاندان که در روایت کتاب با شرح و تفسیر اوستا و کتاب زند اوستا پیوند یافته است.</p>
           </article>
-
           <article class="figure-card reveal">
             <div class="figure-number">۰۵</div>
             <h3 class="figure-name">کریم‌خان زند</h3>
-            <p class="figure-text">
-              حاکم زندیه که در متن کتاب با عدالت، خدمت به مردم و تلاش برای برپایی حکومتی دادگرانه روایت می‌شود.
-            </p>
+            <p class="figure-text">حاکم زندیه که در متن کتاب با عدالت، خدمت به مردم و تلاش برای برپایی حکومتی دادگرانه روایت می‌شود.</p>
           </article>
-
           <article class="figure-card reveal">
             <div class="figure-number">۰۶</div>
             <h3 class="figure-name">خدامرادخان زند</h3>
-            <p class="figure-text">
-              سردار قدرتمند زندیه که در روایت اثر در کنار کریم‌خان از چهره‌های مهم داستان است.
-            </p>
+            <p class="figure-text">سردار قدرتمند زندیه که در روایت اثر در کنار کریم‌خان از چهره‌های مهم داستان است.</p>
           </article>
-
           <article class="figure-card reveal">
             <div class="figure-number">۰۷</div>
             <h3 class="figure-name">میرزا احمد</h3>
-            <p class="figure-text">
-              پدربزرگ نویسنده و از تبار خدامرادخان زند؛ نمادی از گذار از شکوه تاریخی به زندگی ساده و انسانی.
-            </p>
+            <p class="figure-text">پدربزرگ نویسنده و از تبار خدامرادخان زند؛ نمادی از گذار از شکوه تاریخی به زندگی ساده و انسانی.</p>
           </article>
-
         </div>
-
       </div>
-
     </section>
 
 
     <!-- =====================================================
-         THEMES
+         THEMES — مشکی طلایی
     ====================================================== -->
 
-    <section class="section" id="themes">
-
+    <section class="section-themes" id="themes">
       <div class="container">
-
         <div class="section-heading reveal">
-
-          <div class="section-kicker">
-            THEMES
-          </div>
-
-          <h2 class="section-title">
-            درونمایه‌های اثر
-          </h2>
-
+          <div class="section-kicker">THEMES</div>
+          <h2 class="section-title">درونمایه‌های اثر</h2>
           <div class="section-line"></div>
-
         </div>
 
-
         <div class="themes-grid">
-
           <div class="theme-card reveal">
             <div class="theme-symbol">✦</div>
             <div class="theme-title">هویت ایرانی</div>
           </div>
-
           <div class="theme-card reveal">
             <div class="theme-symbol">◈</div>
             <div class="theme-title">میراث فرهنگی</div>
           </div>
-
           <div class="theme-card reveal">
             <div class="theme-symbol">✧</div>
             <div class="theme-title">تاریخ و حافظه</div>
           </div>
-
           <div class="theme-card reveal">
             <div class="theme-symbol">◆</div>
             <div class="theme-title">دلاوری و شجاعت</div>
           </div>
-
           <div class="theme-card reveal">
             <div class="theme-symbol">❖</div>
             <div class="theme-title">عدالت و مردم</div>
           </div>
-
           <div class="theme-card reveal">
             <div class="theme-symbol">◇</div>
             <div class="theme-title">خانواده و تبار</div>
           </div>
-
           <div class="theme-card reveal">
             <div class="theme-symbol">✦</div>
             <div class="theme-title">فراز و فرود قدرت</div>
           </div>
-
           <div class="theme-card reveal">
             <div class="theme-symbol">◈</div>
             <div class="theme-title">پایداری و امید</div>
           </div>
-
         </div>
-
       </div>
-
     </section>
 
 
     <!-- =====================================================
-         QUOTE
+         QUOTE — غروب طلایی
     ====================================================== -->
 
-    <section class="quote-section" id="quote">
-
+    <section class="section-quote" id="quote">
       <div class="container">
-
         <div class="quote-box reveal">
-
-          <div class="quote-mark">
-            “
-          </div>
-
+          <div class="quote-mark">“</div>
           <div class="quote-text">
             تاریخ تنها روایت شاهان و جنگ‌ها نیست،
             بلکه داستان زیستن انسان‌هایی است که هرکدام
             به نحوی در سرنوشت این سرزمین سهیم‌اند.
           </div>
-
-          <div class="quote-source">
-            از پیشگفتار «فراز و فرود سرنوشت قوم زند»
-          </div>
-
+          <div class="quote-source">از پیشگفتار «فراز و فرود سرنوشت قوم زند»</div>
         </div>
-
       </div>
-
     </section>
 
 
     <!-- =====================================================
-         DETAILS
+         DETAILS — کرم روشن
     ====================================================== -->
 
-    <section class="section" id="details">
-
+    <section class="section-details" id="details">
       <div class="container">
-
         <div class="section-heading reveal">
-
-          <div class="section-kicker">
-            BOOK DETAILS
-          </div>
-
-          <h2 class="section-title">
-            مشخصات اثر
-          </h2>
-
+          <div class="section-kicker">BOOK DETAILS</div>
+          <h2 class="section-title">مشخصات اثر</h2>
           <div class="section-line"></div>
-
         </div>
-
 
         <div class="details-card reveal">
-
           <div class="detail-item">
             <div class="detail-label">عنوان</div>
-            <div class="detail-value">
-              فراز و فرود سرنوشت قوم زند
-            </div>
+            <div class="detail-value">فراز و فرود سرنوشت قوم زند</div>
           </div>
-
           <div class="detail-item">
             <div class="detail-label">زیرعنوان</div>
-            <div class="detail-value">
-              در گذر تاریخ
-            </div>
+            <div class="detail-value">در گذر تاریخ</div>
           </div>
-
           <div class="detail-item">
             <div class="detail-label">نویسنده</div>
-            <div class="detail-value">
-              حسین محمدی
-            </div>
+            <div class="detail-value">حسین محمدی</div>
           </div>
-
           <div class="detail-item">
             <div class="detail-label">موضوع</div>
-            <div class="detail-value">
-              تاریخ، فرهنگ و قوم زند
-            </div>
+            <div class="detail-value">تاریخ، فرهنگ و قوم زند</div>
           </div>
-
           <div class="detail-item">
             <div class="detail-label">رویکرد</div>
-            <div class="detail-value">
-              روایت تاریخی و خانوادگی
-            </div>
+            <div class="detail-value">روایت تاریخی و خانوادگی</div>
           </div>
-
           <div class="detail-item">
             <div class="detail-label">هویت اثر</div>
-            <div class="detail-value">
-              تاریخ ایران و زندیه
-            </div>
+            <div class="detail-value">تاریخ ایران و زندیه</div>
           </div>
-
         </div>
-
       </div>
-
     </section>
 
 
     <!-- =====================================================
-         AUTHOR NOTE
+         AUTHOR NOTE — آبی تیره پایانی
     ====================================================== -->
 
-    <section class="section" id="author-note">
-
+    <section class="section-author-note" id="author-note">
       <div class="container">
-
         <div class="section-heading reveal">
-
-          <div class="section-kicker">
-            AUTHOR'S VIEW
-          </div>
-
-          <h2 class="section-title">
-            نگاه نویسنده
-          </h2>
-
+          <div class="section-kicker">AUTHOR'S VIEW</div>
+          <h2 class="section-title">نگاه نویسنده</h2>
           <div class="section-line"></div>
-
         </div>
 
-
         <div class="author-note reveal">
-
           <p>
             کتاب حاضر، روایت گوشه‌ای از تلاش‌های مردمانی است که با وفاداری
             به هویت و فرهنگ خود، حتی در سایه سقوط دولت، تاریخ را ساختند.
             «بازی سرنوشت»، عنوانی است که نه تنها وقایع تاریخی را بازگو می‌کند،
             بلکه تلاش می‌کند روحیه، دلاوری و استقامت یک قوم را به تصویر بکشد.
           </p>
-
           <p style="margin-top: 24px;">
             این اثر بر این نگاه تأکید دارد که تاریخ ایران، ساخته انسان‌های
             معمولی است، نه فقط شاهان و سرداران؛ انسان‌هایی که در بزنگاه‌های
             تاریخ، همت و خرد خود را به کار گرفتند تا ایران و فرهنگش زنده بماند.
           </p>
-
-          <div class="author-name">
-            حسین محمدی
-          </div>
-
+          <div class="author-name">حسین محمدی</div>
         </div>
-
       </div>
-
     </section>
 
 
@@ -1975,19 +1847,12 @@
     ====================================================== -->
 
     <div class="back-area">
-
       <div class="container">
-
-        <a
-          class="back-button"
-          href="../../index.html#books"
-        >
+        <a class="back-button" href="../../index.html#books">
           <span>←</span>
           <span>بازگشت به کتاب‌ها</span>
         </a>
-
       </div>
-
     </div>
 
   </main>
@@ -1998,30 +1863,20 @@
   ======================================================== -->
 
   <footer>
-
     <div class="container footer-inner">
-
-      <div class="footer-brand">
-        حسین محمدی آمیرزا
-      </div>
-
-      <div class="footer-copy">
-        © حسین محمدی آمیرزا · همه حقوق محفوظ است
-      </div>
-
+      <div class="footer-brand">حسین محمدی آمیرزا</div>
+      <div class="footer-copy">© حسین محمدی آمیرزا · همه حقوق محفوظ است</div>
     </div>
-
   </footer>
 
 
   <!-- =======================================================
-       SCROLL REVEAL SCRIPT
+       SCROLL REVEAL
   ======================================================== -->
 
   <script>
     (function () {
       const reveals = document.querySelectorAll('.reveal');
-
       if (!reveals.length) return;
 
       const observer = new IntersectionObserver(
@@ -2033,10 +1888,7 @@
             }
           });
         },
-        {
-          threshold: 0.08,
-          rootMargin: '0px 0px -40px 0px'
-        }
+        { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
       );
 
       reveals.forEach((el) => observer.observe(el));
