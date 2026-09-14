@@ -1,122 +1,2047 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>فراز و فرود سرنوشت قوم زند | حسین محمدی آمیرزا</title>
-  <meta name="description" content="معرفی کتاب فراز و فرود سرنوشت قوم زند، در گذر تاریخ، نوشته حسین محمدی آمیرزا.">
-  <meta name="author" content="حسین محمدی آمیرزا">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://hossein-amirza.github.io/hossein-mohammadi-amirza/books/faraz-va-forud.html">
-  <link rel="stylesheet" href="../style.css">
+
+  <title>فراز و فرود سرنوشت قوم زند | حسین محمدی</title>
+
+  <meta name="description" content="فراز و فرود سرنوشت قوم زند؛ روایتی تاریخی از هویت، فرهنگ، دلاوری و فراز و فرودهای قوم زند، نوشته حسین محمدی.">
+  <meta name="author" content="حسین محمدی">
+  <meta name="theme-color" content="#0a0e0a">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Vazirmatn:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+
+    /* =========================================================
+       RESET & ROOT
+    ========================================================= */
+
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --gold-100: #f5e6c8;
+      --gold-200: #e8d5a8;
+      --gold-300: #d4b978;
+      --gold-400: #c9a961;
+      --gold-500: #b8923f;
+      --gold-600: #9a7730;
+      --gold-700: #7a5d24;
+
+      --green-900: #0a0e0a;
+      --green-800: #0f140f;
+      --green-700: #151c15;
+      --green-600: #1d261d;
+      --green-500: #2a362a;
+      --green-400: #3d4d3d;
+
+      --blue-900: #0d1520;
+      --blue-800: #15202e;
+      --blue-700: #1f3040;
+      --blue-600: #2a4055;
+
+      --cream: #e4d7bb;
+      --cream-dim: #b8ae98;
+      --cream-muted: #8a8272;
+
+      --shadow-deep: 0 30px 80px rgba(0, 0, 0, 0.55);
+      --shadow-soft: 0 15px 45px rgba(0, 0, 0, 0.35);
+      --shadow-glow: 0 0 60px rgba(184, 146, 63, 0.12);
+
+      --radius-sm: 10px;
+      --radius-md: 18px;
+      --radius-lg: 28px;
+      --radius-xl: 36px;
+
+      --transition: cubic-bezier(0.22, 0.61, 0.36, 1);
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: "Vazirmatn", sans-serif;
+      font-weight: 300;
+      color: var(--cream);
+      background: var(--green-900);
+      min-height: 100vh;
+      overflow-x: hidden;
+      line-height: 2;
+      position: relative;
+    }
+
+    /* =========================================================
+       BACKGROUND TEXTURE & ATMOSPHERE
+    ========================================================= */
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background:
+        radial-gradient(ellipse 80% 50% at 15% 0%, rgba(184, 146, 63, 0.08), transparent 60%),
+        radial-gradient(ellipse 70% 60% at 85% 15%, rgba(31, 48, 64, 0.35), transparent 55%),
+        radial-gradient(ellipse 90% 70% at 50% 100%, rgba(29, 38, 29, 0.6), transparent 60%),
+        linear-gradient(160deg, #080b08 0%, #0f140f 35%, #0d1210 70%, #0a0e0a 100%);
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 1;
+      opacity: 0.35;
+      background-image:
+        repeating-linear-gradient(
+          0deg,
+          rgba(255, 255, 255, 0.012) 0,
+          rgba(255, 255, 255, 0.012) 1px,
+          transparent 1px,
+          transparent 3px
+        ),
+        repeating-linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0.008) 0,
+          rgba(255, 255, 255, 0.008) 1px,
+          transparent 1px,
+          transparent 4px
+        );
+    }
+
+    /* Grain overlay */
+    .grain {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 2;
+      opacity: 0.5;
+      mix-blend-mode: overlay;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
+    }
+
+    ::selection {
+      background: rgba(184, 146, 63, 0.35);
+      color: #fff8e8;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1180px, calc(100% - 48px));
+      margin: auto;
+      position: relative;
+      z-index: 5;
+    }
+
+    /* =========================================================
+       TOP NAVIGATION
+    ========================================================= */
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(8, 11, 8, 0.72);
+      backdrop-filter: blur(24px) saturate(1.4);
+      -webkit-backdrop-filter: blur(24px) saturate(1.4);
+      border-bottom: 1px solid rgba(184, 146, 63, 0.1);
+      transition: background 0.4s var(--transition);
+    }
+
+    .topbar::after {
+      content: "";
+      position: absolute;
+      bottom: -1px;
+      left: 10%;
+      right: 10%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(184, 146, 63, 0.25), transparent);
+    }
+
+    .topbar-inner {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .brand {
+      font-family: "Amiri", serif;
+      font-size: 1.4rem;
+      color: var(--gold-300);
+      white-space: nowrap;
+      letter-spacing: 0.3px;
+      position: relative;
+      padding-right: 16px;
+      transition: color 0.3s var(--transition);
+    }
+
+    .brand::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 4px;
+      height: 22px;
+      background: linear-gradient(to bottom, var(--gold-400), var(--gold-600));
+      border-radius: 2px;
+      box-shadow: 0 0 12px rgba(184, 146, 63, 0.5);
+    }
+
+    .brand:hover {
+      color: var(--gold-100);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav a {
+      color: var(--cream-dim);
+      font-size: 0.85rem;
+      font-weight: 400;
+      padding: 8px 14px;
+      border-radius: 999px;
+      transition: all 0.3s var(--transition);
+      position: relative;
+      white-space: nowrap;
+    }
+
+    .nav a::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 999px;
+      background: linear-gradient(135deg, rgba(184, 146, 63, 0.12), rgba(184, 146, 63, 0.04));
+      opacity: 0;
+      transition: opacity 0.3s var(--transition);
+    }
+
+    .nav a:hover {
+      color: var(--gold-200);
+    }
+
+    .nav a:hover::before {
+      opacity: 1;
+    }
+
+    /* =========================================================
+       HERO
+    ========================================================= */
+
+    .hero {
+      position: relative;
+      padding: 100px 0 80px;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 700px;
+      height: 700px;
+      top: -280px;
+      right: -220px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(184, 146, 63, 0.14), rgba(184, 146, 63, 0.04) 40%, transparent 70%);
+      filter: blur(40px);
+      pointer-events: none;
+      animation: floatGlow 12s ease-in-out infinite;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 550px;
+      height: 550px;
+      bottom: -280px;
+      left: -180px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(31, 48, 64, 0.4), rgba(31, 48, 64, 0.1) 45%, transparent 70%);
+      filter: blur(50px);
+      pointer-events: none;
+      animation: floatGlow 15s ease-in-out infinite reverse;
+    }
+
+    @keyframes floatGlow {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      50% { transform: translate(-20px, 20px) scale(1.08); }
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 8px 18px;
+      border: 1px solid rgba(184, 146, 63, 0.22);
+      border-radius: 999px;
+      color: var(--gold-300);
+      background: linear-gradient(135deg, rgba(184, 146, 63, 0.08), rgba(184, 146, 63, 0.02));
+      font-size: 0.82rem;
+      font-weight: 400;
+      margin-bottom: 28px;
+      letter-spacing: 0.3px;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      background: radial-gradient(circle, var(--gold-300), var(--gold-500));
+      border-radius: 50%;
+      box-shadow: 0 0 14px rgba(184, 146, 63, 0.8);
+      animation: pulse 3s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.2); opacity: 0.7; }
+    }
+
+    .hero h1 {
+      font-family: "Amiri", serif;
+      font-size: clamp(2.8rem, 6vw, 5.2rem);
+      line-height: 1.22;
+      color: var(--gold-100);
+      font-weight: 700;
+      text-shadow:
+        0 3px 30px rgba(0, 0, 0, 0.6),
+        0 0 60px rgba(184, 146, 63, 0.1);
+      margin-bottom: 16px;
+      letter-spacing: -0.5px;
+    }
+
+    .hero-subtitle {
+      font-family: "Amiri", serif;
+      font-size: clamp(1.3rem, 2.6vw, 1.9rem);
+      color: var(--cream-muted);
+      margin-bottom: 28px;
+      font-style: italic;
+      letter-spacing: 0.5px;
+    }
+
+    .hero-subtitle::before {
+      content: "— ";
+      color: var(--gold-500);
+    }
+
+    .hero-description {
+      color: var(--cream-dim);
+      font-size: 1.02rem;
+      font-weight: 300;
+      max-width: 620px;
+      line-height: 2.2;
+    }
+
+    .author {
+      margin-top: 32px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      color: var(--gold-300);
+      font-size: 1rem;
+      font-weight: 400;
+    }
+
+    .author-line {
+      width: 60px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold-500));
+      position: relative;
+    }
+
+    .author-line::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 6px;
+      height: 6px;
+      background: var(--gold-400);
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(184, 146, 63, 0.6);
+    }
+
+    .hero-tags {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+
+    .tag {
+      border: 1px solid rgba(184, 146, 63, 0.16);
+      color: var(--cream-muted);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.76rem;
+      font-weight: 400;
+      background: rgba(255, 255, 255, 0.02);
+      transition: all 0.3s var(--transition);
+      cursor: default;
+    }
+
+    .tag:hover {
+      border-color: rgba(184, 146, 63, 0.35);
+      color: var(--gold-200);
+      background: rgba(184, 146, 63, 0.06);
+      transform: translateY(-2px);
+    }
+
+    /* =========================================================
+       BOOK COVER
+    ========================================================= */
+
+    .cover-area {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 620px;
+    }
+
+    .cover-glow {
+      position: absolute;
+      width: 420px;
+      height: 540px;
+      border-radius: 50%;
+      background: radial-gradient(ellipse, rgba(184, 146, 63, 0.2), rgba(31, 48, 64, 0.1) 45%, transparent 70%);
+      filter: blur(30px);
+      animation: floatGlow 8s ease-in-out infinite;
+    }
+
+    .cover-frame {
+      position: relative;
+      width: min(370px, 78%);
+      padding: 12px;
+      background:
+        linear-gradient(145deg, rgba(212, 185, 120, 0.7), rgba(92, 72, 37, 0.4), rgba(212, 185, 120, 0.55));
+      border-radius: 6px;
+      box-shadow:
+        0 40px 90px rgba(0, 0, 0, 0.7),
+        0 0 70px rgba(184, 146, 63, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15);
+      transform: rotate(1.5deg);
+      transition: all 0.6s var(--transition);
+    }
+
+    .cover-frame::before {
+      content: "";
+      position: absolute;
+      inset: -3px;
+      border-radius: 8px;
+      background: linear-gradient(145deg, rgba(212, 185, 120, 0.3), transparent, rgba(212, 185, 120, 0.2));
+      z-index: -1;
+      filter: blur(8px);
+    }
+
+    .cover-frame:hover {
+      transform: rotate(0deg) translateY(-12px) scale(1.02);
+      box-shadow:
+        0 55px 110px rgba(0, 0, 0, 0.75),
+        0 0 90px rgba(184, 146, 63, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    }
+
+    .cover-inner {
+      padding: 6px;
+      background: #12150f;
+      border: 1px solid rgba(212, 185, 120, 0.3);
+      border-radius: 3px;
+      overflow: hidden;
+    }
+
+    .cover-inner img {
+      width: 100%;
+      height: auto;
+      border-radius: 2px;
+      transition: transform 0.6s var(--transition);
+    }
+
+    .cover-frame:hover .cover-inner img {
+      transform: scale(1.03);
+    }
+
+    .cover-caption {
+      position: absolute;
+      bottom: -26px;
+      right: 50%;
+      transform: translateX(50%);
+      white-space: nowrap;
+      color: var(--cream-muted);
+      font-size: 0.72rem;
+      font-weight: 300;
+      letter-spacing: 0.5px;
+      font-family: "Amiri", serif;
+    }
+
+    /* =========================================================
+       QUICK NAV
+    ========================================================= */
+
+    .quick-nav {
+      margin: 30px 0 80px;
+    }
+
+    .quick-inner {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 6px;
+      padding: 14px;
+      border: 1px solid rgba(184, 146, 63, 0.1);
+      background: rgba(15, 20, 15, 0.65);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-radius: var(--radius-md);
+      box-shadow:
+        0 20px 55px rgba(0, 0, 0, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.03);
+    }
+
+    .quick-inner a {
+      padding: 9px 18px;
+      color: var(--cream-muted);
+      font-size: 0.82rem;
+      font-weight: 400;
+      border-radius: var(--radius-sm);
+      transition: all 0.3s var(--transition);
+      position: relative;
+    }
+
+    .quick-inner a:hover {
+      color: var(--gold-200);
+      background: rgba(184, 146, 63, 0.08);
+      transform: translateY(-2px);
+    }
+
+    /* =========================================================
+       SECTION
+    ========================================================= */
+
+    section {
+      scroll-margin-top: 100px;
+    }
+
+    .section {
+      padding: 85px 0;
+      position: relative;
+    }
+
+    .section-heading {
+      margin-bottom: 45px;
+      text-align: center;
+      position: relative;
+    }
+
+    .section-kicker {
+      color: var(--gold-500);
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 3px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      font-family: "Vazirmatn", sans-serif;
+    }
+
+    .section-title {
+      font-family: "Amiri", serif;
+      font-size: clamp(2rem, 4.2vw, 3rem);
+      color: var(--gold-100);
+      line-height: 1.4;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+    }
+
+    .section-line {
+      width: 80px;
+      height: 1px;
+      margin: 22px auto 0;
+      background: linear-gradient(90deg, transparent, var(--gold-500), transparent);
+      position: relative;
+    }
+
+    .section-line::before {
+      content: "◆";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: var(--gold-500);
+      font-size: 0.55rem;
+      background: var(--green-900);
+      padding: 0 8px;
+    }
+
+    /* =========================================================
+       INTRO CARD
+    ========================================================= */
+
+    .intro-card {
+      position: relative;
+      max-width: 960px;
+      margin: auto;
+      padding: 50px 55px;
+      border: 1px solid rgba(184, 146, 63, 0.14);
+      border-radius: var(--radius-xl);
+      background:
+        linear-gradient(145deg, rgba(29, 38, 29, 0.5), rgba(13, 18, 13, 0.85));
+      box-shadow:
+        var(--shadow-deep),
+        inset 0 1px 0 rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(8px);
+      overflow: hidden;
+    }
+
+    .intro-card::before {
+      content: "❖";
+      position: absolute;
+      top: 22px;
+      right: 30px;
+      color: rgba(184, 146, 63, 0.15);
+      font-size: 1.4rem;
+    }
+
+    .intro-card::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(circle, rgba(184, 146, 63, 0.06), transparent 70%);
+      pointer-events: none;
+    }
+
+    .intro-card p {
+      color: var(--cream-dim);
+      font-size: 1.02rem;
+      font-weight: 300;
+      line-height: 2.3;
+      text-align: justify;
+    }
+
+    .intro-card p + p {
+      margin-top: 22px;
+    }
+
+    .intro-card p::first-letter {
+      font-family: "Amiri", serif;
+      font-size: 1.4em;
+      color: var(--gold-300);
+      font-weight: 700;
+    }
+
+    /* =========================================================
+       PREFACE
+    ========================================================= */
+
+    .preface-wrapper {
+      max-width: 960px;
+      margin: auto;
+      position: relative;
+    }
+
+    .preface-wrapper::before {
+      content: "";
+      position: absolute;
+      right: -24px;
+      top: 20px;
+      bottom: 20px;
+      width: 2px;
+      background: linear-gradient(to bottom, transparent, rgba(184, 146, 63, 0.35), rgba(184, 146, 63, 0.1), transparent);
+      border-radius: 1px;
+    }
+
+    .preface-card {
+      padding: 55px 60px;
+      border-radius: var(--radius-xl);
+      background:
+        linear-gradient(135deg, rgba(25, 33, 27, 0.85), rgba(13, 17, 13, 0.95));
+      border: 1px solid rgba(184, 146, 63, 0.1);
+      box-shadow:
+        var(--shadow-deep),
+        inset 0 1px 0 rgba(255, 255, 255, 0.02);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .preface-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(184, 146, 63, 0.04), transparent 70%);
+      pointer-events: none;
+    }
+
+    .preface-card p {
+      color: var(--cream-dim);
+      line-height: 2.5;
+      font-size: 1rem;
+      font-weight: 300;
+      text-align: justify;
+      margin-bottom: 26px;
+      position: relative;
+    }
+
+    .preface-card p:last-of-type {
+      margin-bottom: 0;
+    }
+
+    .preface-card p::first-letter {
+      font-family: "Amiri", serif;
+      font-size: 1.5em;
+      color: var(--gold-300);
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .signature {
+      margin-top: 40px;
+      padding-top: 28px;
+      border-top: 1px solid rgba(184, 146, 63, 0.08);
+      color: var(--gold-300);
+      font-family: "Amiri", serif;
+      font-size: 1.25rem;
+      text-align: left;
+      line-height: 1.8;
+    }
+
+    /* =========================================================
+       FIGURES
+    ========================================================= */
+
+    .figures-section {
+      background:
+        linear-gradient(180deg, transparent, rgba(31, 48, 64, 0.06), transparent);
+      position: relative;
+    }
+
+    .figures-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .figure-card {
+      position: relative;
+      padding: 32px 28px;
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(184, 146, 63, 0.1);
+      background:
+        linear-gradient(145deg, rgba(31, 48, 64, 0.25), rgba(15, 20, 15, 0.7));
+      transition: all 0.4s var(--transition);
+      overflow: hidden;
+      cursor: default;
+    }
+
+    .figure-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 120px;
+      height: 120px;
+      background: radial-gradient(circle, rgba(184, 146, 63, 0.06), transparent 70%);
+      opacity: 0;
+      transition: opacity 0.4s var(--transition);
+    }
+
+    .figure-card::after {
+      content: "";
+      position: absolute;
+      bottom: -60px;
+      left: -60px;
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      background: rgba(184, 146, 63, 0.03);
+      transition: all 0.4s var(--transition);
+    }
+
+    .figure-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(184, 146, 63, 0.25);
+      background:
+        linear-gradient(145deg, rgba(36, 56, 77, 0.35), rgba(20, 26, 20, 0.8));
+      box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.4),
+        0 0 40px rgba(184, 146, 63, 0.06);
+    }
+
+    .figure-card:hover::before {
+      opacity: 1;
+    }
+
+    .figure-card:hover::after {
+      transform: scale(1.3);
+      background: rgba(184, 146, 63, 0.05);
+    }
+
+    .figure-number {
+      color: var(--gold-600);
+      font-size: 0.75rem;
+      font-weight: 500;
+      margin-bottom: 10px;
+      font-family: "Vazirmatn", sans-serif;
+      letter-spacing: 1px;
+    }
+
+    .figure-name {
+      font-family: "Amiri", serif;
+      color: var(--gold-200);
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+      font-weight: 700;
+      line-height: 1.4;
+    }
+
+    .figure-text {
+      color: var(--cream-muted);
+      font-size: 0.87rem;
+      font-weight: 300;
+      line-height: 2;
+    }
+
+    /* =========================================================
+       THEMES
+    ========================================================= */
+
+    .themes-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .theme-card {
+      min-height: 160px;
+      padding: 28px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      border-radius: var(--radius-lg);
+      background: rgba(255, 255, 255, 0.015);
+      border: 1px solid rgba(184, 146, 63, 0.08);
+      transition: all 0.4s var(--transition);
+      position: relative;
+      overflow: hidden;
+      cursor: default;
+    }
+
+    .theme-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 50% 0%, rgba(184, 146, 63, 0.08), transparent 70%);
+      opacity: 0;
+      transition: opacity 0.4s var(--transition);
+    }
+
+    .theme-card:hover {
+      transform: translateY(-6px);
+      background: rgba(184, 146, 63, 0.04);
+      border-color: rgba(184, 146, 63, 0.2);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    }
+
+    .theme-card:hover::before {
+      opacity: 1;
+    }
+
+    .theme-symbol {
+      font-size: 1.6rem;
+      color: var(--gold-400);
+      margin-bottom: 14px;
+      transition: all 0.4s var(--transition);
+      text-shadow: 0 0 20px rgba(184, 146, 63, 0.3);
+    }
+
+    .theme-card:hover .theme-symbol {
+      transform: scale(1.15) rotate(5deg);
+      color: var(--gold-200);
+    }
+
+    .theme-title {
+      color: var(--cream);
+      font-family: "Amiri", serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      line-height: 1.5;
+    }
+
+    /* =========================================================
+       QUOTE
+    ========================================================= */
+
+    .quote-section {
+      padding: 100px 0;
+      position: relative;
+    }
+
+    .quote-box {
+      max-width: 940px;
+      margin: auto;
+      text-align: center;
+      padding: 80px 50px;
+      position: relative;
+      border-top: 1px solid rgba(184, 146, 63, 0.18);
+      border-bottom: 1px solid rgba(184, 146, 63, 0.18);
+    }
+
+    .quote-box::before,
+    .quote-box::after {
+      content: "";
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      border-color: rgba(184, 146, 63, 0.25);
+      border-style: solid;
+    }
+
+    .quote-box::before {
+      top: -1px;
+      right: 0;
+      border-width: 1px 1px 0 0;
+    }
+
+    .quote-box::after {
+      bottom: -1px;
+      left: 0;
+      border-width: 0 0 1px 1px;
+    }
+
+    .quote-mark {
+      color: rgba(184, 146, 63, 0.35);
+      font-family: Georgia, serif;
+      font-size: 6rem;
+      line-height: 0.4;
+      margin-bottom: 35px;
+      display: block;
+    }
+
+    .quote-text {
+      font-family: "Amiri", serif;
+      font-size: clamp(1.4rem, 3vw, 2.1rem);
+      line-height: 2.1;
+      color: var(--gold-100);
+      font-weight: 400;
+      font-style: italic;
+      text-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .quote-source {
+      margin-top: 28px;
+      color: var(--cream-muted);
+      font-size: 0.82rem;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+    }
+
+    .quote-source::before {
+      content: "— ";
+      color: var(--gold-500);
+    }
+
+    /* =========================================================
+       DETAILS
+    ========================================================= */
+
+    .details-card {
+      max-width: 880px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      border: 1px solid rgba(184, 146, 63, 0.12);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      background: rgba(15, 20, 15, 0.7);
+      box-shadow: var(--shadow-soft);
+      backdrop-filter: blur(8px);
+    }
+
+    .detail-item {
+      padding: 28px 34px;
+      border-bottom: 1px solid rgba(184, 146, 63, 0.06);
+      transition: background 0.3s var(--transition);
+    }
+
+    .detail-item:hover {
+      background: rgba(184, 146, 63, 0.03);
+    }
+
+    .detail-item:nth-child(odd) {
+      border-left: 1px solid rgba(184, 146, 63, 0.06);
+    }
+
+    .detail-item:nth-last-child(-n+2) {
+      border-bottom: none;
+    }
+
+    .detail-label {
+      color: var(--cream-muted);
+      font-size: 0.76rem;
+      font-weight: 400;
+      margin-bottom: 6px;
+      letter-spacing: 0.5px;
+    }
+
+    .detail-value {
+      color: var(--gold-200);
+      font-family: "Amiri", serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      line-height: 1.6;
+    }
+
+    /* =========================================================
+       AUTHOR NOTE
+    ========================================================= */
+
+    .author-note {
+      max-width: 920px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .author-note p {
+      color: var(--cream-dim);
+      font-size: 1.02rem;
+      font-weight: 300;
+      line-height: 2.4;
+    }
+
+    .author-name {
+      display: inline-block;
+      margin-top: 30px;
+      color: var(--gold-300);
+      font-family: "Amiri", serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      position: relative;
+      padding-bottom: 12px;
+    }
+
+    .author-name::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 50%;
+      transform: translateX(50%);
+      width: 50px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold-500), transparent);
+    }
+
+    /* =========================================================
+       BACK BUTTON
+    ========================================================= */
+
+    .back-area {
+      padding: 40px 0 100px;
+      text-align: center;
+    }
+
+    .back-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 28px;
+      border-radius: 999px;
+      border: 1px solid rgba(184, 146, 63, 0.22);
+      color: var(--gold-300);
+      background: linear-gradient(135deg, rgba(184, 146, 63, 0.06), rgba(184, 146, 63, 0.02));
+      transition: all 0.4s var(--transition);
+      font-size: 0.92rem;
+      font-weight: 400;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .back-button::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(184, 146, 63, 0.15), transparent);
+      opacity: 0;
+      transition: opacity 0.4s var(--transition);
+    }
+
+    .back-button:hover {
+      color: var(--gold-100);
+      background: rgba(184, 146, 63, 0.1);
+      border-color: rgba(184, 146, 63, 0.4);
+      transform: translateY(-3px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3), 0 0 30px rgba(184, 146, 63, 0.1);
+    }
+
+    .back-button:hover::before {
+      opacity: 1;
+    }
+
+    .back-button span:first-child {
+      transition: transform 0.3s var(--transition);
+    }
+
+    .back-button:hover span:first-child {
+      transform: translateX(-4px);
+    }
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+
+    footer {
+      border-top: 1px solid rgba(184, 146, 63, 0.08);
+      padding: 40px 0;
+      background: rgba(5, 8, 6, 0.5);
+      position: relative;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .footer-brand {
+      font-family: "Amiri", serif;
+      color: var(--gold-400);
+      font-size: 1.15rem;
+      font-weight: 700;
+    }
+
+    .footer-copy {
+      color: var(--cream-muted);
+      font-size: 0.76rem;
+      font-weight: 300;
+    }
+
+    /* =========================================================
+       SCROLL REVEAL
+    ========================================================= */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s var(--transition), transform 0.8s var(--transition);
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* =========================================================
+       RESPONSIVE
+    ========================================================= */
+
+    @media (max-width: 1024px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .hero-content {
+        text-align: center;
+      }
+
+      .hero-description {
+        margin: auto;
+      }
+
+      .author,
+      .hero-tags {
+        justify-content: center;
+      }
+
+      .cover-area {
+        min-height: 540px;
+      }
+
+      .figures-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .themes-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        width: min(100% - 32px, 1180px);
+      }
+
+      .topbar-inner {
+        min-height: 68px;
+      }
+
+      .brand {
+        font-size: 1.15rem;
+      }
+
+      .nav {
+        display: none;
+      }
+
+      .hero {
+        padding: 70px 0 40px;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.4rem, 11vw, 3.8rem);
+      }
+
+      .cover-area {
+        min-height: 460px;
+      }
+
+      .cover-frame {
+        width: min(300px, 82%);
+      }
+
+      .section {
+        padding: 60px 0;
+      }
+
+      .intro-card,
+      .preface-card {
+        padding: 32px 26px;
+        border-radius: var(--radius-lg);
+      }
+
+      .preface-wrapper::before {
+        right: -10px;
+      }
+
+      .preface-card p {
+        text-align: right;
+        font-size: 0.94rem;
+        line-height: 2.35;
+      }
+
+      .figures-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .themes-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+
+      .theme-card {
+        min-height: 140px;
+        padding: 22px 16px;
+      }
+
+      .details-card {
+        grid-template-columns: 1fr;
+      }
+
+      .detail-item:nth-child(odd) {
+        border-left: none;
+      }
+
+      .detail-item {
+        padding: 22px 26px;
+      }
+
+      .detail-item:nth-last-child(-n+2) {
+        border-bottom: 1px solid rgba(184, 146, 63, 0.06);
+      }
+
+      .detail-item:last-child {
+        border-bottom: none;
+      }
+
+      .quote-box {
+        padding: 60px 24px;
+      }
+
+      .quick-inner {
+        border-radius: var(--radius-sm);
+      }
+
+      .quick-inner a {
+        font-size: 0.75rem;
+        padding: 8px 12px;
+      }
+
+      .footer-inner {
+        justify-content: center;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 440px) {
+      .themes-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-tags {
+        gap: 6px;
+      }
+
+      .tag {
+        font-size: 0.7rem;
+        padding: 5px 10px;
+      }
+
+      .quote-text {
+        font-size: 1.3rem;
+      }
+
+      .intro-card p::first-letter,
+      .preface-card p::first-letter {
+        font-size: 1.2em;
+      }
+    }
+
+    /* =========================================================
+       ACCESSIBILITY
+    ========================================================= */
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition: none !important;
+        animation: none !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+  </style>
 </head>
+
 <body>
 
-<header class="subhero compact">
-  <nav class="nav wrap">
-    <a class="brand" href="../index.html">حسین محمدی آمیرزا</a>
-    <div class="links">
-      <a href="../index.html">خانه</a>
-      <a href="../blog.html">وبلاگ</a>
-      <a href="tarikh-adyan.html">تاریخ ادیان</a>
+  <!-- Grain overlay -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- =======================================================
+       NAVIGATION
+  ======================================================== -->
+
+  <header class="topbar">
+    <div class="container topbar-inner">
+
+      <a class="brand" href="../../index.html">
+        حسین محمدی آمیرزا
+      </a>
+
+      <nav class="nav" aria-label="منوی اصلی">
+        <a href="../../index.html">خانه</a>
+        <a href="../../blog.html">وبلاگ</a>
+        <a href="tarikh-adyan.html">تاریخ ادیان</a>
+        <a href="#preface">پیشگفتار</a>
+        <a href="#figures">چهره‌ها</a>
+        <a href="#themes">درونمایه‌ها</a>
+      </nav>
+
     </div>
-  </nav>
-</header>
+  </header>
 
-<main>
-  <section class="section wrap book-detail">
-    <div class="detail-cover">
-      <img src="../images/books/faraz-va-forud.jpg" alt="جلد کتاب فراز و فرود سرنوشت قوم زند">
-    </div>
-    <div class="detail-copy">
-      <span class="eyebrow">کتاب</span>
-      <h1>فراز و فرود سرنوشت قوم زند</h1>
-      <h2>در گذر تاریخ</h2>
-      <p style="color:#6b4226;font-weight:600;">نویسنده: حسین محمدی</p>
 
-      <div style="margin-top:25px;padding-top:20px;border-top:1px solid #e8d5c4;">
-        <h3 style="color:#6b4226;">📖 پیشگفتار</h3>
+  <main>
 
-        <p style="color:#4a3522;line-height:2.2;font-size:1.05rem;">
-          تاریخ ایران، همچون دریایی بی‌کران، امواجی از دانش و خرد و حماسه و فداکاری را در دل خود جای داده است. که درین میان دردانه‌هایی در دل این دریا خود نمایی می‌کنند. مانند کتاب گران‌سنگ اوستا و سرنوشت اقوامی که با این کتاب ارزشمند، ارتباطی تنگاتنگ داشته‌اند.
-        </p>
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
 
-        <p style="color:#4a3522;line-height:2.2;font-size:1.05rem;">
-          اوستا نه تنها به پرستش اهورامزدا و ایزدان مرتبط با طبیعت اختصاص دارد، بلکه راهنمایی عملی برای زندگی روزمره انسان‌ها نیز ارائه می‌دهد. از یسنا، که قلب پرستش و نیایش است، تا ویسپرد و جشن‌های آیینی، از وندیداد و قوانین پاکیزگی گرفته تا یشت‌ها و خرده اوستا، همه این بخش‌ها با هدف ایجاد زندگی هماهنگ با خرد، راستی و پاکی تدوین شده‌اند.
-        </p>
+    <section class="hero">
 
-        <p style="color:#4a3522;line-height:2.2;font-size:1.05rem;">
-          این کتاب نشان می‌دهد که جهان، صحنه‌ای از نبرد میان نیروهای نور و تاریکی است، و هر انسان می‌تواند با پندار نیک، گفتار راست و کردار درست، سهمی در پیروزی نور داشته باشد. اوستا به ما یادآوری می‌کند که احترام به طبیعت، همبستگی جمعی و درستکاری فردی پایه‌های زندگی پاک و معنادار هستند.
-        </p>
+      <div class="container hero-grid">
 
-        <p style="color:#4a3522;line-height:2.2;font-size:1.05rem;">
-          خواندن اوستا، حتی در دنیای مدرن، همچنان تجربه‌ای الهام‌بخش و معنوی است. این کتاب، چراغی است که مسیر انسان را روشن می‌سازد، روح را با خرد و امید پیوند می‌دهد و یادآور می‌شود که زندگی هر فرد، با انتخاب‌های درست و پیوند با نیروهای الهی، می‌تواند جهانی روشن‌تر و پرنورتر بسازد.
-        </p>
+        <div class="hero-content">
 
-        <p style="color:#4a3522;line-height:2.2;font-size:1.05rem;">
-          آموزه‌های اوستا نه تنها در کتاب‌ها و آتشکده‌ها زنده ماندند، بلکه در دل مردم، و فرهنگ‌های مختلف و اقوام ایران زمین، نیز جریان یافتند. «قوم زند»، با پیوندی ژرف با طبیعت و آتشکده نوشیجان در اطراف ملایر و کتاب مقدس اوستا و پس از آن با نگارش «کتاب زند»، جلوه‌ای زنده از این ارزش‌ها را به خود اختصاص دادند؛ مردمانی که در دل کوه‌ها و دشت‌های ملایر زندگی می‌کردند و هر روز، با پندار نیک، گفتار راست و کردار درست، چراغ راستی و روشنایی را در جامعه خود فروزان نگاه می‌داشتند.
-        </p>
+          <div class="eyebrow">
+            روایت تاریخی · ایران · زندیه
+          </div>
 
-        <p style="color:#4a3522;line-height:2.2;font-size:1.05rem;">
-          داستان زندیان، داستان مردمانی است که با جان و دل، سرزمین و فرهنگ خود را، از گزند طوفان‌های تاریخ محافظت کردند و رد پایشان تا امروز در خاک و فرهنگ این دیار باقی مانده است. آبادی‌های پری، زنگنه و کمازان، و روستاهای دره جوزان، نه تنها پناهگاه آنان، بلکه صحنهٔ رخدادهای پرشور و دلاورانه‌ای بودند که شکوه و شجاعت این قوم را در تاریخ ایران ثبت کردند.
-        </p>
+          <h1>
+            فراز و فرود<br>
+            سرنوشت قوم زند
+          </h1>
 
-        <p style="color:#4a3522;line-height:2.2;font-size:1.05rem;">
-          در روزگاران کهن، هنگامی که سایهٔ مهاجمان بر این سرزمین گسترده بود، مردی از نیاکان زندیان «هوارم شیردل» برخاست. او نه تنها جنگجویی بی‌باک بود، بلکه نگهبانی دانا و باوفا برای مردمش بود. هوارم در دل روزهای تاریک و در گرداب حوادث بی‌رحم، با تیزچنگی و با شمشیری بران و دلی آکنده از وفاداری و ایمان، در برابر کسانی ایستاد که می‌خواستند آرامش این دیار را برهم زنند و آئین و فرهنگش را به آتش بکشند.
-        </p>
+          <div class="hero-subtitle">
+            در گذر تاریخ
+          </div>
 
-        <p style="color:#4a3522;line-height:2.2;font-size:1.05rem;">
-          اما حفاظت از سرزمین تنها بخشی از نبرد این قوم بود؛ میراث فرهنگی نیز برای زندیان همچون شاهرگ زندگی بود. کهزاد دهوپاد و همسر دلیرش، ماهانای تیزچنگ، داستانی فراتر از شجاعت و شهامت آفریدند. آنان نسخه‌های گران‌بهای یسنا از کتاب اوستا را، که نماد دانش و فرهنگ هزاران سالهٔ ایرانیان بود، از خطر نابودی نجات دادند و با جمع‌آوری و بازنویسی دیگر بخش‌های اوستا پس از شکست سلوکیان از دانش و فرهنگ این مرز و بوم حفاظت و حراست کردند.
-        </p>
+          <p class="hero-description">
+            روایتی از هویت، فرهنگ، دلاوری، میراث و فراز و فرودهای مردمانی
+            که نامشان در بخشی از تاریخ ایران ماندگار شده است.
+          </p>
 
-        <p style="color:#4a3522;line-height:2.2;font-size:1.05rem;">
-          با گذر روزگار، در عصر ساسانیان شاهد ظهور دانشمندی برجسته از این خاندان هستیم: به نام مهراسپندان آذرپاد. او با قلمی توانمند و ذهنی ژرف، شرح و تفسیر اوستا را در «کتاب زند اوستا» نوشت و با این اثر ماندگار، میراث زندیان را جاودانه کرد و به این قوم هویتی تازه بخشید «قوم زند». از آن پس، فراتر از یک قوم، به نمادی از حافظ دانش، هویت و فرهنگ ایرانی بدل شد.
-        </p>
+          <div class="author">
+            <span class="author-line"></span>
+            <span>نوشتهٔ حسین محمدی</span>
+          </div>
 
-        <p style="color:#4a3522;line-height:2.2;font-size:1.05rem;">
-          با این حال، داستان زندیان تنها در میراث فرهنگی و دانش نیز خلاصه نمی‌شود. آنان مردمانی بودند که در دل کوه‌ها و دشت‌ها، زندگی را با همهٔ سختی‌ها، فراز و فرودها و طوفان‌های روزگار تجربه کردند. که در قرون بعد، چهره‌هایی سترگ چون کریم‌خان زند، حاکمی دادگر و خدامرادخان زند سردار قدرتمند زندیه، ظهور کردند.
-        </p>
+          <div class="hero-tags">
+            <span class="tag">تاریخ ایران</span>
+            <span class="tag">قوم زند</span>
+            <span class="tag">زندیه</span>
+            <span class="tag">هویت و فرهنگ</span>
+          </div>
 
-        <p style="color:#4a3522;line-height:2.2;font-size:1.05rem;">
-          کریم‌خان، با دلی آکنده از عدالت و چشمانی نافذ، به دنبال خدمت به مردم قدم در مسیر حکومت گذاشت. او با تدبیری کم‌نظیر و دلیرانی وفادار چون خدامرادخان، خان‌های ستمگر را سرکوب کرد و دولتی بر پایه مردم‌سالاری و عدالت برپا نمود. در دل شب‌های ظلمت، فانوس امیدی روشن کرد و نشان داد که حکمرانی می‌تواند با عشق به مردم و عدالت اجتماعی معنا یابد.
-        </p>
+        </div>
 
-        <p style="color:#4a3522;line-height:2.2;font-size:1.05rem;">
-          اما حتی درخشان‌ترین ستاره‌ها نیز در برابر تاریکی گاه به زانو درمی‌آیند. دولت زندیه، باوجود عظمتش، از تفرقه و خیانت در امان نماند. درگیری‌های درونی و رقابت‌های خونین، پایه‌های حکومت کریم‌خان را لرزاند و نهایتاً فروپاشی اجتناب‌ناپذیر شد. این شکست، یادآوری تلخی است برای همه کسانی که تاریخ را می‌نگرند: حتی نیکوترین حکومت‌ها، اگر انسجام و اتحاد نداشته باشند، در برابر طوفان زمانه دوام نمی‌آورند.
-        </p>
 
-        <p style="color:#4a3522;line-height:2.2;font-size:1.05rem;">
-          اما داستان زندیان با سقوط دولتشان نیز به پایان نرسید. نسل‌های بعدی، زندگی را در مسیرهایی ساده‌تر ادامه دادند و نشان دادند که شکوه و بزرگی یک قوم تنها در تاج و تخت نیست، بلکه در زندگی روزمره، کار و تلاش و حفظ ارزش‌های انسانی نیز جاری است.
-        </p>
+        <div class="cover-area">
 
-        <p style="color:#4a3522;line-height:2.2;font-size:1.05rem;">
-          داستان پدربزرگ من، «میرزا احمد» که از تبار خدامرادخان زند است، نمونه‌ای روشن از این حقیقت بود؛ مردی که ریشه‌های خانی و شاهزادگی داشت، اما در مغازه‌ای کوچک شاگردی را برگزید و با فروتنی و صبوری، زندگی‌ ساده و عادی اما پر معنایی ساخت. این گذار از شکوه به ساده‌زیستی، جوهره تاریخ ایران را در قالبی ملموس نشان می‌دهد: تاریخ تنها روایت شاهان و جنگ‌ها نیست، بلکه داستان زیستن انسان‌هایی است که هرکدام به نحوی در سرنوشت این سرزمین سهیم‌اند.
-        </p>
+          <div class="cover-glow"></div>
 
-        <p style="color:#4a3522;line-height:2.2;font-size:1.05rem;">
-          این بخش از تاریخ، یادآور آن است که هر نسلی می‌تواند میراثی ماندگار خلق کند، اگر شجاعت و عشق به مردم را در دل خود پرورش دهد. هوارم، کهزاد، ماهانا، مهراسپندان، کریم‌خان و خدامرادخان تنها نام‌ها نیستند؛ آنان نماد انسان‌هایی هستند که در بزنگاه‌های تاریخ، به سهم خود ایران را ساخته و محافظت کردند. این دوگانگی، یعنی تقابل شکوه و فروتنی، جوهرهٔ تاریخ ایران را به تصویر می‌کشد: مردمانی که هم در میدان جنگ و هم در دل کوچه‌ها و بازارها، ایران را می‌سازند و حفظ می‌کنند.
-        </p>
+          <div class="cover-frame">
 
-        <p style="color:#4a3522;line-height:2.2;font-size:1.05rem;">
-          کتاب حاضر، روایت گوشه‌ای از تلاش‌های مردمانی است که با وفاداری به هویت و فرهنگ خود، حتی در سایه سقوط دولت، تاریخ را ساختند. «بازی سرنوشت»، عنوانی است که نه تنها وقایع تاریخی را بازگو می‌کند، بلکه تلاش می‌کند روحیه، دلاوری و استقامت یک قوم را به تصویر بکشد. این اثر نشان می‌دهد که تاریخ ایران، ساخته انسان‌های معمولی است، نه فقط شاهان و سرداران. انسان‌هایی که در بزنگاه‌های تاریخ، همت و خرد خود را به کار گرفتند تا ایران و فرهنگش زنده بماند.
-        </p>
+            <div class="cover-inner">
 
-        <p style="margin-top:30px;color:#8b6914;font-weight:600;text-align:left;">
-          با احترام<br>
-          حسین محمدی
-        </p>
+              <img
+                src="https://hossein-amirza.github.io/hossein-mohammadi-amirza/images/books/faraz-va-forud.jpg"
+                alt="تصویر جلد کتاب فراز و فرود سرنوشت قوم زند"
+                loading="lazy"
+              >
+
+            </div>
+
+            <div class="cover-caption">
+              فراز و فرود سرنوشت قوم زند
+            </div>
+
+          </div>
+
+        </div>
+
       </div>
 
-      <a class="btn" href="../index.html#books" style="margin-top:25px;">← بازگشت به کتاب‌ها</a>
+    </section>
+
+
+    <!-- =====================================================
+         QUICK NAV
+    ====================================================== -->
+
+    <div class="container quick-nav reveal">
+
+      <nav class="quick-inner" aria-label="دسترسی سریع">
+
+        <a href="#about">درباره اثر</a>
+        <a href="#preface">پیشگفتار</a>
+        <a href="#figures">چهره‌ها</a>
+        <a href="#themes">درونمایه‌ها</a>
+        <a href="#quote">نقل‌قول</a>
+        <a href="#details">مشخصات</a>
+        <a href="#author-note">نگاه نویسنده</a>
+
+      </nav>
+
     </div>
-  </section>
-</main>
 
-<footer>
-  <div class="wrap">© <span id="year"></span> حسین محمدی آمیرزا</div>
-</footer>
 
-<script src="../script.js"></script>
+    <!-- =====================================================
+         ABOUT
+    ====================================================== -->
+
+    <section class="section" id="about">
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <div class="section-kicker">
+            ABOUT THE BOOK
+          </div>
+
+          <h2 class="section-title">
+            دربارهٔ این اثر
+          </h2>
+
+          <div class="section-line"></div>
+
+        </div>
+
+
+        <div class="intro-card reveal">
+
+          <p>
+            تاریخ ایران، تنها مجموعه‌ای از نام شاهان، جنگ‌ها و دگرگونی‌های
+            سیاسی نیست؛ تاریخ، روایت انسان‌هایی است که در بزنگاه‌های زمان،
+            با اندیشه، شجاعت، وفاداری و کوشش خود در ساختن سرنوشت این سرزمین
+            سهم داشته‌اند.
+          </p>
+
+          <p>
+            «فراز و فرود سرنوشت قوم زند» به بخشی از همین روایت می‌پردازد؛
+            روایتی که از میراث فرهنگی و هویت ایرانی آغاز می‌شود و از
+            مردمانی سخن می‌گوید که در میان کوه‌ها و دشت‌های ملایر و در
+            گذر حوادث تاریخی، نام و خاطرهٔ خود را حفظ کردند.
+          </p>
+
+          <p>
+            در این روایت، شکوه و فروتنی در کنار یکدیگر قرار می‌گیرند؛
+            از چهره‌های تاریخی و سرداران و حاکمان گرفته تا انسان‌هایی
+            که پس از فروپاشی قدرت، زندگی ساده و روزمرهٔ خود را ادامه دادند.
+            از همین منظر، تاریخ نه تنها گذشته، بلکه حافظه‌ای زنده از
+            انسان و هویت اوست.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PREFACE
+    ====================================================== -->
+
+    <section class="section preface" id="preface">
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <div class="section-kicker">
+            PREFACE
+          </div>
+
+          <h2 class="section-title">
+            پیشگفتار
+          </h2>
+
+          <div class="section-line"></div>
+
+        </div>
+
+
+        <div class="preface-wrapper reveal">
+
+          <article class="preface-card">
+
+            <p>
+              تاریخ ایران، همچون دریایی بی‌کران، امواجی از دانش و خرد و حماسه و فداکاری را در دل خود جای داده است. که درین میان دردانه‌هایی در دل این دریا خود نمایی می‌کنند. مانند کتاب گران‌سنگ اوستا و سرنوشت اقوامی که با این کتاب ارزشمند، ارتباطی تنگاتنگ داشته‌اند.
+            </p>
+
+            <p>
+              اوستا نه تنها به پرستش اهورامزدا و ایزدان مرتبط با طبیعت اختصاص دارد، بلکه راهنمایی عملی برای زندگی روزمره انسان‌ها نیز ارائه می‌دهد. از یسنا، که قلب پرستش و نیایش است، تا ویسپرد و جشن‌های آیینی، از وندیداد و قوانین پاکیزگی گرفته تا یشت‌ها و خرده اوستا، همه این بخش‌ها با هدف ایجاد زندگی هماهنگ با خرد، راستی و پاکی تدوین شده‌اند.
+            </p>
+
+            <p>
+              این کتاب نشان می‌دهد که جهان، صحنه‌ای از نبرد میان نیروهای نور و تاریکی است، و هر انسان می‌تواند با پندار نیک، گفتار راست و کردار درست، سهمی در پیروزی نور داشته باشد. اوستا به ما یادآوری می‌کند که احترام به طبیعت، همبستگی جمعی و درستکاری فردی پایه‌های زندگی پاک و معنادار هستند.
+            </p>
+
+            <p>
+              خواندن اوستا، حتی در دنیای مدرن، همچنان تجربه‌ای الهام‌بخش و معنوی است. این کتاب، چراغی است که مسیر انسان را روشن می‌سازد، روح را با خرد و امید پیوند می‌دهد و یادآور می‌شود که زندگی هر فرد، با انتخاب‌های درست و پیوند با نیروهای الهی، می‌تواند جهانی روشن‌تر و پرنورتر بسازد.
+            </p>
+
+            <p>
+              آموزه‌های اوستا نه تنها در کتاب‌ها و آتشکده‌ها زنده ماندند، بلکه در دل مردم، و فرهنگ‌های مختلف و اقوام ایران زمین، نیز جریان یافتند. «قوم زند»، با پیوندی ژرف با طبیعت و آتشکده نوشیجان در اطراف ملایر و کتاب مقدس اوستا و پس از آن با نگارش «کتاب زند»، جلوه‌ای زنده از این ارزش‌ها را به خود اختصاص دادند؛ مردمانی که در دل کوه‌ها و دشت‌های ملایر زندگی می‌کردند و هر روز، با پندار نیک، گفتار راست و کردار درست، چراغ راستی و روشنایی را در جامعه خود فروزان نگاه می‌داشتند.
+            </p>
+
+            <p>
+              داستان زندیان، داستان مردمانی است که با جان و دل، سرزمین و فرهنگ خود را، از گزند طوفان‌های تاریخ محافظت کردند و رد پایشان تا امروز در خاک و فرهنگ این دیار باقی مانده است. آبادی‌های پری، زنگنه و کمازان، و روستاهای دره جوزان، نه تنها پناهگاه آنان، بلکه صحنهٔ رخدادهای پرشور و دلاورانه‌ای بودند که شکوه و شجاعت این قوم را در تاریخ ایران ثبت کردند.
+            </p>
+
+            <p>
+              در روزگاران کهن، هنگامی که سایهٔ مهاجمان بر این سرزمین گسترده بود، مردی از نیاکان زندیان «هوارم شیردل» برخاست. او نه تنها جنگجویی بی‌باک بود، بلکه نگهبانی دانا و باوفا برای مردمش بود. هوارم در دل روزهای تاریک و در گرداب حوادث بی‌رحم، با تیزچنگی و با شمشیری بران و دلی آکنده از وفاداری و ایمان، در برابر کسانی ایستاد که می‌خواستند آرامش این دیار را برهم زنند و آئین و فرهنگش را به آتش بکشند.
+            </p>
+
+            <p>
+              اما حفاظت از سرزمین تنها بخشی از نبرد این قوم بود؛ میراث فرهنگی نیز برای زندیان همچون شاهرگ زندگی بود. کهزاد دهوپاد و همسر دلیرش، ماهانای تیزچنگ، داستانی فراتر از شجاعت و شهامت آفریدند. آنان نسخه‌های گران‌بهای یسنا از کتاب اوستا را، که نماد دانش و فرهنگ هزاران سالهٔ ایرانیان بود، از خطر نابودی نجات دادند و با جمع‌آوری و بازنویسی دیگر بخش‌های اوستا پس از شکست سلوکیان از دانش و فرهنگ این مرز و بوم حفاظت و حراست کردند.
+            </p>
+
+            <p>
+              با گذر روزگار، در عصر ساسانیان شاهد ظهور دانشمندی برجسته از این خاندان هستیم: به نام مهراسپندان آذرپاد. او با قلمی توانمند و ذهنی ژرف، شرح و تفسیر اوستا را در «کتاب زند اوستا» نوشت و با این اثر ماندگار، میراث زندیان را جاودانه کرد و به این قوم هویتی تازه بخشید «قوم زند». از آن پس، فراتر از یک قوم، به نمادی از حافظ دانش، هویت و فرهنگ ایرانی بدل شد.
+            </p>
+
+            <p>
+              با این حال، داستان زندیان تنها در میراث فرهنگی و دانش نیز خلاصه نمی‌شود. آنان مردمانی بودند که در دل کوه‌ها و دشت‌ها، زندگی را با همهٔ سختی‌ها، فراز و فرودها و طوفان‌های روزگار تجربه کردند. که در قرون بعد، چهره‌هایی سترگ چون کریم‌خان زند، حاکمی دادگر و خدامرادخان زند سردار قدرتمند زندیه، ظهور کردند.
+            </p>
+
+            <p>
+              کریم‌خان، با دلی آکنده از عدالت و چشمانی نافذ، به دنبال خدمت به مردم قدم در مسیر حکومت گذاشت. او با تدبیری کم‌نظیر و دلیرانی وفادار چون خدامرادخان، خان‌های ستمگر را سرکوب کرد و دولتی بر پایه مردم‌سالاری و عدالت برپا نمود. در دل شب‌های ظلمت، فانوس امیدی روشن کرد و نشان داد که حکمرانی می‌تواند با عشق به مردم و عدالت اجتماعی معنا یابد.
+            </p>
+
+            <p>
+              اما حتی درخشان‌ترین ستاره‌ها نیز در برابر تاریکی گاه به زانو درمی‌آیند. دولت زندیه، باوجود عظمتش، از تفرقه و خیانت در امان نماند. درگیری‌های درونی و رقابت‌های خونین، پایه‌های حکومت کریم‌خان را لرزاند و نهایتاً فروپاشی اجتناب‌ناپذیر شد. این شکست، یادآوری تلخی است برای همه کسانی که تاریخ را می‌نگرند: حتی نیکوترین حکومت‌ها، اگر انسجام و اتحاد نداشته باشند، در برابر طوفان زمانه دوام نمی‌آورند.
+            </p>
+
+            <p>
+              اما داستان زندیان با سقوط دولتشان نیز به پایان نرسید. نسل‌های بعدی، زندگی را در مسیرهایی ساده‌تر ادامه دادند و نشان دادند که شکوه و بزرگی یک قوم تنها در تاج و تخت نیست، بلکه در زندگی روزمره، کار و تلاش و حفظ ارزش‌های انسانی نیز جاری است.
+            </p>
+
+            <p>
+              داستان پدربزرگ من، «میرزا احمد» که از تبار خدامرادخان زند است، نمونه‌ای روشن از این حقیقت بود؛ مردی که ریشه‌های خانی و شاهزادگی داشت، اما در مغازه‌ای کوچک شاگردی را برگزید و با فروتنی و صبوری، زندگی‌ ساده و عادی اما پر معنایی ساخت. این گذار از شکوه به ساده‌زیستی، جوهره تاریخ ایران را در قالبی ملموس نشان می‌دهد: تاریخ تنها روایت شاهان و جنگ‌ها نیست، بلکه داستان زیستن انسان‌هایی است که هرکدام به نحوی در سرنوشت این سرزمین سهیم‌اند.
+            </p>
+
+            <p>
+              این بخش از تاریخ، یادآور آن است که هر نسلی می‌تواند میراثی ماندگار خلق کند، اگر شجاعت و عشق به مردم را در دل خود پرورش دهد. هوارم، کهزاد، ماهانا، مهراسپندان، کریم‌خان و خدامرادخان تنها نام‌ها نیستند؛ آنان نماد انسان‌هایی هستند که در بزنگاه‌های تاریخ، به سهم خود ایران را ساخته و محافظت کردند. این دوگانگی، یعنی تقابل شکوه و فروتنی، جوهرهٔ تاریخ ایران را به تصویر می‌کشد: مردمانی که هم در میدان جنگ و هم در دل کوچه‌ها و بازارها، ایران را می‌سازند و حفظ می‌کنند.
+            </p>
+
+            <p>
+              کتاب حاضر، روایت گوشه‌ای از تلاش‌های مردمانی است که با وفاداری به هویت و فرهنگ خود، حتی در سایه سقوط دولت، تاریخ را ساختند. «بازی سرنوشت»، عنوانی است که نه تنها وقایع تاریخی را بازگو می‌کند، بلکه تلاش می‌کند روحیه، دلاوری و استقامت یک قوم را به تصویر بکشد. این اثر نشان می‌دهد که تاریخ ایران، ساخته انسان‌های معمولی است، نه فقط شاهان و سرداران. انسان‌هایی که در بزنگاه‌های تاریخ، همت و خرد خود را به کار گرفتند تا ایران و فرهنگش زنده بماند.
+            </p>
+
+            <div class="signature">
+              با احترام<br>
+              حسین محمدی
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         FIGURES
+    ====================================================== -->
+
+    <section class="section figures-section" id="figures">
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <div class="section-kicker">
+            HISTORICAL FIGURES
+          </div>
+
+          <h2 class="section-title">
+            چهره‌ها و نام‌های روایت
+          </h2>
+
+          <div class="section-line"></div>
+
+        </div>
+
+
+        <div class="figures-grid">
+
+          <article class="figure-card reveal">
+            <div class="figure-number">۰۱</div>
+            <h3 class="figure-name">هوارم شیردل</h3>
+            <p class="figure-text">
+              از نیاکان زندیان که در روایت کتاب، نماد شجاعت، وفاداری و پاسداری از سرزمین معرفی شده است.
+            </p>
+          </article>
+
+          <article class="figure-card reveal">
+            <div class="figure-number">۰۲</div>
+            <h3 class="figure-name">کهزاد دهوپاد</h3>
+            <p class="figure-text">
+              چهره‌ای از روایت میراث فرهنگی که در کنار ماهانا برای حفاظت از نسخه‌های یسنا و دانش اوستا تلاش کرد.
+            </p>
+          </article>
+
+          <article class="figure-card reveal">
+            <div class="figure-number">۰۳</div>
+            <h3 class="figure-name">ماهانای تیزچنگ</h3>
+            <p class="figure-text">
+              همسر دلیر کهزاد دهوپاد و یکی از چهره‌های روایت در مسیر حفاظت از میراث فرهنگی.
+            </p>
+          </article>
+
+          <article class="figure-card reveal">
+            <div class="figure-number">۰۴</div>
+            <h3 class="figure-name">مهراسپندان آذرپاد</h3>
+            <p class="figure-text">
+              دانشمندی از این خاندان که در روایت کتاب با شرح و تفسیر اوستا و کتاب زند اوستا پیوند یافته است.
+            </p>
+          </article>
+
+          <article class="figure-card reveal">
+            <div class="figure-number">۰۵</div>
+            <h3 class="figure-name">کریم‌خان زند</h3>
+            <p class="figure-text">
+              حاکم زندیه که در متن کتاب با عدالت، خدمت به مردم و تلاش برای برپایی حکومتی دادگرانه روایت می‌شود.
+            </p>
+          </article>
+
+          <article class="figure-card reveal">
+            <div class="figure-number">۰۶</div>
+            <h3 class="figure-name">خدامرادخان زند</h3>
+            <p class="figure-text">
+              سردار قدرتمند زندیه که در روایت اثر در کنار کریم‌خان از چهره‌های مهم داستان است.
+            </p>
+          </article>
+
+          <article class="figure-card reveal">
+            <div class="figure-number">۰۷</div>
+            <h3 class="figure-name">میرزا احمد</h3>
+            <p class="figure-text">
+              پدربزرگ نویسنده و از تبار خدامرادخان زند؛ نمادی از گذار از شکوه تاریخی به زندگی ساده و انسانی.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         THEMES
+    ====================================================== -->
+
+    <section class="section" id="themes">
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <div class="section-kicker">
+            THEMES
+          </div>
+
+          <h2 class="section-title">
+            درونمایه‌های اثر
+          </h2>
+
+          <div class="section-line"></div>
+
+        </div>
+
+
+        <div class="themes-grid">
+
+          <div class="theme-card reveal">
+            <div class="theme-symbol">✦</div>
+            <div class="theme-title">هویت ایرانی</div>
+          </div>
+
+          <div class="theme-card reveal">
+            <div class="theme-symbol">◈</div>
+            <div class="theme-title">میراث فرهنگی</div>
+          </div>
+
+          <div class="theme-card reveal">
+            <div class="theme-symbol">✧</div>
+            <div class="theme-title">تاریخ و حافظه</div>
+          </div>
+
+          <div class="theme-card reveal">
+            <div class="theme-symbol">◆</div>
+            <div class="theme-title">دلاوری و شجاعت</div>
+          </div>
+
+          <div class="theme-card reveal">
+            <div class="theme-symbol">❖</div>
+            <div class="theme-title">عدالت و مردم</div>
+          </div>
+
+          <div class="theme-card reveal">
+            <div class="theme-symbol">◇</div>
+            <div class="theme-title">خانواده و تبار</div>
+          </div>
+
+          <div class="theme-card reveal">
+            <div class="theme-symbol">✦</div>
+            <div class="theme-title">فراز و فرود قدرت</div>
+          </div>
+
+          <div class="theme-card reveal">
+            <div class="theme-symbol">◈</div>
+            <div class="theme-title">پایداری و امید</div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         QUOTE
+    ====================================================== -->
+
+    <section class="quote-section" id="quote">
+
+      <div class="container">
+
+        <div class="quote-box reveal">
+
+          <div class="quote-mark">
+            “
+          </div>
+
+          <div class="quote-text">
+            تاریخ تنها روایت شاهان و جنگ‌ها نیست،
+            بلکه داستان زیستن انسان‌هایی است که هرکدام
+            به نحوی در سرنوشت این سرزمین سهیم‌اند.
+          </div>
+
+          <div class="quote-source">
+            از پیشگفتار «فراز و فرود سرنوشت قوم زند»
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         DETAILS
+    ====================================================== -->
+
+    <section class="section" id="details">
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <div class="section-kicker">
+            BOOK DETAILS
+          </div>
+
+          <h2 class="section-title">
+            مشخصات اثر
+          </h2>
+
+          <div class="section-line"></div>
+
+        </div>
+
+
+        <div class="details-card reveal">
+
+          <div class="detail-item">
+            <div class="detail-label">عنوان</div>
+            <div class="detail-value">
+              فراز و فرود سرنوشت قوم زند
+            </div>
+          </div>
+
+          <div class="detail-item">
+            <div class="detail-label">زیرعنوان</div>
+            <div class="detail-value">
+              در گذر تاریخ
+            </div>
+          </div>
+
+          <div class="detail-item">
+            <div class="detail-label">نویسنده</div>
+            <div class="detail-value">
+              حسین محمدی
+            </div>
+          </div>
+
+          <div class="detail-item">
+            <div class="detail-label">موضوع</div>
+            <div class="detail-value">
+              تاریخ، فرهنگ و قوم زند
+            </div>
+          </div>
+
+          <div class="detail-item">
+            <div class="detail-label">رویکرد</div>
+            <div class="detail-value">
+              روایت تاریخی و خانوادگی
+            </div>
+          </div>
+
+          <div class="detail-item">
+            <div class="detail-label">هویت اثر</div>
+            <div class="detail-value">
+              تاریخ ایران و زندیه
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         AUTHOR NOTE
+    ====================================================== -->
+
+    <section class="section" id="author-note">
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <div class="section-kicker">
+            AUTHOR'S VIEW
+          </div>
+
+          <h2 class="section-title">
+            نگاه نویسنده
+          </h2>
+
+          <div class="section-line"></div>
+
+        </div>
+
+
+        <div class="author-note reveal">
+
+          <p>
+            کتاب حاضر، روایت گوشه‌ای از تلاش‌های مردمانی است که با وفاداری
+            به هویت و فرهنگ خود، حتی در سایه سقوط دولت، تاریخ را ساختند.
+            «بازی سرنوشت»، عنوانی است که نه تنها وقایع تاریخی را بازگو می‌کند،
+            بلکه تلاش می‌کند روحیه، دلاوری و استقامت یک قوم را به تصویر بکشد.
+          </p>
+
+          <p style="margin-top: 24px;">
+            این اثر بر این نگاه تأکید دارد که تاریخ ایران، ساخته انسان‌های
+            معمولی است، نه فقط شاهان و سرداران؛ انسان‌هایی که در بزنگاه‌های
+            تاریخ، همت و خرد خود را به کار گرفتند تا ایران و فرهنگش زنده بماند.
+          </p>
+
+          <div class="author-name">
+            حسین محمدی
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         BACK
+    ====================================================== -->
+
+    <div class="back-area">
+
+      <div class="container">
+
+        <a
+          class="back-button"
+          href="../../index.html#books"
+        >
+          <span>←</span>
+          <span>بازگشت به کتاب‌ها</span>
+        </a>
+
+      </div>
+
+    </div>
+
+  </main>
+
+
+  <!-- =======================================================
+       FOOTER
+  ======================================================== -->
+
+  <footer>
+
+    <div class="container footer-inner">
+
+      <div class="footer-brand">
+        حسین محمدی آمیرزا
+      </div>
+
+      <div class="footer-copy">
+        © حسین محمدی آمیرزا · همه حقوق محفوظ است
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =======================================================
+       SCROLL REVEAL SCRIPT
+  ======================================================== -->
+
+  <script>
+    (function () {
+      const reveals = document.querySelectorAll('.reveal');
+
+      if (!reveals.length) return;
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold: 0.08,
+          rootMargin: '0px 0px -40px 0px'
+        }
+      );
+
+      reveals.forEach((el) => observer.observe(el));
+    })();
+  </script>
 
 </body>
 </html>
