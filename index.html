@@ -2255,36 +2255,58 @@
     <span id="notificationMessage">پیشنهاد شما با موفقیت ثبت شد!</span>
     <button onclick="this.parentElement.classList.remove('show')" aria-label="بستن اعلان">✕</button>
   </div>
+<!-- ===== HEADER ===== -->
+<header class="site-header" id="siteHeader">
+  <div class="container nav-container">
+    <a href="#home" class="logo" aria-label="صفحه اصلی حسین محمدی آمیرزا">
+      <span class="logo-mark" aria-hidden="true">ح</span>
+      <span class="logo-text">
+        <strong>حسین محمدی آمیرزا</strong>
+        <small>نویسنده · پژوهشگر · روایتگر</small>
+      </span>
+    </a>
 
-  <!-- ===== HEADER ===== -->
-  <header class="site-header" id="siteHeader">
-    <div class="container nav-container">
-      <a href="#home" class="logo" aria-label="صفحه اصلی حسین محمدی آمیرزا">
-        <span class="logo-mark" aria-hidden="true">ح</span>
-        <span class="logo-text">
-          <strong>حسین محمدی آمیرزا</strong>
-          <small>نویسنده · پژوهشگر · روایتگر</small>
-        </span>
-      </a>
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      type="button"
+      aria-label="باز کردن منوی اصلی"
+      aria-expanded="false"
+      aria-controls="mainNavigation"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
 
-      <button class="menu-toggle" id="menuToggle" type="button" aria-label="باز کردن منوی اصلی" aria-expanded="false" aria-controls="mainNavigation">
-        <span></span><span></span><span></span>
+    <nav
+      class="main-nav"
+      id="mainNavigation"
+      aria-label="ناوبری اصلی"
+    >
+      <a href="#about">درباره من</a>
+      <a href="#books">کتاب‌ها</a>
+      <a href="#screenplays">فیلمنامه‌ها</a>
+      <a href="#series">آثار نمایشی</a>
+      <a href="blog/index.html">نوشته‌ها</a>
+
+      <!-- لینک جدید دیدگاه مخاطبان -->
+      <a href="comments.html">دیدگاه مخاطبان</a>
+
+      <a href="#contact" class="nav-contact">تماس</a>
+
+      <button
+        class="theme-toggle"
+        id="themeToggle"
+        type="button"
+        aria-label="تغییر حالت نمایش"
+        title="تغییر حالت نمایش"
+      >
+        <span class="theme-icon" aria-hidden="true">◐</span>
       </button>
-
-      <nav class="main-nav" id="mainNavigation" aria-label="ناوبری اصلی">
-        <a href="#about">درباره من</a>
-        <a href="#books">کتاب‌ها</a>
-        <a href="#screenplays">فیلمنامه‌ها</a>
-        <a href="#series">آثار نمایشی</a>
-       <a href="blog/index.html">نوشته‌ها</a>
-        <a href="#contact" class="nav-contact">تماس</a>
-        <button class="theme-toggle" id="themeToggle" type="button" aria-label="تغییر حالت نمایش" title="تغییر حالت نمایش">
-          <span class="theme-icon" aria-hidden="true">◐</span>
-        </button>
-      </nav>
-    </div>
-  </header>
-
+    </nav>
+  </div>
+</header>
   <!-- ===== MAIN ===== -->
   <main id="main-content">
 
