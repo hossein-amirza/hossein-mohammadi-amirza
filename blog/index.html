@@ -9,7 +9,7 @@
 
   <meta
     name="description"
-    content="وبلاگ حسین محمدی آمیرزا؛ جست‌وجوی معنا در تاریخ، ادیان و اندیشه"
+    content="وبلاگ حسین محمدی آمیرزا؛ جست‌وجوی معنا در تاریخ، ادیان، اندیشه و روایت"
   >
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -133,9 +133,9 @@
       position: relative;
 
       padding:
-        10px 15px 40px;
+        10px 15px 34px;
 
-      margin-bottom: 38px;
+      margin-bottom: 26px;
     }
 
     .blog-header::before {
@@ -207,7 +207,190 @@
     }
 
     /* ==============================
-       فهرست
+       بخش‌های وبلاگ
+       ============================== */
+
+    .blog-sections {
+      position: relative;
+
+      display: grid;
+
+      grid-template-columns:
+        minmax(0, 1fr);
+
+      gap: 18px;
+
+      margin:
+        0
+        0
+        42px;
+    }
+
+    .blog-section {
+      position: relative;
+
+      display: grid;
+
+      grid-template-columns:
+        auto
+        1fr
+        auto;
+
+      grid-template-areas:
+        "icon title arrow"
+        "icon description arrow";
+
+      align-items: center;
+
+      column-gap: 17px;
+
+      padding:
+        20px
+        23px;
+
+      min-height: 100px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(31,27,20,.96),
+          rgba(11,9,7,.98)
+        );
+
+      border:
+        1px solid rgba(212,175,55,.25);
+
+      border-radius: 20px;
+
+      text-decoration: none;
+
+      box-shadow:
+        0 12px 30px rgba(0,0,0,.32),
+        inset 0 1px 0 rgba(255,255,255,.025);
+
+      transition:
+        transform .25s ease,
+        border-color .25s ease,
+        box-shadow .25s ease,
+        background .25s ease;
+    }
+
+    .blog-section::before {
+      content: "";
+
+      position: absolute;
+
+      inset: 7px;
+
+      border:
+        1px solid rgba(212,175,55,.055);
+
+      border-radius: 14px;
+
+      pointer-events: none;
+    }
+
+    .blog-section:hover {
+      transform: translateY(-3px);
+
+      border-color:
+        rgba(212,175,55,.50);
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(39,33,23,.98),
+          rgba(12,10,7,.99)
+        );
+
+      box-shadow:
+        0 18px 40px rgba(0,0,0,.46),
+        0 0 24px rgba(212,175,55,.05);
+    }
+
+    .section-icon {
+      grid-area: icon;
+
+      width: 48px;
+      height: 48px;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      border:
+        1px solid rgba(212,175,55,.35);
+
+      border-radius: 50%;
+
+      color: var(--gold-light);
+
+      background:
+        radial-gradient(
+          circle,
+          rgba(212,175,55,.10),
+          rgba(5,4,3,.9)
+        );
+
+      font-size: 1.2rem;
+
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.04);
+    }
+
+    .section-title {
+      grid-area: title;
+
+      align-self: end;
+
+      color: var(--gold-light);
+
+      font-family:
+        "Noto Nastaliq Urdu",
+        "Amiri",
+        serif;
+
+      font-size: 1.45rem;
+
+      line-height: 1.8;
+    }
+
+    .section-description {
+      grid-area: description;
+
+      align-self: start;
+
+      margin-top: 2px;
+
+      color: var(--muted);
+
+      font-size: .90rem;
+
+      line-height: 1.9;
+    }
+
+    .section-arrow {
+      grid-area: arrow;
+
+      color:
+        rgba(239,213,116,.72);
+
+      font-size: 1.25rem;
+
+      transition:
+        transform .25s ease,
+        color .25s ease;
+    }
+
+    .blog-section:hover .section-arrow {
+      transform: translateX(-5px);
+
+      color: var(--gold-light);
+    }
+
+    /* ==============================
+       فهرست نوشته‌ها
        ============================== */
 
     .post-list {
@@ -587,9 +770,9 @@
         padding:
           10px
           8px
-          30px;
+          25px;
 
-        margin-bottom: 29px;
+        margin-bottom: 22px;
       }
 
       .blog-header h1 {
@@ -599,6 +782,53 @@
 
       .blog-header .subtitle {
         font-size: .98rem;
+      }
+
+      .gold-line {
+        width: 170px;
+      }
+
+      .blog-sections {
+        gap: 14px;
+        margin-bottom: 31px;
+      }
+
+      .blog-section {
+        grid-template-columns:
+          auto
+          1fr
+          auto;
+
+        column-gap: 12px;
+
+        padding:
+          16px
+          15px;
+
+        min-height: 88px;
+
+        border-radius: 18px;
+      }
+
+      .section-icon {
+        width: 41px;
+        height: 41px;
+
+        font-size: 1rem;
+      }
+
+      .section-title {
+        font-size: 1.20rem;
+        line-height: 1.8;
+      }
+
+      .section-description {
+        font-size: .78rem;
+        line-height: 1.7;
+      }
+
+      .section-arrow {
+        font-size: 1.05rem;
       }
 
       .post-list {
@@ -649,6 +879,10 @@
   <main class="blog-container">
 
 
+    <!-- ==============================
+         هدر وبلاگ
+         ============================== -->
+
     <header class="blog-header">
 
       <h1>
@@ -663,6 +897,46 @@
 
     </header>
 
+
+    <!-- ==============================
+         بخش‌های وبلاگ
+         ============================== -->
+
+    <nav
+      class="blog-sections"
+      aria-label="بخش‌های وبلاگ"
+    >
+
+      <a
+        href="stories.html"
+        class="blog-section"
+        aria-label="ورود به بخش داستانک‌ها"
+      >
+
+        <span class="section-icon">
+          ✦
+        </span>
+
+        <span class="section-title">
+          داستانک‌ها
+        </span>
+
+        <span class="section-description">
+          داستان‌های کوتاه و روایت‌های تأمل‌برانگیز
+        </span>
+
+        <span class="section-arrow">
+          ←
+        </span>
+
+      </a>
+
+    </nav>
+
+
+    <!-- ==============================
+         فهرست نوشته‌ها
+         ============================== -->
 
     <section
       id="posts-container"
@@ -684,6 +958,10 @@
     </section>
 
 
+    <!-- ==============================
+         فوتر
+         ============================== -->
+
     <footer class="blog-footer">
 
       ©
@@ -698,13 +976,17 @@
 
   <script>
 
-    /* سال */
+    /* ==============================
+       سال
+       ============================== */
 
     document.getElementById("year").textContent =
       new Date().getFullYear();
 
 
-    /* اعداد فارسی */
+    /* ==============================
+       اعداد فارسی
+       ============================== */
 
     function toPersianNumbers(value) {
 
@@ -724,7 +1006,9 @@
     }
 
 
-    /* تاریخ شمسی */
+    /* ==============================
+       تاریخ شمسی
+       ============================== */
 
     function gregorianToJalali(value) {
 
@@ -751,18 +1035,20 @@
     }
 
 
-    /* ==========================================
+    /* ==============================
        خواندن posts.json
-       ========================================== */
+       ============================== */
 
     fetch("../posts/posts/posts.json")
 
       .then(function(response) {
 
         if (!response.ok) {
+
           throw new Error(
             "posts.json پیدا نشد"
           );
+
         }
 
         return response.json();
@@ -771,25 +1057,32 @@
 
       .then(function(data) {
 
-        /*
-         * ساختار فعلی فایل شما:
-         *
-         * {
-         *   "content": "[ ... ]"
-         * }
-         *
-         * بنابراین اگر content رشته باشد
-         * باید یک بار دیگر JSON.parse شود.
-         */
-
         let posts = [];
 
+
+        /*
+         * حالت اول:
+         *
+         * [
+         *   {...},
+         *   {...}
+         * ]
+         */
 
         if (Array.isArray(data)) {
 
           posts = data;
 
         }
+
+
+        /*
+         * حالت دوم:
+         *
+         * {
+         *   "content": "[...]"
+         * }
+         */
 
         else if (
           data &&
@@ -800,6 +1093,15 @@
             JSON.parse(data.content);
 
         }
+
+
+        /*
+         * حالت سوم:
+         *
+         * {
+         *   "content": [...]
+         * }
+         */
 
         else if (
           data &&
@@ -817,6 +1119,10 @@
             "posts-container"
           );
 
+
+        /*
+         * اگر نوشته‌ای وجود نداشت
+         */
 
         if (
           !Array.isArray(posts) ||
@@ -842,7 +1148,9 @@
         }
 
 
-        /* جدیدترین نوشته اول */
+        /*
+         * جدیدترین نوشته اول
+         */
 
         posts.sort(
           function(a, b) {
@@ -859,7 +1167,9 @@
         container.innerHTML = "";
 
 
-        /* ساخت نوشته‌ها */
+        /*
+         * ساخت کارت نوشته‌ها
+         */
 
         posts.forEach(
           function(post, index) {
@@ -884,7 +1194,7 @@
               "article-number";
 
             number.textContent =
-              "مقاله شماره " +
+              "نوشته شماره " +
               toPersianNumbers(
                 index + 1
               );
@@ -1074,34 +1384,52 @@
 
             /* ساخت کارت */
 
-            card.appendChild(number);
+            card.appendChild(
+              number
+            );
 
-            card.appendChild(title);
+            card.appendChild(
+              title
+            );
 
 
             if (
               meta.children.length
             ) {
 
-              card.appendChild(meta);
+              card.appendChild(
+                meta
+              );
 
             }
 
 
-            card.appendChild(divider);
+            card.appendChild(
+              divider
+            );
 
-            card.appendChild(excerpt);
+            card.appendChild(
+              excerpt
+            );
 
-            card.appendChild(readMore);
+            card.appendChild(
+              readMore
+            );
 
 
-            container.appendChild(card);
+            container.appendChild(
+              card
+            );
 
           }
         );
 
       })
 
+
+      /* ==============================
+         مدیریت خطا
+         ============================== */
 
       .catch(function(error) {
 
