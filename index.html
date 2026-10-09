@@ -3766,261 +3766,676 @@
       }
     }
 ```html
-/* =====================================================
-       PRINT
-       ===================================================== */
+<!-- =====================================================
+     BLOG GATEWAY
+     درگاه ورود به وبلاگ و داستانک‌ها
+     ===================================================== -->
 
-    @media print {
-      .blog-gateway {
-        min-height: auto;
+<style>
+  .blog-gateway {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 24px;
+    overflow: hidden;
+    isolation: isolate;
+  }
 
-        padding: 40px 20px;
+  .blog-gateway-inner {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 760px;
+    text-align: center;
+  }
 
-        color: #000;
-        background: #fff;
+  /* PARTICLES */
+  .blog-particles {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+  }
 
-        border: 0;
-      }
+  .blog-particle {
+    position: absolute;
+    bottom: -10px;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: currentColor;
+    opacity: 0.35;
+    animation: blogFloatUp linear infinite;
+  }
 
-      .blog-gateway-title,
-      .blog-quote-text {
-        color: #000;
-      }
+  @keyframes blogFloatUp {
+    from { transform: translateY(0); }
+    to { transform: translateY(-110vh); }
+  }
 
-      .blog-actions,
-      .blog-progress,
-      .blog-hint,
-      .blog-particles {
-        display: none;
-      }
+  /* KICKER */
+  .blog-kicker {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 6px 16px;
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    border: 1px solid currentColor;
+    border-radius: 999px;
+    opacity: 0.75;
+  }
+
+  /* TITLE */
+  .blog-gateway-title {
+    margin: 0 0 28px;
+    font-size: clamp(1.6rem, 4vw, 2.6rem);
+    line-height: 1.5;
+    font-weight: 700;
+  }
+
+  .blog-gateway-title span {
+    display: block;
+    margin-top: 14px;
+    font-size: 0.55em;
+    font-weight: 400;
+    line-height: 1.9;
+    opacity: 0.75;
+  }
+
+  /* DIVIDER */
+  .blog-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin: 32px 0;
+    opacity: 0.6;
+  }
+
+  .blog-divider-line {
+    flex: 1;
+    max-width: 120px;
+    height: 1px;
+    background: currentColor;
+    opacity: 0.4;
+  }
+
+  .blog-divider-mark {
+    font-size: 0.7rem;
+  }
+
+  /* QUOTE */
+  .blog-quote-wrap {
+    margin: 32px 0 40px;
+  }
+
+  .blog-quote {
+    min-height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .blog-quote-content {
+    width: 100%;
+  }
+
+  .blog-quote-text {
+    margin: 0 0 18px;
+    font-size: clamp(1rem, 2.2vw, 1.25rem);
+    line-height: 2;
+    font-weight: 500;
+    overflow-wrap: anywhere;
+  }
+
+  .blog-loading {
+    opacity: 0.6;
+    font-style: italic;
+  }
+
+  .blog-quote-meta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 0.85rem;
+    opacity: 0.7;
+  }
+
+  .blog-quote-number {
+    font-variant-numeric: tabular-nums;
+  }
+
+  .blog-quote-source::before {
+    content: "— ";
+    opacity: 0.5;
+  }
+
+  /* PROGRESS */
+  .blog-progress {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 24px;
+  }
+
+  .blog-progress-dot {
+    width: 12px;
+    height: 12px;
+    padding: 0;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    background: transparent;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+
+  .blog-progress-dot.is-active {
+    background: currentColor;
+    transform: scale(1.2);
+  }
+
+  .blog-progress-dot:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
+  }
+
+  /* ACTIONS */
+  .blog-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: 32px 0 24px;
+  }
+
+  .blog-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 22px;
+    border: 1px solid currentColor;
+    border-radius: 999px;
+    color: inherit;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition:
+      background 0.3s ease,
+      color 0.3s ease,
+      transform 0.2s ease;
+  }
+
+  .blog-action:hover {
+    transform: translateY(-2px);
+  }
+
+  .blog-action:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
+  }
+
+  .blog-action-primary {
+    background: currentColor;
+    color: #fff;
+  }
+
+  .blog-action-primary span {
+    color: #fff;
+  }
+
+  /* HINT */
+  .blog-hint {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 16px;
+    font-size: 0.85rem;
+    opacity: 0.6;
+  }
+
+  .blog-hint-dots {
+    display: inline-flex;
+    gap: 4px;
+  }
+
+  .blog-hint-dots i {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: currentColor;
+    animation: blogHintPulse 1.4s ease-in-out infinite;
+  }
+
+  .blog-hint-dots i:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+
+  .blog-hint-dots i:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+
+  @keyframes blogHintPulse {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.4); }
+  }
+
+  /* REDUCED MOTION */
+  @media (prefers-reduced-motion: reduce) {
+    .blog-particle,
+    .blog-hint-dots i {
+      animation: none !important;
     }
-  </style>
 
-  <!-- Ambient particles -->
-  <div
-    class="blog-particles"
-    id="blogParticles"
-    aria-hidden="true">
+    .blog-particle {
+      display: none;
+    }
+
+    .blog-action,
+    .blog-progress-dot {
+      transition: none;
+    }
+  }
+
+  /* MOBILE */
+  @media (max-width: 480px) {
+    .blog-gateway {
+      padding: 56px 18px;
+    }
+
+    .blog-actions {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .blog-action {
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
+
+  /* PRINT */
+  @media print {
+    .blog-gateway {
+      min-height: auto;
+      padding: 40px 20px;
+      color: #000;
+      background: #fff;
+      border: 0;
+    }
+
+    .blog-gateway-title,
+    .blog-quote-text {
+      color: #000;
+    }
+
+    .blog-actions,
+    .blog-progress,
+    .blog-hint,
+    .blog-particles {
+      display: none !important;
+    }
+  }
+</style>
+
+<!-- درگاه اصلی -->
+<div class="blog-particles" id="blogParticles" aria-hidden="true"></div>
+
+<div class="blog-gateway-inner">
+
+  <div class="blog-kicker">
+    <span>دفتر نوشته‌ها</span>
   </div>
 
-  <div class="blog-gateway-inner">
+  <h2 class="blog-gateway-title" id="blog-gateway-title">
+    وبلاگ حسین محمدی آمیرزا
+    <span>جست‌وجوی معنا در مسیر تاریخ، ادیان، انسان و اندیشه</span>
+  </h2>
 
-    <!-- Kicker -->
-    <div class="blog-kicker">
-      <span>دفتر نوشته‌ها</span>
-    </div>
+  <div class="blog-divider" aria-hidden="true">
+    <span class="blog-divider-line"></span>
+    <span class="blog-divider-mark">◆</span>
+    <span class="blog-divider-line"></span>
+  </div>
 
-    <!-- Title -->
-    <h2
-      class="blog-gateway-title"
-      id="blog-gateway-title">
+  <!-- نقل‌قول منتخب -->
+  <div class="blog-quote-wrap">
+    <div class="blog-quote">
+      <div class="blog-quote-content">
 
-      وبلاگ حسین محمدی آمیرزا
+        <p
+          class="blog-quote-text"
+          id="blogQuoteText"
+          aria-live="polite"
+          aria-atomic="true">
+          <span class="blog-loading">در حال گشودن دفتر نوشته‌ها...</span>
+        </p>
 
-      <span>
-        جست‌وجوی معنا در مسیر تاریخ، ادیان، انسان و اندیشه
-      </span>
-
-    </h2>
-
-    <!-- Divider -->
-    <div class="blog-divider" aria-hidden="true">
-      <span class="blog-divider-line"></span>
-
-      <span class="blog-divider-mark">◆</span>
-
-      <span class="blog-divider-line"></span>
-    </div>
-
-    <!-- Quote -->
-    <div class="blog-quote-wrap">
-
-      <div
-        class="blog-quote"
-        aria-live="polite">
-
-        <div class="blog-quote-content">
-
-          <p
-            class="blog-quote-text"
-            id="blogQuoteText">
-
-            <span class="blog-loading">
-              در حال گشودن دفتر نوشته‌ها...
-            </span>
-
-          </p>
-
-          <div class="blog-quote-meta">
-
-            <span
-              class="blog-quote-number"
-              id="blogQuoteNumber">
-            </span>
-
-            <span
-              class="blog-quote-source"
-              id="blogQuoteSource">
-            </span>
-
-          </div>
-
+        <div class="blog-quote-meta">
+          <span class="blog-quote-number" id="blogQuoteNumber"></span>
+          <span class="blog-quote-source" id="blogQuoteSource"></span>
         </div>
 
       </div>
-
-      <!-- Slider progress -->
-      <div
-        class="blog-progress"
-        id="blogProgress"
-        role="tablist"
-        aria-label="انتخاب نوشته">
-
-      </div>
-
     </div>
 
-    <!-- Actions -->
-    <div class="blog-actions">
-
-      <!-- ورود به وبلاگ -->
-      <a
-        class="blog-action blog-action-primary"
-        href="blog/index.html"
-        aria-label="ورود به وبلاگ">
-
-        <span>ورود به وبلاگ</span>
-        <span aria-hidden="true">←</span>
-
-      </a>
-
-      <!-- مشاهده همه نوشته‌ها -->
-      <a
-        class="blog-action"
-        href="blog/index.html"
-        aria-label="مشاهده همه نوشته‌ها">
-
-        <span aria-hidden="true">📖</span>
-        <span>مشاهده همه نوشته‌ها</span>
-
-      </a>
-
-      <!-- داستان‌های کوتاه -->
-      <a
-        class="blog-action"
-        href="stories/index.html"
-        aria-label="ورود به داستان‌های کوتاه">
-
-        <span aria-hidden="true">✒️</span>
-        <span>داستان‌های کوتاه</span>
-
-      </a>
-
+    <div
+      class="blog-progress"
+      id="blogProgress"
+      role="group"
+      aria-label="انتخاب نوشته">
     </div>
+  </div>
 
-    <!-- Hint -->
-    <p class="blog-hint">
-      فصل‌های بیشتری در انتظار خوانده‌شدن‌اند
+  <!-- مسیرهای مستقل -->
+  <div class="blog-actions">
 
-      <span
-        class="blog-hint-dots"
-        aria-hidden="true">
+    <a
+      class="blog-action blog-action-primary"
+      href="blog/index.html"
+      aria-label="ورود به فهرست وبلاگ">
+      <span>ورود به وبلاگ</span>
+      <span aria-hidden="true">←</span>
+    </a>
 
-        <i></i>
-        <i></i>
-        <i></i>
-
-      </span>
-    </p>
+    <a
+      class="blog-action"
+      href="blog/stories.html"
+      aria-label="مشاهده همه داستانک‌ها">
+      <span aria-hidden="true">✒️</span>
+      <span>داستانک‌ها</span>
+    </a>
 
   </div>
 
-  <script>
-    (() => {
-      "use strict";
+  <p class="blog-hint">
+    فصل‌های بیشتری در انتظار خوانده‌شدن‌اند
+    <span class="blog-hint-dots" aria-hidden="true">
+      <i></i><i></i><i></i>
+    </span>
+  </p>
 
-      /* ===================================================
-         CONFIG
-         =================================================== */
-```
+</div>
 
-      /*
-       * اگر فایل JSON شما جای دیگری است،
-       * فقط همین مسیر را تغییر بده.
-       */
-      const POSTS_URL = "posts/posts/posts.json";
+<script>
+(() => {
+  "use strict";
 
-      const AUTO_PLAY_DELAY = 7000;
+  /* CONFIG */
+  const POSTS_URL = "posts/posts/posts.json";
+  const AUTO_PLAY_DELAY = 7000;
+  const MAX_QUOTES = 6;
+  const REDUCED_MOTION = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
 
-      const MAX_QUOTES = 6;
+  /* ELEMENTS */
+  const gateway =
+    document.querySelector(".blog-gateway") ||
+    document.querySelector(".blog-gateway-inner");
 
-      /* ===================================================
-         ELEMENTS
-         =================================================== */
+  const particlesEl = document.getElementById("blogParticles");
+  const quoteTextEl = document.getElementById("blogQuoteText");
+  const quoteNumberEl = document.getElementById("blogQuoteNumber");
+  const quoteSourceEl = document.getElementById("blogQuoteSource");
+  const progressEl = document.getElementById("blogProgress");
 
-      const gateway = document.querySelector(".blog-gateway");
+  if (!gateway || !quoteTextEl) return;
 
-      const particlesEl =
-        document.getElementById("blogParticles");
+  /* FALLBACK */
+  const FALLBACK_QUOTES = [
+    {
+      text: "گاهی برای فهمیدن امروز، باید به دورترین نقطه‌ی تاریخ بازگشت.",
+      source: "دفتر نوشته‌ها"
+    },
+    {
+      text: "انسان تنها جهان را تغییر نداده است؛ او هم‌زمان در حال تغییر خودش بوده است.",
+      source: "روایت انسان"
+    },
+    {
+      text: "پشت هر عدد، هر آیین و هر تمدن، داستانی از تلاش انسان برای فهم جهان وجود دارد.",
+      source: "یادداشت‌های تاریخی"
+    },
+    {
+      text: "تاریخ فقط مجموعه‌ای از اتفاقات گذشته نیست؛ آینه‌ای است که انسان امروز را در آن می‌توان دید.",
+      source: "جست‌وجوی معنا"
+    }
+  ];
 
-      const quoteTextEl =
-        document.getElementById("blogQuoteText");
+  /* STATE */
+  let quotes = [];
+  let currentIndex = 0;
+  let autoPlayTimer = null;
+  let isPaused = false;
 
-      const quoteNumberEl =
-        document.getElementById("blogQuoteNumber");
+  const setText = (element, value) => {
+    if (element) element.textContent = value ?? "";
+  };
 
-      const quoteSourceEl =
-        document.getElementById("blogQuoteSource");
+  /* SHUFFLE
+     انتخاب تصادفی از میان همه نوشته‌های واجد شرایط */
+  function shuffle(items) {
+    const result = [...items];
 
-      const progressEl =
-        document.getElementById("blogProgress");
+    for (let i = result.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [result[i], result[j]] = [result[j], result[i]];
+    }
 
-      if (!gateway || !quoteTextEl) {
-        return;
+    return result;
+  }
+
+  /* LOAD POSTS */
+  async function loadQuotes() {
+    try {
+      const response = await fetch(POSTS_URL, {
+        cache: "no-cache"
+      });
+
+      if (!response.ok) {
+        throw new Error("HTTP " + response.status);
       }
 
-      /* ===================================================
-         FALLBACK CONTENT
-         =================================================== */
+      const data = await response.json();
 
-      const FALLBACK_QUOTES = [
-        {
-          text:
-            "گاهی برای فهمیدن امروز، باید به دورترین نقطه‌ی تاریخ بازگشت.",
-          source:
-            "دفتر نوشته‌ها",
-          number:
-            "—"
-        },
-        {
-          text:
-            "انسان تنها جهان را تغییر نداده است؛ او هم‌زمان در حال تغییر خودش بوده است.",
-          source:
-            "روایت انسان",
-          number:
-            "—"
-        },
-        {
-          text:
-            "پشت هر عدد، هر آیین و هر تمدن، داستانی از تلاش انسان برای فهم جهان وجود دارد.",
-          source:
-            "یادداشت‌های تاریخی",
-          number:
-            "—"
-        },
-        {
-          text:
-            "تاریخ فقط مجموعه‌ای از اتفاقات گذشته نیست؛ آینه‌ای است که انسان امروز را در آن می‌توان دید.",
-          source:
-            "جست‌وجوی معنا",
-          number:
-            "—"
-        }
-      ];
+      const list = Array.isArray(data)
+        ? data
+        : Array.isArray(data.posts)
+          ? data.posts
+          : Array.isArray(data.items)
+            ? data.items
+            : [];
 
-      /* ===================================================
-         STATE
-         =================================================== */
+      const eligible = list
+        .filter(post =>
+          post &&
+          typeof (post.excerpt || post.text || post.summary) === "string" &&
+          (post.excerpt || post.text || post.summary).trim()
+        );
+
+      const selected = shuffle(eligible).slice(0, MAX_QUOTES);
+
+      quotes = selected.map((post, index) => ({
+        text: (post.excerpt || post.text || post.summary).trim(),
+        source: post.title || post.source || "دفتر نوشته‌ها",
+        number: String(index + 1).padStart(2, "0")
+      }));
+
+      if (!quotes.length) {
+        quotes = FALLBACK_QUOTES.map((quote, index) => ({
+          ...quote,
+          number: String(index + 1).padStart(2, "0")
+        }));
+      }
+    } catch (error) {
+      console.warn("[BlogGateway] بارگذاری نوشته‌ها ناموفق بود:", error);
+
+      quotes = FALLBACK_QUOTES.map((quote, index) => ({
+        ...quote,
+        number: String(index + 1).padStart(2, "0")
+      }));
+    }
+  }
+
+  /* RENDER */
+  function renderQuote(index) {
+    const quote = quotes[index];
+    if (!quote) return;
+
+    setText(quoteTextEl, quote.text);
+    setText(quoteSourceEl, quote.source);
+    setText(quoteNumberEl, quote.number);
+
+    updateProgress(index);
+  }
+
+  /* PROGRESS CONTROLS */
+  function updateProgress(activeIndex) {
+    if (!progressEl) return;
+
+    Array.from(progressEl.children).forEach((button, index) => {
+      const active = index === activeIndex;
+
+      button.classList.toggle("is-active", active);
+      button.setAttribute("aria-pressed", String(active));
+      button.setAttribute(
+        "aria-label",
+        "نمایش نوشته " + (index + 1)
+      );
+    });
+  }
+
+  function buildProgress() {
+    if (!progressEl) return;
+
+    progressEl.replaceChildren();
+
+    quotes.forEach((quote, index) => {
+      const button = document.createElement("button");
+
+      button.type = "button";
+      button.className = "blog-progress-dot";
+      button.setAttribute("aria-label", "نمایش نوشته " + (index + 1));
+      button.setAttribute("aria-pressed", "false");
+
+      button.addEventListener("click", () => {
+        currentIndex = index;
+        renderQuote(currentIndex);
+        restartAutoPlay();
+      });
+
+      progressEl.appendChild(button);
+    });
+  }
+
+  /* AUTOPLAY */
+  function stopAutoPlay() {
+    if (autoPlayTimer !== null) {
+      clearInterval(autoPlayTimer);
+      autoPlayTimer = null;
+    }
+  }
+
+  function nextQuote() {
+    if (isPaused || document.hidden || quotes.length < 2) return;
+
+    currentIndex = (currentIndex + 1) % quotes.length;
+    renderQuote(currentIndex);
+  }
+
+  function startAutoPlay() {
+    stopAutoPlay();
+
+    if (
+      REDUCED_MOTION ||
+      isPaused ||
+      document.hidden ||
+      quotes.length < 2
+    ) {
+      return;
+    }
+
+    autoPlayTimer = setInterval(nextQuote, AUTO_PLAY_DELAY);
+  }
+
+  function restartAutoPlay() {
+    startAutoPlay();
+  }
+
+  /* PAUSE ON INTERACTION */
+  const quoteWrap =
+    quoteTextEl.closest(".blog-quote-wrap") || gateway;
+
+  function pause() {
+    isPaused = true;
+    stopAutoPlay();
+  }
+
+  function resume() {
+    isPaused = false;
+    startAutoPlay();
+  }
+
+  quoteWrap.addEventListener("mouseenter", pause);
+  quoteWrap.addEventListener("mouseleave", resume);
+  quoteWrap.addEventListener("focusin", pause);
+  quoteWrap.addEventListener("focusout", event => {
+    if (!quoteWrap.contains(event.relatedTarget)) {
+      resume();
+    }
+  });
+
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) stopAutoPlay();
+    else startAutoPlay();
+  });
+
+  /* PARTICLES */
+  function initParticles() {
+    if (!particlesEl || REDUCED_MOTION) return;
+
+    const width = window.innerWidth;
+    const count = width < 600 ? 12 : width < 1024 ? 20 : 30;
+    const fragment = document.createDocumentFragment();
+
+    particlesEl.replaceChildren();
+
+    for (let i = 0; i < count; i++) {
+      const particle = document.createElement("span");
+
+      particle.className = "blog-particle";
+      particle.style.left = Math.random() * 100 + "%";
+      particle.style.animationDelay = Math.random() * 8 + "s";
+      particle.style.animationDuration = 8 + Math.random() * 8 + "s";
+      particle.style.opacity = 0.2 + Math.random() * 0.5;
+
+      fragment.appendChild(particle);
+    }
+
+    particlesEl.appendChild(fragment);
+  }
+
+  /* INITIALIZE */
+  async function init() {
+    await loadQuotes();
+    buildProgress();
+    renderQuote(0);
+    initParticles();
+    startAutoPlay();
+  }
+
+  init();
+})();
+</script>
 
       let quotes = [];
 
