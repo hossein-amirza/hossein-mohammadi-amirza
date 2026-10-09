@@ -3707,630 +3707,7 @@
 })();
 </script>
 ```
-      /* ===================================================
-         JSON EXTRACTION
-         =================================================== */
-
-      function extractPosts(data) {
-
-        if (Array.isArray(data)) {
-          return data;
-        }
-
-        if (!data || typeof data !== "object") {
-          return [];
-        }
-
-        if (Array.isArray(data.posts)) {
-          return data.posts;
-        }
-
-        if (Array.isArray(data.items)) {
-          return data.items;
-        }
-
-        if (Array.isArray(data.data)) {
-          return data.data;
-        }
-
-        if (
-          data.data &&
-          Array.isArray(data.data.posts)
-        ) {
-          return data.data.posts;
-        }
-
-        if (
-          data.data &&
-          Array.isArray(data.data.items)
-        ) {
-          return data.data.items;
-        }
-
-        if (
-          data.data &&
-          Array.isArray(data.data.content)
-        ) {
-          return data.data.content;
-        }
-
-        if (
-          data.data &&
-          typeof data.data.content === "string"
-        ) {
-          try {
-            const parsed =
-              JSON.parse(data.data.content);
-
-            if (Array.isArray(parsed)) {
-              return parsed;
-            }
-          } catch (error) {
-            // Ignore malformed nested JSON.
-          }
-        }
-
-        if (
-          typeof data.content === "string"
-        ) {
-          try {
-            const parsed =
-              JSON.parse(data.content);
-
-            if (Array.isArray(parsed)) {
-              return parsed;
-            }
-          } catch (error) {
-            // Ignore malformed nested JSON.
-          }
-        }
-
-        return [];
-      }
-
-      /* ===================================================
-         LOAD POSTS
-         =================================================== */
-
-      async function loadPosts() {
-
-        try {
-
-          const response =
-            await fetch(
-              POSTS_URL,
-              {
-                method: "GET",
-                cache: "no-store",
-                headers: {
-                  "Accept":
-                    "application/json"
-                }
-              }
-            );
-
-          if (!response.ok) {
-            throw new Error(
-              `HTTP ${response.status}`
-            );
-          }
-
-          const data =
-            await response.json();
-
-          const rawPosts =
-            extractPosts(data);
-
-          const normalized =
-            rawPosts
-              .map(normalizePost)
-              .filter(Boolean);
-
-          normalized.sort(
-            (a, b) => {
-
-              const dateA =
-                Date.parse(a.date) || 0;
-
-              const dateB =
-                Date.parse(b.date) || 0;
-
-              return dateB - dateA;
-            }
-          );
-
-          const dynamicQuotes =
-            normalized
-              .map(postToQuote)
-              .filter(Boolean);
-
-          if (dynamicQuotes.length) {
-            quotes =
-              dynamicQuotes.slice(
-                0,
-                MAX_QUOTES
-              );
-          } else {
-            quotes =
-              shuffle(
-                FALLBACK_QUOTES
-              );
-          }
-
-        } catch (error) {
-
-          /*
-           * خطای JSON نباید باعث خراب شدن
-           * سکشن شود.
-           */
-          console.warn(
-            "Blog Gateway:",
-            "Posts JSON could not be loaded.",
-            error
-          );
-
-          quotes =
-            shuffle(
-              FALLBACK_QUOTES
-            );
-        }
-
-        currentIndex = 0;
-
-        buildProgress();
-
-        renderQuote(
-          currentIndex,
-          false
-        );
-
-        startAutoPlay();
-      }
-
-      /* ===================================================
-         RENDER
-         =================================================== */
-
-      function renderQuote(
-        index,
-        animate = true
-      ) {
-
-        if (!quotes.length) {
-          return;
-        }
-
-        const item =
-          quotes[index];
-
-        if (!item) {
-          return;
-        }
-
-        if (animate) {
-          quoteTextEl.classList.add(
-            "is-changing"
-          );
-
-          window.setTimeout(
-            () => {
-
-              updateQuoteContent(item);
-
-              quoteTextEl.classList.remove(
-                "is-changing"
-              );
-
-            },
-            220
-          );
-
-        } else {
-
-          updateQuoteContent(item);
-
-        }
-
-        updateProgress();
-      }
-
-      function updateQuoteContent(item) {
-
-        quoteTextEl.textContent =
-          item.text || "";
-
-        quoteNumberEl.textContent =
-          item.number || "✦";
-
-        quoteSourceEl.textContent =
-          item.source || "";
-      }
-
-      /* ===================================================
-         PROGRESS BUTTONS
-         =================================================== */
-
-      function buildProgress() {
-
-        progressEl.innerHTML = "";
-
-        quotes.forEach(
-          (_, index) => {
-
-            const button =
-              document.createElement("button");
-
-            button.type = "button";
-
-            button.setAttribute(
-              "role",
-              "tab"
-            );
-
-            button.setAttribute(
-              "aria-label",
-              `نمایش نوشته ${index + 1}`
-            );
-
-            button.setAttribute(
-              "aria-selected",
-              index === currentIndex
-                ? "true"
-                : "false"
-            );
-
-            button.addEventListener(
-              "click",
-              () => {
-
-                goTo(index);
-
-                restartAutoPlay();
-
-              }
-            );
-
-            progressEl.appendChild(
-              button
-            );
-          }
-        );
-      }
-
-      function updateProgress() {
-
-        const buttons =
-          progressEl.querySelectorAll(
-            "button"
-          );
-
-        buttons.forEach(
-          (button, index) => {
-
-            button.setAttribute(
-              "aria-selected",
-              index === currentIndex
-                ? "true"
-                : "false"
-            );
-          }
-        );
-      }
-
-      /* ===================================================
-         NAVIGATION
-         =================================================== */
-
-      function goTo(index) {
-
-        if (!quotes.length) {
-          return;
-        }
-
-        currentIndex =
-          (index + quotes.length) %
-          quotes.length;
-
-        renderQuote(
-          currentIndex,
-          true
-        );
-      }
-
-      function next() {
-        goTo(currentIndex + 1);
-      }
-
-      function previous() {
-        goTo(currentIndex - 1);
-      }
-
-      /* ===================================================
-         AUTOPLAY
-         =================================================== */
-
-      function startAutoPlay() {
-
-        stopAutoPlay();
-
-        if (
-          quotes.length <= 1 ||
-          paused ||
-          window.matchMedia(
-            "(prefers-reduced-motion: reduce)"
-          ).matches
-        ) {
-          return;
-        }
-
-        timer =
-          window.setInterval(
-            () => {
-
-              if (!paused) {
-                next();
-              }
-
-            },
-            AUTO_PLAY_DELAY
-          );
-      }
-
-      function stopAutoPlay() {
-
-        if (timer !== null) {
-
-          window.clearInterval(
-            timer
-          );
-
-          timer = null;
-        }
-      }
-
-      function restartAutoPlay() {
-
-        stopAutoPlay();
-
-        startAutoPlay();
-      }
-
-      /* ===================================================
-         PARTICLES
-         =================================================== */
-
-      function createParticles() {
-
-        if (!particlesEl) {
-          return;
-        }
-
-        const fragment =
-          document.createDocumentFragment();
-
-        const count =
-          window.innerWidth < 600
-            ? 16
-            : 30;
-
-        for (
-          let i = 0;
-          i < count;
-          i++
-        ) {
-
-          const particle =
-            document.createElement("span");
-
-          particle.className =
-            "blog-particle";
-
-          particle.style.left =
-            `${Math.random() * 100}%`;
-
-          particle.style.top =
-            `${65 + Math.random() * 40}%`;
-
-          particle.style.setProperty(
-            "--duration",
-            `${5 + Math.random() * 8}s`
-          );
-
-          particle.style.setProperty(
-            "--delay",
-            `${Math.random() * 7}s`
-          );
-
-          particle.style.setProperty(
-            "--move-x",
-            `${-70 + Math.random() * 140}px`
-          );
-
-          fragment.appendChild(
-            particle
-          );
-        }
-
-        particlesEl.appendChild(
-          fragment
-        );
-      }
-
-      /* ===================================================
-         POINTER / TOUCH
-         =================================================== */
-
-      gateway.addEventListener(
-        "mouseenter",
-        () => {
-
-          paused = true;
-
-          stopAutoPlay();
-
-        }
-      );
-
-      gateway.addEventListener(
-        "mouseleave",
-        () => {
-
-          paused = false;
-
-          startAutoPlay();
-
-        }
-      );
-
-      gateway.addEventListener(
-        "touchstart",
-        () => {
-
-          touchStarted = true;
-
-          paused = true;
-
-          stopAutoPlay();
-
-        },
-        {
-          passive: true
-        }
-      );
-
-      gateway.addEventListener(
-        "touchend",
-        () => {
-
-          if (!touchStarted) {
-            return;
-          }
-
-          touchStarted = false;
-
-          paused = false;
-
-          startAutoPlay();
-
-        },
-        {
-          passive: true
-        }
-      );
-
-      /* ===================================================
-         KEYBOARD
-         =================================================== */
-
-      gateway.addEventListener(
-        "keydown",
-        (event) => {
-
-          if (
-            event.key === "ArrowLeft"
-          ) {
-
-            event.preventDefault();
-
-            next();
-
-            restartAutoPlay();
-
-          }
-
-          if (
-            event.key === "ArrowRight"
-          ) {
-
-            event.preventDefault();
-
-            previous();
-
-            restartAutoPlay();
-
-          }
-        }
-      );
-
-      /*
-       * برای دسترسی بهتر، سکشن قابل فوکوس است.
-       */
-      gateway.setAttribute(
-        "tabindex",
-        "0"
-      );
-
-      /* ===================================================
-         VISIBILITY
-         =================================================== */
-
-      document.addEventListener(
-        "visibilitychange",
-        () => {
-
-          if (
-            document.hidden
-          ) {
-
-            stopAutoPlay();
-
-          } else {
-
-            startAutoPlay();
-
-          }
-
-        }
-      );
-
-      /* ===================================================
-         RESIZE
-         =================================================== */
-
-      let resizeTimer = null;
-
-      window.addEventListener(
-        "resize",
-        () => {
-
-          window.clearTimeout(
-            resizeTimer
-          );
-
-          resizeTimer =
-            window.setTimeout(
-              () => {
-
-                if (
-                  particlesEl
-                ) {
-
-                  particlesEl.innerHTML =
-                    "";
-
-                  createParticles();
-
-                }
-
-              },
-              250
-            );
-        }
-      );
-
-      /* ===================================================
-         INIT
-         =================================================== */
-
-      createParticles();
-
-      loadPosts();
-
-    })();
-  </script>
-
-</section>
-    <!-- ===== PHILOSOPHY ===== -->
+      <!-- ===== PHILOSOPHY ===== -->
     <section class="philosophy-section" aria-labelledby="philosophy-title">
       <div class="container philosophy-grid">
         <div class="philosophy-label"><span>اندیشه</span><strong>۰۶</strong></div>
@@ -4357,6 +3734,7 @@
         </div>
       </div>
     </section>
+
 <!-- ===== CONTACT ===== -->
 <section class="section contact-section" id="contact" aria-labelledby="contact-title">
   <div class="container">
@@ -4426,6 +3804,195 @@
   </div>
 </section>
 
+</main>
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <div class="footer-monogram" aria-hidden="true">ح</div>
+        <div><strong>حسین محمدی آمیرزا</strong><span>نویسنده، شاعر، پژوهشگر تاریخ و فیلمنامه‌نویس</span></div>
+      </div>
+
+      <nav class="footer-nav" aria-label="پیوندهای پایین صفحه">
+        <a href="#about">درباره من</a>
+        <a href="#books">کتاب‌ها</a>
+        <a href="#screenplays">فیلمنامه‌ها</a>
+        <a href="#series">آثار نمایشی</a>
+        <a href="blog/index.html">وبلاگ</a>
+        <a href="blog/stories.html">داستانک‌ها</a>
+        <a href="#contact">تماس</a>
+      </nav>
+
+      <div class="footer-bottom">
+        <div><p>© ۱۴۰۵ حسین محمدی آمیرزا</p><p>تمامی حقوق این وب‌سایت محفوظ است.</p></div>
+        <a href="#home" class="footer-top">بازگشت به بالا ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== BACK TO TOP ===== -->
+  <button class="scroll-top" id="scrollTopBtn" type="button" aria-label="بازگشت به بالای صفحه">↑</button>
+
+  <!-- ===== JAVASCRIPT ===== -->
+  <script src="script.js" defer></script>
+
+  <!-- ===== FALLBACK / BASE INTERACTION ===== -->
+  <script>
+    (function() {
+      "use strict";
+
+      const body = document.body;
+      const header = document.getElementById('siteHeader');
+      const menuToggle = document.getElementById('menuToggle');
+      const mainNavigation = document.getElementById('mainNavigation');
+      const scrollTopBtn = document.getElementById('scrollTopBtn');
+      const themeToggle = document.getElementById('themeToggle');
+      const themeIcon = themeToggle ? themeToggle.querySelector('.theme-icon') : null;
+      const progressBar = document.getElementById('readingProgressBar');
+
+      function closeMenu() {
+        if (!menuToggle || !mainNavigation) return;
+        menuToggle.setAttribute('aria-expanded', 'false');
+        mainNavigation.classList.remove('is-open');
+        body.classList.remove('menu-open');
+      }
+
+      if (menuToggle && mainNavigation) {
+        menuToggle.addEventListener('click', function() {
+          const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+          menuToggle.setAttribute('aria-expanded', String(!isOpen));
+          mainNavigation.classList.toggle('is-open', !isOpen);
+          body.classList.toggle('menu-open', !isOpen);
+        });
+
+        mainNavigation.querySelectorAll('a').forEach(function(link) {
+          link.addEventListener('click', closeMenu);
+        });
+      }
+
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeMenu();
+      });
+
+      document.querySelectorAll('a[href^="#"]').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+          const targetId = this.getAttribute('href');
+          if (!targetId || targetId === '#') return;
+          const target = document.querySelector(targetId);
+          if (!target) return;
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      });
+
+      function updateHeader() {
+        if (!header) return;
+        header.classList.toggle('is-scrolled', window.scrollY > 60);
+      }
+
+      function updateProgress() {
+        if (!progressBar) return;
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+        progressBar.style.width = progress + '%';
+      }
+
+      function updateScrollButton() {
+        if (!scrollTopBtn) return;
+        scrollTopBtn.classList.toggle('visible', window.scrollY > 700);
+      }
+
+      window.addEventListener('scroll', function() {
+        updateHeader();
+        updateProgress();
+        updateScrollButton();
+      }, { passive: true });
+
+      updateHeader();
+      updateProgress();
+      updateScrollButton();
+
+      if (scrollTopBtn) {
+        scrollTopBtn.addEventListener('click', function() {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+
+      const savedTheme = localStorage.getItem('hma-theme');
+      if (savedTheme === 'dark') {
+        body.classList.add('dark-mode');
+      }
+
+      function updateThemeIcon() {
+        if (!themeIcon) return;
+        themeIcon.textContent = body.classList.contains('dark-mode') ? '☀' : '◐';
+      }
+
+      updateThemeIcon();
+
+      if (themeToggle) {
+        themeToggle.addEventListener('click', function() {
+          const isDark = body.classList.toggle('dark-mode');
+          localStorage.setItem('hma-theme', isDark ? 'dark' : 'light');
+          updateThemeIcon();
+        });
+      }
+
+      const statNumbers = document.querySelectorAll('.stat-number');
+
+      function toPersianNumber(value) {
+        return String(value).replace(/\d/g, function(d) {
+          return '۰۱۲۳۴۵۶۷۸۹'[d];
+        });
+      }
+
+      function animateStats() {
+        statNumbers.forEach(function(element) {
+          const target = parseInt(element.dataset.count, 10);
+          if (isNaN(target)) return;
+          let current = 0;
+          const duration = 1000;
+          const startTime = performance.now();
+
+          function tick(now) {
+            const progress = Math.min((now - startTime) / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            current = Math.round(target * eased);
+            element.textContent = toPersianNumber(current);
+            if (progress < 1) {
+              requestAnimationFrame(tick);
+            }
+          }
+          requestAnimationFrame(tick);
+        });
+      }
+
+      const statsSection = document.querySelector('.stats-section');
+      let statsAnimated = false;
+
+      if (statsSection && 'IntersectionObserver' in window) {
+        const observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting && !statsAnimated) {
+              statsAnimated = true;
+              animateStats();
+              observer.unobserve(statsSection);
+            }
+          });
+        }, { threshold: 0.25 });
+        observer.observe(statsSection);
+      }
+
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.documentElement.classList.add('reduce-motion');
+      }
+
+    })();
+  </script>
+
+</body>
+</html>
 </main>
   <!-- ===== FOOTER ===== -->
   <footer class="site-footer">
