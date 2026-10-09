@@ -77,17 +77,10 @@
       color: var(--text);
     }
 
-    /* ==============================
-       قاب اصلی
-       ============================== */
-
     .blog-container {
       width: min(calc(100% - 28px), 1050px);
-
       margin: 48px auto 65px;
-
       padding: 58px 62px 65px;
-
       position: relative;
 
       background:
@@ -97,9 +90,7 @@
           rgba(10,9,7,.98)
         );
 
-      border:
-        1px solid rgba(212,175,55,.27);
-
+      border: 1px solid rgba(212,175,55,.27);
       border-radius: 30px;
 
       box-shadow:
@@ -112,142 +103,73 @@
 
     .blog-container::before {
       content: "";
-
       position: absolute;
       inset: 15px;
-
-      border:
-        1px solid rgba(212,175,55,.09);
-
+      border: 1px solid rgba(212,175,55,.09);
       border-radius: 23px;
-
       pointer-events: none;
     }
-
-    /* ==============================
-       هدر
-       ============================== */
 
     .blog-header {
       text-align: center;
       position: relative;
-
-      padding:
-        10px 15px 34px;
-
+      padding: 10px 15px 34px;
       margin-bottom: 26px;
     }
 
     .blog-header::before {
       content: "❈";
-
       display: block;
-
       margin-bottom: 10px;
-
       color: var(--gold);
-
       font-size: 1.45rem;
     }
 
     .blog-header h1 {
-      font-family:
-        "Noto Nastaliq Urdu",
-        "Amiri",
-        serif;
-
-      font-size:
-        clamp(2rem, 5vw, 3.1rem);
-
+      font-family: "Noto Nastaliq Urdu", "Amiri", serif;
+      font-size: clamp(2rem, 5vw, 3.1rem);
       font-weight: 400;
-
       line-height: 2.1;
-
       color: var(--gold-light);
-
       text-align: center;
-
-      text-shadow:
-        0 2px 6px rgba(0,0,0,.85),
-        0 0 25px rgba(212,175,55,.05);
+      text-shadow: 0 2px 6px rgba(0,0,0,.85), 0 0 25px rgba(212,175,55,.05);
     }
 
     .blog-header .subtitle {
       margin-top: 13px;
-
-      font-family:
-        "Amiri",
-        "Noto Naskh Arabic",
-        serif;
-
+      font-family: "Amiri", "Noto Naskh Arabic", serif;
       font-size: 1.12rem;
-
       line-height: 2;
-
       color: var(--gold-dark);
-
       text-align: center;
     }
 
     .gold-line {
       width: 220px;
       height: 1px;
-
       margin: 23px auto 0;
-
-      background:
-        linear-gradient(
-          to right,
-          transparent,
-          var(--gold),
-          transparent
-        );
-
+      background: linear-gradient(to right, transparent, var(--gold), transparent);
       opacity: .7;
     }
 
-    /* ==============================
-       بخش‌های وبلاگ
-       ============================== */
-
     .blog-sections {
       position: relative;
-
       display: grid;
-
-      grid-template-columns:
-        minmax(0, 1fr);
-
+      grid-template-columns: minmax(0, 1fr);
       gap: 18px;
-
-      margin:
-        0
-        0
-        42px;
+      margin: 0 0 42px;
     }
 
     .blog-section {
       position: relative;
-
       display: grid;
-
-      grid-template-columns:
-        auto
-        1fr
-        auto;
-
+      grid-template-columns: auto 1fr auto;
       grid-template-areas:
         "icon title arrow"
         "icon description arrow";
-
       align-items: center;
-
       column-gap: 17px;
-
-      padding:
-        20px
-        23px;
-
+      padding: 20px 23px;
       min-height: 100px;
 
       background:
@@ -257,11 +179,8 @@
           rgba(11,9,7,.98)
         );
 
-      border:
-        1px solid rgba(212,175,55,.25);
-
+      border: 1px solid rgba(212,175,55,.25);
       border-radius: 20px;
-
       text-decoration: none;
 
       box-shadow:
@@ -277,24 +196,16 @@
 
     .blog-section::before {
       content: "";
-
       position: absolute;
-
       inset: 7px;
-
-      border:
-        1px solid rgba(212,175,55,.055);
-
+      border: 1px solid rgba(212,175,55,.055);
       border-radius: 14px;
-
       pointer-events: none;
     }
 
     .blog-section:hover {
       transform: translateY(-3px);
-
-      border-color:
-        rgba(212,175,55,.50);
+      border-color: rgba(212,175,55,.50);
 
       background:
         linear-gradient(
@@ -310,20 +221,13 @@
 
     .section-icon {
       grid-area: icon;
-
       width: 48px;
       height: 48px;
-
       display: flex;
-
       align-items: center;
       justify-content: center;
-
-      border:
-        1px solid rgba(212,175,55,.35);
-
+      border: 1px solid rgba(212,175,55,.35);
       border-radius: 50%;
-
       color: var(--gold-light);
 
       background:
@@ -334,64 +238,38 @@
         );
 
       font-size: 1.2rem;
-
-      box-shadow:
-        inset 0 1px 0 rgba(255,255,255,.04);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.04);
     }
 
     .section-title {
       grid-area: title;
-
       align-self: end;
-
       color: var(--gold-light);
-
-      font-family:
-        "Noto Nastaliq Urdu",
-        "Amiri",
-        serif;
-
+      font-family: "Noto Nastaliq Urdu", "Amiri", serif;
       font-size: 1.45rem;
-
       line-height: 1.8;
     }
 
     .section-description {
       grid-area: description;
-
       align-self: start;
-
       margin-top: 2px;
-
       color: var(--muted);
-
       font-size: .90rem;
-
       line-height: 1.9;
     }
 
     .section-arrow {
       grid-area: arrow;
-
-      color:
-        rgba(239,213,116,.72);
-
+      color: rgba(239,213,116,.72);
       font-size: 1.25rem;
-
-      transition:
-        transform .25s ease,
-        color .25s ease;
+      transition: transform .25s ease, color .25s ease;
     }
 
     .blog-section:hover .section-arrow {
       transform: translateX(-5px);
-
       color: var(--gold-light);
     }
-
-    /* ==============================
-       فهرست نوشته‌ها
-       ============================== */
 
     .post-list {
       display: flex;
@@ -399,17 +277,9 @@
       gap: 32px;
     }
 
-    /* ==============================
-       کارت مقاله
-       ============================== */
-
     .post-card {
       position: relative;
-
-      padding:
-        37px
-        43px
-        40px;
+      padding: 37px 43px 40px;
 
       background:
         linear-gradient(
@@ -418,9 +288,7 @@
           rgba(9,8,6,.98)
         );
 
-      border:
-        1px solid rgba(212,175,55,.17);
-
+      border: 1px solid rgba(212,175,55,.17);
       border-radius: 23px;
 
       box-shadow:
@@ -435,54 +303,32 @@
 
     .post-card::before {
       content: "";
-
       position: absolute;
       inset: 10px;
-
-      border:
-        1px solid rgba(212,175,55,.045);
-
+      border: 1px solid rgba(212,175,55,.045);
       border-radius: 16px;
-
       pointer-events: none;
     }
 
     .post-card::after {
       content: "✦";
-
       position: absolute;
-
       top: 18px;
       left: 23px;
-
-      color:
-        rgba(212,175,55,.34);
-
+      color: rgba(212,175,55,.34);
       font-size: .8rem;
     }
 
     .post-card:hover {
       transform: translateY(-5px);
-
-      border-color:
-        rgba(212,175,55,.35);
-
-      box-shadow:
-        0 25px 58px rgba(0,0,0,.50);
+      border-color: rgba(212,175,55,.35);
+      box-shadow: 0 25px 58px rgba(0,0,0,.50);
     }
-
-    /* ==============================
-       شماره مقاله
-       ============================== */
 
     .article-number {
       width: fit-content;
-
       margin: 0 auto 23px;
-
-      padding:
-        6px
-        20px;
+      padding: 6px 20px;
 
       background:
         linear-gradient(
@@ -491,13 +337,9 @@
           #050403
         );
 
-      border:
-        1px solid rgba(212,175,55,.45);
-
+      border: 1px solid rgba(212,175,55,.45);
       border-radius: 999px;
-
       color: var(--gold-light);
-
       font-size: .9rem;
 
       box-shadow:
@@ -507,41 +349,18 @@
       text-align: center;
     }
 
-    /* ==============================
-       عنوان مقاله
-       ============================== */
-
     .post-title {
       display: block;
-
       max-width: 850px;
-
-      margin:
-        0
-        auto
-        20px;
-
-      font-family:
-        "Noto Nastaliq Urdu",
-        "Amiri",
-        serif;
-
-      font-size:
-        clamp(1.55rem, 3vw, 2.25rem);
-
+      margin: 0 auto 20px;
+      font-family: "Noto Nastaliq Urdu", "Amiri", serif;
+      font-size: clamp(1.55rem, 3vw, 2.25rem);
       font-weight: 400;
-
       line-height: 2.15;
-
       text-align: center;
-
       color: var(--gold-light);
-
       text-decoration: none;
-
-      text-shadow:
-        0 2px 8px rgba(0,0,0,.65);
-
+      text-shadow: 0 2px 8px rgba(0,0,0,.65);
       transition: color .25s ease;
     }
 
@@ -549,39 +368,22 @@
       color: #ffe9a0;
     }
 
-    /* ==============================
-       اطلاعات
-       ============================== */
-
     .post-meta {
       display: flex;
-
       justify-content: center;
       align-items: center;
-
       flex-wrap: wrap;
-
       gap: 9px;
-
       margin-bottom: 22px;
     }
 
     .post-meta span {
-      padding:
-        6px
-        16px;
-
+      padding: 6px 16px;
       background: #090806;
-
-      border:
-        1px solid rgba(212,175,55,.25);
-
+      border: 1px solid rgba(212,175,55,.25);
       border-radius: 999px;
-
       color: var(--gold);
-
       font-size: .88rem;
-
       line-height: 1.7;
     }
 
@@ -593,171 +395,77 @@
       color: var(--gold);
     }
 
-    /* ==============================
-       جداکننده
-       ============================== */
-
     .post-divider {
       width: 100px;
       height: 1px;
-
-      margin:
-        0
-        auto
-        24px;
-
-      background:
-        linear-gradient(
-          to right,
-          transparent,
-          var(--gold),
-          transparent
-        );
-
+      margin: 0 auto 24px;
+      background: linear-gradient(to right, transparent, var(--gold), transparent);
       opacity: .65;
     }
 
-    /* ==============================
-       خلاصه
-       ============================== */
-
     .post-excerpt {
       max-width: 800px;
-
-      margin:
-        0
-        auto
-        27px;
-
-      font-family:
-        "Noto Naskh Arabic",
-        "Amiri",
-        serif;
-
+      margin: 0 auto 27px;
+      font-family: "Noto Naskh Arabic", "Amiri", serif;
       font-size: 1.07rem;
-
       line-height: 2.35;
-
       color: var(--text-soft);
-
       text-align: right;
     }
 
-    /* ==============================
-       دکمه
-       ============================== */
-
     .read-more {
       display: table;
-
       margin: 0 auto;
-
-      padding:
-        9px
-        28px;
-
-      background:
-        #050403;
-
-      border:
-        1px solid rgba(212,175,55,.48);
-
+      padding: 9px 28px;
+      background: #050403;
+      border: 1px solid rgba(212,175,55,.48);
       border-radius: 999px;
-
       color: var(--gold-light);
-
-      font-family:
-        "Noto Naskh Arabic",
-        sans-serif;
-
+      font-family: "Noto Naskh Arabic", sans-serif;
       font-size: .95rem;
       font-weight: 600;
-
       text-decoration: none;
-
-      box-shadow:
-        0 5px 16px rgba(0,0,0,.38);
-
+      box-shadow: 0 5px 16px rgba(0,0,0,.38);
       transition: all .25s ease;
     }
 
     .read-more:hover {
       background: var(--gold);
-
       color: #080705;
-
       border-color: var(--gold);
-
-      transform:
-        translateY(-2px);
-
-      box-shadow:
-        0 9px 25px rgba(212,175,55,.20);
+      transform: translateY(-2px);
+      box-shadow: 0 9px 25px rgba(212,175,55,.20);
     }
-
-    /* ==============================
-       فوتر
-       ============================== */
 
     .blog-footer {
       position: relative;
-
       margin-top: 55px;
-
       padding-top: 31px;
-
-      border-top:
-        1px solid rgba(212,175,55,.14);
-
+      border-top: 1px solid rgba(212,175,55,.14);
       text-align: center;
-
       color: var(--muted);
-
       font-size: .88rem;
     }
 
     .blog-footer::before {
       content: "❧  ✦  ❧";
-
       position: absolute;
-
       top: -16px;
-
       left: 50%;
-
-      transform:
-        translateX(-50%);
-
+      transform: translateX(-50%);
       padding: 0 15px;
-
       background: #0f0c09;
-
-      color:
-        rgba(212,175,55,.55);
-
+      color: rgba(212,175,55,.55);
       font-size: .8rem;
-
       letter-spacing: 5px;
     }
-
-    /* ==============================
-       موبایل
-       ============================== */
 
     @media (max-width: 700px) {
 
       .blog-container {
         width: calc(100% - 16px);
-
-        margin:
-          15px auto
-          28px;
-
-        padding:
-          40px
-          19px
-          48px;
-
+        margin: 15px auto 28px;
+        padding: 40px 19px 48px;
         border-radius: 24px;
       }
 
@@ -767,11 +475,7 @@
       }
 
       .blog-header {
-        padding:
-          10px
-          8px
-          25px;
-
+        padding: 10px 8px 25px;
         margin-bottom: 22px;
       }
 
@@ -794,26 +498,16 @@
       }
 
       .blog-section {
-        grid-template-columns:
-          auto
-          1fr
-          auto;
-
+        grid-template-columns: auto 1fr auto;
         column-gap: 12px;
-
-        padding:
-          16px
-          15px;
-
+        padding: 16px 15px;
         min-height: 88px;
-
         border-radius: 18px;
       }
 
       .section-icon {
         width: 41px;
         height: 41px;
-
         font-size: 1rem;
       }
 
@@ -836,11 +530,7 @@
       }
 
       .post-card {
-        padding:
-          31px
-          20px
-          34px;
-
+        padding: 31px 20px 34px;
         border-radius: 20px;
       }
 
@@ -856,16 +546,12 @@
 
       .post-meta span {
         font-size: .80rem;
-        padding:
-          5px
-          11px;
+        padding: 5px 11px;
       }
 
       .read-more {
         font-size: .88rem;
-        padding:
-          8px
-          22px;
+        padding: 8px 22px;
       }
     }
 
@@ -877,11 +563,6 @@
 <body>
 
   <main class="blog-container">
-
-
-    <!-- ==============================
-         هدر وبلاگ
-         ============================== -->
 
     <header class="blog-header">
 
@@ -896,11 +577,6 @@
       <div class="gold-line"></div>
 
     </header>
-
-
-    <!-- ==============================
-         بخش‌های وبلاگ
-         ============================== -->
 
     <nav
       class="blog-sections"
@@ -933,11 +609,6 @@
 
     </nav>
 
-
-    <!-- ==============================
-         فهرست نوشته‌ها
-         ============================== -->
-
     <section
       id="posts-container"
       class="post-list"
@@ -957,11 +628,6 @@
 
     </section>
 
-
-    <!-- ==============================
-         فوتر
-         ============================== -->
-
     <footer class="blog-footer">
 
       ©
@@ -970,23 +636,14 @@
 
     </footer>
 
-
   </main>
 
 
   <script>
 
-    /* ==============================
-       سال
-       ============================== */
-
     document.getElementById("year").textContent =
       new Date().getFullYear();
 
-
-    /* ==============================
-       اعداد فارسی
-       ============================== */
 
     function toPersianNumbers(value) {
 
@@ -1005,10 +662,6 @@
 
     }
 
-
-    /* ==============================
-       تاریخ شمسی
-       ============================== */
 
     function gregorianToJalali(value) {
 
@@ -1035,20 +688,12 @@
     }
 
 
-    /* ==============================
-       خواندن posts.json
-       ============================== */
-
     fetch("../posts/posts/posts.json")
 
       .then(function(response) {
 
         if (!response.ok) {
-
-          throw new Error(
-            "posts.json پیدا نشد"
-          );
-
+          throw new Error("posts.json پیدا نشد");
         }
 
         return response.json();
@@ -1059,70 +704,34 @@
 
         let posts = [];
 
-
-        /*
-         * حالت اول:
-         *
-         * [
-         *   {...},
-         *   {...}
-         * ]
-         */
-
         if (Array.isArray(data)) {
 
           posts = data;
 
         }
 
-
-        /*
-         * حالت دوم:
-         *
-         * {
-         *   "content": "[...]"
-         * }
-         */
-
         else if (
           data &&
           typeof data.content === "string"
         ) {
 
-          posts =
-            JSON.parse(data.content);
+          posts = JSON.parse(data.content);
 
         }
-
-
-        /*
-         * حالت سوم:
-         *
-         * {
-         *   "content": [...]
-         * }
-         */
 
         else if (
           data &&
           Array.isArray(data.content)
         ) {
 
-          posts =
-            data.content;
+          posts = data.content;
 
         }
-
 
         const container =
           document.getElementById(
             "posts-container"
           );
-
-
-        /*
-         * اگر نوشته‌ای وجود نداشت
-         */
 
         if (
           !Array.isArray(posts) ||
@@ -1130,17 +739,9 @@
         ) {
 
           container.innerHTML =
-
             '<article class="post-card">' +
-
-              '<div class="article-number">' +
-                'وبلاگ' +
-              '</div>' +
-
-              '<div class="post-title">' +
-                'هنوز نوشته‌ای منتشر نشده است.' +
-              '</div>' +
-
+              '<div class="article-number">وبلاگ</div>' +
+              '<div class="post-title">هنوز نوشته‌ای منتشر نشده است.</div>' +
             '</article>';
 
           return;
@@ -1148,9 +749,31 @@
         }
 
 
-        /*
-         * جدیدترین نوشته اول
-         */
+        /* =========================================
+           فقط مقالات (داستانک‌ها فیلتر می‌شوند)
+        ========================================= */
+
+        posts = posts.filter(function(post) {
+
+          const tag =
+            (post.tag || "").trim();
+
+          return tag.indexOf("داستانک") === -1;
+
+        });
+
+        if (posts.length === 0) {
+
+          container.innerHTML =
+            '<article class="post-card">' +
+              '<div class="article-number">وبلاگ</div>' +
+              '<div class="post-title">هنوز مقاله‌ای منتشر نشده است.</div>' +
+            '</article>';
+
+          return;
+
+        }
+
 
         posts.sort(
           function(a, b) {
@@ -1167,52 +790,32 @@
         container.innerHTML = "";
 
 
-        /*
-         * ساخت کارت نوشته‌ها
-         */
-
         posts.forEach(
           function(post, index) {
 
             const card =
-              document.createElement(
-                "article"
-              );
+              document.createElement("article");
 
-            card.className =
-              "post-card";
+            card.className = "post-card";
 
-
-            /* شماره */
 
             const number =
-              document.createElement(
-                "div"
-              );
+              document.createElement("div");
 
-            number.className =
-              "article-number";
+            number.className = "article-number";
 
             number.textContent =
               "نوشته شماره " +
-              toPersianNumbers(
-                index + 1
-              );
+              toPersianNumbers(index + 1);
 
-
-            /* عنوان */
 
             const title =
-              document.createElement(
-                "a"
-              );
+              document.createElement("a");
 
-            title.className =
-              "post-title";
+            title.className = "post-title";
 
             title.textContent =
-              post.title ||
-              "بدون عنوان";
+              post.title || "بدون عنوان";
 
 
             const postId =
@@ -1224,43 +827,29 @@
 
             title.href =
               "../post-detail.html?id=" +
-              encodeURIComponent(
-                postId
-              );
+              encodeURIComponent(postId);
 
-
-            /* اطلاعات */
 
             const meta =
-              document.createElement(
-                "div"
-              );
+              document.createElement("div");
 
-            meta.className =
-              "post-meta";
+            meta.className = "post-meta";
 
 
             if (post.date) {
 
               const date =
-                document.createElement(
-                  "span"
-                );
+                document.createElement("span");
 
-              date.className =
-                "date";
+              date.className = "date";
 
               date.textContent =
                 "📅 " +
                 toPersianNumbers(
-                  gregorianToJalali(
-                    post.date
-                  )
+                  gregorianToJalali(post.date)
                 );
 
-              meta.appendChild(
-                date
-              );
+              meta.appendChild(date);
 
             }
 
@@ -1268,44 +857,28 @@
             if (post.tag) {
 
               const category =
-                document.createElement(
-                  "span"
-                );
+                document.createElement("span");
 
-              category.className =
-                "category";
+              category.className = "category";
 
               category.textContent =
-                "📂 " +
-                post.tag;
+                "📂 " + post.tag;
 
-              meta.appendChild(
-                category
-              );
+              meta.appendChild(category);
 
             }
 
 
-            /* جداکننده */
-
             const divider =
-              document.createElement(
-                "div"
-              );
+              document.createElement("div");
 
-            divider.className =
-              "post-divider";
+            divider.className = "post-divider";
 
-
-            /* خلاصه */
 
             const excerpt =
-              document.createElement(
-                "p"
-              );
+              document.createElement("p");
 
-            excerpt.className =
-              "post-excerpt";
+            excerpt.className = "post-excerpt";
 
 
             if (post.excerpt) {
@@ -1325,35 +898,16 @@
 
               text =
                 String(text)
-
-                  .replace(
-                    /<[^>]*>/g,
-                    " "
-                  )
-
-                  .replace(
-                    /[#*_`]/g,
-                    ""
-                  )
-
-                  .replace(
-                    /\s+/g,
-                    " "
-                  )
-
+                  .replace(/<[^>]*>/g, " ")
+                  .replace(/[#*_`]/g, "")
+                  .replace(/\s+/g, " ")
                   .trim();
 
 
-              if (
-                text.length > 360
-              ) {
+              if (text.length > 360) {
 
                 text =
-                  text.substring(
-                    0,
-                    360
-                  ) +
-                  "…";
+                  text.substring(0, 360) + "…";
 
               }
 
@@ -1365,71 +919,39 @@
             }
 
 
-            /* دکمه */
-
             const readMore =
-              document.createElement(
-                "a"
-              );
+              document.createElement("a");
 
-            readMore.className =
-              "read-more";
+            readMore.className = "read-more";
 
-            readMore.textContent =
-              "ادامه مطلب  ←";
+            readMore.textContent = "ادامه مطلب  ←";
 
-            readMore.href =
-              title.href;
+            readMore.href = title.href;
 
 
-            /* ساخت کارت */
-
-            card.appendChild(
-              number
-            );
-
-            card.appendChild(
-              title
-            );
+            card.appendChild(number);
+            card.appendChild(title);
 
 
-            if (
-              meta.children.length
-            ) {
+            if (meta.children.length) {
 
-              card.appendChild(
-                meta
-              );
+              card.appendChild(meta);
 
             }
 
 
-            card.appendChild(
-              divider
-            );
-
-            card.appendChild(
-              excerpt
-            );
-
-            card.appendChild(
-              readMore
-            );
+            card.appendChild(divider);
+            card.appendChild(excerpt);
+            card.appendChild(readMore);
 
 
-            container.appendChild(
-              card
-            );
+            container.appendChild(card);
 
           }
         );
 
       })
 
-
-      /* ==============================
-         مدیریت خطا
-         ============================== */
 
       .catch(function(error) {
 
@@ -1444,15 +966,8 @@
         ).innerHTML =
 
           '<article class="post-card">' +
-
-            '<div class="article-number">' +
-              'خطا' +
-            '</div>' +
-
-            '<div class="post-title">' +
-              'نوشته‌ها فعلاً قابل نمایش نیستند.' +
-            '</div>' +
-
+            '<div class="article-number">خطا</div>' +
+            '<div class="post-title">نوشته‌ها فعلاً قابل نمایش نیستند.</div>' +
           '</article>';
 
       });
