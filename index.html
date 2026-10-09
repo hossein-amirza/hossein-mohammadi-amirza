@@ -3766,10 +3766,10 @@
       }
     }
 ```html
+    
 <!-- =====================================================
-     BLOG GATEWAY
-     درگاه ورود به وبلاگ و داستانک‌ها
-     ===================================================== -->
+     BLOG GATEWAY | درگاه ورود به وبلاگ و داستانک‌ها
+===================================================== -->
 
 <style>
   .blog-gateway {
@@ -3781,6 +3781,12 @@
     padding: 80px 24px;
     overflow: hidden;
     isolation: isolate;
+    color: inherit;
+  }
+
+  .blog-gateway,
+  .blog-gateway * {
+    box-sizing: border-box;
   }
 
   .blog-gateway-inner {
@@ -3788,11 +3794,12 @@
     z-index: 2;
     width: 100%;
     max-width: 760px;
+    margin-inline: auto;
     text-align: center;
   }
 
   /* PARTICLES */
-  .blog-particles {
+  .blog-gateway .blog-particles {
     position: absolute;
     inset: 0;
     z-index: 0;
@@ -3800,7 +3807,7 @@
     pointer-events: none;
   }
 
-  .blog-particle {
+  .blog-gateway .blog-particle {
     position: absolute;
     bottom: -10px;
     width: 3px;
@@ -3817,26 +3824,26 @@
   }
 
   /* KICKER */
-  .blog-kicker {
+  .blog-gateway .blog-kicker {
     display: inline-block;
     margin-bottom: 20px;
     padding: 6px 16px;
     font-size: 0.8rem;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.08em;
     border: 1px solid currentColor;
     border-radius: 999px;
     opacity: 0.75;
   }
 
   /* TITLE */
-  .blog-gateway-title {
+  .blog-gateway .blog-gateway-title {
     margin: 0 0 28px;
     font-size: clamp(1.6rem, 4vw, 2.6rem);
     line-height: 1.5;
     font-weight: 700;
   }
 
-  .blog-gateway-title span {
+  .blog-gateway .blog-gateway-title span {
     display: block;
     margin-top: 14px;
     font-size: 0.55em;
@@ -3846,7 +3853,7 @@
   }
 
   /* DIVIDER */
-  .blog-divider {
+  .blog-gateway .blog-divider {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -3855,7 +3862,7 @@
     opacity: 0.6;
   }
 
-  .blog-divider-line {
+  .blog-gateway .blog-divider-line {
     flex: 1;
     max-width: 120px;
     height: 1px;
@@ -3863,27 +3870,27 @@
     opacity: 0.4;
   }
 
-  .blog-divider-mark {
+  .blog-gateway .blog-divider-mark {
     font-size: 0.7rem;
   }
 
-  /* QUOTE */
-  .blog-quote-wrap {
+  /* QUOTES */
+  .blog-gateway .blog-quote-wrap {
     margin: 32px 0 40px;
   }
 
-  .blog-quote {
+  .blog-gateway .blog-quote {
     min-height: 140px;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  .blog-quote-content {
+  .blog-gateway .blog-quote-content {
     width: 100%;
   }
 
-  .blog-quote-text {
+  .blog-gateway .blog-quote-text {
     margin: 0 0 18px;
     font-size: clamp(1rem, 2.2vw, 1.25rem);
     line-height: 2;
@@ -3891,12 +3898,12 @@
     overflow-wrap: anywhere;
   }
 
-  .blog-loading {
+  .blog-gateway .blog-loading {
     opacity: 0.6;
     font-style: italic;
   }
 
-  .blog-quote-meta {
+  .blog-gateway .blog-quote-meta {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -3906,17 +3913,17 @@
     opacity: 0.7;
   }
 
-  .blog-quote-number {
+  .blog-gateway .blog-quote-number {
     font-variant-numeric: tabular-nums;
   }
 
-  .blog-quote-source::before {
+  .blog-gateway .blog-quote-source::before {
     content: "— ";
     opacity: 0.5;
   }
 
   /* PROGRESS */
-  .blog-progress {
+  .blog-gateway .blog-progress {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -3925,29 +3932,31 @@
     margin-top: 24px;
   }
 
-  .blog-progress-dot {
+  .blog-gateway .blog-progress-dot {
     width: 12px;
     height: 12px;
     padding: 0;
     border: 1px solid currentColor;
     border-radius: 50%;
     background: transparent;
+    color: inherit;
     cursor: pointer;
     transition: background 0.3s ease, transform 0.3s ease;
   }
 
-  .blog-progress-dot.is-active {
+  .blog-gateway .blog-progress-dot.is-active {
     background: currentColor;
     transform: scale(1.2);
   }
 
-  .blog-progress-dot:focus-visible {
+  .blog-gateway .blog-progress-dot:focus-visible,
+  .blog-gateway .blog-action:focus-visible {
     outline: 2px solid currentColor;
     outline-offset: 4px;
   }
 
   /* ACTIONS */
-  .blog-actions {
+  .blog-gateway .blog-actions {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -3956,7 +3965,7 @@
     margin: 32px 0 24px;
   }
 
-  .blog-action {
+  .blog-gateway .blog-action {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -3966,6 +3975,7 @@
     border-radius: 999px;
     color: inherit;
     font-size: 0.95rem;
+    line-height: 1.7;
     text-decoration: none;
     transition:
       background 0.3s ease,
@@ -3973,26 +3983,21 @@
       transform 0.2s ease;
   }
 
-  .blog-action:hover {
+  .blog-gateway .blog-action:hover {
     transform: translateY(-2px);
   }
 
-  .blog-action:focus-visible {
-    outline: 2px solid currentColor;
-    outline-offset: 4px;
-  }
-
-  .blog-action-primary {
+  .blog-gateway .blog-action-primary {
     background: currentColor;
     color: #fff;
   }
 
-  .blog-action-primary span {
+  .blog-gateway .blog-action-primary span {
     color: #fff;
   }
 
   /* HINT */
-  .blog-hint {
+  .blog-gateway .blog-hint {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -4003,12 +4008,12 @@
     opacity: 0.6;
   }
 
-  .blog-hint-dots {
+  .blog-gateway .blog-hint-dots {
     display: inline-flex;
     gap: 4px;
   }
 
-  .blog-hint-dots i {
+  .blog-gateway .blog-hint-dots i {
     width: 4px;
     height: 4px;
     border-radius: 50%;
@@ -4016,32 +4021,38 @@
     animation: blogHintPulse 1.4s ease-in-out infinite;
   }
 
-  .blog-hint-dots i:nth-child(2) {
+  .blog-gateway .blog-hint-dots i:nth-child(2) {
     animation-delay: 0.2s;
   }
 
-  .blog-hint-dots i:nth-child(3) {
+  .blog-gateway .blog-hint-dots i:nth-child(3) {
     animation-delay: 0.4s;
   }
 
   @keyframes blogHintPulse {
-    0%, 100% { opacity: 0.3; transform: scale(1); }
-    50% { opacity: 1; transform: scale(1.4); }
+    0%, 100% {
+      opacity: 0.3;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.4);
+    }
   }
 
   /* REDUCED MOTION */
   @media (prefers-reduced-motion: reduce) {
-    .blog-particle,
-    .blog-hint-dots i {
+    .blog-gateway .blog-particle,
+    .blog-gateway .blog-hint-dots i {
       animation: none !important;
     }
 
-    .blog-particle {
+    .blog-gateway .blog-particle {
       display: none;
     }
 
-    .blog-action,
-    .blog-progress-dot {
+    .blog-gateway .blog-action,
+    .blog-gateway .blog-progress-dot {
       transition: none;
     }
   }
@@ -4049,17 +4060,17 @@
   /* MOBILE */
   @media (max-width: 480px) {
     .blog-gateway {
+      min-height: auto;
       padding: 56px 18px;
     }
 
-    .blog-actions {
+    .blog-gateway .blog-actions {
       flex-direction: column;
       align-items: stretch;
     }
 
-    .blog-action {
+    .blog-gateway .blog-action {
       width: 100%;
-      box-sizing: border-box;
     }
   }
 
@@ -4073,98 +4084,123 @@
       border: 0;
     }
 
-    .blog-gateway-title,
-    .blog-quote-text {
+    .blog-gateway .blog-gateway-title,
+    .blog-gateway .blog-quote-text {
       color: #000;
     }
 
-    .blog-actions,
-    .blog-progress,
-    .blog-hint,
-    .blog-particles {
+    .blog-gateway .blog-actions,
+    .blog-gateway .blog-progress,
+    .blog-gateway .blog-hint,
+    .blog-gateway .blog-particles {
       display: none !important;
     }
   }
 </style>
 
-<!-- درگاه اصلی -->
-<div class="blog-particles" id="blogParticles" aria-hidden="true"></div>
+<!-- GATEWAY -->
+<section class="blog-gateway" id="blogGateway">
 
-<div class="blog-gateway-inner">
-
-  <div class="blog-kicker">
-    <span>دفتر نوشته‌ها</span>
+  <div
+    class="blog-particles"
+    id="blogParticles"
+    aria-hidden="true">
   </div>
 
-  <h2 class="blog-gateway-title" id="blog-gateway-title">
-    وبلاگ حسین محمدی آمیرزا
-    <span>جست‌وجوی معنا در مسیر تاریخ، ادیان، انسان و اندیشه</span>
-  </h2>
+  <div class="blog-gateway-inner">
 
-  <div class="blog-divider" aria-hidden="true">
-    <span class="blog-divider-line"></span>
-    <span class="blog-divider-mark">◆</span>
-    <span class="blog-divider-line"></span>
-  </div>
+    <div class="blog-kicker">
+      <span>دفتر نوشته‌ها</span>
+    </div>
 
-  <!-- نقل‌قول منتخب -->
-  <div class="blog-quote-wrap">
-    <div class="blog-quote">
-      <div class="blog-quote-content">
+    <h2 class="blog-gateway-title">
+      وبلاگ حسین محمدی آمیرزا
+      <span>
+        جست‌وجوی معنا در مسیر تاریخ، ادیان، انسان و اندیشه
+      </span>
+    </h2>
 
-        <p
-          class="blog-quote-text"
-          id="blogQuoteText"
-          aria-live="polite"
-          aria-atomic="true">
-          <span class="blog-loading">در حال گشودن دفتر نوشته‌ها...</span>
-        </p>
+    <div class="blog-divider" aria-hidden="true">
+      <span class="blog-divider-line"></span>
+      <span class="blog-divider-mark">◆</span>
+      <span class="blog-divider-line"></span>
+    </div>
 
-        <div class="blog-quote-meta">
-          <span class="blog-quote-number" id="blogQuoteNumber"></span>
-          <span class="blog-quote-source" id="blogQuoteSource"></span>
+    <!-- SELECTED QUOTE -->
+    <div class="blog-quote-wrap">
+
+      <div class="blog-quote">
+        <div class="blog-quote-content">
+
+          <p
+            class="blog-quote-text"
+            id="blogQuoteText"
+            aria-live="polite"
+            aria-atomic="true">
+            <span class="blog-loading">
+              در حال گشودن دفتر نوشته‌ها...
+            </span>
+          </p>
+
+          <div class="blog-quote-meta">
+            <span
+              class="blog-quote-number"
+              id="blogQuoteNumber">
+            </span>
+
+            <span
+              class="blog-quote-source"
+              id="blogQuoteSource">
+            </span>
+          </div>
+
         </div>
-
       </div>
+
+      <div
+        class="blog-progress"
+        id="blogProgress"
+        role="group"
+        aria-label="انتخاب نوشته">
+      </div>
+
     </div>
 
-    <div
-      class="blog-progress"
-      id="blogProgress"
-      role="group"
-      aria-label="انتخاب نوشته">
-    </div>
+    <!-- NAVIGATION -->
+    <nav class="blog-actions" aria-label="مسیرهای مطالعه">
+
+      <a
+        class="blog-action blog-action-primary"
+        href="blog/index.html"
+        aria-label="ورود به فهرست وبلاگ">
+
+        <span>ورود به وبلاگ</span>
+        <span aria-hidden="true">←</span>
+
+      </a>
+
+      <a
+        class="blog-action"
+        href="blog/stories.html"
+        aria-label="مشاهده همه داستانک‌ها">
+
+        <span aria-hidden="true">✒️</span>
+        <span>داستانک‌ها</span>
+
+      </a>
+
+    </nav>
+
+    <p class="blog-hint">
+      فصل‌های بیشتری در انتظار خوانده‌شدن‌اند
+
+      <span class="blog-hint-dots" aria-hidden="true">
+        <i></i><i></i><i></i>
+      </span>
+    </p>
+
   </div>
-
-  <!-- مسیرهای مستقل -->
-  <div class="blog-actions">
-
-    <a
-      class="blog-action blog-action-primary"
-      href="blog/index.html"
-      aria-label="ورود به فهرست وبلاگ">
-      <span>ورود به وبلاگ</span>
-      <span aria-hidden="true">←</span>
-    </a>
-
-    <a
-      class="blog-action"
-      href="blog/stories.html"
-      aria-label="مشاهده همه داستانک‌ها">
-      <span aria-hidden="true">✒️</span>
-      <span>داستانک‌ها</span>
-    </a>
-
-  </div>
-
-  <p class="blog-hint">
-    فصل‌های بیشتری در انتظار خوانده‌شدن‌اند
-    <span class="blog-hint-dots" aria-hidden="true">
-      <i></i><i></i><i></i>
-    </span>
-  </p>
-
-</div>
+</section>
 
 <script>
 (() => {
@@ -4174,24 +4210,24 @@
   const POSTS_URL = "posts/posts/posts.json";
   const AUTO_PLAY_DELAY = 7000;
   const MAX_QUOTES = 6;
-  const REDUCED_MOTION = window.matchMedia(
+
+  const motionQuery = window.matchMedia(
     "(prefers-reduced-motion: reduce)"
-  ).matches;
+  );
 
   /* ELEMENTS */
-  const gateway =
-    document.querySelector(".blog-gateway") ||
-    document.querySelector(".blog-gateway-inner");
+  const gateway = document.getElementById("blogGateway");
+  if (!gateway) return;
 
-  const particlesEl = document.getElementById("blogParticles");
-  const quoteTextEl = document.getElementById("blogQuoteText");
-  const quoteNumberEl = document.getElementById("blogQuoteNumber");
-  const quoteSourceEl = document.getElementById("blogQuoteSource");
-  const progressEl = document.getElementById("blogProgress");
+  const particlesEl = gateway.querySelector("#blogParticles");
+  const quoteTextEl = gateway.querySelector("#blogQuoteText");
+  const quoteNumberEl = gateway.querySelector("#blogQuoteNumber");
+  const quoteSourceEl = gateway.querySelector("#blogQuoteSource");
+  const progressEl = gateway.querySelector("#blogProgress");
 
-  if (!gateway || !quoteTextEl) return;
+  if (!quoteTextEl || !progressEl) return;
 
-  /* FALLBACK */
+  /* FALLBACK QUOTES */
   const FALLBACK_QUOTES = [
     {
       text: "گاهی برای فهمیدن امروز، باید به دورترین نقطه‌ی تاریخ بازگشت.",
@@ -4221,8 +4257,7 @@
     if (element) element.textContent = value ?? "";
   };
 
-  /* SHUFFLE
-     انتخاب تصادفی از میان همه نوشته‌های واجد شرایط */
+  /* SHUFFLE */
   function shuffle(items) {
     const result = [...items];
 
@@ -4232,6 +4267,14 @@
     }
 
     return result;
+  }
+
+  /* FALLBACK */
+  function useFallbackQuotes() {
+    quotes = FALLBACK_QUOTES.map((quote, index) => ({
+      ...quote,
+      number: String(index + 1).padStart(2, "0")
+    }));
   }
 
   /* LOAD POSTS */
@@ -4249,18 +4292,19 @@
 
       const list = Array.isArray(data)
         ? data
-        : Array.isArray(data.posts)
+        : Array.isArray(data?.posts)
           ? data.posts
-          : Array.isArray(data.items)
+          : Array.isArray(data?.items)
             ? data.items
             : [];
 
-      const eligible = list
-        .filter(post =>
-          post &&
-          typeof (post.excerpt || post.text || post.summary) === "string" &&
-          (post.excerpt || post.text || post.summary).trim()
-        );
+      const eligible = list.filter(post => {
+        if (!post || typeof post !== "object") return false;
+
+        const text = post.excerpt || post.text || post.summary;
+
+        return typeof text === "string" && text.trim().length > 0;
+      });
 
       const selected = shuffle(eligible).slice(0, MAX_QUOTES);
 
@@ -4270,23 +4314,29 @@
         number: String(index + 1).padStart(2, "0")
       }));
 
-      if (!quotes.length) {
-        quotes = FALLBACK_QUOTES.map((quote, index) => ({
-          ...quote,
-          number: String(index + 1).padStart(2, "0")
-        }));
+      if (quotes.length === 0) {
+        useFallbackQuotes();
       }
     } catch (error) {
-      console.warn("[BlogGateway] بارگذاری نوشته‌ها ناموفق بود:", error);
+      console.warn(
+        "[BlogGateway] بارگذاری نوشته‌ها ناموفق بود:",
+        error
+      );
 
-      quotes = FALLBACK_QUOTES.map((quote, index) => ({
-        ...quote,
-        number: String(index + 1).padStart(2, "0")
-      }));
+      useFallbackQuotes();
     }
   }
 
-  /* RENDER */
+  /* PROGRESS */
+  function updateProgress(activeIndex) {
+    Array.from(progressEl.children).forEach((button, index) => {
+      const active = index === activeIndex;
+
+      button.classList.toggle("is-active", active);
+      button.setAttribute("aria-pressed", String(active));
+    });
+  }
+
   function renderQuote(index) {
     const quote = quotes[index];
     if (!quote) return;
@@ -4298,25 +4348,7 @@
     updateProgress(index);
   }
 
-  /* PROGRESS CONTROLS */
-  function updateProgress(activeIndex) {
-    if (!progressEl) return;
-
-    Array.from(progressEl.children).forEach((button, index) => {
-      const active = index === activeIndex;
-
-      button.classList.toggle("is-active", active);
-      button.setAttribute("aria-pressed", String(active));
-      button.setAttribute(
-        "aria-label",
-        "نمایش نوشته " + (index + 1)
-      );
-    });
-  }
-
   function buildProgress() {
-    if (!progressEl) return;
-
     progressEl.replaceChildren();
 
     quotes.forEach((quote, index) => {
@@ -4330,7 +4362,7 @@
       button.addEventListener("click", () => {
         currentIndex = index;
         renderQuote(currentIndex);
-        restartAutoPlay();
+        startAutoPlay();
       });
 
       progressEl.appendChild(button);
@@ -4346,7 +4378,14 @@
   }
 
   function nextQuote() {
-    if (isPaused || document.hidden || quotes.length < 2) return;
+    if (
+      isPaused ||
+      document.hidden ||
+      motionQuery.matches ||
+      quotes.length < 2
+    ) {
+      return;
+    }
 
     currentIndex = (currentIndex + 1) % quotes.length;
     renderQuote(currentIndex);
@@ -4356,9 +4395,9 @@
     stopAutoPlay();
 
     if (
-      REDUCED_MOTION ||
       isPaused ||
       document.hidden ||
+      motionQuery.matches ||
       quotes.length < 2
     ) {
       return;
@@ -4367,47 +4406,61 @@
     autoPlayTimer = setInterval(nextQuote, AUTO_PLAY_DELAY);
   }
 
-  function restartAutoPlay() {
-    startAutoPlay();
-  }
-
   /* PAUSE ON INTERACTION */
-  const quoteWrap =
-    quoteTextEl.closest(".blog-quote-wrap") || gateway;
+  const quoteWrap = quoteTextEl.closest(".blog-quote-wrap");
 
-  function pause() {
-    isPaused = true;
-    stopAutoPlay();
+  if (quoteWrap) {
+    quoteWrap.addEventListener("mouseenter", () => {
+      isPaused = true;
+      stopAutoPlay();
+    });
+
+    quoteWrap.addEventListener("mouseleave", () => {
+      isPaused = false;
+      startAutoPlay();
+    });
+
+    quoteWrap.addEventListener("focusin", () => {
+      isPaused = true;
+      stopAutoPlay();
+    });
+
+    quoteWrap.addEventListener("focusout", event => {
+      if (!quoteWrap.contains(event.relatedTarget)) {
+        isPaused = false;
+        startAutoPlay();
+      }
+    });
   }
 
-  function resume() {
-    isPaused = false;
-    startAutoPlay();
-  }
-
-  quoteWrap.addEventListener("mouseenter", pause);
-  quoteWrap.addEventListener("mouseleave", resume);
-  quoteWrap.addEventListener("focusin", pause);
-  quoteWrap.addEventListener("focusout", event => {
-    if (!quoteWrap.contains(event.relatedTarget)) {
-      resume();
+  /* TAB VISIBILITY */
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+      stopAutoPlay();
+    } else {
+      startAutoPlay();
     }
   });
 
-  document.addEventListener("visibilitychange", () => {
-    if (document.hidden) stopAutoPlay();
-    else startAutoPlay();
-  });
+  /* REDUCED MOTION CHANGES */
+  if (typeof motionQuery.addEventListener === "function") {
+    motionQuery.addEventListener("change", () => {
+      initParticles();
+      startAutoPlay();
+    });
+  }
 
   /* PARTICLES */
   function initParticles() {
-    if (!particlesEl || REDUCED_MOTION) return;
+    if (!particlesEl) return;
+
+    particlesEl.replaceChildren();
+
+    if (motionQuery.matches) return;
 
     const width = window.innerWidth;
     const count = width < 600 ? 12 : width < 1024 ? 20 : 30;
     const fragment = document.createDocumentFragment();
-
-    particlesEl.replaceChildren();
 
     for (let i = 0; i < count; i++) {
       const particle = document.createElement("span");
@@ -4424,9 +4477,24 @@
     particlesEl.appendChild(fragment);
   }
 
+  /* RESIZE */
+  let resizeTimer = null;
+
+  window.addEventListener("resize", () => {
+    if (resizeTimer !== null) {
+      clearTimeout(resizeTimer);
+    }
+
+    resizeTimer = setTimeout(() => {
+      initParticles();
+      resizeTimer = null;
+    }, 200);
+  });
+
   /* INITIALIZE */
   async function init() {
     await loadQuotes();
+
     buildProgress();
     renderQuote(0);
     initParticles();
@@ -4436,21 +4504,6 @@
   init();
 })();
 </script>
-
-      let quotes = [];
-
-      let currentIndex = 0;
-
-      let timer = null;
-
-      let paused = false;
-
-      let touchStarted = false;
-
-      /* ===================================================
-         HELPERS
-         =================================================== */
-
       function cleanText(value) {
         if (value === null || value === undefined) {
           return "";
